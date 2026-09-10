@@ -129,7 +129,7 @@ def build():
                  '<span class="repository">GitHub publishing pending</span>')
     page = page.replace("@@REPOSITORY_LINK@@", repo_link)
     page = page.replace("@@TALKS@@", "\n".join(cards))
-    (PUBLIC / "index.html").write_text(page)
+    (PUBLIC / "index.html").write_text("\n".join(line.rstrip() for line in page.splitlines()) + "\n")
     (PUBLIC / ".nojekyll").touch()
     print(f"Exported {len(seen)} talk(s) to {PUBLIC}; companion notes: {include_notes}")
 
