@@ -1,0 +1,16 @@
+# Working decks and presenter documents stay local. Reviewed exports live in docs/.
+/*.html
+/*.md
+!/README.md
+/assets/
+/output/
+/revisions/
+/.playwright-cli/
+/.site-preview/
+.DS_Store
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+

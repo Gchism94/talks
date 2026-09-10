@@ -1,0 +1,22 @@
+{
+  "owner": "Gchism94",
+  "repository": "talks",
+  "repository_live": false,
+  "publish_notes": false,
+  "talks": [
+    {
+      "slug": "design-what-you-know",
+      "source": "design-what-you-know.html",
+      "title": "Design What You Know",
+      "subtitle": "Building Better Apps with AI",
+      "description": "Start with an app you use. Explore what works, sketch a better approach, build with AI, and test what happens.",
+      "event": "TechBytes · Willamette",
+      "format": "Interactive workshop",
+      "duration": "60 minutes",
+      "slides": 16,
+      "topics": ["Design thinking", "AI prototyping", "Mētis & epistēmē"],
+      "speaker_cues": "design-what-you-know-speaker-cues.md",
+      "facilitator_guide": "design-what-you-know-outline.md"
+    }
+  ]
+}
