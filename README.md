@@ -100,5 +100,26 @@ git diff --check
 
 These checks validate the public export, links, URL restrictions, and sketch-draft
 storage. Rehearse the slides and externally hosted activities before each event.
-Poll Everywhere links remain optional until configured; the gallery and Collective
-are hosted independently of GitHub Pages.
+Poll Everywhere, the gallery, and Collective are hosted independently of GitHub
+Pages.
+
+## Workshop polls
+
+The Google Maps and Spotify slides use separate Poll Everywhere response links.
+Students can respond as guests without an account or a presenter activating the
+poll. Each question has the same five-point mētis–epistēmē spectrum, single-select
+responses, and changeable answers. Results start hidden; reveal them from the
+corresponding poll in your signed-in Poll Everywhere workspace when ready to discuss.
+The slide embeds collect responses; they are not the presenter results screen.
+
+The response links currently have no closing date. Use **Share → Participants** in
+Poll Everywhere to disable a link or set its availability after the workshop. Check
+your plan's audience limit and trial status before the event. No test votes were
+submitted while connecting the polls.
+
+If a browser has older saved workshop links, open **Links** in the deck and update
+the two poll fields (or use **Use defaults** to reset all workshop links). To change
+the defaults for everyone, edit `site/workshop/config.js`, rebuild, and publish.
+
+Poll Everywhere documents this flow in
+[Embedding Response Links](https://support.polleverywhere.com/hc/en-us/articles/46214073740059-Embedding-Poll-Everywhere-Response-Links).

@@ -15,6 +15,22 @@ const validate = runInNewContext(`${source.slice(start, end)}\nvalidate;`, {
 
 let checks = 0;
 for (const key of ['mapsPoll', 'spotifyPoll']) {
+  const responseLink = 'https://pe.app/response_links/00000000-0000-4000-8000-000000000001/start';
+  assert.equal(validate(key, responseLink), responseLink);
+  checks++;
+  for (const url of [
+    'https://pe.app/a/my_polls',
+    'https://pe.app/a/shares/123?tab=Presenters',
+    'https://pe.app/gregchism',
+    responseLink.replace('pe.app', 'pe.app.example.org'),
+    responseLink.replace('pe.app', 'pe.app:444'),
+    responseLink.replace('/start', '/edit'),
+    responseLink + '?private=1',
+    responseLink + '#participant=private',
+  ]) {
+    assert.throws(() => validate(key, url), 'Only the official pe.app participant response-link shape is allowed');
+    checks++;
+  }
   for (const host of ['pollev-embeds.com', 'embed.polleverywhere.com', 'pollev.com']) {
     const url = `https://${host}/techbytes-adapter-test`;
     assert.equal(validate(key, url), url);
@@ -45,4 +61,5 @@ for (const key of ['mapsPoll', 'spotifyPoll']) {
   assert.equal(value.includes('techbytes-adapter-test'), false, 'Never publish adapter fixtures');
   validate(key, value);
 }
+validate('gallery', context.window.WORKSHOP_DEFAULTS.gallery);
 console.log(`${checks} URL checks passed; public defaults contain no test fixtures.`);

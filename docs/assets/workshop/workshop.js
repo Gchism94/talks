@@ -20,7 +20,11 @@
     if (key === 'spotify' && !(url.hostname === 'open.spotify.com' && /^\/(?:embed\/)?(playlist|album|track|artist|episode|show)\/[A-Za-z0-9]+\/?$/.test(url.pathname))) throw new Error('Use a Spotify playlist, album, track, artist, show or episode link.');
     if (key === 'figma' && !((hostMatches(url.hostname, 'figma.com') && /^\/(proto|design|file|make)\//.test(url.pathname)) || hostMatches(url.hostname, 'figma.site'))) throw new Error('Use a Figma design/prototype link or a published figma.site link.');
     if (key === 'gallery' && !(url.hostname === 'techbytes-sketch-gallery.gchism.chatgpt.site' && url.pathname === '/' && (!url.searchParams.has('room') || /^[a-f0-9]{32}$/.test(url.searchParams.get('room'))) && !url.hash)) throw new Error('Use the classroom link copied from the TechBytes Sketch Gallery, without a private browser-identity fragment.');
-    if (key.endsWith('Poll') && !['slido.com', 'sli.do', 'mentimeter.com', 'menti.com', 'polleverywhere.com', 'pollev.com', 'pollev-embeds.com'].some(d => hostMatches(url.hostname,d))) throw new Error('Use a public participant embed URL from Slido, Mentimeter or Poll Everywhere.');
+    if (key.endsWith('Poll')) {
+      const responseLink = url.host === 'pe.app' && /^\/response_links\/[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}\/start$/.test(url.pathname) && !url.search && !url.hash;
+      const legacyProvider = ['slido.com', 'sli.do', 'mentimeter.com', 'menti.com', 'polleverywhere.com', 'pollev.com', 'pollev-embeds.com'].some(d => hostMatches(url.hostname,d));
+      if (!responseLink && !legacyProvider) throw new Error('Use a public participant embed URL from Slido, Mentimeter or Poll Everywhere. For pe.app, use Share → Participants → Response link.');
+    }
     return url.href;
   }
   function validConfig(raw) {
