@@ -31,6 +31,16 @@ h1{margin:0;font:600 clamp(3rem,5.6vw,5rem)/1.05 var(--display);letter-spacing:-
 h1>span{font:italic 450 .67em/1.2 var(--serif);text-transform:none;letter-spacing:-.05em;color:var(--accent)}
 .collection-count{margin:0;color:var(--muted);font-size:.875rem;white-space:nowrap}
 .collection-count>span{color:var(--paper);font-weight:500}
+.classroom{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 28px;margin-bottom:32px;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:4px;background:var(--surface)}
+.classroom-label{margin:0 0 8px;color:var(--accent);font-size:.875rem;font-weight:600}
+.classroom h2{max-width:none;font-size:2rem;line-height:1.1}
+.classroom p:last-child{max-width:52ch;margin:10px 0 0;color:var(--muted)}
+.gallery-launch{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:52px;padding:14px 18px;border:1px solid var(--accent);border-radius:3px;color:var(--canvas);background:var(--accent);font-weight:600;text-decoration:none;flex-shrink:0}
+.gallery-launch:hover{background:var(--paper);border-color:var(--paper)}
+.gallery-handoff{max-width:640px;margin:clamp(32px,8vh,88px) auto}
+.gallery-handoff h1{margin:24px 0}
+.gallery-handoff>p{font-size:1rem;line-height:1.7;color:var(--muted)}
+.gallery-handoff .gallery-launch{margin:28px 0 16px}
 .talk-list{display:grid;gap:32px}
 .talk{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);border:1px solid #484955;border-radius:8px;overflow:hidden;box-shadow:0 20px 50px #0003}
 .talk-visual{display:flex;flex-direction:column;justify-content:center;gap:26px;min-width:0;padding:clamp(24px,3vw,44px);background:var(--surface)}
@@ -71,6 +81,7 @@ footer p:last-child{text-align:right}
   .talk-content{padding:28px}
 }
 @media(max-width:760px){
+  .classroom{align-items:stretch;flex-direction:column;padding:24px;gap:20px}
   .talk{grid-template-columns:1fr}
   .talk-visual{padding:26px 28px 24px;gap:24px}
   .cover{max-width:600px;width:100%;align-self:center;transform:rotate(-1deg)}

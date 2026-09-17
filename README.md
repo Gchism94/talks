@@ -7,6 +7,19 @@ A browsable collection of presentations and workshops.
 - Website: [Greg Chism · Talks](https://gchism94.github.io/talks/)
 - GitHub Pages publishing source: `main` branch, `/docs` folder.
 
+## Classroom sketch gallery
+
+Share [gchism94.github.io/talks/gallery/](https://gchism94.github.io/talks/gallery/)
+with students, or use **Open sketch gallery** on the talks homepage. This short
+address opens the public TechBytes classroom directly: no student sign-in or
+room-code entry. Students can draw and submit ideas, then vote when the presenter
+opens voting. Presenter controls still require the owner's sign-in.
+
+The gallery itself stays on its existing host so saved work and browser-local
+drafts remain intact. The shortcut uses the same classroom link as the slides in
+`site/workshop/config.js`; changing that link and rebuilding updates both. It does
+not forward query strings or participant identities from the shortcut URL.
+
 ## Organization
 
 ```text

@@ -6,9 +6,24 @@ import json
 from pathlib import Path
 import re
 import shutil
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "docs"
+
+
+def gallery_url():
+    """Use the deck's public room link so classroom shortcuts cannot drift."""
+    config = (ROOT / "site/workshop/config.js").read_text()
+    match = re.search(r"^\s*gallery:\s*'([^']+)'", config, re.M)
+    if not match:
+        raise ValueError("Configure a classroom gallery link before publishing")
+    value = match.group(1)
+    url = urlsplit(value)
+    if (url.scheme != "https" or url.netloc != "techbytes-sketch-gallery.gchism.chatgpt.site"
+            or url.path != "/" or url.fragment or not re.fullmatch(r"room=[a-f0-9]{32}", url.query)):
+        raise ValueError("Gallery shortcut requires the public classroom URL without private identity data")
+    return value
 
 
 def local_file(name):
@@ -64,10 +79,14 @@ def build():
     shutil.copyfile(ROOT / "site/library.css", PUBLIC / "assets/library.css")
     if (ROOT / "site/workshop").is_dir():
         shutil.copytree(ROOT / "site/workshop", PUBLIC / "assets/workshop", dirs_exist_ok=True)
+    gallery = PUBLIC / "gallery"
+    gallery.mkdir(exist_ok=True)
+    gallery_page = (ROOT / "site/gallery.html").read_text()
+    (gallery / "index.html").write_text(gallery_page.replace("@@GALLERY_URL@@", html.escape(gallery_url(), quote=True)))
     cards, seen = [], set()
     for number, talk in enumerate(catalog["talks"], 1):
         slug = talk["slug"]
-        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug) or slug in seen:
+        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug) or slug in seen or slug in {"assets", "gallery"}:
             raise ValueError(f"Invalid or duplicate talk slug: {slug}")
         seen.add(slug)
         destination = PUBLIC / slug

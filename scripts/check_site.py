@@ -7,7 +7,7 @@ from pathlib import Path
 import re
 from urllib.parse import unquote, urlsplit
 
-from build_site import ROOT, PUBLIC, public_deck
+from build_site import ROOT, PUBLIC, public_deck, gallery_url
 
 
 class Links(HTMLParser):
@@ -39,8 +39,14 @@ def check():
     catalog = json.loads((ROOT / "catalog.json").read_text())
     assert (PUBLIC / "index.html").is_file()
     assert (PUBLIC / ".nojekyll").is_file()
-    allowed_roots = {"assets", "index.html", ".nojekyll"} | {t["slug"] for t in catalog["talks"]}
+    allowed_roots = {"assets", "gallery", "index.html", ".nojekyll"} | {t["slug"] for t in catalog["talks"]}
     assert {p.name for p in PUBLIC.iterdir()} <= allowed_roots, "Unexpected public files: review export"
+    home = (PUBLIC / "index.html").read_text()
+    assert 'href="gallery/"' in home, "Gallery must be reachable from the talks homepage"
+    gallery = (PUBLIC / "gallery/index.html").read_text()
+    assert f'id="open-gallery" class="gallery-launch" href="{gallery_url()}"' in gallery
+    assert "<noscript>" in gallery, "Preserve a usable gallery link without JavaScript"
+    assert "location.search" not in gallery and "location.hash" not in gallery, "Do not forward arbitrary room or identity data"
     checked = 0
     for source in PUBLIC.rglob("*"):
         if not source.is_file() or source.suffix not in {".html", ".css", ".md"}:

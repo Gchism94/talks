@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Join the TechBytes classroom sketch gallery. Draw, share, and vote without a student account.">
+  <meta name="referrer" content="no-referrer">
+  <title>Sketch Gallery · TechBytes</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../assets/library.css?v=3">
+  <link rel="canonical" href="@@GALLERY_URL@@">
+</head>
+<body>
+  <main class="gallery-handoff">
+    <a href="../">← All talks</a>
+    <h1>Sketch gallery<span>Design What You Know</span></h1>
+    <p>Opening the TechBytes classroom. Draw an idea, share your reasoning, and vote when your presenter opens voting.</p>
+    <a id="open-gallery" class="gallery-launch" href="@@GALLERY_URL@@">Continue to the gallery <span aria-hidden="true">↗</span></a>
+    <p>No student account or room code needed. Please leave names and private information out of your work.</p>
+    <noscript><p>Use the button above to open the classroom.</p></noscript>
+  </main>
+  <script>
+    // Use only the reviewed classroom link, never a destination from this URL.
+    // Opening the original site preserves its existing drafts and browser identity.
+    window.location.replace(document.getElementById('open-gallery').href);
+  </script>
+</body>
+</html>
