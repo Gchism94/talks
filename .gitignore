@@ -7,6 +7,13 @@
 /revisions/
 /.playwright-cli/
 /.site-preview/
+# Separate application projects are not part of this public talks collection.
+/collective-motion-app/
+/swift-roost/
+/workshop-gallery/
+# Local rehearsal checks depend on private working decks and presenter notes.
+/scripts/verify_embeds_browser.mjs
+/scripts/verify_workshop_browser.mjs
 .DS_Store
 __pycache__/
 *.pyc

@@ -3,8 +3,8 @@
 A browsable collection of presentations and workshops.
 
 - Collection directory: this `talks` checkout
-- Intended repository: `Gchism94/talks`
-- Intended website: `https://gchism94.github.io/talks/`
+- Repository: [Gchism94/talks](https://github.com/Gchism94/talks)
+- Website: [Greg Chism · Talks](https://gchism94.github.io/talks/)
 - GitHub Pages publishing source: `main` branch, `/docs` folder.
 
 ## Organization
@@ -26,6 +26,8 @@ revision backups, and browser-test output remain local. The repository contains
 the reviewed public editions under `docs/`, not a wholesale upload of the working
 folder. Public editions are normal editable HTML, including when cloned onto a
 different computer. The working originals are not backed up by this repository.
+Collective, the sketch-gallery application, and the swift-roost prototype remain
+separate projects; this collection only links to their public experiences.
 
 `catalog.json` controls publication of companion documents. With `publish_notes`
 set to `false`, the exported deck also removes embedded presenter notes and their
@@ -38,7 +40,7 @@ in Git history even if a later revision removes it.
 1. Edit the original local HTML deck and, if needed, its entry in `catalog.json`.
 2. Run `python3 scripts/build_site.py`, then `python3 scripts/check_site.py`.
 3. Review the changed files in `docs/`, commit, and push `main`.
-4. GitHub Pages publishes the updated collection automatically once configured.
+4. GitHub Pages publishes the updated collection automatically.
 
 On a fresh clone without the private working files, edit the public edition in
 `docs/<slug>/index.html`. The export script preserves that edition if no working
@@ -68,3 +70,22 @@ on a font service. Live AI demonstrations still require internet access.
 
 Barlow Condensed, Literata, and IBM Plex Sans are included with their original
 license files in `docs/assets/fonts/`.
+
+## Validate before publishing
+
+With Python 3.10+ and Node.js installed, run:
+
+```sh
+python3 scripts/build_site.py
+python3 scripts/check_site.py
+node scripts/verify_workshop_urls.mjs
+node scripts/verify_sketch_drafts.mjs
+node --check site/workshop/workshop.js
+node --check site/workshop/sketch.js
+git diff --check
+```
+
+These checks validate the public export, links, URL restrictions, and sketch-draft
+storage. Rehearse the slides and externally hosted activities before each event.
+Poll Everywhere links remain optional until configured; the gallery and Collective
+are hosted independently of GitHub Pages.

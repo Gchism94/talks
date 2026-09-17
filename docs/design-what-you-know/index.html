@@ -2,7 +2,7 @@
 <html lang="en" data-theme="warm">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Design What You Know: an undergraduate workshop on design thinking, mētis, epistēmē, and building with AI.">
 <title>Design What You Know · TechBytes</title>
 <link rel="icon" href="data:,">
@@ -56,6 +56,8 @@
   .fieldnote-label { position:absolute; top:-28px; color:var(--experience); font:500 12px var(--sans); letter-spacing:.12em; }
   .fieldnote p { font:italic 450 30px/1.4 var(--serif); margin:20px 0; }
   .fieldnote .caption { color:var(--green); }
+  .app-link { color:var(--reason); text-underline-offset:5px; }
+  .access-note { margin-top:15px; font-size:16px; line-height:1.45; color:var(--muted); }
   .agenda { list-style:none; padding:0; margin:38px 0 0; display:grid; grid-template-columns:repeat(4,1fr); gap:28px; }
   .agenda li { position:relative; padding-top:18px; border-top:2px solid var(--line); }
   .number { display:block; font:500 14px/1.5 var(--mono); color:var(--orange); margin-bottom:20px; }
@@ -267,9 +269,41 @@
     .chrome,.footer,#progress,dialog,#blackout { display:none!important; }
   }
 
+  [hidden] { display:none!important; }
+  .route-label { display:flex; gap:7px; align-items:center; font:500 12px var(--sans); }
+  .route-label select { max-width:125px; font:inherit; background:var(--paper); color:var(--ink); border:1px solid var(--line); padding:7px; }
+  .route-choices { display:grid; grid-template-columns:1fr 1fr; gap:36px; margin:32px 0; }
+  .route-choices button { text-align:left; background:transparent; color:var(--ink); border:2px solid var(--line); padding:24px; cursor:pointer; }
+  .route-choices button[aria-pressed=true] { border-color:var(--reason); background:var(--white); }
+  .route-choices strong { display:block; font:600 42px var(--display); margin-bottom:14px; }
+  .route-choices button > span:last-child { font-size:23px; line-height:1.5; }
+  .route-announcement { margin-top:14px; }
+  .app-example article:first-child { border-color:var(--reason); }
+  .app-example article:first-child h3 { color:var(--reason); }
+  .app-example article:last-child { border-color:var(--experience); }
+  .app-example article:last-child h3 { color:var(--experience); }
+  .spectrum { margin-top:28px; border-top:1px solid var(--line); padding-top:18px; }
+  .spectrum-labels { display:flex; justify-content:space-between; gap:24px; }
+  .spectrum-labels span:last-child { text-align:right; }
+  .spectrum-labels b { display:block; font:450 27px var(--serif); color:var(--experience); }
+  .spectrum-labels span:last-child b { color:var(--reason); }
+  .spectrum-labels small { display:block; font-size:16px; color:var(--muted); margin-top:6px; }
+  .spectrum-question { display:block; margin:18px 0 8px; font-size:21px; }
+  .spectrum input { width:100%; accent-color:var(--test); cursor:pointer; }
+  .spectrum-response { font-size:16px; color:var(--muted); margin-top:7px; }
+  input:focus-visible,select:focus-visible { outline:3px solid var(--experience); outline-offset:4px; }
+  .ink .prompt-sheet { color:var(--ink); }
+  @media(max-width:900px) { .route-label { font-size:0; } .route-label select { font-size:12px; max-width:104px; } .route-choices { gap:20px; } }
+  @media(max-width:520px) { .route-choices { grid-template-columns:1fr; } .tools { gap:3px; } .brand { max-width:85px; } .spectrum-labels small { font-size:14px; } }
+
+
 .brand a { color:inherit; text-decoration:none; }
 .brand a:hover { text-decoration:underline; }
 </style>
+<link rel="stylesheet" href="../assets/workshop/workshop.css?v=20260917-2">
+<script src="../assets/workshop/config.js?v=20260917-2" defer></script>
+<script src="../assets/workshop/workshop.js?v=20260917-2" defer></script>
+<script src="../assets/workshop/sketch.js?v=20260917-2" defer></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -280,321 +314,162 @@
 </defs></svg>
 <header class="chrome">
   <span class="brand"><a href="../">← All talks</a></span>
-  <div class="tools">
+  <div class="tools"><label class="route-label">Workshop <select id="routeSelect" aria-label="Workshop route"><option value="collective">Collective</option><option value="wildcard">Student app</option></select></label>
     <button hidden id="notesBtn" aria-label="Open presenter notes">Notes</button>
     <button id="themeBtn" aria-label="Toggle color theme">Theme</button>
     <button id="helpBtn" aria-label="Open keyboard help">?</button>
   </div>
 </header>
 <main class="deck" id="deck">
-  <section class="slide ink hero" data-title="Design What You Know" data-chapter="0">
-    <div class="frame split">
-      <div><p class="kicker">Design thinking + building with AI</p>
-        <h1>Design what<br>you <em>know.</em></h1>
-        <p class="dek">Better apps begin with the people who use them.</p>
-        <div class="speaker-credit">
-          <p class="speaker-name">Greg Chism</p>
-          <p>Assistant Professor of Practice · Director of Instructional Computing</p>
-          <p>University of Arizona · InfoSci</p>
-        </div>
-      </div>
-      <div class="fieldnote"><span class="fieldnote-label">01 / FIELD NOTE</span><span class="caption">Bring an app you use.</span>
-        <p>Something you love.<br>Something that<br>gets in your way.</p>
-        <span class="caption">We’ll work on it together.</span>
-      </div>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide ink hero" data-title="Design What You Know" data-chapter="0"><div class="frame"><div class="split"><div><p class="kicker">Design thinking + building with AI</p><h1>Design what<br>you <em>know.</em></h1><p class="dek">Better apps begin with the people who use them.</p><div class="speaker-credit"><p class="speaker-name">Greg Chism</p><p>Assistant Professor of Practice · Director of Instructional Computing</p><p>University of Arizona · InfoSci</p></div></div><figure class="hero-figure"><img src="../assets/workshop/images/collective-scene.png" alt="Collective’s simulated flock circulating near a church"><figcaption>What do you know<br>that an app doesn’t?<small>Collective · an illustrative simulation</small></figcaption></figure></div></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide" data-title="Our Plan" data-chapter="0">
-    <div class="frame"><p class="kicker">Our hour together</p><h2>One app. One change.<br>Something we can try.</h2>
-      <ol class="agenda">
-        <li data-reveal="1"><span class="number"><svg class="line-icon" aria-hidden="true"><use href="#notice-icon"/></svg>01 / NOTICE</span><strong>Your experience</strong><p>Choose an app and a moment that matters.</p></li>
-        <li data-reveal="2"><span class="number"><svg class="line-icon" aria-hidden="true"><use href="#frame-icon"/></svg>02 / FRAME</span><strong>A better question</strong><p>Agree on who needs help and what better means.</p></li>
-        <li data-reveal="3"><span class="number"><svg class="line-icon" aria-hidden="true"><use href="#make-icon"/></svg>03 / MAKE</span><strong>A small prototype</strong><p>Sketch possibilities. Build one with AI.</p></li>
-        <li data-reveal="4"><span class="number"><svg class="line-icon" aria-hidden="true"><use href="#try-icon"/></svg>04 / TRY</span><strong>A reason to revise</strong><p>Watch someone use it. Learn what we missed.</p></li>
-      </ol>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide " data-title="Google Maps: choosing a route" data-chapter="0"><div class="frame"><div class="media-layout"><div class="media-copy"><p class="kicker">Example 1 / 3 minutes</p><h2>A place you <em>know</em></h2><p class="dek">Find a familiar entrance or crossing. What does the map miss?</p><div class="knowledge app-example"><article data-reveal="1"><h3>The map</h3><p>A representation of the place.</p></article><article data-reveal="2"><h3>Your experience</h3><p>What using the place taught you.</p></article></div><div class="spectrum" data-reveal="3"><div class="spectrum-labels"><span><b>Mētis</b><small>Situated judgment</small></span><span><b>Epistēmē</b><small>Systematic knowledge</small></span></div><p class="spectrum-question">Whose knowledge gets a say?</p><div data-embed="mapsPoll"></div><details class="poll-fallback"><summary>Discussion fallback · no votes collected</summary><label for="maps-spectrum" class="caption">Place it together, then give a reason.</label><input id="maps-spectrum" type="range" min="0" max="4" value="2" aria-valuetext="Discuss before placing" data-spectrum><p class="spectrum-response" aria-live="polite">Room discussion only. This is not a live poll.</p></details></div><p class="bridge" data-reveal="4">What could you tell it?</p></div><div data-embed="maps"></div></div></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide work" data-title="Share an App" data-chapter="0">
-    <div class="frame"><p class="kicker">Two groups / 5 minutes</p><h2>Which app has a story?</h2>
-      <ol class="instructions">
-        <li data-reveal="1"><span class="number">01</span><span>Name a few apps you used this week.</span></li>
-        <li data-reveal="2"><span class="number">02</span><span>Choose one. Tell us about the last time it helped or frustrated you.</span></li>
-        <li data-reveal="3"><span class="number">03</span><span>What were you trying to do? What happened?</span></li>
-      </ol>
-      <p class="deliver" data-reveal="3">Bring back <strong>one app + one specific moment</strong> from each group.</p>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide " data-title="Spotify: why you pressed play" data-chapter="0"><div class="frame"><div class="media-layout"><div class="media-copy"><p class="kicker">Example 2 / 2 minutes</p><h2>Why did you<br>press <em>play?</em></h2><div class="knowledge app-example"><article data-reveal="1"><h3>A play</h3><p>A signal in your listening history.</p></article><article data-reveal="2"><h3>A reason</h3><p>Sleep? Friends? Your own taste?</p></article></div><div class="spectrum" data-reveal="3"><div class="spectrum-labels"><span><b>Mētis</b><small>Situated judgment</small></span><span><b>Epistēmē</b><small>Systematic knowledge</small></span></div><p class="spectrum-question">Whose knowledge gets a say?</p><div data-embed="spotifyPoll"></div><details class="poll-fallback"><summary>Discussion fallback · no votes collected</summary><label for="spotify-spectrum" class="caption">Place it together, then give a reason.</label><input id="spotify-spectrum" type="range" min="0" max="4" value="2" aria-valuetext="Discuss before placing" data-spectrum><p class="spectrum-response" aria-live="polite">Room discussion only. This is not a live poll.</p></details></div><p class="bridge" data-reveal="4">Try “Exclude from your taste profile” in the full app.</p><a class="interaction-button" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">Open my Spotify ↗</a></div><div data-embed="spotify"></div></div></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide work" data-title="Choose Our Example" data-chapter="0">
-    <div class="frame split">
-      <div><p class="kicker">Report back + vote / 3 minutes</p><h2>Which moment<br>shall we work on?</h2><p class="dek">Choose an experience we can describe and improve in a few screens.</p></div>
-      <div data-reveal="2"><div class="vote">1 vote</div><p class="dek">Each group gets a minute to share.<br>Vote with a show of hands.</p><p class="deliver">Keep the other example—we may need it to challenge our assumptions.</p></div>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide work" data-title="Choose our workshop" data-chapter="0"><div class="frame"><p class="kicker">One vote / 2 minutes</p><h2>Which app shall we work on?</h2><div class="route-choices"><button data-select-route="collective" aria-pressed="true"><img class="choice-image" src="../assets/workshop/images/collective-scene.png" alt="Collective simulation"><span class="number">A / PREPARED</span><strong>Collective</strong><span>My expertise. Your first encounter.</span></button><button data-select-route="wildcard" aria-pressed="false"><span class="choice-flow" aria-hidden="true"><span>Start</span><b>→</b><span>Choose</span><b>→</b><span>Done?</span></span><span class="number">B / WILDCARD</span><strong>Your app</strong><span>Less predictable. Potentially more fun.</span></button></div><p class="deliver">One task. One small prototype. One test.</p><p class="small route-announcement" role="status">Selected: Collective</p></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide task-story" data-title="Watch the Task" data-chapter="0">
-    <div class="frame"><p class="kicker">Our chosen app / whole room</p><h2>Show us what happened.</h2>
-      <div class="three">
-        <article data-reveal="1"><span class="number">THE GOAL</span><h3>Trying to…</h3><p>What did you want to get done?</p><div class="mini-screen"><div class="screen-label">Coursework / assignment</div><b>Reading response</b><span class="task-mark">Find the deadline ↗</span></div></article>
-        <article data-reveal="2"><span class="number">THE MOMENT</span><h3>Then…</h3><p>Where did you hesitate?</p><div class="mini-screen"><div class="screen-label">Assignment details</div><b>Due Friday, 5:00 PM</b><span class="task-mark question-mark">Wasn’t it Wednesday?</span></div></article>
-        <article data-reveal="3"><span class="number">THE RESPONSE</span><h3>So I…</h3><p>What did you do next?</p><div class="mini-screen"><div class="screen-label">Assignment details</div><b>Close. Reopen.</b><span class="task-mark">Check again.</span><svg class="line-icon task-loop" aria-hidden="true"><use href="#try-icon"/></svg></div></article>
-      </div>
-      <p class="illustration-label">Fictional screens illustrate the sequence. Tell us your chosen app’s actual story.</p>
-      <p class="bridge" data-reveal="3">Keep a record of what happened. We’ll return to it when we test.</p>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide work" data-title="A first encounter" data-chapter="0"><div class="frame"><div data-route="collective"><div class="media-layout"><div class="media-copy"><p class="kicker">Collective / first encounter / 4 minutes</p><h2>What did I<br>stop <em>noticing?</em></h2><p class="dek">I designed this from what I know.<br>Try it with fresh eyes.</p><ol class="instructions"><li data-reveal="1"><span class="number">01</span><span>Find the evidence. Describe a visible change.</span></li><li data-reveal="2"><span class="number">02</span><span>What can’t you conclude?</span></li><li data-reveal="3"><span class="number">03</span><span>One strength. One hesitation.</span></li></ol><p class="access-note">Explore, pair up, or watch. Installation is optional.</p></div><div data-embed="collective"></div></div></div><div data-route="wildcard" hidden inert aria-hidden="true"><div class="media-layout"><div class="media-copy"><p class="kicker">Two groups / 4 minutes</p><h2>Your app,<br><em>one task</em></h2><ol class="instructions"><li data-reveal="1"><span class="number">01</span><span>Two 30-second app stories.</span></li><li data-reveal="2"><span class="number">02</span><span>Vote for one small task.</span></li><li data-reveal="3"><span class="number">03</span><span>Show it. Where does experience matter?</span></li></ol><p class="bridge">Use a public screen. Keep private information off the projector.</p><div class="poll-actions"><a class="interaction-button" data-figma-link target="_blank" rel="noopener noreferrer">Open on your phone ↗</a><button class="interaction-button" data-copy-figma>Copy Figma link</button><span class="poll-state" role="status"></span></div></div><div data-embed="figma"></div></div></div></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide" data-title="Three Design Questions" data-chapter="1">
-    <div class="frame"><p class="kicker">Three lenses for our discussion</p><h2>What makes this easier to use?</h2>
-      <div class="three">
-        <article data-reveal="1"><span class="number">01</span><h3>Clarity</h3><p>Can I tell what to do—and whether it worked?</p><p class="example">Labels / next steps / feedback</p></article>
-        <article data-reveal="2"><span class="number">02</span><h3>Control</h3><p>Can I change my mind or recover from a mistake?</p><p class="example">Undo / back / saved progress</p></article>
-        <article data-reveal="3"><span class="number">03</span><h3>Context</h3><p>Does this fit how I’m actually using it?</p><p class="example">Attention / access / interruptions</p></article>
-      </div>
-      <p class="bridge" data-reveal="3">Name one strength to keep and one difficulty to investigate.</p>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide " data-title="Our design brief" data-chapter="1"><div class="frame"><p class="kicker">Our brief / 3 minutes</p><h2>What would <em>better</em> mean?</h2><div class="brief-board"><label>Help this person<input aria-label="Person in our design brief" placeholder="Who is trying?" maxlength="120"></label><span class="brief-connector" aria-hidden="true">→</span><label>Do this task<input aria-label="Task in our design brief" placeholder="What do they need to do?" maxlength="160"></label></div><div class="journey"><div data-reveal="1"><strong>Keep</strong><small>One strength.</small></div><span aria-hidden="true">→</span><div data-reveal="2"><strong>Change</strong><small>One observed difficulty.</small></div><span aria-hidden="true">→</span><div data-reveal="3"><strong>Watch for</strong><small>Two signs it helped.</small></div></div><p class="caption space">Our working brief stays on this device. It is included only when you submit a sketch.</p></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide knowledge-slide" data-title="Mētis and Epistēmē" data-chapter="1">
-    <div class="frame"><p class="kicker">Two kinds of knowing</p><h2>Experience meets explanation.</h2>
-      <div class="knowledge">
-        <article data-reveal="1"><h3>Mētis</h3><p class="caption">Practical, situated know-how</p><p>Judgment built through doing: timing, habits, and workarounds.</p><div class="field-observation"><span class="specimen-label">Illustrative field note</span><blockquote>“Before I close the form,<br>I copy my answer.”</blockquote></div></article>
-        <article data-reveal="2"><h3>Epistēmē</h3><p class="caption">Systematic, reasoned knowledge</p><p>Principles we can explain, examine, and apply beyond one situation.</p><div class="principle-note"><span class="specimen-label">A principle to examine</span><strong>Make system status visible.</strong><p>Can someone tell that their work saved?</p></div></article>
-      </div>
-      <p class="bridge" data-reveal="2">Experience informs our ideas. Explicit explanations let us question them together.</p>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide work" data-title="Two sketches" data-chapter="1"><div class="frame"><div class="media-layout"><div class="media-copy"><p class="kicker">Two groups / 3 minutes</p><h2>Two ways<br>to <em>help</em></h2><p class="dek">Sketch the next step.</p><ol class="instructions"><li data-reveal="1"><span class="number">01</span><span>What should someone notice first?</span></li><li data-reveal="2"><span class="number">02</span><span>Where can their knowledge change the outcome?</span></li></ol><p class="bridge" data-reveal="3">One idea and why it might help.</p></div><div class="sketch-studio" data-sketch><div class="sketch-toolbar"><span>A working sketch</span><button data-undo-sketch type="button">Undo</button><button data-clear-sketch type="button">Clear</button></div><canvas aria-label="Optional drawing area. Use the text field below to describe your idea instead."></canvas><label for="sketchDescription">Or describe the idea</label><textarea id="sketchDescription" placeholder="The first thing I would change…" maxlength="1500"></textarea><p class="embed-caption">Draw with a finger or pointer. Draft recovery is enabled on this device.</p></div></div></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide" data-title="Experience into a Hypothesis" data-chapter="1">
-    <div class="frame split equal">
-      <div><p class="kicker">Illustrative example / assignment tracker</p><blockquote class="quote">“I keep checking whether the <span class="under">deadline changed.</span>”</blockquote><p class="reason" data-reveal="2"><strong>A design hypothesis:</strong><br>Showing what changed might reduce repeated checking.</p><p class="small space" data-reveal="4">What if the student never saw the original deadline?</p></div>
-      <figure class="sample"><div class="variant-tag"><span data-reveal="1" data-until="2">01 / Baseline — date only</span><span data-reveal="3">02 / Proposed revision — show the change</span></div><div class="appbar">Coursework / assignment details</div><h3>Reading response</h3><p class="due">Due Friday, 5:00 PM</p><div class="change-slot"><p class="baseline-note" data-reveal="1" data-until="2">No change history is shown.</p><div class="change" data-reveal="3"><strong>Deadline updated</strong><br>Wednesday → Friday<br><small>Changed today at 10:30 AM</small></div></div><span class="action">View assignment</span><figcaption>Fictional interface · a hypothesis, not a proven fix</figcaption></figure>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide " data-title="A candidate to question" data-chapter="1"><div class="frame"><div data-route="collective"><div class="media-layout"><div class="media-copy"><p class="kicker">Prepared alternative / 3 minutes</p><h2>A candidate<br>to <em>question</em></h2><p class="dek">Watch. Observe. Review.</p><div class="knowledge"><article data-reveal="1"><h3>What changed?</h3><p>A local note. Room for uncertainty.</p></article><article data-reveal="2"><h3>What did it miss?</h3><p>Compare with your sketches.</p></article></div><p class="bridge" data-reveal="3">Prepared before today. Still a hypothesis.</p><p class="access-note">Settings → Experience switches between both versions. No research submissions.</p></div><div data-embed="practice"></div></div></div><div data-route="wildcard" hidden inert aria-hidden="true"><div class="media-layout"><div class="media-copy"><p class="kicker">A direction to try / 3 minutes</p><h2>Which sketch<br>earns a <em>try?</em></h2><p class="dek">Choose by our criteria.</p><div class="journey"><div data-reveal="1"><strong>Start</strong><small>A clear goal.</small></div><span aria-hidden="true">→</span><div data-reveal="2"><strong>Act</strong><small>One meaningful choice.</small></div><span aria-hidden="true">→</span><div data-reveal="3"><strong>Check</strong><small>What happened?</small></div></div><div class="poll-actions"><a class="interaction-button" data-figma-link target="_blank" rel="noopener noreferrer">Open on your phone ↗</a><button class="interaction-button" data-copy-figma>Copy Figma link</button><span class="poll-state" role="status"></span></div></div><div data-embed="figma"></div></div></div></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide" data-title="The Design Thinking Loop" data-chapter="1">
-    <div class="frame"><p class="kicker">Design thinking / a process we can repeat</p><h2>Make an idea.<br>Let experience change it.</h2>
-      <ol class="process">
-        <li data-reveal="1"><strong>Empathize</strong><span>Understand the experience.</span></li>
-        <li data-reveal="2"><strong>Define</strong><span>Name the need.</span></li>
-        <li data-reveal="3"><strong>Ideate</strong><span>Explore possibilities.</span></li>
-        <li data-reveal="4"><strong>Prototype</strong><span>Make one idea usable.</span></li>
-        <li data-reveal="5"><strong>Test</strong><span>Observe what happens.</span></li>
-      </ol>
-      <svg class="process-return" data-reveal="5" data-decorative viewBox="0 0 1000 28" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M930 2v16H55V3m-6 6 6-6 6 6"/></svg>
-      <p class="return" data-reveal="5">New observations can change the problem as well as the solution.</p>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide ink" data-title="One change with AI" data-chapter="2"><div class="frame"><div class="media-layout"><div class="media-copy"><p class="kicker">Figma Make / 6 minutes / stop at minute 28</p><h2>One change<br>with <em>AI</em></h2><div class="prompt-sheet"><p data-reveal="1"><b>Person + task</b><br>Who needs to do what?</p><p data-reveal="2"><b>Evidence + choice</b><br>What did we see?</p><p data-reveal="3"><b>Limits + test</b><br>What will we watch for?</p></div><p class="bridge" data-reveal="4">One generation. One repair. Then test.</p><div class="poll-actions"><a class="interaction-button" data-figma-link target="_blank" rel="noopener noreferrer">Open on your phone ↗</a><button class="interaction-button" data-copy-figma>Copy Figma link</button><span class="poll-state" role="status"></span></div></div><div data-embed="figma"></div></div></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide work" data-title="Define Better" data-chapter="1">
-    <div class="frame split equal">
-      <div><p class="kicker">Back to our app / 4 minutes</p><h2>What would<br><em>better</em> mean?</h2><p class="question">How might we help <span>this person</span> do <span>this task</span> in <span>this situation</span>?</p></div>
-      <div class="checks"><h3 data-reveal="2">Agree before we build</h3><p data-reveal="2"><strong>Keep:</strong> one thing that already works.</p><p data-reveal="3"><strong>Improve:</strong> one specific difficulty.</p><p data-reveal="4"><strong>Watch for:</strong> two observable signs of success.</p><p class="small" data-reveal="4">For example: identify the next step; recover without losing progress.</p></div>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide " data-title="A volunteer test" data-chapter="3"><div class="frame"><div class="media-layout"><div class="media-copy"><p class="kicker">A volunteer test / 5 minutes</p><h2>What happens<br>without <em>coaching?</em></h2><blockquote class="question">“Here’s your goal.<br>Show us what you would do.”</blockquote><ol class="instructions"><li data-reveal="1"><span class="number">01</span><span>Watch before explaining.</span></li><li data-reveal="2"><span class="number">02</span><span>“What were you expecting?”</span></li><li data-reveal="3"><span class="number">03</span><span>Check our two criteria.</span></li></ol><div class="poll-actions"><a class="interaction-button" data-figma-link target="_blank" rel="noopener noreferrer">Open on your phone ↗</a><button class="interaction-button" data-copy-figma>Copy Figma link</button><span class="poll-state" role="status"></span></div></div><div data-embed="figma"></div></div></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide work alternatives-slide" data-title="Sketch Alternatives" data-chapter="2">
-    <div class="frame">
-      <p class="kicker">Two groups / 4 minutes / sketch before revealing examples</p><h2>Same need. Different approaches.</h2><p class="dek">Two groups. Two approaches. A few boxes and labels are enough.</p>
-      <div class="alternatives">
-        <figure class="wire" data-reveal="2"><h3>A / Show changes in context</h3><div class="wire-ui"><div class="wire-bar">Assignments</div><div class="wire-row"><b>Reading response</b><span>Friday</span></div><div class="wire-change">Changed: Wednesday → Friday</div><div class="wire-row"><span>Project outline</span><span>Monday</span></div></div><small>Near the task. Easier to miss among other work?</small></figure>
-        <figure class="wire" data-reveal="3"><h3>B / Give changes their own place</h3><div class="wire-ui"><div class="wire-bar">Updates / 1 new</div><div class="wire-row"><b>Deadline changed</b><span>Today</span></div><div class="wire-change">Reading response: now Friday</div><div class="wire-row"><span>Open assignment →</span><span>□ Read</span></div></div><small>Easy to scan. One more place to check?</small></figure>
-      </div>
-      <p class="deliver" data-reveal="3">Compare the tradeoffs—not the polish. Which approach fits our criteria?</p>
-      <p class="illustration-label">Fictional wireframes. These are examples, not assigned designs for your groups.</p>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide work" data-title="Our revision decision" data-chapter="3"><div class="frame"><p class="kicker">Our revision / 2 minutes</p><h2>What did the test <em>change?</em></h2><div class="journey revision-journey"><div data-reveal="1"><span class="number">OBSERVATION</span><strong>We saw…</strong><small>A behavior.</small></div><span aria-hidden="true">→</span><div data-reveal="2"><span class="number">DECISION</span><strong>We’ll change…</strong><small>A detail, for a reason.</small></div><span aria-hidden="true">→</span><div data-reveal="3"><span class="number">NEXT TEST</span><strong>We still wonder…</strong><small>What would challenge our explanation?</small></div></div><p class="bridge">Sketch the revision. No second build session.</p></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
-  <section class="slide" data-title="Bring the Evidence into the Prompt" data-chapter="2">
-    <div class="frame"><p class="kicker">Our brief for the AI</p><h2>Give it the reasons<br>behind the design.</h2>
-      <div class="prompt-sheet">
-        <p data-reveal="1"><b>Person + situation</b> · Who is using this, and what are they trying to do?</p>
-        <p data-reveal="2"><b>Evidence + choice</b> · What happened? Which idea did we choose, and why?</p>
-        <p data-reveal="3"><b>Limits</b> · Keep what works. Build one flow with sample data.</p>
-        <p data-reveal="4"><b>Test</b> · What should someone be able to do with the result?</p>
-      </div>
-      <p class="bridge" data-reveal="4">Ask the AI to state its assumptions before it starts building.</p>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
-
-  <section class="slide ink" data-title="Build One Flow" data-chapter="2">
-    <div class="frame split">
-      <div><p class="kicker">Live prototype / Figma Make</p><h2 class="live">Let’s<br><em>make it.</em></h2><p class="dek">One task. A few screens.<br>A working interaction.</p></div>
-      <div><p class="caption">While it builds, decide…</p><div class="live-list"><p data-reveal="1"><small>01</small>What will we ask someone to do?</p><p data-reveal="2"><small>02</small>What would surprise us?</p><p data-reveal="3"><small>03</small>What would show the idea needs work?</p></div><p class="bridge" data-reveal="3">A polished screen still needs a test.</p></div>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
-
-  <section class="slide" data-title="Try the Task" data-chapter="3">
-    <div class="frame"><p class="kicker">One volunteer / 7 minutes</p><h2>Give someone a task.</h2>
-      <div class="split equal space"><div><blockquote class="test-quote">“You’re in <em>this situation.</em><br>Show us how you would <em>do this task.</em>”</blockquote><figure class="test-specimen"><div class="screen-label">Illustrative test / assignment details</div><strong>Deadline updated</strong><span class="dates">Wednesday → Friday</span><p class="annotation" data-reveal="2">↳ Reads both dates. Asks which one applies.</p><figcaption class="illustration-label">Hypothetical observation—not evidence from our test.</figcaption></figure></div>
-        <ul class="test-list"><li data-reveal="2"><strong>Watch first</strong>Where do they hesitate or take a different path?</li><li data-reveal="3"><strong>Ask neutrally</strong>“What were you expecting there?”</li><li data-reveal="4"><strong>Check our criteria</strong>What happened? What remains uncertain?</li></ul>
-      </div>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
-
-  <section class="slide work revision-story" data-title="Revise from What Happened" data-chapter="3">
-    <div class="frame"><p class="kicker">One revision / 5 minutes</p><h2>What did the test change?</h2>
-      <div class="three">
-        <article data-reveal="1"><span class="number">OBSERVATION</span><h3>We saw…</h3><p>Name what the person did.</p><div class="mini-screen"><div class="screen-label">Before</div><strong>Wednesday → Friday</strong><div class="annotation">“Which date applies?”</div></div></article>
-        <article data-reveal="2"><span class="number">REVISION</span><h3>So we’ll try…</h3><p>Change one thing for a reason.</p><div class="mini-screen"><div class="screen-label">Proposed revision</div><strong class="task-mark proposed">Current deadline: Friday</strong><div>Previously Wednesday</div></div></article>
-        <article data-reveal="3"><span class="number">NEXT TEST</span><h3>We’ll watch for…</h3><p>Predict what should change.</p><div class="mini-screen"><div class="screen-label">Try again / no result yet</div><div class="test-question">Can they identify the current deadline without help?</div></div></article>
-      </div><p class="bridge" data-reveal="3">Send the observation with the revision request. Then try the changed moment again.</p>
-      <p class="illustration-label">Illustrative sequence. Use the actual observations from our session to choose the revision.</p>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
-
-  <section class="slide ink closing" data-title="Did We Make It Better?" data-chapter="3">
-    <div class="frame"><p class="kicker">Return to the experience we started with</p><h2 class="quote">Did we make it better?<br><em>What makes us think so?</em></h2>
-      <div class="verdict"><span>Helped</span><span>Still uncertain</span><span>Needs another try</span></div>
-      <p class="dek">Your experience shaped the question.<br>AI helped us build an answer we could try.<br>The test gave us something new to learn.</p>
-      <p class="bridge">Mētis keeps us close to experience. Epistēmē helps us explain and question our reasons.</p>
-    </div>
-    <aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside>
-  </section>
+<section class="slide ink" data-title="What users know" data-chapter="3"><div class="frame"><p class="kicker">Takeaway / questions</p><h2>What do users know<br>that we <em>missed?</em></h2><div class="journey closing-journey"><div data-reveal="1"><strong>Experience</strong><small>Helps us notice.</small></div><span aria-hidden="true">↔</span><div data-reveal="2"><strong>Explicit reasons</strong><small>Help us question.</small></div><span aria-hidden="true">→</span><div data-reveal="3"><strong>A prototype</strong><small>Gives us something to try.</small></div></div><p class="bridge">AI helps us build. People help us find out whether it helps.</p><p class="access-note">Keep exploring: <a class="app-link" href="https://collective-movement.vercel.app/" target="_blank" rel="noopener noreferrer">Collective</a>. Optional installation. Salem footage stays online.</p></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 </main>
 <footer class="footer">
   <div class="chapters" aria-label="Workshop stage"><span>01 Notice</span><span>02 Frame</span><span>03 Make</span><span>04 Try</span></div>
   <nav class="nav" aria-label="Presentation navigation"><button id="prev" aria-label="Previous slide">←</button><div class="position" role="status" aria-live="polite" aria-atomic="true"><span id="counter"></span><span id="buildCounter" hidden></span></div><button id="next" aria-label="Next section">→</button></nav>
 </footer>
 <div id="progress"></div>
-<dialog id="help" aria-labelledby="helpTitle"><button class="close" data-close aria-label="Close help">Close</button><h2 id="helpTitle">Presenter controls</h2><div class="keys"><kbd>→ / Space / Page Down</kbd><span>Reveal next section, then next slide</span><kbd>← / Page Up</kbd><span>Step back a section, then previous slide</span><kbd>Shift + ← →</kbd><span>Skip directly to the previous / next slide</span><kbd>A</kbd><span>Show all sections on this slide</span><kbd>Home / End</kbd><span>First / last slide</span><kbd>F</kbd><span>Fullscreen</span><kbd>B</kbd><span>Blank screen</span><kbd>?</kbd><span>Keyboard help</span><kbd>Escape</kbd><span>Close panel / restore screen</span></div><p>Buttons and horizontal swipes also step through sections. Earlier sections stay visible.</p></dialog>
+<dialog id="help" aria-labelledby="helpTitle"><button class="close" data-close aria-label="Close help">Close</button><h2 id="helpTitle">Presenter controls</h2><div class="keys"><kbd>→ / Space / Page Down</kbd><span>Reveal next section, then next slide</span><kbd>← / Page Up</kbd><span>Step back a section, then previous slide</span><kbd>Shift + ← →</kbd><span>Skip directly to the previous / next slide</span><kbd>A</kbd><span>Show all sections on this slide</span><kbd>Home / End</kbd><span>First / last slide</span><kbd>F</kbd><span>Fullscreen</span><kbd>B</kbd><span>Blank screen</span><kbd>?</kbd><span>Keyboard help</span><kbd>Escape</kbd><span>Close panel / restore screen</span></div><p>Desktop buttons and swipes reveal sections. On phones, all sections are visible and navigation moves between slides.</p></dialog>
 <dialog id="notes" aria-labelledby="notesTitle"><button class="close" data-close aria-label="Close notes">Close</button><h2 id="notesTitle">Presenter notes</h2><div id="notesBody"></div></dialog>
 <div id="blackout" hidden aria-label="Blank screen; click to return"></div>
 <script>
 (() => {
   const slides = [...document.querySelectorAll('.slide')];
   const root = document.documentElement;
-  const notes = document.getElementById('notes');
-  const help = document.getElementById('help');
-  const blackout = document.getElementById('blackout');
+  const notes = document.getElementById('notes'), help = document.getElementById('help'), blackout = document.getElementById('blackout');
   const chapters = [...document.querySelectorAll('.chapters span')];
-  const panels = slides.map(slide => [...slide.querySelectorAll('[data-reveal]')]);
-  const totals = panels.map(items => Math.max(1, ...items.map(item => Number(item.dataset.reveal))));
-  let index = 0, step = 1, touch = null;
+  let panels = [], totals = [], index = 0, step = 1, touch = null, route = 'collective';
+  const routeName = () => route === 'collective' ? 'Collective' : 'Student app';
+  function applyRoute(value, write = true) {
+    document.dispatchEvent(new Event('deck:beforechange'));
+    route = value === 'wildcard' ? 'wildcard' : 'collective';
+    document.querySelectorAll('[data-route]').forEach(el => {
+      const active = el.dataset.route === route;
+      el.hidden = !active; el.inert = !active; el.setAttribute('aria-hidden', String(!active));
+    });
+    document.getElementById('routeSelect').value = route;
+    document.querySelectorAll('[data-select-route]').forEach(el => el.setAttribute('aria-pressed', String(el.dataset.selectRoute === route)));
+    document.querySelector('.route-announcement').textContent = 'Selected: ' + routeName();
+    panels = slides.map(slide => [...slide.querySelectorAll('[data-reveal]')].filter(el => !el.closest('[data-route][hidden]')));
+    totals = panels.map(items => Math.max(1, ...items.map(el => Number(el.dataset.reveal))));
+    if (write) {
+      const url = new URL(location.href); url.searchParams.set('route', route); history.replaceState(null, '', url);
+      reveal(1); if (notes.open) renderNotes(); document.dispatchEvent(new Event('deck:change'));
+    }
+  }
   function fromHash() {
     const match = location.hash.slice(1).match(/^(\d+)(?:\.(\d+))?$/);
-    return match ? { slide:Number(match[1]) - 1, step:Number(match[2] || 1) } : { slide:0, step:1 };
+    return match ? {slide:Number(match[1])-1, step:Number(match[2] || 1)} : {slide:0,step:1};
   }
   function reveal(targetStep, writeHash = true, follow = false) {
     step = Math.max(1, Math.min(totals[index], targetStep));
     panels[index].forEach(panel => {
-      const visible = Number(panel.dataset.reveal) <= step && (!panel.dataset.until || step <= Number(panel.dataset.until));
-      panel.classList.toggle('is-revealed', visible);
-      panel.classList.toggle('is-current', visible && Number(panel.dataset.reveal) === step);
-      panel.inert = !visible;
-      panel.setAttribute('aria-hidden', String(!visible || panel.hasAttribute('data-decorative')));
+      const visible = matchMedia("(max-width:900px)").matches || (Number(panel.dataset.reveal) <= step && (!panel.dataset.until || step <= Number(panel.dataset.until)));
+      panel.classList.toggle('is-revealed', visible); panel.classList.toggle('is-current', visible && Number(panel.dataset.reveal) === step);
+      panel.inert = !visible; panel.setAttribute('aria-hidden', String(!visible || panel.hasAttribute('data-decorative')));
     });
-    const buildCounter = document.getElementById('buildCounter');
-    buildCounter.hidden = totals[index] === 1;
-    buildCounter.textContent = 'Section ' + step + ' / ' + totals[index];
-    document.getElementById('prev').setAttribute('aria-label', step > 1 ? 'Previous section' : 'Previous slide');
-    document.getElementById('next').setAttribute('aria-label', step < totals[index] ? 'Next section' : 'Next slide');
+    const counter = document.getElementById('buildCounter');
+    counter.hidden = totals[index] === 1 || matchMedia('(max-width:900px)').matches; counter.textContent = 'Section ' + step + ' / ' + totals[index];
+    const phone = matchMedia('(max-width:900px)').matches;
+    document.getElementById('prev').setAttribute('aria-label', !phone && step > 1 ? 'Previous section' : 'Previous slide');
+    document.getElementById('next').setAttribute('aria-label', !phone && step < totals[index] ? 'Next section' : 'Next slide');
     if (writeHash) {
       const hash = '#' + (index + 1) + (step > 1 ? '.' + step : '');
       try { history.replaceState(null, '', hash); } catch (_) { location.hash = hash; }
     }
-    // On narrow screens, bring the next talking point above the fixed footer.
-    if (follow && window.matchMedia('(max-width:900px)').matches) {
-      const revealed = panels[index].filter(panel => Number(panel.dataset.reveal) === step);
-      const anchor = revealed.find(panel => !panel.matches('.bridge,.deliver,.return,.small,h3')) || revealed[0];
-      if (anchor) {
-        const rect = anchor.getBoundingClientRect();
-        if (rect.top < 88 || rect.bottom > window.innerHeight - 90) {
-          slides[index].scrollTo({ top:slides[index].scrollTop + rect.top - 95, behavior:'instant' });
-        }
-      }
-    }
   }
-  function show(target, targetStep = 1, writeHash = true) {
-    index = Math.max(0, Math.min(slides.length - 1, target));
-    slides.forEach((slide, n) => { slide.classList.toggle('active', n === index); slide.inert = n !== index; slide.setAttribute('aria-hidden', String(n !== index)); });
+  function show(target, targetStep=1, writeHash=true) {
+    document.dispatchEvent(new Event('deck:beforechange'));
+    index = Math.max(0, Math.min(slides.length-1, target));
+    slides.forEach((slide,n) => { slide.classList.toggle('active',n === index); slide.inert = n !== index; slide.setAttribute('aria-hidden',String(n !== index)); });
     document.body.classList.toggle('on-ink', slides[index].classList.contains('ink'));
     document.body.classList.toggle('on-work', slides[index].classList.contains('work'));
-    chapters.forEach((chapter, n) => { const current = n === Number(slides[index].dataset.chapter); chapter.classList.toggle('current', current); if (current) chapter.setAttribute('aria-current', 'step'); else chapter.removeAttribute('aria-current'); });
-    document.getElementById('counter').textContent = String(index + 1).padStart(2, '0') + ' / ' + slides.length;
-    document.getElementById('progress').style.width = ((index + 1) / slides.length * 100) + '%';
-    document.title = slides[index].dataset.title + ' · TechBytes';
-    slides[index].scrollTop = 0;
-    reveal(targetStep, writeHash, targetStep > 1);
+    chapters.forEach((chapter,n) => { const active=n === Number(slides[index].dataset.chapter); chapter.classList.toggle('current',active); if(active) chapter.setAttribute('aria-current','step'); else chapter.removeAttribute('aria-current'); });
+    document.getElementById('counter').textContent=String(index+1).padStart(2,'0')+' / '+slides.length;
+    document.getElementById('progress').style.width=((index+1)/slides.length*100)+'%';
+    document.title=slides[index].dataset.title+' · TechBytes'; slides[index].scrollTop=0;
+    reveal(targetStep,writeHash,targetStep>1);
+    document.dispatchEvent(new Event('deck:change'));
   }
-  function navigate(direction, skipSections = false) {
-    if (help.open || notes.open || !blackout.hidden) return;
-    if (!skipSections && direction > 0 && step < totals[index]) reveal(step + 1, true, true);
-    else if (!skipSections && direction < 0 && step > 1) reveal(step - 1, true, true);
-    else if (direction > 0 && index < slides.length - 1) show(index + 1);
-    else if (direction < 0 && index > 0) show(index - 1, totals[index - 1]);
+  function navigate(direction, skip=false) {
+    if(document.querySelector('dialog[open]') || document.body.classList.contains('embed-open') || !blackout.hidden) return;
+    if(matchMedia('(max-width:900px)').matches) skip=true;
+    if(!skip && direction>0 && step<totals[index]) reveal(step+1,true,true);
+    else if(!skip && direction<0 && step>1) reveal(step-1,true,true);
+    else if(direction>0 && index<slides.length-1) show(index+1);
+    else if(direction<0 && index>0) show(index-1,totals[index-1]);
   }
-  function toggleDialog(dialog) {
-    if (dialog.open) { dialog.close(); return; }
-    if (dialog === notes) {
-      document.getElementById('notesTitle').textContent = (index + 1) + ' · ' + slides[index].dataset.title;
-      document.getElementById('notesBody').innerHTML = slides[index].querySelector('.speaker-notes').innerHTML;
-    }
-    dialog.showModal();
+  function renderNotes() {
+    document.getElementById('notesTitle').textContent=(index+1)+' · '+slides[index].dataset.title+' / '+routeName();
+    const copy=slides[index].querySelector('.speaker-notes').cloneNode(true);
+    copy.querySelectorAll('[data-route]').forEach(el => { if(el.dataset.route!==route) el.remove(); });
+    document.getElementById('notesBody').innerHTML=copy.innerHTML;
   }
-  async function fullscreen() {
-    try {
-      if (document.fullscreenElement) await document.exitFullscreen();
-      else if (root.requestFullscreen) await root.requestFullscreen();
-    } catch (_) {}
-  }
-  document.getElementById('next').onclick = () => navigate(1);
-  document.getElementById('prev').onclick = () => navigate(-1);
-  document.getElementById('helpBtn').onclick = () => toggleDialog(help);
-  document.getElementById('notesBtn').onclick = () => toggleDialog(notes);
-  document.getElementById('themeBtn').onclick = () => root.dataset.theme = root.dataset.theme === 'dark' ? 'warm' : 'dark';
-  document.querySelectorAll('[data-close]').forEach(button => button.onclick = () => button.closest('dialog').close());
-  blackout.onclick = () => { blackout.hidden = true; };
-  document.addEventListener('keydown', event => {
-    if (event.metaKey || event.ctrlKey || event.altKey) return;
-    if (help.open || notes.open) return;
-    if (!blackout.hidden) {
-      if (['b','B','Escape'].includes(event.key)) { event.preventDefault(); blackout.hidden = true; }
-      return;
-    }
-    if (event.target.closest('button,a,input,textarea,select') && [' ','Enter'].includes(event.key)) return;
-    if (['ArrowRight','PageDown',' '].includes(event.key)) { event.preventDefault(); navigate(1, event.shiftKey && event.key === 'ArrowRight'); }
-    else if (['ArrowLeft','PageUp'].includes(event.key)) { event.preventDefault(); navigate(-1, event.shiftKey && event.key === 'ArrowLeft'); }
-    else if (event.key === 'Home') { event.preventDefault(); show(0); }
-    else if (event.key === 'End') { event.preventDefault(); show(slides.length - 1, totals[slides.length - 1]); }
-    else if (event.key.toLowerCase() === 'a') reveal(totals[index]);
-    else if (event.key.toLowerCase() === 'f') fullscreen();
-    else if (event.key.toLowerCase() === 'b') blackout.hidden = false;
-    else if (event.key.toLowerCase() === 'n' && !document.getElementById('notesBtn').hidden) toggleDialog(notes);
-    else if (event.key === '?') toggleDialog(help);
+  function toggleDialog(dialog) { if(dialog.open) {dialog.close();return;} if(dialog===notes) renderNotes(); dialog.showModal(); }
+  async function fullscreen() { try { if(document.fullscreenElement) await document.exitFullscreen(); else if(root.requestFullscreen) await root.requestFullscreen(); } catch (_) {} }
+  document.getElementById('next').onclick=()=>navigate(1);
+  document.getElementById('prev').onclick=()=>navigate(-1);
+  document.getElementById('helpBtn').onclick=()=>toggleDialog(help);
+  document.getElementById('notesBtn').onclick=()=>toggleDialog(notes);
+  document.getElementById('themeBtn').onclick=()=>root.dataset.theme=root.dataset.theme==='dark'?'warm':'dark';
+  document.getElementById('routeSelect').onchange=e=>applyRoute(e.target.value);
+  document.querySelectorAll('[data-select-route]').forEach(button=>button.onclick=()=>applyRoute(button.dataset.selectRoute));
+  document.querySelectorAll('[data-close]').forEach(button=>button.onclick=()=>button.closest('dialog').close());
+  const positions=['Leans strongly toward situated judgment','Leans toward situated judgment','Makes room for both kinds of knowledge','Leans toward formal knowledge','Leans strongly toward formal knowledge'];
+  document.querySelectorAll('[data-spectrum]').forEach(input=>input.oninput=()=>{
+    const label=positions[Number(input.value)]; input.setAttribute('aria-valuetext',label);
+    input.closest('.spectrum').querySelector('.spectrum-response').textContent='Discussion only: '+label+'. No votes collected.';
   });
-  document.getElementById('deck').addEventListener('touchstart', event => {
-    touch = null;
-    if (help.open || notes.open || !blackout.hidden) return;
-    const t = event.touches[0]; touch = { x:t.clientX, y:t.clientY };
-  }, {passive:true});
-  document.getElementById('deck').addEventListener('touchend', event => {
-    if (!touch) return;
-    const t = event.changedTouches[0], dx = t.clientX - touch.x, dy = t.clientY - touch.y;
-    if (Math.abs(dx) > 65 && Math.abs(dx) > Math.abs(dy) * 1.5) navigate(dx < 0 ? 1 : -1);
-    touch = null;
-  }, {passive:true});
-  function restore() { const state = fromHash(); show(state.slide, state.step, false); }
-  window.addEventListener('hashchange', restore);
-  restore();
-  root.classList.add('reveal-ready');
+  blackout.onclick=()=>{blackout.hidden=true;};
+  document.addEventListener('keydown',event=>{
+    if(event.metaKey || event.ctrlKey || event.altKey || document.querySelector('dialog[open]') || document.body.classList.contains('embed-open')) return;
+    if(!blackout.hidden) {if(['b','B','Escape'].includes(event.key)){event.preventDefault();blackout.hidden=true;}return;}
+    if(event.target.closest('input,textarea,select,canvas,[contenteditable=true]')) return;
+    if(event.target.closest('button,a') && [' ','Enter'].includes(event.key)) return;
+    if(['ArrowRight','PageDown',' '].includes(event.key)){event.preventDefault();navigate(1,event.shiftKey&&event.key==='ArrowRight');}
+    else if(['ArrowLeft','PageUp'].includes(event.key)){event.preventDefault();navigate(-1,event.shiftKey&&event.key==='ArrowLeft');}
+    else if(event.key==='Home'){event.preventDefault();show(0);}
+    else if(event.key==='End'){event.preventDefault();show(slides.length-1,totals[slides.length-1]);}
+    else if(event.key.toLowerCase()==='a') reveal(totals[index]);
+    else if(event.key.toLowerCase()==='f') fullscreen();
+    else if(event.key.toLowerCase()==='b') blackout.hidden=false;
+    else if (event.key.toLowerCase() === 'n' && !document.getElementById('notesBtn').hidden) toggleDialog(notes);
+    else if(event.key==='?') toggleDialog(help);
+  });
+  document.getElementById('deck').addEventListener('touchstart',event=>{
+    touch=null;
+    if(document.querySelector('dialog[open]') || document.body.classList.contains('embed-open') || !blackout.hidden || event.target.closest('input,button,a,select,textarea,canvas,[data-embed]')) return;
+    const t=event.touches[0];touch={x:t.clientX,y:t.clientY};
+  },{passive:true});
+  document.getElementById('deck').addEventListener('touchend',event=>{
+    if(!touch)return; const t=event.changedTouches[0],dx=t.clientX-touch.x,dy=t.clientY-touch.y;
+    if(Math.abs(dx)>65&&Math.abs(dx)>Math.abs(dy)*1.5)navigate(dx<0?1:-1);touch=null;
+  },{passive:true});
+  function restore(){applyRoute(new URL(location.href).searchParams.get('route'),false);const state=fromHash();show(state.slide,state.step,false);}
+  window.addEventListener('hashchange',restore); window.addEventListener('popstate',restore);
+  matchMedia('(max-width:900px)').addEventListener('change',()=>reveal(step,false));
+  restore(); root.classList.add('reveal-ready');
 })();
 </script>
 </body>

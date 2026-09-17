@@ -23,6 +23,7 @@ def public_deck(text, include_notes):
     # The authored talk keeps its original local URL and fonts. Only its public
     # export gets collection navigation and the shared public asset path.
     text = text.replace('url("assets/', 'url("../assets/')
+    text = text.replace('"site/workshop/', '"../assets/workshop/')
     text = re.sub(
         r'<span class="brand">.*?</span>',
         '<span class="brand"><a href="../">← All talks</a></span>',
@@ -61,6 +62,8 @@ def build():
     if not (PUBLIC / "assets/fonts/ibm-plex-sans.ttf").is_file():
         raise FileNotFoundError("Local fonts or previously exported public fonts are required.")
     shutil.copyfile(ROOT / "site/library.css", PUBLIC / "assets/library.css")
+    if (ROOT / "site/workshop").is_dir():
+        shutil.copytree(ROOT / "site/workshop", PUBLIC / "assets/workshop", dirs_exist_ok=True)
     cards, seen = [], set()
     for number, talk in enumerate(catalog["talks"], 1):
         slug = talk["slug"]
@@ -106,19 +109,32 @@ def build():
         notes = '<div class="notes">' + ''.join(links) + '</div>' if links else ''
         topics = ''.join(f'<li>{html.escape(topic)}</li>' for topic in talk["topics"])
         esc = lambda key: html.escape(str(talk[key]))
+        cover = ''
+        if talk.get("cover"):
+            cover_source = local_file(talk["cover"])
+            cover_destination = PUBLIC / "assets/covers" / (slug + cover_source.suffix)
+            cover_destination.parent.mkdir(exist_ok=True)
+            shutil.copyfile(cover_source, cover_destination)
+            cover = (f'<img src="assets/covers/{html.escape(cover_destination.name, quote=True)}" '
+                     'alt="" width="1280" height="720" decoding="async">')
+        else:
+            cover = f'<span class="cover-title">{esc("title")}</span>'
         cards.append(f'''      <article class="talk" aria-labelledby="{slug}-title">
-        <span class="number" aria-hidden="true">{number:02}</span>
-        <div>
+        <div class="talk-visual">
+          <div class="cover-heading"><span class="number">{number:02} / Presentation</span><span>{esc('slides')} slides</span></div>
+          <a class="cover" href="{slug}/#1" aria-label="Preview and open {html.escape(talk['title'], quote=True)}">
+            {cover}
+            <span class="cover-open" aria-hidden="true">↗</span>
+          </a>
+          <div class="cover-caption"><span>{esc('format')}</span><span>{esc('duration')}</span></div>
+        </div>
+        <div class="talk-content">
           <p class="event">{esc('event')}</p>
           <h2 id="{slug}-title"><a href="{slug}/#1">{esc('title')}</a></h2>
           <p class="subtitle">{esc('subtitle')}</p>
           <p class="description">{esc('description')}</p>
           <ul class="topics" aria-label="Topics">{topics}</ul>
-        </div>
-        <div class="details">
-          <p class="format">{esc('format')}</p>
-          <p class="duration">{esc('duration')} · {esc('slides')} slides</p>
-          <a class="launch" href="{slug}/#1" aria-label="Open {html.escape(talk['title'], quote=True)}">Open talk <span aria-hidden="true">↗</span></a>
+          <a class="launch" href="{slug}/#1" aria-label="Open {html.escape(talk['title'], quote=True)}">Open presentation <span aria-hidden="true">↗</span></a>
           {notes}
         </div>
       </article>''')
@@ -126,9 +142,11 @@ def build():
     repo_link = (f'<a class="repository" href="{html.escape(repository, quote=True)}">'
                  'View on GitHub <span aria-hidden="true">↗</span></a>'
                  if catalog.get("repository_live") else
-                 '<span class="repository">GitHub publishing pending</span>')
+                 '<span class="repository pending"><span aria-hidden="true"></span>Local preview</span>')
     page = page.replace("@@REPOSITORY_LINK@@", repo_link)
     page = page.replace("@@TALKS@@", "\n".join(cards))
+    count = len(cards)
+    page = page.replace("@@TALK_COUNT@@", f'{count:02} {"talk" if count == 1 else "talks"}')
     (PUBLIC / "index.html").write_text("\n".join(line.rstrip() for line in page.splitlines()) + "\n")
     (PUBLIC / ".nojekyll").touch()
     print(f"Exported {len(seen)} talk(s) to {PUBLIC}; companion notes: {include_notes}")
