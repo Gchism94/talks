@@ -93,6 +93,7 @@ python3 scripts/build_site.py
 python3 scripts/check_site.py
 node scripts/verify_workshop_urls.mjs
 node scripts/verify_sketch_drafts.mjs
+node scripts/verify_title_preview.mjs
 node --check site/workshop/workshop.js
 node --check site/workshop/sketch.js
 git diff --check
@@ -102,6 +103,15 @@ These checks validate the public export, links, URL restrictions, and sketch-dra
 storage. Rehearse the slides and externally hosted activities before each event.
 Poll Everywhere, the gallery, and Collective are hosted independently of GitHub
 Pages.
+
+## Live title preview
+
+The TechBytes title slide plays Collective's Salem swifts in a phone-shaped
+`?embed=title&experience=original` view. **Pause preview** unloads the scene;
+**Replay birds** starts a fresh flock. Leaving the slide or hiding the browser tab
+also unloads it. A reduced-motion preference starts with a still image instead.
+**Explore** opens the full interactive app, with a close button that returns to
+the slide. The simulation requires internet; the still image is the fallback.
 
 ## Workshop polls
 

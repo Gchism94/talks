@@ -8,6 +8,7 @@
   let config = { ...defaults }, expanded = null, restoreFocus = null, inertState = [];
   const scriptURL = new URL(document.currentScript.src);
   const asset = name => new URL('images/' + name, scriptURL).href;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const hostMatches = (host, domain) => host === domain || host.endsWith('.' + domain);
   function validate(key, value) {
     if (!value.trim()) return '';
@@ -39,11 +40,12 @@
     const encoded = new URL(location.href).searchParams.get('session');
     if (encoded) config = { ...config, ...validConfig(JSON.parse(decodeURIComponent(escape(atob(encoded.replace(/-/g,'+').replace(/_/g,'/')))))) };
   } catch (_) { startupNotice = 'The shared link settings could not be read. Defaults are in use.'; }
-  function providerURL(kind) {
-    if (kind === 'collective' || kind === 'practice') {
+  function providerURL(kind, fullApp = false) {
+    if (['collective', 'practice', 'birds'].includes(kind)) {
       const u = new URL(config.collective || defaults.collective);
-      u.searchParams.set('embed','1');
+      u.searchParams.set('embed',kind === 'birds' && !fullApp ? 'title' : '1');
       if (kind === 'practice') u.searchParams.set('experience','practice');
+      if (kind === 'birds') u.searchParams.set('experience','original');
       return u.href;
     }
     if (kind === 'spotify') {
@@ -68,11 +70,11 @@
   }
   function openURL(kind) {
     if (kind === 'maps') return 'https://www.google.com/maps/search/?api=1&query=Willamette+University+Salem';
-    if (kind === 'practice') return providerURL(kind);
+    if (kind === 'practice' || kind === 'birds') return providerURL(kind,true);
     return config[kind] || '';
   }
-  const names = {maps:'Google Maps', spotify:'Spotify', collective:'Collective', practice:'Contributor practice', figma:'Student prototype', mapsPoll:'Google Maps audience poll', spotifyPoll:'Spotify audience poll'};
-  const posters = {maps:'maps.png',spotify:'spotify.png',collective:'collective.png',practice:'practice.png',figma:'figma-template.png'};
+  const names = {maps:'Google Maps', spotify:'Spotify', collective:'Collective', birds:'Collective · Salem swifts', practice:'Contributor practice', figma:'Student prototype', mapsPoll:'Google Maps audience poll', spotifyPoll:'Spotify audience poll'};
+  const posters = {maps:'maps.png',spotify:'spotify.png',collective:'collective.png',birds:'collective-scene.png',practice:'practice.png',figma:'figma-template.png'};
   const devices = [...document.querySelectorAll('[data-embed]')];
   function deviceMarkup(device) {
     const kind = device.dataset.embed, name = names[kind], isPoll = kind.endsWith('Poll');
@@ -91,13 +93,22 @@
     }
     device.querySelector('.load-embed').onclick = () => {
       if (!providerURL(kind)) { settings.showModal(); settings.querySelector(`[name="${kind}"]`)?.focus(); return; }
-      loadDevice(device);
       if(matchMedia('(max-width:900px)').matches) expand(device);
+      startDevice(device);
     };
     device.querySelector('.expand-embed').onclick = () => {
       if (!providerURL(kind)) { settings.showModal(); settings.querySelector(`[name="${kind}"]`)?.focus(); return; }
-      loadDevice(device); expand(device);
+      expand(device); startDevice(device);
     };
+    if (kind === 'birds') {
+      const toggle=document.createElement('button'); toggle.type='button'; toggle.className='preview-toggle';
+      toggle.onclick=()=>{
+        if(device.querySelector('iframe')){device.dataset.previewPaused='true';pauseDevice(device);}
+        else startDevice(device);
+      };
+      device.querySelector('.device-actions').prepend(toggle);
+      device.querySelector('.expand-embed').textContent='Explore';
+    }
     device.querySelector('.device-exit').onclick = closeExpanded;
     refreshDevice(device);
   }
@@ -109,9 +120,22 @@
     device.querySelector('.load-embed').textContent = connected ? 'Open ' + (poll ? 'live poll' : names[kind]) : (poll ? 'Connect a live poll' : 'Connect Figma');
     device.querySelector('.expand-embed').textContent = connected ? 'Explore full screen' : 'Set up link';
     device.querySelector('.embed-caption').textContent = poll ? (connected ? 'Votes go to the polling provider. If blank, open separately.' : 'No live poll connected. Use the discussion fallback below.') : kind==='spotify' ? 'Official player, not the full app. For personal recommendations, open Spotify separately.' : kind==='maps' ? 'Interactive Google map. Full route planning opens separately.' : kind==='figma' ? 'Shared Figma preview. Viewing depends on the file’s sharing settings.' : 'Live app. If sign-in or a blank screen appears, open separately. Salem footage needs internet.';
+    if(kind==='birds') {
+      device.querySelector('.expand-embed').textContent='Explore';
+      device.querySelector('.embed-caption').textContent='Live illustrative model. Replaying starts a fresh flock.';
+      refreshPreviewControl(device);
+    }
+  }
+  function refreshPreviewControl(device) {
+    const toggle=device.querySelector('.preview-toggle');
+    if(toggle)toggle.textContent=device.querySelector('iframe')?'Pause preview':'Replay birds';
+  }
+  function startDevice(device) {
+    if(device.dataset.embed==='birds'){device.dataset.previewPaused='false';device.dataset.previewRequested='true';}
+    loadDevice(device);
   }
   function loadDevice(device) {
-    const src=providerURL(device.dataset.embed); if(!src)return;
+    const src=providerURL(device.dataset.embed,device.classList.contains('expanded')); if(!src)return;
     let iframe=device.querySelector('iframe');
     if(!iframe) {
       iframe=document.createElement('iframe'); iframe.title=names[device.dataset.embed]+' interactive web view';
@@ -122,14 +146,16 @@
     }
     if(iframe.getAttribute('src')!==src) iframe.src=src;
     device.querySelector('.embed-cover').hidden=true;
+    refreshPreviewControl(device);
   }
   function pauseDevice(device) {
     const iframe=device.querySelector('iframe'); if(!iframe)return;
-    if(['collective','practice'].includes(device.dataset.embed)) {
+    if(['collective','practice','birds'].includes(device.dataset.embed)) {
       iframe.contentWindow?.postMessage({type:'collective:pause'},new URL(iframe.src).origin);
     }
-    if(device.dataset.embed==='spotify') {
+    if(['spotify','birds'].includes(device.dataset.embed)) {
       iframe.remove(); device.querySelector('.embed-cover').hidden=false;
+      refreshPreviewControl(device);
     }
   }
   function expand(device) {
@@ -147,6 +173,7 @@
   function closeExpanded() {
     if(!expanded)return;
     const device=expanded; expanded=null;
+    if(device.dataset.embed==='birds')device.dataset.previewPaused='true';
     device.classList.remove('expanded'); device.removeAttribute('role');device.removeAttribute('aria-modal');device.removeAttribute('aria-label');
     document.body.classList.remove('embed-open');
     for(const [el,value] of inertState)el.inert=value; inertState=[];
@@ -184,6 +211,7 @@
     for(const [key] of fields)settings.querySelector(`[name="${key}"]`).value=config[key];
     updatePrototypeLinks();
     publishGalleryLink();
+    updateActive();
   }
   settings.querySelector('form').onsubmit=e=>{
     e.preventDefault();
@@ -215,10 +243,23 @@
   }
   function publishGalleryLink(){window.TECHBYTES_GALLERY=config.gallery||'';document.dispatchEvent(new CustomEvent('workshop:links',{detail:{gallery:window.TECHBYTES_GALLERY}}));}
   devices.forEach(deviceMarkup); updatePrototypeLinks(); publishGalleryLink();
+  function shouldPlayPreview(device) {
+    return !document.hidden && !!device.closest('.slide.active') && !device.closest('[data-route][hidden]')
+      && device.dataset.previewPaused!=='true' && (!reducedMotion.matches || device.dataset.previewRequested==='true');
+  }
   function updateActive(){
-    for(const device of devices)if(!device.closest('.slide.active') || device.closest('[data-route][hidden]'))pauseDevice(device);
+    for(const device of devices){
+      if(device.dataset.embed==='birds') {
+        if(shouldPlayPreview(device))loadDevice(device);else pauseDevice(device);
+      } else if(document.hidden || !device.closest('.slide.active') || device.closest('[data-route][hidden]'))pauseDevice(device);
+    }
   }
   document.addEventListener('deck:change',updateActive);
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)devices.forEach(pauseDevice);});
+  document.addEventListener('visibilitychange',updateActive);
+  reducedMotion.addEventListener('change',()=>{
+    devices.filter(d=>d.dataset.embed==='birds').forEach(d=>{delete d.dataset.previewRequested;});
+    updateActive();
+  });
+  updateActive();
   // Sketch persistence and explicit submission are handled by sketch.js.
 })();
