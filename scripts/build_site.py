@@ -39,6 +39,7 @@ def public_deck(text, include_notes):
     # export gets collection navigation and the shared public asset path.
     text = text.replace('url("assets/', 'url("../assets/')
     text = text.replace('"site/workshop/', '"../assets/workshop/')
+    text = text.replace('"site/favicons/', '"../assets/favicons/')
     text = re.sub(
         r'<span class="brand">.*?</span>',
         '<span class="brand"><a href="../">← All talks</a></span>',
@@ -77,6 +78,7 @@ def build():
     if not (PUBLIC / "assets/fonts/ibm-plex-sans.ttf").is_file():
         raise FileNotFoundError("Local fonts or previously exported public fonts are required.")
     shutil.copyfile(ROOT / "site/library.css", PUBLIC / "assets/library.css")
+    shutil.copytree(ROOT / "site/favicons", PUBLIC / "assets/favicons", dirs_exist_ok=True)
     if (ROOT / "site/workshop").is_dir():
         shutil.copytree(ROOT / "site/workshop", PUBLIC / "assets/workshop", dirs_exist_ok=True)
     gallery = PUBLIC / "gallery"

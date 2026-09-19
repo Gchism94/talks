@@ -79,6 +79,14 @@ Run `python3 -m http.server 8765 --directory docs` and open
 link to return. Font files and licenses are included, so the slides do not depend
 on a font service. Live AI demonstrations still require internet access.
 
+## Favicons
+
+The collection, talk, and gallery use matching T lettermarks in their existing
+charcoal/coral, brick-red, and cobalt palettes. SVG masters and their 32-pixel PNG
+fallbacks and 180-pixel home-screen icons live in `site/favicons/`. The exporter
+copies them into the public assets; the separate gallery references its existing
+blue SVG and matching PNG files through its shared page metadata.
+
 ## Fonts
 
 Barlow Condensed, Literata, and IBM Plex Sans are included with their original

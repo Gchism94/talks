@@ -15,10 +15,13 @@ class Links(HTMLParser):
         super().__init__()
         self.references = []
         self.slides = 0
+        self.icons = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         self.references.extend(attrs[key] for key in ("href", "src") if key in attrs)
+        if tag == "link" and attrs.get("rel") in {"icon", "apple-touch-icon"}:
+            self.icons.append(attrs)
         if tag == "section" and "slide" in attrs.get("class", "").split():
             self.slides += 1
 
@@ -57,6 +60,10 @@ def check():
         if source.suffix == ".html":
             links = Links()
             links.feed(text)
+            assert any(i.get("type") == "image/svg+xml" for i in links.icons), f"Missing SVG favicon: {source}"
+            assert any(i.get("type") == "image/png" and i.get("sizes") == "32x32" for i in links.icons), f"Missing favicon fallback: {source}"
+            assert any(i.get("rel") == "apple-touch-icon" for i in links.icons), f"Missing mobile home-screen icon: {source}"
+            assert all(not i.get("href", "").startswith("data:,") for i in links.icons), f"Empty favicon: {source}"
             for reference in links.references:
                 check_reference(source, reference)
                 checked += 1
