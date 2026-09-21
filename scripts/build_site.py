@@ -85,10 +85,13 @@ def build():
     gallery.mkdir(exist_ok=True)
     gallery_page = (ROOT / "site/gallery.html").read_text()
     (gallery / "index.html").write_text(gallery_page.replace("@@GALLERY_URL@@", html.escape(gallery_url(), quote=True)))
+    polls = PUBLIC / "polls"
+    polls.mkdir(exist_ok=True)
+    shutil.copyfile(ROOT / "site/polls.html", polls / "index.html")
     cards, seen = [], set()
     for number, talk in enumerate(catalog["talks"], 1):
         slug = talk["slug"]
-        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug) or slug in seen or slug in {"assets", "gallery"}:
+        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug) or slug in seen or slug in {"assets", "gallery", "polls"}:
             raise ValueError(f"Invalid or duplicate talk slug: {slug}")
         seen.add(slug)
         destination = PUBLIC / slug

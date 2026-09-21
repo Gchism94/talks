@@ -42,10 +42,14 @@ def check():
     catalog = json.loads((ROOT / "catalog.json").read_text())
     assert (PUBLIC / "index.html").is_file()
     assert (PUBLIC / ".nojekyll").is_file()
-    allowed_roots = {"assets", "gallery", "index.html", ".nojekyll"} | {t["slug"] for t in catalog["talks"]}
+    allowed_roots = {"assets", "gallery", "polls", "index.html", ".nojekyll"} | {t["slug"] for t in catalog["talks"]}
     assert {p.name for p in PUBLIC.iterdir()} <= allowed_roots, "Unexpected public files: review export"
     home = (PUBLIC / "index.html").read_text()
     assert 'href="gallery/"' in home, "Gallery must be reachable from the talks homepage"
+    assert 'href="polls/"' in home, "Native polls must be reachable from the talks homepage"
+    polls = (PUBLIC / "polls/index.html").read_text()
+    assert 'data-poll-page' in polls and 'data-native-poll="maps"' in polls and 'data-native-poll="music"' in polls
+    assert 'localhost' not in polls, "Never publish a local test backend"
     gallery = (PUBLIC / "gallery/index.html").read_text()
     assert f'id="open-gallery" class="gallery-launch" href="{gallery_url()}"' in gallery
     assert "<noscript>" in gallery, "Preserve a usable gallery link without JavaScript"

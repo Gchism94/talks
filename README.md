@@ -109,8 +109,8 @@ git diff --check
 
 These checks validate the public export, links, URL restrictions, and sketch-draft
 storage. Rehearse the slides and externally hosted activities before each event.
-Poll Everywhere, the gallery, and Collective are hosted independently of GitHub
-Pages.
+The gallery backend and Collective are hosted independently of GitHub Pages.
+The native poll interface is static; saved responses use the gallery backend.
 
 ## Live title preview
 
@@ -121,23 +121,16 @@ also unloads it. A reduced-motion preference starts with a still image instead.
 **Explore** opens the full interactive app, with a close button that returns to
 the slide. The simulation requires internet; the still image is the fallback.
 
-## Workshop polls
+## Native discussion polls
 
-The Google Maps and Spotify slides use separate Poll Everywhere response links.
-Students can respond as guests without an account or a presenter activating the
-poll. Each question has the same five-point mētis–epistēmē spectrum, single-select
-responses, and changeable answers. Results start hidden; reveal them from the
-corresponding poll in your signed-in Poll Everywhere workspace when ready to discuss.
-The slide embeds collect responses; they are not the presenter results screen.
+The slides and https://gchism94.github.io/talks/polls/ use native five-position polls. Responses save in separate tables in the existing gallery’s Cloudflare D1 database. This does not depend on the unfinished independent-hosting migration.
 
-The response links currently have no closing date. Use **Share → Participants** in
-Poll Everywhere to disable a link or set its availability after the workshop. Check
-your plan's audience limit and trial status before the event. No test votes were
-submitted while connecting the polls.
+- Four questions: Google Maps, Apple Maps, Spotify, Apple Music. Only the first app in each pair is a required vote; comparisons fit the existing five-minute opening.
+- No default answer or automatic submission. Save explicitly; revise while open. One response per browser, room, and app. Clearing storage or another browser can vote again: informal classroom discussion, not a verified ballot.
+- No names or free text. Storage holds a room-specific hash of a random browser identity and the chosen position. Public distributions stay hidden until revealed. No averages or correct-answer grading.
+- Sign in to the gallery as the room owner, expand **Discussion polls**, close/reopen each question, reveal/hide results, and download aggregate CSV totals. Poll controls are independent of sketch collection/voting.
+- **Links → Classroom sketch gallery link** selects the room. Share the phone poll link including its room parameter for another session. Create a fresh gallery room for a fresh workshop; do not reset old contributions.
+- Switching between the talk and poll page on the same talks-site origin keeps the identity. Third-party origins have separate browser storage.
+- Network failure: the page shows an error and does not claim success. Retry safely, or use a show of hands without implying it was saved.
 
-If a browser has older saved workshop links, open **Links** in the deck and update
-the two poll fields (or use **Use defaults** to reset all workshop links). To change
-the defaults for everyone, edit `site/workshop/config.js`, rebuild, and publish.
-
-Poll Everywhere documents this flow in
-[Embedding Response Links](https://support.polleverywhere.com/hc/en-us/articles/46214073740059-Embedding-Poll-Everywhere-Response-Links).
+Existing Poll Everywhere links remain optional external backups; previous responses are not imported. No new service or paid account is required.
