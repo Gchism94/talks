@@ -43,6 +43,8 @@
 .device.expanded .device-exit::after { content:''; position:absolute; width:34px; height:9px; bottom:-9px; border-radius:50%; background:#292b3626; filter:blur(6px); pointer-events:none; }
 .device.expanded .device-exit-label { display:block; position:absolute; top:25px; left:20px; z-index:4; color:#5e6069; font:500 14px var(--sans); }
 .device-exit-label { display:none; }
+.mobile-launch-copy { display:none; }
+.slide.ink .interaction-button.primary { background:#f3eddf; color:#262934; border-color:#f3eddf; }
 body.on-ink .route-label { color:var(--light); }
 body.embed-open .slide.active { overflow:visible; }
 body.embed-open .deck { z-index:100; }
@@ -100,7 +102,14 @@ body.embed-open .slide.active > .frame { animation:none!important; transform:non
 .sketch-consent input { flex-shrink:0; width:22px; height:22px; margin:0; accent-color:var(--reason); }
 .sketch-actions [role=status] { font-size:14px; line-height:1.4; margin:10px 0 0; }
 .sketch-actions button:disabled { opacity:.6; cursor:not-allowed; }
+.sketch-studio canvas { touch-action:pan-y pinch-zoom; }
+.sketch-studio.is-drawing canvas { touch-action:none; cursor:crosshair; outline:2px solid var(--reason); outline-offset:2px; }
+.sketch-toolbar { flex-wrap:wrap; background:var(--white); }
+.sketch-toolbar > span { flex:1 0 100%; }
+.sketch-draw-toggle { margin-right:auto; font-weight:600; }
+.is-drawing .sketch-draw-toggle { background:#274fa3; color:#fffaf0; }
 @media(max-width:900px), (max-height:540px) { .sketch-studio { max-height:none; overflow:visible; } .sketch-studio canvas { height:260px; } }
+@media(max-width:900px), (max-height:540px) { .sketch-toolbar { position:sticky; top:72px; z-index:4; } }
 .journey { display:flex; align-items:center; gap:16px; margin-top:30px; }
 .journey > div { flex:1; border-top:3px solid var(--reason); padding-top:18px; }
 .journey strong { display:block; font:600 32px var(--display); }
@@ -276,7 +285,11 @@ body.embed-open .slide.active > .frame { animation:none!important; transform:non
   .takeaways-grid .number { margin-bottom:8px; }
   .takeaways-grid h3 { font-size:27px; }
   .takeaways-grid p { font-size:17px; margin-top:8px; }
-  .hero-live .device:not(.expanded) .expand-embed { display:inline-flex; }
+  .hero-figure.hero-live { max-width:none; }
+  .hero-live:has(.join-card) .device:not(.expanded)[data-embed=birds] { max-width:none; }
+  .hero-live .device:not(.expanded)[data-embed=birds] .preview-toggle,
+  .hero-live .device:not(.expanded)[data-embed=birds] .expand-embed { display:none; }
+  .hero-live .device:not(.expanded)[data-embed=birds] .embed-caption { display:block; font-size:13px; line-height:1.5; }
   .media-copy .knowledge { margin-top:18px; gap:16px; }
   .media-copy .knowledge p { font-size:16px; }
   .knowledge-key { font-size:16px; }
@@ -308,6 +321,34 @@ body.embed-open .slide.active > .frame { animation:none!important; transform:non
   dialog { max-height:calc(100dvh - 24px); overflow:auto; }
 }
 @media(max-width:380px) { .slide { padding-left:16px; padding-right:16px; } .route-choices { grid-template-columns:1fr; } }
+@media(max-width:600px) {
+  .route-choices { grid-template-columns:minmax(0,1fr); gap:16px; }
+  .route-choices button { min-width:0; padding:18px; }
+  .route-choices .choice-image { height:120px; margin-bottom:14px; }
+  .route-choices .choice-flow { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr); gap:6px!important; height:88px; margin-bottom:14px; }
+  .route-choices .choice-flow span { width:auto; min-width:0; min-height:72px; padding:6px 2px; font-size:clamp(18px,5vw,24px); text-align:center; }
+  .route-choices .choice-flow b { font-size:20px; }
+  .route-choices strong { font-size:32px; margin-bottom:6px; }
+  .route-choices button > span:last-child { font-size:18px; line-height:1.4; }
+}
+/* Phone embeds are launch cards, never tiny interactive apps. */
+@media(max-width:900px), (max-height:540px) {
+  .device:not(.expanded),.hero-live:has(.join-card) .device:not(.expanded) { width:100%; max-width:none; }
+  .device:not(.expanded) .device-shell,.hero-live:has(.join-card) .device:not(.expanded) .device-shell { height:auto; min-height:0; padding:14px; border:1px solid var(--line); border-radius:12px; background:var(--white); box-shadow:none; }
+  .device:not(.expanded) .device-head { height:auto; padding:0 0 12px; background:transparent; color:var(--ink); font-size:15px; }
+  .device:not(.expanded) .device-head span:last-child { display:none; }
+  .device:not(.expanded) .embed-screen { height:auto; }
+  .device:not(.expanded) .embed-screen iframe { display:none; }
+  .device:not(.expanded) .embed-cover { position:relative; inset:auto; display:grid; grid-template-columns:80px minmax(0,1fr); grid-template-rows:auto auto; gap:10px 14px; padding:0; text-align:left; background:transparent; overflow:visible; }
+  .device:not(.expanded) .embed-cover::after { display:none; }
+  .device:not(.expanded) .embed-cover img { position:static; grid-column:1; grid-row:1 / 3; width:80px; height:100%; min-height:100px; max-height:132px; aspect-ratio:auto; object-fit:cover; object-position:center; border-radius:6px; }
+  .device:not(.expanded) .embed-cover .cover-title,.device:not(.expanded) .embed-cover .cover-detail { display:none; }
+  .device:not(.expanded) .mobile-launch-copy { display:block; grid-column:2; color:var(--muted); font:400 14px/1.45 var(--sans); }
+  .device:not(.expanded) .embed-cover .load-embed { grid-column:2; margin:0; padding:10px 12px; min-height:48px; align-self:start; font:500 15px/1.35 var(--sans); background:#262934; color:#f3eddf; border:1px solid #606577; box-shadow:none; backdrop-filter:none; }
+  .device:not(.expanded) .expand-embed,.device:not(.expanded) .preview-toggle { display:none; }
+  .device:not(.expanded) .device-actions { justify-content:flex-end; }
+  .device:not(.expanded) .embed-caption { font-size:13px; line-height:1.5; }
+}
 @media print {
   .device-shell { height:440px; border:3px solid #292b36; box-shadow:none; }
   .embed-screen iframe,.device-actions,.device-exit,.poll-actions,.sketch-toolbar,.workshop-dialog { display:none!important; }

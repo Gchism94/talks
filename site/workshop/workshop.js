@@ -9,6 +9,7 @@
   const scriptURL = new URL(document.currentScript.src);
   const asset = name => new URL('images/' + name, scriptURL).href;
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const compact = matchMedia('(max-width:900px), (max-height:540px)');
   const hostMatches = (host, domain) => host === domain || host.endsWith('.' + domain);
   function validate(key, value) {
     if (!value.trim()) return '';
@@ -94,6 +95,9 @@
       cover.querySelector('.cover-title').textContent = isPoll ? 'Where would you place it?' : 'Your app. One task.';
       cover.querySelector('.cover-detail').textContent = isPoll ? 'Use a shared poll to compare the room’s reasoning.' : 'A three-screen Figma workshop template.';
     }
+    const launchCopy=document.createElement('span');launchCopy.className='mobile-launch-copy';
+    launchCopy.textContent=kind==='birds'?'A still preview. Tap to watch in a larger view.':kind==='spotify'?'Open the player. The full Spotify app is linked separately.':'Open a dedicated view with room to explore.';
+    cover.insertBefore(launchCopy,cover.querySelector('.load-embed'));
     device.querySelector('.load-embed').onclick = () => {
       if (!providerURL(kind)) { settings.showModal(); settings.querySelector(`[name="${kind}"]`)?.focus(); return; }
       if(matchMedia('(max-width:900px), (max-height:540px)').matches) expand(device);
@@ -107,7 +111,7 @@
       const toggle=document.createElement('button'); toggle.type='button'; toggle.className='preview-toggle';
       toggle.onclick=()=>{
         if(device.querySelector('iframe')){device.dataset.previewPaused='true';pauseDevice(device);}
-        else startDevice(device);
+        else { if(compact.matches)expand(device); startDevice(device); }
       };
       device.querySelector('.device-actions').prepend(toggle);
       device.querySelector('.expand-embed').textContent='Explore';
@@ -130,8 +134,9 @@
     device.querySelector('.expand-embed').textContent = connected ? 'Explore full screen' : 'Set up link';
     device.querySelector('.embed-caption').textContent = poll ? (connected ? 'Votes go to the polling provider. If blank, open separately.' : 'No live poll connected. Use the discussion fallback below.') : kind==='spotify' ? 'Official player, not the full app. For personal recommendations, open Spotify separately.' : kind==='maps' ? 'Interactive Google map. Full route planning opens separately.' : kind==='figma' ? 'Shared Figma preview. Viewing depends on the file’s sharing settings.' : 'Live app. If sign-in or a blank screen appears, open separately. Salem footage needs internet.';
     if(kind==='birds') {
-      device.querySelector('.expand-embed').textContent='Explore';
-      device.querySelector('.embed-caption').textContent='Live illustrative model. Replaying starts a fresh flock.';
+      device.querySelector('.load-embed').textContent='Watch the flock';
+      device.querySelector('.expand-embed').textContent='Watch full screen';
+      device.querySelector('.embed-caption').textContent='Opens a larger scene. Choose 0.5× in the playback controls for a slower view.';
       refreshPreviewControl(device);
     }
     if(kind==='figma' && config.figma===defaults.figma) device.querySelector('.embed-caption').textContent='Accessible workshop starter. The shared Figma design stays available separately.';
@@ -146,7 +151,9 @@
     loadDevice(device);
   }
   function loadDevice(device) {
-    const src=providerURL(device.dataset.embed,device.classList.contains('expanded')); if(!src)return;
+    // Watching birds stays in the storage-free scene, even when expanded.
+    // The separate external link still opens the full Collective app.
+    const src=providerURL(device.dataset.embed,device.dataset.embed!=='birds' && device.classList.contains('expanded')); if(!src)return;
     let iframe=device.querySelector('iframe');
     if(!iframe) {
       iframe=document.createElement('iframe'); iframe.title=names[device.dataset.embed]+' interactive web view';
@@ -189,7 +196,8 @@
     document.body.classList.remove('embed-open');
     for(const [el,value] of inertState)el.inert=value; inertState=[];
     pauseDevice(device);
-    const target=restoreFocus?.isConnected && restoreFocus.getClientRects().length && !restoreFocus.closest('[hidden],[inert]') ? restoreFocus : device.querySelector('.expand-embed');
+    if(compact.matches)device.querySelector('.embed-cover').hidden=false;
+    const target=restoreFocus?.isConnected && restoreFocus.getClientRects().length && !restoreFocus.closest('[hidden],[inert]') ? restoreFocus : device.querySelector(compact.matches?'.load-embed':'.expand-embed');
     target?.focus({preventScroll:true}); restoreFocus=null;
   }
   document.addEventListener('keydown', e=>{
@@ -287,7 +295,6 @@
     };
     (copy.querySelector('.dek')||copy.querySelector('h2')).after(button);
   });
-  const compact=matchMedia('(max-width:900px), (max-height:540px)');
   document.querySelectorAll('.comparison-note').forEach(note=>{
     const details=document.createElement('details'),summary=document.createElement('summary');
     details.className='comparison-details';
@@ -309,6 +316,7 @@
   updateScrollCue();
   function shouldPlayPreview(device) {
     return !document.hidden && device.dataset.previewVisible!=='false' && !!device.closest('.slide.active') && !device.closest('[data-route][hidden]')
+      && (!compact.matches || device.classList.contains('expanded'))
       && device.dataset.previewPaused!=='true' && (!reducedMotion.matches || device.dataset.previewRequested==='true');
   }
   function updateActive(){
@@ -318,8 +326,17 @@
       } else if(document.hidden || !device.closest('.slide.active') || device.closest('[data-route][hidden]'))pauseDevice(device);
     }
   }
+  function updatePreviewLayout(){
+    for(const device of devices){
+      if(device===expanded)continue;
+      if(compact.matches){pauseDevice(device);device.querySelector('.embed-cover').hidden=false;}
+      else if(device.querySelector('iframe'))device.querySelector('.embed-cover').hidden=true;
+    }
+    updateActive();
+  }
   document.addEventListener('deck:change',updateActive);
   document.addEventListener('visibilitychange',updateActive);
+  compact.addEventListener('change',updatePreviewLayout);
   reducedMotion.addEventListener('change',()=>{
     devices.filter(d=>d.dataset.embed==='birds').forEach(d=>{delete d.dataset.previewRequested;});
     updateActive();

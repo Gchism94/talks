@@ -26,19 +26,20 @@ for (const [kind, full, embed, experience] of [
 config.collective += '?experience=practice&embed=1';
 assert.equal(new URL(providerURL('birds')).searchParams.get('experience'), 'original');
 
-const document = { hidden: false }, reducedMotion = { matches: false };
+const document = { hidden: false }, reducedMotion = { matches: false }, compact = { matches: false };
 const calls = [];
-let active = true, hiddenRoute = false;
+let active = true, hiddenRoute = false, expanded = false;
 const device = {
   dataset: { embed: 'birds' },
+  classList: { contains: () => expanded },
   closest: selector => selector === '.slide.active' ? (active ? {} : null) : (hiddenRoute ? {} : null),
 };
 const { shouldPlayPreview, updateActive } = runInNewContext(
   `${section('  function shouldPlayPreview(', "  document.addEventListener('deck:change'")}\n({shouldPlayPreview, updateActive});`,
-  { document, reducedMotion, devices: [device], loadDevice: d => calls.push(['load', d]), pauseDevice: d => calls.push(['pause', d]) },
+  { document, reducedMotion, compact, devices: [device], loadDevice: d => calls.push(['load', d]), pauseDevice: d => calls.push(['pause', d]) },
 );
 let policies = 0;
-for (let mask = 0; mask < 128; mask++) {
+for (let mask = 0; mask < 512; mask++) {
   document.hidden = !!(mask & 1);
   active = !!(mask & 2);
   hiddenRoute = !!(mask & 4);
@@ -46,7 +47,8 @@ for (let mask = 0; mask < 128; mask++) {
   reducedMotion.matches = !!(mask & 16);
   device.dataset.previewRequested = mask & 32 ? 'true' : 'false';
   device.dataset.previewVisible = mask & 64 ? 'false' : 'true';
-  const expected = !document.hidden && active && !hiddenRoute && !(mask & 8) && !(mask & 64) && (!reducedMotion.matches || !!(mask & 32));
+  compact.matches=!!(mask & 128);expanded=!!(mask & 256);
+  const expected = !document.hidden && active && !hiddenRoute && !(mask & 8) && !(mask & 64) && (!compact.matches||expanded) && (!reducedMotion.matches || !!(mask & 32));
   assert.equal(shouldPlayPreview(device), expected, `Autoplay policy ${mask}`);
   calls.length = 0;
   updateActive();

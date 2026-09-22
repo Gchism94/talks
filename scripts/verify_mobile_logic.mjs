@@ -36,7 +36,7 @@ for(const visible of [false,true]){
   const device={dataset:{embed:'collective'},classList:{remove(){}},removeAttribute(){},querySelector:()=>trigger};
   const sibling={inert:true};
   runInNewContext(section('  function closeExpanded()',"  document.addEventListener('keydown'")+'\ncloseExpanded();',{
-    expanded:device,restoreFocus:prior,inertState:[[sibling,false]],document:{body:{classList:{remove(){}}}},pauseDevice:()=>paused=true,
+    compact:{matches:false},expanded:device,restoreFocus:prior,inertState:[[sibling,false]],document:{body:{classList:{remove(){}}}},pauseDevice:()=>paused=true,
   });
   assert.equal(focused,visible?'prior':'trigger');assert(paused);assert.equal(sibling.inert,false);
 }

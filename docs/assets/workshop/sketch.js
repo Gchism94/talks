@@ -22,6 +22,19 @@
   for(const studio of document.querySelectorAll('[data-sketch]')){
     const canvas=studio.querySelector('canvas'),ctx=canvas.getContext('2d'),description=studio.querySelector('textarea');
     let draft=blank(),stroke=null,busy=false,identity='',room='',endpoint='',lastKey=BASE_KEY;
+    const compact=matchMedia('(max-width:900px), (max-height:540px)');
+    let drawing=!compact.matches,pointerId=null,strokeBox=null,pointCount=0,paintedPoints=0,paintFrame=0,fullPaint=false;
+    const toolbar=studio.querySelector('.sketch-toolbar'),drawToggle=document.createElement('button');
+    drawToggle.type='button';drawToggle.className='sketch-draw-toggle';
+    toolbar.insertBefore(drawToggle,toolbar.querySelector('button'));
+    function updateDrawingMode(){
+      studio.classList.toggle('is-drawing',drawing);
+      drawToggle.textContent=drawing?'Done drawing':'Draw';
+      drawToggle.setAttribute('aria-pressed',String(drawing));
+      canvas.setAttribute('aria-label',drawing?'Drawing mode. Select Done drawing to scroll over this area.':'Sketch preview. Scroll normally, or select Draw to add strokes. Text answers are also available.');
+    }
+    drawToggle.onclick=()=>{finishStroke();drawing=!drawing;updateDrawingMode();};
+    updateDrawingMode();
     studio.querySelector('label[for=sketchDescription]').textContent='The idea, and why it might help';
     const titleLabel=document.createElement('label');titleLabel.htmlFor='sketchTitle';titleLabel.textContent='A short title';
     const title=document.createElement('input');title.id='sketchTitle';title.maxLength=100;title.placeholder='Name the idea, not the group';
@@ -40,10 +53,32 @@
     }
     function render(){
       const r=canvas.getBoundingClientRect();if(!r.width)return;
-      const dpr=Math.min(devicePixelRatio||1,2);canvas.width=r.width*dpr;canvas.height=r.height*dpr;ctx.scale(dpr,dpr);ctx.strokeStyle='#ab3e2b';ctx.fillStyle='#ab3e2b';ctx.lineWidth=2.5;ctx.lineCap='round';ctx.lineJoin='round';
+      const dpr=Math.min(devicePixelRatio||1,2),width=Math.round(r.width*dpr),height=Math.round(r.height*dpr);
+      // Only resize the backing bitmap when its size changes, never on every move.
+      if(canvas.width!==width)canvas.width=width;if(canvas.height!==height)canvas.height=height;
+      ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,r.width,r.height);ctx.strokeStyle='#ab3e2b';ctx.fillStyle='#ab3e2b';ctx.lineWidth=2.5;ctx.lineCap='round';ctx.lineJoin='round';
       for(const line of draft.strokes){ctx.beginPath();if(line.length===1){ctx.arc(line[0][0]*r.width,line[0][1]*r.height,1.5,0,Math.PI*2);ctx.fill();}else{line.forEach((p,i)=>ctx[i?'lineTo':'moveTo'](p[0]*r.width,p[1]*r.height));ctx.stroke();}}
+      paintedPoints=stroke?.length||0;
     }
-    function hydrate(){title.value=draft.title;description.value=draft.description;notice.value=draft.notice;knowledge.value=draft.knowledge;briefInputs.forEach((el,i)=>el.value=draft[i?'task':'person']);render();}
+    function schedulePaint(full=false){
+      fullPaint=fullPaint||full;if(paintFrame)return;
+      paintFrame=requestAnimationFrame(()=>{
+        paintFrame=0;
+        if(fullPaint){fullPaint=false;render();return;}
+        if(!stroke||!strokeBox||paintedPoints===stroke.length)return;
+        const {width,height}=strokeBox;ctx.beginPath();
+        if(stroke.length===1){ctx.arc(stroke[0][0]*width,stroke[0][1]*height,1.5,0,Math.PI*2);ctx.fill();}
+        else {const start=Math.max(0,paintedPoints-1);ctx.moveTo(stroke[start][0]*width,stroke[start][1]*height);for(let i=start+1;i<stroke.length;i++)ctx.lineTo(stroke[i][0]*width,stroke[i][1]*height);ctx.stroke();}
+        paintedPoints=stroke.length;
+      });
+    }
+    function finishStroke(){
+      if(pointerId===null)return;
+      const id=pointerId;pointerId=null;stroke=null;strokeBox=null;
+      if(canvas.hasPointerCapture(id))canvas.releasePointerCapture(id);
+      schedulePaint(true);persist();
+    }
+    function hydrate(){title.value=draft.title;description.value=draft.description;notice.value=draft.notice;knowledge.value=draft.knowledge;briefInputs.forEach((el,i)=>el.value=draft[i?'task':'person']);pointCount=draft.strokes.reduce((n,line)=>n+line.length,0);schedulePaint(true);}
     function connect(value){
       const previous=room;endpoint='';room='';identity='';
       try{if(value){const u=new URL(value);if(u.hostname==='techbytes-sketch-gallery.gchism.chatgpt.site'&&u.protocol==='https:'){endpoint=u.origin;room=u.searchParams.get('room')||'';}}}catch{}
@@ -64,14 +99,27 @@
       if(!room)status.textContent='No classroom connected. Drafts and downloads still work; the presenter can add a room under Links.';
     }
     [title,description,notice,knowledge,...briefInputs].forEach(el=>el.addEventListener('input',persist));
-    const point=e=>{const r=canvas.getBoundingClientRect();return [Math.max(0,Math.min(1,+((e.clientX-r.left)/r.width).toFixed(4))),Math.max(0,Math.min(1,+((e.clientY-r.top)/r.height).toFixed(4)))];};
-    canvas.onpointerdown=e=>{if(e.button!==0)return;if(draft.strokes.length>=300){status.textContent='Sketch limit reached. Use Undo or describe the idea.';return;}stroke=[point(e)];draft.strokes.push(stroke);canvas.setPointerCapture(e.pointerId);render();};
-    canvas.onpointermove=e=>{if(!stroke)return;if(draft.strokes.reduce((n,line)=>n+line.length,0)>=6000){stroke=null;persist();status.textContent='Sketch limit reached. Use Undo or describe the idea.';return;}stroke.push(point(e));render();};
-    canvas.onpointerup=canvas.onpointercancel=()=>{stroke=null;persist();};
-    studio.querySelector('[data-undo-sketch]').onclick=()=>{draft.strokes.pop();render();persist();};
-    studio.querySelector('[data-clear-sketch]').onclick=()=>{if(!draft.strokes.length||!confirm('Clear the drawing on this device? Submitted work will not change until you submit again.'))return;draft.strokes=[];render();persist();};
-    new ResizeObserver(render).observe(canvas);
-    document.addEventListener('visibilitychange',()=>{if(document.hidden)persist();});
+    const point=e=>{const r=strokeBox;return [Math.max(0,Math.min(1,+((e.clientX-r.left)/r.width).toFixed(4))),Math.max(0,Math.min(1,+((e.clientY-r.top)/r.height).toFixed(4)))];};
+    canvas.onpointerdown=e=>{
+      if(!drawing||e.button!==0||!e.isPrimary||pointerId!==null)return;
+      if(draft.strokes.length>=300||pointCount>=6000){status.textContent='Sketch limit reached. Use Undo or describe the idea.';return;}
+      render();strokeBox=canvas.getBoundingClientRect();pointerId=e.pointerId;stroke=[point(e)];draft.strokes.push(stroke);pointCount++;paintedPoints=0;canvas.setPointerCapture(pointerId);schedulePaint();
+    };
+    canvas.onpointermove=e=>{
+      if(!stroke||e.pointerId!==pointerId)return;
+      if(pointCount>=6000){finishStroke();status.textContent='Sketch limit reached. Use Undo or describe the idea.';return;}
+      const p=point(e),last=stroke[stroke.length-1];if(p[0]===last[0]&&p[1]===last[1])return;
+      stroke.push(p);pointCount++;schedulePaint();
+    };
+    canvas.onpointerup=canvas.onpointercancel=canvas.onlostpointercapture=e=>{if(e.pointerId===pointerId)finishStroke();};
+    studio.querySelector('[data-undo-sketch]').onclick=()=>{finishStroke();pointCount-=draft.strokes.pop()?.length||0;schedulePaint(true);persist();};
+    studio.querySelector('[data-clear-sketch]').onclick=()=>{finishStroke();if(!draft.strokes.length||!confirm('Clear the drawing on this device? Submitted work will not change until you submit again.'))return;draft.strokes=[];pointCount=0;schedulePaint(true);persist();};
+    new ResizeObserver(()=>schedulePaint(true)).observe(canvas);
+    const leaveDrawing=()=>{finishStroke();if(compact.matches){drawing=false;updateDrawingMode();}};
+    compact.addEventListener('change',()=>{finishStroke();drawing=!compact.matches;updateDrawingMode();});
+    document.addEventListener('deck:change',leaveDrawing);
+    window.addEventListener('blur',leaveDrawing);
+    document.addEventListener('visibilitychange',()=>{if(document.hidden){leaveDrawing();persist();}});
     actions.querySelector('[data-download-sketch]').onclick=()=>{
       const url=URL.createObjectURL(new Blob([JSON.stringify({format:'techbytes-sketch-v1',...snapshot()},null,2)],{type:'application/json'}));
       const a=document.createElement('a');a.href=url;a.download='my-techbytes-sketch.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status.textContent='Draft downloaded, including drawing coordinates, answers, and brief.';

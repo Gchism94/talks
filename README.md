@@ -123,7 +123,10 @@ with a direct link for readers already on a phone—no QR service or tracking.
 the published deck, not a presenter session or private room-management link.
 
 Phone widths and short landscape windows use the same scrollable, all-sections
-layout. Compact app previews open full screen with a persistent external link.
+layout. All embedded apps use static launch cards on phones, opening full screen
+with a persistent external link. Closing restores a readable card, not a tiny live
+iframe. The two workshop choices stack on phone widths and their diagram stays
+inside the card. Dark-slide launch buttons use an explicit contrasting palette.
 The workshop menu contains the outline and student resources; presenter URL
 configuration is under **Menu → Presenter setup → Configure workshop links**.
 
@@ -146,14 +149,26 @@ The release check also caught and corrected a desktop Spotify-slide footer
 overlap. Provider behavior and real finger/virtual-keyboard testing still require
 a separate phone rehearsal; browser viewport tests are not physical-device tests.
 
+`scripts/verify_mobile_interactions_browser.mjs` adds 28 phone app-view checks,
+wildcard graphic bounds, slide-10 button contrast, and a complete drawing/reload/
+mocked-submission/undo/navigation check. All remote writes are intercepted. On
+phones, **Draw** opts into canvas gestures; **Done drawing** restores scrolling.
+Drawing paints only new segments once per animation frame, rather than resizing
+and repainting the whole bitmap on every pointer event. Existing draft keys,
+coordinates, consent, and classroom submission behavior are unchanged.
+
 ## Live title preview
 
-The TechBytes title slide plays Collective's Salem swifts in a phone-shaped
-`?embed=title&experience=original` view. **Pause preview** unloads the scene;
+On desktop, the TechBytes title slide plays Collective's Salem swifts in a
+`?embed=title&experience=original` view. On phones, it starts as a still launch
+card: **Watch the flock** opens the scene full screen, where the playback-speed
+control offers 0.5×. The simulation's underlying speed/model is unchanged.
+**Pause preview** unloads the desktop scene;
 **Replay birds** starts a fresh flock. Leaving the slide or hiding the browser tab
 also unloads it. A reduced-motion preference starts with a still image instead.
-**Explore** opens the full interactive app, with a close button that returns to
-the slide. The simulation requires internet; the still image is the fallback.
+**Watch full screen** keeps the storage-free scene with a close button returning
+to the slide. **Open separately** opens the full app. The simulation requires
+internet; the still image is the fallback.
 
 ## Native discussion polls
 

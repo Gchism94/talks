@@ -17,8 +17,8 @@ async (page) => {
     check(await device.getByRole('link',{name:'Open separately ↗'}).isVisible(),'Fallback inside overlay');
     check(await page.locator('header.chrome').evaluate(e=>e.inert),'Background inert');
     await close.click();
-    check(await page.locator('[data-embed=collective] .expand-embed').evaluate(e=>e===document.activeElement),'First-open focus return');
-    await page.frameLocator('[data-embed=collective] iframe').getByRole('button',{name:'Play',exact:true}).waitFor();
+    check(await page.locator('[data-embed=collective] .load-embed').evaluate(e=>e===document.activeElement),'First-open focus return');
+    await page.frameLocator('[data-embed=collective] iframe').getByRole('button',{name:'Play',exact:true,includeHidden:true}).waitFor({state:'attached'});
     check(await page.locator('[data-embed=collective] iframe').count()===1,'App frame retained');
     await page.locator('#next').click();check(page.url().split('#')[1]==='7','Compact navigation skips reveals');
   }
@@ -36,7 +36,7 @@ async (page) => {
   check(await starter.getByRole('heading',{name:'What are you trying to do?'}).isVisible(),'Restart works');
   check(await page.locator('.device.expanded').getByRole('link',{name:'Open Figma ↗'}).isVisible(),'Figma link retained');
   await page.getByRole('button',{name:'Close interactive view'}).click();
-  check(await page.locator('.slide.active [data-route=wildcard] .expand-embed').evaluate(e=>e===document.activeElement),'Starter focus return');
+  check(await page.locator('.slide.active [data-route=wildcard] .load-embed').evaluate(e=>e===document.activeElement),'Starter focus return');
   check(errors.length===0,errors.join('\n'));
   return {checks:'overlay, fallback, pause, focus, landscape, accessible starter complete flow',errors};
 }
