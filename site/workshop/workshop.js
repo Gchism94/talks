@@ -56,7 +56,7 @@
     if (kind === 'figma' && config.figma) {
       // The supplied Figma file remains shareable/editable. Its classroom default
       // uses the accessible local companion; custom session prototypes still embed.
-      if (config.figma === defaults.figma) return new URL('prototype.html',scriptURL).href;
+      if (config.figma === defaults.figma) return new URL(new URL(location.href).searchParams.get('route') === 'wildcard' ? 'prototype.html' : 'collective-prototype.html',scriptURL).href;
       const u = new URL(config.figma);
       if (hostMatches(u.hostname,'figma.site')) return u.href;
       if(u.pathname.startsWith('/proto/')) {
@@ -73,6 +73,9 @@
     return config[kind] || '';
   }
   function openURL(kind) {
+    if (kind === 'figma' && config.figma === defaults.figma && new URL(location.href).searchParams.get('route') !== 'wildcard') {
+      const u=new URL(config.figma); u.searchParams.set('node-id','26-11'); u.searchParams.set('starting-point-node-id','26:11'); return u.href;
+    }
     if (kind === 'maps') return 'https://www.google.com/maps/search/?api=1&query=Willamette+University+Salem';
     if (kind === 'practice' || kind === 'birds') return providerURL(kind,true);
     return config[kind] || '';
@@ -139,7 +142,11 @@
       device.querySelector('.embed-caption').textContent='Opens a larger scene. Choose 0.5× in the playback controls for a slower view.';
       refreshPreviewControl(device);
     }
-    if(kind==='figma' && config.figma===defaults.figma) device.querySelector('.embed-caption').textContent='Accessible workshop starter. The shared Figma design stays available separately.';
+    if(kind==='figma' && config.figma===defaults.figma) {
+      const collective=new URL(location.href).searchParams.get('route')!=='wildcard';
+      device.querySelector('.embed-caption').textContent=collective?'Collective starter: watch, describe one change, keep uncertainty, review. Practice only; nothing is submitted.':'Accessible workshop starter. The shared Figma design stays available separately.';
+      const poster=device.querySelector('.embed-cover img'); if(poster){poster.src=asset(collective?'collective-scene.png':posters.figma);poster.alt=collective?'Salem swifts practice prototype preview':'Student app starter preview';}
+    }
   }
   function refreshPreviewControl(device) {
     const toggle=device.querySelector('.preview-toggle');
@@ -264,20 +271,30 @@
     await copyText(u.href,status);
   };
   function updatePrototypeLinks(){
-    document.querySelectorAll('[data-figma-link]').forEach(a=>{a.hidden=!config.figma;if(config.figma)a.href=config.figma;});
+    document.querySelectorAll('[data-figma-link]').forEach(a=>{a.hidden=!config.figma;if(config.figma)a.href=openURL('figma');});
     document.querySelectorAll('[data-copy-figma]').forEach(b=>{b.onclick=()=>{
       if(!config.figma){settings.showModal();settings.querySelector('[name="figma"]').focus();return;}
-      copyText(config.figma,b.parentElement.querySelector('[role="status"]'));
+      copyText(openURL('figma'),b.parentElement.querySelector('[role="status"]'));
     };});
   }
   function publishGalleryLink(){
     window.TECHBYTES_GALLERY=config.gallery||'';
     const room=new URL(config.gallery||defaults.gallery).searchParams.get('room');
-    const links={app:config.collective,prototype:new URL('prototype.html',scriptURL).href,figma:config.figma,polls:'https://gchism94.github.io/talks/polls/'+(room?'?room='+room:''),gallery:config.gallery};
+    const links={app:config.collective,prototype:providerURL('figma'),figma:openURL('figma'),polls:'https://gchism94.github.io/talks/polls/'+(room?'?room='+room:''),gallery:config.gallery};
     for(const [key,url] of Object.entries(links)){const a=menu.querySelector('[data-menu-'+key+']');a.hidden=!url;if(url)a.href=url;}
     document.dispatchEvent(new CustomEvent('workshop:links',{detail:{gallery:window.TECHBYTES_GALLERY}}));
   }
   devices.forEach(deviceMarkup); updatePrototypeLinks(); publishGalleryLink();
+  document.addEventListener('deck:change',()=>{
+    for(const device of devices.filter(d=>d.dataset.embed==='figma')){
+      const iframe=device.querySelector('iframe');
+      if(iframe && iframe.src!==providerURL('figma')){iframe.remove();device.querySelector('.embed-cover').hidden=false;}
+      refreshDevice(device);
+    }
+    updatePrototypeLinks();
+    menu.querySelector('[data-menu-prototype]').href=providerURL('figma');
+    menu.querySelector('[data-menu-figma]').href=openURL('figma');
+  });
   // Keep a task entry point above the discussion copy on students' phones.
   document.querySelectorAll('.media-layout').forEach(layout=>{
     const copy=layout.querySelector('.media-copy'),device=layout.querySelector('[data-embed]'),sketch=layout.querySelector('.sketch-studio');

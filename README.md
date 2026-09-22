@@ -115,8 +115,9 @@ The native poll interface is static; saved responses use the gallery backend.
 
 ## Mobile workshop edition
 
-The 13-slide edition starts with a static QR code to the public talk and a
-30-second takeaways slide before Google Maps. The opening still totals two
+The 14-slide edition starts with a dedicated QR join screen before the title on
+both workshop routes and all screen sizes. A 30-second takeaways slide follows
+the title and precedes Google Maps. The opening still totals two
 minutes; the 45-minute workshop schedule is unchanged. The QR is a local SVG,
 with a direct link for readers already on a phone—no QR service or tracking.
 `scripts/generate_talk_qr.py` emits the SVG using ReportLab. The QR destination is
@@ -130,29 +131,42 @@ inside the card. Dark-slide launch buttons use an explicit contrasting palette.
 The workshop menu contains the outline and student resources; presenter URL
 configuration is under **Menu → Presenter setup → Configure workshop links**.
 
-The default Student prototype now opens an accessible HTML companion at
-`assets/workshop/prototype.html`. It is explicitly labeled sample content and
-does not collect or save responses. The shared Figma design remains linked for
-viewing/editing. A custom Figma URL configured by the presenter still embeds the
-custom prototype. The original Figma button-reaction problem is not fixed by
-this companion; the companion provides a separate classroom path.
+The default Student prototype follows the selected route. Collective uses
+`assets/workshop/collective-prototype.html`: watch the Salem example, describe a
+visible change, qualify the view, and review the practice note. The wildcard
+uses `assets/workshop/prototype.html`. Neither companion submits or persists
+practice responses. This is separate from gallery sketches, which still save
+device-local drafts and use explicit submission to the existing classroom backend.
+
+The [Collective Figma flow](https://www.figma.com/design/KdaXhHMVTwzhWSXqAEHEyw?node-id=26-11)
+adds concrete sample content, two uncertainty branches, edit, and restart to the
+existing shared file. The original wildcard frames are preserved. The deck
+selects the matching Figma entry point; a custom presenter-configured Figma/Make
+URL still overrides both routes. The Figma skill guided reuse of the existing
+typography and library button instances, rather than replacing the file.
 
 The browser suites `scripts/verify_workshop_browser.mjs` and
 `scripts/verify_embeds_browser.mjs` target the public export served at
 `http://127.0.0.1:8765/`. They use intercepted API/app fixtures, never live
 classroom writes. Run them with `playwright-cli run-code --filename <script>`.
-They cover both routes, 208 slide/viewport combinations, short landscape
+They cover both routes, 224 slide/viewport combinations, short landscape
 scroll reachability, native polls, overlay focus, and the complete HTML starter.
 Both browser suites passed on September 21 after session access was restored:
-208 slide/viewport combinations and the overlay/starter interaction checks.
+224 slide/viewport combinations and the overlay/starter interaction checks.
 The release check also caught and corrected a desktop Spotify-slide footer
 overlap. Provider behavior and real finger/virtual-keyboard testing still require
 a separate phone rehearsal; browser viewport tests are not physical-device tests.
 
 `scripts/verify_mobile_interactions_browser.mjs` adds 28 phone app-view checks,
-wildcard graphic bounds, slide-10 button contrast, and a complete drawing/reload/
+wildcard graphic bounds, slide-11 button contrast, and a complete drawing/reload/
 mocked-submission/undo/navigation check. All remote writes are intercepted. On
-phones, **Draw** opts into canvas gestures; **Done drawing** restores scrolling.
+all devices, **Draw** opts into canvas gestures; **Done drawing** restores scrolling.
+The toolbar no longer sticks over the drawing. Tablet widths from 600–1180px
+get a full-width sketch form and a 360–560px-tall canvas; rotating the screen exits
+drawing mode without losing the draft. `scripts/verify_join_tablet_prototype_browser.mjs`
+checks the first-screen QR, four tablet sizes, toolbar overlap, rotation recovery,
+both prototype routes, uncertainty, editing, and restart. These are browser tests,
+not a claim of physical iPad/Apple Pencil testing.
 Drawing paints only new segments once per animation frame, rather than resizing
 and repainting the whole bitmap on every pointer event. Existing draft keys,
 coordinates, consent, and classroom submission behavior are unchanged.

@@ -10,11 +10,11 @@ async (page) => {
   });
   for(const pattern of ['https://collective-movement.vercel.app/**','https://www.google.com/maps/embed**','https://open.spotify.com/embed/**'])await page.route(pattern,r=>r.fulfill({contentType:'text/html',body:'<h1>App fixture</h1><button>Pause</button>'}));
   for(const [width,height] of [[320,568],[390,844],[412,915],[932,430]]){
-    await page.setViewportSize({width,height});await page.goto(base+'#1');await page.reload();
+    await page.setViewportSize({width,height});await page.goto(base+'#2');await page.reload();
     const birds=page.locator('[data-embed=birds]');
     await birds.scrollIntoViewIfNeeded();
     check(await birds.locator('iframe').count()===0,'No automatic phone simulation');
-    for(const [n,kind] of [[1,'birds'],[3,'maps'],[4,'spotify'],[6,'collective'],[9,'practice'],[10,'figma'],[11,'figma']]){
+    for(const [n,kind] of [[2,'birds'],[4,'maps'],[5,'spotify'],[7,'collective'],[10,'practice'],[11,'figma'],[12,'figma']]){
       await page.goto(base+'#'+n);
       const device=page.locator('.slide.active [data-embed='+kind+']');
       await device.locator('.load-embed').click();
@@ -28,15 +28,15 @@ async (page) => {
       check(await device.locator('.load-embed').evaluate(e=>e===document.activeElement),'Focus returns to visible launch button');
       check(!await frame.isVisible(),'No squashed live iframe after close');
     }
-    await page.goto(base+'#5');
+    await page.goto(base+'#6');
     const fits=await page.locator('.choice-flow').evaluate(el=>{
       const r=el.getBoundingClientRect();return [...el.children].every(c=>{const b=c.getBoundingClientRect();return b.left>=r.left-1&&b.right<=r.right+1&&c.scrollWidth<=c.clientWidth+1;});
     });check(fits,'Wildcard diagram children fit their card');
     if(width<=600){const cards=await page.locator('.route-choices button').evaluateAll(es=>es.map(e=>e.getBoundingClientRect().toJSON()));check(cards[1].top>=cards[0].bottom,'Phone choices are stacked');}
-    await page.goto(base+'#10');
-    check(await page.locator('.slide.active .mobile-task-action').evaluate(e=>getComputedStyle(e).color!==getComputedStyle(e).backgroundColor),'Slide 10 button text contrasts with background');
+    await page.goto(base+'#11');
+    check(await page.locator('.slide.active .mobile-task-action').evaluate(e=>getComputedStyle(e).color!==getComputedStyle(e).backgroundColor),'Slide 11 button text contrasts with background');
   }
-  await page.setViewportSize({width:390,height:844});await page.goto(base+'#8');await page.reload();
+  await page.setViewportSize({width:390,height:844});await page.goto(base+'#9');await page.reload();
   const canvas=page.locator('[data-sketch] canvas');
   check(await canvas.evaluate(e=>getComputedStyle(e).touchAction.includes('pan-y')),'Canvas scrolls before opting in');
   await page.getByRole('button',{name:'Draw',exact:true}).click();
@@ -62,7 +62,7 @@ async (page) => {
   check(submissions.length===1&&submissions[0].sketch.strokes.length===1,'Mocked submission preserves the sketch');
   await page.getByRole('button',{name:'Undo',exact:true}).click();
   check(await page.evaluate(()=>JSON.parse(localStorage.getItem(Object.keys(localStorage).find(k=>k.startsWith('techbytes-sketch-v2')))).strokes.length)===0,'Undo remains responsive');
-  await page.locator('#next').click();check(page.url().endsWith('#9'),'Slide navigation works after drawing');
+  await page.locator('#next').click();check(page.url().endsWith('#10'),'Slide navigation works after drawing');
   check(errors.length===0,errors.join('\n'));
-  return {appViews:28,checks:'launch cards, no phone autoplay, wildcard fit, slide 10 contrast, drawing, recovery, mocked submit, undo, navigation',errors};
+  return {appViews:28,checks:'launch cards, no phone autoplay, wildcard fit, slide 11 contrast, drawing, recovery, mocked submit, undo, navigation',errors};
 }

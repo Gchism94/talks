@@ -8,7 +8,7 @@ async (page) => {
   await page.route('https://techbytes-sketch-gallery.gchism.chatgpt.site/api/**',r=>r.fulfill({contentType:'application/json',body:JSON.stringify({open:true,revealed:false,total:0,mine:null})}));
   await page.route('https://collective-movement.vercel.app/**',r=>r.fulfill({contentType:'text/html',body:`<h1>Local simulation fixture</h1><button>Pause</button><script>addEventListener('message',e=>{if(e.data.type==='collective:pause')document.querySelector('button').textContent='Play'});<\/script>`}));
   for(const [width,height] of [[320,568],[390,844],[932,430]]){
-    await page.setViewportSize({width,height});await page.goto(base+'#6');await page.reload();
+    await page.setViewportSize({width,height});await page.goto(base+'#7');await page.reload();
     await page.getByRole('button',{name:'Open Collective',exact:true}).click();
     const device=page.locator('.device.expanded'),close=device.getByRole('button',{name:'Close interactive view'});
     await page.frameLocator('.device.expanded iframe').getByRole('heading',{name:'Local simulation fixture'}).waitFor();
@@ -20,9 +20,9 @@ async (page) => {
     check(await page.locator('[data-embed=collective] .load-embed').evaluate(e=>e===document.activeElement),'First-open focus return');
     await page.frameLocator('[data-embed=collective] iframe').getByRole('button',{name:'Play',exact:true,includeHidden:true}).waitFor({state:'attached'});
     check(await page.locator('[data-embed=collective] iframe').count()===1,'App frame retained');
-    await page.locator('#next').click();check(page.url().split('#')[1]==='7','Compact navigation skips reveals');
+    await page.locator('#next').click();check(page.url().split('#')[1]==='8','Compact navigation skips reveals');
   }
-  await page.setViewportSize({width:390,height:844});await page.goto(base+'?route=wildcard#6');
+  await page.setViewportSize({width:390,height:844});await page.goto(base+'?route=wildcard#7');
   await page.getByRole('button',{name:'Open Student prototype',exact:true}).click();
   const starter=page.frameLocator('.device.expanded iframe');
   await starter.getByRole('button',{name:'Try the next step'}).click();

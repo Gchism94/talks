@@ -8,10 +8,12 @@ const deck=read('docs/design-what-you-know/index.html');
 const css=read('site/workshop/workshop.css');
 const companion=read('site/workshop/prototype.html');
 const slides=[...deck.matchAll(/<section class="slide[^>]*data-title="([^"]+)"/g)].map(m=>m[1]);
-assert.equal(slides.length,13,'Thirteen slides');
-assert.equal(slides[1],'What you’ll take away','Takeaways immediately after the opening');
-assert.equal(slides[2],'Maps: whose route?','Maps follows takeaways');
-const opening=deck.slice(deck.indexOf('<section class="slide ink hero"'),deck.indexOf('<section class="slide work takeaways-slide"'));
+assert.equal(slides.length,14,'Fourteen slides including the join screen');
+assert.equal(slides[0],'Join the workshop','QR comes before the title');
+assert.equal(slides[1],'Design What You Know','Title follows joining');
+assert.equal(slides[2],'What you’ll take away','Takeaways immediately after the title');
+assert.equal(slides[3],'Maps: whose route?','Maps follows takeaways');
+const opening=deck.slice(deck.indexOf('<section class="slide ink join-slide"'),deck.indexOf('<section class="slide ink hero"'));
 assert(opening.includes('images/join-talk.svg'),'QR on the opening slide');
 assert(opening.includes('https://gchism94.github.io/talks/design-what-you-know/'),'Direct-link alternative to QR');
 assert.equal(read('docs/assets/workshop/images/join-talk.svg'),read('site/workshop/images/join-talk.svg'),'QR exported unchanged');
@@ -20,9 +22,12 @@ const configContext={window:{}};
 runInNewContext(read('site/workshop/config.js'),configContext);
 const defaults=configContext.window.WORKSHOP_DEFAULTS,config={...defaults};
 const scriptURL=new URL('https://gchism94.github.io/talks/assets/workshop/workshop.js');
+const location={href:'https://gchism94.github.io/talks/design-what-you-know/'};
 const provider=runInNewContext(section('  function providerURL(', '  function openURL(')+'\nproviderURL;',{
-  URL,config,defaults,scriptURL,hostMatches:(h,d)=>h===d||h.endsWith('.'+d),
+  URL,config,defaults,scriptURL,location,hostMatches:(h,d)=>h===d||h.endsWith('.'+d),
 });
+assert.equal(provider('figma'),'https://gchism94.github.io/talks/assets/workshop/collective-prototype.html');
+location.href+='?route=wildcard';
 assert.equal(provider('figma'),'https://gchism94.github.io/talks/assets/workshop/prototype.html');
 config.figma='https://www.figma.com/proto/example/workshop?node-id=1-2';
 assert.equal(new URL(provider('figma')).hostname,'embed.figma.com');

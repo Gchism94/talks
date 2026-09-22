@@ -23,7 +23,7 @@
     const canvas=studio.querySelector('canvas'),ctx=canvas.getContext('2d'),description=studio.querySelector('textarea');
     let draft=blank(),stroke=null,busy=false,identity='',room='',endpoint='',lastKey=BASE_KEY;
     const compact=matchMedia('(max-width:900px), (max-height:540px)');
-    let drawing=!compact.matches,pointerId=null,strokeBox=null,pointCount=0,paintedPoints=0,paintFrame=0,fullPaint=false;
+    let drawing=false,pointerId=null,strokeBox=null,pointCount=0,paintedPoints=0,paintFrame=0,fullPaint=false;
     const toolbar=studio.querySelector('.sketch-toolbar'),drawToggle=document.createElement('button');
     drawToggle.type='button';drawToggle.className='sketch-draw-toggle';
     toolbar.insertBefore(drawToggle,toolbar.querySelector('button'));
@@ -115,8 +115,9 @@
     studio.querySelector('[data-undo-sketch]').onclick=()=>{finishStroke();pointCount-=draft.strokes.pop()?.length||0;schedulePaint(true);persist();};
     studio.querySelector('[data-clear-sketch]').onclick=()=>{finishStroke();if(!draft.strokes.length||!confirm('Clear the drawing on this device? Submitted work will not change until you submit again.'))return;draft.strokes=[];pointCount=0;schedulePaint(true);persist();};
     new ResizeObserver(()=>schedulePaint(true)).observe(canvas);
-    const leaveDrawing=()=>{finishStroke();if(compact.matches){drawing=false;updateDrawingMode();}};
-    compact.addEventListener('change',()=>{finishStroke();drawing=!compact.matches;updateDrawingMode();});
+    const leaveDrawing=()=>{finishStroke();drawing=false;updateDrawingMode();};
+    compact.addEventListener('change',leaveDrawing);
+    window.addEventListener('resize',leaveDrawing);
     document.addEventListener('deck:change',leaveDrawing);
     window.addEventListener('blur',leaveDrawing);
     document.addEventListener('visibilitychange',()=>{if(document.hidden){leaveDrawing();persist();}});

@@ -18,7 +18,7 @@ async (page) => {
     for(const [width,height] of [[320,568],[375,667],[390,844],[430,932],[844,390],[932,430],[1280,720],[1440,900]]){
       await page.setViewportSize({width,height});
       await page.goto(base+'?route='+route+'#1');
-      for(let n=1;n<=13;n++){
+      for(let n=1;n<=14;n++){
         await page.evaluate(n=>location.hash='#'+n+'.99',n);
         await page.waitForFunction(n=>document.querySelector('#counter').textContent.startsWith(String(n).padStart(2,'0')),n);
         const compact=width<=900||height<=540;
@@ -39,11 +39,11 @@ async (page) => {
     }
   }
   await page.setViewportSize({width:390,height:844});
-  await page.goto(base+'#3');
+  await page.goto(base+'#4');
   const poll=page.locator('[data-native-poll=maps]');
   await poll.getByRole('radio',{name:'Both',exact:true}).check();
   await page.keyboard.press('ArrowRight');
-  assert(page.url().split('#')[1]==='3','Poll keys must not advance slides');
+  assert(page.url().split('#')[1]==='4','Poll keys must not advance slides');
   assert(await poll.getByRole('radio',{name:'Leans epistēmē',exact:true}).isChecked(),'Radio keyboard navigation');
   await poll.getByRole('button',{name:'Save response',exact:true}).click();
   await page.waitForFunction(()=>document.querySelector('[data-native-poll=maps] .poll-status').textContent.includes('saved'));
@@ -52,7 +52,7 @@ async (page) => {
   assert(await poll.locator('input:checked').count()===0,'Comparison has no default answer');
   await page.getByRole('button',{name:'Open workshop menu'}).click();
   assert(await page.getByRole('link',{name:'All talks',exact:true}).isVisible(),'Collection link available');
-  assert(await page.locator('.talk-outline a').count()===13,'Complete outline');
+  assert(await page.locator('.talk-outline a').count()===14,'Complete outline');
   await page.getByRole('button',{name:'Close workshop menu'}).click();
   await page.locator('#routeSelect').selectOption('wildcard');await page.reload();
   assert(await page.locator('#routeSelect').inputValue()==='wildcard','Route survives reload');
