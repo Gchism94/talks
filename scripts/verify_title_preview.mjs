@@ -38,14 +38,15 @@ const { shouldPlayPreview, updateActive } = runInNewContext(
   { document, reducedMotion, devices: [device], loadDevice: d => calls.push(['load', d]), pauseDevice: d => calls.push(['pause', d]) },
 );
 let policies = 0;
-for (let mask = 0; mask < 64; mask++) {
+for (let mask = 0; mask < 128; mask++) {
   document.hidden = !!(mask & 1);
   active = !!(mask & 2);
   hiddenRoute = !!(mask & 4);
   device.dataset.previewPaused = mask & 8 ? 'true' : 'false';
   reducedMotion.matches = !!(mask & 16);
   device.dataset.previewRequested = mask & 32 ? 'true' : 'false';
-  const expected = !document.hidden && active && !hiddenRoute && !(mask & 8) && (!reducedMotion.matches || !!(mask & 32));
+  device.dataset.previewVisible = mask & 64 ? 'false' : 'true';
+  const expected = !document.hidden && active && !hiddenRoute && !(mask & 8) && !(mask & 64) && (!reducedMotion.matches || !!(mask & 32));
   assert.equal(shouldPlayPreview(device), expected, `Autoplay policy ${mask}`);
   calls.length = 0;
   updateActive();

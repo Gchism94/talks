@@ -53,6 +53,9 @@
       return 'https://open.spotify.com/embed/' + u.pathname.replace(/^\/(embed\/)?/,'') + '?utm_source=generator&theme=0';
     }
     if (kind === 'figma' && config.figma) {
+      // The supplied Figma file remains shareable/editable. Its classroom default
+      // uses the accessible local companion; custom session prototypes still embed.
+      if (config.figma === defaults.figma) return new URL('prototype.html',scriptURL).href;
       const u = new URL(config.figma);
       if (hostMatches(u.hostname,'figma.site')) return u.href;
       if(u.pathname.startsWith('/proto/')) {
@@ -93,7 +96,7 @@
     }
     device.querySelector('.load-embed').onclick = () => {
       if (!providerURL(kind)) { settings.showModal(); settings.querySelector(`[name="${kind}"]`)?.focus(); return; }
-      if(matchMedia('(max-width:900px)').matches) expand(device);
+      if(matchMedia('(max-width:900px), (max-height:540px)').matches) expand(device);
       startDevice(device);
     };
     device.querySelector('.expand-embed').onclick = () => {
@@ -110,6 +113,10 @@
       device.querySelector('.expand-embed').textContent='Explore';
     }
     device.querySelector('.device-exit').onclick = closeExpanded;
+    const fallback=document.createElement('a');
+    fallback.className='overlay-external'; fallback.target='_blank'; fallback.rel='noopener noreferrer';
+    fallback.textContent=kind==='figma'?'Open Figma ↗':'Open separately ↗';
+    device.append(fallback);
     refreshDevice(device);
   }
   function refreshDevice(device) {
@@ -117,6 +124,8 @@
     device.classList.toggle('connected',connected);
     const link=device.querySelector('.external-embed');
     link.hidden=!openURL(kind); if(!link.hidden) link.href=openURL(kind);
+    const fallback=device.querySelector('.overlay-external');
+    fallback.hidden=link.hidden; if(!fallback.hidden)fallback.href=link.href;
     device.querySelector('.load-embed').textContent = connected ? 'Open ' + (poll ? 'live poll' : names[kind]) : (poll ? 'Connect a live poll' : 'Connect Figma');
     device.querySelector('.expand-embed').textContent = connected ? 'Explore full screen' : 'Set up link';
     device.querySelector('.embed-caption').textContent = poll ? (connected ? 'Votes go to the polling provider. If blank, open separately.' : 'No live poll connected. Use the discussion fallback below.') : kind==='spotify' ? 'Official player, not the full app. For personal recommendations, open Spotify separately.' : kind==='maps' ? 'Interactive Google map. Full route planning opens separately.' : kind==='figma' ? 'Shared Figma preview. Viewing depends on the file’s sharing settings.' : 'Live app. If sign-in or a blank screen appears, open separately. Salem footage needs internet.';
@@ -125,12 +134,14 @@
       device.querySelector('.embed-caption').textContent='Live illustrative model. Replaying starts a fresh flock.';
       refreshPreviewControl(device);
     }
+    if(kind==='figma' && config.figma===defaults.figma) device.querySelector('.embed-caption').textContent='Accessible workshop starter. The shared Figma design stays available separately.';
   }
   function refreshPreviewControl(device) {
     const toggle=device.querySelector('.preview-toggle');
     if(toggle)toggle.textContent=device.querySelector('iframe')?'Pause preview':'Replay birds';
   }
   function startDevice(device) {
+    device.classList.add('has-opened');
     if(device.dataset.embed==='birds'){device.dataset.previewPaused='false';device.dataset.previewRequested='true';}
     loadDevice(device);
   }
@@ -177,16 +188,18 @@
     device.classList.remove('expanded'); device.removeAttribute('role');device.removeAttribute('aria-modal');device.removeAttribute('aria-label');
     document.body.classList.remove('embed-open');
     for(const [el,value] of inertState)el.inert=value; inertState=[];
-    pauseDevice(device); restoreFocus?.focus({preventScroll:true});
+    pauseDevice(device);
+    const target=restoreFocus?.isConnected && restoreFocus.getClientRects().length && !restoreFocus.closest('[hidden],[inert]') ? restoreFocus : device.querySelector('.expand-embed');
+    target?.focus({preventScroll:true}); restoreFocus=null;
   }
   document.addEventListener('keydown', e=>{
     if(!expanded)return;
     if(e.key==='Escape'){e.preventDefault();e.stopImmediatePropagation();closeExpanded();return;}
     if(e.key==='Tab') {
       // The iframe participates in the native tab order, including its inner controls.
-      const close=expanded.querySelector('.device-exit'),frame=expanded.querySelector('iframe');
-      if(e.shiftKey && document.activeElement===close){e.preventDefault();frame?.focus();}
-      else if(!e.shiftKey && document.activeElement===close){e.preventDefault();frame?.focus();}
+      const close=expanded.querySelector('.device-exit'),frame=expanded.querySelector('iframe'),link=expanded.querySelector('.overlay-external');
+      if(e.shiftKey && document.activeElement===frame){e.preventDefault();(link.hidden?close:link).focus();}
+      else if(!e.shiftKey && document.activeElement===(link.hidden?close:link)){e.preventDefault();frame?.focus();}
     }
   },true);
   document.addEventListener('focusin',e=>{if(expanded && !expanded.contains(e.target)) expanded.querySelector('.device-exit').focus();});
@@ -201,9 +214,17 @@
     settings.querySelector('.link-fields').append(l,input,small);
   }
   document.body.append(settings);
-  const setup=document.createElement('button');setup.id='workshopLinksBtn';setup.textContent='Links';setup.setAttribute('aria-label','Open workshop links');setup.onclick=()=>{settings.showModal();};
+  const setup=document.createElement('button');setup.id='workshopLinksBtn';setup.textContent='Menu';setup.setAttribute('aria-label','Open workshop menu');
+  const menu=document.createElement('dialog');menu.id='workshopMenu';menu.className='workshop-dialog';menu.setAttribute('aria-labelledby','workshopMenuTitle');
+  menu.innerHTML=`<button class="close" type="button" aria-label="Close workshop menu">Close</button><h2 id="workshopMenuTitle">Your workshop</h2><p>Scroll to explore a slide. Use the bottom arrows to move on.</p><nav class="student-links" aria-label="Workshop resources"><a href="https://gchism94.github.io/talks/">All talks</a><a data-menu-app target="_blank" rel="noopener">Open Collective ↗</a><a data-menu-prototype target="_blank" rel="noopener">Accessible starter ↗</a><a data-menu-figma target="_blank" rel="noopener">Shared Figma design ↗</a><a data-menu-polls target="_blank" rel="noopener">Discussion polls ↗</a><a data-menu-gallery target="_blank" rel="noopener">Sketch gallery ↗</a></nav><details><summary>Talk outline</summary><ol class="talk-outline"></ol></details><details><summary>Presenter setup</summary><p>Change public activity links on this browser.</p><button class="interaction-button" data-presenter-links>Configure workshop links</button></details>`;
+  document.querySelectorAll('.slide').forEach((slide,i)=>{const li=document.createElement('li'),a=document.createElement('a');a.href='#'+(i+1);a.textContent=slide.dataset.title;a.onclick=()=>menu.close();li.append(a);menu.querySelector('.talk-outline').append(li);});
+  document.body.append(menu);
+  menu.querySelector('.close').onclick=()=>menu.close();
+  menu.querySelector('[data-presenter-links]').onclick=()=>{menu.close();settings.showModal();};
+  setup.onclick=()=>{menu.showModal();};
   document.querySelector('.tools').insertBefore(setup,document.querySelector('#helpBtn'));
   settings.querySelector('.close').onclick=()=>settings.close();
+  settings.addEventListener('close',()=>setup.focus({preventScroll:true}));
   settings.querySelector('.settings-status').textContent=startupNotice;
   function applySettings(next){
     config=next;
@@ -241,10 +262,53 @@
       copyText(config.figma,b.parentElement.querySelector('[role="status"]'));
     };});
   }
-  function publishGalleryLink(){window.TECHBYTES_GALLERY=config.gallery||'';document.dispatchEvent(new CustomEvent('workshop:links',{detail:{gallery:window.TECHBYTES_GALLERY}}));}
+  function publishGalleryLink(){
+    window.TECHBYTES_GALLERY=config.gallery||'';
+    const room=new URL(config.gallery||defaults.gallery).searchParams.get('room');
+    const links={app:config.collective,prototype:new URL('prototype.html',scriptURL).href,figma:config.figma,polls:'https://gchism94.github.io/talks/polls/'+(room?'?room='+room:''),gallery:config.gallery};
+    for(const [key,url] of Object.entries(links)){const a=menu.querySelector('[data-menu-'+key+']');a.hidden=!url;if(url)a.href=url;}
+    document.dispatchEvent(new CustomEvent('workshop:links',{detail:{gallery:window.TECHBYTES_GALLERY}}));
+  }
   devices.forEach(deviceMarkup); updatePrototypeLinks(); publishGalleryLink();
+  // Keep a task entry point above the discussion copy on students' phones.
+  document.querySelectorAll('.media-layout').forEach(layout=>{
+    const copy=layout.querySelector('.media-copy'),device=layout.querySelector('[data-embed]'),sketch=layout.querySelector('.sketch-studio');
+    if(!copy||(!device&&!sketch))return;
+    const button=document.createElement('button');button.type='button';button.className='mobile-task-action interaction-button primary';
+    button.textContent=device?'Explore '+names[device.dataset.embed]:'Go to my sketch';
+    button.onclick=()=>{
+      if(device){
+        if(!providerURL(device.dataset.embed)){settings.showModal();return;}
+        expand(device);startDevice(device);
+      }else{
+        sketch.scrollIntoView({block:'start'});
+        const canvas=sketch.querySelector('canvas');if(canvas){canvas.tabIndex=-1;canvas.focus({preventScroll:true});}
+      }
+    };
+    (copy.querySelector('.dek')||copy.querySelector('h2')).after(button);
+  });
+  const compact=matchMedia('(max-width:900px), (max-height:540px)');
+  document.querySelectorAll('.comparison-note').forEach(note=>{
+    const details=document.createElement('details'),summary=document.createElement('summary');
+    details.className='comparison-details';
+    summary.textContent=note.closest('.slide').querySelector('[data-native-poll="maps"]')?'Compare Apple Maps':'Compare Spotify + Apple Music';
+    if(note.dataset.reveal){details.dataset.reveal=note.dataset.reveal;note.removeAttribute('data-reveal');note.removeAttribute('aria-hidden');note.inert=false;note.classList.remove('is-revealed','is-current');}
+    note.replaceWith(details);details.append(summary,note);details.open=!compact.matches;
+  });
+  compact.addEventListener('change',()=>document.querySelectorAll('.comparison-details').forEach(d=>d.open=!compact.matches));
+  // Refresh the deck's reveal bookkeeping after wrapping comparison nodes.
+  window.dispatchEvent(new Event('hashchange'));
+  const cue=document.createElement('span');cue.className='scroll-cue';cue.textContent='More below ↓';cue.setAttribute('aria-hidden','true');document.body.append(cue);
+  function updateScrollCue(){const slide=document.querySelector('.slide.active');cue.hidden=!compact.matches||!slide||slide.scrollHeight-slide.clientHeight-slide.scrollTop<48;}
+  document.querySelectorAll('.slide').forEach(s=>s.addEventListener('scroll',updateScrollCue,{passive:true}));
+  document.addEventListener('deck:change',()=>requestAnimationFrame(updateScrollCue));
+  window.addEventListener('resize',updateScrollCue);
+  const layoutObserver=new ResizeObserver(updateScrollCue);
+  layoutObserver.observe(document.querySelector('.deck'));
+  document.querySelectorAll('.slide > .frame').forEach(f=>layoutObserver.observe(f));
+  updateScrollCue();
   function shouldPlayPreview(device) {
-    return !document.hidden && !!device.closest('.slide.active') && !device.closest('[data-route][hidden]')
+    return !document.hidden && device.dataset.previewVisible!=='false' && !!device.closest('.slide.active') && !device.closest('[data-route][hidden]')
       && device.dataset.previewPaused!=='true' && (!reducedMotion.matches || device.dataset.previewRequested==='true');
   }
   function updateActive(){
@@ -260,6 +324,10 @@
     devices.filter(d=>d.dataset.embed==='birds').forEach(d=>{delete d.dataset.previewRequested;});
     updateActive();
   });
+  if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>{for(const entry of entries)entry.target.dataset.previewVisible=String(entry.isIntersecting);updateActive();},{threshold:0.05});
+    devices.filter(d=>d.dataset.embed==='birds').forEach(d=>observer.observe(d));
+  }
   updateActive();
   // Sketch persistence and explicit submission are handled by sketch.js.
 })();

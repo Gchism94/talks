@@ -102,6 +102,7 @@ python3 scripts/check_site.py
 node scripts/verify_workshop_urls.mjs
 node scripts/verify_sketch_drafts.mjs
 node scripts/verify_title_preview.mjs
+node scripts/verify_mobile_logic.mjs
 node --check site/workshop/workshop.js
 node --check site/workshop/sketch.js
 git diff --check
@@ -111,6 +112,39 @@ These checks validate the public export, links, URL restrictions, and sketch-dra
 storage. Rehearse the slides and externally hosted activities before each event.
 The gallery backend and Collective are hosted independently of GitHub Pages.
 The native poll interface is static; saved responses use the gallery backend.
+
+## Mobile workshop edition
+
+The 13-slide edition starts with a static QR code to the public talk and a
+30-second takeaways slide before Google Maps. The opening still totals two
+minutes; the 45-minute workshop schedule is unchanged. The QR is a local SVG,
+with a direct link for readers already on a phone—no QR service or tracking.
+`scripts/generate_talk_qr.py` emits the SVG using ReportLab. The QR destination is
+the published deck, not a presenter session or private room-management link.
+
+Phone widths and short landscape windows use the same scrollable, all-sections
+layout. Compact app previews open full screen with a persistent external link.
+The workshop menu contains the outline and student resources; presenter URL
+configuration is under **Menu → Presenter setup → Configure workshop links**.
+
+The default Student prototype now opens an accessible HTML companion at
+`assets/workshop/prototype.html`. It is explicitly labeled sample content and
+does not collect or save responses. The shared Figma design remains linked for
+viewing/editing. A custom Figma URL configured by the presenter still embeds the
+custom prototype. The original Figma button-reaction problem is not fixed by
+this companion; the companion provides a separate classroom path.
+
+The browser suites `scripts/verify_workshop_browser.mjs` and
+`scripts/verify_embeds_browser.mjs` target the public export served at
+`http://127.0.0.1:8765/`. They use intercepted API/app fixtures, never live
+classroom writes. Run them with `playwright-cli run-code --filename <script>`.
+They cover both routes, 208 slide/viewport combinations, short landscape
+scroll reachability, native polls, overlay focus, and the complete HTML starter.
+Both browser suites passed on September 21 after session access was restored:
+208 slide/viewport combinations and the overlay/starter interaction checks.
+The release check also caught and corrected a desktop Spotify-slide footer
+overlap. Provider behavior and real finger/virtual-keyboard testing still require
+a separate phone rehearsal; browser viewport tests are not physical-device tests.
 
 ## Live title preview
 
@@ -129,7 +163,7 @@ The slides and https://gchism94.github.io/talks/polls/ use native five-position 
 - No default answer or automatic submission. Save explicitly; revise while open. One response per browser, room, and app. Clearing storage or another browser can vote again: informal classroom discussion, not a verified ballot.
 - No names or free text. Storage holds a room-specific hash of a random browser identity and the chosen position. Public distributions stay hidden until revealed. No averages or correct-answer grading.
 - Sign in to the gallery as the room owner, expand **Discussion polls**, close/reopen each question, reveal/hide results, and download aggregate CSV totals. Poll controls are independent of sketch collection/voting.
-- **Links → Classroom sketch gallery link** selects the room. Share the phone poll link including its room parameter for another session. Create a fresh gallery room for a fresh workshop; do not reset old contributions.
+- **Menu → Presenter setup → Configure workshop links → Classroom sketch gallery link** selects the room. Share the phone poll link including its room parameter for another session. Create a fresh gallery room for a fresh workshop; do not reset old contributions.
 - Switching between the talk and poll page on the same talks-site origin keeps the identity. Third-party origins have separate browser storage.
 - Network failure: the page shows an error and does not claim success. Retry safely, or use a show of hands without implying it was saved.
 

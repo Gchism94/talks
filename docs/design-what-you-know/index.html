@@ -227,7 +227,7 @@
     .knowledge .field-observation,.knowledge .principle-note { margin-top:14px; }
     .process { margin-top:34px; }
   }
-  @media (max-width:900px) {
+  @media (max-width:900px), (max-height:540px) {
     .slide { overflow-y:auto; align-items:flex-start; padding:88px 7vw 130px; }
     .frame { margin:0 auto; }
     .split,.split.equal,.hero .split,.knowledge { grid-template-columns:1fr; gap:32px; }
@@ -295,19 +295,19 @@
   .spectrum-response { font-size:16px; color:var(--muted); margin-top:7px; }
   input:focus-visible,select:focus-visible { outline:3px solid var(--experience); outline-offset:4px; }
   .ink .prompt-sheet { color:var(--ink); }
-  @media(max-width:900px) { .route-label { font-size:0; } .route-label select { font-size:12px; max-width:104px; } .route-choices { gap:20px; } }
+  @media(max-width:900px), (max-height:540px) { .route-label { font-size:0; } .route-label select { font-size:12px; max-width:104px; } .route-choices { gap:20px; } }
   @media(max-width:520px) { .route-choices { grid-template-columns:1fr; } .tools { gap:3px; } .brand { max-width:85px; } .spectrum-labels small { font-size:14px; } }
 
 
 .brand a { color:inherit; text-decoration:none; }
 .brand a:hover { text-decoration:underline; }
 </style>
-<link rel="stylesheet" href="../assets/workshop/workshop.css?v=20260918-1">
-<link rel="stylesheet" href="../assets/workshop/polls.css?v=20260921-1">
+<link rel="stylesheet" href="../assets/workshop/workshop.css?v=20260921-mobile-1">
+<link rel="stylesheet" href="../assets/workshop/polls.css?v=20260921-mobile-1">
 <script src="../assets/workshop/config.js?v=20260917-3" defer></script>
-<script src="../assets/workshop/workshop.js?v=20260918-1" defer></script>
+<script src="../assets/workshop/workshop.js?v=20260921-mobile-1" defer></script>
 <script src="../assets/workshop/sketch.js?v=20260917-2" defer></script>
-<script src="../assets/workshop/polls.js?v=20260921-1" defer></script>
+<script src="../assets/workshop/polls.js?v=20260921-mobile-1" defer></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -321,11 +321,13 @@
   <div class="tools"><label class="route-label">Workshop <select id="routeSelect" aria-label="Workshop route"><option value="collective">Collective</option><option value="wildcard">Student app</option></select></label>
     <button hidden id="notesBtn" aria-label="Open presenter notes">Notes</button>
     <button id="themeBtn" aria-label="Toggle color theme">Theme</button>
-    <button id="helpBtn" aria-label="Open keyboard help">?</button>
+    <button id="helpBtn" aria-label="Open talk help">?</button>
   </div>
 </header>
 <main class="deck" id="deck">
-<section class="slide ink hero" data-title="Design What You Know" data-chapter="0"><div class="frame"><div class="split"><div><p class="kicker">Design thinking + building with AI</p><h1>Design what<br>you <em>know.</em></h1><p class="dek">Better apps begin with the people who use them.</p><div class="speaker-credit"><p class="speaker-name">Greg Chism</p><p>Assistant Professor of Practice · Director of Instructional Computing</p><p>University of Arizona · InfoSci</p></div></div><figure class="hero-figure hero-live"><div data-embed="birds"></div><figcaption>Collective · Salem swifts<small>An illustrative model, not a recording.</small></figcaption></figure></div></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
+<section class="slide ink hero" data-title="Design What You Know" data-chapter="0"><div class="frame"><div class="split"><div><p class="kicker">Design thinking + building with AI</p><h1>Design what<br>you <em>know.</em></h1><p class="dek">Better apps begin with the people who use them.</p><div class="speaker-credit"><p class="speaker-name">Greg Chism</p><p>Assistant Professor of Practice · Director of Instructional Computing</p><p>University of Arizona · InfoSci</p></div></div><figure class="hero-figure hero-live"><div class="join-card"><a class="join-code" href="https://gchism94.github.io/talks/design-what-you-know/" aria-label="Open the talk on your phone"><img src="../assets/workshop/images/join-talk.svg" width="164" height="164" alt="QR code: open this talk on your phone"></a><div><span class="join-eyebrow">Scan to join</span><strong>A place for<br>your ideas.</strong><p>Follow along.<br>Vote. Sketch. Try.</p><a class="join-link" href="https://gchism94.github.io/talks/design-what-you-know/">Open on your phone ↗</a><small>gchism94.github.io/talks</small></div></div><div data-embed="birds"></div><figcaption>Collective · Salem swifts<small>An illustrative model, not a recording.</small></figcaption></figure></div></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
+
+<section class="slide work takeaways-slide" data-title="What you’ll take away" data-chapter="0"><div class="frame"><p class="kicker">Our aim / 30 seconds</p><h2>Three things to <em>take away</em></h2><div class="takeaways-grid"><article data-reveal="1"><svg class="line-icon" aria-hidden="true"><use href="#notice-icon"/></svg><span class="number">01 / NOTICE</span><h3>See what users know.</h3><p>Use lived experience and explicit reasons together.</p></article><article data-reveal="2"><svg class="line-icon" aria-hidden="true"><use href="#make-icon"/></svg><span class="number">02 / MAKE</span><h3>Build one useful change.</h3><p>Give AI a person, a task, and clear limits.</p></article><article data-reveal="3"><svg class="line-icon" aria-hidden="true"><use href="#try-icon"/></svg><span class="number">03 / TRY</span><h3>Find out whether it helps.</h3><p>Watch someone use it. Revise what gets in their way.</p></article></div><p class="bridge">A polished screen is a starting point—not proof.</p></div><aside class="speaker-notes"><p>Presenter notes are not included in this public edition.</p></aside></section>
 
 <section class="slide" data-title="Maps: whose route?" data-chapter="0"><div class="frame"><div class="media-layout"><div class="media-copy"><p class="kicker">Example 1 / 3 minutes</p><h2>A place you <em>know</em></h2><p class="dek">The route is recorded. The awkward crossing is lived.</p>
 <p class="knowledge-key" data-reveal="1"><b>Mētis</b> / situated judgment<br><b>Epistēmē</b> / systematic, reasoned knowledge</p>
@@ -360,7 +362,7 @@
   <nav class="nav" aria-label="Presentation navigation"><button id="prev" aria-label="Previous slide">←</button><div class="position" role="status" aria-live="polite" aria-atomic="true"><span id="counter"></span><span id="buildCounter" hidden></span></div><button id="next" aria-label="Next section">→</button></nav>
 </footer>
 <div id="progress"></div>
-<dialog id="help" aria-labelledby="helpTitle"><button class="close" data-close aria-label="Close help">Close</button><h2 id="helpTitle">Presenter controls</h2><div class="keys"><kbd>→ / Space / Page Down</kbd><span>Reveal next section, then next slide</span><kbd>← / Page Up</kbd><span>Step back a section, then previous slide</span><kbd>Shift + ← →</kbd><span>Skip directly to the previous / next slide</span><kbd>A</kbd><span>Show all sections on this slide</span><kbd>Home / End</kbd><span>First / last slide</span><kbd>F</kbd><span>Fullscreen</span><kbd>B</kbd><span>Blank screen</span><kbd>?</kbd><span>Keyboard help</span><kbd>Escape</kbd><span>Close panel / restore screen</span></div><p>Desktop buttons and swipes reveal sections. On phones, all sections are visible and navigation moves between slides.</p></dialog>
+<dialog id="help" aria-labelledby="helpTitle"><button class="close" data-close aria-label="Close help">Close</button><h2 id="helpTitle">Using this talk</h2><p class="phone-help">Scroll down for each activity. The bottom arrows change slides. Menu opens the outline, apps, polls, and gallery. Close an app with × to return. Drawing and text remain on this device until you explicitly submit.</p><div class="keys"><kbd>→ / Space / Page Down</kbd><span>Reveal next section, then next slide</span><kbd>← / Page Up</kbd><span>Step back a section, then previous slide</span><kbd>Shift + ← →</kbd><span>Skip directly to the previous / next slide</span><kbd>A</kbd><span>Show all sections on this slide</span><kbd>Home / End</kbd><span>First / last slide</span><kbd>F</kbd><span>Fullscreen</span><kbd>B</kbd><span>Blank screen</span><kbd>?</kbd><span>Keyboard help</span><kbd>Escape</kbd><span>Close panel / restore screen</span></div><p>Desktop buttons and swipes reveal sections. On phones, all sections are visible and navigation moves between slides.</p></dialog>
 <dialog id="notes" aria-labelledby="notesTitle"><button class="close" data-close aria-label="Close notes">Close</button><h2 id="notesTitle">Presenter notes</h2><div id="notesBody"></div></dialog>
 <div id="blackout" hidden aria-label="Blank screen; click to return"></div>
 <script>
@@ -395,13 +397,13 @@
   function reveal(targetStep, writeHash = true, follow = false) {
     step = Math.max(1, Math.min(totals[index], targetStep));
     panels[index].forEach(panel => {
-      const visible = matchMedia("(max-width:900px)").matches || (Number(panel.dataset.reveal) <= step && (!panel.dataset.until || step <= Number(panel.dataset.until)));
+      const visible = matchMedia("(max-width:900px), (max-height:540px)").matches || (Number(panel.dataset.reveal) <= step && (!panel.dataset.until || step <= Number(panel.dataset.until)));
       panel.classList.toggle('is-revealed', visible); panel.classList.toggle('is-current', visible && Number(panel.dataset.reveal) === step);
       panel.inert = !visible; panel.setAttribute('aria-hidden', String(!visible || panel.hasAttribute('data-decorative')));
     });
     const counter = document.getElementById('buildCounter');
-    counter.hidden = totals[index] === 1 || matchMedia('(max-width:900px)').matches; counter.textContent = 'Section ' + step + ' / ' + totals[index];
-    const phone = matchMedia('(max-width:900px)').matches;
+    counter.hidden = totals[index] === 1 || matchMedia('(max-width:900px), (max-height:540px)').matches; counter.textContent = 'Section ' + step + ' / ' + totals[index];
+    const phone = matchMedia('(max-width:900px), (max-height:540px)').matches;
     document.getElementById('prev').setAttribute('aria-label', !phone && step > 1 ? 'Previous section' : 'Previous slide');
     document.getElementById('next').setAttribute('aria-label', !phone && step < totals[index] ? 'Next section' : 'Next slide');
     if (writeHash) {
@@ -424,7 +426,7 @@
   }
   function navigate(direction, skip=false) {
     if(document.querySelector('dialog[open]') || document.body.classList.contains('embed-open') || !blackout.hidden) return;
-    if(matchMedia('(max-width:900px)').matches) skip=true;
+    if(matchMedia('(max-width:900px), (max-height:540px)').matches) skip=true;
     if(!skip && direction>0 && step<totals[index]) reveal(step+1,true,true);
     else if(!skip && direction<0 && step>1) reveal(step-1,true,true);
     else if(direction>0 && index<slides.length-1) show(index+1);
@@ -456,7 +458,7 @@
     if(event.metaKey || event.ctrlKey || event.altKey || document.querySelector('dialog[open]') || document.body.classList.contains('embed-open')) return;
     if(!blackout.hidden) {if(['b','B','Escape'].includes(event.key)){event.preventDefault();blackout.hidden=true;}return;}
     if(event.target.closest('input,textarea,select,canvas,[contenteditable=true]')) return;
-    if(event.target.closest('button,a') && [' ','Enter'].includes(event.key)) return;
+    if(event.target.closest('button,a,summary') && [' ','Enter'].includes(event.key)) return;
     if(['ArrowRight','PageDown',' '].includes(event.key)){event.preventDefault();navigate(1,event.shiftKey&&event.key==='ArrowRight');}
     else if(['ArrowLeft','PageUp'].includes(event.key)){event.preventDefault();navigate(-1,event.shiftKey&&event.key==='ArrowLeft');}
     else if(event.key==='Home'){event.preventDefault();show(0);}
@@ -469,7 +471,7 @@
   });
   document.getElementById('deck').addEventListener('touchstart',event=>{
     touch=null;
-    if(document.querySelector('dialog[open]') || document.body.classList.contains('embed-open') || !blackout.hidden || event.target.closest('input,button,a,select,textarea,canvas,[data-embed]')) return;
+    if(document.querySelector('dialog[open]') || document.body.classList.contains('embed-open') || !blackout.hidden || event.target.closest('input,button,a,select,textarea,canvas,summary,[data-embed]')) return;
     const t=event.touches[0];touch={x:t.clientX,y:t.clientY};
   },{passive:true});
   document.getElementById('deck').addEventListener('touchend',event=>{
@@ -478,7 +480,7 @@
   },{passive:true});
   function restore(){applyRoute(new URL(location.href).searchParams.get('route'),false);const state=fromHash();show(state.slide,state.step,false);}
   window.addEventListener('hashchange',restore); window.addEventListener('popstate',restore);
-  matchMedia('(max-width:900px)').addEventListener('change',()=>reveal(step,false));
+  matchMedia('(max-width:900px), (max-height:540px)').addEventListener('change',()=>reveal(step,false));
   restore(); root.classList.add('reveal-ready');
 })();
 </script>

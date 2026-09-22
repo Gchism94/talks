@@ -31,6 +31,8 @@
     root.innerHTML=`<div class="poll-topline"><span class="poll-eyebrow">Room pulse / not a scorecard</span><a class="poll-phone" target="_blank" rel="noopener">Vote on your phone ↗</a></div>
       <div class="poll-switch" role="group" aria-label="Choose an app">${choices.map(([id,name])=>`<button type="button" data-question="${id}" aria-pressed="${id===question}">${name}</button>`).join('')}</div>
       <fieldset class="poll-options"><legend>Whose knowledge shapes this interaction?</legend><div class="poll-scale">${labels.map((label,i)=>`<label><input type="radio" name="pulse-${index}" value="${i}"><span class="poll-dot" aria-hidden="true">${i+1}</span><span>${label}</span></label>`).join('')}</div></fieldset>
+      <div class="poll-endpoints" aria-hidden="true"><span>Mētis</span><span>Both</span><span>Epistēmē</span></div>
+      <p class="poll-selection" aria-live="polite">Choose 1–5; save when ready.</p>
       <div class="poll-results" aria-label="Classroom response distribution" hidden></div>
       <div class="poll-bottom"><button class="poll-save" type="button" disabled>Save response</button><span class="poll-status" role="status" aria-live="polite">Connecting…</span></div>
       <p class="poll-disclosure">Saving shares a nameless response with this classroom. One editable response per browser, per app.</p>`;
@@ -41,6 +43,7 @@
       const s=state(),d=s.data;
       root.querySelectorAll('[data-question]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.question===question));b.disabled=busy;});
       inputs.forEach(input=>{input.checked=s.selected===Number(input.value);input.disabled=busy||!d||!d.open;});
+      root.querySelector('.poll-selection').textContent=s.selected===null?'Choose 1–5; save when ready.':(s.selected+1)+' / '+labels[s.selected];
       save.disabled=busy||!context||!d||!d.open||s.selected===null||s.selected===d.mine;
       save.textContent=busy?'Saving…':d?.mine!==null&&d?.mine!==undefined?'Update response':'Save response';
       status.textContent=s.error||(!d?'Connecting…':`${d.open?'Open':'Closed'} · ${d.total} responses · ${s.selected!==null&&s.selected!==d.mine?'Selection not saved':d.mine!==null?'Your response is saved':'Choose a position'}`);
