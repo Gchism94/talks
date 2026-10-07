@@ -19,13 +19,6 @@ __pycache__/
 .env.*
 !.env.example
 
-/site/ants/wild-army-head.jpg
-/site/ants/wild-army-whole.jpg
-/site/ants/wild-door-face.jpg
-/site/ants/wild-door-whole.jpg
-/site/ants/wild-trap-head.jpg
-/site/ants/wild-trap-whole.jpg
-/site/ants/wild-fire-pair2.jpg
 /site/ants/tandem-running.mp4
 /site/ants/tandem-running-poster.jpg
 /site/ants/tandem-running.vtt

@@ -84,14 +84,13 @@ illustrations, a head-matching game, research films, and illustrative trail,
 quorum, and seed demonstrations. Arrow keys navigate; F enters full screen.
 Speaker notes and the speaker guide remain local.
 
-Public media and credits are listed in `site/ants/media.json`. The local talk
-uses Alex Wild gallery portraits and a fire-ant comparison; those files remain
-local because the gallery requires separate permission for internet posting.
-`site/ants/public-slides.json` explicitly substitutes licensed images for the
-website, including a live door-head ant and clearly labeled specimens where
-needed. The major/minor comparison uses published carpenter-ant photographs.
-The Nature supplementary tandem-running movie also remains local; the public
-slide links to Pratt Lab recruitment and nestmate-transport observations.
+Public media and credits are listed in `site/ants/media.json`. Alex Wild's live
+head portraits and shared fire-ant worker comparison are published with the
+presenter's confirmed online-use permission; the photographs retain his
+copyright and visible source credits. Public slide substitutions are explicit in
+`site/ants/public-slides.json`. The Nature supplementary tandem-running movie
+remains local; the public slide links to Pratt Lab recruitment and nestmate-
+transport observations.
 
 The army-ant scaffold film streams from its original university host. The
 original takeover observations and Kyushu University explanation use official

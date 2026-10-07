@@ -68,11 +68,13 @@
         "site/ants/trail-marking.mp4",
         "site/ants/trail-marking.vtt",
         "site/ants/trillium.jpg",
-        "site/ants/public-door-worker.jpg",
-        "site/ants/public-army-soldier.jpg",
-        "site/ants/public-worker-sizes.jpg",
-        "site/ants/public-trap-whole.jpg",
-        "site/ants/public-trap-head.jpg"
+        "site/ants/wild-army-head.jpg",
+        "site/ants/wild-army-whole.jpg",
+        "site/ants/wild-door-face.jpg",
+        "site/ants/wild-door-whole.jpg",
+        "site/ants/wild-trap-head.jpg",
+        "site/ants/wild-trap-whole.jpg",
+        "site/ants/wild-fire-pair2.jpg"
       ],
       "cover": "site/covers/small-republics.png",
       "public_overrides": "site/ants/public-slides.json"
