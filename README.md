@@ -72,6 +72,34 @@ For a talk with additional images, video, or a different structure, extend the
 explicit export list and validate its links before publication. Do not copy the
 entire working directory into `docs/`.
 
+## Small Republics
+
+[Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
+is a 36-slide Audubon talk covering the Mount Shasta region and wider-world
+examples: 40 minutes of presentation, five minutes of questions, and seven
+untimed source and media-credit slides.
+
+The public edition includes authentic photographs, anatomy and lifecycle
+illustrations, a head-matching game, research films, and illustrative trail,
+quorum, and seed demonstrations. Arrow keys navigate; F enters full screen.
+Speaker notes and the speaker guide remain local.
+
+Public media and credits are listed in `site/ants/media.json`. The local talk
+uses Alex Wild gallery portraits and a fire-ant comparison; those files remain
+local because the gallery requires separate permission for internet posting.
+`site/ants/public-slides.json` explicitly substitutes licensed images for the
+website, including a live door-head ant and clearly labeled specimens where
+needed. The major/minor comparison uses published carpenter-ant photographs.
+The Nature supplementary tandem-running movie also remains local; the public
+slide links to Pratt Lab recruitment and nestmate-transport observations.
+
+The army-ant scaffold film streams from its original university host. The
+original takeover observations and Kyushu University explanation use official
+YouTube players. These films require internet. Local leafcutter and scent-marking
+films, photographs, and simulations are available with the downloaded site.
+Nothing starts automatically; leaving a slide pauses local motion and unloads
+online players. The existing local working-file convention still applies.
+
 ## Preview locally
 
 Run `python3 -m http.server 8765 --directory docs` and open

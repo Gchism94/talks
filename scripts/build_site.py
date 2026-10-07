@@ -39,6 +39,7 @@ def public_deck(text, include_notes):
     # export gets collection navigation and the shared public asset path.
     text = text.replace('url("assets/', 'url("../assets/')
     text = text.replace('"site/workshop/', '"../assets/workshop/')
+    text = text.replace('"site/ants/', '"../assets/ants/')
     text = text.replace('"site/favicons/', '"../assets/favicons/')
     text = re.sub(
         r'<span class="brand">.*?</span>',
@@ -59,6 +60,7 @@ def public_deck(text, include_notes):
         )
         text = text.replace('<button id="notesBtn"', '<button hidden id="notesBtn"')
         text = text.replace('<kbd>N</kbd><span>Notes for this slide</span>', '')
+        text = text.replace(' · N for notes', '')
         text = text.replace(' Notes appear on this screen; close them before presenting.', '')
         text = text.replace(
             "else if (event.key.toLowerCase() === 'n')",
@@ -96,10 +98,30 @@ def build():
         seen.add(slug)
         destination = PUBLIC / slug
         destination.mkdir(exist_ok=True)
+        # Additional talk media is explicitly listed, never copied wholesale.
+        for asset in talk.get("assets", []):
+            asset_source = local_file(asset)
+            asset_path = Path(asset)
+            if len(asset_path.parts) != 3 or asset_path.parts[:2] != ("site", "ants"):
+                raise ValueError(f"Unsupported talk asset: {asset}")
+            asset_destination = PUBLIC / "assets" / "ants" / asset_path.name
+            asset_destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(asset_source, asset_destination)
         source = local_file(talk["source"])
         exported = destination / "index.html"
         if source.is_file():
-            exported.write_text(public_deck(source.read_text(), include_notes))
+            content = source.read_text()
+            # Some local presentation media is cleared for a room, but not for
+            # web redistribution. Keep public substitutions explicit and editable.
+            if talk.get("public_overrides"):
+                overrides = json.loads(local_file(talk["public_overrides"]).read_text())
+                for title, body in overrides.items():
+                    pattern = (r'(<section\b[^>]*data-title="' + re.escape(title)
+                               + r'"[^>]*><div class="frame">).*?(<aside class="speaker-notes">)')
+                    content, changed = re.subn(pattern, lambda m: m[1] + body + m[2], content, flags=re.S)
+                    if changed != 1:
+                        raise ValueError(f"Expected one public override target: {title}")
+            exported.write_text(public_deck(content, include_notes))
         elif exported.is_file():
             exported.write_text(public_deck(exported.read_text(), include_notes))
         else:

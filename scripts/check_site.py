@@ -82,6 +82,12 @@ def check():
         parsed.feed(deck)
         assert parsed.slides == talk["slides"], f"Wrong slide count for {talk['slug']}"
         assert 'href="../"' in deck, "Missing collection return link"
+        if talk.get("public_overrides"):
+            assets = {Path(a).name for a in talk.get("assets", [])}
+            actual = {p.name for p in (PUBLIC / "assets/ants").iterdir()}
+            assert actual == assets, "Unexpected ant media: review public allowlist"
+            assert not any(a.startswith("wild-") or a == "tandem-running.mp4" for a in assets)
+            assert "wild-" not in deck and "tandem-running.mp4" not in deck, "Local-only media leaked"
         if not catalog.get("publish_notes"):
             assert '<button hidden id="notesBtn"' in deck
             assert not list(destination.glob("*.md")), "Unapproved companion document"

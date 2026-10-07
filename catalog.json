@@ -15,9 +15,67 @@
       "format": "Interactive workshop",
       "duration": "45 minutes",
       "slides": 14,
-      "topics": ["Design thinking", "AI prototyping", "Mētis & epistēmē"],
+      "topics": [
+        "Design thinking",
+        "AI prototyping",
+        "Mētis & epistēmē"
+      ],
       "speaker_cues": "design-what-you-know-speaker-cues.md",
       "facilitator_guide": "design-what-you-know-outline.md"
+    },
+    {
+      "slug": "small-republics",
+      "source": "small-republics.html",
+      "title": "Small Republics",
+      "subtitle": "The hidden lives of ants",
+      "description": "An Audubon talk on ants of the Mount Shasta region and the wider world: collective decisions, extraordinary bodies, ancient farming, and the connections among ants, soil, seeds and birds.",
+      "event": "Audubon Society · Mount Shasta region",
+      "format": "Talk with live demonstrations",
+      "duration": "45 minutes",
+      "slides": 36,
+      "topics": [
+        "Ant societies",
+        "Mount Shasta",
+        "Soil, seeds & birds"
+      ],
+      "speaker_cues": "small-republics-speaker-guide.md",
+      "assets": [
+        "site/ants/anatomy-clean.png",
+        "site/ants/anatomy.svg",
+        "site/ants/ants.js",
+        "site/ants/aphids.jpg",
+        "site/ants/battle.jpg",
+        "site/ants/carpenter.jpg",
+        "site/ants/combat.jpg",
+        "site/ants/flicker.jpg",
+        "site/ants/formica.jpg",
+        "site/ants/fungus-garden.jpg",
+        "site/ants/honeypots.jpg",
+        "site/ants/leafcutters-poster.jpg",
+        "site/ants/leafcutters.mp4",
+        "site/ants/leafcutters.vtt",
+        "site/ants/lifecycle.jpg",
+        "site/ants/male.jpg",
+        "site/ants/media.json",
+        "site/ants/queen-workers.jpg",
+        "site/ants/recognition-poster.jpg",
+        "site/ants/scaffolds.vtt",
+        "site/ants/shasta.jpg",
+        "site/ants/sibylla.jpg",
+        "site/ants/takeover-reaction-poster.jpg",
+        "site/ants/takeover-spray-poster.jpg",
+        "site/ants/trail-marking-poster.jpg",
+        "site/ants/trail-marking.mp4",
+        "site/ants/trail-marking.vtt",
+        "site/ants/trillium.jpg",
+        "site/ants/public-door-worker.jpg",
+        "site/ants/public-army-soldier.jpg",
+        "site/ants/public-worker-sizes.jpg",
+        "site/ants/public-trap-whole.jpg",
+        "site/ants/public-trap-head.jpg"
+      ],
+      "cover": "site/covers/small-republics.png",
+      "public_overrides": "site/ants/public-slides.json"
     }
   ]
 }
