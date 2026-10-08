@@ -75,8 +75,8 @@ entire working directory into `docs/`.
 ## Small Republics
 
 [Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
-is a 38-slide Audubon talk covering the Mount Shasta region and wider-world
-examples: 40 minutes of presentation, five minutes of questions, and eight
+is a 42-slide Audubon talk covering the Mount Shasta region and wider-world
+examples: 45 minutes of presentation, 15 minutes of questions, and nine
 untimed source and media-credit slides.
 
 The public edition includes authentic photographs, anatomy and lifecycle
@@ -88,7 +88,12 @@ living-bridge initiation make the later examples concrete. Regional species retu
 throughout: carpenter ants excavate wood and forage for insects and honeydew;
 Formica sibylla moves fallen needles and changes soil. Behavior studies from other
 western locations are distinguished from Siskiyou occurrence records. Leaf
-transport and the fungus garden share a slide to preserve the 45-minute pace.
+transport and the fungus garden share a slide. The final 12 minutes connect seed
+dispersal, pollination, birds, human impacts, habitat care and further study.
+Native planting, nesting habitat, targeted pest care and community monitoring
+provide concrete actions; sources distinguish Tahoe evidence from local records.
+The head game is capped at two minutes to protect time for local ecology and
+conservation.
 Arrow keys navigate; F enters full screen.
 Speaker notes and the speaker guide remain local.
 
