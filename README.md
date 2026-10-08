@@ -75,7 +75,7 @@ entire working directory into `docs/`.
 ## Small Republics
 
 [Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
-is a 42-slide Audubon talk covering the Mount Shasta region and wider-world
+is a 41-slide Audubon talk covering the Mount Shasta region and wider-world
 examples: 45 minutes of presentation, 15 minutes of questions, and nine
 untimed source and media-credit slides.
 
@@ -83,17 +83,20 @@ The public edition includes authentic photographs, anatomy and lifecycle
 illustrations, a head-matching game, research films, and illustrative trail,
 quorum, and seed demonstrations. The opening household-ant slide connects
 coexistence and exclusion with leafcutter avoidance learning. Real underground
-nest casts, sticky defensive secretion, and Alex Wild’s field photograph of
-living-bridge initiation make the later examples concrete. Regional species return
+nest casts, sticky defensive secretion, and Alex Wild’s photograph of a living
+army-ant bridge in a captive colony make the later examples concrete. Regional species return
 throughout: carpenter ants excavate wood and forage for insects and honeydew;
 Formica sibylla moves fallen needles and changes soil. Behavior studies from other
 western locations are distinguished from Siskiyou occurrence records. Leaf
-transport and the fungus garden share a slide. The final 12 minutes connect seed
-dispersal, pollination, birds, human impacts, habitat care and further study.
-Native planting, nesting habitat, targeted pest care and community monitoring
-provide concrete actions; sources distinguish Tahoe evidence from local records.
-The head game is capped at two minutes to protect time for local ecology and
-conservation.
+transport and the fungus garden share a slide. Local ecosystem roles lead the
+middle of the talk: insect and honeydew feeding, forest-floor work, soil, seed dispersal, pollination and birds. Human
+impacts and research connect those roles to conservation. Most specialized ants
+and their remarkable bodies appear later, followed by a practical closing.
+There is no field walk or required physical activity. Seven new photographs
+include labeled living male and queen alates, a turtle-ant soldier, an army-ant
+bridge, seed dispersal, a flower visitor, forest-floor shelter and a native garden.
+The regional field-ant card flips from a labeled Formica sibylla specimen to a
+living Formica integroides analogy; the species are explicitly distinguished.
 Arrow keys navigate; F enters full screen.
 Speaker notes and the speaker guide remain local.
 

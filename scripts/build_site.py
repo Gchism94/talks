@@ -2,6 +2,7 @@
 """Export reviewed talk files to the GitHub Pages docs directory. No dependencies."""
 
 import html
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -41,6 +42,11 @@ def public_deck(text, include_notes):
     text = text.replace('"site/workshop/', '"../assets/workshop/')
     text = text.replace('"site/ants/', '"../assets/ants/')
     text = text.replace('"site/favicons/', '"../assets/favicons/')
+    ant_script = ROOT / 'site/ants/ants.js'
+    if ant_script.is_file():
+        version = hashlib.sha256(ant_script.read_bytes()).hexdigest()[:12]
+        text = re.sub(r'src="\.\./assets/ants/ants\.js(?:\?[^"]*)?"',
+                      'src="../assets/ants/ants.js?v=' + version + '"', text)
     text = re.sub(
         r'<span class="brand">.*?</span>',
         '<span class="brand"><a href="../">← All talks</a></span>',
@@ -118,7 +124,17 @@ def build():
                 for title, body in overrides.items():
                     pattern = (r'(<section\b[^>]*data-title="' + re.escape(title)
                                + r'"[^>]*><div class="frame">).*?(<aside class="speaker-notes">)')
-                    content, changed = re.subn(pattern, lambda m: m[1] + body + m[2], content, flags=re.S)
+                    def replacement(match):
+                        # Slide numbers change when a talk is reordered. Keep the
+                        # public replacement heading tied to its own section.
+                        label = re.search(r'aria-labelledby="([^"]+)"', match[1])
+                        replacement_body = re.sub(r' id="title-\d+"', '', body)
+                        if label:
+                            replacement_body = re.sub(r'<h([12])(?=[ >])',
+                                                      lambda h: h[0] + ' id="' + label[1] + '"',
+                                                      replacement_body, count=1)
+                        return match[1] + replacement_body + match[2]
+                    content, changed = re.subn(pattern, replacement, content, flags=re.S)
                     if changed != 1:
                         raise ValueError(f"Expected one public override target: {title}")
             exported.write_text(public_deck(content, include_notes))
