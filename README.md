@@ -75,7 +75,7 @@ entire working directory into `docs/`.
 ## Small Republics
 
 [Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
-is a 48-slide Audubon talk covering the Mount Shasta region and wider-world
+is a 49-slide Audubon talk covering the Mount Shasta region and wider-world
 examples: 45 minutes of presentation, 15 minutes of questions, and eleven
 untimed source and media-credit slides.
 
@@ -114,9 +114,15 @@ copyright and visible source credits. The live Formica photograph is Jonghyun
 Park’s CC BY image from iNaturalist. The user-selected Atta research figure is
 credited to Bollazzi, Forti & Roces (2012), Figure 8; no open license is asserted.
 Public slide substitutions are explicit in
-`site/ants/public-slides.json`. The Nature supplementary tandem-running movie
-remains local; the public slide links to Pratt Lab recruitment and nestmate-
-transport observations.
+`site/ants/public-slides.json`. Part 3 opens with the full 4:47 TED-Ed colony video. The new-home slide embeds
+Stephen Pratt’s 41-second nestmate-transport film, with the model as an optional
+view. The flicker slide offers Jo Alwood’s film at 1:55–2:30. These official
+players require internet; the narrated films have caption controls. Brief
+photographic reinforcement and shorter model demonstrations keep Part 3 at ten
+minutes. The flower comparison uses Alex Wild’s winter ants gathering nectar;
+the caption distinguishes a flower visit from demonstrated pollination. The
+sticky-defense image is magnified to make the central secretion and arrows
+visible.
 
 The army-ant scaffold film streams from its original university host. The
 original takeover observations and Kyushu University explanation use official

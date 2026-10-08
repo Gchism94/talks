@@ -32,7 +32,7 @@
       "event": "Audubon Society · Mount Shasta region",
       "format": "Talk with live demonstrations",
       "duration": "45 min + 15 min Q&A",
-      "slides": 48,
+      "slides": 49,
       "topics": [
         "Ant societies",
         "Mount Shasta",
@@ -76,7 +76,6 @@
         "site/ants/wild-bridge.jpg",
         "site/ants/wild-seed.jpg",
         "site/ants/eco-garden.jpg",
-        "site/ants/eco-bee.jpg",
         "site/ants/eco-litter.jpg",
         "site/ants/wild-formica-thatch.jpg",
         "site/ants/wild-nest-soil.jpg",
@@ -88,7 +87,8 @@
         "site/ants/wild-nest-canopy.jpg",
         "site/ants/wild-plant-defense.jpg",
         "site/ants/sibylla-live.jpg",
-        "site/ants/atta-excavation.jpg"
+        "site/ants/atta-excavation.jpg",
+        "site/ants/wild-flower1.jpg"
       ],
       "cover": "site/covers/small-republics.png",
       "public_overrides": "site/ants/public-slides.json"

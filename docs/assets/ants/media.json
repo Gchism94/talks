@@ -343,17 +343,6 @@
     "description": "Native demonstration garden · northern California; illustrative example, not a Mount Shasta photograph."
   },
   {
-    "file": "eco-bee.jpg",
-    "title": "Bumblebee on beardtongue · Minnesota",
-    "artist": "Mike Budd / USFWS",
-    "page": "https://www.fws.gov/media/bumblebee-visits-large-flowered-beardtongue",
-    "url": "https://www.fws.gov/sites/default/files/images/2025-06/54571315946_6466a420ae_6k.jpg",
-    "download_url": "https://www.fws.gov/sites/default/files/images/2025-06/54571315946_6466a420ae_6k.jpg",
-    "license": "Public domain · U.S. government",
-    "license_url": "https://www.fws.gov/media/bumblebee-visits-large-flowered-beardtongue",
-    "description": "Bumblebee on beardtongue · Minnesota; illustrative example, not a Mount Shasta photograph."
-  },
-  {
     "file": "eco-litter.jpg",
     "title": "Leaf litter on a forest floor · Michigan",
     "artist": "C. Boothman / USDA Forest Service",
@@ -481,5 +470,39 @@
     "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00040-012-0243-9/MediaObjects/40_2012_243_Fig8_HTML.jpg",
     "license": "Research figure · rights retained by publisher/authors",
     "description": "User-selected research figure for discussion of nest architecture. No open license or separate reuse permission is asserted. Four panels include more than one modern nest."
+  },
+  {
+    "file": "colony-film-stream",
+    "title": "Inside the ant colony",
+    "artist": "Deborah M. Gordon / TED-Ed; animation by Steve Belfer Creative Inc.",
+    "page": "https://www.youtube.com/watch?v=vG-QZOTc5_Q",
+    "license": "Official YouTube embed · rights retained by creators",
+    "description": "Full 4:47 film at the start of Part 3. Streamed on request; no video copy redistributed."
+  },
+  {
+    "file": "transport-film-stream",
+    "title": "Nestmate transport by emigrating ants",
+    "artist": "Stephen Pratt / Arizona State University",
+    "page": "https://pratt.lab.asu.edu/node/31",
+    "license": "Official Vimeo embed · rights retained by creator",
+    "description": "41-second Temnothorax nest emigration film. Official player https://player.vimeo.com/video/376891188. Remote preview from Vimeo oEmbed; no video copy redistributed."
+  },
+  {
+    "file": "flicker-film-stream",
+    "title": "Flicker Eating Ants [NARRATED]",
+    "artist": "Jo Alwood (BIRDS AND THEN SOME)",
+    "page": "https://www.youtube.com/watch?v=dPgDyrK-ysk&t=115s",
+    "license": "Official YouTube embed · rights retained by creator",
+    "description": "Optional 35-second excerpt from 1:55 to 2:30. No video copy redistributed."
+  },
+  {
+    "file": "wild-flower1.jpg",
+    "title": "Winter ants gathering nectar · Prenolepis imparis",
+    "artist": "Alex Wild",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Ants-and-Plants/i-8nMbpkg/A",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Ants-and-Plants/i-8nMbpkg/2/LqhCvKNbBgw7Z6Ls2zkjkqHt3Cfh7k7LMc9P7hXdM/XL/imparis9-XL.jpg",
+    "license": "© Alex Wild · used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use",
+    "description": "Winter ants gathering nectar.  Champaign, Illinois, USA This documents nectar gathering, not successful pollination."
   }
 ]
