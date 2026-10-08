@@ -75,13 +75,16 @@ entire working directory into `docs/`.
 ## Small Republics
 
 [Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
-is a 36-slide Audubon talk covering the Mount Shasta region and wider-world
-examples: 40 minutes of presentation, five minutes of questions, and seven
+is a 38-slide Audubon talk covering the Mount Shasta region and wider-world
+examples: 40 minutes of presentation, five minutes of questions, and eight
 untimed source and media-credit slides.
 
 The public edition includes authentic photographs, anatomy and lifecycle
 illustrations, a head-matching game, research films, and illustrative trail,
-quorum, and seed demonstrations. Arrow keys navigate; F enters full screen.
+quorum, and seed demonstrations. The opening household-ant slide connects
+coexistence and exclusion with leafcutter avoidance learning. Real underground
+nest casts, sticky defensive secretion, and Alex Wild’s field photograph of
+living-bridge initiation make the later examples concrete. Arrow keys navigate; F enters full screen.
 Speaker notes and the speaker guide remain local.
 
 Public media and credits are listed in `site/ants/media.json`. Alex Wild's live

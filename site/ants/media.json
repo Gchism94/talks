@@ -332,5 +332,37 @@
     "license_url": "https://www.alexanderwild.com/Image-Use",
     "description": "Living major and smaller workers together, El Yunque, Puerto Rico. Major head muscles power seed-milling jaws.",
     "usage": "Online-use permission confirmed by the presenter on 2026-10-07. Copyright retained by Alex Wild; visible credit and source links accompany the photographs."
+  },
+  {
+    "file": "wild-living-ladder.jpg",
+    "title": "Army ants initiate a living bridge",
+    "artist": "Alex Wild",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Communication/i-HF43BG8",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Communication/i-HF43BG8/2/LKN5TFZR2bJsJKsptwVjss6CV3g3zRKpspQXZqxJf/X2/melanocephalus2j-X2.jpg",
+    "license": "\u00a9 Alex Wild \u00b7 used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use",
+    "description": "Neivamyrmex melanocephalus, Sycamore Canyon, Arizona. Two ants lean against each other while a third starts to climb; field photograph of bridge initiation.",
+    "usage": "Online-use permission confirmed by the presenter on 2026-10-07. Copyright retained; original watermark retained."
+  },
+  {
+    "file": "sticky-defense.jpg",
+    "title": "Sticky defense \u00b7 Colobopsis explodens",
+    "artist": "Alice Laciny and colleagues",
+    "page": "https://zenodo.org/records/1231776",
+    "url": "https://zenodo.org/api/records/1231776/files/oo_197244.jpg/content",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "Laciny et al. 2018, supplementary Figure S4. Experimental encounter: three C. explodens minor workers attack Oecophylla smaragdina. All four died; black arrows mark yellow gland secretion expelled through rupture. Original image, unmodified. Paper supplement grants CC BY 4.0; Zenodo additionally labels the deposited file CC0."
+  },
+  {
+    "file": "nest-casts.jpg",
+    "title": "Actual underground nest architecture \u00b7 four casts",
+    "artist": "Walter R. Tschinkel",
+    "page": "https://doi.org/10.1673/031.010.8801",
+    "url": "https://academic.oup.com/jinsectscience/article/10/1/88/857338",
+    "license": "Creative Commons Attribution",
+    "license_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3383426/",
+    "description": "Tschinkel 2010, Figure 2: A Aphaenogaster floridana, plaster; B Pheidole morrisi, aluminum; C Dorymyrmex bossutus, zinc; D Aphaenogaster ashmeadi, wax. Separate scale bars preserved. Original unmodified figure; wider-world research examples, not Mount Shasta records.",
+    "download_url": "https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/jinsectscience/10/1/10.1673_031.010.8801/5/jinsectscience_10_1_88_f9.jpeg?Expires=1794455282&Signature=Z7FSkZkJbschL7c6jD6uX9I~E6sc153HkNQBdjzuvpVg9tRALHO0mnJZgyfXfcfComHzybq3xwimZMFZ3NCVGw7WKoJc-llKF8~cm2yb7CDGjboeGdJxMdQYn6q9auG0v1zW8XkeUxnpPk77NGd23bkj18-gw3UktbR6nf76HJt8X~l4eFXxi0Llw4STq8M7pqFxGBf6pGY24EQ9yavK2P3wggDMZhPwbD5iwbD0umgrs5AYG2uy87I8AhhzOhaUry0lrtaAr0kjcNtnB79vL323ike9EOTSQRdcUeiCHwE6xu5r38THAS1wVmCZhqcOyzOANCJYPlPa175nPQLtpg__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA"
   }
 ]

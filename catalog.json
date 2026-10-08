@@ -32,7 +32,7 @@
       "event": "Audubon Society · Mount Shasta region",
       "format": "Talk with live demonstrations",
       "duration": "45 minutes",
-      "slides": 36,
+      "slides": 38,
       "topics": [
         "Ant societies",
         "Mount Shasta",
@@ -74,7 +74,10 @@
         "site/ants/wild-door-whole.jpg",
         "site/ants/wild-trap-head.jpg",
         "site/ants/wild-trap-whole.jpg",
-        "site/ants/wild-fire-pair2.jpg"
+        "site/ants/wild-fire-pair2.jpg",
+        "site/ants/wild-living-ladder.jpg",
+        "site/ants/sticky-defense.jpg",
+        "site/ants/nest-casts.jpg"
       ],
       "cover": "site/covers/small-republics.png",
       "public_overrides": "site/ants/public-slides.json"
