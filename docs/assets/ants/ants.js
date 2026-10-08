@@ -77,12 +77,25 @@
     $('notesBody').innerHTML = slides[current].querySelector('.speaker-notes').innerHTML;
     pauseAll(); notes.showModal();
   }
-  $('outline').replaceChildren(...slides.map((slide, i) => {
+  $('outline').replaceChildren();
+  let outlineChapter = '', outlineGroup;
+  slides.forEach((slide, i) => {
+    if (slide.dataset.chapter !== outlineChapter) {
+      outlineChapter = slide.dataset.chapter;
+      const section = document.createElement('li');
+      section.className = 'outline-section';
+      const heading = document.createElement('h3');
+      heading.textContent = outlineChapter;
+      outlineGroup = document.createElement('ol');
+      outlineGroup.className = 'outline-slides';
+      section.append(heading, outlineGroup);
+      $('outline').append(section);
+    }
     const li = document.createElement('li'); const btn = document.createElement('button');
     const title = document.createElement('span'); const time = document.createElement('small');
     title.textContent = (i + 1) + '. ' + slide.dataset.title; time.textContent = slide.dataset.time;
-    btn.append(title, time); btn.onclick = () => { menu.close(); show(i); }; li.append(btn); return li;
-  }));
+    btn.append(title, time); btn.onclick = () => { menu.close(); show(i); }; li.append(btn); outlineGroup.append(li);
+  });
   $('menuBtn').onclick = () => { pauseAll(); menu.showModal(); };
   $('notesBtn').onclick = openNotes;
   document.querySelectorAll('[data-close]').forEach((btn) => { btn.onclick = () => btn.closest('dialog').close(); });

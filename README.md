@@ -75,7 +75,7 @@ entire working directory into `docs/`.
 ## Small Republics
 
 [Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
-is a 41-slide Audubon talk covering the Mount Shasta region and wider-world
+is a 45-slide Audubon talk covering the Mount Shasta region and wider-world
 examples: 45 minutes of presentation, 15 minutes of questions, and nine
 untimed source and media-credit slides.
 
@@ -88,10 +88,13 @@ army-ant bridge in a captive colony make the later examples concrete. Regional s
 throughout: carpenter ants excavate wood and forage for insects and honeydew;
 Formica sibylla moves fallen needles and changes soil. Behavior studies from other
 western locations are distinguished from Siskiyou occurrence records. Leaf
-transport and the fungus garden share a slide. Local ecosystem roles lead the
-middle of the talk: insect and honeydew feeding, forest-floor work, soil, seed dispersal, pollination and birds. Human
-impacts and research connect those roles to conservation. Most specialized ants
-and their remarkable bodies appear later, followed by a practical closing.
+transport and the fungus garden share a slide. The talk has five continuous parts:
+Introduction; Ants of the Mount Shasta region; What is an ant colony?; Ants in the
+web of life; and Extraordinary ants & behaviors. Four photographic section
+openings, persistent section labels, a grouped slide menu and spoken transitions
+keep the sequence clear. Soil, seeds, flower visitors, birds, human impacts,
+research and habitat care form one ecological section before the wider-world
+examples. The closing returns to local connections.
 There is no field walk or required physical activity. Seven new photographs
 include labeled living male and queen alates, a turtle-ant soldier, an army-ant
 bridge, seed dispersal, a flower visitor, forest-floor shelter and a native garden.
