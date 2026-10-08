@@ -84,7 +84,12 @@ illustrations, a head-matching game, research films, and illustrative trail,
 quorum, and seed demonstrations. The opening household-ant slide connects
 coexistence and exclusion with leafcutter avoidance learning. Real underground
 nest casts, sticky defensive secretion, and Alex Wild’s field photograph of
-living-bridge initiation make the later examples concrete. Arrow keys navigate; F enters full screen.
+living-bridge initiation make the later examples concrete. Regional species return
+throughout: carpenter ants excavate wood and forage for insects and honeydew;
+Formica sibylla moves fallen needles and changes soil. Behavior studies from other
+western locations are distinguished from Siskiyou occurrence records. Leaf
+transport and the fungus garden share a slide to preserve the 45-minute pace.
+Arrow keys navigate; F enters full screen.
 Speaker notes and the speaker guide remain local.
 
 Public media and credits are listed in `site/ants/media.json`. Alex Wild's live
