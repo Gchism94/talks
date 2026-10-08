@@ -118,6 +118,24 @@ films, photographs, and simulations are available with the downloaded site.
 Nothing starts automatically; leaving a slide pauses local motion and unloads
 online players. The existing local working-file convention still applies.
 
+## Teaching on Borrowed Compute
+
+`education-compute.html` is a five-slide research brief, with a public-ready
+edition in `docs/education-compute/`. It uses the collection's fonts and slide
+controls, an interactive 2021–2026 timeline, original diagrams, and an adjustable
+ACCESS / NAIRR Classroom capacity model. Slide 3 maps free tools and workload limits
+for all nine current non-cyber InfoSci degrees; its comparison panel and standalone
+`docs/education-compute/degree-options.html` cover the entire roster. Browser tools
+and static hosting are distinguished from cloud CPU / GPU compute.
+Source panels preserve claim boundaries:
+Colab Pro for Education is closed to new sign-ups; AWS's six-month change applies
+to the new general Free Tier; GitHub Classroom's closure leaves repositories intact.
+Undated policy changes are labeled with their observation date. The solution and
+capacity figures are proposals, not deployment or award confirmations.
+Right arrow, Space, or the next button reveals each text group before advancing.
+Left arrow reverses a reveal; returning to a previous slide shows its full text.
+Reduced-motion settings remove the fade, and printing includes every text group.
+
 ## Preview locally
 
 Run `python3 -m http.server 8765 --directory docs` and open

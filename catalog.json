@@ -84,6 +84,23 @@
       ],
       "cover": "site/covers/small-republics.png",
       "public_overrides": "site/ants/public-slides.json"
+    },
+    {
+      "slug": "education-compute",
+      "source": "education-compute.html",
+      "title": "Teaching on Borrowed Compute",
+      "subtitle": "What we relied on can no longer be guaranteed",
+      "description": "An evidence-backed five-slide brief on disappearing free educational computing, with an interactive timeline, free options and workload limits for nine UArizona InfoSci degrees, and a proposed ACCESS / NAIRR Classroom service with a capacity model.",
+      "event": "Educational computing · October 2026",
+      "format": "Interactive research brief",
+      "duration": "8–12 minutes",
+      "slides": 5,
+      "topics": [
+        "Educational computing",
+        "NSF ACCESS",
+        "NAIRR Classroom"
+      ],
+      "cover": "site/covers/education-compute.png"
     }
   ]
 }
