@@ -27,18 +27,6 @@
       window.dispatchEvent(new Event('resize'));
     };
   });
-  document.querySelectorAll('[data-regional-flip]').forEach((button) => {
-    button.onclick = () => {
-      const flipped = button.getAttribute('aria-expanded') !== 'true';
-      button.querySelector('.regional-front').hidden = flipped;
-      button.querySelector('.regional-back').hidden = !flipped;
-      const card = button.closest('article');
-      card.querySelector('.regional-info-front').hidden = flipped;
-      card.querySelector('.regional-info-back').hidden = !flipped;
-      button.setAttribute('aria-expanded', String(flipped));
-      button.setAttribute('aria-label', flipped ? 'Show the Formica sibylla specimen' : 'Show a living Formica relative');
-    };
-  });
   document.querySelectorAll('.load-film').forEach((button) => {
     button.onclick = () => {
       pauseAll();

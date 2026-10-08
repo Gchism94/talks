@@ -1,16 +1,5 @@
 [
   {
-    "title": "File:Formica integroides worker ant.jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Formica_integroides_worker_ant.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/0/04/Formica_integroides_worker_ant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "page": "https://commons.wikimedia.org/wiki/File:Formica_integroides_worker_ant.jpg",
-    "license": "CC0",
-    "artist": "Alex Wild",
-    "description": "<a href=\"//commons.wikimedia.org/wiki/Formica_integroides\" title=\"Formica integroides\">Formica integroides</a> <a href=\"https://en.wikipedia.org/wiki/Gamergate\" class=\"extiw\" title=\"en:Gamergate\">worker ant</a>",
-    "file": "formica.jpg",
-    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Formica_integroides_worker_ant.jpg"
-  },
-  {
     "title": "File:Closeup on honeypot ants (Myrmecocystus mimicus) at Oakland Zoo.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Closeup_on_honeypot_ants_%28Myrmecocystus_mimicus%29_at_Oakland_Zoo.jpg",
     "original": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Closeup_on_honeypot_ants_%28Myrmecocystus_mimicus%29_at_Oakland_Zoo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -137,18 +126,6 @@
     "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Atta_laevigata_fungus_garden.jpg"
   },
   {
-    "title": "File:Formica sibylla casent0005374 profile 1.jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Formica_sibylla_casent0005374_profile_1.jpg/330px-Formica_sibylla_casent0005374_profile_1.jpg",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Formica_sibylla_casent0005374_profile_1.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Formica_sibylla_casent0005374_profile_1.jpg",
-    "license": "CC BY 4.0",
-    "license_url": "https://creativecommons.org/licenses/by/4.0",
-    "artist": "",
-    "description": "Profile view of ant Formica sibylla specimen casent0005374.",
-    "file": "sibylla.jpg",
-    "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Formica_sibylla_casent0005374_profile_1.jpg"
-  },
-  {
     "title": "File:Pavement ants battling on sidewalk - medium closeup.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Pavement_ants_battling_on_sidewalk_-_medium_closeup.jpg/960px-Pavement_ants_battling_on_sidewalk_-_medium_closeup.jpg",
     "original": "https://upload.wikimedia.org/wikipedia/commons/a/af/Pavement_ants_battling_on_sidewalk_-_medium_closeup.jpg",
@@ -247,18 +224,6 @@
     "license": "© Alex Wild · all rights reserved",
     "license_url": "https://www.alexanderwild.com/Image-Use",
     "description": "Living army-ant soldier; focus stack of 32 photographs, Armenia, Belize.",
-    "usage": "Online-use permission confirmed by the presenter on 2026-10-07. Copyright retained by Alex Wild; visible credit and source links accompany the photographs."
-  },
-  {
-    "file": "wild-army-whole.jpg",
-    "title": "Army-ant soldier · Eciton hamatum",
-    "artist": "Alex Wild",
-    "page": "https://www.alexanderwild.com/Ants/Natural-History/Soldier-Ants/i-53xSchs",
-    "url": "https://photos.smugmug.com/Ants/Natural-History/Soldier-Ants/i-53xSchs/2/Lwpb4DhXXx8ZbZZgptk5wZDRMDhvJjGHbmh6Vbnf3/XL/hamatum20-XL.jpg",
-    "download_url": "https://photos.smugmug.com/Ants/Natural-History/Soldier-Ants/i-53xSchs/2/Lwpb4DhXXx8ZbZZgptk5wZDRMDhvJjGHbmh6Vbnf3/XL/hamatum20-XL.jpg",
-    "license": "© Alex Wild · all rights reserved",
-    "license_url": "https://www.alexanderwild.com/Image-Use",
-    "description": "Living soldier on the ground, Jatun Sacha reserve, Napo, Ecuador.",
     "usage": "Online-use permission confirmed by the presenter on 2026-10-07. Copyright retained by Alex Wild; visible credit and source links accompany the photographs."
   },
   {
@@ -398,5 +363,123 @@
     "license": "Public domain · U.S. government",
     "license_url": "https://commons.wikimedia.org/wiki/File:20241028-R9HMNF-CB-001_Leafy_ground.jpg",
     "description": "Forest-floor habitat illustration, Huron-Manistee National Forests, Michigan; not a Mount Shasta photograph."
+  },
+  {
+    "file": "wild-formica-thatch.jpg",
+    "title": "Formica obscuripes thatch mound",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Ant-Nests/i-x4rzSFr",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Ant-Nests/i-x4rzSFr/2/LCW9CdKbHtz3MmBn5LvjW94qBr2f2Nvw8vkHQHVfD/XL/FormicaObscuripesNest-XL.jpg",
+    "download_url": "https://photos.smugmug.com/Ants/Natural-History/Ant-Nests/i-x4rzSFr/2/LCW9CdKbHtz3MmBn5LvjW94qBr2f2Nvw8vkHQHVfD/XL/FormicaObscuripesNest-XL.jpg",
+    "description": "Formica obscuripes thatch mound nest.  A number of northern Formica species build mounds like these to capture thermal energy in an otherwise cold climate.  Sagehen Creek, California, USA",
+    "artist": "Alex Wild",
+    "license": "© Alex Wild · used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use"
+  },
+  {
+    "file": "wild-nest-soil.jpg",
+    "title": "Dorymyrmex bureni soil entrance",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Ant-Nests/i-tNPmt4k",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Ant-Nests/i-tNPmt4k/2/Lm6RZHmrvSXxf5R5pJsvbqxvJvKzbXr2K7KMBNR7R/X2/bureni2-X2.jpg",
+    "download_url": "https://photos.smugmug.com/Ants/Natural-History/Ant-Nests/i-tNPmt4k/2/Lm6RZHmrvSXxf5R5pJsvbqxvJvKzbXr2K7KMBNR7R/X2/bureni2-X2.jpg",
+    "description": "The distinctive conical nest entrance of Dorymyrmex bureni.  The varying colors of soil particles result from the ants digging down through different soil layers.  Archbold Biological Station, Lake Placid, Florida.",
+    "artist": "Alex Wild",
+    "license": "© Alex Wild · used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use"
+  },
+  {
+    "file": "wild-plant-food.jpg",
+    "title": "Cecropia food bodies",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Ants-and-Plants/i-qHCT4ZS",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Ants-and-Plants/i-qHCT4ZS/2/KHrG7zFqkNnT7C4QpJ3pRWGVG2Lv48634xPcnrGX5/X2/Cecropia3-X2.jpg",
+    "download_url": "https://photos.smugmug.com/Ants/Natural-History/Ants-and-Plants/i-qHCT4ZS/2/KHrG7zFqkNnT7C4QpJ3pRWGVG2Lv48634xPcnrGX5/X2/Cecropia3-X2.jpg",
+    "description": "Food bodies sprout from the base of a Cecropia leaf. These feed the plant's protective Azteca ants.   Gamboa, Panama",
+    "artist": "Alex Wild",
+    "license": "© Alex Wild · used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use"
+  },
+  {
+    "file": "wild-plant-home.jpg",
+    "title": "Cecropia stem housing Azteca alfari",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Ant-Nests/i-d3D8Rgz",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Ant-Nests/i-d3D8Rgz/2/MZDWfJgBGVqzKHcwg89H4TnWdjHFwxShmKFhpp8jg/X2/Azteca1-X2.jpg",
+    "download_url": "https://photos.smugmug.com/Ants/Natural-History/Ant-Nests/i-d3D8Rgz/2/MZDWfJgBGVqzKHcwg89H4TnWdjHFwxShmKFhpp8jg/X2/Azteca1-X2.jpg",
+    "description": "The hollow stem of a Cecropia ant-plant is divided into chambers to house fierce Azteca alfari ants. Inside, the ants raise their brood and tend to mealybugs.   Gamboa, Panama",
+    "artist": "Alex Wild",
+    "license": "© Alex Wild · used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use"
+  },
+  {
+    "file": "wild-door-demo.jpg",
+    "title": "Cephalotes rohweri",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Soldier-Ants/i-GkMDQXs/A",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Soldier-Ants/i-GkMDQXs/2/KvTStnghLQLbVP3hT6mrS5rgPFf6hjN7cD9RwvgFc/X2/rohweri26-X2.jpg",
+    "download_url": "https://photos.smugmug.com/Ants/Natural-History/Soldier-Ants/i-GkMDQXs/2/KvTStnghLQLbVP3hT6mrS5rgPFf6hjN7cD9RwvgFc/X2/rohweri26-X2.jpg",
+    "description": "In a laboratory colony, an Arizona turtle ant soldier demonstrates how she uses her massive head to block the nest entrance.  She is essentially a living door, and will not admit any ants other then her own nestmate.  The second ant here is a Crematogaster acrobat ant, perhaps the turtle ants' biggest competitors for living space.  Tucson, Arizona, USA",
+    "artist": "Alex Wild",
+    "license": "© Alex Wild · used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use"
+  },
+  {
+    "file": "wild-army-demo.jpg",
+    "title": "Eciton hamatum",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Soldier-Ants/i-sxgdQch/A",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Soldier-Ants/i-sxgdQch/2/KHbsv2rDZ6zvMNc9S3Qfr8CmsdXcXSdG6rkJLBrs3/X2/hamatum13-X2.jpg",
+    "download_url": "https://photos.smugmug.com/Ants/Natural-History/Soldier-Ants/i-sxgdQch/2/KHbsv2rDZ6zvMNc9S3Qfr8CmsdXcXSdG6rkJLBrs3/X2/hamatum13-X2.jpg",
+    "description": "An Eciton hamatum soldier uses her ice-tong mandibles to latch on to the photographer's skin.  This gives her the leverage to use her stinger (at the read end of the animal) and makes her very difficult to remove.  Jatun Sacha reserve, Napo, Ecuador",
+    "artist": "Alex Wild",
+    "license": "© Alex Wild · used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use"
+  },
+  {
+    "file": "wild-nest-wood.jpg",
+    "title": "Lasius pallitarsis brood nest inside a log",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Ant-Nests/i-nw52Xk5",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Ant-Nests/i-nw52Xk5/2/MtWLdNc3gW53W5pZLCtWkPFrxkdLLj6TBkV3WLcKq/XL/pallitarsis1-XL.jpg",
+    "download_url": "https://photos.smugmug.com/Ants/Natural-History/Ant-Nests/i-nw52Xk5/2/MtWLdNc3gW53W5pZLCtWkPFrxkdLLj6TBkV3WLcKq/XL/pallitarsis1-XL.jpg",
+    "description": "Lasius pallitarsis brood nest inside a log.  The galleries are constructed from carton, a wood pulp and fungal mix molded by the ants.  Sierra Nevada, California, USA",
+    "artist": "Alex Wild",
+    "license": "© Alex Wild · used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use"
+  },
+  {
+    "file": "wild-nest-canopy.jpg",
+    "title": "Azteca trigona-complex carton nest",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Ant-Nests/i-hpGS73Q",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Ant-Nests/i-hpGS73Q/2/LjsXpRvjSD96L5TJcqZvz37Jc79ZCXVZnLr3JN4cZ/XL/trigona1-XL.jpg",
+    "download_url": "https://photos.smugmug.com/Ants/Natural-History/Ant-Nests/i-hpGS73Q/2/LjsXpRvjSD96L5TJcqZvz37Jc79ZCXVZnLr3JN4cZ/XL/trigona1-XL.jpg",
+    "description": "The carton nest of an Azteca trigona -complex species hangs from a tree branch.  Gamboa, Panama",
+    "artist": "Alex Wild",
+    "license": "© Alex Wild · used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use"
+  },
+  {
+    "file": "wild-plant-defense.jpg",
+    "title": "Azteca alfari guards its tree",
+    "page": "https://www.alexanderwild.com/Ants/Natural-History/Ants-and-Plants/i-DVDVjHf",
+    "url": "https://photos.smugmug.com/Ants/Natural-History/Ants-and-Plants/i-DVDVjHf/2/KLpLxJ4wDmRqMqnmfjcXfRfGmVJgvzM4bdDHVZMRc/XL/Azteca4-XL.jpg",
+    "download_url": "https://photos.smugmug.com/Ants/Natural-History/Ants-and-Plants/i-DVDVjHf/2/KLpLxJ4wDmRqMqnmfjcXfRfGmVJgvzM4bdDHVZMRc/XL/Azteca4-XL.jpg",
+    "description": "Azteca alfari Cecropia ants guard their tree zealously against intruders. Working together, they surround and immobilize their opponents such as this trap-jaw ant by pinning down their appendages.   Gamboa, Panama",
+    "artist": "Alex Wild",
+    "license": "© Alex Wild · used with permission",
+    "license_url": "https://www.alexanderwild.com/Image-Use"
+  },
+  {
+    "file": "sibylla-live.jpg",
+    "title": "Living Formica sibylla",
+    "artist": "Jonghyun Park",
+    "page": "https://www.inaturalist.org/photos/247019432",
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/247019432/original.jpeg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "Live ant, California. Observation 143977411, August 5, 2022. Photo license CC BY; observation data has its own license. Displayed crops on the species and study slides; image file unaltered."
+  },
+  {
+    "file": "atta-excavation.jpg",
+    "title": "Excavated Atta laevigata nests · Figure 8",
+    "artist": "Bollazzi, Forti & Roces (2012)",
+    "page": "https://link.springer.com/article/10.1007/s00040-012-0243-9",
+    "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00040-012-0243-9/MediaObjects/40_2012_243_Fig8_HTML.jpg",
+    "license": "Research figure · rights retained by publisher/authors",
+    "description": "User-selected research figure for discussion of nest architecture. No open license or separate reuse permission is asserted. Four panels include more than one modern nest."
   }
 ]

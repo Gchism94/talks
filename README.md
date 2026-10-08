@@ -75,8 +75,8 @@ entire working directory into `docs/`.
 ## Small Republics
 
 [Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
-is a 45-slide Audubon talk covering the Mount Shasta region and wider-world
-examples: 45 minutes of presentation, 15 minutes of questions, and nine
+is a 48-slide Audubon talk covering the Mount Shasta region and wider-world
+examples: 45 minutes of presentation, 15 minutes of questions, and eleven
 untimed source and media-credit slides.
 
 The public edition includes authentic photographs, anatomy and lifecycle
@@ -95,18 +95,25 @@ openings, persistent section labels, a grouped slide menu and spoken transitions
 keep the sequence clear. Soil, seeds, flower visitors, birds, human impacts,
 research and habitat care form one ecological section before the wider-world
 examples. The closing returns to local connections.
-There is no field walk or required physical activity. Seven new photographs
-include labeled living male and queen alates, a turtle-ant soldier, an army-ant
-bridge, seed dispersal, a flower visitor, forest-floor shelter and a native garden.
-The regional field-ant card flips from a labeled Formica sibylla specimen to a
-living Formica integroides analogy; the species are explicitly distinguished.
+There is no field walk or required physical activity. A live Formica sibylla
+photograph replaces the regional specimen and analogy. A Formica obscuripes
+thatch mound illustrates a different western species’ use of plant material.
+Alex Wild photographs show soil entrances, wood galleries, canopy nests and a
+Cecropia–Azteca partnership: food, housing and defense. Modern Atta nest casts
+replace the repeated fungus-garden image. The head-game reverses show an
+Eciton hamatum soldier gripping with its jaws and a Cephalotes rohweri soldier
+blocking an entrance; the latter is explicitly distinguished from C. varians on
+the card front.
 Arrow keys navigate; F enters full screen.
 Speaker notes and the speaker guide remain local.
 
 Public media and credits are listed in `site/ants/media.json`. Alex Wild's live
 head portraits and shared fire-ant worker comparison are published with the
 presenter's confirmed online-use permission; the photographs retain his
-copyright and visible source credits. Public slide substitutions are explicit in
+copyright and visible source credits. The live Formica photograph is Jonghyun
+Park’s CC BY image from iNaturalist. The user-selected Atta research figure is
+credited to Bollazzi, Forti & Roces (2012), Figure 8; no open license is asserted.
+Public slide substitutions are explicit in
 `site/ants/public-slides.json`. The Nature supplementary tandem-running movie
 remains local; the public slide links to Pratt Lab recruitment and nestmate-
 transport observations.
