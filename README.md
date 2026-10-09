@@ -104,7 +104,12 @@ replace the repeated fungus-garden image. The head-game reverses show an
 Eciton hamatum soldier gripping with its jaws and a Cephalotes rohweri soldier
 blocking an entrance; the latter is explicitly distinguished from C. varians on
 the card front.
-Arrow keys navigate; F enters full screen.
+Text-heavy slides reveal one complete idea at a time. Right arrow, Space,
+Page Down, and the next button reveal the next point before advancing the slide.
+Left arrow reverses a reveal; Show all displays the complete text immediately.
+Photographs and source credits remain visible. Reveals preserve the layout,
+use no animation, and print with all text shown. Models, video controls and the
+matching game keep their own interactions. F enters full screen.
 Speaker notes and the speaker guide remain local.
 
 Public media and credits are listed in `site/ants/media.json`. Alex Wild's live

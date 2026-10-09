@@ -8,6 +8,187 @@
   const videos = [...document.querySelectorAll('video')];
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const pauses = [];
+  // Reveal complete ideas, keeping the slide geometry and visual evidence fixed.
+  const builds = new WeakMap();
+  const revealStyle = document.createElement('style');
+  revealStyle.textContent = `
+    [data-reveal-hidden]{visibility:hidden;pointer-events:none}
+    #counter small{display:block;font-size:12px;line-height:1.25}
+    #revealAllBtn{white-space:nowrap}
+    @media(max-width:520px){.nav-group{gap:5px}.nav #revealAllBtn{padding:7px;font-size:14px}}
+    @media print{[data-reveal-hidden]{visibility:visible!important}#revealAllBtn{display:none}}
+  `;
+  document.head.append(revealStyle);
+  const revealAll = document.createElement('button');
+  revealAll.id = 'revealAllBtn';
+  revealAll.textContent = 'Show all';
+  revealAll.hidden = true;
+  $('menuBtn').after(revealAll);
+  function register(scope, groups) {
+    groups = groups.map(group => group.filter(Boolean)).filter(group => group.length);
+    if (groups.length > 1) builds.set(scope, { groups, visible: 1 });
+  }
+  function splitIdeas(element, ideas) {
+    if (!element) return [];
+    element.replaceChildren();
+    return ideas.map((idea, i) => {
+      const span = document.createElement('span');
+      span.className = 'reveal-idea';
+      span.innerHTML = idea;
+      if (i) element.append(document.createElement('br'));
+      element.append(span);
+      return [span];
+    });
+  }
+  function guideLines(scope, selector) {
+    // The original SVG combines several independent connectors in one path.
+    // Separate them so each label appears with its own connector.
+    return [...scope.querySelectorAll(selector)].flatMap(path => {
+      const segments = path.getAttribute('d').match(/[Mm][^Mm]*/g) || [];
+      if (segments.length < 2) return [path];
+      const lines = segments.map(segment => {
+        const line = path.cloneNode(false);
+        line.setAttribute('d', segment.trim());
+        return line;
+      });
+      path.replaceWith(...lines);
+      return lines;
+    });
+  }
+  const leadIdeas = {
+    'A mountain, many ant neighborhoods': ['Forest floor.', 'Sunny openings.', 'Dry country to the north.'],
+    'The queen is not the foreman': ['The queen lays eggs.', 'The workers coordinate<br>the work.'],
+    'From egg to adult': ['Egg → larva → pupa → adult', 'Workers tend the<br>growing generation.'],
+    'When ants take wing': ['A male alate.', 'A queen alate.', 'A wingless worker.'],
+    'Same species. Different bodies.': ['Small workers.', 'Big-headed majors.<br>One fire-ant colony.'],
+    'Small ants, a larger web of life': ['Soil. Seeds. Birds.', 'Keep room for the neighbors<br>that connect them.']
+  };
+  const explanatory = new Set([
+    'Ants that move the forest floor', 'Inside the ant colony',
+    'Farming, about 66 million years ago', 'A chemical signal can also be a weapon',
+    'A defense that costs a life', 'Can a trail choose itself?',
+    'How many neighbors make a decision?', 'Small excavators, lasting changes',
+    'A seed with a packed lunch', 'The leaves feed the fungus', 'Living ladders',
+    'When recognition is disrupted'
+  ]);
+  slides.forEach(slide => {
+    if (slide.classList.contains('section-break') || slide.dataset.time === 'Reference appendix') return;
+    const title = slide.dataset.title;
+    const panels = [...slide.querySelectorAll('.example-panel')];
+    const scopes = panels.length ? panels : [slide];
+    scopes.forEach(scope => {
+      // Models, games and the seed sequence already expose information through
+      // their own controls. Their controls must always remain operable.
+      if (scope.querySelector('canvas, .head-game, #seedNext')) return;
+      let groups = [];
+      if (title === 'An ant, up close') {
+        const paths = guideLines(scope, '.anatomy-board svg path');
+        const labels = [...scope.querySelectorAll('.parts-label text')];
+        const mobile = [...scope.querySelectorAll('.parts-mobile span')];
+        groups = [[0, 1], [2, 3], [4, 5]].map(indices => indices.flatMap(i => [paths[i], labels[i], mobile[i]]));
+      } else if (title === 'Two groups to get to know') {
+        groups = [...scope.querySelectorAll('.species-pair article')].map(card => [...card.querySelectorAll('p:not(.latin):not(.photo-credit)')] );
+      } else if (title === 'Pollen moves. Then seeds move.') {
+        groups = [...scope.querySelectorAll('.ecology-pair figcaption')].map(caption => {
+          const copy = document.createElement('span');
+          while (caption.firstChild && caption.firstChild.nodeName !== 'A') copy.append(caption.firstChild);
+          caption.prepend(copy);
+          return [copy];
+        });
+      } else if (title === 'Plants can feed and house their guards') {
+        groups = [...scope.querySelectorAll('.plant-trio figcaption')].map(caption => [caption]);
+      } else if (scope.querySelector('.local-jobs, .ecology-lines, .home-actions')) {
+        groups = [...scope.querySelectorAll('.local-jobs>li, .ecology-lines>li, .home-actions>li')].map(item => [item]);
+      } else if (leadIdeas[title]) {
+        groups = splitIdeas(scope.querySelector('.lead'), leadIdeas[title]);
+        if (title === 'When ants take wing') {
+          const paths = guideLines(scope, '.alate-board svg path');
+          const labels = [...scope.querySelectorAll('.alate-board svg text')];
+          groups.forEach((group, i) => group.push(paths[i], labels[i]));
+        }
+      } else if (explanatory.has(title)) {
+        const lead = scope.querySelector('.lead');
+        const cue = scope.querySelector('.watch-cue');
+        if (scope.id === 'seedPhoto') {
+          groups = splitIdeas(lead, ['The seed travels.', 'The ants eat the oily reward.']);
+        } else if (title === 'The leaves feed the fungus' && !cue) {
+          groups = splitIdeas(lead, ['Leaves are the growing medium.', 'The fungus is the crop.']);
+        } else if (lead && cue) groups = [[lead], [cue]];
+        else if (lead && scope.querySelector('.footnote')) groups = [[lead], []];
+      } else if (title === 'A border can become a battlefield') {
+        groups = [[scope.querySelector('.lead')], [scope.querySelector('.footnote')]];
+      }
+      if (groups.length > 1) {
+        const final = groups[groups.length - 1];
+        scope.querySelectorAll('.footnote').forEach(note => {
+          if (!/©|CC BY|CC0/.test(note.textContent) && !groups.some(group => group.includes(note))) final.push(note);
+        });
+        if (title === 'When ants take wing') final.push(scope.querySelector('.watch-cue'));
+        if (scope.id === 'homeLearning') final.push(scope.querySelector('.memory-card'));
+        register(scope, groups);
+      }
+    });
+  });
+  function context() {
+    const slide = slides[current];
+    return slide.querySelector('.example-panel:not([hidden])') || slide;
+  }
+  function paintBuild(scope) {
+    const build = builds.get(scope);
+    if (!build) return;
+    build.groups.forEach((group, i) => group.forEach(element => {
+      const concealed = i >= build.visible;
+      element.toggleAttribute('data-reveal-hidden', concealed);
+      if (concealed) element.setAttribute('aria-hidden', 'true');
+      else element.removeAttribute('aria-hidden');
+      element.inert = concealed;
+    }));
+  }
+  function updateBuildControls() {
+    const build = builds.get(context());
+    const hasMore = build && build.visible < build.groups.length;
+    const canRewind = build && build.visible > 1;
+    $('counter').textContent = (current + 1) + ' / ' + slides.length;
+    if (build) {
+      const status = document.createElement('small');
+      status.textContent = 'Text ' + build.visible + ' / ' + build.groups.length;
+      $('counter').append(status);
+    }
+    revealAll.hidden = !build;
+    revealAll.textContent = hasMore ? 'Show all' : 'Build text';
+    revealAll.setAttribute('aria-label', hasMore ? 'Show all text on this slide' : 'Restart text reveals on this slide');
+    $('nextBtn').disabled = !hasMore && current === slides.length - 1;
+    $('prevBtn').disabled = !canRewind && current === 0;
+    $('nextBtn').setAttribute('aria-label', hasMore ? 'Show next point' : 'Next slide');
+    $('nextBtn').title = hasMore ? 'Show next point' : 'Next slide';
+    $('prevBtn').setAttribute('aria-label', canRewind ? 'Hide last point' : 'Previous slide');
+    $('prevBtn').title = canRewind ? 'Hide last point' : 'Previous slide';
+  }
+  function changeBuild(visible) {
+    const scope = context();
+    const build = builds.get(scope);
+    if (!build) return;
+    build.visible = visible;
+    paintBuild(scope);
+    updateBuildControls();
+    const text = build.groups[visible - 1].map(element => element.textContent.trim()).filter(Boolean).join('. ');
+    $('slideAnnounce').textContent = 'Text ' + visible + ' of ' + build.groups.length + ': ' + text;
+  }
+  function forward() {
+    const build = builds.get(context());
+    if (build && build.visible < build.groups.length) changeBuild(build.visible + 1);
+    else show(current + 1);
+  }
+  function backward() {
+    const build = builds.get(context());
+    if (build && build.visible > 1) changeBuild(build.visible - 1);
+    else show(current - 1, true, true);
+  }
+  revealAll.onclick = () => {
+    const build = builds.get(context());
+    if (build) changeBuild(build.visible < build.groups.length ? build.groups.length : 1);
+  };
+
   function pauseAll() {
     pauses.forEach((fn) => fn()); videos.forEach((video) => video.pause());
     document.querySelectorAll('.online-film iframe').forEach((frame) => {
@@ -23,6 +204,7 @@
       const group = button.closest('.example-switch');
       group.querySelectorAll('[data-view]').forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
       group.querySelectorAll('.example-panel').forEach((panel) => { panel.hidden = panel.id !== button.dataset.view; });
+      updateBuildControls();
       // A canvas that was hidden now has its displayed dimensions.
       window.dispatchEvent(new Event('resize'));
     };
@@ -42,17 +224,20 @@
       host.append(frame);
     };
   });
-  function show(index, updateHash = true) {
+  function show(index, updateHash = true, complete = false) {
     if (!Number.isFinite(index)) index = 0;
     index = Math.max(0, Math.min(slides.length - 1, index));
     pauseAll();
     current = index;
     slides.forEach((s, i) => { s.classList.toggle('active', i === index); s.inert = i !== index; });
-    $('counter').textContent = (index + 1) + ' / ' + slides.length;
+    [slides[index], ...slides[index].querySelectorAll('.example-panel')].forEach(scope => {
+      const build = builds.get(scope);
+      if (build) build.visible = complete ? build.groups.length : 1;
+      paintBuild(scope);
+    });
+    updateBuildControls();
     $('timing').textContent = slides[index].dataset.time;
     $('progressBar').style.width = ((index + 1) / slides.length * 100) + '%';
-    $('prevBtn').disabled = index === 0;
-    $('nextBtn').disabled = index === slides.length - 1;
     $('slideAnnounce').textContent = 'Slide ' + (index + 1) + ': ' + slides[index].dataset.title;
     if (updateHash) history.replaceState(null, '', '#' + (index + 1));
     window.scrollTo(0, 0);
@@ -97,14 +282,15 @@
     $('fullBtn').textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen';
     $('fullBtn').setAttribute('aria-label', $('fullBtn').textContent);
   });
-  $('prevBtn').onclick = () => show(current - 1); $('nextBtn').onclick = () => show(current + 1);
+  $('prevBtn').onclick = backward; $('nextBtn').onclick = forward;
   window.addEventListener('hashchange', () => show(Number(location.hash.slice(1) || 1) - 1, false));
   document.addEventListener('keydown', (event) => {
     if (notes.open || menu.open || event.altKey || event.metaKey || event.ctrlKey) return;
-    if (/INPUT|TEXTAREA|SELECT|BUTTON|VIDEO/.test(event.target.tagName) || event.target.isContentEditable) return;
     const key = event.key.toLowerCase();
-    if (key === 'arrowright' || key === 'pagedown' || key === ' ') { event.preventDefault(); show(current + 1); }
-    else if (key === 'arrowleft' || key === 'pageup') { event.preventDefault(); show(current - 1); }
+    const navArrow = event.target.closest('.nav') && ['arrowright', 'arrowleft', 'pagedown', 'pageup'].includes(key);
+    if ((!navArrow && /INPUT|TEXTAREA|SELECT|BUTTON|VIDEO/.test(event.target.tagName)) || event.target.isContentEditable) return;
+    if (key === 'arrowright' || key === 'pagedown' || key === ' ') { event.preventDefault(); forward(); }
+    else if (key === 'arrowleft' || key === 'pageup') { event.preventDefault(); backward(); }
     else if (key === 'home') show(0);
     else if (key === 'end') show(slides.length - 1);
     else if (key === 'n') openNotes();
