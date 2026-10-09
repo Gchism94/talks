@@ -75,7 +75,7 @@ entire working directory into `docs/`.
 ## Small Republics
 
 [Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
-is a 49-slide Audubon talk covering the Mount Shasta region and wider-world
+is a 51-slide Audubon talk covering the Mount Shasta region and wider-world
 examples: 45 minutes of presentation, 15 minutes of questions, and eleven
 untimed source and media-credit slides.
 
@@ -104,12 +104,21 @@ replace the repeated fungus-garden image. The head-game reverses show an
 Eciton hamatum soldier gripping with its jaws and a Cephalotes rohweri soldier
 blocking an entrance; the latter is explicitly distinguished from C. varians on
 the card front.
-Text-heavy slides reveal one complete idea at a time. Right arrow, Space,
+Most explanatory slides open with the heading and photograph, then reveal one
+complete idea at a time. The two-species overview stays fully visible.
+Right arrow, Space,
 Page Down, and the next button reveal the next point before advancing the slide.
 Left arrow reverses a reveal; Show all displays the complete text immediately.
 Photographs and source credits remain visible. Reveals preserve the layout,
 use no animation, and print with all text shown. Models, video controls and the
 matching game keep their own interactions. F enters full screen.
+A worker-task slide follows the alate comparison, with brood care, food
+collection and nest maintenance shown in real photographs. Optional films
+include an 11-second trap-jaw reverse card (0:25–0:36), a 17-second
+Crematogaster scutellaris vibration recording explicitly distinguished from
+C. modoc, a Terra Mater battle, and the Daily Mail exploding-ant report.
+The full exploding-ant report is reserved for questions. The 45-minute talk
+and 15-minute question period are unchanged.
 Speaker notes and the speaker guide remain local.
 
 Public media and credits are listed in `site/ants/media.json`. Alex Wild's live

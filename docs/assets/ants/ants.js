@@ -26,7 +26,7 @@
   $('menuBtn').after(revealAll);
   function register(scope, groups) {
     groups = groups.map(group => group.filter(Boolean)).filter(group => group.length);
-    if (groups.length > 1) builds.set(scope, { groups, visible: 1 });
+    if (groups.length) builds.set(scope, { groups, visible: 0 });
   }
   function splitIdeas(element, ideas) {
     if (!element) return [];
@@ -72,7 +72,7 @@
     'When recognition is disrupted'
   ]);
   slides.forEach(slide => {
-    if (slide.classList.contains('section-break') || slide.dataset.time === 'Reference appendix') return;
+    if (slide.classList.contains('cover') || slide.classList.contains('section-break') || slide.dataset.time === 'Reference appendix' || slide.dataset.title === 'Two groups to get to know') return;
     const title = slide.dataset.title;
     const panels = [...slide.querySelectorAll('.example-panel')];
     const scopes = panels.length ? panels : [slide];
@@ -86,8 +86,8 @@
         const labels = [...scope.querySelectorAll('.parts-label text')];
         const mobile = [...scope.querySelectorAll('.parts-mobile span')];
         groups = [[0, 1], [2, 3], [4, 5]].map(indices => indices.flatMap(i => [paths[i], labels[i], mobile[i]]));
-      } else if (title === 'Two groups to get to know') {
-        groups = [...scope.querySelectorAll('.species-pair article')].map(card => [...card.querySelectorAll('p:not(.latin):not(.photo-credit)')] );
+      } else if (title === 'The work of a colony') {
+        groups = [...scope.querySelectorAll('.worker-task-copy')].map(copy => [copy]);
       } else if (title === 'Pollen moves. Then seeds move.') {
         groups = [...scope.querySelectorAll('.ecology-pair figcaption')].map(caption => {
           const copy = document.createElement('span');
@@ -117,8 +117,11 @@
         else if (lead && scope.querySelector('.footnote')) groups = [[lead], []];
       } else if (title === 'A border can become a battlefield') {
         groups = [[scope.querySelector('.lead')], [scope.querySelector('.footnote')]];
+      } else if (scope.querySelector('.lead')) {
+        groups = [[scope.querySelector('.lead')]];
+        if (scope.querySelector('.watch-cue')) groups.push([scope.querySelector('.watch-cue')]);
       }
-      if (groups.length > 1) {
+      if (groups.length) {
         const final = groups[groups.length - 1];
         scope.querySelectorAll('.footnote').forEach(note => {
           if (!/©|CC BY|CC0/.test(note.textContent) && !groups.some(group => group.includes(note))) final.push(note);
@@ -147,7 +150,7 @@
   function updateBuildControls() {
     const build = builds.get(context());
     const hasMore = build && build.visible < build.groups.length;
-    const canRewind = build && build.visible > 1;
+    const canRewind = build && build.visible > 0;
     $('counter').textContent = (current + 1) + ' / ' + slides.length;
     if (build) {
       const status = document.createElement('small');
@@ -171,7 +174,7 @@
     build.visible = visible;
     paintBuild(scope);
     updateBuildControls();
-    const text = build.groups[visible - 1].map(element => element.textContent.trim()).filter(Boolean).join('. ');
+    const text = visible ? build.groups[visible - 1].map(element => element.textContent.trim()).filter(Boolean).join('. ') : 'Image and heading. Explanations are hidden.';
     $('slideAnnounce').textContent = 'Text ' + visible + ' of ' + build.groups.length + ': ' + text;
   }
   function forward() {
@@ -181,12 +184,12 @@
   }
   function backward() {
     const build = builds.get(context());
-    if (build && build.visible > 1) changeBuild(build.visible - 1);
+    if (build && build.visible > 0) changeBuild(build.visible - 1);
     else show(current - 1, true, true);
   }
   revealAll.onclick = () => {
     const build = builds.get(context());
-    if (build) changeBuild(build.visible < build.groups.length ? build.groups.length : 1);
+    if (build) changeBuild(build.visible < build.groups.length ? build.groups.length : 0);
   };
 
   function pauseAll() {
@@ -232,7 +235,7 @@
     slides.forEach((s, i) => { s.classList.toggle('active', i === index); s.inert = i !== index; });
     [slides[index], ...slides[index].querySelectorAll('.example-panel')].forEach(scope => {
       const build = builds.get(scope);
-      if (build) build.visible = complete ? build.groups.length : 1;
+      if (build) build.visible = complete ? build.groups.length : 0;
       paintBuild(scope);
     });
     updateBuildControls();
@@ -477,6 +480,10 @@
   function flipCard(card,flipped) {
     card.querySelector('.front').hidden=flipped;card.querySelector('.back').hidden=!flipped;
     card.querySelector('.card-flip').setAttribute('aria-expanded',String(flipped));
+    if (card.querySelector('.card-return')) {
+      card.querySelector('.card-flip').hidden=flipped;
+      if (!flipped) pauseAll();
+    }
   }
   function gameStatus(message) {$('matchStatus').textContent=matched.size+' of 3 matched · '+message;}
   jobs.forEach(button=>{button.onclick=()=>{
@@ -485,6 +492,9 @@
     jobs.forEach(job=>job.setAttribute('aria-pressed',String(job.dataset.job===selectedJob)));
     gameStatus(selectedJob?'Choose a head for “'+button.textContent+'.”':'No job selected.');
   };});
+  document.querySelectorAll('.card-return').forEach(button=>{
+    button.onclick=()=>flipCard(button.closest('.head-card'),false);
+  });
   cards.forEach(card=>{card.querySelector('.card-flip').onclick=()=>{
     if(selectedJob && !matched.has(card.dataset.answer)){
       if(selectedJob!==card.dataset.answer){gameStatus('Take another look. Try a different head.');return;}

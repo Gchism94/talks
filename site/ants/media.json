@@ -504,5 +504,36 @@
     "license": "© Alex Wild · used with permission",
     "license_url": "https://www.alexanderwild.com/Image-Use",
     "description": "Winter ants gathering nectar.  Champaign, Illinois, USA This documents nectar gathering, not successful pollination."
+  },
+  {
+    "file": "trap-strike-stream",
+    "title": "The Strike of the Monster Ant · 0:25–0:36",
+    "artist": "Ant Lab / Adrian Smith",
+    "page": "https://www.youtube.com/watch?v=Lq5-KE2C5mw&t=25s",
+    "license": "Official YouTube embed · rights retained by creator"
+  },
+  {
+    "file": "stridulation.mp4",
+    "title": "Stridulation · Supplementary Video S1",
+    "artist": "Masoni et al. (2021)",
+    "page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7970987/",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "original": "https://media.springernature.com/full/springer-static/esm/art%3A10.1038%2Fs41598-021-84925-z/MediaObjects/41598_2021_84925_MOESM2_ESM.mkv",
+    "description": "Crematogaster scutellaris worker feeding on honey water, with laser-vibrometer recording of substrate vibration. Supplementary Video S1, 17.437 seconds. MKV converted to browser-compatible MP4; complete picture and audio retained. Poster frame extracted at 2 seconds. Not Camponotus modoc."
+  },
+  {
+    "file": "battle-stream",
+    "title": "Ants at war",
+    "artist": "Terra Mater",
+    "page": "https://www.youtube.com/shorts/v-Hz-KjDeMI",
+    "license": "Official YouTube embed · rights retained by creator"
+  },
+  {
+    "file": "exploding-stream",
+    "title": "Scientists discover an exploding ant",
+    "artist": "Daily Mail / research press film",
+    "page": "https://www.dailymail.com/video/sciencetech/video-1672886/Video-Scientists-discover-EXPLODING-ant-releases-goo-defend-colony.html",
+    "license": "Official Daily Mail embed · rights retained by producers"
   }
 ]
