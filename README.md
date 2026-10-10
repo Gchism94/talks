@@ -162,6 +162,13 @@ capacity figures are proposals, not deployment or award confirmations.
 Right arrow, Space, or the next button reveals each text group before advancing.
 Left arrow reverses a reveal; returning to a previous slide shows its full text.
 Reduced-motion settings remove the fade, and printing includes every text group.
+The repository layer documents GitLab private-group restrictions, Bitbucket’s
+free-workspace storage cap, and Google’s closure to new source-hosting customers;
+GitHub’s continuing free repositories and education-program exceptions are explicit.
+Slide 4 includes a proposed repository continuity plan, also available at
+`docs/education-compute/repository-plan.html`, covering campus ownership, independent
+Git/LFS and course-record backups, restore rehearsals, and operating support beyond
+individual compute awards.
 
 ## Preview locally
 
