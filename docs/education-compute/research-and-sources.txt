@@ -1,0 +1,883 @@
+TEACHING ON BORROWED COMPUTE
+Research and claim audit | Greg Chism | Checked October 8, 2026
+
+Core problem: What we have previously relied on can no longer be guaranteed
+
+RESEARCH METHOD
+Window: October 8, 2021 through October 8, 2026. Exa discovery used 13 targeted searches requesting 77 result slots across four workstreams: named provider changes; other withdrawals; ACCESS and NAIRR program fit; date and policy verification. Search results were discovery material, not accepted as proof. The initial compute audit used 15 evidence entries, mostly provider/program records. The degree update expanded this to 27; the October 10 repository update brings the then-current deck to 37; the expanded evidence now contains 73 records. Fourteen original provider/program URLs returned HTTP 200 on direct checks. The Replit original returned HTTP 404, so its staged closure is linked to Bucknell's live institutional record, corroborating the indexed provider announcement.
+
+FINDING
+The evidence supports a continuity problem across multiple layers of teaching infrastructure: free compute and premium education benefits, student app hosting, and classroom orchestration. The selected history is not a measured estimate of total educational compute capacity, market prevalence, or learning losses. It does not establish that every free option has disappeared.
+
+CLAIM BOUNDARIES
+1. GitHub Classroom closed August 28, 2026; GitHub repositories, organizations and accounts remain. Allocation compute alone cannot replace Classroom workflows.
+2. Colab Pro for Education closed to new sign-ups. Free Colab remains. Existing verified education subscriptions retain their remaining year under the FAQ conditions. No exact effective closure date is established. The limited offer was announced July 18, 2025. 'Quietly' describes the FAQ-based notice; the absence of another announcement is not proven.
+3. AWS's new general Free Tier free plan lasts at most six months for accounts created July 15, 2025 onward. This is not a documented six-month reduction to all AWS student, Educate or Academy accounts. The new plan changes credits, eligible instances and spending protection as well as duration. Credits can outlast the free plan if the user upgrades to an eligible paid plan.
+4. Heroku and Glitch were general-purpose services used in teaching, not education-only accounts. Replit's 2023 and 2024 milestones are stages of one withdrawal. Studio Lab is closed to new customers, not all existing customers.
+5. Colab and Studio Lab appear in the timeline under the year they were observed. The deck does not manufacture an effective date from an undated current notice.
+
+TIMELINE
+November 28, 2022 | Heroku | Hosting
+Free app hosting and databases end. Heroku withdraws free Dynos, Postgres, and Redis plans. Existing free apps and data services face shutdown or deletion.
+Scope: General-purpose services used in teaching; not an education-only account.
+Source: https://devcenter.heroku.com/changelog-items/2461
+
+November 15, 2023 | Replit · new teams | Classroom
+No new Teams for Education. New education team creation stops. Updates and bug fixes end, leaving instructors unable to use the same setup for a new cohort.
+Scope: The start of a staged withdrawal; Replit’s broader product continues.
+Source: https://bucknell.teamdynamix.com/TDClient/40/IT/KB/Article/529/Replit-FAQ
+
+August 1, 2024 | Replit · removal | Classroom
+Teams for Education is removed. The education product closes and its data is deleted after an export period. Teaching materials need a new home.
+Scope: This is the final stage of the withdrawal announced in 2023.
+Source: https://bucknell.teamdynamix.com/TDClient/40/IT/KB/Article/529/Replit-FAQ
+
+July 8, 2025 | Glitch | Hosting
+Project hosting shuts down. Glitch ends app hosting and user profiles. Live student apps and teaching demonstrations must move.
+Scope: General-purpose coding/hosting platform. Export access continued through 2025.
+Source: https://blog.glitch.com/post/changes-are-coming-to-glitch
+
+July 15, 2025 · new accounts | AWS Free Tier | Compute
+The free-plan window gets shorter. The former 12-month limited benefits give way to a credit-based free plan of at most 6 months, ending earlier if credits run out.
+Scope: General Free Tier used by students; not a blanket change to AWS Educate or Academy. New credits and spending protection also change.
+Source: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-free-tier-usage.html
+
+August 28, 2026 | GitHub Classroom | Classroom
+GitHub Classroom shuts down. The Classroom website, APIs, and related services are decommissioned. New sign-ups had already stopped on May 26.
+Scope: GitHub accounts, repositories, and organizations remain. Some Classroom metadata is subject to deletion.
+Source: https://github.blog/changelog/2026-08-27-github-classroom-deprecated/
+
+Observed October 8, 2026 · change date unverified | Colab education offer | Compute benefit
+The education Pro offer quietly closes. Google’s FAQ now says free one-year Colab Pro for Education subscriptions are unavailable to new sign-ups. Existing verified users keep their remaining year.
+Scope: Free Colab still exists. “Quietly” describes the FAQ notice; no exact closure date is established. The original offer was limited.
+Source: https://research.google.com/colaboratory/faq.html
+
+Observed October 8, 2026 · change date unverified | SageMaker Studio Lab | Compute access
+Another free notebook door closes. AWS no longer accepts new Studio Lab customers and plans no new features. Existing users can continue.
+Scope: A new-access restriction, not a full service shutdown. The current provider notice does not state an effective date.
+Source: https://docs.aws.amazon.com/sagemaker/latest/dg/studio-lab-availability-change.html
+
+PROPOSED TEACHING SERVICE
+Pool instructor demand into a justified ACCESS allocation structure agreed with the program and provider. Select a project type from measured need, rather than assuming that 'large' automatically requires Maximize. In parallel, assist eligible AI-course instructors with NAIRR Classroom requests. Operate a local service around the resources: browser labs, tested course environments, accounts and quotas, support, LMS/assignment/grading connections, and portable exports. These are proposed capabilities, not a deployment report or award confirmation.
+
+The local program should offer instructor intake, benchmark assistance, proposal/biosketch preparation support, course rehearsals, cohort onboarding, primary technical support, usage/outcome evidence, midterm and final reports, and a plan for the next teaching cycle. NAIRR Classroom final reports are due within 30 days of course completion. No proposal has been submitted by this deck-building task.
+
+ACCESS classroom periods generally follow courses, and classroom projects are typically not extended. NAIRR awards depend on resource match and availability and support U.S.-based AI instruction for U.S.-based participants. Both paths need future requests and capacity planning. Neither is a perpetual entitlement. A central service/umbrella allocation structure must be confirmed with the program and provider.
+
+ILLUSTRATIVE CAPACITY MODEL
+12 courses x 40 students = 480 course seats (not necessarily unique people).
+CPU: 12 x 40 x 15 weeks x 8 core-hours/student/week = 57,600 core-hours.
+With 25% allowance: 72,000 CPU core-hours.
+GPU subset: 4 courses x 40 students x 6 weeks x 2 GPU-hours/student/week = 1,920 GPU-hours.
+With 25% allowance: 2,400 GPU-hours.
+CPU and GPU hours cannot be added or treated as ACCESS credits. Convert using the selected resource's accounting after benchmarks. GPU model, simultaneous access, memory, storage, idle use, licensing, security, accessibility, staffing and fallback operation need separate planning. No current allocation size or available quota was verified for this deck.
+
+The proposed lead-in schedule begins 12 weeks before teaching; it is an operating target, not a promise of program review or provisioning speed. Rehearse at class concurrency and prepare an alternate lab before the first assignment. Keep code, environment definitions, data and assessment records portable. Institutionally supported staff time is a real cost even when students do not pay for compute.
+
+SOURCE LEDGER
+
+GitHub Classroom · full shutdown
+Notice: August 27, 2026 · effective August 28, 2026
+Evidence quality: Provider announcement; dated change
+Claim: GitHub decommissioned Classroom’s website, APIs, and related services on August 28, 2026. Its May 26 announcement had already stopped new sign-ups. Accounts, repositories, and organizations remain; some Classroom-specific metadata is subject to deletion.
+Boundary: This removes a course-management and automation layer. It does not remove GitHub itself or establish that all free Actions or Codespaces benefits have ended.
+https://github.blog/changelog/2026-08-27-github-classroom-deprecated/
+
+Google Colab Pro for Education · offer closed
+Current FAQ checked October 8, 2026 · effective closure date not stated
+Evidence quality: Provider policy; verified status, uncertain change date
+Claim: The FAQ says new sign-ups for the free one-year Pro for Education subscription are no longer available. Previously verified users keep the benefit until their one-year mark, unless replaced with a paid personal subscription.
+Boundary: Google announced a limited number of these subscriptions on July 18, 2025. The current FAQ establishes withdrawal of the offer, not deletion of education accounts or the end of free Colab. The phrase “quietly pulled” is an interpretation of the FAQ-only notice; the absence of a separate announcement cannot be proved. Free Colab still has variable, non-guaranteed resource limits.
+https://research.google.com/colaboratory/faq.html
+
+Google · original education offer
+July 18, 2025
+Evidence quality: Provider launch announcement
+Claim: Google offered a limited number of free one-year Colab Pro subscriptions to verified students and faculty at U.S. higher education institutions.
+Boundary: The original offer was explicitly limited. It was not a permanent entitlement or a commitment to every future cohort.
+https://blog.google/products-and-platforms/products/education/colab-higher-education/
+
+AWS · twelve-month and six-month Free Tier comparison
+New-account boundary: July 15, 2025
+Evidence quality: Provider documentation with an explicit before/after table
+Claim: For accounts created before July 15, 2025, the documented EC2 Free Tier benefit lasted 12 months with usage limits and possible overage billing. Newer accounts receive a credit-based free plan lasting at most six months, ending sooner if credits run out; usage cannot exceed the free-plan limits.
+Boundary: This is the general Free Tier used by students, not a verified six-month change to AWS Educate or Academy. The new plan also changes eligible instances, credits, and spending protection. Remaining credits may last up to 12 months if a user upgrades to a paid plan, subject to terms.
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-free-tier-usage.html
+
+AWS · credit and free-plan expiration rules
+Current FAQ checked October 8, 2026
+Evidence quality: Provider FAQ; confirms distinction between credits and free plan
+Claim: The free plan ends after six months or exhaustion of credits. Free Tier credits generally expire twelve months after account creation and can apply after an eligible upgrade to a paid plan.
+Boundary: A six-month free plan is not equivalent to a six-month expiry for every credit or every educational program.
+https://aws.amazon.com/free/free-tier-faqs/
+
+Heroku · free compute and databases withdrawn
+Announced August 25, 2022 · effective November 28, 2022
+Evidence quality: Provider changelog; dated change
+Claim: Heroku ended its free Dynos, Postgres, and Redis plans and began scaling down free dynos and deleting free databases on November 28, 2022.
+Boundary: General-purpose hosting and data services used in teaching. This is not evidence that every later Heroku student credit offer ended.
+https://devcenter.heroku.com/changelog-items/2461
+
+Replit · Teams for Education decommissioned
+Provider notice December 6, 2023 · removal August 1, 2024
+Evidence quality: University service record, corroborating the indexed provider announcement
+Claim: Users were notified November 14, 2023. New team creation and updates stopped November 15. Replit removed Teams for Education and deleted its data on August 1, 2024 after an export period.
+Boundary: The original Replit announcement at blog.replit.com/update-on-teams-for-education was readable through Exa’s indexed copy but returned HTTP 404 during direct verification. This link opens Bucknell’s institutional notice with the same staged timeline. Replit’s broader product continued; the 2023 and 2024 milestones are one product withdrawal.
+https://bucknell.teamdynamix.com/TDClient/40/IT/KB/Article/529/Replit-FAQ
+
+Glitch · project hosting ended
+Announced May 22, 2025 · effective July 8, 2025
+Evidence quality: Provider announcement; dated change
+Claim: Glitch ended project hosting and user profiles on July 8, 2025. Code downloads remained available through the end of 2025, with a redirect transition.
+Boundary: General-purpose creative coding and hosting used in teaching; this is a hosting loss, not a withdrawal of GPU notebooks or an education-only account.
+https://blog.glitch.com/post/changes-are-coming-to-glitch
+
+AWS SageMaker Studio Lab · new customers closed
+Current provider documentation checked October 8, 2026 · effective date not stated
+Evidence quality: Provider policy; verified status, uncertain change date
+Claim: Studio Lab is closed to new customers. Existing customers may continue using it; AWS plans security and availability work but no new features.
+Boundary: The existing free notebook service is not fully shut down. An external documentation-change tracker suggests July 30, 2026, but the current primary notice does not date the change; the deck deliberately uses the observation date.
+https://docs.aws.amazon.com/sagemaker/latest/dg/studio-lab-availability-change.html
+
+ACCESS · eligibility, educational periods, review, renewal
+Current policy checked October 8, 2026
+Evidence quality: Official program policy
+Claim: Eligible U.S.-based educators may lead allocations. Educational projects align with individual courses or training periods; they are typically not extended. ACCESS accepts educational uses at all scales with suitable justification. Smaller project requests are reviewed continually; Maximize requests use semiannual review and renewal.
+Boundary: A pooled teaching-service proposal needs program/provider agreement about structure and eligible uses. An award does not guarantee future approval, permanent student accounts, synchronous GPU availability, or local support staffing.
+https://allocations.access-ci.org/allocations-policy
+
+ACCESS · allocation scale
+Current program page checked October 8, 2026
+Evidence quality: Official program description
+Claim: Explore, Discover, and Accelerate have published credit limits of 400,000, 1,500,000, and 3,000,000 respectively; Maximize requests resource-specific allocations. Discover explicitly includes large classes and training events. Start smaller and upgrade if needed.
+Boundary: Limits are not guaranteed awards. Current policy awards up to half of the credit limit initially and the remainder through a justified supplement. Credits are not interchangeable with CPU core-hours or GPU-hours without resource-specific conversion. The deck does not prescribe Maximize merely because the user wants a large allocation.
+https://allocations.access-ci.org/project-types
+
+NAIRR Pilot Classroom · instructor request
+Current classroom call checked October 8, 2026
+Evidence quality: Official classroom opportunity and proposal instructions
+Claim: U.S.-based instructors can request resources for undergraduate or graduate AI coursework or short training in any discipline with U.S.-based participants. Prepare a course/resource description of at most three pages plus a lead biosketch. Identify software, compute and storage needs, support, readiness, a preferred provider, and an alternate.
+Boundary: Only selected providers support this call. Resource match and availability are conditional. Instructors or their teams provide primary student technical support. Course development/testing is also eligible. A central program should assist instructors rather than imply that pilot awards are automatic or unrestricted.
+https://nairrpilot.org/opportunities/education-call
+
+Jetstream2 · teaching environments
+Current resource documentation checked October 8, 2026
+Evidence quality: Resource-provider teaching guide
+Claim: Jetstream2 documents classroom workflows including JupyterHub, reproducible environments, AI/ML, virtual desktops, and web hosting.
+Boundary: This supports the feasibility of the diagram’s software choices. The pictured service is proposed; it is not a verified deployment. A gateway or hub still needs engineering, operating ownership, and the appropriate allocation.
+https://docs.jetstream-cloud.org/tutorial/classroom/overview/
+
+Jetstream2 · classroom allocation planning
+Current planning guide checked October 8, 2026
+Evidence quality: Resource-provider sizing guidance
+Claim: Plan course duration, student count, instance size, GPU needs, active hours, and storage. Account for idle instances and operational overhead when estimating resource use.
+Boundary: The calculator uses illustrative demand assumptions, not provider benchmarks. CPU and GPU hours must be mapped to the chosen resource’s accounting; shared-service and course quotas require an actual operating design.
+https://docs.jetstream-cloud.org/tutorial/classroom/allocation/
+
+NAIRR Classroom · reporting requirements
+April 2025, version 2 · current guidance checked October 8, 2026
+Evidence quality: Official reporting guidance; corroborated by April 2026 newsletter
+Claim: Submit a progress report halfway through the course or training and a final report within 30 days of completion. Report resource use, participation, educational outcomes, and issues.
+Boundary: The proposed program needs to collect enough course evidence to complete these reports; allocation acquisition is only one stage of delivery.
+https://nairrpilot.org/app/site/media/docs/NAIRR_Pilot_Classroom_Reporting.pdf
+
+VISUALS AND FORMAT
+Five HTML slides, using the project's Barlow Condensed, Literata and IBM Plex Sans styles. All illustrations and diagrams are original SVG figures created for this deck. No externally licensed photographs or provider logos are redistributed. Source panels are reference material within the five-slide presentation, not additional slides.
+
+CURRENT FREE OPTIONS BY DEGREE | checked October 8, 2026
+
+Coverage: current college program finder; nine non-cyber degree awards. Certificates, minors, accelerated pathways and dual-degree combinations are not additional awards. Current names are used rather than legacy game/society names. Recommendations below are assignment-level judgments based on curriculum descriptions and documented platform capability, not rankings from classroom trials. No new provider account or classroom deployment was tested by this research.
+
+BS Information Science
+Program: https://infosci.arizona.edu/bs-information-science
+Free starting point: GitHub Codespaces + Kaggle Notebooks
+Suitable: Python / R / SQL labs, small-data models and short GPU experiments. Browser prototypes for the immersive emphasis.
+Boundary: Large training, concurrent GPUs, high-memory data or immersive hardware are required.
+Next step: ACCESS CPU / GPU labs; NAIRR Classroom for AI courses; campus XR hardware.
+
+MS Data Science
+Program: https://infosci.arizona.edu/ms-data-science
+Free starting point: GitHub Codespaces + Kaggle Notebooks
+Suitable: Reproducible notebooks, tabular ML, sampled datasets and checkpointed deep-learning labs.
+Boundary: Data exceeds RAM / storage, models exceed available VRAM, or jobs need long / distributed training.
+Next step: ACCESS for larger data and scheduled capacity; NAIRR Classroom for AI instruction.
+
+MS Information Science
+Program: https://infosci.arizona.edu/ms-information-science
+Free starting point: GitHub Codespaces + Kaggle Notebooks
+Suitable: ML subplan: notebook experiments. Human-Centered Computing: web prototypes and small public-data studies.
+Boundary: Training or deployment must persist; studies need controlled data, full desktops or specialized devices.
+Next step: Managed ACCESS environments; NAIRR Classroom where the course teaches AI.
+
+BA Emerging Technologies in Society
+Program: https://infosci.arizona.edu/ba-emerging-technologies-society
+Free starting point: GitHub Codespaces + GitHub Pages
+Suitable: Small public-text / network analyses, web development, digital storytelling and public portfolios.
+Boundary: Live app backends, licensed social-media data, private participant records or large corpora are required.
+Next step: ACCESS for larger analysis or managed servers; retain institution-approved study tools.
+
+BA Game Design
+Program: https://infosci.arizona.edu/ba-game-design
+Free starting point: Twine + GitHub Pages
+Suitable: Branching narratives, rules and interaction prototypes, browser playtesting and published HTML games.
+Boundary: A project needs a full 3D engine, large assets, persistent multiplayer servers or VR headsets.
+Next step: Campus engine / device labs; evaluate allocated GPU desktops and server support.
+
+BS Game Development
+Program: https://infosci.arizona.edu/bs-game-development
+Free starting point: GitHub Codespaces + GitHub Pages
+Suitable: Game logic, headless tests, small JavaScript games and browser-playable prototypes.
+Boundary: Unity / Unreal desktop workflows, heavy 3D builds, rendering, VR or persistent multiplayer are required.
+Next step: Campus game / XR labs; ACCESS servers or GPU desktops after software and license checks.
+
+BA Information Science & Arts
+Program: https://infosci.arizona.edu/ba-information-science-arts
+Free starting point: p5.js Web Editor + GitHub Pages
+Suitable: Creative coding, interactive graphics, audio-visual sketches and web-based UX prototypes.
+Boundary: Work needs high-end rendering, large media, installed creative software, XR devices or physical installations.
+Next step: Campus media / XR labs; allocated GPU or remote desktops where appropriate.
+
+MA Library & Information Science
+Program: https://infosci.arizona.edu/ma-library-information-science
+Free starting point: GitHub Codespaces + GitHub Pages
+Suitable: Metadata cleaning, Python / R / SQL exercises, small text collections and static digital exhibits.
+Boundary: A repository / ILS must run continuously, preservation storage must endure, or collections need access controls.
+Next step: Managed ACCESS teaching servers plus library systems; NAIRR Classroom for AI coursework.
+
+PhD Information
+Program: https://infosci.arizona.edu/phd-information
+Free starting point: GitHub Codespaces + Kaggle Notebooks
+Suitable: Methods coursework, pilot analyses, reproducible examples and small model feasibility studies.
+Boundary: Dissertation work needs sustained GPU time, large-scale simulation, controlled data or durable services.
+Next step: ACCESS / appropriate NAIRR research requests for research; Classroom only for eligible instruction.
+
+PROVIDER CONSTRAINTS AND RECOMMENDATION METHOD
+Codespaces is the preferred CPU baseline because its monthly entitlement is documented and portable dev containers support notebooks and code. Kaggle is the preferred free GPU supplement among the reviewed options because it offers notebook accelerators, with weekly quota and session limits. This is not a claim that it is universally best or more reliable than all alternatives. Free Colab remains a fallback; its variable quota and GPU availability cannot guarantee synchronous labs. Neither platform replaces a managed whole-class capacity commitment.
+
+The mappings cover all three BS Information Science emphases and both MS Information Science subplans. Game and arts recommendations explicitly separate browser/device execution from cloud hosting. There is no complete free cloud workstation recommendation for heavy 3D / XR. ACCESS GPU desktops require software, licensing, device and latency validation; physical XR and installation work still needs campus equipment. PhD research belongs under research allocations, not a Classroom award merely because its user is a student.
+
+CUDABench was not verified as a hosting provider: discovery identifies CUDA-Bench/CUDABench, a benchmark suite. A URL was requested to disambiguate. cuda.live is listed separately as an optional micro-exercise service; its 15 free executions/month are too restrictive for a primary iterative GPU environment. No silent substitution between these products is made.
+
+NEW SOURCE LEDGER
+
+UArizona InfoSci · current degree roster
+Checked October 8, 2026
+The current program finder lists nine non-cyber degree awards: five bachelor’s degrees, MS Data Science, MS Information Science, MA Library & Information Science, and PhD Information.
+Boundary: BAS Cyber Defense, BS Cyber Operations and MS Cyber Operations are excluded. Certificates, minors and accelerated pathways are not additional degree awards. Platform-to-assignment matches are an instructional assessment, not a college endorsement or tested curriculum deployment.
+https://infosci.arizona.edu/programs
+
+Codespaces · free personal-account quotas
+Checked October 8, 2026
+Personal Free includes 120 core-hours and 15 GB-month; Pro includes 180 core-hours and 20 GB-month. On a 2-core machine those amounts mean 60 and 90 active wall-clock hours. Larger machines spend the quota faster.
+Boundary: Organizations have no included free quota. Stored codespaces consume storage even when stopped. Without a payment method usage stops at the limit; paid overages depend on billing settings. Use personal ownership deliberately; Classroom’s former organization benefit is not assumed.
+https://docs.github.com/en/billing/concepts/product-billing/github-codespaces
+
+Codespaces · verified student benefit
+Checked October 8, 2026
+Verified students receive up to 180 core-hours per month on personal accounts, with storage equivalent to GitHub Pro.
+Boundary: Verification and benefit eligibility must be established before teaching. Some documentation still describes the closed Classroom integration; the recommendation uses only the personal-account benefit.
+https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students
+
+Codespaces · machine learning and GPU boundary
+Checked October 8, 2026
+GitHub documents notebook-based ML and JupyterLab. Its GPU machine trial is not generally available.
+Boundary: Installing CUDA software does not confer a GPU. Treat ordinary free Codespaces as CPU compute; a full desktop game / XR workstation is outside this recommendation.
+https://docs.github.com/en/codespaces/developing-in-a-codespace/getting-started-with-github-codespaces-for-machine-learning
+
+Kaggle · free accelerator notebooks
+Checked October 8, 2026
+Kaggle offers free GPU notebooks subject to availability. Current notebook documentation lists 12-hour CPU/GPU sessions and 20 GB of saved working space, and references T4 and P100 hardware.
+Boundary: An older official GPU tips page still says 9-hour sessions and 30 hours/week. Plan short checkpointed labs below nine hours and check the live timer, quota and available hardware. Large-model fit depends on actual VRAM; two GPUs do not automatically pool memory. No classroom concurrency reservation is established.
+https://www.kaggle.com/docs/notebooks
+
+Kaggle · floating weekly GPU quota
+Checked October 8, 2026
+The provider describes a weekly floating GPU quota, with the account/editor showing the current allowance; it can vary with demand and resource availability.
+Boundary: The historical 30-hour figure is not presented as a guaranteed class entitlement. Extra hours linked to a paid Colab promotion are excluded from the free recommendation.
+https://www.kaggle.com/product-feedback/173129
+
+GitHub Pages · static hosting
+Checked October 8, 2026
+Pages serves HTML, CSS and JavaScript from repositories. GitHub Free supports Pages in public repositories.
+Boundary: This hosts a browser project; it does not supply server-side application compute or a GPU. Public project hosting is unsuitable for private study records.
+https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+
+GitHub Pages · size and bandwidth limits
+Checked October 8, 2026
+Published sites may be at most 1 GB, with a soft 100 GB monthly bandwidth limit and deployment / rate limits.
+Boundary: Large game assets, media archives, persistent databases and multiplayer backends need another service. Free public hosting does not imply private access control.
+https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
+
+p5.js · free browser creative coding
+Checked October 8, 2026
+p5.js is a free open-source JavaScript library with a web editor for interactive and audio-visual works, including WebGL.
+Boundary: Rendering runs on the learner’s device. Device performance, browser capabilities and peripheral access remain course constraints; this is not cloud GPU capacity.
+https://p5js.org/about/
+
+Twine · free interactive narratives
+Checked October 8, 2026
+Twine supports browser or desktop authoring of nonlinear stories and exports HTML, with optional CSS and JavaScript.
+Boundary: Suitable for narrative and interaction prototypes, not a replacement for full game-engine or VR labs. Export backups rather than depending on browser storage.
+https://twinery.org/
+
+CUDABench · provider identity unresolved
+Checked October 8, 2026
+The identifiable CUDABench project is a CUDA benchmark suite, not a verified free classroom GPU host. A link to the intended service is needed to assess its offer.
+Boundary: Do not count this as available compute. A similarly named service may exist; no provider entitlement is inferred from the benchmark project.
+https://github.com/CUDA-Bench/CUDABench
+
+cuda.live · optional CUDA micro-exercises
+Checked October 8, 2026
+The independent provider advertises 15 free execution credits per month, a five-runs-per-15-minute rate limit, and T4 GPUs with 16 GB memory. One credit is one execution.
+Boundary: Useful for a tightly bounded CUDA demonstration, not a primary semester GPU environment. This is a separate verified service, not a confirmed identification of the user’s CUDABench example. No classroom capacity guarantee was verified.
+https://cuda.live/pricing
+
+REPOSITORY ACCESS UPDATE | checked October 10, 2026
+Research window: October 10, 2021 to October 10, 2026. Original compute claims remain checked October 8. Repository means Git/source-code hosting here, not research data repositories, general drive storage or classroom orchestration.
+
+Finding: documented losses concern free private-team scale, aggregate storage, features and new-customer access. This is not a quantitative decline in the total number of free repositories or a measured loss across the market. GitHub Free remains a viable unlimited-repository route. GitLab Education and public/self-managed exceptions matter. GitLab’s 2022 and 2026 private-user milestones are phases of one limit. The separate 2026 three-group limit is not a three-repository cap.
+
+Discovery: four additional Exa searches requested 20 result slots. Primary source checks used current provider documentation, dated announcements, and UArizona Libraries guidance. No existing institutional Git service, license, backup readiness or pilot capacity was verified. Bitbucket’s dated announcement and storage support page establish the 1 GB aggregate workspace rule even though some pricing pages use inconsistent per-repository wording.
+
+December 28, 2022 · new private groups | GitLab · private teams
+New private Free groups are limited to five users across the namespace. A full cohort needs another plan or a qualifying education program.
+Boundary: Public groups and qualifying Education/Open Source programs are exempt. This restriction rolled out in stages.
+Source: https://about.gitlab.com/blog/efficient-free-tier/
+
+June 17, 2024 | Google source hosting
+Google Cloud Source Repositories stops accepting new customers. The five-user, 50 GB free route cannot onboard a new eligible organization.
+Boundary: Organizations already using it before the cutoff are unaffected by this access change; no existing-repository shutdown is claimed.
+Source: https://cloud.google.com/source-repositories/pricing
+
+May 29, 2025 · revised enforcement date | Bitbucket · storage
+Bitbucket caps combined repository storage at 1 GB per Free workspace. Over-limit workspaces become read-only; Downloads and Snippets also leave Free.
+Boundary: This is Git storage, not the separate LFS allowance. Paid plans are excluded; special academic-plan terms need checking.
+Source: https://www.atlassian.com/blog/bitbucket/important-changes-coming-to-bitbucket-clouds-free-plan
+
+Accounts created after January 27, 2026 | GitLab · new groups
+New GitLab Free accounts can create only three top-level groups. Repeated course and cohort namespaces need a different organizational plan.
+Boundary: This limits groups, not the number of repositories. Existing accounts are outside this new-account boundary.
+Source: https://docs.gitlab.com/user/free_user_limit/
+
+August 15, 2026 · provider’s enforcement schedule | GitLab · remaining rollout
+GitLab’s updated notice schedules enforcement on remaining private Free namespaces. Keeping an old class group does not preserve its former allowance.
+Boundary: Final stage of the earlier five-user restriction. Public groups, self-managed Free and qualifying education programs remain exempt.
+Source: https://about.gitlab.com/blog/efficient-free-tier/
+
+REPOSITORY CONTINUITY PLAN
+Proposed repository program, not an existing campus service or completed migration. Start with two courses before scaling to all nine degree programs.
+
+1 · Keep a viable free route
+Use GitHub Free for ordinary Git hosting now. Assess an institution-sponsored GitLab for Education application for private class teams and additional features; annual renewal and use restrictions still apply.
+Responsibility / timing: Instructor lead + college IT · before the next course
+
+2 · Establish campus ownership
+Inventory course repos, sizes, LFS, issues, wikis, artifacts and grading links. Give each course a responsible owner and successor. Keep submissions private; do not make student work public to escape a quota.
+Responsibility / timing: Course owner + college IT · weeks 12–10
+
+3 · Pilot a managed fallback
+Evaluate a supported campus Git service first. If none fits, pilot Forgejo or self-managed GitLab on an institution-managed host with authentication, private projects, quotas and isolated grading runners. Budget staff, durable storage and recovery separately from compute awards.
+Responsibility / timing: College IT + central IT · weeks 10–4
+
+4 · Preserve more than Git
+Take versioned nightly Git and LFS backups to independent storage; export issues, wikis, release files and course assessment links through supported paths. Define retention, access and deletion rules. A live mirror can copy deletions and cannot replace a separate backup.
+Responsibility / timing: Named service operator · nightly; alert on failures
+
+5 · Prove recovery, then scale
+Before teaching, restore a private sample course on a second host and confirm history, LFS, permissions and grading links. Proposed pilot targets: at most 24 hours of data loss and recovery within one business day. Validate these targets before promising them.
+Responsibility / timing: Operator + instructor · pre-term and after major changes
+
+6 · Close the teaching cycle
+Give students portable code exports, retain institutional assessment records under approved policy, and archive releasable research code/data with Libraries/ReDATA when appropriate. Review storage, restores, licenses and allocation renewal before the next cohort.
+Responsibility / timing: Instructor + IT + Libraries · each term
+
+Implementation boundary: Git/code mirrors do not preserve all forge or course metadata. LFS requires its own transfer; backed-up issues or assessment data need a usable export/restore design, not just a downloaded archive. Keep backups independent and versioned. Isolate execution of student grading jobs. ReDATA is for appropriate publicly releasable research outputs, not private submissions or the live course Git server. Retention periods must follow applicable institution policy; no arbitrary universal retention period is prescribed. Proposed 24-hour recovery-point and one-business-day recovery-time targets need a measured rehearsal. Operating infrastructure, storage and staffing need a college/IT commitment beyond time-limited ACCESS/NAIRR awards. No compute, GitLab or campus service request was submitted.
+
+NEW REPOSITORY SOURCE LEDGER
+
+GitLab · five-user private-group limit rollout
+Announced March 24, 2022; new groups from December 28, 2022; remaining enforcement August 15, 2026
+GitLab’s staged Free SaaS change limits private top-level groups to five users. Its June 18, 2026 update schedules enforcement on all remaining affected namespaces for August 15, 2026.
+Boundary: Public groups, self-managed Free and qualifying Education/Open Source programs are exempt. The 2022 and 2026 entries are stages of one restriction, not two vanished services. Earlier proposed rollout dates were revised.
+https://about.gitlab.com/blog/efficient-free-tier/
+
+GitLab · current free user and group limits
+New-account group boundary: January 27, 2026; checked October 10, 2026
+New Free accounts created after January 27, 2026 are limited to three top-level groups. A private Free namespace exceeding five users becomes read-only.
+Boundary: Groups are organizational containers, not a three-repository limit. The documentation gives June 13, 2023 for older private groups; the announcement separately documents remaining enforcement in 2026. Avoid a universal one-day rollout claim.
+https://docs.gitlab.com/user/free_user_limit/
+
+Bitbucket · free workspace storage and feature reduction
+Announced January 27, 2025; enforcement delayed to May 29, 2025
+Free workspaces receive a 1 GB aggregate repository storage cap, lose Downloads and Snippets, and have 90-day pipeline-log retention. Over-limit workspaces become read-only.
+Boundary: The provider update supersedes the original April 28 date. Paid plans are excluded. Inactive free repositories may be archived, with admin restoration; this is not a blanket deletion announcement. Special academic plans must be checked separately.
+https://www.atlassian.com/blog/bitbucket/important-changes-coming-to-bitbucket-clouds-free-plan
+
+Bitbucket · aggregate Git storage versus LFS
+Checked October 10, 2026
+Current support guidance confirms 1 GB total repository storage across a Free workspace.
+Boundary: Git storage is distinct from the LFS allowance. Some pricing/billing pages retain per-repository wording; this deck follows the dated change and current support policy, and advises checking the actual workspace quota.
+https://support.atlassian.com/bitbucket-cloud/docs/reduce-repository-size/
+
+Google Cloud Source Repositories · new access withdrawn
+Effective June 17, 2024; checked October 10, 2026
+Cloud Source Repositories is unavailable to new customers. Its free tier included five project-users and 50 GB of storage; organizations already using it before the cutoff are unaffected by the new-access change.
+Boundary: This is loss of a new free-hosting route, not proof that existing repositories were shut down or deleted. Secure Source Manager is a separate product, not assumed to be a free classroom substitute.
+https://cloud.google.com/source-repositories/pricing
+
+GitHub · free repositories still available
+Checked October 10, 2026
+GitHub Free still includes unlimited public and private repositories and collaborators for personal accounts and organizations, with limited private-repository features.
+Boundary: Repository count is not unlimited file storage, build time, premium controls or permanent policy. Classroom shutdown is separate. This counterexample prevents an unsupported claim that free repository hosting universally disappeared.
+https://docs.github.com/en/get-started/learning-about-github/githubs-plans
+
+GitLab for Education · viable institutional bridge
+Checked October 10, 2026
+Qualifying institutions can apply for free Ultimate licenses with unlimited seats, for instruction and non-commercial academic research. Licenses last one year with annual renewal and community support.
+Boundary: Full-time faculty/staff apply; students do not receive direct institutional licenses. Administrative IT operations are excluded. Eligibility and renewal are conditional; this task verified neither a UArizona license nor an application or deployment.
+https://about.gitlab.com/solutions/education/join/
+
+Repository recovery · code and related records
+Checked October 10, 2026
+A Git mirror clone preserves revision history; Git LFS objects must also be fetched. Wikis and selected metadata require additional export paths.
+Boundary: A Git clone is not a complete course-system backup. Migration archives omit some data and have no documented supported GitHub restore. The proposed service must test its own restore path for LFS, issues, permissions, artifacts and assessment links.
+https://docs.github.com/en/repositories/archiving-a-github-repository/backing-up-a-repository
+
+Forgejo · candidate managed mirror service
+Checked October 10, 2026
+Forgejo documents pull and push mirroring of commits, branches and tags, supporting a proposed managed Git continuity layer.
+Boundary: A mirror is not an independent backup: deletions can propagate. LFS and non-Git records need separate handling. Hosting, authentication, patching, support and storage cost staff time; no campus installation or capacity has been verified.
+https://forgejo.org/docs/latest/user/repo-mirror/
+
+UArizona Libraries · archival code and data
+Checked October 10, 2026
+Libraries recommend a trusted data repository, such as ReDATA, for citable publicly releasable code/data, while retaining an offline copy. ReDATA integrates with GitHub.
+Boundary: A curated research deposit is distinct from live Git hosting and private student submissions. Retention, eligibility and storage are purpose-specific; a compute allocation alone is not a durable archive.
+https://lib.arizona.edu/research/data/data-management/best-practices/sharing
+
+LIBRARY, HOSTING AND DATABASE EVIDENCE EXTENSION | checked October 10, 2026
+Historical window: October 10, 2021–October 10, 2026. Upcoming OSF November 2026 / February 2027 restrictions are announced future events, not already-effective losses.
+Method: 13 Exa discovery searches requested 74 result slots across hosting, databases and current options. Primary provider and institutional pages were read. Library-repository findings from the preceding discussion were reverified. These slots are not independently validated source counts.
+Current source ledger: 73 records; 36 added in this extension. The five-slide timeline remains a selected history; the expanded appendix carries the additional evidence without adding slides.
+
+Key boundaries: Existing quotas alone do not prove recent reductions. Dryad fees are a changed model, not loss of universally free publishing. OSF public records persist; its active Projects workflow is being withdrawn. Cloud drive storage is not preservation. ReDATA’s warning is operational, not account withdrawal. Railway now has a smaller Free plan; Fly legacy allowances remain for eligible old organizations. Netlify changed new-account metering but retains free and legacy routes. Firebase’s change concerns object storage and a billing-linked plan, not Firestore/Hosting shutdown. ElephantSQL’s final blackout/deletion date is February 28, 2025, after January EOL.
+
+Neon verification: Exa’s older free-tier indexed page returned 0.5 GB while current pricing/plans returned 1 GB. Direct live retrieval of both docs URLs confirmed 1 GB/project and 20 GB/account total. Use live account/documentation and recheck before term.
+
+Deta Space: excluded from primary-provider-verified additions because the sunset notice is defunct and discovery returned an affected app maintainer’s report.
+
+LIBRARY REPOSITORIES
+OSF Projects | Upcoming withdrawal | November 16, 2026 → after February 19, 2027
+New project creation stops; existing projects become read-only. Active research collaboration and file-management exercises need a new workspace.
+Boundary: Public records remain; preregistration and community preprint services continue. Both effective dates are upcoming as of this audit.
+https://www.cos.io/osf-changes
+
+Generalist OSF Preprints | Submission route withdrawn | August 25, 2025; indefinite from October 16, 2025
+New submissions to the generalist server stopped, narrowing a scholarly-communication teaching route.
+Boundary: Existing papers and revisions remain; community-led preprint servers are excluded.
+https://www.cos.io/blog/update-on-future-of-osf-preprints
+https://help.osf.io/article/687-osf-preprints-suspension
+
+Dryad | Changed publishing costs | May 6, 2025
+Size-based charges make sponsorship and dataset size material to publishing costs; partner coverage generally stops at 10 GB.
+Boundary: Dryad was not universally free before this change. Sponsorship and waivers can cover eligible deposits; no campus agreement was verified.
+https://datadryad.org/help/requirements/costs
+
+Google education working storage | Storage-policy change | July 2022
+Education storage moved to a baseline institutional pool of 100 TB across users and accounts.
+Boundary: A shared Drive quota affects preparing deposits and collaboration, not the preservation status of an institutional repository. Campus contract capacity may differ.
+https://support.google.com/a/answer/10403871
+
+Microsoft education working storage | Free-plan restriction | February / August 2024 rollout
+Free A1 OneDrive users face a 100 GB cap; institutional pooled storage adds a separate constraint.
+Boundary: Paid-license additions and contract-renewal timing matter. This is not a 100 GB cap on every UArizona account.
+https://www.microsoft.com/en-us/education/products/microsoft-365-storage-options
+
+Figshare and Zenodo | Current limits; no verified cut | Observed October 10, 2026
+Figshare offers 20 GB private storage; Zenodo provides a default 50 GB per published record with additional quota options.
+Boundary: Useful continuing publication routes. Current limits alone cannot establish a five-year reduction.
+https://info.figshare.com/user-guide/account-limits/
+https://help.zenodo.org/docs/deposit/manage-quota/
+
+Omeka digital collections | Current limit; no verified cut | Observed October 10, 2026
+One free hosted site and 500 MB fit a small metadata/exhibition assignment. Large scans and audiovisual collections need another storage plan.
+Boundary: No recent free-plan reduction was verified. Self-hosting moves infrastructure and support responsibility to the institution.
+https://info.omeka.net/signup/
+
+Institutional preservation systems | Operating dependency | Observed October 10, 2026
+DSpace software is free; managed repository and preservation services fund hosting, maintenance and support through subscriptions.
+Boundary: A sustainability dependency, not proof of a recent account cut. Free software and funded preservation are separate commitments.
+https://wiki.lyrasis.org/spaces/DSPACE/pages/19006250/User+FAQ
+https://lyrasis.org/hosting/
+
+UArizona ReDATA | Availability warning | Posted January 6, 2026; observed October 10
+Libraries reports intermittent errors and temporary automated-download restrictions due to high-volume traffic.
+Boundary: This is not a closure, account reduction or breach. ReDATA remains a curated public research repository with DOIs.
+https://lib.arizona.edu/research/data/redata
+
+UArizona Campus Repository | Surviving institutional route | Observed October 10, 2026
+Free-to-campus public deposit of suitable publications, reports, theses and other scholarly materials remains available.
+Boundary: Coordinate collections and content suitability with Libraries; private submissions and live apps require other services.
+https://lib.arizona.edu/research/share/campus-repository
+
+HOSTING AND DATABASES
+Heroku apps + Postgres + Redis | Free tiers withdrawn | November 28, 2022
+Free Dynos, Postgres and Redis plans ended; free databases faced deletion.
+Boundary: General-purpose teaching infrastructure. Hosting and databases are one provider event; later student credits require separate verification.
+https://devcenter.heroku.com/changelog-items/2461
+
+Railway recurring credits | Allowance withdrawn; smaller free plan now | July 3–August 1, 2023
+The original recurring $5 monthly Starter allowance became a one-time trial. Railway now offers a $1 monthly Free allowance.
+Boundary: Avoid the stale claim that Railway has no free tier today. Current credits still do not guarantee a semester of hosting or databases.
+https://blog.railway.com/p/pricing-and-plans-migration-guide-2023
+https://docs.railway.com/pricing/plans
+
+PlanetScale Hobby | Free database tier withdrawn | April 8, 2024
+The free Hobby plan retired and remaining databases were put to sleep, with a short export wake-up route.
+Boundary: PlanetScale continues as a paid service; this is not the closure of all its databases.
+https://planetscale.com/changelog/hobby-deprecated
+
+Cyclic app hosting | Service shutdown | Free turn-off began May 10; all usage May 31, 2024
+A free full-stack app-hosting route disappeared when Cyclic shut down.
+Boundary: Dates describe the provider’s announced staged turn-off; individual deployment or deletion outcomes were not audited.
+https://kamlasater.com/blog/cyclic-is-shutting-down/
+
+Render free PostgreSQL | 90 days → 30 days | May 20, 2024, new databases
+Free database lifetime shortened by two thirds. The 14-day upgrade grace period follows expiry, then data is deleted.
+Boundary: Legacy databases retained their original expiry. Free web hosting survives; a free 30-day database is not a semester solution.
+https://render.com/changelog/free-postgresql-instances-now-expire-after-30-days-previously-90
+https://render.com/docs/free
+
+Fly.io new organizations | Legacy/new-account boundary | Plans discontinued October 7, 2024; current policy checked October 10, 2026
+Old eligible organizations retain free allowances; new organizations receive a short trial and pay for continued billable resources.
+Boundary: Do not portray October 2024 as the first removal of every free Hobby signup. Earlier plan changes existed; the current new-account trial lasts at most two runtime hours or seven days.
+https://docs.fly.io/about/discontinued-plans
+https://docs.fly.io/about/pricing
+
+ElephantSQL managed Postgres | Service shutdown | EOL January 27; final blackout February 28, 2025
+After end of life and a staged brownout, the service terminated and its timeline specified deletion of all data.
+Boundary: The final data-deletion date is February 28, not January 27. Both free and paid customers were affected.
+https://www.elephantsql.com/eol.html
+
+Fauna managed database | Confirmed service shutdown | May 30, 2025
+The database service shut down; applications needed a new endpoint and exported data.
+Boundary: A whole-service loss affecting free and paid customers, confirmed by the provider status page.
+https://docs.fauna.com/fauna/current/eol-faq/
+https://fauna.statuspage.io/
+
+Glitch app hosting | Service shutdown | July 8, 2025
+Project hosting and user profiles ended. Live student apps and demos needed migration.
+Boundary: Code downloads continued through the end of 2025; this did not preserve execution of the apps.
+https://blog.glitch.com/post/changes-are-coming-to-glitch
+
+Netlify Free | New-account quota model | September 4, 2025 onward
+New Free accounts share 300 monthly credits across deploys, compute and traffic; all web projects pause when credits are exhausted.
+Boundary: Free hosting remains. Eligible older accounts can retain legacy plans. The new model is not an equivalent capacity cut for every workload.
+https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/how-credits-work
+
+Firebase Cloud Storage | Billing-free access withdrawn | Existing-bucket requirement from February 3, 2026
+Access requires a Blaze project linked to Cloud Billing, even when usage fits a no-cost allowance.
+Boundary: Object storage, not a shutdown of Firebase Hosting or Firestore. Existing data remains inaccessible until upgrade; overages can cost money.
+https://firebase.google.com/docs/storage/faqs-storage-changes-announced-sept-2024
+
+CURRENT FREE OPTIONS (recommendations for bounded coursework; not campus deployment confirmations)
+GitHub Pages / Cloudflare Pages
+Fit: Static course sites, public exhibits, metadata presentations and browser apps.
+Limits: Pages does not run a persistent backend. GitHub published sites are limited to 1 GB; Cloudflare has 20,000 files/site and 25 MiB/asset. Public outputs need appropriate rights.
+https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
+https://developers.cloudflare.com/pages/platform/limits/
+
+Cloudflare Workers + D1
+Fit: Lightweight web APIs and small SQLite-style CRUD exercises.
+Limits: Workers: 100,000 requests/day and 10 ms CPU/invocation. D1: ten databases/account, 500 MB each, 5 GB total, five million rows read/day and 100,000 written/day. Not PostgreSQL or a long-running analysis server.
+https://developers.cloudflare.com/workers/platform/limits/
+https://developers.cloudflare.com/d1/platform/limits/
+https://developers.cloudflare.com/d1/platform/pricing/
+
+Neon Free
+Fit: Small PostgreSQL exercises and intermittent student app backends.
+Limits: 100 CU-hours/project/month; 1 GB/project and 20 GB/account total. Scales to zero after five idle minutes. Short recovery history needs independent exports; benchmark full-class concurrency.
+https://neon.com/docs/introduction/plans
+https://neon.com/pricing
+
+Supabase Free
+Fit: Small PostgreSQL + authentication + file/API projects.
+Limits: Two active projects; 500 MB database/project and 1 GB file storage. Pauses after a week idle. Export database and uploaded files separately; free managed-backup guarantees must not be assumed.
+https://supabase.com/pricing
+https://supabase.com/docs/guides/platform/backups
+
+Render Free
+Fit: Small Python/Node web demos when cold starts are acceptable.
+Limits: Sleeps after 15 minutes idle; 750 service-hours shared per workspace. Ephemeral filesystem. Free Postgres expires in 30 days; use another durable database for a semester project.
+https://render.com/docs/free
+https://render.com/changelog/free-postgresql-instances-now-expire-after-30-days-previously-90
+
+MongoDB Atlas Free
+Fit: Small document-database, metadata and aggregation exercises.
+Limits: 0.5 GB includes data and indexes; one Free cluster/project. No managed backups or sharding; pauses after 30 days without connections. Export and rehearse manual restore.
+https://www.mongodb.com/docs/atlas/reference/free-shared-limitations/
+
+Netlify Free
+Fit: Small static and serverless demos with measured credit consumption.
+Limits: 300 credits/month; quota exhaustion pauses all web projects. Legacy account terms differ. Deploy/traffic/compute compete for the same allowance.
+https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/how-credits-work
+
+Vercel Hobby
+Fit: Eligible personal, non-commercial student web demos.
+Limits: Personal-use terms and no paid team collaboration. Execution and usage quotas apply; a college-wide service cannot be assumed eligible.
+https://vercel.com/docs/plans/hobby
+
+Railway Free
+Fit: Very small metered deployments or an introductory deployment exercise.
+Limits: $1 recurring monthly credit is useful but insufficient to promise a full semester or always-on database. Distinguish this from the $5 one-time trial and paid Hobby.
+https://docs.railway.com/pricing/plans
+
+PROPOSED SERVICE CONTINUITY PROGRAM
+Inventory the whole course stack
+For two pilot courses, map compute, live app, database, object files, Git, and archival deposits. Record each owner, account, region, quota, expiry and course requirement. Distinguish public teaching examples from private submissions and research materials.
+Owner / timing: Instructor + college IT + Libraries · 12–10 weeks before term
+
+Choose a bounded free route and a funded fallback
+Use static hosting where no backend is needed; Neon for small Postgres coursework, Workers/D1 for lightweight SQLite-style apps, or Supabase when integrated auth is part of the exercise. Provision through supported institutional services when available. For persistent multi-user courses, fund managed app/database hosting or an IT-supported environment through the assessment and export period.
+Owner / timing: College IT + course lead · 10–8 weeks before term
+
+Separate compute awards from service operations
+Request reviewed ACCESS capacity and eligible NAIRR Classroom pilots for instruction and analysis. Separately commit the budget and operator for databases, application availability, durable object storage, identity, backups and renewal. Do not assume a research allocation supports permanent public hosting or preservation; check the awarded resource’s rules.
+Owner / timing: College leadership + IT + allocation lead · before committing the course
+
+Make the course portable and recoverable
+Keep versioned app source, schema migrations, dependency definitions and synthetic seed data. Export the database and uploaded files independently to institution-approved storage; include metadata, licenses, checksums and necessary access configuration. Protect credentials and define retention with the appropriate institutional owners. A Git mirror or provider snapshot alone does not preserve this whole stack.
+Owner / timing: Named service operator · automated backups with failure alerts
+
+Rehearse real class load and a second-host restore
+Test simultaneous class use, cold starts, deployment/egress/query quotas, inactivity and expiration handling. Restore an app, database and sample file set onto a second host; verify private access, schema, queries and grading links. Proposed pilot recovery targets remain at most 24 hours of data loss and one business day to restore; measure them before promising them.
+Owner / timing: Operator + instructor · 4–2 weeks before term and after major changes
+
+Close and preserve the course deliberately
+Offer portable student exports; retain assessment records under approved policy. Coordinate suitable public scholarly deposits with Campus Repository, ReDATA or a disciplinary repository, including metadata and persistent identifiers. Budget stewardship beyond the award period. Recheck vendor terms and test recovery before the next cohort; move active OSF Projects before the announced freeze.
+Owner / timing: Instructor + Libraries + IT · end of term and annual review
+
+ADDED SOURCE LEDGER
+OSF · announced Projects withdrawal
+Announced in 2026; upcoming November 16, 2026 and after February 19, 2027
+OSF will stop creation of new projects and child components starting November 16, 2026. After February 19, 2027, public and private projects become read-only. Existing public projects remain accessible and citable; OSF anticipates eventual removal of private projects with 12 months advance notice.
+Scope: Future effective dates fall outside the five-year historical window. OSF Registries and community-run preprint workflows continue. This is withdrawal of an active collaboration/file-storage workspace, not immediate deletion of all OSF content. No private-project deletion date is established.
+https://www.cos.io/osf-changes
+
+OSF · generalist preprint suspension
+October 16, 2025 update
+COS made the suspension of new submissions to its generalist preprint server indefinite. Existing preprints remain accessible and can be revised. Community-led services such as SocArXiv and PsyArXiv continue.
+Scope: Loss of a generalist submission route, not shutdown of every OSF preprint service or loss of existing papers.
+https://www.cos.io/blog/update-on-future-of-osf-preprints
+
+OSF · start of generalist submission suspension
+Effective August 25, 2025
+The generalist OSF Preprints server suspended new submissions on August 25, 2025. Existing content and revisions continued; community-run servers were excluded.
+Scope: August and October notices are stages of one withdrawal, not two separate lost repositories.
+https://help.osf.io/article/687-osf-preprints-suspension
+
+Dryad · size-based publishing charges
+Fee schedule effective May 6, 2025; vouchers no longer accepted from June 2024
+Unsponsored publishing charges are $150 up to 5 GB, $180 up to 10 GB and $520 up to 50 GB. Partner sponsorship covers submissions up to 10 GB; larger submissions incur additional charges under the partner agreement. Any author may request a waiver, but submissions over 10 GB are excluded from waivers.
+Scope: A changed funding model and size boundary, not a universal transition from free to paid. Sponsorship and waiver eligibility must be verified for the actual author, journal and institution; no UArizona sponsorship is assumed.
+https://datadryad.org/help/requirements/costs
+
+Figshare · current free-account limits
+Checked October 10, 2026; no reduction date established
+Free figshare.com accounts provide 20 GB of private storage, a 20 GB individual-file limit and a 500-item account limit. Institutional settings may differ; larger publication needs may require Figshare Plus.
+Scope: Current capacity limits, not evidence of a recent cut or closure. Public scholarly publication and private collaboration are different uses.
+https://info.figshare.com/user-guide/account-limits/
+
+Zenodo · current storage quota
+Checked October 10, 2026; no reduction date established
+Zenodo documents a default 50 GB quota per record and an additional 150 GB allowance distributable across uploads. Its quota page permits multiple records below the default limit.
+Scope: An available research-publication route with limits, not evidence of withdrawal. Appropriate research content, record organization, permissions and preservation needs still matter; this is not private course database hosting.
+https://help.zenodo.org/docs/deposit/manage-quota/
+
+Omeka.net · free collection hosting
+Checked October 10, 2026; no reduction date established
+The free hosted plan includes one site, 500 MB of storage and a limited set of themes and plugins. Larger plans are paid.
+Scope: Useful for a small digital-collection or exhibition exercise. Large scans, audio and video can exceed the quota. No recent free-plan reduction was verified; self-hosted Omeka has separate operating costs.
+https://info.omeka.net/signup/
+
+UArizona ReDATA · availability warning
+Warning dated January 6, 2026; checked October 10, 2026
+UArizona Libraries warns of intermittent latency and request errors due to high-volume automated traffic, including forced logouts, occasional saving difficulties and temporary restrictions on automated downloads. ReDATA remains the official public research-materials repository with curated deposits and DOIs.
+Scope: An availability/automation incident, not a storage-account cut, repository closure or security breach. A current posted warning does not prove uninterrupted failure since January.
+https://lib.arizona.edu/research/data/redata
+
+UArizona · Campus Repository remains free
+Checked October 10, 2026
+The Campus Repository is free to campus and provides public access to scholarly publications, presentations, reports, theses, dissertations and related materials. Faculty, researchers and departments can establish collections with Libraries.
+Scope: A surviving institutional route. Public deposit requires suitable rights and content; this is not a private assignment-submission system or live application backend. No recent reduction was verified.
+https://lib.arizona.edu/research/share/campus-repository
+
+Google Workspace Education · pooled storage
+Policy effective July 2022
+Google moved education subscriptions to pooled storage in July 2022, with a baseline 100 TB shared across users and accounts, including Drive, Gmail and Photos. Additional capacity and institutional allocation settings depend on the subscription.
+Scope: A working-storage policy change affecting preparation and collaboration around repositories. It is not a claim that a library repository lost 100 TB or that UArizona currently has this baseline quota.
+https://support.google.com/a/answer/10403871
+
+Microsoft Education · pooled storage and A1 cap
+A1 cap: February 1, 2024; pooled-storage rollout: contract renewal no earlier than August 1, 2024
+Free Office 365 A1 users are capped at 100 GB of OneDrive storage. Education tenants receive 100 TB baseline pooled storage across OneDrive, SharePoint and Exchange, plus capacity for eligible paid licenses and purchased storage. Administrators may assign lower A1 limits.
+Scope: The A1 cap does not apply identically to every education license. The institutional pool and any account quota depend on the actual contract. Working storage is not curated long-term repository stewardship.
+https://www.microsoft.com/en-us/education/products/microsoft-365-storage-options
+
+DSpace · software and export capabilities
+FAQ updated April 10, 2023; checked October 10, 2026
+DSpace is freely available under an open-source BSD license. It supports institutional digital objects and export/import of content and metadata through documented formats.
+Scope: Free software does not supply free hosting, staff or durable storage. No DSpace free-account reduction was verified. Export formats and restores must be tested against the deployed version.
+https://wiki.lyrasis.org/spaces/DSPACE/pages/19006250/User+FAQ
+
+Lyrasis · managed repository and preservation hosting
+Checked October 10, 2026
+Lyrasis offers managed ArchivesSpace, CollectionSpace, DSpaceDirect and DuraCloud Preserve hosting. Its subscription model funds hosting support and the open-source communities behind these services.
+Scope: Evidence of an operating and stewardship cost, not a dated reduction in a previously free hosting entitlement. No campus subscription or service availability was verified.
+https://lyrasis.org/hosting/
+
+PlanetScale · free Hobby retired
+New Hobby creation stopped March 6, 2024; retirement April 8, 2024
+PlanetScale retired Hobby on April 8, 2024 and put remaining Hobby databases to sleep. Users needed to upgrade or wake their database for a 24-hour export window.
+Scope: Loss of the former free database plan, not closure of PlanetScale or all its paid databases. No perpetual ability to recover an old database is promised.
+https://planetscale.com/changelog/hobby-deprecated
+
+Render · free Postgres shortened
+Effective May 20, 2024 for newly created free databases
+New free Render PostgreSQL databases expire after 30 days, down from 90. Databases created before the change retained their original expiry date. A 14-day upgrade grace period follows expiry before deletion.
+Scope: An explicit duration reduction affecting new free databases. A 30-day database cannot cover a normal semester without migration or paid continuation. It does not establish that free web hosting ended.
+https://render.com/changelog/free-postgresql-instances-now-expire-after-30-days-previously-90
+
+Render · current free hosting and database limits
+Checked October 10, 2026
+Free web services spin down after 15 minutes without inbound traffic and share 750 running instance-hours per workspace per month. Their filesystem is ephemeral. Free Postgres has 1 GB storage, one active database per workspace, 30-day expiry and no provider backups. Free Key Value is in-memory and loses data on restart.
+Scope: Current limits must be separated from the dated Postgres reduction. Persistent assessment data must not live solely on a web filesystem or free in-memory store. Quota exhaustion can suspend services; bandwidth/build overages depend on payment and spend settings.
+https://render.com/docs/free
+
+ElephantSQL · service end of life and deletion
+No new signups May 1, 2024; EOL January 27, 2025; blackout February 28, 2025
+ElephantSQL stopped new signups, reached EOL January 27, 2025, then entered a staged brownout. Its customer timeline sets February 28, 2025 as final termination and deletion of all data.
+Scope: Full service withdrawal affecting free and paid usage. January 27 is not the final deletion date; the staged dates must not be collapsed. PostgreSQL elsewhere remains available.
+https://www.elephantsql.com/eol.html
+
+Fauna · service shutdown and account deletion
+Effective May 30, 2025, noon Pacific
+Fauna announced shutdown of the managed database service at noon Pacific on May 30, 2025. Customers had to migrate applications and export data; the FAQ stated accounts and associated data would be permanently deleted afterward.
+Scope: Historical provider FAQ read through Exa’s indexed copy; its original URL no longer resolves on a direct check. The separate live provider status record confirms shutdown. This was a full managed-service withdrawal, including Free, not merely a plan cut; announced deletion was not independently audited.
+https://docs.fauna.com/fauna/current/eol-faq/
+
+Fauna · shutdown confirmed by service status
+May 30, 2025, 12:02 Pacific update
+The provider status page confirmed the service was shut down on May 30, 2025. Its preceding notices said unmigrated applications would cease functioning and no extension was available.
+Scope: Corroborates the effective shutdown instead of treating an announcement alone as execution.
+https://fauna.statuspage.io/
+
+Fly.io · legacy allowances retained for old organizations
+Plans deprecated October 7, 2024; checked October 10, 2026
+Fly.io discontinued its old plans for new customers and retained their included free allowances for eligible existing organizations. Those allowances included up to three 256 MB shared-CPU VMs and 3 GB persistent volumes. Existing Legacy Free Hobby has no subscription fee, subject to its terms.
+Scope: The October date is the documented discontinued-plan boundary, not proof that every new user had free Hobby until that day. Older changes had already introduced paid Hobby. Do not claim all legacy allowances were revoked.
+https://docs.fly.io/about/discontinued-plans
+
+Fly.io · current new-account trial
+Checked October 10, 2026; current trial effective date not established
+New organizations have no recurring free hosting tier or monthly free compute allowance. A card-free trial lasts at most two hours of Machine runtime or seven days, whichever comes first; continued billable resources require a card. Some ancillary allowances remain free.
+Scope: A current trial is not semester infrastructure. Eligible legacy organizations retain documented allowances; this is not a provider shutdown or evidence that every resource is charged.
+https://docs.fly.io/about/pricing
+
+Railway · original recurring credits withdrawn
+Announced June 2, 2023; rollout July 3–August 1, 2023
+Railway replaced its former recurring $5 monthly Starter credits with a one-time $5 trial grant and introduced a $5/month Hobby subscription with included usage. Some qualified existing users received subscription-fee waivers.
+Scope: Historical change, not the current entire product. Railway now documents a smaller recurring Free plan; do not claim it has no free tier today.
+https://blog.railway.com/p/pricing-and-plans-migration-guide-2023
+
+Railway · current smaller Free plan
+Checked October 10, 2026; reintroduction date not established
+Railway now offers Free at $0/month with $1 monthly usage credit for small apps, alongside a one-time $5 trial and paid Hobby/Pro. Hobby is $5/month even when resource use is lower than its included $5.
+Scope: A counterexample to permanent disappearance of all free usage. A dollar of metered usage is not a promised number of class hours, persistent database capacity or guaranteed course availability. Billing and data-retention terms need checking before deployment.
+https://docs.railway.com/pricing/plans
+
+Cyclic · hosting shutdown
+Announced April 26, 2024; free usage shutdown began May 10; all usage May 31, 2024
+Cyclic disabled new signups immediately and announced it would begin turning off free-tier usage May 10, 2024 and all usage May 31. The provider attributed closure to insufficient sales to sustain the service.
+Scope: A general application-hosting shutdown, not an education-account policy. The original provider URL now fails certificate verification; the same dated notice remains on its author’s site. Dates describe the announced staged turn-off; no individual student deployment or data-deletion outcome was inspected.
+https://kamlasater.com/blog/cyclic-is-shutting-down/
+
+Netlify · new-account credit model
+New accounts from September 4, 2025; checked October 10, 2026
+New accounts use credit-based plans. Free receives 300 credits per month with a hard limit; when credits run out, all web projects on the account pause. Existing eligible pre-September 4, 2025 accounts can retain legacy plans.
+Scope: A changed quota model, not a universal removal of free hosting or a measured capacity reduction for every workload. Credit consumption depends on deploys, compute and traffic; old allowances must not be compared with credits as interchangeable units.
+https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/how-credits-work
+
+Firebase Cloud Storage · billing required
+Announced September 2024; existing-bucket access requirement from February 3, 2026
+Cloud Storage for Firebase requires a Blaze pay-as-you-go project linked to Cloud Billing, including access to legacy default buckets from February 3, 2026. Without upgrade, users lose read/write and console access; existing bucket data remains. No-cost usage still exists on Blaze.
+Scope: Object/file storage, not Firestore database or Firebase Hosting shutdown. Loss of a billing-free access path is different from all usage becoming paid. This current FAQ supersedes older documentation carrying earlier planned deadlines.
+https://firebase.google.com/docs/storage/faqs-storage-changes-announced-sept-2024
+
+Cloudflare Pages · free static hosting limits
+Checked October 10, 2026
+Free Pages sites can contain up to 20,000 files with a maximum 25 MiB per asset. Pages Functions consume Workers quota and have separate execution constraints.
+Scope: A surviving route for static exhibits and course sites; static hosting does not itself supply a database, general persistent server or archival storage. No recent reduction is claimed.
+https://developers.cloudflare.com/pages/platform/limits/
+
+Cloudflare Workers · free execution limits
+Checked October 10, 2026
+Workers Free provides 100,000 requests per day and a 10 ms CPU-time limit per invocation. Exceeding the daily quota can return an error. Static-asset requests and other product quotas have separate rules.
+Scope: Suitable for lightweight APIs and request handling within limits, not long CPU analyses or arbitrary always-on application servers. CPU time is not elapsed request time.
+https://developers.cloudflare.com/workers/platform/limits/
+
+Cloudflare D1 · free database limits
+Documentation updated April 21, 2026; checked October 10, 2026
+D1 Free supports ten databases per account, 500 MB per database, 5 GB aggregate storage and seven days of Time Travel recovery.
+Scope: Small SQLite-style web databases. SQL dialect, API, per-query limits and platform integration differ from PostgreSQL/MySQL and are not a drop-in replacement for every database course. Recovery windows do not replace independent exports.
+https://developers.cloudflare.com/d1/platform/limits/
+
+Cloudflare D1 · free daily query allowance
+Documentation updated April 21, 2026; checked October 10, 2026
+Workers Free includes five million rows read per day and 100,000 rows written per day for D1, with 5 GB total database storage. Rows scanned count even if a query returns fewer rows.
+Scope: Allowance units are rows, not SQL requests or students. Full-table scans can exhaust a class budget faster than indexed queries. No recent cut was verified.
+https://developers.cloudflare.com/d1/platform/pricing/
+
+Neon · current free Postgres plan
+Direct live provider page checked October 10, 2026
+The live plan table provides 100 projects, 100 CU-hours per project monthly, 1 GB storage per project and 20 GB aggregate account storage. Free compute scales to zero after five idle minutes; recovery history is limited to six hours and a data-change allowance.
+Scope: A viable small PostgreSQL teaching route with a compute and storage ceiling, not guaranteed always-on capacity. An indexed older free-tier URL returned 0.5 GB, but direct live retrieval of both URLs confirmed 1 GB and the 20 GB total. Recheck the actual account before class; a short history window is not semester backup.
+https://neon.com/docs/introduction/plans
+
+Neon · current free plan pricing corroboration
+Checked October 10, 2026
+Neon lists Free at $0, 100 CU-hours per project and 1 GB database storage per project, with scale to zero. Paid plans meter usage separately.
+Scope: Corroborates the current per-project allowance. Use the plan documentation for the 20 GB aggregate account boundary. Do not use a cached older quota as evidence of a new reduction.
+https://neon.com/pricing
+
+Supabase · current free backend plan
+Checked October 10, 2026
+Free includes a 500 MB database per project, 1 GB file storage and two active projects. Free projects pause after one week of inactivity; other API, egress, authentication and function limits apply.
+Scope: Useful for small course apps that teach PostgreSQL, auth and backend APIs. Shared organization quotas and inactivity pauses constrain full-class provision and between-term continuity. No recent database free-tier removal is established.
+https://supabase.com/pricing
+
+Supabase · free backups and file-storage boundary
+Checked October 10, 2026
+Automatic daily backups are documented for Pro, Team and Enterprise. Supabase recommends regular database exports and off-site backups for Free projects. Database backups exclude the actual objects stored through the Storage API.
+Scope: A database dump does not preserve uploaded images, documents or media; export objects separately. No hosted backup or restoration was performed in this research.
+https://supabase.com/docs/guides/platform/backups
+
+MongoDB Atlas · current free document database
+Checked October 10, 2026
+Atlas Free supports one cluster per project and 0.5 GB of data plus indexes. It has no managed backups, limits operations and connections, and automatically pauses after 30 days with no connections. MongoDB documents manual dump/restore as an alternative.
+Scope: Suitable for small document-database exercises, not sharding, full administration, realistic high-load benchmarks or durable records without separate recovery. Free remains available; no recent withdrawal is claimed.
+https://www.mongodb.com/docs/atlas/reference/free-shared-limitations/
+
+Vercel · personal Hobby hosting limits
+Checked October 10, 2026
+Hobby remains free for personal, non-commercial use. It lacks paid team collaboration and has resource quotas; exceeding most allowances requires waiting up to 30 days. Functions and platform services have execution limits.
+Scope: Suitable for eligible personal student demos; an institution-wide course service or team deployment cannot be assumed eligible under personal-use terms. No recent free-plan withdrawal was verified.
+https://vercel.com/docs/plans/hobby
+
+
+SOURCE ACCESS NOTES
+The former Fauna documentation hostname no longer resolves; its indexed provider FAQ was reviewed and the still-live provider status page confirms shutdown.
+The Cyclic provider URL fails certificate verification; the same notice is linked on its author’s live site.
+Direct automated checks were blocked for Figshare, Microsoft, DSpace and Lyrasis (403) and reset for Omeka; primary-page contents were read through Exa.
+Neon’s stale indexed 0.5 GB page was corrected against direct live documentation showing 1 GB/project and 20 GB/account.

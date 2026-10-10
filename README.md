@@ -169,6 +169,13 @@ Slide 4 includes a proposed repository continuity plan, also available at
 `docs/education-compute/repository-plan.html`, covering campus ownership, independent
 Git/LFS and course-record backups, restore rehearsals, and operating support beyond
 individual compute awards.
+The expanded evidence appendix at `docs/education-compute/evidence.html` adds
+library and research repositories, free application hosting, database withdrawals,
+current free options and a proposed service continuity program. It distinguishes
+completed losses, announced future changes, current limits and availability issues.
+The reviewed ledger and audit are published alongside it as `evidence.json` and
+`research-and-sources.txt`; rebuild the appendix with
+`python3 scripts/build_compute_evidence.py` after reviewing ledger changes.
 
 ## Preview locally
 
