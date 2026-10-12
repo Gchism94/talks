@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from build_compute_resources import RESOURCE_CSS, resource_content
 from build_federal_compute import CSS as FEDERAL_CSS, summary_content as federal_summary
+from build_classroom_assessment import summary_content as assessment_summary
 
 ROOT = Path(__file__).resolve().parent.parent
 DEST = ROOT / 'docs/education-compute'
@@ -50,7 +51,7 @@ def build():
 <p class="lead">Evidence across computing, repositories, app hosting, databases, and preservation.</p></header>
 <nav aria-label="Evidence sections"><a href="#federal">Federal compute map</a><a href="#resources">Codabench &amp; alternatives</a><a href="#library">Library repositories</a><a href="#hosting">Hosting &amp; databases</a><a href="#options">Free hosting now</a><a href="#plan">Proposed response</a><a href="#ledger">Source ledger</a></nav>
 <p class="explain">Historical window: October 10, 2021–October 10, 2026. Upcoming announced changes appear separately. A shutdown, a billing requirement, a current quota, and an availability incident are different findings. This selected history does not measure market-wide capacity or prove that every free route is shrinking.</p>
-<section id="federal"><h2>Federally supported computing and the missing layers</h2>''' + federal_summary(data) + '''</section>
+<section id="federal"><h2>Federally supported computing and the missing layers</h2>''' + federal_summary(data) + assessment_summary(data) + '''</section>
 <section id="resources"><h2>Codabench and classroom alternatives</h2><p>Benchmark hosting, notebook development, short GPU demonstrations and grading serve different parts of a course. Paid and retired analogues are labeled explicitly. <a href="classroom-resources.html">Open the standalone resource report ↗</a>.</p>''' + resource_content(data) + '''</section>
 <section id="library"><h2>Library and research repositories</h2><p>These services preserve, publish, describe, or organize scholarly and cultural materials. Working cloud storage feeds those repositories but is not itself a preservation service.</p><div class="grid">''' + cards(data['library_repository_findings']) + '''</div></section>
 <section id="hosting"><h2>Free hosting and databases</h2><p>General-purpose services used in teaching. Service shutdowns include paid users; free-plan changes have narrower scope. One provider may appear in both hosting and database layers, without counting it as two vanished companies.</p><div class="grid">''' + cards(data['hosting_database_findings']) + '''</div></section>

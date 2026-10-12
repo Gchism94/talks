@@ -1206,6 +1206,186 @@
       "claim": "CyVerse states that core NSF award support ended in 2024. Basic offers 200 normalized compute units/year, 5 GB storage and one concurrent job; free sharing/public links ended June 3, 2025. UArizona users can receive Pro through state TRIF support.",
       "scope": "CyVerse is federally developed and used by federally funded projects, but current account subsidies are mixed; TRIF is state, not federal funding. Pro lists 25,000 units/year, 4 TB and four concurrent jobs, with GPU access by consultation. Published eligibility is not an account or whole-class provisioning test.",
       "checked_at": "2026-10-12"
+    },
+    "assesscloudbank": {
+      "title": "CloudBank Classroom · general ACCESS teaching route",
+      "url": "https://www.cloudbank.org/training/access-cloudbank-classroom",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "U.S. educators can request a managed CPU classroom through Explore ACCESS with a syllabus, roster count and course dates. The provider configures institutional login, persistent student workspaces, Python/R/C++ and notebook/RStudio/VSCode tools.",
+      "scope": "This route does not state an AI-course requirement. It is distinct from AI-focused NAIRR Classroom and from general commercial-cloud dollar allocations. Per-student limits and 80-seat capacity are not published here. Its one-year renewal description needs reconciliation with ACCESS education-period policy.",
+      "checked_at": "2026-10-12"
+    },
+    "assesscbgpu": {
+      "title": "CloudBank Classroom · current GPU capacity record",
+      "url": "https://operations-api.access-ci.org/wh2/cider/v1/cider_resource_id/3739/?format=html",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "The resource registry updated September 28, 2026 states that the fall 2026 GPU pilot is at capacity and additional requests will be considered beginning in 2027.",
+      "scope": "Production status is not an available seat. Consideration in 2027 is not approval or guaranteed GPU availability. The registry rendered an as-of October 4 timestamp when checked; this is a documented capacity notice, not an independent real-time utilization measurement.",
+      "checked_at": "2026-10-12"
+    },
+    "assesscbscope": {
+      "title": "CloudBank Classroom · support-document scope conflict",
+      "url": "https://support.access-ci.org/documentation/resources/cloudbank-classroom",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "The opening sections describe managed Classroom without batch queues; later storage/account sections describe user-created commercial-cloud storage and dollar awards.",
+      "scope": "The page contains mixed service scopes. Use the dedicated provider Classroom guide for the pilot design; confirm budget, storage, account and support mechanics for the actual requested service. Do not apply all broker billing terms to the managed hub.",
+      "checked_at": "2026-10-12"
+    },
+    "assessjetflavors": {
+      "title": "Jetstream2 · exact instance accounting",
+      "url": "https://docs.jetstream-cloud.org/general/instance-flavors/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "CPU m3.small has 2 vCPU, 6 GB RAM, 20 GB local root disk and costs 2 SU/hour; m3.quad has 4 vCPU/15 GB and costs 4 SU/hour; m3.2xl has 64 vCPU/250 GB and costs 64 SU/hour. GPU g3.medium has 8 vCPU/30 GB, 25% of an A100, 10 GB VRAM and costs 16 SU/hour.",
+      "scope": "Published flavor rates underlie this illustrative model. Partial-GPU instance-hours are not full-GPU hours; GPU/CPU exchanges are separate. Larger/newer GPU flavors have different rates and availability. Application fit requires rehearsal.",
+      "checked_at": "2026-10-12"
+    },
+    "assessjetcredit": {
+      "title": "Jetstream2 · ACCESS credit conversion",
+      "url": "https://docs.jetstream-cloud.org/general/access/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "One ACCESS credit exchanges for one Jetstream2 service unit. Resource use is charged at the chosen flavor rate; CPU, large-memory and GPU resources are distinct.",
+      "scope": "This conversion is provider-specific. Do not transfer these rates to CloudBank, NRP, CyVerse or OSPool. Usage reporting can lag; monitor local consumption and maintain headroom.",
+      "checked_at": "2026-10-12"
+    },
+    "assessjetquota": {
+      "title": "Jetstream2 · concurrent resource quotas",
+      "url": "https://docs.jetstream-cloud.org/general/quotas/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "Default CPU quota is 150 vCPU, 585 GB RAM and ten floating IPs; the GPU resource default is 64 vCPU, 250 GB RAM and four floating IPs. Quotas scale above resource-specific allocation thresholds and justified increases can be requested.",
+      "scope": "Total credits do not guarantee concurrency. The 80-seat dedicated model needs 164 CPU vCPU with its controller; the shared-worker model needs 196. The eight fractional GPU slots use 64 GPU-resource vCPU. Verify awarded quotas, flavor availability and private networking rather than assuming eight public GPU addresses.",
+      "checked_at": "2026-10-12"
+    },
+    "assessjetstorage": {
+      "title": "Jetstream2 · storage and backup responsibility",
+      "url": "https://docs.jetstream-cloud.org/general/storage/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "Jetstream2 offers attached volumes, shared filesystems and object storage; replicated storage and provider snapshots do not replace independent offsite backups.",
+      "scope": "Some multi-instance shared filesystem workflows, particularly metadata-heavy/locking applications, require policy and architecture review. Independent restore, retention and deletion controls need a college owner. Persistent working storage is not archival preservation.",
+      "checked_at": "2026-10-12"
+    },
+    "assessjetstoragecap": {
+      "title": "Jetstream2 · default storage allocation",
+      "url": "https://docs.jetstream-cloud.org/alloc/budgeting/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "The default Jetstream2 storage cap is 1 TB (1,000 GB); request and justify additional storage through the appropriate storage resource.",
+      "scope": "The modeled student homes and shared data total 2 TB, excluding root disks, images, logs and snapshots. Credits alone do not automatically increase that storage limit.",
+      "checked_at": "2026-10-12"
+    },
+    "assessjetexpiry": {
+      "title": "Jetstream2 · expiry and overdraw lifecycle",
+      "url": "https://docs.jetstream-cloud.org/general/policies/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "Expired or overdrawn allocations lose access; instances are shelved after ten days and unresolved resources are destroyed after thirty days.",
+      "scope": "The grace period is a recovery window, not a funded continuation service. Schedule export, backup and renewal decisions before expiry. Do not promise permanent course servers or recoverability after destruction.",
+      "checked_at": "2026-10-12"
+    },
+    "assessnrpedu": {
+      "title": "NRP · classroom products",
+      "url": "https://nrp.ai/education",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "NRP explicitly offers educators hosted or private JupyterHub, GPU resources, hosted language-model services and Coder IDEs.",
+      "scope": "These are different products with different permissions, quotas and operating duties. Education availability is not a reserved GPU for each learner or a campus production service level.",
+      "checked_at": "2026-10-12"
+    },
+    "assessnrphub": {
+      "title": "NRP · hosted hub storage and login",
+      "url": "https://nrp.ai/documentation/userdocs/jupyter/jupyterhub-service/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "The hosted hub uses institutional CILogon login and selectable hardware; persistent home folders initially have 5 GB, with enlargement by request.",
+      "scope": "The 20 GB/student model needs an approved increase or a smaller assignment footprint. Institutional login documentation is not a verified UArizona roster/provisioning flow. This page lists NSF funding acknowledgments.",
+      "checked_at": "2026-10-12"
+    },
+    "assessnrppolicy": {
+      "title": "NRP · workload and data lifecycle",
+      "url": "https://nrp.ai/documentation/userdocs/start/policies",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "Ordinary interactive pods have a six-hour maximum unless a namespace exception is approved; long-lived services need approved exceptions. NRP is not archival storage and unused volumes may be purged after six months without notification.",
+      "scope": "Do not impose ordinary-pod limits on every hosted hub without confirming its exceptions. Shared GPUs have utilization requirements; idle GPU deployments are not a classroom reservation strategy. Confirm class quota, persistence, hub-specific lifecycle and data terms.",
+      "checked_at": "2026-10-12"
+    },
+    "assessospedu": {
+      "title": "OSPool · documented education access",
+      "url": "https://portal.osg-htc.org/documentation/support_and_training/training/ospool_for_education/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "OSPool supports instructor-led events with guest notebooks or facilitated full accounts. Guest sessions time out after four hours and may lose files; full accounts fit multi-day/semester workflows and known rosters. An event includes a short OSG-policy introduction.",
+      "scope": "Full accounts are normally disabled several days after the event; continuation needs agreement. Instructors rehearse materials first. Free throughput jobs are not reserved synchronous notebook/GPU capacity; licensed, long or multi-core workflows may be poor fits.",
+      "checked_at": "2026-10-12"
+    },
+    "assessosppolicy": {
+      "title": "OSPool · data and access-point rules",
+      "url": "https://portal.osg-htc.org/documentation/overview/references/policy/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "OSG working filesystems are not backed up; users retain essential copies elsewhere. Privacy-sensitive/proprietary data may not be stored or computed on OSG-managed resources. Persistent/intensive computation belongs in submitted jobs, not access points.",
+      "scope": "Use public or synthetic teaching inputs. Independent/checkpointable jobs have fair-share latency and may be interrupted. Required class deadlines need a local or other tested fallback.",
+      "checked_at": "2026-10-12"
+    },
+    "assesspathelig": {
+      "title": "PATh · affiliated-program eligibility",
+      "url": "https://portal.path-cc.io/documentation/overview/account_setup/getting-started/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "PATh eligibility is tied to an accepted/active or planned/pending NSF award in listed affiliated programs; staff can provide startup credits for workflow prototyping.",
+      "scope": "IDSS is not explicitly listed on the checked page. MESA funding alone does not establish eligibility; seek provider/program-officer confirmation before building a course dependency. Absence from the list is not proof of permanent exclusion.",
+      "checked_at": "2026-10-12"
+    },
+    "assesspathcredits": {
+      "title": "PATh · research-credit request",
+      "url": "https://portal.path-cc.io/documentation/overview/account_setup/request-credits/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "After prototyping, full PATh credits are requested through the relevant NSF program officer using an award reference and a short technical justification of jobs, cores, memory, runtime and I/O.",
+      "scope": "This is separate from general OSPool education access. No request was sent and no startup or full credits were obtained. An instructor course is not automatically covered by an existing research award.",
+      "checked_at": "2026-10-12"
+    },
+    "assessmesaportal": {
+      "title": "MESA portal · existing CyVerse account and quota",
+      "url": "https://idss-mesa.github.io/docs/portal/overview/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "MESA describes an alternative portal over the user’s CyVerse data, applications and analyses; sign-in reads the existing teams and resource quotas.",
+      "scope": "The portal does not create a duplicate compute allowance. Public documentation is not a signed-in entitlement or load test. Distinguish federally funded IDSS development from underlying state-funded or subscription-funded CyVerse accounts.",
+      "checked_at": "2026-10-12"
+    },
+    "assessmesaapps": {
+      "title": "MESA · application/resource selection",
+      "url": "https://idss-mesa.github.io/docs/portal/applications/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "The portal documents CPU/GPU application variants, launch options and linked Discovery Environment/OSG/Tapis workflows. Its GPU application description names Nvidia A16 nodes.",
+      "scope": "A GPU launch option does not prove permission, quota, class-wide capacity or access to the Jetstream2 A100 flavor modeled separately. Confirm the selected app, runtime, image and data-save behavior.",
+      "checked_at": "2026-10-12"
+    },
+    "assessmesasave": {
+      "title": "MESA · save and session lifecycle",
+      "url": "https://idss-mesa.github.io/docs/portal/analyses/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "Interactive applications have a time limit that can be extended; files intended for retention belong under ~/data-store. Save & Exit retains outputs; Terminate can discard unsaved session data.",
+      "scope": "Rehearse the exact app save/exit/restart/export path. The portal and Data Store are workflow/working-data services, not an independent campus backup or approved archival deposit.",
+      "checked_at": "2026-10-12"
+    },
+    "assesscyteach": {
+      "title": "CyVerse · class provisioning",
+      "url": "https://learning.cyverse.org/edu/",
+      "date": "Checked October 12, 2026",
+      "quality": "Primary provider/program documentation",
+      "claim": "Instructors can request class/workshop resources, select services, assign organizers and enroll/approve student accounts with institutional addresses. Typical first-Tuesday maintenance should be considered.",
+      "scope": "The subscription page requires Pro/Commercial instructor access for workshops and mentions enrollment limits without giving a numeric limit in its current FAQ. Confirm student tiers, class limits and scheduled service windows. One instructor Pro account does not create 80 simultaneous student jobs.",
+      "checked_at": "2026-10-12"
     }
   },
   "changes": [
@@ -2173,12 +2353,14 @@
       "category": "compute",
       "funding": "NSF PATh/IRIS-HEP + institutional/DOE in-kind contributions",
       "kind": "Opportunistic distributed throughput pool",
-      "route": "OSG Portal / facilitated access point",
+      "route": "Documented guest education notebook or facilitated full event accounts",
       "fit": "Independent text/image analyses, parameter sweeps, model evaluation and many short CPU/GPU jobs.",
-      "boundary": "Interruptible fair share; complete/checkpoint jobs within 20 hours. Educational project fit needs facilitation; no classroom GPU reservation.",
+      "boundary": "Guest four-hour timeout/files may be lost; full accounts usually end shortly after event. Interruptible fair share; complete/checkpoint jobs within 20 hours. No sensitive/proprietary data or classroom GPU reservation.",
       "sources": [
         "fedosg",
-        "fedospool"
+        "fedospool",
+        "assessospedu",
+        "assessosppolicy"
       ],
       "capabilities": [
         "batch",
@@ -2194,10 +2376,12 @@
       "funding": "NSF PATh",
       "kind": "Dedicated credit-based throughput pool",
       "route": "Consult PATh; NSF-funded project startup/credit process",
-      "fit": "Larger HTC research jobs and reliable resource profiles; relevant to MESA-funded work.",
-      "boundary": "NSF research scope/credits required. Different from free fair-share OSPool; consultation is not automatic authorization.",
+      "fit": "Dedicated throughput research jobs when the affiliated NSF program and credits are confirmed.",
+      "boundary": "IDSS is not explicitly listed in the published affiliated-program policy. MESA funding alone does not establish eligibility or course authorization; confirm with PATh/NSF. Separate from OSPool education access.",
       "sources": [
-        "fedpath"
+        "fedpath",
+        "assesspathelig",
+        "assesspathcredits"
       ],
       "capabilities": [
         "batch",
@@ -2214,10 +2398,13 @@
       "kind": "Shared GPU/cloud services",
       "route": "Institutional onboarding; hosted JupyterHub, API or project namespace",
       "fit": "Hosted teaching notebooks, GPUs, open-weight model APIs and containerized services.",
-      "boundary": "Shared capacity, account policies and operator responsibilities; Nautilus is the NRP cluster, not a separate pool.",
+      "boundary": "Hosted hub starts with 5 GB homes; larger storage, class/GPU quota and hub-specific exceptions need approval. Ordinary-pod six-hour rules do not establish every hub limit. Not archival storage; idle volumes may be purged.",
       "sources": [
         "fednrp",
-        "fednrpllm"
+        "fednrpllm",
+        "assessnrpedu",
+        "assessnrphub",
+        "assessnrppolicy"
       ],
       "capabilities": [
         "teach",
@@ -2236,10 +2423,13 @@
       "kind": "ACCESS resource provider / VM cloud",
       "route": "ACCESS allocation, course images and student/project access",
       "fit": "Notebooks, RStudio, desktops, web/database teaching servers and vGPU environments.",
-      "boundary": "Budget credits for always-on instances, term duration, data backup and GPU demand. Not permanent institutional hosting.",
+      "boundary": "Always-on VM accounting, separate GPU exchange, concurrent quota and extra storage need approval. Independent backups required. Expiry/overdraw disables access and can destroy unresolved resources after thirty days.",
       "sources": [
         "fedjetstream",
-        "fedjetstreamfund"
+        "fedjetstreamfund",
+        "assessjetquota",
+        "assessjetstorage",
+        "assessjetexpiry"
       ],
       "capabilities": [
         "teach",
@@ -2275,11 +2465,14 @@
       "category": "compute",
       "funding": "NSF support + awarded cloud budgets",
       "kind": "Commercial-cloud broker and managed teaching platform",
-      "route": "ACCESS/NAIRR route appropriate to requested service",
+      "route": "General ACCESS Explore Classroom route; separate NAIRR Classroom route for AI coursework",
       "fit": "Managed Python/R/C++ browser environments with login and student storage.",
-      "boundary": "Approved budget/term, provider configuration and GPU availability; not a commercial free tier. Check actual onboarding terminology with CloudBank.",
+      "boundary": "Managed CPU per-student limits/capacity need confirmation. Current registry says fall 2026 GPU pilot is at capacity; requests considered in 2027, not guaranteed. Renewal terms need reconciliation with education-period policy.",
       "sources": [
-        "fedcloudbank"
+        "fedcloudbank",
+        "assesscloudbank",
+        "assesscbgpu",
+        "assesscbscope"
       ],
       "capabilities": [
         "teach",
@@ -2497,11 +2690,14 @@
       "kind": "Metadata/data mesh/lakehouse + AI workflow integration",
       "route": "Published MESA portal/docs; underlying services govern compute",
       "fit": "Metadata, semantic discovery, reproducible data/agent workflows, Jupyter/R/desktop app layer.",
-      "boundary": "Published tools are not a verified class service level. Underlying CyVerse/TACC/ACCESS/NAIRR allocations, GPU entitlement and support remain distinct.",
+      "boundary": "Portal reads the existing CyVerse account/teams/quota; it does not add a second allowance. Selected apps, Save & Exit, per-user Pro/TRIF entitlement, classroom/GPU capacity and support remain to be tested.",
       "sources": [
         "fedmesa",
         "fedidss",
-        "fedidssprogram"
+        "fedidssprogram",
+        "assessmesaportal",
+        "assessmesaapps",
+        "assessmesasave"
       ],
       "capabilities": [
         "teach",
@@ -2896,5 +3092,325 @@
       "Arizona TRIF is state funding; AI Infrastructure Hubs require partners to finance compute.",
       "Allocated service storage is not automatic archival preservation."
     ]
+  },
+  "classroom_assessment": {
+    "title": "From federal resources to a classroom service",
+    "checked_at": "2026-10-12",
+    "status": "Documentation assessment and illustrative capacity model; not an awarded or tested classroom service",
+    "decision": "Assess CloudBank managed CPU Classroom first through general ACCESS; keep Jetstream2 as the controlled alternative when an operator and sufficient quota/storage are funded. Use NRP, MESA/CyVerse and OSPool as independently gated components; clarify PATh eligibility before relying on it.",
+    "representative_courses": [
+      {
+        "name": "Data science",
+        "students": 40,
+        "work": "Python/R data analysis, reproducible notebooks, small-model CPU labs; optional grouped GPU experiment.",
+        "fallback": "Small CPU datasets and downloadable environment/materials."
+      },
+      {
+        "name": "Library and information science",
+        "students": 40,
+        "work": "Metadata normalization, collection analysis, public-corpus text processing, reproducible workflow and repository export.",
+        "fallback": "Local small-record workflow and institution-supported storage; no private patron or grade records on batch resources."
+      }
+    ],
+    "providers": [
+      {
+        "id": "cloudbank",
+        "name": "CloudBank Classroom",
+        "role": "First CPU candidate",
+        "fit": "Managed Python/R notebooks and browser IDEs for both courses.",
+        "gate": "Confirm 80 seats, 2 vCPU/6 GB RAM and 20 GB homes, supported images/grading, roster access, support and export dates.",
+        "limits": "No published per-student specification establishes our fit. Fall 2026 GPU pilot is full. General ACCESS route exists; NAIRR Classroom is a separate AI-course route.",
+        "sources": [
+          "assesscloudbank",
+          "assesscbgpu",
+          "assesscbscope",
+          "access"
+        ]
+      },
+      {
+        "id": "jetstream",
+        "name": "Jetstream2 through ACCESS",
+        "role": "Controlled alternative",
+        "fit": "Own course images, JupyterHub, isolated teaching web/database services and reviewed benchmark workers.",
+        "gate": "Named operator and backup; CPU/GPU/storage exchange; adequate concurrent quota; tested image upgrade, shutdown, restore and end-of-term export.",
+        "limits": "Always-on instances dominate credits. Allocation expiry and overdraw can delete resources after thirty days. Storage replication is not independent backup.",
+        "sources": [
+          "assessjetflavors",
+          "assessjetcredit",
+          "assessjetquota",
+          "assessjetstorage",
+          "assessjetexpiry"
+        ]
+      },
+      {
+        "id": "nrp",
+        "name": "NRP hosted hub / private hub / API",
+        "role": "Conditional GPU and API module",
+        "fit": "Notebook canary, grouped GPU demonstrations, model APIs; a primary hub only after class-capacity confirmation.",
+        "gate": "Confirm hosted/private hub policy, roster and quota, 20 GB home increase from default 5 GB, GPU access and storage/export agreement.",
+        "limits": "Shared GPU scheduling; ordinary pods have six-hour rules with exceptions. Unused volumes may be purged after six months. APIs are inference products, not training allocations.",
+        "sources": [
+          "assessnrpedu",
+          "assessnrphub",
+          "assessnrppolicy",
+          "fednrpllm"
+        ]
+      },
+      {
+        "id": "mesa",
+        "name": "MESA + CyVerse",
+        "role": "Data/workflow component",
+        "fit": "MLIS metadata cleanup, collection analysis, reproducibility and portable outputs using public/synthetic records.",
+        "gate": "Verify each UArizona account’s Pro/TRIF benefit and class approval; rehearse the exact app Save & Exit, restart and export path.",
+        "limits": "MESA reads existing CyVerse quota. Basic 200 CPU core-hours/year is below this modeled 240 per student (300 with allowance); 5 GB is below modeled 20 GB. Pro is 25,000 units/4 TB/four concurrent jobs per account, not a pooled classroom entitlement.",
+        "sources": [
+          "assessmesaportal",
+          "assessmesaapps",
+          "assessmesasave",
+          "fedcyverse",
+          "assesscyteach"
+        ]
+      },
+      {
+        "id": "ospool",
+        "name": "OSPool education program",
+        "role": "Optional batch component",
+        "fit": "Independent public-corpus OCR/text analyses and parameter sweeps; teach throughput with a short guest exercise first.",
+        "gate": "Rehearse a workflow under four hours; retain outputs externally. Arrange full accounts and event/end dates for semester use.",
+        "limits": "Guest timeout/file loss; full accounts typically expire after event. Interruptible fair share cannot promise synchronous GPU access or assignment completion times. No sensitive/proprietary inputs.",
+        "sources": [
+          "assessospedu",
+          "assessosppolicy"
+        ]
+      },
+      {
+        "id": "path",
+        "name": "PATh Facility",
+        "role": "Research route to clarify",
+        "fit": "MESA-aligned research ensembles where program eligibility and credits are confirmed.",
+        "gate": "Ask whether IDSS/MESA is eligible and what work the award can cover; prototype before any full-credit request.",
+        "limits": "IDSS is not explicitly in the published affiliated-program list. No eligibility or credits verified. Keep required teaching off this route pending confirmation.",
+        "sources": [
+          "assesspathelig",
+          "assesspathcredits",
+          "fedpath"
+        ]
+      },
+      {
+        "id": "college",
+        "name": "College + Libraries operations",
+        "role": "Required continuity layer",
+        "fit": "Support ownership, identity, roster/grade handling, independent backups, durable hosting/databases and archival selection.",
+        "gate": "Approve owners, operating budget, support coverage, data classification/retention, tested second-host restore and learner exports.",
+        "limits": "Federal compute does not pay every operating cost or turn working data into preservation. A lab demonstration cannot establish semester service readiness.",
+        "sources": [
+          "access",
+          "assessjetstorage",
+          "assessnrppolicy",
+          "assessosppolicy"
+        ]
+      }
+    ],
+    "assumptions": {
+      "courses": 2,
+      "students_per_course": 40,
+      "seats": 80,
+      "weeks": 15,
+      "active_hours_per_week": 8,
+      "cpu_per_student": 2,
+      "ram_gb_per_student": 6,
+      "home_gb_per_student": 20,
+      "shared_gb_per_course": 200,
+      "controller_vcpu": 4,
+      "controller_ram_gb": 15,
+      "allowance_percent": 25,
+      "shared_worker_vcpu": 64,
+      "shared_worker_ram_gb": 250,
+      "gpu_students": 40,
+      "gpu_group_size": 5,
+      "gpu_labs": 6,
+      "gpu_hours_per_lab": 2,
+      "gpu_slot_su_per_hour": 16,
+      "gpu_slot_vram_gb": 10,
+      "backup_daily_change_percent": 1,
+      "backup_history_days": 30
+    },
+    "scenarios": [
+      {
+        "id": "burst",
+        "name": "Stopped between sessions",
+        "student_su": 24000,
+        "controller_su": 12600,
+        "cpu_su": 36600,
+        "peak_cpu_vcpu": 164,
+        "peak_ram_gb": 495,
+        "workers": null,
+        "boundary": "Ideal lower bound for individually stopped/autoscaled 2-vCPU instances. Shared workers have rounding, idle tail, image pulls and orchestration overhead; measure actual billing."
+      },
+      {
+        "id": "dedicated",
+        "name": "Student VMs always on",
+        "student_su": 504000,
+        "controller_su": 12600,
+        "cpu_su": 516600,
+        "peak_cpu_vcpu": 164,
+        "peak_ram_gb": 495,
+        "workers": 80,
+        "boundary": "80 m3.small student instances plus one m3.quad controller, running 24 hours/day for 15 weeks; includes 25% spending allowance."
+      },
+      {
+        "id": "shared",
+        "name": "Shared hub workers always on",
+        "student_su": 604800,
+        "controller_su": 12600,
+        "cpu_su": 617400,
+        "peak_cpu_vcpu": 196,
+        "peak_ram_gb": 765,
+        "workers": 3,
+        "boundary": "Three m3.2xl workers sized to cover 160 student vCPU and 480 GB RAM, plus one m3.quad controller; placement and hub performance remain untested."
+      }
+    ],
+    "gpu_model": {
+      "slots": 8,
+      "instance_hours": 96,
+      "instance_hours_with_allowance": 120,
+      "su": 1920,
+      "peak_gpu_resource_vcpu": 64,
+      "peak_gpu_resource_ram_gb": 240,
+      "vram_per_slot_gb": 10,
+      "boundary": "Eight g3.medium fractional A100 instances shared by groups of five; 120 planned fractional-instance hours is not 120 full-GPU hours. Separate GPU exchange/permission and networking required."
+    },
+    "storage_model": {
+      "working_gb": 2000,
+      "backup_gb": 2600,
+      "boundary": "Decimal GB/TB. Working data = 80×20 GB homes + 2×200 GB shared. Independent backup estimate = one working copy + 30 days of 1% changed data/day; excludes compression/deduplication, root disks, images, logs and snapshots. This is not a storage quote or approved retention schedule."
+    },
+    "allocation_interpretation": "Jetstream2-only modeled totals including optional GPU: 38,520 (ideal burst), 518,520 (always-on student VMs), 619,320 (always-on shared workers). CPU and GPU exchanges remain separate. Explore initial ceiling is 200,000 credits (half of 400,000); Discover initial ceiling is 750,000 (half of 1,500,000). A measured small canary can start with Explore. The two always-on models fit within the Discover initial ceiling on paper; approval, actual overhead and provider capacity remain unverified. CloudBank requests use its provider-specific Explore Classroom route, not this VM sizing model.",
+    "gates": [
+      {
+        "title": "Scope and owners",
+        "when": "Before any class dependency",
+        "owner": "Course lead + college service owner",
+        "evidence": "Choose real course/syllabus, data classification, operator and backup; fund support and durable storage for the whole term.",
+        "stop": "No named owner or approved service period.",
+        "status": "Not yet tested/confirmed"
+      },
+      {
+        "title": "Provider and access",
+        "when": "6–8 weeks before term (proposed)",
+        "owner": "Service owner + provider liaison",
+        "evidence": "Confirm approved route, course eligibility, actual roster/login, quotas, images, costs, GPU status and data/expiry terms.",
+        "stop": "Unresolved 80-seat provisioning or missing account/award.",
+        "status": "Not yet tested/confirmed"
+      },
+      {
+        "title": "Component canary",
+        "when": "4–6 weeks before term (proposed)",
+        "owner": "One instructor + up to ten consenting volunteers",
+        "evidence": "Run one representative DS assignment and one public-records MLIS workflow; use a fixed image and retain launch, save/restart/export evidence.",
+        "stop": "Core software or save/export path fails.",
+        "status": "Not yet tested/confirmed"
+      },
+      {
+        "title": "Capacity rehearsal",
+        "when": "2–4 weeks before term (proposed)",
+        "owner": "Operator + teaching assistants",
+        "evidence": "Test approved peak concurrency with provider permission; measure queue/spawn latency, CPU/RAM, storage and actual billed idle time. Suggested p95 login-to-workspace target: five minutes, to negotiate with provider.",
+        "stop": "Unmeasured or insufficient class capacity; credit/storage forecast exceeds award.",
+        "status": "Not yet tested/confirmed"
+      },
+      {
+        "title": "Recovery and teach-out",
+        "when": "Before course admission",
+        "owner": "Primary and backup operators + Libraries liaison",
+        "evidence": "Restore files and service onto a second host; verify cross-student isolation, learner export and grade reconciliation. Proposed RPO 24 hours/RTO one business day require measurement.",
+        "stop": "No independent restorable backup or viable offline/CPU fallback.",
+        "status": "Not yet tested/confirmed"
+      },
+      {
+        "title": "Two-course pilot",
+        "when": "One approved 15-week term",
+        "owner": "Course leads + operator",
+        "evidence": "80 illustrative seats; required work CPU-capable. GPU/OSPool/MESA modules only after their own gate passes; collect support time, billing and instructional outcomes.",
+        "stop": "Unsafe access, recurring capacity failure or no funded support.",
+        "status": "Not yet tested/confirmed"
+      },
+      {
+        "title": "Retire or renew",
+        "when": "Decision at least 30 days before expiry (proposed)",
+        "owner": "Course leads + service owner + Libraries",
+        "evidence": "Export students/grades, reconcile submissions, deposit approved public outputs with Libraries; confirm next-term project/renewal route and verify deletion.",
+        "stop": "Assuming automatic education extension or treating grace periods as service funding.",
+        "status": "Not yet tested/confirmed"
+      }
+    ],
+    "provider_questions": {
+      "CloudBank Classroom": [
+        "Can the general ACCESS Classroom route support two non-AI/AI-mixed courses and 80 seats with 2 vCPU/6 GB/20 GB per seat? What are the actual limits and credit/budget terms?",
+        "Which packages, version pinning, notebook distribution, grading/export and account-isolation features are supported?",
+        "What are roster provisioning, CILogon/MFA, support hours, independent export/backup and shutdown dates?",
+        "How does the one-year renewal text align with ACCESS education-term/no-typical-extension policy? Is next term a renewal or a new request?",
+        "Please confirm current GPU pilot status and the 2027 request window; required activities will remain CPU-capable."
+      ],
+      "Jetstream2": [
+        "Confirm CPU/GPU/storage exchanges, 164-vCPU dedicated or 196-vCPU shared peak quota, applicable flavor availability and required public/private network quotas.",
+        "Can 2 TB working data plus additional root/image/log/snapshot space be approved? Which shared home/filesystem architecture fits the workload and policy?",
+        "Review a hub or VM autoscaling/shutdown design and independent offsite backup/restore plan; verify classroom identity and grading service rules.",
+        "What renewal/new-course request, warning and deletion process applies to the exact awarded project?"
+      ],
+      "NRP": [
+        "For hosted versus private hubs, what class quota, GPU configuration, roster approval, software/image and support arrangements apply?",
+        "Can 80 homes have 20 GB each? What session, exception, persistence and end-of-course export rules apply to this particular hub?",
+        "Which model/API quotas and data-handling terms apply? What GPU fallback is acceptable when shared capacity is busy?"
+      ],
+      "MESA / CyVerse": [
+        "Can every eligible UArizona student receive the documented Pro/TRIF benefit, and what class/workshop enrollment limits and maintenance windows apply?",
+        "How are per-user CPU units, concurrency and storage charged across the selected portal app? Is GPU permission available for this specific assignment?",
+        "Demonstrate saving under data-store, Save & Exit, restarting, export and independent restoration for the chosen metadata app."
+      ],
+      "OSPool": [
+        "Does the proposed public-data workflow fit the guest four-hour session? Confirm full roster, account dates, fair-share behavior, job/I/O sizes and training-policy requirements for semester use.",
+        "Which packaging, checkpointing, licensed-software or data-transfer restrictions apply? Agree on outputs retained elsewhere and a CPU/local fallback."
+      ],
+      "PATh / NSF program officer": [
+        "Is IDSS award 2632685/MESA eligible under the affiliated-program policy, and can this particular research/teaching workload be covered?",
+        "If eligible, what startup prototype and job specification are needed for a full credit request, and which program officer should receive it?"
+      ],
+      "College / Libraries": [
+        "Who is the primary operator, backup and course escalation contact? What recurring support, storage, identity and hosting/database budget is approved?",
+        "Which student/grade/research data may go to each provider, for how long, and what accessibility/procurement review is required?",
+        "Who owns independent backups, second-host recovery, export/grade reconciliation and archival selection? What measured workload and educational outcomes justify scaling?"
+      ]
+    },
+    "operations_model": "Federal allocations supply bounded resources. College recurring operating funds cover course support, image maintenance, identity/rosters, backups, durable app/database services, export and Libraries stewardship. Cost these duties with actual operator-hours, provider terms and institutional rates before approval; no unsupported dollar estimate or staffing commitment is supplied.",
+    "degree_expansion": "The first canary covers DS and MLIS. Notebook-compatible MS/BS Information Science and PhD projects can reuse the route after workload review. ETS and Information Science and Arts need public-data/browser workflows and durable exhibit hosting. Game Design/Development require a separate engine, graphics, licensing and desktop-access assessment; this notebook pilot does not establish Unreal/Unity or Windows support. Cyber degrees remain excluded.",
+    "evidence_sources": [
+      "assesscloudbank",
+      "assesscbgpu",
+      "assesscbscope",
+      "assessjetflavors",
+      "assessjetcredit",
+      "assessjetquota",
+      "assessjetstorage",
+      "assessjetstoragecap",
+      "assessjetexpiry",
+      "assessnrpedu",
+      "assessnrphub",
+      "assessnrppolicy",
+      "assessospedu",
+      "assessosppolicy",
+      "assesspathelig",
+      "assesspathcredits",
+      "assessmesaportal",
+      "assessmesaapps",
+      "assessmesasave",
+      "assesscyteach",
+      "access",
+      "types",
+      "budget",
+      "fedcyverse",
+      "fednrpllm"
+    ],
+    "method": "16 discovery queries requested 78 result slots; these are discovery counts, not independent evidence counts. Twenty new primary-source ledger records plus reused program/provider records support a qualitative fit assessment. Public documentation was read, with saved extracts and targeted HTTP access checks. No signed-in entitlement, actual compute workload, model API, cloud billing, allocation request, provider message or grant submission was executed."
   }
 }

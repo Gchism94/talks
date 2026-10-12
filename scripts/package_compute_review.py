@@ -32,6 +32,8 @@ def build():
     text += '\nCODABENCH AND RESOURCE UPDATE | October 11, 2026\nSlide 3 adds a filterable Codabench & alternatives comparison. Open classroom-resources.html for all 13 resource comparisons and work boundaries; the degree comparison includes supplementary routes. Codabench provides free benchmark hosting and bounded CPU scoring, while code/GPU workers require separately supplied compute. CodaLab Competitions is a retired predecessor; EvalAI hosting is paid; ChaGrade readiness is unverified. The evidence ledger now contains ' + str(len(ledger['evidence'])) + ' records. This update does not reverify every October 8/10 policy.\n'
     if 'federal_platform_map' in ledger:
         text += '\nFEDERAL COMPUTE MAP | October 12, 2026\nOpen federal-compute.html for the interactive map of federally supported compute, data services, products and funding pathways. It covers '+str(len(ledger['federal_platform_map']))+' families, the six named 2026 IDSS projects including MESA, and eight missing layers. CSV/JSON exports are beside it. Slide 4 links to this reference. Federal development, current operating support, state subsidies and free approved use are distinct.\n'
+    if 'classroom_assessment' in ledger:
+        text += '\nCLASSROOM ROUTE ASSESSMENT | October 12, 2026\nOpen classroom-assessment.html for seven route/operations roles, a two-course 80-seat illustrative pilot, three interactive CPU sizing scenarios, optional fractional GPU accounting, seven readiness gates and unsent provider questions. JSON and capacity/readiness CSV exports are beside it. No allocation, signed-in entitlement or real classroom workload has been tested.\n'
     start.write_text(text)
     archive = OUT / 'teaching-on-borrowed-compute.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
@@ -52,7 +54,7 @@ def build():
         if src.is_file(): copy(src, Path('review/published-export') / src.name)
     for src in sorted(OUT.iterdir()):
         if src.is_dir():
-            if src.name in ['codabench-research','federal-research']:
+            if src.name in ['codabench-research','federal-research','assessment-research']:
                 for item in sorted(src.rglob('*')):
                     if item.is_file(): copy(item, Path('evidence') / src.name / item.relative_to(src))
             continue
@@ -62,12 +64,12 @@ def build():
         elif src.suffix == '.zip': target = Path('.')
         else: target = Path('review')
         copy(src, target / src.name)
-    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_site.py','check_site.py','package_compute_review.py']:
+    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_site.py','check_site.py','package_compute_review.py']:
         copy(ROOT / 'scripts' / name, Path('review/builders') / name)
     for src in sorted((ROOT / 'output/playwright').iterdir()):
-        if src.is_file() and src.name.startswith(('education-compute-','repositories-','service-evidence-','codabench-','federal-')):
+        if src.is_file() and src.name.startswith(('education-compute-','repositories-','service-evidence-','codabench-','federal-','assessment-')):
             copy(src, Path('review/screenshots') / src.name)
-    manifest = dict(title='Teaching on Borrowed Compute', assembled='2026-10-10', refreshed=ledger.get('updated_at','2026-10-11'), source_records=len(ledger['evidence']), resource_comparisons=len(ledger['classroom_resource_options']), federal_families=len(ledger.get('federal_platform_map',[])),
+    manifest = dict(title='Teaching on Borrowed Compute', assembled='2026-10-10', refreshed=ledger.get('updated_at','2026-10-11'), source_records=len(ledger['evidence']), resource_comparisons=len(ledger['classroom_resource_options']), federal_families=len(ledger.get('federal_platform_map',[])), assessment_roles=len(ledger.get('classroom_assessment',{}).get('providers',[])),
                     public_release_at_assembly='2fe7387524d1d5403bef100aaa3da5a4f896c96c',
                     purpose='Complete local review snapshot; canonical authoring and publishing paths remain in the parent repository. See validation.json for latest release status.',
                     excluded=['output/education-compute/site-build (whole-site cache includes unrelated talks)'], files=files)

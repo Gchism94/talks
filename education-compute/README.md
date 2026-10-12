@@ -21,7 +21,7 @@ Open `talk/index.html` in a browser. Keep the entire `talk/` folder together: sl
 | --- | --- |
 | `talk/` | Portable shareable deck, appendix, degree comparison, repository plan, assets, and evidence ledger |
 | `source/` | Authored deck with presenter notes and cover |
-| `evidence/` | 130-record reviewed ledger, detailed text audit, degree data, source verification records, and saved source snapshots |
+| `evidence/` | 150-record reviewed ledger, detailed text audit, degree data, source verification records, and saved source snapshots |
 | `review/` | Validation and release records, screenshots, exact published HTML exports, checks, builders, and historical authoring helpers |
 | `manifest.json` | Original path, size, and SHA-256 for every gathered artifact |
 
@@ -38,3 +38,5 @@ Run `python3 education-compute/verify_bundle.py` from the parent `talks/` folder
 Refresh the portable ZIP and this snapshot with `python3 scripts/package_compute_review.py` after updating canonical sources, generated references and validation records.
 
 The October 12 federal reference maps 32 service/platform/funding families, six named IDSS projects and eight missing layers. The latest `federalExtension` record in `review/validation.json` holds verification/publication status. Federal grant provenance is distinct from current operating funding, state TRIF subsidies, no-cost access and tested production readiness.
+
+The October 12 follow-on assessment is saved as [classroom-assessment.html](talk/classroom-assessment.html). It includes seven route/operations roles, an interactive two-course capacity model, seven unconfirmed readiness gates, and draft provider questions. Structured assessment and capacity/readiness CSVs are beside it. Public documentation captures and access checks are in `evidence/assessment-research/`; latest validation/publication status is under `assessmentExtension`. It recommends a conditional managed CPU canary before an 80-seat course pilot, with specialized resources admitted separately. The assessment is not an award, signed-in entitlement check or real classroom test.

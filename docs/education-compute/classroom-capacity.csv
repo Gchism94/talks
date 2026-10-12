@@ -1,0 +1,47 @@
+category,name,value,unit,boundary
+assumption,courses,2,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,students_per_course,40,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,seats,80,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,weeks,15,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,active_hours_per_week,8,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,cpu_per_student,2,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,ram_gb_per_student,6,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,home_gb_per_student,20,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,shared_gb_per_course,200,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,controller_vcpu,4,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,controller_ram_gb,15,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,allowance_percent,25,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,shared_worker_vcpu,64,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,shared_worker_ram_gb,250,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,gpu_students,40,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,gpu_group_size,5,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,gpu_labs,6,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,gpu_hours_per_lab,2,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,gpu_slot_su_per_hour,16,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,gpu_slot_vram_gb,10,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,backup_daily_change_percent,1,See structured assumptions,Illustrative; not a provider award or measurement
+assumption,backup_history_days,30,See structured assumptions,Illustrative; not a provider award or measurement
+Stopped between sessions,student_su,24000,SUs,"Ideal lower bound for individually stopped/autoscaled 2-vCPU instances. Shared workers have rounding, idle tail, image pulls and orchestration overhead; measure actual billing."
+Stopped between sessions,controller_su,12600,SUs,"Ideal lower bound for individually stopped/autoscaled 2-vCPU instances. Shared workers have rounding, idle tail, image pulls and orchestration overhead; measure actual billing."
+Stopped between sessions,cpu_su,36600,SUs,"Ideal lower bound for individually stopped/autoscaled 2-vCPU instances. Shared workers have rounding, idle tail, image pulls and orchestration overhead; measure actual billing."
+Stopped between sessions,peak_cpu_vcpu,164,vCPU,"Ideal lower bound for individually stopped/autoscaled 2-vCPU instances. Shared workers have rounding, idle tail, image pulls and orchestration overhead; measure actual billing."
+Stopped between sessions,peak_ram_gb,495,GB,"Ideal lower bound for individually stopped/autoscaled 2-vCPU instances. Shared workers have rounding, idle tail, image pulls and orchestration overhead; measure actual billing."
+Student VMs always on,student_su,504000,SUs,"80 m3.small student instances plus one m3.quad controller, running 24 hours/day for 15 weeks; includes 25% spending allowance."
+Student VMs always on,controller_su,12600,SUs,"80 m3.small student instances plus one m3.quad controller, running 24 hours/day for 15 weeks; includes 25% spending allowance."
+Student VMs always on,cpu_su,516600,SUs,"80 m3.small student instances plus one m3.quad controller, running 24 hours/day for 15 weeks; includes 25% spending allowance."
+Student VMs always on,peak_cpu_vcpu,164,vCPU,"80 m3.small student instances plus one m3.quad controller, running 24 hours/day for 15 weeks; includes 25% spending allowance."
+Student VMs always on,peak_ram_gb,495,GB,"80 m3.small student instances plus one m3.quad controller, running 24 hours/day for 15 weeks; includes 25% spending allowance."
+Shared hub workers always on,student_su,604800,SUs,"Three m3.2xl workers sized to cover 160 student vCPU and 480 GB RAM, plus one m3.quad controller; placement and hub performance remain untested."
+Shared hub workers always on,controller_su,12600,SUs,"Three m3.2xl workers sized to cover 160 student vCPU and 480 GB RAM, plus one m3.quad controller; placement and hub performance remain untested."
+Shared hub workers always on,cpu_su,617400,SUs,"Three m3.2xl workers sized to cover 160 student vCPU and 480 GB RAM, plus one m3.quad controller; placement and hub performance remain untested."
+Shared hub workers always on,peak_cpu_vcpu,196,vCPU,"Three m3.2xl workers sized to cover 160 student vCPU and 480 GB RAM, plus one m3.quad controller; placement and hub performance remain untested."
+Shared hub workers always on,peak_ram_gb,765,GB,"Three m3.2xl workers sized to cover 160 student vCPU and 480 GB RAM, plus one m3.quad controller; placement and hub performance remain untested."
+gpu_model,slots,8,See structured model,Eight g3.medium fractional A100 instances shared by groups of five; 120 planned fractional-instance hours is not 120 full-GPU hours. Separate GPU exchange/permission and networking required.
+gpu_model,instance_hours,96,See structured model,Eight g3.medium fractional A100 instances shared by groups of five; 120 planned fractional-instance hours is not 120 full-GPU hours. Separate GPU exchange/permission and networking required.
+gpu_model,instance_hours_with_allowance,120,See structured model,Eight g3.medium fractional A100 instances shared by groups of five; 120 planned fractional-instance hours is not 120 full-GPU hours. Separate GPU exchange/permission and networking required.
+gpu_model,su,1920,See structured model,Eight g3.medium fractional A100 instances shared by groups of five; 120 planned fractional-instance hours is not 120 full-GPU hours. Separate GPU exchange/permission and networking required.
+gpu_model,peak_gpu_resource_vcpu,64,See structured model,Eight g3.medium fractional A100 instances shared by groups of five; 120 planned fractional-instance hours is not 120 full-GPU hours. Separate GPU exchange/permission and networking required.
+gpu_model,peak_gpu_resource_ram_gb,240,See structured model,Eight g3.medium fractional A100 instances shared by groups of five; 120 planned fractional-instance hours is not 120 full-GPU hours. Separate GPU exchange/permission and networking required.
+gpu_model,vram_per_slot_gb,10,See structured model,Eight g3.medium fractional A100 instances shared by groups of five; 120 planned fractional-instance hours is not 120 full-GPU hours. Separate GPU exchange/permission and networking required.
+storage_model,working_gb,2000,See structured model,"Decimal GB/TB. Working data = 80×20 GB homes + 2×200 GB shared. Independent backup estimate = one working copy + 30 days of 1% changed data/day; excludes compression/deduplication, root disks, images, logs and snapshots. This is not a storage quote or approved retention schedule."
+storage_model,backup_gb,2600,See structured model,"Decimal GB/TB. Working data = 80×20 GB homes + 2×200 GB shared. Independent backup estimate = one working copy + 30 days of 1% changed data/day; excludes compression/deduplication, root disks, images, logs and snapshots. This is not a storage quote or approved retention schedule."

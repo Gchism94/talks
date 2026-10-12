@@ -28,12 +28,14 @@
       "category": "compute",
       "funding": "NSF PATh/IRIS-HEP + institutional/DOE in-kind contributions",
       "kind": "Opportunistic distributed throughput pool",
-      "route": "OSG Portal / facilitated access point",
+      "route": "Documented guest education notebook or facilitated full event accounts",
       "fit": "Independent text/image analyses, parameter sweeps, model evaluation and many short CPU/GPU jobs.",
-      "boundary": "Interruptible fair share; complete/checkpoint jobs within 20 hours. Educational project fit needs facilitation; no classroom GPU reservation.",
+      "boundary": "Guest four-hour timeout/files may be lost; full accounts usually end shortly after event. Interruptible fair share; complete/checkpoint jobs within 20 hours. No sensitive/proprietary data or classroom GPU reservation.",
       "sources": [
         "fedosg",
-        "fedospool"
+        "fedospool",
+        "assessospedu",
+        "assessosppolicy"
       ],
       "capabilities": [
         "batch",
@@ -49,10 +51,12 @@
       "funding": "NSF PATh",
       "kind": "Dedicated credit-based throughput pool",
       "route": "Consult PATh; NSF-funded project startup/credit process",
-      "fit": "Larger HTC research jobs and reliable resource profiles; relevant to MESA-funded work.",
-      "boundary": "NSF research scope/credits required. Different from free fair-share OSPool; consultation is not automatic authorization.",
+      "fit": "Dedicated throughput research jobs when the affiliated NSF program and credits are confirmed.",
+      "boundary": "IDSS is not explicitly listed in the published affiliated-program policy. MESA funding alone does not establish eligibility or course authorization; confirm with PATh/NSF. Separate from OSPool education access.",
       "sources": [
-        "fedpath"
+        "fedpath",
+        "assesspathelig",
+        "assesspathcredits"
       ],
       "capabilities": [
         "batch",
@@ -69,10 +73,13 @@
       "kind": "Shared GPU/cloud services",
       "route": "Institutional onboarding; hosted JupyterHub, API or project namespace",
       "fit": "Hosted teaching notebooks, GPUs, open-weight model APIs and containerized services.",
-      "boundary": "Shared capacity, account policies and operator responsibilities; Nautilus is the NRP cluster, not a separate pool.",
+      "boundary": "Hosted hub starts with 5 GB homes; larger storage, class/GPU quota and hub-specific exceptions need approval. Ordinary-pod six-hour rules do not establish every hub limit. Not archival storage; idle volumes may be purged.",
       "sources": [
         "fednrp",
-        "fednrpllm"
+        "fednrpllm",
+        "assessnrpedu",
+        "assessnrphub",
+        "assessnrppolicy"
       ],
       "capabilities": [
         "teach",
@@ -91,10 +98,13 @@
       "kind": "ACCESS resource provider / VM cloud",
       "route": "ACCESS allocation, course images and student/project access",
       "fit": "Notebooks, RStudio, desktops, web/database teaching servers and vGPU environments.",
-      "boundary": "Budget credits for always-on instances, term duration, data backup and GPU demand. Not permanent institutional hosting.",
+      "boundary": "Always-on VM accounting, separate GPU exchange, concurrent quota and extra storage need approval. Independent backups required. Expiry/overdraw disables access and can destroy unresolved resources after thirty days.",
       "sources": [
         "fedjetstream",
-        "fedjetstreamfund"
+        "fedjetstreamfund",
+        "assessjetquota",
+        "assessjetstorage",
+        "assessjetexpiry"
       ],
       "capabilities": [
         "teach",
@@ -130,11 +140,14 @@
       "category": "compute",
       "funding": "NSF support + awarded cloud budgets",
       "kind": "Commercial-cloud broker and managed teaching platform",
-      "route": "ACCESS/NAIRR route appropriate to requested service",
+      "route": "General ACCESS Explore Classroom route; separate NAIRR Classroom route for AI coursework",
       "fit": "Managed Python/R/C++ browser environments with login and student storage.",
-      "boundary": "Approved budget/term, provider configuration and GPU availability; not a commercial free tier. Check actual onboarding terminology with CloudBank.",
+      "boundary": "Managed CPU per-student limits/capacity need confirmation. Current registry says fall 2026 GPU pilot is at capacity; requests considered in 2027, not guaranteed. Renewal terms need reconciliation with education-period policy.",
       "sources": [
-        "fedcloudbank"
+        "fedcloudbank",
+        "assesscloudbank",
+        "assesscbgpu",
+        "assesscbscope"
       ],
       "capabilities": [
         "teach",
@@ -352,11 +365,14 @@
       "kind": "Metadata/data mesh/lakehouse + AI workflow integration",
       "route": "Published MESA portal/docs; underlying services govern compute",
       "fit": "Metadata, semantic discovery, reproducible data/agent workflows, Jupyter/R/desktop app layer.",
-      "boundary": "Published tools are not a verified class service level. Underlying CyVerse/TACC/ACCESS/NAIRR allocations, GPU entitlement and support remain distinct.",
+      "boundary": "Portal reads the existing CyVerse account/teams/quota; it does not add a second allowance. Selected apps, Save & Exit, per-user Pro/TRIF entitlement, classroom/GPU capacity and support remain to be tested.",
       "sources": [
         "fedmesa",
         "fedidss",
-        "fedidssprogram"
+        "fedidssprogram",
+        "assessmesaportal",
+        "assessmesaapps",
+        "assessmesasave"
       ],
       "capabilities": [
         "teach",
