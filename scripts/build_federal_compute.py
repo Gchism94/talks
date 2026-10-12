@@ -41,7 +41,7 @@ def build():
     (DEST/'federal-compute.json').write_text(json.dumps(dict(checked_at='2026-10-12',platforms=rows,gaps=data['federal_platform_gaps'],research=data['federal_extension']),ensure_ascii=False,indent=2)+'\n')
     with (DEST/'federal-compute.csv').open('w',newline='') as f:
         fields=['name','category','kind','funding','status','parent','route','fit','boundary','capabilities','source_urls']
-        writer=csv.DictWriter(f,fieldnames=fields);writer.writeheader()
+        writer=csv.DictWriter(f,fieldnames=fields,lineterminator='\n');writer.writeheader()
         for r in rows:
             row={k:r[k] for k in fields if k not in ['capabilities','source_urls']};row['capabilities']='; '.join(r['capabilities']);row['source_urls']='; '.join(evidence[k]['url'] for k in r['sources']);writer.writerow(row)
     source=ROOT/'education-compute.html';text=source.read_text()
