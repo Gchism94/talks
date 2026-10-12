@@ -1,0 +1,10 @@
+function,owner,people,prep_hours_per_person,teaching_hours_per_person_week,close_hours_per_person,modeled_total_hours,inside_greg_ten_hours,basis
+Allocation and coordination,Greg,1,6,1,1.0,22.0,yes,"ACCESS request, provider scope, course dates and demand review."
+Benchmark and component work,Greg,1,18,1,1.0,34.0,yes,"CPU/GPU runs, package/environment checks and reproducible result review."
+Service operations,Greg,1,12,4,6,78,yes,"Accounts, monitoring, backups, export and issue triage; hours must be measured."
+Instructional design and accessibility,Greg,1,6,0.5,1.0,14.5,yes,Accessible instructions and equivalent CPU activities; institutional approval is separate.
+"Data, rights and recovery review",Greg,1,6,1,4,25,yes,"Coordinate rights/privacy destinations, recovery rehearsal and closeout; no authority to self-approve institutional requirements."
+EduCloud grant preparation,Greg,1,6,1,2,23,yes,Distinct stewardship/training/evaluation work packages; no grant submission or award implied.
+Planning and incident buffer,Greg,1,6,1.5,5.0,33.5,yes,Absorb unexpected work; reduce scope when the ten-hour envelope is exceeded.
+Two course support TAs,Not appointed; grant-supported if funded,2,4,3,2,102,no,Per TA: 4 prep + 3/week × 15 + 2 close = 51 hours. Outside Greg’s ten hours. No salary/rate assumed.
+Two course leads,Course leads; named commitments pending,2,16,1,4,70,no,Per lead: 16 prep + 1/week × 15 + 4 close = 35 additional pilot hours. Outside Greg’s ten hours. No salary requested; regular teaching/grading excluded.

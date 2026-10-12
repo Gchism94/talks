@@ -15,9 +15,10 @@ PORTABLE = OUT / 'portable/teaching-on-borrowed-compute'
 def build():
     ledger = json.loads((ROOT / 'docs/education-compute/evidence.json').read_text())
     PORTABLE.mkdir(parents=True, exist_ok=True)
-    for src in (ROOT / 'docs/education-compute').iterdir():
+    for src in (ROOT / 'docs/education-compute').rglob('*'):
         if src.is_file():
-            target = PORTABLE / src.name
+            target = PORTABLE / src.relative_to(ROOT / 'docs/education-compute')
+            target.parent.mkdir(parents=True,exist_ok=True)
             if src.suffix == '.html':
                 text = src.read_text().replace('../assets/', 'assets/')
                 text = text.replace('<span class="brand"><a href="../">← All talks</a></span>', '<span class="brand">Teaching on borrowed compute</span>')
@@ -35,7 +36,7 @@ def build():
     if 'classroom_assessment' in ledger:
         text += '\nCLASSROOM ROUTE ASSESSMENT | October 12, 2026\nOpen classroom-assessment.html for seven route/operations roles, a two-course 80-seat illustrative pilot, three interactive CPU sizing scenarios, optional fractional GPU accounting, seven readiness gates and unsent provider questions. JSON and capacity/readiness CSV exports are beside it. No allocation, signed-in entitlement or real classroom workload has been tested.\n'
     if 'pilot_program_summary' in ledger:
-        text += '\nCOHESIVE PROGRAM AND PILOT PACKET | October 12, 2026\nStart with program.html for administrator, faculty and course-lead views. Open access-request.html for the unsubmitted request, pilot-plan.html for proposed INFO 521/LIS 671 components, budget.html for editable assumptions, readiness.html for thirteen planned/not-run checks; ACCESS CPU/GPU allocation as the classroom route, campus AWS only for CPU component tests, and free GPU benchmarks before piloting, and resource-library.html for the full body of evidence. Printable PDF and text/CSV/JSON downloads are included. No staff, money, course offering or provider capacity is approved by the site.\n'
+        text += '\nCOHESIVE PROGRAM AND PILOT PACKET | October 12, 2026\nStart with program.html for administrator, faculty and course-lead views. Open access-request.html for the unsubmitted request, pilot-plan.html for proposed INFO 521/LIS 671 components, budget.html for the ten-hour weekly effort planner and zero-cash/grant dependencies, readiness.html for thirteen planned/not-run checks; ACCESS CPU/GPU allocation as the classroom route, campus AWS only for CPU component tests, and free GPU benchmarks before piloting, and resource-library.html for the full body of evidence. Printable PDF and text/CSV/JSON downloads are included, alongside runnable DS/MLIS CPU tests, self-contained GPU notebooks and the ACCESS sizing helper (classroom-benchmarks.zip). No staff, money, course offering or provider capacity is approved by the site.\n'
     start.write_text(text)
     archive = OUT / 'teaching-on-borrowed-compute.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
@@ -54,8 +55,10 @@ def build():
     for name in ['education-compute-pilot.json','education-compute-program.css','education-compute-program.js']:
         copy(ROOT / 'site' / name, Path('source') / name)
     copy(ROOT / 'site/covers/education-compute.png', Path('source/cover.png'))
-    for src in sorted((ROOT / 'docs/education-compute').iterdir()):
-        if src.is_file(): copy(src, Path('review/published-export') / src.name)
+    for src in sorted((ROOT / 'docs/education-compute').rglob('*')):
+        if src.is_file(): copy(src, Path('review/published-export') / src.relative_to(ROOT / 'docs/education-compute'))
+    for src in sorted((ROOT/'benchmarks/education-compute').iterdir()):
+        if src.is_file(): copy(src,Path('source/benchmarks')/src.name)
     for src in sorted(OUT.iterdir()):
         if src.is_dir():
             if src.name in ['codabench-research','federal-research','assessment-research','pilot-research']:
@@ -68,7 +71,7 @@ def build():
         elif src.suffix == '.zip': target = Path('.')
         else: target = Path('review')
         copy(src, target / src.name)
-    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','build_compute_pilot_pdfs.py','build_site.py','check_site.py','package_compute_review.py']:
+    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','build_compute_pilot_pdfs.py','build_compute_benchmarks.py','build_site.py','check_site.py','package_compute_review.py']:
         copy(ROOT / 'scripts' / name, Path('review/builders') / name)
     for src in sorted((ROOT / 'output/playwright').iterdir()):
         if src.is_file() and src.name.startswith(('education-compute-','repositories-','service-evidence-','codabench-','federal-','assessment-','pilot-')):

@@ -1,0 +1,28 @@
+EDUCLOUD-ALIGNED GRANT WORK PACKAGES | 12 October 2026
+Zero cash budget. No salary/rate/cash-envelope arithmetic.
+
+Available cash budget is zero. Work needing paid support, storage, hosting, development or recovery must have a confirmed eligible EduCloud grant and allowable work package before spending. ACCESS is CPU/GPU resource allocation, not payroll. No grant award is asserted. Existing campus test access and free GPU resources must stay within their authorized no-purchase scope.
+
+Greg cannot be his own independent backup. Potential separate backup effort: 8 preparation + 1/week × 15 + 4 close = 27 hours, contingent on a grant-funded or otherwise confirmed distinct person. This is an unfilled requirement, not extra hours silently added to Greg’s capacity. Institutional privacy/accessibility review remains approval work, not self-approval by Greg.
+
+Sloan Open Source in Science
+Reusable open-science stewardship, maintenance and operator practices
+A prospect in the EduCloud plan, not an awarded classroom operations budget.
+https://sloan.org/programs/digital-technology/open-source-in-science
+
+NSF PESOSE Track 1
+Open-source ecosystem scoping, governance and sustainability planning
+Match allowable planning activities; no generic engineering/payroll entitlement. No award assumed.
+https://www.nsf.gov/funding/opportunities/pesose-pathways-enable-secure-open-source-ecosystems/nsf26-506/solicitation
+
+NSF CyberTraining
+Advanced-CI educator/operator training and reusable curriculum
+Confirm team, population, MESA overlap and allowable costs before relying on it.
+https://www.nsf.gov/funding/opportunities/training-based-workforce-development-advanced
+
+NSF IUSE: EDU
+Undergraduate STEM learning or institutional-change research
+The proposed graduate DS/MLIS courses do not automatically qualify; a distinct eligible undergraduate scope is required.
+https://www.nsf.gov/funding/opportunities/iuse-edu-improving-undergraduate-stem-education-directorate-stem/nsf23-510/solicitation
+
+Based on the local EduCloud sustainability/funding plans reviewed October 12. Grant awards and allowed costs must be confirmed. Keep stewardship, development, training, evaluation and recurring operations distinct; no double billing. IUSE undergraduate eligibility does not automatically cover the graduate DS/MLIS candidates.

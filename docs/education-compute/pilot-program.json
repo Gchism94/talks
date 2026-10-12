@@ -9,11 +9,11 @@
     {
       "id": "administrators",
       "name": "Administrators",
-      "headline": "Fund a bounded pilot, with an exit.",
-      "body": "Review the ACCESS CPU/GPU allocation strategy and fund the service around it. The revised illustrative estimate is $32,424 cash plus $8,220 committed staff time; propose an $8,000 preparation/test release inside a $35,000 cash envelope. Campus AWS is for component tests only; free GPU benchmarks must precede piloting. Neither funds nor an allocation are approved here.",
+      "headline": "Keep preparation inside available time.",
+      "body": "No cash budget is available. Greg contributes up to ten hours/week across allocation, benchmarks, operations, design, data/recovery and grant preparation. TA and course-lead hours sit outside that envelope; course leads need no salary. Expenses or paid support depend on confirmed eligible EduCloud grants, not a proposed cash cap.",
       "links": [
         [
-          "Budget and staffing",
+          "Hours and grant dependencies",
           "budget.html"
         ],
         [
@@ -50,7 +50,7 @@
       "id": "course-leads",
       "name": "Course leads",
       "headline": "Rehearse an assignment before a semester.",
-      "body": "Benchmark before piloting: CPU components on campus AWS, GPU workloads on free resources, then reproduce representative runs on the awarded ACCESS CPU/GPU system. Pin environments, measure demand and verify assignment/save/export/grade receipts. Each lead reserves 35 additional pilot hours; normal teaching/grading are separate.",
+      "body": "Benchmark before piloting: CPU components on campus AWS, GPU workloads on free resources, then reproduce representative runs on the awarded ACCESS CPU/GPU system. Pin environments, measure demand and verify assignment/save/export/grade receipts. Each lead reserves 35 additional pilot hours; normal teaching/grading are separate. Greg’s total preparation/operations capacity is ten hours/week; course-lead effort is separate and has no salary request.",
       "links": [
         [
           "Request packet",
@@ -150,8 +150,8 @@
     {
       "when": "Before piloting · preparation weeks 1–2",
       "title": "Test components and benchmark GPUs",
-      "body": "Confirm owners, scope and test-account terms. Use campus UITS/AWS only for CPU component tests; run bounded staff GPU benchmarks on Kaggle/free Colab using synthetic or rights-cleared inputs. Record resource use, correctness, checkpoints, export and failed/unavailable sessions before any student canary. Proposed initial preparation/test cap: $8,000 inside a $35,000 envelope; no funds approved.",
-      "exit": "Dated CPU test evidence and GPU benchmark results, including failures and a justified workload envelope; no run is claimed here."
+      "body": "Use already-authorized campus UITS/AWS CPU component tests and free Kaggle/Colab GPU notebooks. Pin synthetic inputs, run bounded measurements and retain correctness/export/failure evidence before any student canary. Greg’s total work, including grant preparation, is capped at ten hours/week; no cash, purchases or new paid accounts are available.",
+      "exit": "Reproducible CPU/GPU component results and a workload envelope, within available time. Local functional checks do not replace AWS/CUDA provider measurements."
     },
     {
       "when": "After benchmarks · before canary",
@@ -168,13 +168,13 @@
     {
       "when": "After canary · preparation weeks 5–6",
       "title": "Rehearse the whole class and recovery",
-      "body": "With provider approval, rehearse 80 student workspaces plus agreed staff use. Test account isolation, grading receipts, accessible instructions, independent restore and the CPU fallback. Update the cost/usage forecast from observed operator-hours.",
-      "exit": "All thirteen applicable readiness checks have dated evidence and accountable sign-off; sponsor releases the remaining envelope."
+      "body": "With provider approval, rehearse 80 student workspaces plus agreed staff use. Test account isolation, grading receipts, accessible instructions, independent restore and the CPU fallback. Update the usage and effort forecast from observed runs and actual weekly hours. Keep Greg’s total within ten hours; TA/lead support is separate.",
+      "exit": "All thirteen applicable checks have evidence, term support and any needed grant-funded costs confirmed; otherwise narrow or defer the classroom scope."
     },
     {
       "when": "Weeks 1–15",
       "title": "Teach the two-course pilot",
-      "body": "Teach on the awarded ACCESS CPU/GPU environment after readiness sign-off. Review quotas, queue/session behavior, usage, storage, tickets and backups weekly. GPU activities use the benchmarked workload and a CPU-equivalent assessed route; MESA/OSPool extensions have separate checks. Campus AWS remains a component-testing route.",
+      "body": "Teach on the awarded ACCESS CPU/GPU environment after readiness sign-off. Review quotas, queue/session behavior, usage, storage, tickets and backups weekly. GPU activities use the benchmarked workload and a CPU-equivalent assessed route; MESA/OSPool extensions have separate checks. Campus AWS remains a component-testing route. Do not admit a course with unfunded necessary expenses or missing backup/support coverage.",
       "exit": "Record aggregate completion/access outcomes and actual costs; pause a failing component without removing the CPU course route."
     },
     {
@@ -188,46 +188,103 @@
     "weeks": 15,
     "preparation_weeks": 6,
     "close_weeks": 2,
+    "available_cash": 0,
+    "weekly_capacity": 10,
+    "total_greg_hours": 230,
     "roles": [
       {
-        "id": "owner",
-        "role": "Service owner / allocation lead",
+        "id": "allocation",
+        "role": "Allocation and coordination",
         "people": 1,
-        "prep": 20,
-        "weekly": 0,
-        "close": 4,
-        "rate": 100,
-        "funding": "cash",
-        "duty": "Prepare the CPU/GPU ACCESS resource plan, disclose campus test resources, confirm allocation scope/term and coordinate provider fit, budget and go/no-go. Eligible PI and appointments remain to be confirmed.",
-        "hours": 24,
-        "cost": 2400
+        "prep": 6,
+        "weekly": 1,
+        "close": 1.0,
+        "hours": 22.0,
+        "preparation_weekly": 1,
+        "close_weekly": 0.5,
+        "owner": "Greg",
+        "duty": "ACCESS request, provider scope, course dates and demand review."
       },
       {
-        "id": "operator",
-        "role": "Primary technical operator",
+        "id": "benchmark",
+        "role": "Benchmark and component work",
         "people": 1,
-        "prep": 56,
+        "prep": 18,
+        "weekly": 1,
+        "close": 1.0,
+        "hours": 34.0,
+        "preparation_weekly": 3,
+        "close_weekly": 0.5,
+        "owner": "Greg",
+        "duty": "CPU/GPU runs, package/environment checks and reproducible result review."
+      },
+      {
+        "id": "operations",
+        "role": "Service operations",
+        "people": 1,
+        "prep": 12,
         "weekly": 4,
-        "close": 12,
-        "rate": 90,
-        "funding": "cash",
-        "duty": "Includes 16 added preparation hours for free GPU benchmarks and campus CPU component tests. Configure the selected ACCESS environment, images, accounts, monitoring, backup/export and retirement. Weekly hours are a planning allowance; self-operated infrastructure may require more.",
-        "hours": 128,
-        "cost": 11520
+        "close": 6,
+        "hours": 78,
+        "preparation_weekly": 2,
+        "close_weekly": 3,
+        "owner": "Greg",
+        "duty": "Accounts, monitoring, backups, export and issue triage; hours must be measured."
       },
       {
-        "id": "backup",
-        "role": "Backup technical operator",
+        "id": "design",
+        "role": "Instructional design and accessibility",
         "people": 1,
-        "prep": 8,
+        "prep": 6,
+        "weekly": 0.5,
+        "close": 1.0,
+        "hours": 14.5,
+        "preparation_weekly": 1,
+        "close_weekly": 0.5,
+        "owner": "Greg",
+        "duty": "Accessible instructions and equivalent CPU activities; institutional approval is separate."
+      },
+      {
+        "id": "data",
+        "role": "Data, rights and recovery review",
+        "people": 1,
+        "prep": 6,
         "weekly": 1,
         "close": 4,
-        "rate": 90,
-        "funding": "cash",
-        "duty": "Independently rehearse restore and cover absences; keep the runbook and emergency export usable. Must be a different person from the primary operator.",
-        "hours": 27,
-        "cost": 2430
+        "hours": 25,
+        "preparation_weekly": 1,
+        "close_weekly": 2,
+        "owner": "Greg",
+        "duty": "Coordinate rights/privacy destinations, recovery rehearsal and closeout; no authority to self-approve institutional requirements."
       },
+      {
+        "id": "grants",
+        "role": "EduCloud grant preparation",
+        "people": 1,
+        "prep": 6,
+        "weekly": 1,
+        "close": 2,
+        "hours": 23,
+        "preparation_weekly": 1,
+        "close_weekly": 1,
+        "owner": "Greg",
+        "duty": "Distinct stewardship/training/evaluation work packages; no grant submission or award implied."
+      },
+      {
+        "id": "buffer",
+        "role": "Planning and incident buffer",
+        "people": 1,
+        "prep": 6,
+        "weekly": 1.5,
+        "close": 5.0,
+        "hours": 33.5,
+        "preparation_weekly": 1,
+        "close_weekly": 2.5,
+        "owner": "Greg",
+        "duty": "Absorb unexpected work; reduce scope when the ten-hour envelope is exceeded."
+      }
+    ],
+    "separate_roles": [
       {
         "id": "ta",
         "role": "Two course support TAs",
@@ -235,37 +292,9 @@
         "prep": 4,
         "weekly": 3,
         "close": 2,
-        "rate": 35,
-        "funding": "cash",
-        "duty": "Per TA: two hours of scheduled help and one hour of ticket/lab triage each teaching week; extra setup/close hours. These are pilot computing-support hours, not the full course grading workload.",
         "hours": 102,
-        "cost": 3570
-      },
-      {
-        "id": "design",
-        "role": "Instructional design / accessibility",
-        "people": 1,
-        "prep": 20,
-        "weekly": 0,
-        "close": 4,
-        "rate": 75,
-        "funding": "cash",
-        "duty": "Accessible notebook instructions, keyboard/screen-reader review, CPU/offline alternatives and learner onboarding.",
-        "hours": 24,
-        "cost": 1800
-      },
-      {
-        "id": "review",
-        "role": "IT security / privacy reviewer",
-        "people": 1,
-        "prep": 12,
-        "weekly": 0,
-        "close": 0,
-        "rate": 100,
-        "funding": "cash",
-        "duty": "Approve data destinations, SSO/account roles, export/retention and institutional service requirements. Review is a proposed duty, not an existing approval.",
-        "hours": 12,
-        "cost": 1200
+        "owner": "Not appointed; grant-supported if funded",
+        "duty": "Per TA: 4 prep + 3/week × 15 + 2 close = 51 hours. Outside Greg’s ten hours. No salary/rate assumed."
       },
       {
         "id": "leads",
@@ -274,81 +303,41 @@
         "prep": 16,
         "weekly": 1,
         "close": 4,
-        "rate": 90,
-        "funding": "in-kind",
-        "duty": "Adapt one representative assignment each, teach the save/export workflow, decide substitutions and reconcile grading receipts. Additional pilot effort excludes normal course instruction/grading; workload release must be committed.",
         "hours": 70,
-        "cost": 6300
-      },
-      {
-        "id": "library",
-        "role": "Libraries / data steward",
-        "people": 1,
-        "prep": 10,
-        "weekly": 0,
-        "close": 6,
-        "rate": 85,
-        "funding": "in-kind",
-        "duty": "Review metadata/rights, data packaging, retention and eligible archival selection; no repository acceptance is promised.",
-        "hours": 16,
-        "cost": 1360
-      },
-      {
-        "id": "finance",
-        "role": "College sponsor / finance",
-        "people": 1,
-        "prep": 6,
-        "weekly": 0,
-        "close": 2,
-        "rate": 70,
-        "funding": "in-kind",
-        "duty": "Release staged funds, replace illustrative rates with institutional costing, approve the account/destination and decide continuation.",
-        "hours": 8,
-        "cost": 560
+        "owner": "Course leads; named commitments pending",
+        "duty": "Per lead: 16 prep + 1/week × 15 + 4 close = 35 additional pilot hours. Outside Greg’s ten hours. No salary requested; regular teaching/grading excluded."
       }
     ],
-    "nonlabor": [
+    "basis": "Hours only. Greg has ten hours/week for all work shown here, including grants and operations; not ten hours for each role. Six preparation + fifteen teaching + two close weeks gives a 230-hour ceiling. Role splits are potential allocations to test, not committed staffing or a promise that two full courses fit. No salary math, cash envelope, contingency or finance role. These are shared hours with the EduCloud effort, not an additional ten-hour allocation.",
+    "funding": "Available cash budget is zero. Work needing paid support, storage, hosting, development or recovery must have a confirmed eligible EduCloud grant and allowable work package before spending. ACCESS is CPU/GPU resource allocation, not payroll. No grant award is asserted. Existing campus test access and free GPU resources must stay within their authorized no-purchase scope.",
+    "gaps": "Greg cannot be his own independent backup. Potential separate backup effort: 8 preparation + 1/week × 15 + 4 close = 27 hours, contingent on a grant-funded or otherwise confirmed distinct person. This is an unfilled requirement, not extra hours silently added to Greg’s capacity. Institutional privacy/accessibility review remains approval work, not self-approval by Greg.",
+    "exclusions": "No college sponsor/finance role. TA and course-lead hours are separate; course leads need no salary. Paid TA/support/backup or resource needs await a confirmed eligible grant. Normal instruction/grading is not counted as added pilot effort. Ten hours cannot imply 24/7 support.",
+    "grant_lanes": [
       {
-        "id": "storage",
-        "item": "Approved backup/export destinations",
-        "amount": 2000,
-        "basis": "Planning reserve for two independently restorable copies and access/retention controls. Obtain an institution-approved quote; the open-research storage example below does not authorize student-work storage."
+        "name": "Sloan Open Source in Science",
+        "work": "Reusable open-science stewardship, maintenance and operator practices",
+        "boundary": "A prospect in the EduCloud plan, not an awarded classroom operations budget.",
+        "url": "https://sloan.org/programs/digital-technology/open-source-in-science"
       },
       {
-        "id": "hosting",
-        "item": "Durable exhibit / database destination",
-        "amount": 600,
-        "basis": "Planning reserve for optional MLIS exhibit hosting, exports or a department-managed application/database. Required labs use files and embedded SQLite; no external database subscription is required."
+        "name": "NSF PESOSE Track 1",
+        "work": "Open-source ecosystem scoping, governance and sustainability planning",
+        "boundary": "Match allowable planning activities; no generic engineering/payroll entitlement. No award assumed.",
+        "url": "https://www.nsf.gov/funding/opportunities/pesose-pathways-enable-secure-open-source-ecosystems/nsf26-506/solicitation"
       },
       {
-        "id": "fallback",
-        "item": "Fallback / unquoted service costs",
-        "amount": 1500,
-        "basis": "Reserve for approved teach-out or uncovered service costs. ACCESS, campus AWS testing and optional CloudBank terms are unquoted; no commercial purchase is authorized."
+        "name": "NSF CyberTraining",
+        "work": "Advanced-CI educator/operator training and reusable curriculum",
+        "boundary": "Confirm team, population, MESA overlap and allowable costs before relying on it.",
+        "url": "https://www.nsf.gov/funding/opportunities/training-based-workforce-development-advanced"
+      },
+      {
+        "name": "NSF IUSE: EDU",
+        "work": "Undergraduate STEM learning or institutional-change research",
+        "boundary": "The proposed graduate DS/MLIS courses do not automatically qualify; a distinct eligible undergraduate scope is required.",
+        "url": "https://www.nsf.gov/funding/opportunities/iuse-edu-improving-undergraduate-stem-education-directorate-stem/nsf23-510/solicitation"
       }
-    ],
-    "contingency_percent": 20,
-    "cash_base": 27020,
-    "cash_contingency": 5404.0,
-    "cash_total": 32424.0,
-    "in_kind": 8220,
-    "ceiling": 35000,
-    "canary_release_ceiling": 8000,
-    "basis": "Illustrative USD planning rates, not UArizona pay scales, provider quotes or approved funds. Rates are assumed fully loaded (salary/fringe/overhead included); do not add fringe twice. In-kind effort is a required written workload commitment, not free labor. Replacing defaults changes the proposal only, not an approved budget.",
-    "exclusions": "Excludes normal course instruction/grading, new staff recruitment, major platform development, laptops, paid software, optional GPU/model charges and institutional indirect costs beyond the assumed loaded rates. Additional scope requires a new estimate. No student-paid account or personal payment card is proposed.",
-    "cloudbank": "ACCESS CPU/GPU access is covered only within an approved allocation and provider terms. Campus UITS/AWS is for component testing only; charges, duration and quotas are unquoted. Free GPU benchmarks have no planned paid compute charge but consume staff time and variable account quotas. CloudBank is conditional, with its own accounting. Zero additional provider charges in this calculator is a planning input, not a quote or award.",
-    "storage_example": {
-      "rental_tb": 3,
-      "rental_rate_per_tb_year": 47.35,
-      "rental_annual_cost": 142.05,
-      "tier2_active_tb": 2.6,
-      "tier2_free_tb": 1,
-      "tier2_rate_per_tb_month": 23,
-      "months": 6,
-      "tier2_warm_estimate": 220.8,
-      "combined": 362.85,
-      "boundary": "The 2.6 TB backup comparison comes from the larger Jetstream2 route-assessment scenario, not the initial 440 GB student/shared data planning baseline. Conditional public/open-research-data comparison only. Campus rental is charged for the fiscal-year maximum and is not prorated; it is not backed up. Tier 2 estimate assumes 1.6 TB above the free first TB stays active for six months; actual storage-class/billing behavior varies. Glacier/Deep Glacier restoration can delay access. Confirm classroom eligibility, approved data classification, billing account, rates and connectivity. Retain a warm independent copy; neither these services nor R-DAS is approved here for private student work or grade records. The $2,000 reserve is used in the main budget instead of treating this comparison as a complete backup quote."
-    }
+    ]
   },
   "request": {
     "status": "Draft for review — not submitted",
@@ -366,7 +355,7 @@
     "field": "Select the applicable education/information-science fields in the live ACCESS form.",
     "grant": "No supporting research grant is asserted by this draft. Add a grant only if the PI confirms that the pilot falls within that award’s authorized scope. MESA/IDSS funding is not assumed to fund instruction or local operations.",
     "public_overview": "The University of Arizona College of Information Science seeks an ACCESS CPU and GPU allocation to support reproducible data science and digital-curation teaching in [TERM / YEAR]. The initial proposed pilot includes INFO 521 and LIS 671, approximately 80 students, with later expansion contingent on measured demand and approval. Students will analyze data, evaluate appropriately sized models, normalize collection metadata, query catalogs and export documented outputs. Before piloting, we will test CPU components through campus UITS/AWS and benchmark GPU workloads on free resources. The classroom pilot will use approved ACCESS resources, with named local support, accessible CPU-equivalent activities, independent recovery and end-of-term exports. GPU amounts and provider fit will be justified by measurements rather than free-tier quotas.",
-    "summary": "We propose a large CPU + GPU ACCESS allocation, beginning with a bounded two-course pilot and expanding only within an approved scope. Campus UITS/AWS is available to Greg Chism for CPU component testing only; free Kaggle/Colab GPU resources will provide pre-pilot benchmark measurements. Neither test route is the semester classroom hosting plan. All benchmark results are currently pending.\n\nProposed CPU workloads include small-model data analysis and metadata/SQLite exercises. Proposed GPU workloads include bounded small neural-network training and inference/evaluation; course leads must select the actual model, datasets and instructional need before benchmarking. Use synthetic or rights-cleared public inputs. Measure setup/run times, memory, correctness, checkpoints, failures and export. Reproduce a representative GPU run on the target ACCESS architecture before assuming performance transfers.\n\nAfter the award, test up to ten volunteers, then provider-approved class concurrency and recovery. ACCESS is the planned CPU/GPU classroom route. Keep approved rosters/grades in institutional systems, independently restore files and close educational accounts at agreed dates. No supporting research grant, staff appointment or budget is asserted. CloudBank through ACCESS is an optional managed implementation only if scope, CPU/GPU capacity, accounting and course dates are confirmed. Do not combine its managed Classroom terms with general broker pricing.",
+    "summary": "We propose a large CPU + GPU ACCESS allocation, beginning with a bounded two-course pilot and expanding only within an approved scope. Campus UITS/AWS is available to Greg Chism for CPU component testing only; free Kaggle/Colab GPU resources will provide pre-pilot benchmark measurements. Neither test route is the semester classroom hosting plan. All benchmark results are currently pending.\n\nProposed CPU workloads include small-model data analysis and metadata/SQLite exercises. Proposed GPU workloads include bounded small neural-network training and inference/evaluation; course leads must select the actual model, datasets and instructional need before benchmarking. Use synthetic or rights-cleared public inputs. Measure setup/run times, memory, correctness, checkpoints, failures and export. Reproduce a representative GPU run on the target ACCESS architecture before assuming performance transfers.\n\nAfter the award, test up to ten volunteers, then provider-approved class concurrency and recovery. ACCESS is the planned CPU/GPU classroom route. Keep approved rosters/grades in institutional systems, independently restore files and close educational accounts at agreed dates. No supporting research grant, staff appointment or budget is asserted. CloudBank through ACCESS is an optional managed implementation only if scope, CPU/GPU capacity, accounting and course dates are confirmed. Do not combine its managed Classroom terms with general broker pricing.\n\nOPERATING CONSTRAINT: Greg has ten hours/week total for allocation, component testing, operations and grant preparation. There is zero cash budget. TA and course-lead effort is separate (course leads need no salary). Necessary paid support/storage/hosting awaits confirmed eligible EduCloud grant funding; no award or finance role is assumed.",
     "resource_justification": "INITIAL PILOT CPU BASELINE: 80 students × 8 active workspace-hours/week × 15 weeks = 9,600 workspace-hours / 19,200 CPU core-hours at 2 vCPU per workspace; 25% allowance gives 12,000 workspace-hours / 24,000 CPU core-hours before staff, idle billing and orchestration. Preferred 6 GB RAM/student; initial homes 5 GB/student + 20 GB/course shared data = 440 GB before staff/overhead. These are workload descriptions, not universal ACCESS units.\n\nGPU REQUEST: quantity pending pre-pilot free GPU benchmarks and target-resource verification. For each approved GPU workload, calculate measured charged run-hours × planned runs/student or group × participants/groups × repetitions, then add separately justified rerun/checkpoint allowance, staff tests and measured overhead. Record GPU model, VRAM, precision, software and any device fraction; session time is not automatically full-device GPU time. Convert with the selected provider’s current accounting/exchange rate. Do not request zero GPU by default: CPU and GPU both belong in the intended allocation.\n\nLARGE ALLOCATION: confirm actual courses/terms/cohorts beyond the 80-seat pilot before extrapolating. Sum distinct CPU, GPU and storage demands across approved cohorts and subtract workloads already covered elsewhere. Do not double count campus AWS component tests as classroom CPU demand. Existing Jetstream2 scenarios (36,600 / 516,600 / 617,400 CPU SUs and an illustrative 1,920 fractional GPU-resource SUs) are comparison models, not this final request. The talk’s 480-seat calculator is also illustrative. Tier, numeric credits/resource units and concurrency/storage quotas remain incomplete until measured and provider-reviewed.",
     "requested_software": "Python/JupyterLab with approved pandas, scikit-learn, matplotlib, CSV/JSON/XML parsing and SQLite; optional R/RStudio and MARC parsing packages only if needed and supported. Request version pinning and notebook distribution (for example, nbgitpuller) where the provider supports them. Confirm the actual grading extensions, assignment export and permissions; no LMS integration is presumed.",
     "other_resources": "Campus UITS/AWS: Greg confirms access via requests, restricted in this plan to CPU component testing; exact limits/charges/dates need confirmation. Free Kaggle and Colab GPU resources: staff pre-pilot benchmarks only, subject to actual account eligibility, quotas and hardware availability. ACCESS provides the intended CPU and GPU classroom allocation. CloudBank is conditional through ACCESS. CyVerse/MESA, NRP and OSPool remain optional separate components; MESA funding is not automatically an instructional allocation or operations budget.",
@@ -376,7 +365,7 @@
       "Tier-appropriate education/resource plan and required course syllabi; CloudBank specifically requires syllabus PDFs if selected — incomplete.",
       "Dated CPU component tests and free GPU benchmarks with target-resource accounting/scaling justification — not run.",
       "Provider-confirmed CPU/GPU units, storage/concurrency and educational project structure — missing.",
-      "Named operators, committed operating budget, support/data/closure plan — pending."
+      "Named operators, confirmed term coverage and any eligible grant support, support/data/closure plan — pending."
     ],
     "submission_steps": [
       "Complete CPU component tests and free GPU benchmarks before any student pilot; retain failed controls and reproducible artifacts.",
@@ -410,18 +399,18 @@
     {
       "id": "scope",
       "category": "Operations",
-      "owner": "Sponsor + service owner",
+      "owner": "Greg + course leads",
       "when": "Before request",
-      "criterion": "Assign eligible PI, two course leads, primary and distinct backup operator; approve staged funding and term coverage.",
-      "evidence": "Written roster of owners, budget/workload commitments and escalation cover.",
-      "stop": "No named operator, backup or approved operating period.",
+      "criterion": "Confirm eligible PI, actual courses/leads, Greg’s ten-hour/week total envelope, separate TA/lead hours, distinct backup and full-term coverage. No cash budget; fund any necessary expenses only from a confirmed eligible grant.",
+      "evidence": "Named owners, realistic hours log, separate support commitments and confirmed grant/allowable-cost evidence if paid resources are needed.",
+      "stop": "Counting ten hours per role, assuming grant award, missing backup, or unfunded necessary spending.",
       "status": "Planned — not run",
       "result": ""
     },
     {
       "id": "benchmark",
       "category": "Teaching",
-      "owner": "Primary operator + course leads",
+      "owner": "Greg (operator) + course leads",
       "when": "Before student canary / request sizing",
       "criterion": "Complete campus AWS CPU component tests and free-resource GPU benchmarks; retain failures, correctness, measured memory/runtime, checkpoint/export results and workload scope. Reproduce representative GPU work on awarded ACCESS hardware before class.",
       "evidence": "Versioned workload/environment manifest, dataset checksums, dated result rows, actual GPU/account limits and target-resource comparison. No measurements recorded yet.",
@@ -509,7 +498,7 @@
     {
       "id": "accessibility",
       "category": "Teaching",
-      "owner": "Instructional designer + course leads",
+      "owner": "Greg (design coordination) + course leads",
       "when": "Before course admission",
       "criterion": "Rehearse keyboard and screen-reader access, readable instructions and equivalent small-data CPU/offline activity; resolve barriers in essential workflows.",
       "evidence": "User/task review and course-lead sign-off, with accommodations and fallback instructions.",
@@ -533,7 +522,7 @@
       "category": "Operations",
       "owner": "Owner + TAs + operators",
       "when": "Before week 1; weekly",
-      "criterion": "Publish actual staffed help windows and escalation route; rehearse an outage with CPU/small-data fallback. Proposed first response within one staffed business day; do not promise 24/7 support.",
+      "criterion": "Publish actual staffed help windows and escalation route; rehearse an outage with CPU/small-data fallback. Proposed first response within one staffed business day; do not promise 24/7 support. Keep actual Greg hours within ten/week across all duties; reduce scope when demand exceeds coverage.",
       "evidence": "Coverage schedule, ticket routing, outage exercise and fallback delivery proof.",
       "stop": "Unfunded coverage, unreachable operator or missed class deadline without substitution.",
       "status": "Planned — not run",
@@ -560,10 +549,10 @@
   ],
   "notices": [
     "Use ACCESS for the large CPU and GPU allocation and the classroom pilot. Use campus UITS/AWS only to test CPU components, and free GPU resources to benchmark workloads before piloting. Size the ACCESS request from measured demand; consider CloudBank through ACCESS only if its managed service can meet the confirmed requirements.",
-    "All thirteen readiness checks and all benchmarks are planned, not run. Campus AWS availability is user-provided; specific account terms and charges are unverified.",
-    "ACCESS is the planned CPU and GPU classroom route; free GPU resources are pre-pilot measurement tools.",
-    "The 80-seat CPU baseline is not a complete large-allocation request. GPU quantities and any additional cohorts remain to be measured/confirmed.",
-    "CloudBank is optional; its previously drafted CPU-only concept cannot silently replace the intended CPU/GPU allocation."
+    "Zero cash budget; ten Greg hours/week total. TA and course-lead hours are separate; course leads need no salary. No college sponsor/finance role.",
+    "Grant funding is the intended route for paid needs, aligned to eligible EduCloud work packages; no award/allowable-cost approval is assumed.",
+    "All thirteen class-readiness checks remain planned. Runnable synthetic benchmarks have local functional controls, not AWS/CUDA sizing results.",
+    "ACCESS CPU/GPU quantities and larger cohorts require actual provider measurements and complete resource/session accounting."
   ],
   "source_keys": [
     "assesscloudbank",
@@ -596,7 +585,7 @@
     "field": "Select the closest available education/information-science field(s) in the live form; CloudBank gives Science and Engineering Education as an example.",
     "grant": "No supporting research grant is asserted by this draft. Add a grant only if the PI confirms that the pilot falls within that award’s authorized scope. MESA/IDSS funding is not assumed to fund instruction or local operations.",
     "public_overview": "The University of Arizona College of Information Science requests CloudBank Classroom access through ACCESS for a two-course pilot in [TERM / YEAR]: INFO 521: Introduction to Machine Learning (proposed) and LIS 671: Digital Curation and Digital Preservation (proposed). Approximately 80 students would use browser-based CPU workspaces for reproducible data analysis, small-model evaluation, metadata normalization, collection queries and portable research outputs. The pilot aims to reduce software setup barriers and improve continuity of access across different student devices. We will evaluate workspace access, assignment reproducibility, export/recovery and staff effort using aggregate results. Both courses will retain an equivalent small-data CPU fallback, with institution-supported oversight, data handling and end-of-term exports.",
-    "summary": "We propose one 15-week teaching pilot preceded by six weeks of configuration/canary testing and followed by a two-week export/close period, subject to provider and ACCESS approval. The proposed INFO 521 component will use Python notebooks to clean synthetic tabular data, visualize patterns and validate small CPU models. The proposed LIS 671 component will normalize synthetic collection records, document metadata crosswalks, query an embedded SQLite catalog and export structured records with provenance. No GPU, external managed database or paid student account is necessary for required coursework.\n\nWe request persistent individual CPU workspaces for 80 students plus up to six course/technical staff accounts, institutional authentication, approved assignment distribution and a reproducible Python environment. The preferred student configuration is 2 vCPU, 6 GB RAM and an initial 5 GB home, or a provider-approved equivalent shown by rehearsal to run the assignments. Initial shared course data are modeled at 20 GB per course. Expand only after the canary demonstrates a justified need and the provider approves it. The college will designate course leads, primary/backup operators and support TAs, and will seek written operating commitments before classroom use; this draft does not claim those appointments or funds already exist.\n\nA ten-volunteer canary will precede provider-approved concurrency testing, account isolation, assignment execution, saved-file restart/export, grading-receipt reconciliation, accessibility review and a restore to a different environment. We will maintain CPU/small-data alternatives and independently restorable copies in institution-approved destinations. Rosters and grades will remain in approved institutional/LMS systems. The educational project will have explicit closure/export dates; continuation requires a confirmed provider/ACCESS process rather than assumed extension.\n\nPlease confirm that the managed Classroom resource, rather than a general CloudBank commercial-cloud award, is appropriate; specify its accounting and credit/resource request amount. We can split the two courses into separate educational projects if ACCESS or the provider requires it.\n\nCURRENT ROUTE DECISION: ACCESS is intended to cover CPU and GPU for the classroom. Campus AWS is for CPU component testing only; free GPU benchmarks precede piloting. This older CPU-only managed-Classroom concept is conditional and cannot replace the CPU/GPU plan without explicit confirmation of GPU coverage or an approved split implementation.",
+    "summary": "We propose one 15-week teaching pilot preceded by six weeks of configuration/canary testing and followed by a two-week export/close period, subject to provider and ACCESS approval. The proposed INFO 521 component will use Python notebooks to clean synthetic tabular data, visualize patterns and validate small CPU models. The proposed LIS 671 component will normalize synthetic collection records, document metadata crosswalks, query an embedded SQLite catalog and export structured records with provenance. No GPU, external managed database or paid student account is necessary for required coursework.\n\nWe request persistent individual CPU workspaces for 80 students plus up to six course/technical staff accounts, institutional authentication, approved assignment distribution and a reproducible Python environment. The preferred student configuration is 2 vCPU, 6 GB RAM and an initial 5 GB home, or a provider-approved equivalent shown by rehearsal to run the assignments. Initial shared course data are modeled at 20 GB per course. Expand only after the canary demonstrates a justified need and the provider approves it. The college will designate course leads, primary/backup operators and support TAs, and will seek written operating commitments before classroom use; this draft does not claim those appointments or funds already exist.\n\nA ten-volunteer canary will precede provider-approved concurrency testing, account isolation, assignment execution, saved-file restart/export, grading-receipt reconciliation, accessibility review and a restore to a different environment. We will maintain CPU/small-data alternatives and independently restorable copies in institution-approved destinations. Rosters and grades will remain in approved institutional/LMS systems. The educational project will have explicit closure/export dates; continuation requires a confirmed provider/ACCESS process rather than assumed extension.\n\nPlease confirm that the managed Classroom resource, rather than a general CloudBank commercial-cloud award, is appropriate; specify its accounting and credit/resource request amount. We can split the two courses into separate educational projects if ACCESS or the provider requires it.\n\nCURRENT ROUTE DECISION: ACCESS is intended to cover CPU and GPU for the classroom. Campus AWS is for CPU component testing only; free GPU benchmarks precede piloting. This older CPU-only managed-Classroom concept is conditional and cannot replace the CPU/GPU plan without explicit confirmation of GPU coverage or an approved split implementation.\n\nOPERATING CONSTRAINT: Greg has ten hours/week total for allocation, component testing, operations and grant preparation. There is zero cash budget. TA and course-lead effort is separate (course leads need no salary). Necessary paid support/storage/hosting awaits confirmed eligible EduCloud grant funding; no award or finance role is assumed.",
     "resource_justification": "Planning workload: 80 students × 8 active workspace-hours/week × 15 weeks = 9,600 student workspace-hours; 2 vCPU each implies 19,200 CPU core-hours of active demand. A 25% usage allowance gives 12,000 workspace-hours / 24,000 CPU core-hours before provider orchestration/idle billing and staff use. These are workload descriptions, not CloudBank SUs or ACCESS credit conversion. Request an initial 5 GB home per student plus 20 GB shared data per course: 80 × 5 + 2 × 20 = 440 GB before staff homes and provider overhead. Core tabular/catalog inputs are bounded below 250 MB each; the home/shared allowance covers notebooks, multiple assignment copies, outputs and approved small projects. Measure usage in the canary and grow only for justified semester needs with provider approval. The earlier 20 GB-home / 2 TB Jetstream2 assessment is a larger planning scenario, not a minimum CloudBank requirement. This conditional managed-CPU concept excludes GPU. The intended ACCESS allocation includes GPU separately; this concept is usable only if the CPU/GPU implementation and coverage are explicitly confirmed. Numeric CloudBank credit/resource amount remains to be supplied from the provider’s actual managed-Classroom accounting; do not enter the Jetstream2 VM model as CloudBank credits.",
     "requested_software": "Python/JupyterLab with approved pandas, scikit-learn, matplotlib, CSV/JSON/XML parsing and SQLite; optional R/RStudio and MARC parsing packages only if needed and supported. Request version pinning and notebook distribution (for example, nbgitpuller) where the provider supports them. Confirm the actual grading extensions, assignment export and permissions; no LMS integration is presumed.",
     "other_resources": "Campus UITS/AWS: Greg confirms access via requests, restricted in this plan to CPU component testing; exact limits/charges/dates need confirmation. Free Kaggle and Colab GPU resources: staff pre-pilot benchmarks only, subject to actual account eligibility, quotas and hardware availability. ACCESS provides the intended CPU and GPU classroom allocation. CloudBank is conditional through ACCESS. CyVerse/MESA, NRP and OSPool remain optional separate components; MESA funding is not automatically an instructional allocation or operations budget.",
@@ -658,8 +647,8 @@
     }
   ],
   "benchmark": {
-    "status": "Planned — not run",
-    "owner": "Primary operator with DS and MLIS course leads",
+    "status": "Runnable; local CPU and CPU-control verification only. Provider benchmarks not yet run.",
+    "owner": "Greg within ten hours/week, with course-lead workload review",
     "resources": [
       {
         "name": "Kaggle Notebooks",
@@ -718,12 +707,12 @@
       }
     ],
     "protocol": [
-      "Before running: select exact assignments and success criteria; pin package versions, model/seed/data checksums, input size and output format. Confirm permitted account use, remaining quota and a hard stop; use synthetic or rights-cleared inputs.",
-      "Run a short smoke test first. For each workload perform one warm-up and three bounded measured runs if quota permits. Record partial/failed/unavailable runs rather than deleting them. Do not parallelize across accounts to evade limits. Duplicate the matching register row for each warm-up, measured run or failure, keeping a run identifier in notes.",
-      "Capture actual accelerator/device fraction, VRAM, CPU/RAM, precision, environment, initialization and compute time, peak memory, input/output bytes, correctness and checkpoint/resume/export success. Record quota before/after and any billed units.",
-      "On a training run, save/reload a checkpoint and verify a resume. Export inputs/manifest/results and reopen the output elsewhere. Stop cleanly; no always-on process or extra paid credits are authorized.",
-      "Convert observed work to the approved course demand using run-hours × runs × students/groups × repeats; separately justify overhead, reruns, staff use and storage. CPU and GPU accounting are provider-specific.",
-      "Before the student canary, approve the benchmark report, workload scope and fallback. After the ACCESS award, replay representative runs on the target architecture and revise units before whole-class rehearsal. A passing free benchmark does not establish class concurrency or semester availability."
+      "Download classroom-benchmarks.zip. On an already-authorized campus AWS CPU instance, run cpu_benchmarks.py for DS and MLIS; do not provision a new paid instance. Start at 1k/10k rows, then 100k if permitted.",
+      "Upload the self-contained DS or MLIS GPU notebook to Kaggle/free Colab, select GPU, enter actual quota/provider and run in order. One warm-up plus three measured runs use bounded synthetic inputs; missing CUDA is recorded as blocked and CPU fallback is disabled.",
+      "Retain environment/version/input hashes, wall/compute/setup times, CPU/RSS or CUDA allocator memory, correctness, checkpoint/reopen evidence and failures. Export the result ZIP before ending the notebook; independently record quota/session/billed units.",
+      "Set approved course/group/job multipliers and measured result paths in demand.json; run size_access.py. It rejects local CPU controls as provider/GPU evidence by default and leaves provider conversion blank until supplied from verified accounting.",
+      "Keep component maxima distinct from complete assignment/session time, idle/provisioning overhead, class concurrency, staff/reruns and storage. Avoid double counting components inside allocated sessions; replay on the target ACCESS architecture.",
+      "Greg has ten hours/week across all preparation and operations, including grant work. These artifacts do not claim a course is ready, a grant is awarded or AWS/Kaggle/Colab/ACCESS measurements have been completed."
     ]
   }
 }

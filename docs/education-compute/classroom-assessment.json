@@ -195,7 +195,7 @@
     {
       "title": "Scope and owners",
       "when": "Before any class dependency",
-      "owner": "Course lead + college service owner",
+      "owner": "Course lead + Greg",
       "evidence": "Choose real course/syllabus, data classification, operator and backup; fund support and durable storage for the whole term.",
       "stop": "No named owner or approved service period.",
       "status": "Not yet tested/confirmed"
@@ -282,12 +282,12 @@
       "If eligible, what startup prototype and job specification are needed for a full credit request, and which program officer should receive it?"
     ],
     "College / Libraries": [
-      "Who is the primary operator, backup and course escalation contact? What recurring support, storage, identity and hosting/database budget is approved?",
-      "Which student/grade/research data may go to each provider, for how long, and what accessibility/procurement review is required?",
-      "Who owns independent backups, second-host recovery, export/grade reconciliation and archival selection? What measured workload and educational outcomes justify scaling?"
+      "What institutional data/export/retention and accessibility approvals are required for the exact components?",
+      "Which support/recovery tasks fit Greg’s ten hours/week and separate TA/lead commitments?",
+      "Which necessary paid needs fit an eligible confirmed EduCloud grant, and who provides distinct backup coverage before classroom launch?"
     ]
   },
-  "operations_model": "Federal allocations supply bounded resources. College recurring operating funds cover course support, image maintenance, identity/rosters, backups, durable app/database services, export and Libraries stewardship. Cost these duties with actual operator-hours, provider terms and institutional rates before approval; no unsupported dollar estimate or staffing commitment is supplied.",
+  "operations_model": "Available cash budget is zero. Work needing paid support, storage, hosting, development or recovery must have a confirmed eligible EduCloud grant and allowable work package before spending. ACCESS is CPU/GPU resource allocation, not payroll. No grant award is asserted. Existing campus test access and free GPU resources must stay within their authorized no-purchase scope. Greg has ten hours/week total. Separate potential TA effort is 102 hours and additional course-lead effort 70 hours across the modeled term; no course-lead salary. No college sponsor/finance role. Distinct backup/support is unfilled until confirmed.",
   "degree_expansion": "The first canary covers DS and MLIS. Notebook-compatible MS/BS Information Science and PhD projects can reuse the route after workload review. ETS and Information Science and Arts need public-data/browser workflows and durable exhibit hosting. Game Design/Development require a separate engine, graphics, licensing and desktop-access assessment; this notebook pilot does not establish Unreal/Unity or Windows support. Cyber degrees remain excluded.",
   "evidence_sources": [
     "assesscloudbank",

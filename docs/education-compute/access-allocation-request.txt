@@ -50,6 +50,8 @@ Proposed CPU workloads include small-model data analysis and metadata/SQLite exe
 
 After the award, test up to ten volunteers, then provider-approved class concurrency and recovery. ACCESS is the planned CPU/GPU classroom route. Keep approved rosters/grades in institutional systems, independently restore files and close educational accounts at agreed dates. No supporting research grant, staff appointment or budget is asserted. CloudBank through ACCESS is an optional managed implementation only if scope, CPU/GPU capacity, accounting and course dates are confirmed. Do not combine its managed Classroom terms with general broker pricing.
 
+OPERATING CONSTRAINT: Greg has ten hours/week total for allocation, component testing, operations and grant preparation. There is zero cash budget. TA and course-lead effort is separate (course leads need no salary). Necessary paid support/storage/hosting awaits confirmed eligible EduCloud grant funding; no award or finance role is assumed.
+
 RESOURCE JUSTIFICATION / AMOUNT
 INITIAL PILOT CPU BASELINE: 80 students × 8 active workspace-hours/week × 15 weeks = 9,600 workspace-hours / 19,200 CPU core-hours at 2 vCPU per workspace; 25% allowance gives 12,000 workspace-hours / 24,000 CPU core-hours before staff, idle billing and orchestration. Preferred 6 GB RAM/student; initial homes 5 GB/student + 20 GB/course shared data = 440 GB before staff/overhead. These are workload descriptions, not universal ACCESS units.
 
@@ -69,7 +71,7 @@ REQUIRED COMPLETION / ATTACHMENTS
 - Tier-appropriate education/resource plan and required course syllabi; CloudBank specifically requires syllabus PDFs if selected — incomplete.
 - Dated CPU component tests and free GPU benchmarks with target-resource accounting/scaling justification — not run.
 - Provider-confirmed CPU/GPU units, storage/concurrency and educational project structure — missing.
-- Named operators, committed operating budget, support/data/closure plan — pending.
+- Named operators, confirmed term coverage and any eligible grant support, support/data/closure plan — pending.
 
 REVIEW AND SUBMISSION STEPS
 1. Complete CPU component tests and free GPU benchmarks before any student pilot; retain failed controls and reproducible artifacts.

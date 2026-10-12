@@ -1,0 +1,10 @@
+{
+  "README.txt": "719be0bdb17d4d91b967e3658e585e7c2d4106293f699ed813daa5ea43b126c1",
+  "cpu_benchmarks.py": "ecf4370a37e1280ebf28721d2775d93411c92d86e44d662926e253c0679873dd",
+  "demand-example.json": "14b7d26f1a1f8a44c45e39bbe2521849750613fc5ec059348be58ec359cdbc59",
+  "ds-gpu-benchmark.ipynb": "48f23934e575d40f5278c024989632cbd6cf60f89b1305635f969103476e9dfe",
+  "gpu_workloads.py": "d5b7e1f1eee68759daab7f556ac1d90630ba9df3a7c47cb8957b567b43e1d4fc",
+  "mlis-gpu-benchmark.ipynb": "944a18b0d0b0954da81197128dfc074a4fcca79b07209733dfec8c58873bc7f9",
+  "requirements-cpu.txt": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+  "size_access.py": "b5b3a2caa9a7dfe097917a78ab10e52ef0ebb655be42fbd6f99b97883102d45c"
+}

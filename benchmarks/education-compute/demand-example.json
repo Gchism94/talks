@@ -1,0 +1,9 @@
+{
+  "scope": "UNAPPROVED example demand multipliers for two 40-seat components; replace after course-lead agreement. This is not the large allocation total.",
+  "workloads": [
+    {"id": "ds-cpu", "resource": "cpu", "workload": "ds", "results_file": "REPLACE/CPU-SESSION/results.json", "participants_or_groups": 40, "jobs_each": 5, "repetitions_per_job": 1, "allowance_fraction": 0.25, "provider_conversion": null},
+    {"id": "mlis-cpu", "resource": "cpu", "workload": "mlis", "results_file": "REPLACE/CPU-SESSION/results.json", "participants_or_groups": 40, "jobs_each": 5, "repetitions_per_job": 1, "allowance_fraction": 0.25, "provider_conversion": null},
+    {"id": "ds-gpu", "resource": "gpu", "workload": "ds", "results_file": "REPLACE/DS-GPU-SESSION/results.json", "participants_or_groups": 40, "jobs_each": 6, "repetitions_per_job": 1, "allowance_fraction": 0.25, "provider_conversion": null},
+    {"id": "mlis-gpu", "resource": "gpu", "workload": "mlis", "results_file": "REPLACE/MLIS-GPU-SESSION/results.json", "participants_or_groups": 8, "jobs_each": 3, "repetitions_per_job": 1, "allowance_fraction": 0.25, "provider_conversion": null}
+  ]
+}
