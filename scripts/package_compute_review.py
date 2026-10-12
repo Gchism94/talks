@@ -30,6 +30,8 @@ def build():
     start = PORTABLE / 'START-HERE.txt'
     text = start.read_text().split('\nCODABENCH AND RESOURCE UPDATE')[0]
     text += '\nCODABENCH AND RESOURCE UPDATE | October 11, 2026\nSlide 3 adds a filterable Codabench & alternatives comparison. Open classroom-resources.html for all 13 resource comparisons and work boundaries; the degree comparison includes supplementary routes. Codabench provides free benchmark hosting and bounded CPU scoring, while code/GPU workers require separately supplied compute. CodaLab Competitions is a retired predecessor; EvalAI hosting is paid; ChaGrade readiness is unverified. The evidence ledger now contains ' + str(len(ledger['evidence'])) + ' records. This update does not reverify every October 8/10 policy.\n'
+    if 'federal_platform_map' in ledger:
+        text += '\nFEDERAL COMPUTE MAP | October 12, 2026\nOpen federal-compute.html for the interactive map of federally supported compute, data services, products and funding pathways. It covers '+str(len(ledger['federal_platform_map']))+' families, the six named 2026 IDSS projects including MESA, and eight missing layers. CSV/JSON exports are beside it. Slide 4 links to this reference. Federal development, current operating support, state subsidies and free approved use are distinct.\n'
     start.write_text(text)
     archive = OUT / 'teaching-on-borrowed-compute.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
@@ -50,9 +52,9 @@ def build():
         if src.is_file(): copy(src, Path('review/published-export') / src.name)
     for src in sorted(OUT.iterdir()):
         if src.is_dir():
-            if src.name == 'codabench-research':
+            if src.name in ['codabench-research','federal-research']:
                 for item in sorted(src.rglob('*')):
-                    if item.is_file(): copy(item, Path('evidence/codabench-research') / item.relative_to(src))
+                    if item.is_file(): copy(item, Path('evidence') / src.name / item.relative_to(src))
             continue
         if src.name.endswith('-source.txt') or src.name == 'degree-home.html': target = Path('evidence/source-snapshots')
         elif src.name in ['evidence.json','degree-options.json','research-and-sources.txt','source-verification.json','service-source-verification.json']: target = Path('evidence')
@@ -60,12 +62,12 @@ def build():
         elif src.suffix == '.zip': target = Path('.')
         else: target = Path('review')
         copy(src, target / src.name)
-    for name in ['build_compute_evidence.py','build_compute_resources.py','build_site.py','check_site.py','package_compute_review.py']:
+    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_site.py','check_site.py','package_compute_review.py']:
         copy(ROOT / 'scripts' / name, Path('review/builders') / name)
     for src in sorted((ROOT / 'output/playwright').iterdir()):
-        if src.is_file() and src.name.startswith(('education-compute-','repositories-','service-evidence-','codabench-')):
+        if src.is_file() and src.name.startswith(('education-compute-','repositories-','service-evidence-','codabench-','federal-')):
             copy(src, Path('review/screenshots') / src.name)
-    manifest = dict(title='Teaching on Borrowed Compute', assembled='2026-10-10', refreshed='2026-10-11', source_records=len(ledger['evidence']), resource_comparisons=len(ledger['classroom_resource_options']),
+    manifest = dict(title='Teaching on Borrowed Compute', assembled='2026-10-10', refreshed=ledger.get('updated_at','2026-10-11'), source_records=len(ledger['evidence']), resource_comparisons=len(ledger['classroom_resource_options']), federal_families=len(ledger.get('federal_platform_map',[])),
                     public_release_at_assembly='2fe7387524d1d5403bef100aaa3da5a4f896c96c',
                     purpose='Complete local review snapshot; canonical authoring and publishing paths remain in the parent repository. See validation.json for latest release status.',
                     excluded=['output/education-compute/site-build (whole-site cache includes unrelated talks)'], files=files)

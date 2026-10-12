@@ -4,7 +4,7 @@ Research and claim audit | Greg Chism | Checked October 8, 2026
 Core problem: What we have previously relied on can no longer be guaranteed
 
 RESEARCH METHOD
-Window: October 8, 2021 through October 8, 2026. Exa discovery used 13 targeted searches requesting 77 result slots across four workstreams: named provider changes; other withdrawals; ACCESS and NAIRR program fit; date and policy verification. Search results were discovery material, not accepted as proof. The initial compute audit used 15 evidence entries, mostly provider/program records. The degree update expanded this to 27; the October 10 repository update brings the then-current deck to 37; the October 10 expanded evidence contained 73 records; the October 11 Codabench correction and resource comparison brings the current ledger to 88 records. Fourteen original provider/program URLs returned HTTP 200 on direct checks. The Replit original returned HTTP 404, so its staged closure is linked to Bucknell's live institutional record, corroborating the indexed provider announcement.
+Window: October 8, 2021 through October 8, 2026. Exa discovery used 13 targeted searches requesting 77 result slots across four workstreams: named provider changes; other withdrawals; ACCESS and NAIRR program fit; date and policy verification. Search results were discovery material, not accepted as proof. The initial compute audit used 15 evidence entries, mostly provider/program records. The degree update expanded this to 27; the October 10 repository update brings the then-current deck to 37; the October 10 expanded evidence contained 73 records; the October 11 Codabench correction and resource comparison brought the October 11 ledger to 88 records; the October 12 federal map brings the current ledger to 130 records. Fourteen original provider/program URLs returned HTTP 200 on direct checks. The Replit original returned HTTP 404, so its staged closure is linked to Bucknell's live institutional record, corroborating the indexed provider announcement.
 
 FINDING
 The evidence supports a continuity problem across multiple layers of teaching infrastructure: free compute and premium education benefits, student app hosting, and classroom orchestration. The selected history is not a measured estimate of total educational compute capacity, market prevalence, or learning losses. It does not establish that every free option has disappeared.
@@ -1089,3 +1089,537 @@ Checked October 11, 2026
 The project’s live page offers class creation and grading attached to challenges, individual/team homework and questions beyond challenge performance. It labels the service Work In Progress, version 0.1, and links its open-source project.
 Scope: A relevant adjacent workflow to inspect, not a verified production-ready free entitlement. Current support, terms, quotas and Codabench integration were not established; public signup buttons do not prove those properties. Do not promise it as the college grading baseline.
 https://chagrade.lri.fr/
+
+FEDERALLY SUPPORTED COMPUTING MAP | checked October 12, 2026
+Selected map: 32 platform/service/funding families; six named IDSS projects; eight missing categories. Current total source ledger: 130 records, adding 42 primary source records. Method: 34 Exa discovery queries requested 179 result slots across six research areas; these slots are not independent verified source counts. Targeted direct-live checks confirm core funding/cost distinctions. Earlier commercial-platform records were not all reverified. No accounts, allocations, API calls, cloud charges or grant submissions were made; no private MESA proposal/staff plan was published.
+
+SYNTHESIS
+The relevant ecosystem is a stack: public investment and grants; access programs and providers; teaching/application environments; data/metadata/workflows; object storage and delivery; identity, support, operations and preservation. Federal funding is not synonymous with all services being free, ready for a class, wholly federally financed or permanent. ACCESS providers, NRP/Nautilus and OSG/OSPool/OSDF must not be summed as independent capacity.
+
+Many small jobs, not one big notebook
+Add OSPool/PATh and checkpointed workflow execution for corpus processing, parameter sweeps and independent model evaluation.
+
+Managed teaching environments
+Map CloudBank Classroom, Jetstream2 course images, NRP hubs and eligible CyVerse apps separately from raw GPU allocations.
+
+Inference as an API
+NRP-hosted model APIs and requested NAIRR model/software access can support assignments without every student operating a GPU server.
+
+Data-first services
+MESA, NDP, FabAID, iDLab, BRIDGE and NSDF supply discovery, metadata, reusable workflows and cross-site access; their grants are not all compute accounts.
+
+Object storage, caches and movement
+OSN stores active data; OSDF/Pelican distributes it; Globus moves it. None automatically provides archive permanence or all operating costs.
+
+Systems, networks and specialized hardware
+Chameleon, CloudLab and FABRIC support systems/edge/distributed experiments and specialized hardware. Use only when the testbed purpose matches.
+
+Campus delivery and staff funding
+Open OnDemand, gateways, identity, orchestration, grant-funded facilitators and college operators make allocations teachable. Compute awards alone do not fund all of them.
+
+Domain facilities and mixed funding
+DOE, NASA and NIH add mission-specific routes. CC*/MRI can fund campus capability; AI Hubs and CyVerse/UArizona show why state, subscription and federal support need separate labels.
+
+PRACTICAL UARIZONA ROUTING (assessment, not adoption)
+1. Compare Jetstream2, CloudBank Classroom and NRP for managed teaching environments.
+2. Verify state TRIF-funded CyVerse Pro eligibility, actual account tier, class/workshop terms and GPU availability.
+3. Consult OSPool/PATh for many independent checkpointed jobs; MESA research funding makes PATh consultation relevant but grants no automatic credit award.
+4. Connect data/metadata learning with MESA and other IDSS projects; use OSN/OSDF where active data delivery is the need.
+5. Use specialist testbeds/facilities only where systems/network/domain requirements match.
+6. Fund the human/service layer: course images, login/rosters, grading exports, support owner, cost/renewal monitoring, independent backups and library preservation. Pilot two courses before scaling.
+
+IMPORTANT BOUNDARIES
+IDSS is Integrated Data Systems and Services, an operator grant program. Its 2026 awards include MESA; computing access remains subject to the actual services. CyVerse says its core NSF awards ended in 2024, and Basic sharing/public links ended June 3, 2025; published UArizona Pro access is TRIF/state-funded. CILogon transitioned to subscription-funded operations in 2019. NSF AI Infrastructure Hubs pay coordination/workforce/course development while partners finance compute. NIH AnVIL platform browsing is free but execution/storage/egress can cost money; it differs from Purdue ACCESS Anvil. CC*/MRI/SCIPE/CyberTraining are funding pathways, not current accounts or verified open calls. CloudBank GPU class capacity and IDSS production service guarantees were not established.
+
+PLATFORM MAP
+ACCESS | Allocation and support federation | Documented service; approval/limits apply
+Funding: NSF-funded coordination + separately funded resource providers
+Entry: ACCESS project request; exchange credits for provider resources
+Fit: Broad CPU/GPU research and instruction; resource discovery and support.
+Boundary: Provider quotas, scheduling, allocation term and software vary. Counts overlap with participating resource providers.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://access-ci.org/get-started/for-ci-community/
+
+OSG Open Science Pool (OSPool) | Opportunistic distributed throughput pool | Documented service; approval/limits apply
+Funding: NSF PATh/IRIS-HEP + institutional/DOE in-kind contributions
+Entry: OSG Portal / facilitated access point
+Fit: Independent text/image analyses, parameter sweeps, model evaluation and many short CPU/GPU jobs.
+Boundary: Interruptible fair share; complete/checkpoint jobs within 20 hours. Educational project fit needs facilitation; no classroom GPU reservation.
+Relationship: OSG consortium / PATh services
+https://osg-htc.org/about/introduction/
+https://osg-htc.org/services/ospool/
+
+PATh Facility | Dedicated credit-based throughput pool | Documented service; approval/limits apply
+Funding: NSF PATh
+Entry: Consult PATh; NSF-funded project startup/credit process
+Fit: Larger HTC research jobs and reliable resource profiles; relevant to MESA-funded work.
+Boundary: NSF research scope/credits required. Different from free fair-share OSPool; consultation is not automatic authorization.
+Relationship: PATh / also participates in NAIRR
+https://portal.path-cc.io/documentation/overview/references/PATh_vs_OSPool/
+
+NRP / Nautilus | Shared GPU/cloud services | Documented service; approval/limits apply
+Funding: NSF-supported platform + participating institutions
+Entry: Institutional onboarding; hosted JupyterHub, API or project namespace
+Fit: Hosted teaching notebooks, GPUs, open-weight model APIs and containerized services.
+Boundary: Shared capacity, account policies and operator responsibilities; Nautilus is the NRP cluster, not a separate pool.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://nrp.ai/
+https://nrp.ai/documentation/userdocs/ai/llm-managed
+
+Jetstream2 | ACCESS resource provider / VM cloud | Documented service; approval/limits apply
+Funding: NSF research-cloud infrastructure
+Entry: ACCESS allocation, course images and student/project access
+Fit: Notebooks, RStudio, desktops, web/database teaching servers and vGPU environments.
+Boundary: Budget credits for always-on instances, term duration, data backup and GPU demand. Not permanent institutional hosting.
+Relationship: ACCESS resource provider
+https://docs.jetstream-cloud.org/tutorial/classroom/overview/
+https://docs.jetstream-cloud.org/overview/overview-doc/
+
+NAIRR / NAIRR Classroom | AI resource access program | Documented service; approval/limits apply
+Funding: NSF-led federal partnership + public/private contributions
+Entry: Appropriate researcher or Classroom request
+Fit: AI coursework, GPUs, model/data/tools and selected managed environments.
+Boundary: US-based class eligibility and approved resources; instructor/TA support expected. Research and Classroom requests differ; partner offerings are not all federally purchased.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://nairrpilot.org/opportunities/education-call
+
+CloudBank / CloudBank Classroom | Commercial-cloud broker and managed teaching platform | Documented service; approval/limits apply
+Funding: NSF support + awarded cloud budgets
+Entry: ACCESS/NAIRR route appropriate to requested service
+Fit: Managed Python/R/C++ browser environments with login and student storage.
+Boundary: Approved budget/term, provider configuration and GPU availability; not a commercial free tier. Check actual onboarding terminology with CloudBank.
+Relationship: ACCESS / NAIRR selected resources
+https://www.cloudbank.org/training/nairr-pilot-cloudbank-classroom
+
+Chameleon / CHI@Edge | Reconfigurable cloud and edge testbed | Documented service; approval/limits apply
+Funding: NSF-funded experimental infrastructure
+Entry: Eligible PI project; allocation and resource lease
+Fit: Systems/MLOps, edge/IoT, bare-metal experiments, specialized GPU/FPGA hardware.
+Boundary: Experiment purpose, SU budget and short hardware leases. No unrestricted production hosting; student membership normally follows PI approval.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://chameleoncloud.org/learn/frequently-asked-questions/
+
+CloudLab | Bare-metal/VM systems experimentation | Documented service; approval/limits apply
+Funding: NSF-funded testbed
+Entry: Approved project with planned class reservations
+Fit: Distributed systems, reproducible root-access labs and networked application experiments.
+Boundary: Use only while actively experimenting; node data disappears at termination. Reserve for deadline bursts and export work.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://docs.cloudlab.us/classes.html
+https://www.cloudlab.us/
+
+FABRIC | Programmable network + distributed compute/storage | Documented service; approval/limits apply
+Funding: NSF grants for research infrastructure
+Entry: Project and experimental resource slices
+Fit: Distributed AI, edge workloads, streaming/data movement and instrument-to-compute experiments.
+Boundary: Experiment should need the network/testbed capabilities; not a stand-alone generic GPU account or production campus server.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://portal.fabric-testbed.net/
+
+NSF NCAR Derecho / analysis resources | Domain HPC and classroom allocations | Documented service; approval/limits apply
+Funding: NSF NCAR
+Entry: Classroom/workshop or qualifying research allocation
+Fit: Earth-system, environmental and geospatial data/AI instruction with consulting.
+Boundary: Earth-system mission fit; setup lead time, accounts, dates and reservations required. Separate grant not required for eligible classes.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://ncar-hpc-docs.readthedocs.io/en/stable/allocations/university-allocations/
+
+DOE NERSC / ALCF / OLCF | Leadership HPC user facilities | Documented service; approval/limits apply
+Funding: DOE Office of Science / ASCR
+Entry: ALCC, INCITE or facility-specific merit request
+Fit: Large mission-aligned scientific simulation, data analysis and AI research.
+Boundary: ALCC does not require DOE sponsorship, but merit/mission/scaling requirements apply. Not the default for everyday college labs.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://science.osti.gov/ascr/Facilities/Accessing-ASCR-Facilities/ALCC/Call-for-Proposals
+
+NASA High-End Computing | Mission research HPC | Documented service; approval/limits apply
+Funding: NASA mission infrastructure
+Entry: NASA-sponsored project / mission request process
+Fit: NASA-aligned Earth/space/engineering computing.
+Boundary: Sponsorship and mission/award review required; not a general open classroom resource.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://hec.nasa.gov/request/mission_directorates.html
+
+NIH AnVIL / Terra ecosystem | Biomedical data + workflow cloud | Documented service; approval/limits apply
+Funding: NIH NHGRI platform funding; cloud usage billed separately
+Entry: Project/data authorization plus cloud billing or awarded credits
+Fit: Genomic data-science notebooks, workflows and reproducible biomedical training.
+Boundary: Free platform browsing does not mean free compute/storage/egress. NIH AnVIL differs from Purdue ACCESS Anvil; old credit calls are not current offers.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://anvilproject.org/overview
+https://anvilproject.org/learn/control-cloud-costs/understanding-cloud-costs
+
+CyVerse Discovery Environment / VICE | Managed applications and scientific data platform | Mixed funding; current published UArizona benefit
+Funding: Historical core NSF support; new project funding + subscriptions + Arizona TRIF
+Entry: Basic account; confirm institutional Pro or collaboration access
+Fit: Python/R apps, data management and a practical UArizona course/pilot route.
+Boundary: Basic 200 units/year, 5 GB, one job and no sharing/public links. Published UArizona free Pro is state-funded, not universal; GPU and class access need consultation.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://cyverse.org/subscribe
+
+Open Storage Network | Allocated object-storage network | Documented service; approval/limits apply
+Funding: NSF seed support + participating storage operators
+Entry: Separate storage request through ACCESS; provider capacity
+Fit: Large actively used teaching/research datasets and portable object storage.
+Boundary: Documented request range 10–50 TB; not CPU time, backup or archival permanence. Actual size/site capacity needs verification.
+Relationship: ACCESS storage resource
+https://www.globus.org/news/nsf-funds-open-storage-network
+https://www.openstoragenetwork.org/get-involved/get-an-allocation/
+https://www.openstoragenetwork.org/motivation/our-policy/
+
+OSDF / Pelican | Data delivery and cache federation | Documented service; approval/limits apply
+Funding: OSG/PATh federal-supported services + data origins/caches
+Entry: Connect existing store or allocated OSN/CC* storage through OSG
+Fit: Deliver data to distributed jobs, notebooks and scientific applications.
+Boundary: Not another storage or compute award. Backing store/access policy required; not for highly regulated/PII/HIPAA data; preservation is separate.
+Relationship: OSG data layer; interoperates with OSPool / OSN
+https://osg-htc.org/services/osdf
+https://osg-htc.org/about/introduction/
+
+MESA | Metadata/data mesh/lakehouse + AI workflow integration | Funded expansion; published portal/tools, readiness untested
+Funding: NSF IDSS; project site cites award 2632685
+Entry: Published MESA portal/docs; underlying services govern compute
+Fit: Metadata, semantic discovery, reproducible data/agent workflows, Jupyter/R/desktop app layer.
+Boundary: Published tools are not a verified class service level. Underlying CyVerse/TACC/ACCESS/NAIRR allocations, GPU entitlement and support remain distinct.
+Relationship: IDSS Category II
+https://idss-mesa.github.io/
+https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems
+https://www.nsf.gov/funding/opportunities/idss-integrated-data-systems-services/nsf26-509/solicitation
+
+National Data Platform (NDP) | Federated data and education ecosystem | Existing ecosystem + funded national expansion
+Funding: NSF IDSS
+Entry: Public catalog/education activity; consult NDP for class workspace
+Fit: Discoverable compute-ready instructional data, reusable AI activities and capstone content.
+Boundary: Some homepage features are forthcoming. Confirm available workspaces, quota, onboarding and underlying compute rather than equating an IDSS grant with a user allocation.
+Relationship: IDSS Category I
+https://nationaldataplatform.org/
+https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems
+
+Fabric for AI-Driven Science (FabAID) | Composable data-service fabric | Funded deployment; service-specific terms to confirm
+Funding: NSF IDSS
+Entry: Project service endpoints/consultation
+Fit: Storage federation, cache/delivery, transformation, discovery and data-intensive workflows.
+Boundary: Data-service integration complements compute allocations; no universal GPU entitlement, class quota or archival guarantee established.
+Relationship: IDSS Category I
+https://fabaid.io/
+https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems
+
+Interactive Discovery Laboratory (iDLab) | Interactive gateway across sites/clouds | Funded transition; current architecture documented
+Funding: NSF IDSS
+Entry: Project consultation; existing site account/allocations as required
+Fit: Browser applications, interactive workspaces and cross-site data/workflow access.
+Boundary: Participating sites retain policies/control. Gateway access is not an extra copy of the sites’ capacity or long-term archives; course readiness must be confirmed.
+Relationship: IDSS Category II
+https://idlab.onescienceplace.org/
+https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems
+
+BRIDGE National Center / Apache Texera | Reusable workflow/data/model platform | Funded national transition / reusable software
+Funding: NSF IDSS
+Entry: Project collaboration or own supported platform deployment
+Fit: Visual/no-code workflows, reproducible social-science/data analyses and shared community models.
+Boundary: May require your own host/cloud/resources and operators. No verified no-cost public compute subscription or guaranteed class capacity.
+Relationship: IDSS Category II
+https://bridge4science.org/
+https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems
+
+National Science Data Fabric (NSDF) | Distributed scientific data-access framework | Funded transition; detailed onboarding unverified
+Funding: NSF IDSS
+Entry: Project contact; NSF announcement verifies expansion scope
+Fit: Standardized scientific data discovery/access, reproducibility and data/AI workforce development.
+Boundary: Funding/intent verified from NSF announcement; current user-specific access terms, compute quota and production readiness not established in this review.
+Relationship: IDSS Category II
+https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems
+
+Open OnDemand + JupyterHub / BinderHub | Browser application delivery software | Documented service; approval/limits apply
+Funding: Open OnDemand federal-supported development; site funds operation
+Entry: Use provider-installed portal or deploy on approved compute
+Fit: Notebooks, RStudio, VS Code, remote desktops and visual/science gateways.
+Boundary: Software is not hardware/time allocation. Only Open OnDemand’s funding is evidenced here; no claim that every JupyterHub installation is federally funded. Operators and backing resources remain necessary.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://openondemand.org/
+https://par.nsf.gov/servlets/purl/10122554
+https://docs.jetstream-cloud.org/tutorial/classroom/overview/
+https://nrp.ai/
+
+Pegasus / HTCondor / ACCESS Pegasus | Workflow orchestration and job execution products | Documented service; approval/limits apply
+Funding: NSF ACCESS/PATh-supported software and services
+Entry: Hosted ACCESS Pegasus with active allocation; OSG/PATh tools
+Fit: Portable multi-step pipelines, task sweeps, data staging and transparent execution.
+Boundary: Uses existing allocations/pools; does not create another pool. Software portability is not data preservation or a substitute for operations.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://support.access-ci.org/tools/pegasus
+https://osg-htc.org/about/introduction/
+https://portal.path-cc.io/documentation/overview/references/PATh_vs_OSPool/
+
+CILogon / Globus | Identity, authorization and research data movement | Documented service; approval/limits apply
+Funding: Historical federal development/integration; current operations include subscriptions
+Entry: Institution/provider identity configuration and endpoint support
+Fit: Campus login, role-based access, data transfer and cross-site workflow connections.
+Boundary: Basic services may be free while advanced support/sharing costs. Neither supplies a compute/storage allocation; CILogon says operations shifted to subscriptions in 2019.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://www.cilogon.org/subscribe
+https://docs.globus.org/faq/subscriptions/
+
+Science gateways / SGX3 | Gateway expertise and supported interfaces | Documented service; approval/limits apply
+Funding: NSF-funded SGX3; substantial operations can be client-funded
+Entry: Gateway consultation/community resources; project-specific gateway accounts
+Fit: Usable domain applications and teaching interfaces beyond raw HPC command lines.
+Boundary: Limited funded planning/UX/training differs from paid development/hosting/operations. A gateway catalog is not a universal free app-hosting plan.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://sciencegateways.org/about
+
+IDSS program | Operator grant program, not a compute account | Program / awards; not end-user capacity
+Funding: NSF
+Entry: Institutional proposal / funded project collaboration
+Fit: National data-service development, transition to operations and planning.
+Boundary: Six named 2026 projects have different services/stages; the grant does not award every instructor CPU/GPU hours.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://www.nsf.gov/funding/opportunities/idss-integrated-data-systems-services/nsf26-509/solicitation
+https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems
+
+Campus Cyberinfrastructure (CC*) | Campus/regional infrastructure grants | Program; current page awaiting new publication
+Funding: NSF
+Entry: Institutional funding process; actual local award/service rules
+Fit: Campus compute, networking, data storage/digital archives and integration.
+Boundary: Current page has no upcoming due dates and awaits new guidelines. Not an open national classroom account; sharing, operation and stewardship have to be funded.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://www.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure
+
+Major Research Instrumentation (MRI) | Multi-user research instrumentation grants | Program; review current published call
+Funding: NSF
+Entry: Institutional limited-submission/award process
+Fit: Appropriate shared instrumentation and computing-linked research training.
+Boundary: Current solicitation, instrument eligibility and campus proposal limits matter. A funding route is not a ready device/GPU account; this map does not assert an open submission window.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://www.nsf.gov/funding/opportunities/mri-major-research-instrumentation-program
+
+State / Regional AI Infrastructure Hubs | Mixed-funding consortium program | Solicitation/program; no local award assumed
+Funding: NSF pays coordination/workforce/education; partners pay infrastructure
+Entry: Institution/state/regional consortium; actual award and resource terms
+Fit: Faculty course development, facilitators, shared AI-service coordination and regional scale.
+Boundary: NSF does not acquire/fund the compute infrastructure under this solicitation. Partners must sustain it; no awarded Arizona hub is verified here.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://www.nsf.gov/funding/opportunities/us-national-science-foundation-state-regional-artificial/nsf26-513/solicitation
+
+SCIPE / CyberTraining / ACCESS facilitation | People, skills and support layer | Support services + funding programs
+Funding: NSF professional/training programs + service support
+Entry: Existing facilitator/training services or institutional grant pathway
+Fit: Support ownership, instructor onboarding, reusable course materials and train-the-trainer capacity.
+Boundary: Grant programs do not promise staff for every instructor. Current call status and actual support agreements must be checked; college effort is still required.
+Relationship: See conceptual map; no additional duplicate capacity implied.
+https://www.nsf.gov/funding/opportunities/strengthening-cyberinfrastructure-professionals-ecosystem/506137/nsf23-521
+https://www.nsf.gov/funding/opportunities/training-based-workforce-development-advanced
+https://access-ci.org/get-started/for-ci-community/
+
+FEDERAL EXTENSION SOURCE LEDGER
+ACCESS · national resource and support federation
+NSF-supported ACCESS connects researchers and educators to compute, cloud, storage, gateways and support. Resource providers supply the underlying systems; access is governed by allocation and provider policies.
+Scope: ACCESS is an access/support program, not a single machine. Do not add provider capacity twice when counting ACCESS and Jetstream2 or other participating systems. Grants, account approval and scheduling remain separate.
+https://access-ci.org/get-started/for-ci-community/
+
+NAIRR Classroom · AI teaching resource request
+US-based instructors can request selected NAIRR Classroom resources for AI coursework or training with US-based participants, including any discipline that incorporates AI. Requests specify hardware, storage, dates and support.
+Scope: NSF-led cross-agency/partner ecosystem, including in-kind contributions; not every donated service is federally purchased. Instructor/TA technical support is expected. Selected resource availability and approval govern access; this is not an awarded college pilot.
+https://nairrpilot.org/opportunities/education-call
+
+OSG · consortium, funding and services
+OSG operates distributed computing/data services across contributing institutions. Its funding page names NSF PATh and IRIS-HEP support and in-kind contributions including DOE laboratories.
+Scope: Open Science Grid is the consortium/ecosystem. The general-access compute pool is OSPool; OSDF is a data-delivery federation. These are distinct services, not three independent pools of the same capacity. Funding acknowledgments include dated historical context.
+https://osg-htc.org/about/introduction/
+
+OSPool · opportunistic high-throughput capacity
+US-affiliated academic, nonprofit and government research projects can request OSG access-point accounts. OSPool supports many independent CPU/GPU jobs under fair share; jobs should complete or checkpoint within 20 hours.
+Scope: Contributed capacity can interrupt jobs and does not reserve a whole class or finish any job at a promised time. Consult facilitators for educational projects. It is not the natural environment for interactive notebooks or tightly coupled MPI workloads.
+https://osg-htc.org/services/ospool/
+
+PATh Facility · dedicated throughput credits
+The NSF-supported PATh Facility provides dedicated credit-based HTC capacity for NSF-funded research, including larger CPU/GPU, memory, disk and longer jobs than opportunistic OSPool work.
+Scope: Separate eligibility/credit process from OSPool. User-facing guarantees in the comparison concern provisioned job resources, not unlimited credits, instant start times, classroom reservations or perpetual storage. MESA funding makes consultation relevant, not automatic approval.
+https://portal.path-cc.io/documentation/overview/references/PATh_vs_OSPool/
+
+National Research Platform / Nautilus · shared services
+NSF-funded NRP offers eligible US nonprofit research and education shared GPUs/CPUs, hosted notebooks, model APIs, storage and Kubernetes-hosted services. Nautilus is its underlying cluster.
+Scope: NRP and Nautilus are two names for one platform layer, not independent capacities. Shared scheduling, account onboarding, quotas and operations still apply. Hosted services can help teaching but are not a preservation or availability guarantee.
+https://nrp.ai/
+
+NRP · hosted open-weight model APIs
+NRP documents hosted browser chat and an OpenAI-compatible API for a changing catalog of open-weight language models.
+Scope: Model/API access is a distinct product from a GPU training allocation. Models can be added or retired; verify current quotas, supported use and prompt/data handling before class. No account token or API call was tested.
+https://nrp.ai/documentation/userdocs/ai/llm-managed
+
+Jetstream2 · teaching cloud through ACCESS
+Jetstream2 provides documented course/workshop workflows for virtual machines, standardized environments, virtual GPUs and web applications. Its classroom guidance links instructors to ACCESS allocations.
+Scope: An ACCESS resource provider, not a second federal allocation program. Instance runtime has no notebook-style session cap, but allocation duration, credits, GPU availability, support and backups still bound use. Operators must size always-on services explicitly.
+https://docs.jetstream-cloud.org/tutorial/classroom/overview/
+
+Jetstream2 · NSF research-cloud system
+Jetstream2 is described as NSF science and engineering cloud infrastructure with CPU, GPU, memory and storage resources.
+Scope: Funding provenance establishes public infrastructure, not an approved allocation or a promise of a dedicated GPU per student.
+https://docs.jetstream-cloud.org/overview/overview-doc/
+
+CloudBank Classroom · managed teaching environment
+NSF-supported CloudBank Classroom offers browser-based Python/R/C++ tools, persistent student storage and university login. US educators request it through NAIRR Classroom; the page describes one-year allocations with renewal.
+Scope: CloudBank brokers commercial cloud resources; it is not a vendor free tier. Approval, provider capacity, awarded budget and configuration govern access. GPU availability is not assumed. The page mixes ACCESS/NAIRR terminology; confirm the actual onboarding route with the provider.
+https://www.cloudbank.org/training/nairr-pilot-cloudbank-classroom
+
+Chameleon · funded experimental cloud testbed
+NSF-funded Chameleon supports computer-science research and education using reconfigurable bare metal, VMs and specialized hardware. Approved projects receive time-limited service-unit allocations and make reservations.
+Scope: A systems/ML-systems experimentation route, not unrestricted production hosting. Leases, units and renewal differ by resource; current docs distinguish short GPU/bare-metal leases from longer non-GPU VM leases. Student access normally needs an eligible PI/project.
+https://chameleoncloud.org/learn/frequently-asked-questions/
+
+CloudLab · classes and reservation boundaries
+CloudLab supports class projects with isolated root-access environments and resource reservations. Nodes should be held only during active experiments; data on experiment nodes is ephemeral.
+Scope: Useful for systems, distributed application and network classes. Large deadline bursts can exhaust shared nodes; backups and reservations must be planned. An experiment reservation is not permission to run a semester-long production service.
+https://docs.cloudlab.us/classes.html
+
+CloudLab · NSF-supported research facility
+CloudLab identifies itself as NSF-supported infrastructure for research into the future of cloud computing.
+Scope: Research testbed purpose and project approval distinguish this from ordinary unlimited cloud hosting. Funding and teaching suitability do not establish resource availability on a course date.
+https://www.cloudlab.us/
+
+FABRIC · programmable network and edge testbed
+FABRIC lists NSF grants supporting distributed compute/storage connected by programmable high-speed networks for networking, distributed computing, machine learning and science experimentation.
+Scope: Network/edge experiments, data movement and distributed AI are its defining purpose; it is not just a generic GPU pool. Projects, resource slices and policies must fit the experiment. No course slice was reserved.
+https://portal.fabric-testbed.net/
+
+NSF NCAR · domain-specific classroom allocations
+NSF NCAR offers no-cost eligible Earth-system science research/instruction, including classroom/workshop allocations for US two- and four-year institutions. It documents individual accounts, compute reservations and setup lead time.
+Scope: A domain-specific route for environmental/geospatial data coursework, not a general all-college compute entitlement. Eligible classes need not have a separate external research award. Allocation resource limits and proportional CPU/GPU requests remain provider-specific.
+https://ncar-hpc-docs.readthedocs.io/en/stable/allocations/university-allocations/
+
+DOE ASCR · leadership computing allocation routes
+DOE ALCC awards computing at NERSC, ALCF and OLCF through scientific/computational merit review. Universities, industry and agencies may apply; DOE sponsorship is not required for ALCC.
+Scope: Mission-aligned research capacity, not a routine classroom account offer. INCITE and other facility routes have different scale/eligibility. Do not treat a past cycle deadline as an open call or combine node-hours with CPU/GPU-hours without conversion.
+https://science.osti.gov/ascr/Facilities/Accessing-ASCR-Facilities/ALCC/Call-for-Proposals
+
+NASA HEC · sponsored mission-research resources
+NASA-supported mission research can request HEC computing through its request-management process; mission-directorate sponsorship and capacity review govern awards.
+Scope: Not an open general classroom pool. An allocation is computing time rather than a direct cash grant; some categories are considered case by case without a guarantee. Current request windows and eligibility must be checked.
+https://hec.nasa.gov/request/mission_directorates.html
+
+NIH NHGRI AnVIL · domain cloud-analysis platform
+NHGRI AnVIL combines genomic data access, cloud analysis, notebooks, workflow tools and data-sharing components such as Terra, Dockstore, Bioconductor and Galaxy.
+Scope: NIH AnVIL is distinct from Purdue’s ACCESS Anvil supercomputer. Biomedical/domain and controlled-data access policies apply; the federal-funded platform does not make all execution free.
+https://anvilproject.org/overview
+
+AnVIL · execution and storage costs
+Browsing AnVIL components is free, while notebooks, workflows, storage and egress can incur commercial cloud charges.
+Scope: NIH STRIDES discounts, awarded credits or funded training can cover costs only under their actual terms. Historical 2021/22 credit calls are not counted as currently open free offers. Budget ownership and approved data access remain necessary.
+https://anvilproject.org/learn/control-cloud-costs/understanding-cloud-costs
+
+NSF · six named 2026 IDSS awards
+NSF announced $83 million in IDSS awards on July 22, 2026. Named projects are FabAID and NDP in Category I; iDLab, BRIDGE, NSDF and MESA in Category II.
+Scope: These are data-system investments with computing integration, not six interchangeable free GPU pools. Grant category and announced scope do not establish a user quota, production service level or open access portal. Planning awards are separate.
+https://www.nsf.gov/news/nsf-announces-83m-investment-integrated-data-systems
+
+NSF IDSS · program and integration remit
+Integrated Data Systems and Services funds national-scale data infrastructure: new systems, transitions/expansions to operations, and planning. It emphasizes transdisciplinary data integration with existing compute, instruments and repositories.
+Scope: A grant program funding service operators, not a direct end-user allocation. Operational and planning stages must stay distinct. It complements ACCESS/NAIRR rather than replacing their resource requests.
+https://www.nsf.gov/funding/opportunities/idss-integrated-data-systems-services/nsf26-509/solicitation
+
+MESA · published data/AI tools and portal
+MESA identifies NSF IDSS award 2632685 and presents metadata/agent tools, a DuckLake/iRODS stack, and portal applications such as JupyterLab, RStudio, VS Code and a remote desktop over national infrastructure.
+Scope: Public project documentation, not a hands-on acceptance test. GPU application builds do not guarantee GPU entitlement. CyVerse/TACC/ACCESS/NAIRR resources retain their own policies. No private proposal, staff plan or internal milestone is used as public service evidence.
+https://idss-mesa.github.io/
+
+NDP · data discovery and education ecosystem
+The National Data Platform describes a federated data ecosystem, educational activities and compute-ready data/AI services; its page also labels some capabilities as forthcoming.
+Scope: Separate the existing catalog/education activity from the funded national expansion and forthcoming features. Provider consultation is needed to establish workspace capacity, course onboarding and actual quotas; no unlimited classroom capacity is claimed.
+https://nationaldataplatform.org/
+
+FabAID · data services fabric
+FabAID describes an NSF-funded open service layer for federated storage, caching, discovery, transformation and workflows supporting data-intensive and AI science.
+Scope: Data services complement resource pools; they are not additional allocated GPU-hours or a permanent archive. Current service-specific onboarding, storage responsibility and production guarantees require confirmation.
+https://fabaid.io/
+
+iDLab · interactive cross-site environment
+iDLab describes a browser layer for interactive applications, data access and workflows across ACCESS/NAIRR sites and clouds. Participating sites retain control over their systems.
+Scope: An interactive integration layer, not a replacement for site allocations or a long-term archive. Public architecture describes connected and planned services; validate onboarding and course readiness rather than assuming universal immediate access.
+https://idlab.onescienceplace.org/
+
+BRIDGE · reusable data science workflows
+BRIDGE describes an NSF-funded national effort built on Apache Texera for reusable datasets, workflows and models, deployable on a community’s own infrastructure or cloud.
+Scope: A shareable workflow platform and funded expansion, not a verified no-cost general compute subscription. Labs may need to supply deployment infrastructure, operations and allocations. Prototype and production maturity must be checked.
+https://bridge4science.org/
+
+Open Storage Network · federal seed support
+The 2018 project announcement identifies NSF support for development of OSN as distributed scientific storage/data management infrastructure.
+Scope: Historical federal seed funding, not proof that all ongoing pods and operations are wholly federally financed. Storage supports active data movement and sharing, not automatic archival preservation.
+https://www.globus.org/news/nsf-funds-open-storage-network
+
+OSN · ACCESS storage allocation route
+OSN documents independent bucket allocations through ACCESS, with a stated 10–50 TB request range, subject to location and available capacity.
+Scope: Storage is distinct from CPU/GPU time. Verify actual current quotas and permitted data before applying; a large bucket is not an institutional backup or perpetual preservation agreement.
+https://www.openstoragenetwork.org/get-involved/get-an-allocation/
+
+OSN · active-data scope
+OSN policy focuses on data in active use for research/education and data transfer/sharing across scientific infrastructure, explicitly distinguishing active data from archives.
+Scope: Long-term preservation, retention and recovery require a different stewardship agreement. Treating allocated object storage as archival permanence would overstate this service.
+https://www.openstoragenetwork.org/motivation/our-policy/
+
+OSDF / Pelican · distribute data to computation
+OSDF, an OSG service powered by Pelican, connects data origins and caches to computing. Eligible institutions can connect stores; OSPool access points provide connected working storage and OSN allocations can be linked.
+Scope: A delivery/federation layer, not a second storage allocation or GPU pool. Origin policies apply; documentation says it is not appropriate for highly regulated or sensitive data such as PII/HIPAA. Backing storage and preservation must be separately supplied.
+https://osg-htc.org/services/osdf
+
+Open OnDemand · browser access to allocated computing
+Open OnDemand provides browser-based access to remote computing and applications, reducing local installation and command-line barriers.
+Scope: A software/gateway product installed by operators, not free computing by itself. Users still need accounts and allocations on the backing system; desktop/visualization apps depend on site configuration.
+https://openondemand.org/
+
+Open OnDemand · federal-supported software development
+The project-authored paper describes Open OnDemand and acknowledges NSF grant 1835725.
+Scope: Documents federal development support. This historical award is not a claim of perpetual operating funding for every campus installation.
+https://par.nsf.gov/servlets/purl/10122554
+
+ACCESS Pegasus / HTCondor · workflow product layer
+ACCESS Pegasus supports workflow construction/monitoring in notebooks, with HTCondor Annex provisioning jobs against a user’s allocated resources. Active ACCESS allocation holders have a hosted Pegasus account.
+Scope: Workflow and scheduling products make capacity usable but do not supply a new independent allocation. Data transfer, containers, site setup and underlying allocation expiry remain requirements; HTCondor’s broader federal-supported work is described by OSG/PATh.
+https://support.access-ci.org/tools/pegasus
+
+CILogon · basic identity versus sustained paid operations
+CILogon says NSF/DOE supported its development from 2009–2018; it transitioned to subscription-funded operations in 2019. Basic authentication remains no-charge for academic research projects, while advanced support/IAM uses paid tiers.
+Scope: Federally developed identity infrastructure is not wholly federally financed current operations. Login alone does not confer compute entitlement; operators may require paid service support.
+https://www.cilogon.org/subscribe
+
+Globus · research transfer and subscription boundary
+Globus provides free file transfer for nonprofit researchers, with subscriptions supporting operations and additional sharing/administrative features.
+Scope: Globus connects storage and remote workflows; it does not supply a storage allotment or universal free execution. Federal-supported ecosystem integration and historical development should not be conflated with current subscription funding.
+https://docs.globus.org/faq/subscriptions/
+
+SGX3 / SGCI · gateway expertise and operations boundary
+NSF-funded SGX3 (award 2231406) provides limited gateway planning, UX, training and community services. More comprehensive development, hosting and operations are client-funded SGCI engagements.
+Scope: Science gateway support is an enabling service, not a universal free hosted application service. Check scope/cost of the proposed engagement and budget the backing resource separately.
+https://sciencegateways.org/about
+
+NSF CC* · campus/regional infrastructure funding
+CC* describes campus/regional networking, computing, storage/digital archives and strategy awards. Its page currently lists no upcoming due dates and says guidelines await a new publication.
+Scope: A funding pathway for infrastructure owners, not an open account pool or a currently verified open proposal window. Resulting campus systems have local access rules; sharing commitments and operating costs matter.
+https://www.nsf.gov/funding/opportunities/cc-campus-cyberinfrastructure
+
+NSF MRI · research instrumentation funding
+MRI supports acquisition/development of multi-user research instrumentation. Its page describes updates toward a future FY2027 opportunity after review of earlier proposals.
+Scope: Campus hardware/equipment funding, not instant national allocations. Computing must meet the actual instrument/solicitation criteria; university proposal limits and a current published call must be checked. No grant application is implied.
+https://www.nsf.gov/funding/opportunities/mri-major-research-instrumentation-program
+
+AI Infrastructure Hubs · NSF funds people, partners fund compute
+NSF’s State and Regional AI Infrastructure Hubs solicitation funds coordination, infrastructure workforce and educator/course development. Consortia must finance acquisition and operation of compute/data/AI infrastructure through their partners.
+Scope: A mixed-funding partnership, not NSF-provided hardware or a currently awarded regional pool. It may integrate NRP/PATh resources, but that does not remove consortium funding responsibilities.
+https://www.nsf.gov/funding/opportunities/us-national-science-foundation-state-regional-artificial/nsf26-513/solicitation
+
+SCIPE · professional support workforce
+SCIPE supports the integration, development and recognition of cyberinfrastructure professionals who help research communities use computational resources and services.
+Scope: Workforce capacity rather than end-user compute. A program page is not a confirmed open call or a staffed support promise for this college; inspect current guidelines and awarded local/regional services.
+https://www.nsf.gov/funding/opportunities/strengthening-cyberinfrastructure-professionals-ecosystem/506137/nsf23-521
+
+CyberTraining · teaching and workforce development
+NSF CyberTraining supports adoption of advanced computing/data infrastructure and integration of appropriate skills into undergraduate/graduate teaching and researcher training.
+Scope: Funds curriculum, skills and training rather than automatically purchasing all course computing. Current competition status and grant fit need checking; no training award or educator cohort is claimed here.
+https://www.nsf.gov/funding/opportunities/training-based-workforce-development-advanced
+
+CyVerse · federal funding transition and UArizona state support
+CyVerse states that core NSF award support ended in 2024. Basic offers 200 normalized compute units/year, 5 GB storage and one concurrent job; free sharing/public links ended June 3, 2025. UArizona users can receive Pro through state TRIF support.
+Scope: CyVerse is federally developed and used by federally funded projects, but current account subsidies are mixed; TRIF is state, not federal funding. Pro lists 25,000 units/year, 4 TB and four concurrent jobs, with GPU access by consultation. Published eligibility is not an account or whole-class provisioning test.
+https://cyverse.org/subscribe
+
+Source access note: the old FABRIC about-page path returned 404; its provider content was read through the indexed primary page and the live HTTP-200 portal is linked.

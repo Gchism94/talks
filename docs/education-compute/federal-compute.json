@@ -1,0 +1,755 @@
+{
+  "checked_at": "2026-10-12",
+  "platforms": [
+    {
+      "id": "access",
+      "name": "ACCESS",
+      "category": "compute",
+      "funding": "NSF-funded coordination + separately funded resource providers",
+      "kind": "Allocation and support federation",
+      "route": "ACCESS project request; exchange credits for provider resources",
+      "fit": "Broad CPU/GPU research and instruction; resource discovery and support.",
+      "boundary": "Provider quotas, scheduling, allocation term and software vary. Counts overlap with participating resource providers.",
+      "sources": [
+        "fedaccess"
+      ],
+      "capabilities": [
+        "teach",
+        "train",
+        "batch",
+        "cloud"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "ospool",
+      "name": "OSG Open Science Pool (OSPool)",
+      "category": "compute",
+      "funding": "NSF PATh/IRIS-HEP + institutional/DOE in-kind contributions",
+      "kind": "Opportunistic distributed throughput pool",
+      "route": "OSG Portal / facilitated access point",
+      "fit": "Independent text/image analyses, parameter sweeps, model evaluation and many short CPU/GPU jobs.",
+      "boundary": "Interruptible fair share; complete/checkpoint jobs within 20 hours. Educational project fit needs facilitation; no classroom GPU reservation.",
+      "sources": [
+        "fedosg",
+        "fedospool"
+      ],
+      "capabilities": [
+        "batch",
+        "train"
+      ],
+      "parent": "OSG consortium / PATh services",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "path",
+      "name": "PATh Facility",
+      "category": "compute",
+      "funding": "NSF PATh",
+      "kind": "Dedicated credit-based throughput pool",
+      "route": "Consult PATh; NSF-funded project startup/credit process",
+      "fit": "Larger HTC research jobs and reliable resource profiles; relevant to MESA-funded work.",
+      "boundary": "NSF research scope/credits required. Different from free fair-share OSPool; consultation is not automatic authorization.",
+      "sources": [
+        "fedpath"
+      ],
+      "capabilities": [
+        "batch",
+        "train"
+      ],
+      "parent": "PATh / also participates in NAIRR",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "nrp",
+      "name": "NRP / Nautilus",
+      "category": "compute",
+      "funding": "NSF-supported platform + participating institutions",
+      "kind": "Shared GPU/cloud services",
+      "route": "Institutional onboarding; hosted JupyterHub, API or project namespace",
+      "fit": "Hosted teaching notebooks, GPUs, open-weight model APIs and containerized services.",
+      "boundary": "Shared capacity, account policies and operator responsibilities; Nautilus is the NRP cluster, not a separate pool.",
+      "sources": [
+        "fednrp",
+        "fednrpllm"
+      ],
+      "capabilities": [
+        "teach",
+        "train",
+        "api",
+        "cloud"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "jetstream",
+      "name": "Jetstream2",
+      "category": "compute",
+      "funding": "NSF research-cloud infrastructure",
+      "kind": "ACCESS resource provider / VM cloud",
+      "route": "ACCESS allocation, course images and student/project access",
+      "fit": "Notebooks, RStudio, desktops, web/database teaching servers and vGPU environments.",
+      "boundary": "Budget credits for always-on instances, term duration, data backup and GPU demand. Not permanent institutional hosting.",
+      "sources": [
+        "fedjetstream",
+        "fedjetstreamfund"
+      ],
+      "capabilities": [
+        "teach",
+        "cloud",
+        "train"
+      ],
+      "parent": "ACCESS resource provider",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "nairr",
+      "name": "NAIRR / NAIRR Classroom",
+      "category": "compute",
+      "funding": "NSF-led federal partnership + public/private contributions",
+      "kind": "AI resource access program",
+      "route": "Appropriate researcher or Classroom request",
+      "fit": "AI coursework, GPUs, model/data/tools and selected managed environments.",
+      "boundary": "US-based class eligibility and approved resources; instructor/TA support expected. Research and Classroom requests differ; partner offerings are not all federally purchased.",
+      "sources": [
+        "fednairr"
+      ],
+      "capabilities": [
+        "teach",
+        "train",
+        "api"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "cloudbank",
+      "name": "CloudBank / CloudBank Classroom",
+      "category": "compute",
+      "funding": "NSF support + awarded cloud budgets",
+      "kind": "Commercial-cloud broker and managed teaching platform",
+      "route": "ACCESS/NAIRR route appropriate to requested service",
+      "fit": "Managed Python/R/C++ browser environments with login and student storage.",
+      "boundary": "Approved budget/term, provider configuration and GPU availability; not a commercial free tier. Check actual onboarding terminology with CloudBank.",
+      "sources": [
+        "fedcloudbank"
+      ],
+      "capabilities": [
+        "teach",
+        "cloud",
+        "train"
+      ],
+      "parent": "ACCESS / NAIRR selected resources",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "chameleon",
+      "name": "Chameleon / CHI@Edge",
+      "category": "testbed",
+      "funding": "NSF-funded experimental infrastructure",
+      "kind": "Reconfigurable cloud and edge testbed",
+      "route": "Eligible PI project; allocation and resource lease",
+      "fit": "Systems/MLOps, edge/IoT, bare-metal experiments, specialized GPU/FPGA hardware.",
+      "boundary": "Experiment purpose, SU budget and short hardware leases. No unrestricted production hosting; student membership normally follows PI approval.",
+      "sources": [
+        "fedchameleon"
+      ],
+      "capabilities": [
+        "teach",
+        "cloud",
+        "train"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "cloudlab",
+      "name": "CloudLab",
+      "category": "testbed",
+      "funding": "NSF-funded testbed",
+      "kind": "Bare-metal/VM systems experimentation",
+      "route": "Approved project with planned class reservations",
+      "fit": "Distributed systems, reproducible root-access labs and networked application experiments.",
+      "boundary": "Use only while actively experimenting; node data disappears at termination. Reserve for deadline bursts and export work.",
+      "sources": [
+        "fedcloudlab",
+        "fedcloudlabfund"
+      ],
+      "capabilities": [
+        "teach",
+        "cloud"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "fabric",
+      "name": "FABRIC",
+      "category": "testbed",
+      "funding": "NSF grants for research infrastructure",
+      "kind": "Programmable network + distributed compute/storage",
+      "route": "Project and experimental resource slices",
+      "fit": "Distributed AI, edge workloads, streaming/data movement and instrument-to-compute experiments.",
+      "boundary": "Experiment should need the network/testbed capabilities; not a stand-alone generic GPU account or production campus server.",
+      "sources": [
+        "fedfabric"
+      ],
+      "capabilities": [
+        "cloud",
+        "train",
+        "data"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "ncar",
+      "name": "NSF NCAR Derecho / analysis resources",
+      "category": "domain",
+      "funding": "NSF NCAR",
+      "kind": "Domain HPC and classroom allocations",
+      "route": "Classroom/workshop or qualifying research allocation",
+      "fit": "Earth-system, environmental and geospatial data/AI instruction with consulting.",
+      "boundary": "Earth-system mission fit; setup lead time, accounts, dates and reservations required. Separate grant not required for eligible classes.",
+      "sources": [
+        "fedncar"
+      ],
+      "capabilities": [
+        "teach",
+        "batch",
+        "train"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "doe",
+      "name": "DOE NERSC / ALCF / OLCF",
+      "category": "domain",
+      "funding": "DOE Office of Science / ASCR",
+      "kind": "Leadership HPC user facilities",
+      "route": "ALCC, INCITE or facility-specific merit request",
+      "fit": "Large mission-aligned scientific simulation, data analysis and AI research.",
+      "boundary": "ALCC does not require DOE sponsorship, but merit/mission/scaling requirements apply. Not the default for everyday college labs.",
+      "sources": [
+        "feddoe"
+      ],
+      "capabilities": [
+        "batch",
+        "train"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "nasa",
+      "name": "NASA High-End Computing",
+      "category": "domain",
+      "funding": "NASA mission infrastructure",
+      "kind": "Mission research HPC",
+      "route": "NASA-sponsored project / mission request process",
+      "fit": "NASA-aligned Earth/space/engineering computing.",
+      "boundary": "Sponsorship and mission/award review required; not a general open classroom resource.",
+      "sources": [
+        "fednasa"
+      ],
+      "capabilities": [
+        "batch",
+        "train"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "anvil",
+      "name": "NIH AnVIL / Terra ecosystem",
+      "category": "domain",
+      "funding": "NIH NHGRI platform funding; cloud usage billed separately",
+      "kind": "Biomedical data + workflow cloud",
+      "route": "Project/data authorization plus cloud billing or awarded credits",
+      "fit": "Genomic data-science notebooks, workflows and reproducible biomedical training.",
+      "boundary": "Free platform browsing does not mean free compute/storage/egress. NIH AnVIL differs from Purdue ACCESS Anvil; old credit calls are not current offers.",
+      "sources": [
+        "fedanvil",
+        "fedanvilcost"
+      ],
+      "capabilities": [
+        "teach",
+        "data",
+        "train"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "cyverse",
+      "name": "CyVerse Discovery Environment / VICE",
+      "category": "compute",
+      "funding": "Historical core NSF support; new project funding + subscriptions + Arizona TRIF",
+      "kind": "Managed applications and scientific data platform",
+      "route": "Basic account; confirm institutional Pro or collaboration access",
+      "fit": "Python/R apps, data management and a practical UArizona course/pilot route.",
+      "boundary": "Basic 200 units/year, 5 GB, one job and no sharing/public links. Published UArizona free Pro is state-funded, not universal; GPU and class access need consultation.",
+      "sources": [
+        "fedcyverse"
+      ],
+      "capabilities": [
+        "teach",
+        "cloud",
+        "data"
+      ],
+      "parent": "",
+      "status": "Mixed funding; current published UArizona benefit"
+    },
+    {
+      "id": "osn",
+      "name": "Open Storage Network",
+      "category": "data",
+      "funding": "NSF seed support + participating storage operators",
+      "kind": "Allocated object-storage network",
+      "route": "Separate storage request through ACCESS; provider capacity",
+      "fit": "Large actively used teaching/research datasets and portable object storage.",
+      "boundary": "Documented request range 10–50 TB; not CPU time, backup or archival permanence. Actual size/site capacity needs verification.",
+      "sources": [
+        "fedosn",
+        "fedosnaccess",
+        "fedosnpolicy"
+      ],
+      "capabilities": [
+        "data",
+        "storage"
+      ],
+      "parent": "ACCESS storage resource",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "osdf",
+      "name": "OSDF / Pelican",
+      "category": "data",
+      "funding": "OSG/PATh federal-supported services + data origins/caches",
+      "kind": "Data delivery and cache federation",
+      "route": "Connect existing store or allocated OSN/CC* storage through OSG",
+      "fit": "Deliver data to distributed jobs, notebooks and scientific applications.",
+      "boundary": "Not another storage or compute award. Backing store/access policy required; not for highly regulated/PII/HIPAA data; preservation is separate.",
+      "sources": [
+        "fedosdf",
+        "fedosg"
+      ],
+      "capabilities": [
+        "data",
+        "storage"
+      ],
+      "parent": "OSG data layer; interoperates with OSPool / OSN",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "mesa",
+      "name": "MESA",
+      "category": "idss",
+      "funding": "NSF IDSS; project site cites award 2632685",
+      "kind": "Metadata/data mesh/lakehouse + AI workflow integration",
+      "route": "Published MESA portal/docs; underlying services govern compute",
+      "fit": "Metadata, semantic discovery, reproducible data/agent workflows, Jupyter/R/desktop app layer.",
+      "boundary": "Published tools are not a verified class service level. Underlying CyVerse/TACC/ACCESS/NAIRR allocations, GPU entitlement and support remain distinct.",
+      "sources": [
+        "fedmesa",
+        "fedidss",
+        "fedidssprogram"
+      ],
+      "capabilities": [
+        "teach",
+        "data",
+        "cloud",
+        "api"
+      ],
+      "parent": "IDSS Category II",
+      "status": "Funded expansion; published portal/tools, readiness untested"
+    },
+    {
+      "id": "ndp",
+      "name": "National Data Platform (NDP)",
+      "category": "idss",
+      "funding": "NSF IDSS",
+      "kind": "Federated data and education ecosystem",
+      "route": "Public catalog/education activity; consult NDP for class workspace",
+      "fit": "Discoverable compute-ready instructional data, reusable AI activities and capstone content.",
+      "boundary": "Some homepage features are forthcoming. Confirm available workspaces, quota, onboarding and underlying compute rather than equating an IDSS grant with a user allocation.",
+      "sources": [
+        "fedndp",
+        "fedidss"
+      ],
+      "capabilities": [
+        "teach",
+        "data"
+      ],
+      "parent": "IDSS Category I",
+      "status": "Existing ecosystem + funded national expansion"
+    },
+    {
+      "id": "fabaid",
+      "name": "Fabric for AI-Driven Science (FabAID)",
+      "category": "idss",
+      "funding": "NSF IDSS",
+      "kind": "Composable data-service fabric",
+      "route": "Project service endpoints/consultation",
+      "fit": "Storage federation, cache/delivery, transformation, discovery and data-intensive workflows.",
+      "boundary": "Data-service integration complements compute allocations; no universal GPU entitlement, class quota or archival guarantee established.",
+      "sources": [
+        "fedfabaid",
+        "fedidss"
+      ],
+      "capabilities": [
+        "data",
+        "storage"
+      ],
+      "parent": "IDSS Category I",
+      "status": "Funded deployment; service-specific terms to confirm"
+    },
+    {
+      "id": "idlab",
+      "name": "Interactive Discovery Laboratory (iDLab)",
+      "category": "idss",
+      "funding": "NSF IDSS",
+      "kind": "Interactive gateway across sites/clouds",
+      "route": "Project consultation; existing site account/allocations as required",
+      "fit": "Browser applications, interactive workspaces and cross-site data/workflow access.",
+      "boundary": "Participating sites retain policies/control. Gateway access is not an extra copy of the sites’ capacity or long-term archives; course readiness must be confirmed.",
+      "sources": [
+        "fedidlab",
+        "fedidss"
+      ],
+      "capabilities": [
+        "teach",
+        "cloud",
+        "data"
+      ],
+      "parent": "IDSS Category II",
+      "status": "Funded transition; current architecture documented"
+    },
+    {
+      "id": "bridge",
+      "name": "BRIDGE National Center / Apache Texera",
+      "category": "idss",
+      "funding": "NSF IDSS",
+      "kind": "Reusable workflow/data/model platform",
+      "route": "Project collaboration or own supported platform deployment",
+      "fit": "Visual/no-code workflows, reproducible social-science/data analyses and shared community models.",
+      "boundary": "May require your own host/cloud/resources and operators. No verified no-cost public compute subscription or guaranteed class capacity.",
+      "sources": [
+        "fedbridge",
+        "fedidss"
+      ],
+      "capabilities": [
+        "teach",
+        "data",
+        "cloud"
+      ],
+      "parent": "IDSS Category II",
+      "status": "Funded national transition / reusable software"
+    },
+    {
+      "id": "nsdf",
+      "name": "National Science Data Fabric (NSDF)",
+      "category": "idss",
+      "funding": "NSF IDSS",
+      "kind": "Distributed scientific data-access framework",
+      "route": "Project contact; NSF announcement verifies expansion scope",
+      "fit": "Standardized scientific data discovery/access, reproducibility and data/AI workforce development.",
+      "boundary": "Funding/intent verified from NSF announcement; current user-specific access terms, compute quota and production readiness not established in this review.",
+      "sources": [
+        "fedidss"
+      ],
+      "capabilities": [
+        "data",
+        "storage"
+      ],
+      "parent": "IDSS Category II",
+      "status": "Funded transition; detailed onboarding unverified"
+    },
+    {
+      "id": "ood",
+      "name": "Open OnDemand + JupyterHub / BinderHub",
+      "category": "enabler",
+      "funding": "Open OnDemand federal-supported development; site funds operation",
+      "kind": "Browser application delivery software",
+      "route": "Use provider-installed portal or deploy on approved compute",
+      "fit": "Notebooks, RStudio, VS Code, remote desktops and visual/science gateways.",
+      "boundary": "Software is not hardware/time allocation. Only Open OnDemand’s funding is evidenced here; no claim that every JupyterHub installation is federally funded. Operators and backing resources remain necessary.",
+      "sources": [
+        "fedood",
+        "fedoodfund",
+        "fedjetstream",
+        "fednrp"
+      ],
+      "capabilities": [
+        "teach",
+        "cloud"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "workflows",
+      "name": "Pegasus / HTCondor / ACCESS Pegasus",
+      "category": "enabler",
+      "funding": "NSF ACCESS/PATh-supported software and services",
+      "kind": "Workflow orchestration and job execution products",
+      "route": "Hosted ACCESS Pegasus with active allocation; OSG/PATh tools",
+      "fit": "Portable multi-step pipelines, task sweeps, data staging and transparent execution.",
+      "boundary": "Uses existing allocations/pools; does not create another pool. Software portability is not data preservation or a substitute for operations.",
+      "sources": [
+        "fedpegasus",
+        "fedosg",
+        "fedpath"
+      ],
+      "capabilities": [
+        "batch",
+        "data"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "identity",
+      "name": "CILogon / Globus",
+      "category": "enabler",
+      "funding": "Historical federal development/integration; current operations include subscriptions",
+      "kind": "Identity, authorization and research data movement",
+      "route": "Institution/provider identity configuration and endpoint support",
+      "fit": "Campus login, role-based access, data transfer and cross-site workflow connections.",
+      "boundary": "Basic services may be free while advanced support/sharing costs. Neither supplies a compute/storage allocation; CILogon says operations shifted to subscriptions in 2019.",
+      "sources": [
+        "fedcilogon",
+        "fedglobus"
+      ],
+      "capabilities": [
+        "cloud",
+        "data",
+        "storage"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "gateways",
+      "name": "Science gateways / SGX3",
+      "category": "enabler",
+      "funding": "NSF-funded SGX3; substantial operations can be client-funded",
+      "kind": "Gateway expertise and supported interfaces",
+      "route": "Gateway consultation/community resources; project-specific gateway accounts",
+      "fit": "Usable domain applications and teaching interfaces beyond raw HPC command lines.",
+      "boundary": "Limited funded planning/UX/training differs from paid development/hosting/operations. A gateway catalog is not a universal free app-hosting plan.",
+      "sources": [
+        "fedsgx3"
+      ],
+      "capabilities": [
+        "teach",
+        "cloud"
+      ],
+      "parent": "",
+      "status": "Documented service; approval/limits apply"
+    },
+    {
+      "id": "idss",
+      "name": "IDSS program",
+      "category": "funding",
+      "funding": "NSF",
+      "kind": "Operator grant program, not a compute account",
+      "route": "Institutional proposal / funded project collaboration",
+      "fit": "National data-service development, transition to operations and planning.",
+      "boundary": "Six named 2026 projects have different services/stages; the grant does not award every instructor CPU/GPU hours.",
+      "sources": [
+        "fedidssprogram",
+        "fedidss"
+      ],
+      "capabilities": [
+        "data",
+        "fund"
+      ],
+      "parent": "",
+      "status": "Program / awards; not end-user capacity"
+    },
+    {
+      "id": "ccstar",
+      "name": "Campus Cyberinfrastructure (CC*)",
+      "category": "funding",
+      "funding": "NSF",
+      "kind": "Campus/regional infrastructure grants",
+      "route": "Institutional funding process; actual local award/service rules",
+      "fit": "Campus compute, networking, data storage/digital archives and integration.",
+      "boundary": "Current page has no upcoming due dates and awaits new guidelines. Not an open national classroom account; sharing, operation and stewardship have to be funded.",
+      "sources": [
+        "fedccstar"
+      ],
+      "capabilities": [
+        "cloud",
+        "storage",
+        "fund"
+      ],
+      "parent": "",
+      "status": "Program; current page awaiting new publication"
+    },
+    {
+      "id": "mri",
+      "name": "Major Research Instrumentation (MRI)",
+      "category": "funding",
+      "funding": "NSF",
+      "kind": "Multi-user research instrumentation grants",
+      "route": "Institutional limited-submission/award process",
+      "fit": "Appropriate shared instrumentation and computing-linked research training.",
+      "boundary": "Current solicitation, instrument eligibility and campus proposal limits matter. A funding route is not a ready device/GPU account; this map does not assert an open submission window.",
+      "sources": [
+        "fedmri"
+      ],
+      "capabilities": [
+        "fund"
+      ],
+      "parent": "",
+      "status": "Program; review current published call"
+    },
+    {
+      "id": "aihubs",
+      "name": "State / Regional AI Infrastructure Hubs",
+      "category": "funding",
+      "funding": "NSF pays coordination/workforce/education; partners pay infrastructure",
+      "kind": "Mixed-funding consortium program",
+      "route": "Institution/state/regional consortium; actual award and resource terms",
+      "fit": "Faculty course development, facilitators, shared AI-service coordination and regional scale.",
+      "boundary": "NSF does not acquire/fund the compute infrastructure under this solicitation. Partners must sustain it; no awarded Arizona hub is verified here.",
+      "sources": [
+        "fedaihubs"
+      ],
+      "capabilities": [
+        "teach",
+        "fund"
+      ],
+      "parent": "",
+      "status": "Solicitation/program; no local award assumed"
+    },
+    {
+      "id": "workforce",
+      "name": "SCIPE / CyberTraining / ACCESS facilitation",
+      "category": "funding",
+      "funding": "NSF professional/training programs + service support",
+      "kind": "People, skills and support layer",
+      "route": "Existing facilitator/training services or institutional grant pathway",
+      "fit": "Support ownership, instructor onboarding, reusable course materials and train-the-trainer capacity.",
+      "boundary": "Grant programs do not promise staff for every instructor. Current call status and actual support agreements must be checked; college effort is still required.",
+      "sources": [
+        "fedscipe",
+        "fedcybertraining",
+        "fedaccess"
+      ],
+      "capabilities": [
+        "teach",
+        "fund"
+      ],
+      "parent": "",
+      "status": "Support services + funding programs"
+    }
+  ],
+  "gaps": [
+    {
+      "title": "Many small jobs, not one big notebook",
+      "body": "Add OSPool/PATh and checkpointed workflow execution for corpus processing, parameter sweeps and independent model evaluation."
+    },
+    {
+      "title": "Managed teaching environments",
+      "body": "Map CloudBank Classroom, Jetstream2 course images, NRP hubs and eligible CyVerse apps separately from raw GPU allocations."
+    },
+    {
+      "title": "Inference as an API",
+      "body": "NRP-hosted model APIs and requested NAIRR model/software access can support assignments without every student operating a GPU server."
+    },
+    {
+      "title": "Data-first services",
+      "body": "MESA, NDP, FabAID, iDLab, BRIDGE and NSDF supply discovery, metadata, reusable workflows and cross-site access; their grants are not all compute accounts."
+    },
+    {
+      "title": "Object storage, caches and movement",
+      "body": "OSN stores active data; OSDF/Pelican distributes it; Globus moves it. None automatically provides archive permanence or all operating costs."
+    },
+    {
+      "title": "Systems, networks and specialized hardware",
+      "body": "Chameleon, CloudLab and FABRIC support systems/edge/distributed experiments and specialized hardware. Use only when the testbed purpose matches."
+    },
+    {
+      "title": "Campus delivery and staff funding",
+      "body": "Open OnDemand, gateways, identity, orchestration, grant-funded facilitators and college operators make allocations teachable. Compute awards alone do not fund all of them."
+    },
+    {
+      "title": "Domain facilities and mixed funding",
+      "body": "DOE, NASA and NIH add mission-specific routes. CC*/MRI can fund campus capability; AI Hubs and CyVerse/UArizona show why state, subscription and federal support need separate labels."
+    }
+  ],
+  "research": {
+    "checked_at": "2026-10-12",
+    "discovery_queries": 34,
+    "requested_result_slots": 179,
+    "search_areas": [
+      "allocation/throughput capacity",
+      "cloud/classroom/testbeds",
+      "IDSS integrated data",
+      "domain federal facilities",
+      "data/workflow/identity products",
+      "institutional grant and workforce routes"
+    ],
+    "new_source_keys": [
+      "fedaccess",
+      "fednairr",
+      "fedosg",
+      "fedospool",
+      "fedpath",
+      "fednrp",
+      "fednrpllm",
+      "fedjetstream",
+      "fedjetstreamfund",
+      "fedcloudbank",
+      "fedchameleon",
+      "fedcloudlab",
+      "fedcloudlabfund",
+      "fedfabric",
+      "fedncar",
+      "feddoe",
+      "fednasa",
+      "fedanvil",
+      "fedanvilcost",
+      "fedidss",
+      "fedidssprogram",
+      "fedmesa",
+      "fedndp",
+      "fedfabaid",
+      "fedidlab",
+      "fedbridge",
+      "fedosn",
+      "fedosnaccess",
+      "fedosnpolicy",
+      "fedosdf",
+      "fedood",
+      "fedoodfund",
+      "fedpegasus",
+      "fedcilogon",
+      "fedglobus",
+      "fedsgx3",
+      "fedccstar",
+      "fedmri",
+      "fedaihubs",
+      "fedscipe",
+      "fedcybertraining",
+      "fedcyverse"
+    ],
+    "platform_families": 32,
+    "idss_projects": 6,
+    "missing_categories": 8,
+    "method": "Exa discovery and primary federal/provider documents with targeted direct-live checks. Requested slots are not independently verified source counts. No accounts, allocations, GPU calls, cloud charges, grant submissions or private-project materials were used.",
+    "boundaries": [
+      "Federal development funding is different from current operations or no-cost user access.",
+      "ACCESS providers, NRP/Nautilus and OSG/OSPool/OSDF must not be double-counted.",
+      "IDSS projects have distinct integration roles and maturity; no generic user quota is implied.",
+      "Arizona TRIF is state funding; AI Infrastructure Hubs require partners to finance compute.",
+      "Allocated service storage is not automatic archival preservation."
+    ]
+  }
+}

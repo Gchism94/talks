@@ -185,6 +185,15 @@ the retired CodaLab Competitions service, and the unverified readiness of ChaGra
 Degree comparisons include supplementary assignment fits across all nine degrees.
 Run `python3 scripts/build_compute_resources.py` before building the public deck
 and appendix when resource or degree data changes.
+The federal reference at `docs/education-compute/federal-compute.html` maps 32
+platform, service and funding families, including OSG/OSPool/PATh, NRP, research
+clouds/testbeds, mission-specific federal facilities, the six named 2026 IDSS
+projects including MESA, and data/workflow/support products. It distinguishes
+funding provenance from current no-cost access, and marks overlapping providers,
+grant pathways and unverified onboarding. CSV and JSON tables are included.
+Build it with `python3 scripts/build_federal_compute.py` before rebuilding the
+appendix and public deck. The review snapshot and portable ZIP are refreshed with
+`python3 scripts/package_compute_review.py`.
 
 ## Preview locally
 

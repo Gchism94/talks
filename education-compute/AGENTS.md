@@ -16,7 +16,7 @@ The proposed solution combines a large NSF ACCESS allocation with a programmatic
 - `talk/evidence.html`: saved appendix with library repository, free hosting, database, current alternatives, and continuity evidence.
 - `talk/degree-options.html`: nine-degree comparison.
 - `talk/repository-plan.html`: repository continuity plan.
-- `evidence/evidence.json`: 88 source records and structured findings/plans; identical to the public ledger at assembly.
+- `evidence/evidence.json`: 130 source records and structured findings/plans; identical to the public ledger at assembly.
 - `evidence/research-and-sources.txt`: detailed claim boundaries and references.
 - `evidence/source-snapshots/`: saved provider content and the degree catalog snapshot. Not every cited page has a full local capture.
 - `evidence/*verification.json`: direct source-access checks; distinguish unavailable URLs from independently supported claims.
@@ -106,3 +106,20 @@ Source capture directory: `evidence/codabench-research/`, including discovery/ex
 Proposed workflow: develop in a bounded notebook, submit predictions or packaged code, evaluate on a permitted Codabench queue backed by reviewed ACCESS compute where allowed, and export submissions/results/grades independently. Container/network/scheduler policy, resource eligibility, isolated worker operations and full-class load must be verified. No accounts, payments, class integrations, awards or workers were provisioned in this research.
 
 Builders: run `../scripts/build_compute_resources.py` to synchronize embedded evidence/degree data and resource references, then export the deck through `build_site.public_deck` or the parent site build and run `../scripts/build_compute_evidence.py`. Refresh local materials with `../scripts/package_compute_review.py`; do not rerun historical non-idempotent authoring scripts. Latest checks/status are in the `codabenchExtension` record of `review/validation.json`; the prior `serviceEvidenceExtension` is preserved release history. Original October 8/10 policies were not all reverified in this extension.
+
+
+## October 12 federal-compute ecosystem map
+
+Current ledger: 130 records. `talk/federal-compute.html` is the interactive task/search map; its CSV and JSON provide 32 selected platform/service/funding families, six named IDSS projects and eight missing categories. Slide 4 links to it, and the appendix summarizes it. This is not a complete census of every federal machine or grant. The five-slide sequence is unchanged.
+
+IDSS means Integrated Data Systems and Services. NSF's July 22, 2026 awards announcement names FabAID and NDP in Category I, and iDLab, BRIDGE, NSDF and MESA in Category II. These are operator/service grants with different data/workflow/interactive roles; no generic instructor GPU entitlement follows from an award. MESA findings use the public project site and NSF announcement, not internal proposal material or staff plans. Its published portal/tools were not validated end to end here. Underlying CyVerse/TACC/ACCESS/NAIRR policies remain relevant.
+
+Do not double count overlapping names: Jetstream2 is an ACCESS resource provider; Nautilus is NRP's cluster; OSPool and OSDF are separate OSG services; PATh Facility's dedicated credits differ from OSPool's opportunistic fair share. Independent short/ checkpointed jobs fit OSPool, not a live-notebook guarantee. NRP also supplies notebook and model/API products; product existence does not reserve capacity for a class.
+
+Missing layers include throughput jobs; managed teaching environments; hosted inference APIs; data/metadata/workflow fabrics; active object storage and delivery caches; systems/network/edge testbeds; operators/support/identity/gateways; and mission-specific or campus funding pathways. OSN and OSDF are not archival permanence. DOE/NASA/NIH eligibility and billing differ from general ACCESS instruction. NIH AnVIL is not the Purdue ACCESS Anvil supercomputer.
+
+Funding provenance must distinguish federal development, present operating support, state funding, subscriptions and approved user access. CyVerse says core NSF awards ended in 2024; Basic sharing/public links ended June 3, 2025; current Basic lists 200 units/year, 5 GB and one job. It publishes free Pro eligibility for UArizona users through Arizona TRIF, a state source, with 25,000 normalized units/year, 4 TB and four jobs; GPU/course provisioning requires confirmation. CILogon says current operations are subscription-supported following federal development funding. NSF AI Infrastructure Hubs fund coordination/workforce/teaching while consortium partners must finance compute infrastructure. CC*/MRI/SCIPE/CyberTraining are grant pathways, not verified open calls or ready class accounts.
+
+Research: 34 Exa queries requested 179 result slots across six areas; these are not independent validated sources. Forty-two primary-source records were added. Direct checks returned HTTP 200 for 41 original URLs, while FABRIC's old about path returned 404; indexed provider content was reviewed and a live HTTP-200 portal substituted. Source captures and verification are in `evidence/federal-research/`. No accounts, allocations, model/API calls, grant applications or cloud charges were made. The recommended UArizona routes are assessments, not institutional adoption or tested service levels.
+
+Rebuild `../scripts/build_federal_compute.py`, then `build_compute_resources.py`, export the public deck through the canonical site builder/helper, and run `build_compute_evidence.py`. Refresh the portable ZIP/review snapshot with `package_compute_review.py`. Preserve all unrelated talks. The latest `federalExtension` in `review/validation.json` records actual checks/release status; prior extension records describe historical stages. Older commercial policies were not all reverified for this extension.

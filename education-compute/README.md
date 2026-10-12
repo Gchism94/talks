@@ -1,11 +1,13 @@
 # Teaching on Borrowed Compute
 
-Complete local review folder, assembled October 10 and refreshed October 11, 2026.
+Complete local review folder, assembled October 10 and refreshed October 12, 2026.
 
 - [Open the five-slide talk](talk/index.html)
 - [Open the saved evidence appendix](talk/evidence.html)
 - [Compare all nine degrees](talk/degree-options.html)
 - [Compare Codabench and classroom alternatives](talk/classroom-resources.html)
+- [Explore the federal-compute map](talk/federal-compute.html)
+- [Download the federal comparison CSV](talk/federal-compute.csv)
 - [Read the repository continuity plan](talk/repository-plan.html)
 - [Read the full research audit](evidence/research-and-sources.txt)
 - [Read the agent review context](AGENTS.md)
@@ -19,11 +21,11 @@ Open `talk/index.html` in a browser. Keep the entire `talk/` folder together: sl
 | --- | --- |
 | `talk/` | Portable shareable deck, appendix, degree comparison, repository plan, assets, and evidence ledger |
 | `source/` | Authored deck with presenter notes and cover |
-| `evidence/` | 88-record reviewed ledger, detailed text audit, degree data, source verification records, and saved source snapshots |
+| `evidence/` | 130-record reviewed ledger, detailed text audit, degree data, source verification records, and saved source snapshots |
 | `review/` | Validation and release records, screenshots, exact published HTML exports, checks, builders, and historical authoring helpers |
 | `manifest.json` | Original path, size, and SHA-256 for every gathered artifact |
 
-The local snapshots include all files from `output/education-compute/` except the portable folder (placed under `talk/`) and the whole-site `site-build/` cache, which contains unrelated talks. New source captures and rendered Lightning pricing evidence are in `evidence/codabench-research/`. Related screenshots and the publishing builders are included too. Evidence records link to all cited sources; full webpage snapshots exist only where they were saved during research.
+The local snapshots include all files from `output/education-compute/` except the portable folder (placed under `talk/`) and the whole-site `site-build/` cache, which contains unrelated talks. New source captures and rendered Lightning pricing evidence are in `evidence/codabench-research/`; federal-map research/captures are in `evidence/federal-research/`. Related screenshots and the publishing builders are included too. Evidence records link to all cited sources; full webpage snapshots exist only where they were saved during research.
 
 ## Publication and freshness
 
@@ -34,3 +36,5 @@ This is a review snapshot. Canonical authoring remains `../education-compute.htm
 Run `python3 education-compute/verify_bundle.py` from the parent `talks/` folder to check saved artifacts and their portable ZIP. Add `--compare-originals` to detect drift from the original paths. These checks verify the saved bundle; they do not revalidate provider policies or deployment.
 
 Refresh the portable ZIP and this snapshot with `python3 scripts/package_compute_review.py` after updating canonical sources, generated references and validation records.
+
+The October 12 federal reference maps 32 service/platform/funding families, six named IDSS projects and eight missing layers. The latest `federalExtension` record in `review/validation.json` holds verification/publication status. Federal grant provenance is distinct from current operating funding, state TRIF subsidies, no-cost access and tested production readiness.
