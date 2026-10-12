@@ -1,0 +1,7 @@
+# Local review snapshot; reviewed public exports remain in ../docs/education-compute/.
+/talk/
+/source/
+/evidence/
+/review/
+/*.zip
+/manifest.json

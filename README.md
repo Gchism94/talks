@@ -176,6 +176,15 @@ completed losses, announced future changes, current limits and availability issu
 The reviewed ledger and audit are published alongside it as `evidence.json` and
 `research-and-sources.txt`; rebuild the appendix with
 `python3 scripts/build_compute_evidence.py` after reviewing ledger changes.
+The October 11 correction identifies **Codabench** as a free benchmark platform
+with bounded shared CPU scoring and organizer-supplied code/GPU workers.
+Slide 3 includes a filterable comparison of 13 benchmark, grading, notebook and
+GPU-demo resources, also saved in `docs/education-compute/classroom-resources.html`.
+The 88-record evidence ledger distinguishes free routes from paid EvalAI hosting,
+the retired CodaLab Competitions service, and the unverified readiness of ChaGrade.
+Degree comparisons include supplementary assignment fits across all nine degrees.
+Run `python3 scripts/build_compute_resources.py` before building the public deck
+and appendix when resource or degree data changes.
 
 ## Preview locally
 

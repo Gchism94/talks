@@ -200,19 +200,11 @@
       "date": "Checked October 8, 2026",
       "quality": "Official provider / program documentation"
     },
-    "cudabench": {
-      "title": "CUDABench · provider identity unresolved",
-      "url": "https://github.com/CUDA-Bench/CUDABench",
-      "claim": "The identifiable CUDABench project is a CUDA benchmark suite, not a verified free classroom GPU host. A link to the intended service is needed to assess its offer.",
-      "scope": "Do not count this as available compute. A similarly named service may exist; no provider entitlement is inferred from the benchmark project.",
-      "date": "Checked October 8, 2026",
-      "quality": "Project source; intended provider unverified"
-    },
     "cudalive": {
       "title": "cuda.live · optional CUDA micro-exercises",
       "url": "https://cuda.live/pricing",
       "claim": "The independent provider advertises 15 free execution credits per month, a five-runs-per-15-minute rate limit, and T4 GPUs with 16 GB memory. One credit is one execution.",
-      "scope": "Useful for a tightly bounded CUDA demonstration, not a primary semester GPU environment. This is a separate verified service, not a confirmed identification of the user’s CUDABench example. No classroom capacity guarantee was verified.",
+      "scope": "Optional tightly bounded CUDA demonstration, not a primary semester GPU environment. This is independent of Codabench, the service the user intended. No classroom concurrency guarantee was verified.",
       "date": "Checked October 8, 2026",
       "quality": "Official provider / program documentation"
     },
@@ -692,6 +684,150 @@
       "category": "Current free options",
       "status": "Eligibility and quota boundary",
       "checked_at": "2026-10-10"
+    },
+    "codabench": {
+      "title": "Codabench · free benchmark hosting and bounded CPU scoring",
+      "url": "https://www.codabench.org/",
+      "claim": "The public instance allows free participation and competition hosting. Its current announcement provides a shared default CPU queue for small jobs, typically result submissions, capped at 20 minutes per job. Organizers are expected to supply their own queue for code submissions.",
+      "scope": "This is the service intended by the user, correcting the earlier CUDA benchmark-suite identification. It is a benchmark/evaluation service, not a general GPU notebook entitlement. Shared-queue capacity, storage and class concurrency were not reserved or tested. Exa/web extracted unrelated text for the homepage; direct live HTML returned the actual Codabench announcement and is saved locally. No security incident is inferred from that extraction anomaly.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "codabenchworkers": {
+      "title": "Codabench · organizer-supplied CPU / GPU workers",
+      "url": "https://docs.codabench.org/latest/Organizers/Running_a_benchmark/Compute-Worker-Management---Setup/",
+      "claim": "Organizers can attach physical or virtual machines as compute workers. CPU and GPU worker setup is documented; GPU workers require suitable hardware, NVIDIA support and a compatible competition image.",
+      "scope": "GPU support is an integration capability, not a free GPU allocation. Hosting, worker operations, data, isolation and resource limits need separately funded/approved compute. An ACCESS-backed queue is a proposed design, subject to resource, networking and container policies.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "codabenchqueues": {
+      "title": "Codabench · shared and dedicated queues",
+      "url": "https://docs.codabench.org/latest/Organizers/Running_a_benchmark/Queue-Management/",
+      "claim": "Queues dispatch submissions between competitions and internal/external workers. Organizers can create queues, control public access and add collaborators; multiple workers can serve a queue.",
+      "scope": "A queue does not create CPU/GPU capacity. Class concurrency and deadline bursts require a tested worker pool. Protect broker credentials and use an appropriately isolated submission environment.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "codabenchmigration": {
+      "title": "Codabench · CodaLab migration boundaries",
+      "url": "https://docs.codabench.org/latest/Organizers/Benchmark_Creation/How-to-transition-from-CodaLab-to-Codabench/",
+      "claim": "Codabench is the maintained successor to CodaLab Competitions. Sign-up is free; old competition bundles are compatible. Migration requires a new account and export/re-upload of the competition bundle. Leaderboard results do not transfer automatically; submissions must be re-submitted.",
+      "scope": "Compatible software is not complete preservation of course history. Export submissions, results and grading records independently; do not promise recovery from an already phased-out service.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "codalabsunset": {
+      "title": "CodaLab Competitions · phased out in 2025",
+      "url": "https://docs.codabench.org/latest/Newsletters_Archive/CodaLab-in-2025/",
+      "claim": "The project’s 2025 retrospective states that CodaLab Competitions and its main servers were phased out at the end of 2025 and development/community activity moved to Codabench.",
+      "scope": "A confirmed project-reported platform transition, not disappearance of all free benchmarking. No exact final day or deletion of every archive is established. CodaLab Worksheets is a separate service and is not covered by this finding.",
+      "date": "End of 2025; project retrospective checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "kagglecommunity": {
+      "title": "Kaggle · no-cost Community Competitions",
+      "url": "https://www.kaggle.com/c/about/community",
+      "claim": "Kaggle offers self-service Community Competitions with no cost to hosts or participants, dataset hosting, live leaderboards and automated prediction scoring. Educators are explicitly eligible to host.",
+      "scope": "Competition scoring is not an allocation for arbitrary training or sustained GPU work. Participants develop locally or in separately quota-limited notebooks. Community hosting has no hands-on support; featured/managed competitions have different terms.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "kagglesetup": {
+      "title": "Kaggle · competition access and notebook limits",
+      "url": "https://www.kaggle.com/docs/competitions-setup",
+      "claim": "Prediction competitions score answer files; hackathon competitions use judges for open-ended work. Hosts can select public/private visibility and link or email-based access. Restricted-email competitions disable notebooks by default to prevent data leaks.",
+      "scope": "Invite/private settings must be rehearsed. Do not assume a locked class competition also supplies usable notebook GPUs. A leaderboard score is not a complete course assessment; use approved data and follow account rules.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "evalaipricing": {
+      "title": "EvalAI · paid hosted challenge plans",
+      "url": "https://evalai.readthedocs.io/en/latest/01-getting-started/pricing.html",
+      "claim": "Current hosted plans are monthly subscriptions: Essentials $125, Core $250, Advanced $850, and Remote Evaluation $100 with organizer-supplied compute. Hosted worker plans include one concurrent evaluation; extra workers are billed separately.",
+      "scope": "A functional analogue to Codabench, but not a verified free hosted classroom route. Remote evaluation still carries a hosting fee and compute costs. No historical free-tier withdrawal date is established; these are current prices, not a new dated loss.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "evalaisource": {
+      "title": "EvalAI · open-source self-hosting",
+      "url": "https://github.com/Cloud-CV/EvalAI",
+      "claim": "The official open-source project supports customized challenge evaluation, remote workers and local Docker deployment.",
+      "scope": "Open-source availability does not provide free operated hosting or GPUs. A self-hosted pilot needs an operator, service host, storage, worker isolation, backups and actual license/deployment review.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "binder": {
+      "title": "Binder · free ephemeral teaching notebooks",
+      "url": "https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html",
+      "claim": "mybinder.org provides at least 1 GB RAM, up to 2 GB; exceeding 2 GB restarts the kernel. Sessions shut down after ten idle minutes and aim for up to six hours or one CPU-hour of intensive work. The default per-repository concurrent-user cap is 100; larger events can request an increase without a guarantee.",
+      "scope": "Useful for short reproducible Python/R demonstrations and small-data workshops; not persistent files, reserved capacity, a GPU entitlement, long training or controlled-data teaching. Download work before the session ends. A funded BinderHub/JupyterHub is the capacity route if this is insufficient.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "lightningpricing": {
+      "title": "Lightning AI · current introductory credits and restart boundary",
+      "url": "https://lightning.ai/pricing/",
+      "claim": "The live rendered Free plan provides one active free Studio with four-hour restarts. The FAQ offers five introductory credits at registration and 25 more after adding a card, expiring after 12 months. GPU-hour marketing varies by machine/rate and is not a fixed recurring monthly allowance.",
+      "scope": "A conditional development/pilot route. Do not repeat older indexed claims of 15 monthly credits or promise 80 GPU hours to every student. The pricing UI warns that free Studios become paid after four hours; confirm current stopping/billing behavior and use checkpoints. No paid signup or account provisioning was performed.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "lightningbilling": {
+      "title": "Lightning AI · billing and storage scope",
+      "url": "https://lightning.ai/docs/platform/overview/faq/billing.md",
+      "claim": "Official billing documentation describes one free CPU Studio, promotional non-accumulating credits, and ten GB of free Drive storage. The Free storage ceiling is 50 GB, but storage above ten GB is billed; non-free machines also consume credits.",
+      "scope": "The billing text mentions four-CPU while the rendered pricing UI advertises 32-core CPU Studios. Treat machine size as account-specific and verify before adoption. A 50 GB total cap is not 50 GB free storage. Free credit rules can change; no recurring monthly grant is verified.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "zerogpu": {
+      "title": "Hugging Face ZeroGPU · short shared GPU demos",
+      "url": "https://huggingface.co/docs/hub/spaces-zerogpu",
+      "claim": "Existing ZeroGPU Spaces can be used free. Signed-in Free users receive five GPU minutes per daily quota, resetting 24 hours after first use. Free personal accounts with verified email, older than 30 days and in good standing can host up to two ZeroGPU Spaces. Hosting supports Gradio; organization hosting requires a Team or Enterprise plan.",
+      "scope": "For short inference/model-behavior demonstrations, not full notebook training, dedicated GPUs or a semester service reservation. Queue priorities vary. Larger GPU sizing consumes quota faster. This current policy supersedes older descriptions that required PRO for every personal host.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "hfspaces": {
+      "title": "Hugging Face Spaces · current creation and persistence boundaries",
+      "url": "https://huggingface.co/docs/hub/spaces-overview",
+      "claim": "Static Spaces are free. Creating ordinary compute-backed Gradio/Docker Spaces now requires PRO for personal accounts or Team/Enterprise for organizations, except eligible personal ZeroGPU Spaces. CPU Basic has no hourly compute cost, but creation can require a paid plan. Default disk is nonpersistent, and idle free hardware sleeps.",
+      "scope": "Do not describe every CPU demo host as a free account route merely because its hourly rate is zero. Static pages run on the visitor device; ZeroGPU is a special bounded exception. No effective date of a creation-policy change is established here.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "codegrade": {
+      "title": "CodeGrade · bounded free classroom autograding",
+      "url": "https://www.codegrade.com/landing/free",
+      "claim": "The provider advertises a free tier for courses up to 50 students, without a card or expiration, including a browser code editor, automated grading, inline feedback and plagiarism detection across 175+ languages.",
+      "scope": "A teaching/assessment analogue, not a GPU notebook or a proven replacement for all GitHub Classroom automation. Verify actual free-plan account scope, execution quotas, LMS features, data handling and roster growth before adoption. No UArizona integration or deployment was tested.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
+    },
+    "chagrade": {
+      "title": "ChaGrade · challenge-linked classroom workflow",
+      "url": "https://chagrade.lri.fr/",
+      "claim": "The project’s live page offers class creation and grading attached to challenges, individual/team homework and questions beyond challenge performance. It labels the service Work In Progress, version 0.1, and links its open-source project.",
+      "scope": "A relevant adjacent workflow to inspect, not a verified production-ready free entitlement. Current support, terms, quotas and Codabench integration were not established; public signup buttons do not prove those properties. Do not promise it as the college grading baseline.",
+      "date": "Checked October 11, 2026",
+      "quality": "Primary provider / project documentation; current direct verification",
+      "checked_at": "2026-10-11"
     }
   },
   "changes": [
@@ -784,6 +920,17 @@
       "scope": "General Free Tier used by students; not a blanket change to AWS Educate or Academy. New credits and spending protection also change."
     },
     {
+      "year": 2025,
+      "id": "codalabsunset",
+      "name": "CodaLab Competitions",
+      "date": "End of 2025 · no exact final day established",
+      "kind": "Benchmarking",
+      "title": "CodaLab passes the torch to Codabench",
+      "body": "The project reports that CodaLab Competitions and its main servers were phased out at the end of 2025. Codabench is the maintained successor.",
+      "fact": "MIGRATE BENCHMARKS",
+      "scope": "Free benchmarking continues on Codabench. Bundles are compatible, but accounts and leaderboards do not transfer automatically. CodaLab Worksheets is separate."
+    },
+    {
       "year": 2026,
       "id": "gitlablimits",
       "name": "GitLab · new groups",
@@ -850,7 +997,8 @@
       "good": "Python / R / SQL labs, small-data models and short GPU experiments. Browser prototypes for the immersive emphasis.",
       "limit": "Large training, concurrent GPUs, high-memory data or immersive hardware are required.",
       "handoff": "ACCESS CPU / GPU labs; NAIRR Classroom for AI courses; campus XR hardware.",
-      "url": "https://infosci.arizona.edu/bs-information-science"
+      "url": "https://infosci.arizona.edu/bs-information-science",
+      "supplement": "Codabench / Kaggle competitions for small prediction benchmarks; Binder for short CPU labs; CodeGrade for ≤50-student coding labs."
     },
     {
       "id": "msds",
@@ -862,7 +1010,8 @@
       "good": "Reproducible notebooks, tabular ML, sampled datasets and checkpointed deep-learning labs.",
       "limit": "Data exceeds RAM / storage, models exceed available VRAM, or jobs need long / distributed training.",
       "handoff": "ACCESS for larger data and scheduled capacity; NAIRR Classroom for AI instruction.",
-      "url": "https://infosci.arizona.edu/ms-data-science"
+      "url": "https://infosci.arizona.edu/ms-data-science",
+      "supplement": "Codabench / Kaggle competitions for model evaluation; Lightning for credit-bounded pilots; ZeroGPU for brief inference demos."
     },
     {
       "id": "msis",
@@ -874,7 +1023,8 @@
       "good": "ML subplan: notebook experiments. Human-Centered Computing: web prototypes and small public-data studies.",
       "limit": "Training or deployment must persist; studies need controlled data, full desktops or specialized devices.",
       "handoff": "Managed ACCESS environments; NAIRR Classroom where the course teaches AI.",
-      "url": "https://infosci.arizona.edu/ms-information-science"
+      "url": "https://infosci.arizona.edu/ms-information-science",
+      "supplement": "Codabench / Kaggle competitions for ML; ZeroGPU for HCC model demos; CodeGrade for small programming labs."
     },
     {
       "id": "ets",
@@ -886,7 +1036,8 @@
       "good": "Small public-text / network analyses, web development, digital storytelling and public portfolios.",
       "limit": "Live app backends, licensed social-media data, private participant records or large corpora are required.",
       "handoff": "ACCESS for larger analysis or managed servers; retain institution-approved study tools.",
-      "url": "https://infosci.arizona.edu/ba-emerging-technologies-society"
+      "url": "https://infosci.arizona.edu/ba-emerging-technologies-society",
+      "supplement": "Binder for short public-text analysis; CodeGrade for small coding labs; Kaggle hackathons for judged public-data projects."
     },
     {
       "id": "gd",
@@ -898,7 +1049,8 @@
       "good": "Branching narratives, rules and interaction prototypes, browser playtesting and published HTML games.",
       "limit": "A project needs a full 3D engine, large assets, persistent multiplayer servers or VR headsets.",
       "handoff": "Campus engine / device labs; evaluate allocated GPU desktops and server support.",
-      "url": "https://infosci.arizona.edu/ba-game-design"
+      "url": "https://infosci.arizona.edu/ba-game-design",
+      "supplement": "Kaggle hackathons for judged prototypes; CodeGrade for small scripting labs. Neither supplies a 3D engine, XR device or game server."
     },
     {
       "id": "gdev",
@@ -910,7 +1062,8 @@
       "good": "Game logic, headless tests, small JavaScript games and browser-playable prototypes.",
       "limit": "Unity / Unreal desktop workflows, heavy 3D builds, rendering, VR or persistent multiplayer are required.",
       "handoff": "Campus game / XR labs; ACCESS servers or GPU desktops after software and license checks.",
-      "url": "https://infosci.arizona.edu/bs-game-development"
+      "url": "https://infosci.arizona.edu/bs-game-development",
+      "supplement": "CodeGrade for small code/test labs; Codabench only for bounded custom-scored agents with supplied workers. Heavy engine builds remain elsewhere."
     },
     {
       "id": "arts",
@@ -922,7 +1075,8 @@
       "good": "Creative coding, interactive graphics, audio-visual sketches and web-based UX prototypes.",
       "limit": "Work needs high-end rendering, large media, installed creative software, XR devices or physical installations.",
       "handoff": "Campus media / XR labs; allocated GPU or remote desktops where appropriate.",
-      "url": "https://infosci.arizona.edu/ba-information-science-arts"
+      "url": "https://infosci.arizona.edu/ba-information-science-arts",
+      "supplement": "ZeroGPU for brief AI behavior demos; Kaggle hackathons for judged creative projects. Rendering/XR work still needs appropriate hardware."
     },
     {
       "id": "mlis",
@@ -934,7 +1088,8 @@
       "good": "Metadata cleaning, Python / R / SQL exercises, small text collections and static digital exhibits.",
       "limit": "A repository / ILS must run continuously, preservation storage must endure, or collections need access controls.",
       "handoff": "Managed ACCESS teaching servers plus library systems; NAIRR Classroom for AI coursework.",
-      "url": "https://infosci.arizona.edu/ma-library-information-science"
+      "url": "https://infosci.arizona.edu/ma-library-information-science",
+      "supplement": "Binder for metadata/text workshops; Codabench / Kaggle competitions for retrieval or classification metrics. Archives/ILS require durable systems."
     },
     {
       "id": "phd",
@@ -946,7 +1101,8 @@
       "good": "Methods coursework, pilot analyses, reproducible examples and small model feasibility studies.",
       "limit": "Dissertation work needs sustained GPU time, large-scale simulation, controlled data or durable services.",
       "handoff": "ACCESS / appropriate NAIRR research requests for research; Classroom only for eligible instruction.",
-      "url": "https://infosci.arizona.edu/phd-information"
+      "url": "https://infosci.arizona.edu/phd-information",
+      "supplement": "Codabench / EvalAI for research evaluation; Binder for reproducible methods; Lightning for small pilots. Sustained research compute requires an allocation."
     }
   ],
   "platforms": {
@@ -1423,5 +1579,192 @@
       "Direct automated checks were blocked for Figshare, Microsoft, DSpace and Lyrasis (403) and reset for Omeka; primary-page contents were read through Exa.",
       "Neon’s stale indexed 0.5 GB page was corrected against direct live documentation showing 1 GB/project and 20 GB/account."
     ]
-  }
+  },
+  "classroom_resource_options": [
+    {
+      "id": "codabench",
+      "name": "Codabench",
+      "category": "evaluate",
+      "access": "Free benchmark hosting; compute depends on queue",
+      "fit": "Prediction scoring, reproducible code benchmarks and common test environments.",
+      "limits": "Shared CPU scoring jobs ≤20 minutes. Organizers supply queues for code submissions and all GPU workers; no GPU notebook or whole-class reservation.",
+      "sources": [
+        "codabench",
+        "codabenchworkers",
+        "codabenchqueues"
+      ]
+    },
+    {
+      "id": "kagglecommunity",
+      "name": "Kaggle Community Competitions",
+      "category": "evaluate",
+      "access": "Free self-service hosts and participants",
+      "fit": "Prediction-file competitions with live leaderboards; judged hackathons for open-ended projects.",
+      "limits": "Training happens elsewhere or in separately limited notebooks. Restricted-email competitions disable notebooks by default; community hosting has no hands-on support.",
+      "sources": [
+        "kagglecommunity",
+        "kagglesetup"
+      ]
+    },
+    {
+      "id": "codegrade",
+      "name": "CodeGrade",
+      "category": "evaluate",
+      "access": "Advertised free for courses ≤50 students",
+      "fit": "Programming labs with browser editing, immediate autograding and instructor feedback.",
+      "limits": "Check free-plan execution/LMS limits and roster scope. No verified free GPU entitlement or campus deployment; grading records need approved retention.",
+      "sources": [
+        "codegrade"
+      ]
+    },
+    {
+      "id": "chagrade",
+      "name": "ChaGrade",
+      "category": "evaluate",
+      "access": "Adjacent project; current free entitlement unverified",
+      "fit": "Challenge-linked individual/team homework and instructor grading beyond leaderboard scores.",
+      "limits": "Live page labels version 0.1 / Work In Progress. Support, quotas and current Codabench integration need verification; not a ready college-wide baseline.",
+      "sources": [
+        "chagrade"
+      ]
+    },
+    {
+      "id": "evalai",
+      "name": "EvalAI",
+      "category": "evaluate",
+      "access": "Hosted service paid; open-source self-hosting",
+      "fit": "Custom prediction/code evaluation and organizer-controlled remote workers.",
+      "limits": "Hosted plans $125–850/month; remote evaluation $100/month plus own compute. Self-hosting requires funded staff, infrastructure and storage. No verified hosted free tier.",
+      "sources": [
+        "evalaipricing",
+        "evalaisource"
+      ]
+    },
+    {
+      "id": "codalab",
+      "name": "CodaLab Competitions",
+      "category": "legacy",
+      "access": "Retired at end of 2025; successor available",
+      "fit": "Historical challenge service; migrate compatible competition bundles to Codabench.",
+      "limits": "New account required; leaderboards do not transfer automatically. Preserve submissions/results separately. Separate CodaLab Worksheets is not covered.",
+      "sources": [
+        "codalabsunset",
+        "codabenchmigration"
+      ]
+    },
+    {
+      "id": "codespaces",
+      "name": "GitHub Codespaces",
+      "category": "develop",
+      "access": "Bounded free personal CPU quotas",
+      "fit": "Reproducible Python/R/SQL labs, small analysis and code development before submission.",
+      "limits": "60 two-core hours/month, or 90 for verified students; storage quota and machine sizes matter. No generally available GPU; not continuous application hosting.",
+      "sources": [
+        "codespaces",
+        "students",
+        "codespacesgpu"
+      ]
+    },
+    {
+      "id": "kaggle",
+      "name": "Kaggle Notebooks",
+      "category": "develop",
+      "access": "Free accelerator notebooks; quota varies",
+      "fit": "Checkpointed small-model GPU experiments and training for a competition.",
+      "limits": "Check each account’s GPU quota, available hardware, session timer and saved disk. No reserved class seats or distributed/long-running training promise.",
+      "sources": [
+        "kaggle",
+        "kagglequota"
+      ]
+    },
+    {
+      "id": "colab",
+      "name": "Free Google Colab",
+      "category": "develop",
+      "access": "Base free tier remains available",
+      "fit": "Short shared notebooks, CPU analysis and opportunistic accelerator exercises.",
+      "limits": "GPU access and resource/session limits fluctuate. Free Colab is separate from the closed new-signup education Pro offer; never promise class GPU availability.",
+      "sources": [
+        "colab"
+      ]
+    },
+    {
+      "id": "binder",
+      "name": "mybinder.org",
+      "category": "develop",
+      "access": "Free ephemeral CPU sessions",
+      "fit": "Small Python/R notebooks launched from a reproducible repository, including metadata/text workshops.",
+      "limits": "1–2 GB RAM; ten-minute idle shutdown; aims for ≤6 hours or one CPU-hour; 100 concurrent sessions per repo. Download work; no GPU or persistent workspace promise.",
+      "sources": [
+        "binder"
+      ]
+    },
+    {
+      "id": "lightning",
+      "name": "Lightning AI Studio",
+      "category": "develop",
+      "access": "Free CPU studio; conditional introductory GPU credits",
+      "fit": "Browser development, small pilot experiments and checkpointed training within actual credit balance.",
+      "limits": "Four-hour free restart boundary; five credits at signup, 25 more with a card, not a fixed monthly grant. Ten GB free storage; rates/machine size and stopping/billing behavior need checking.",
+      "sources": [
+        "lightningpricing",
+        "lightningbilling"
+      ]
+    },
+    {
+      "id": "zerogpu",
+      "name": "Hugging Face ZeroGPU / Spaces",
+      "category": "demo",
+      "access": "Five GPU minutes/day for signed-in Free users",
+      "fit": "Short Gradio inference demos and model-behavior comparisons; static exhibits on free Static Spaces.",
+      "limits": "Two own ZeroGPU Spaces only for eligible personal accounts ≥30 days old. Shared queues and Gradio constraints; organization hosting paid. Ordinary compute-backed Space creation also needs a paid plan.",
+      "sources": [
+        "zerogpu",
+        "hfspaces"
+      ]
+    },
+    {
+      "id": "cudalive",
+      "name": "cuda.live",
+      "category": "demo",
+      "access": "15 executions/month; bounded CUDA exercises",
+      "fit": "Tiny CUDA kernel/compiler demonstrations independent of the Codabench workflow.",
+      "limits": "Advertised T4 16 GB, five runs per 15 minutes; per-execution allowance is not GPU-hours. Existing October 8 verification, no reserved class capacity.",
+      "sources": [
+        "cudalive"
+      ]
+    }
+  ],
+  "classroom_resource_extension": {
+    "checked_at": "2026-10-11",
+    "corrected_identity": "Codabench, https://www.codabench.org/; earlier CUDA benchmark-suite identification removed",
+    "discovery_calls": 10,
+    "requested_result_slots": 60,
+    "resource_comparisons": 13,
+    "new_source_keys": [
+      "codabenchworkers",
+      "codabenchqueues",
+      "codabenchmigration",
+      "codalabsunset",
+      "kagglecommunity",
+      "kagglesetup",
+      "evalaipricing",
+      "evalaisource",
+      "binder",
+      "lightningpricing",
+      "lightningbilling",
+      "zerogpu",
+      "hfspaces",
+      "codegrade",
+      "chagrade"
+    ],
+    "method": "Exa discovery, primary documents, direct live HTML and rendered Lightning pricing. Requested slots are discovery, not independently validated source counts.",
+    "source_access_notes": [
+      "Codabench homepage extraction from Exa and web was unrelated text; direct live HTML confirmed real content and the 20-minute queue cap.",
+      "Lightning current live rendered FAQ specifies five signup credits plus 25 for adding a card; older monthly-credit claims were not adopted. Billing docs and pricing differ on machine size; verify actual account.",
+      "ChaGrade is retained as an adjacent workflow with unverified entitlement/readiness, not counted as guaranteed free capacity."
+    ],
+    "proposal": "Pilot a permitted Codabench evaluation queue backed by reviewed ACCESS capacity; isolated workers, scheduling, operations, storage, backups and grade exports remain separate requirements."
+  },
+  "updated_at": "2026-10-11"
 }
