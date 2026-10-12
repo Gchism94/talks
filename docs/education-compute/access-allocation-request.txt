@@ -1,0 +1,88 @@
+STATUS
+Draft for review — not submitted
+
+PROJECT TITLE
+UArizona Information Science CPU + GPU Teaching Allocation — [APPROVED TERM / YEAR]
+
+OPPORTUNITY / RESOURCE
+ACCESS allocation; tier selected from measured CPU/GPU request (Discover/Accelerate/Maximize as justified) / ACCESS CPU and GPU resources — exact providers/exchanges to confirm; CloudBank conditional
+
+INTENDED USE
+Classroom / Training
+
+INSTITUTION
+University of Arizona · College of Information Science
+
+PI
+Greg Chism (proposed PI; confirm ACCESS profile, affiliation and eligibility before submission)
+
+CO-PIS
+[APPROVED COURSE LEAD(S), IF CO-PIs]
+
+PROJECT DATES
+[PROJECT START: SIX WEEKS BEFORE COURSE] through [PROJECT END: TWO WEEKS AFTER FINAL COURSE DATE]
+
+COURSE TITLES
+INFO 521: Introduction to Machine Learning — proposed pilot candidate; LIS 671: Digital Curation and Digital Preservation — proposed pilot candidate
+
+ENROLLMENT
+80 planned students: 40 data science and 40 MLIS; confirm actual enrollments
+
+STAFF ACCOUNTS
+Up to six instructional/technical staff accounts; confirm role mapping and whether these count against provider limits
+
+KEYWORDS
+classroom computing; data science; library and information science; metadata; reproducibility; CPU notebooks
+
+FIELD OF SCIENCE
+Select the applicable education/information-science fields in the live ACCESS form.
+
+SUPPORTING GRANT
+No supporting research grant is asserted by this draft. Add a grant only if the PI confirms that the pilot falls within that award’s authorized scope. MESA/IDSS funding is not assumed to fund instruction or local operations.
+
+PUBLIC OVERVIEW
+The University of Arizona College of Information Science seeks an ACCESS CPU and GPU allocation to support reproducible data science and digital-curation teaching in [TERM / YEAR]. The initial proposed pilot includes INFO 521 and LIS 671, approximately 80 students, with later expansion contingent on measured demand and approval. Students will analyze data, evaluate appropriately sized models, normalize collection metadata, query catalogs and export documented outputs. Before piloting, we will test CPU components through campus UITS/AWS and benchmark GPU workloads on free resources. The classroom pilot will use approved ACCESS resources, with named local support, accessible CPU-equivalent activities, independent recovery and end-of-term exports. GPU amounts and provider fit will be justified by measurements rather than free-tier quotas.
+
+PLANNED WORK SUMMARY
+We propose a large CPU + GPU ACCESS allocation, beginning with a bounded two-course pilot and expanding only within an approved scope. Campus UITS/AWS is available to Greg Chism for CPU component testing only; free Kaggle/Colab GPU resources will provide pre-pilot benchmark measurements. Neither test route is the semester classroom hosting plan. All benchmark results are currently pending.
+
+Proposed CPU workloads include small-model data analysis and metadata/SQLite exercises. Proposed GPU workloads include bounded small neural-network training and inference/evaluation; course leads must select the actual model, datasets and instructional need before benchmarking. Use synthetic or rights-cleared public inputs. Measure setup/run times, memory, correctness, checkpoints, failures and export. Reproduce a representative GPU run on the target ACCESS architecture before assuming performance transfers.
+
+After the award, test up to ten volunteers, then provider-approved class concurrency and recovery. ACCESS is the planned CPU/GPU classroom route. Keep approved rosters/grades in institutional systems, independently restore files and close educational accounts at agreed dates. No supporting research grant, staff appointment or budget is asserted. CloudBank through ACCESS is an optional managed implementation only if scope, CPU/GPU capacity, accounting and course dates are confirmed. Do not combine its managed Classroom terms with general broker pricing.
+
+RESOURCE JUSTIFICATION / AMOUNT
+INITIAL PILOT CPU BASELINE: 80 students × 8 active workspace-hours/week × 15 weeks = 9,600 workspace-hours / 19,200 CPU core-hours at 2 vCPU per workspace; 25% allowance gives 12,000 workspace-hours / 24,000 CPU core-hours before staff, idle billing and orchestration. Preferred 6 GB RAM/student; initial homes 5 GB/student + 20 GB/course shared data = 440 GB before staff/overhead. These are workload descriptions, not universal ACCESS units.
+
+GPU REQUEST: quantity pending pre-pilot free GPU benchmarks and target-resource verification. For each approved GPU workload, calculate measured charged run-hours × planned runs/student or group × participants/groups × repetitions, then add separately justified rerun/checkpoint allowance, staff tests and measured overhead. Record GPU model, VRAM, precision, software and any device fraction; session time is not automatically full-device GPU time. Convert with the selected provider’s current accounting/exchange rate. Do not request zero GPU by default: CPU and GPU both belong in the intended allocation.
+
+LARGE ALLOCATION: confirm actual courses/terms/cohorts beyond the 80-seat pilot before extrapolating. Sum distinct CPU, GPU and storage demands across approved cohorts and subtract workloads already covered elsewhere. Do not double count campus AWS component tests as classroom CPU demand. Existing Jetstream2 scenarios (36,600 / 516,600 / 617,400 CPU SUs and an illustrative 1,920 fractional GPU-resource SUs) are comparison models, not this final request. The talk’s 480-seat calculator is also illustrative. Tier, numeric credits/resource units and concurrency/storage quotas remain incomplete until measured and provider-reviewed.
+
+SOFTWARE AND ASSIGNMENTS
+Python/JupyterLab with approved pandas, scikit-learn, matplotlib, CSV/JSON/XML parsing and SQLite; optional R/RStudio and MARC parsing packages only if needed and supported. Request version pinning and notebook distribution (for example, nbgitpuller) where the provider supports them. Confirm the actual grading extensions, assignment export and permissions; no LMS integration is presumed.
+
+OTHER AVAILABLE RESOURCES
+Campus UITS/AWS: Greg confirms access via requests, restricted in this plan to CPU component testing; exact limits/charges/dates need confirmation. Free Kaggle and Colab GPU resources: staff pre-pilot benchmarks only, subject to actual account eligibility, quotas and hardware availability. ACCESS provides the intended CPU and GPU classroom allocation. CloudBank is conditional through ACCESS. CyVerse/MESA, NRP and OSPool remain optional separate components; MESA funding is not automatically an instructional allocation or operations budget.
+
+REQUIRED COMPLETION / ATTACHMENTS
+- Actual course/term/enrollment and any additional cohorts for the large request — incomplete.
+- Eligible designated PI/co-PI profiles and current required CV PDFs — incomplete.
+- Tier-appropriate education/resource plan and required course syllabi; CloudBank specifically requires syllabus PDFs if selected — incomplete.
+- Dated CPU component tests and free GPU benchmarks with target-resource accounting/scaling justification — not run.
+- Provider-confirmed CPU/GPU units, storage/concurrency and educational project structure — missing.
+- Named operators, committed operating budget, support/data/closure plan — pending.
+
+REVIEW AND SUBMISSION STEPS
+1. Complete CPU component tests and free GPU benchmarks before any student pilot; retain failed controls and reproducible artifacts.
+2. Confirm the classroom/education scope and whether multiple courses/terms require separate projects. Keep unrelated MESA research work separate unless explicitly approved.
+3. Choose the ACCESS tier from measured demand: Discover explicitly supports large classes; Accelerate or Maximize requires the relevant justification. “Large” alone does not select Maximize.
+4. Complete the appropriate resource plan, course attachments and PI/co-PI CV PDFs using current portal guidance; this PDF is a supporting draft, not the final tier-specific submission.
+5. Submit for separate CPU/GPU resource exchanges and needed quota/storage. If CloudBank proves feasible, use its documented ACCESS Classroom route and actual accounting instead.
+6. Before piloting, reproduce benchmark workloads on the awarded resources and pass applicable classroom readiness checks. No award or reserved capacity is presumed.
+
+PROVIDER QUESTIONS (NOT SENT)
+- Which ACCESS tier and education project structure fit the confirmed multi-course CPU/GPU workload and term dates?
+- Which CPU and GPU providers, device fractions, unit/exchange rates, storage and concurrency quotas can support the measured demand?
+- Can the GPU benchmark workload be reproduced on the target architecture, and what queue/session/checkpoint constraints apply?
+- How should the application disclose campus AWS CPU component tests and free GPU benchmarks without double counting classroom use?
+- If CloudBank is feasible, which managed/broker service is offered, with what CPU/GPU capacity, accounting, staffing responsibilities and course dates?
+- What expiry, next-term request, warning, export and deletion arrangements apply to this educational project?

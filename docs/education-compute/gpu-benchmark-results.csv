@@ -1,0 +1,6 @@
+workload_id,workload,platform,status,date_utc,environment_manifest,data_sha256,device_and_fraction,vram_gb,cpu_ram_gb,quota_before_after,setup_seconds,run_seconds,peak_memory_gb,correctness,checkpoint_resume,export_reopen,failure_reason,charged_units,notes
+cpu-ds,DS cleaning + small CPU model,Campus UITS/AWS,Not run,,,,,,,,,,,,,,,,"Test component correctness, software and CPU/memory fit."
+cpu-mlis,MLIS metadata + SQLite + export,Campus UITS/AWS,Not run,,,,,,,,,,,,,,,,Test crosswalk/query/checksum correctness and portable output.
+gpu-train,Small neural-network training,Kaggle / free Colab,Not run,,,,,,,,,,,,,,,,"Course lead selects fixed synthetic/rights-cleared dataset, model, seed, batch size and bounded run before execution."
+gpu-eval,Fixed model inference / evaluation,Kaggle / free Colab,Not run,,,,,,,,,,,,,,,,"Measure throughput, VRAM, correctness and resumable/exportable output without private data."
+access-replay,Representative CPU/GPU replay,Awarded ACCESS resource,Not run,,,,,,,,,,,,,,,,Check architecture/accounting differences before classroom admission; target-system timing is still required.

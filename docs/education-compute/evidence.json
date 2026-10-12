@@ -3169,7 +3169,7 @@
     "title": "From federal resources to a classroom service",
     "checked_at": "2026-10-12",
     "status": "Documentation assessment and illustrative capacity model; not an awarded or tested classroom service",
-    "decision": "Assess CloudBank managed CPU Classroom first through general ACCESS; keep Jetstream2 as the controlled alternative when an operator and sufficient quota/storage are funded. Use NRP, MESA/CyVerse and OSPool as independently gated components; clarify PATh eligibility before relying on it.",
+    "decision": "Use ACCESS for the large CPU and GPU allocation and the classroom pilot. Use campus UITS/AWS only to test CPU components, and free GPU resources to benchmark workloads before piloting. Size the ACCESS request from measured demand; consider CloudBank through ACCESS only if its managed service can meet the confirmed requirements.",
     "representative_courses": [
       {
         "name": "Data science",
@@ -3188,9 +3188,9 @@
       {
         "id": "cloudbank",
         "name": "CloudBank Classroom",
-        "role": "First CPU candidate",
+        "role": "Conditional managed alternative",
         "fit": "Managed Python/R notebooks and browser IDEs for both courses.",
-        "gate": "Confirm 80 seats, 2 vCPU/6 GB RAM and 20 GB homes, supported images/grading, roster access, support and export dates.",
+        "gate": "Confirm managed versus broker service, CPU/GPU availability, actual student limits, accounting, course provisioning and exports; previous CPU-only concept is conditional.",
         "limits": "No published per-student specification establishes our fit. Fall 2026 GPU pilot is full. General ACCESS route exists; NAIRR Classroom is a separate AI-course route.",
         "sources": [
           "assesscloudbank",
@@ -3202,7 +3202,7 @@
       {
         "id": "jetstream",
         "name": "Jetstream2 through ACCESS",
-        "role": "Controlled alternative",
+        "role": "ACCESS implementation candidate for CPU + GPU",
         "fit": "Own course images, JupyterHub, isolated teaching web/database services and reviewed benchmark workers.",
         "gate": "Named operator and backup; CPU/GPU/storage exchange; adequate concurrent quota; tested image upgrade, shutdown, restore and end-of-term export.",
         "limits": "Always-on instances dominate credits. Allocation expiry and overdraw can delete resources after thirty days. Storage replication is not independent backup.",
@@ -3483,7 +3483,7 @@
       "fedcyverse",
       "fednrpllm"
     ],
-    "method": "16 discovery queries requested 78 result slots; these are discovery counts, not independent evidence counts. Twenty new primary-source ledger records plus reused program/provider records support a qualitative fit assessment. Public documentation was read, with saved extracts and targeted HTTP access checks. No signed-in entitlement, actual compute workload, model API, cloud billing, allocation request, provider message or grant submission was executed."
+    "method": "16 discovery queries requested 78 result slots; these are discovery counts, not independent evidence counts. Twenty new primary-source ledger records plus reused program/provider records support a qualitative fit assessment. Public documentation was read, with saved extracts and targeted HTTP access checks. No signed-in entitlement, actual compute workload, model API, cloud billing, allocation request, provider message or grant submission was executed. Current user-directed route: campus UITS/AWS is for CPU component testing only; free GPU benchmarks precede piloting; ACCESS covers the planned CPU and GPU classroom allocation. Existing capacity models remain illustrative."
   },
   "pilot_program_summary": {
     "status": "Discussion draft · no award, staffing or budget approved",
@@ -3507,13 +3507,15 @@
       "pilotinfo521",
       "pilotlis671"
     ],
-    "cash_planning_total": 29736.0,
+    "cash_planning_total": 32424.0,
     "required_in_kind_effort": 8220,
-    "checks": 12,
+    "checks": 13,
     "course_seats": 80,
     "course_candidates": [
       "INFO 521",
       "LIS 671"
-    ]
+    ],
+    "decision": "Use ACCESS for the large CPU and GPU allocation and the classroom pilot. Use campus UITS/AWS only to test CPU components, and free GPU resources to benchmark workloads before piloting. Size the ACCESS request from measured demand; consider CloudBank through ACCESS only if its managed service can meet the confirmed requirements.",
+    "benchmark": "gpu-benchmark.html"
   }
 }

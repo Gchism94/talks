@@ -38,7 +38,7 @@ def build():
                      '" target="_blank" rel="noopener noreferrer">' + esc(e.get('link_label', 'Read source ↗')) + '</a></p></details>'
                      for k, e in evidence.items())
     counts = f'{len(evidence)} evidence records · five-slide talk · updated {data.get("updated_at", "2026-10-10")}'
-    pilot_summary = '<p class="explain"><strong>New pilot packet:</strong> <a href="program.html">Open the cohesive program site</a> for administrator, faculty and course-lead views; a draft CloudBank ACCESS request; proposed INFO 521 / LIS 671 workflows; staffing and cost scenarios; and twelve unconfirmed pre-class checks. <a href="access-request.html">Request draft</a> · <a href="budget.html">Budget</a> · <a href="readiness.html">Readiness</a>.</p>' if 'pilot_program_summary' in data else ''
+    pilot_summary = '<p class="explain"><strong>New pilot packet:</strong> <a href="program.html">Open the cohesive program site</a> for administrator, faculty and course-lead views; a draft ACCESS CPU/GPU allocation request and conditional CloudBank option; proposed INFO 521 / LIS 671 workflows; staffing and cost scenarios; and thirteen unconfirmed pre-class checks, with campus AWS component tests and free GPU benchmarks before piloting. <a href="access-request.html">Request draft</a> · <a href="budget.html">Budget</a> · <a href="readiness.html">Readiness</a>.</p>' if 'pilot_program_summary' in data else ''
     page = '''<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Evidence appendix · Teaching on Borrowed Compute</title>
