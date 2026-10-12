@@ -1386,6 +1386,78 @@
       "claim": "Instructors can request class/workshop resources, select services, assign organizers and enroll/approve student accounts with institutional addresses. Typical first-Tuesday maintenance should be considered.",
       "scope": "The subscription page requires Pro/Commercial instructor access for workshops and mentions enrollment limits without giving a numeric limit in its current FAQ. Confirm student tiers, class limits and scheduled service windows. One instructor Pro account does not create 80 simultaneous student jobs.",
       "checked_at": "2026-10-12"
+    },
+    "pilotaccessprepare": {
+      "title": "ACCESS · Explore request contents",
+      "url": "https://allocations.access-ci.org/prepare-requests",
+      "date": "Checked October 12, 2026",
+      "quality": "Official program / institutional documentation",
+      "claim": "Explore requests need a work summary, PI/co-PI CV or résumé PDFs and project metadata. CloudBank’s provider guide additionally asks for course syllabi, enrollments and dates.",
+      "scope": "Use the current Explore/provider checklist, not the separate Maximize document requirements. The generated request PDF does not substitute for final syllabus or CV attachments.",
+      "checked_at": "2026-10-12"
+    },
+    "pilotuahpcclass": {
+      "title": "UArizona HPC · instruction policy",
+      "url": "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/",
+      "date": "Checked October 12, 2026",
+      "quality": "Official program / institutional documentation",
+      "claim": "Campus HPC documents Puma class groups, shared faculty research/class time allocations, unpredictable queues and instructor-led student help. Consultants can assist instructors but do not provide individual support to all students.",
+      "scope": "A documented local alternative, not confirmed account/time quota or reserved classroom capacity. Assess local access honestly before requesting national resources; GPU and deadline priorities are not guaranteed.",
+      "checked_at": "2026-10-12"
+    },
+    "pilotuarental": {
+      "title": "UArizona · rental storage rate and lifecycle",
+      "url": "https://hpcdocs.hpc.arizona.edu/storage_and_transfers/storage/rental_storage/",
+      "date": "Checked October 12, 2026",
+      "quality": "Official program / institutional documentation",
+      "claim": "Rental storage lists $47.35/TB/year, billed for the fiscal-year maximum without proration. It is not backed up, though nightly snapshots may allow recent-file recovery. Controlled data is excluded.",
+      "scope": "The 3 TB/$142.05 example is capacity rent only, not an approved classroom backup service. Verify eligibility, billing and classification; student work/grades are not authorized for this destination by this report.",
+      "checked_at": "2026-10-12"
+    },
+    "pilotuardas": {
+      "title": "UArizona · R-DAS no-cost group storage",
+      "url": "https://hpcdocs.hpc.arizona.edu/storage_and_transfers/storage/rdas_storage/",
+      "date": "Checked October 12, 2026",
+      "quality": "Official program / institutional documentation",
+      "claim": "R-DAS provides up to 5 TB per PI group for open research data, with campus/VPN access and PI/group setup. It is separate from HPC-mounted filesystems.",
+      "scope": "Potential no-cost location to verify, not a student-by-student entitlement, regulated/private-record destination or independent backup strategy. The site does not request an allocation or approve data placement.",
+      "checked_at": "2026-10-12"
+    },
+    "pilotuatier2": {
+      "title": "UArizona · Tier 2 storage billing and restore",
+      "url": "https://hpcdocs.hpc.arizona.edu/storage_and_transfers/storage/tier2_storage/",
+      "date": "Checked October 12, 2026",
+      "quality": "Official program / institutional documentation",
+      "claim": "Tier 2 lists a subsidized first TB of active data, $23/TB/month above that, subsidized transfer, and cold storage/restore stages after inactivity. It excludes controlled data and requires a PI/billing account.",
+      "scope": "The $220.80 six-month comparison assumes 1.6 TB of billed active overage; actual object tiers/charges vary. Cold restores may delay access, so keep a warm independent copy. No classroom data authorization or billing setup is verified.",
+      "checked_at": "2026-10-12"
+    },
+    "pilotualibbackup": {
+      "title": "UArizona Libraries · backup and archival boundaries",
+      "url": "https://lib.arizona.edu/research/data/data-management/best-practices/storage",
+      "date": "Checked October 12, 2026",
+      "quality": "Official program / institutional documentation",
+      "claim": "Libraries distinguishes general working storage from preservation and recommends multiple copies, independent media/location, integrity checks and restore tests. Research storage destinations have data-classification limits.",
+      "scope": "The pilot needs its own approved data map and retention schedule. Institutional documentation is not evidence that any pilot backup, grade export or repository deposit has succeeded.",
+      "checked_at": "2026-10-12"
+    },
+    "pilotinfo521": {
+      "title": "UArizona · INFO 521 course candidate",
+      "url": "https://infosci.arizona.edu/course/info-521-introduction-machine-learning",
+      "date": "Public institutional description checked October 12, 2026",
+      "quality": "Institutional course description (indexed primary page)",
+      "claim": "The institutional course description identifies INFO 521: Introduction to Machine Learning as a three-unit course in machine-learning methods and their application.",
+      "scope": "Supports the public course title and conceptual fit only. It does not establish a future offering, enrollment, assigned instructor, syllabus approval or consent to the computing pilot. No private syllabus or intranet content is reproduced.",
+      "checked_at": "2026-10-12"
+    },
+    "pilotlis671": {
+      "title": "UArizona · LIS 671 course candidate",
+      "url": "https://infosci.arizona.edu/course/lis/671",
+      "date": "Public institutional description checked October 12, 2026",
+      "quality": "Institutional course description (indexed primary page)",
+      "claim": "The institutional course description identifies LIS 671: Digital Curation and Digital Preservation as a three-unit course addressing digital-information work in libraries, archives and records management.",
+      "scope": "Supports the public course title and conceptual fit only. It does not establish a future offering, enrollment, assigned instructor, syllabus approval or consent to the computing pilot. No private syllabus or intranet content is reproduced.",
+      "checked_at": "2026-10-12"
     }
   },
   "changes": [
@@ -3412,5 +3484,36 @@
       "fednrpllm"
     ],
     "method": "16 discovery queries requested 78 result slots; these are discovery counts, not independent evidence counts. Twenty new primary-source ledger records plus reused program/provider records support a qualitative fit assessment. Public documentation was read, with saved extracts and targeted HTTP access checks. No signed-in entitlement, actual compute workload, model API, cloud billing, allocation request, provider message or grant submission was executed."
+  },
+  "pilot_program_summary": {
+    "status": "Discussion draft · no award, staffing or budget approved",
+    "entrypoint": "program.html",
+    "request": "access-request.html",
+    "plan": "pilot-plan.html",
+    "budget": "budget.html",
+    "readiness": "readiness.html",
+    "sources": [
+      "assesscloudbank",
+      "pilotaccessprepare",
+      "access",
+      "assesscbgpu",
+      "assesscbscope",
+      "pilotuahpcclass",
+      "pilotuarental",
+      "pilotuardas",
+      "pilotuatier2",
+      "pilotualibbackup",
+      "fedcyverse",
+      "pilotinfo521",
+      "pilotlis671"
+    ],
+    "cash_planning_total": 29736.0,
+    "required_in_kind_effort": 8220,
+    "checks": 12,
+    "course_seats": 80,
+    "course_candidates": [
+      "INFO 521",
+      "LIS 671"
+    ]
   }
 }

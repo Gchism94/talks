@@ -38,6 +38,7 @@ def build():
                      '" target="_blank" rel="noopener noreferrer">' + esc(e.get('link_label', 'Read source ↗')) + '</a></p></details>'
                      for k, e in evidence.items())
     counts = f'{len(evidence)} evidence records · five-slide talk · updated {data.get("updated_at", "2026-10-10")}'
+    pilot_summary = '<p class="explain"><strong>New pilot packet:</strong> <a href="program.html">Open the cohesive program site</a> for administrator, faculty and course-lead views; a draft CloudBank ACCESS request; proposed INFO 521 / LIS 671 workflows; staffing and cost scenarios; and twelve unconfirmed pre-class checks. <a href="access-request.html">Request draft</a> · <a href="budget.html">Budget</a> · <a href="readiness.html">Readiness</a>.</p>' if 'pilot_program_summary' in data else ''
     page = '''<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Evidence appendix · Teaching on Borrowed Compute</title>
@@ -51,7 +52,7 @@ def build():
 <p class="lead">Evidence across computing, repositories, app hosting, databases, and preservation.</p></header>
 <nav aria-label="Evidence sections"><a href="#federal">Federal compute map</a><a href="#resources">Codabench &amp; alternatives</a><a href="#library">Library repositories</a><a href="#hosting">Hosting &amp; databases</a><a href="#options">Free hosting now</a><a href="#plan">Proposed response</a><a href="#ledger">Source ledger</a></nav>
 <p class="explain">Historical window: October 10, 2021–October 10, 2026. Upcoming announced changes appear separately. A shutdown, a billing requirement, a current quota, and an availability incident are different findings. This selected history does not measure market-wide capacity or prove that every free route is shrinking.</p>
-<section id="federal"><h2>Federally supported computing and the missing layers</h2>''' + federal_summary(data) + assessment_summary(data) + '''</section>
+<section id="federal"><h2>Federally supported computing and the missing layers</h2>''' + federal_summary(data) + assessment_summary(data) + pilot_summary + '''</section>
 <section id="resources"><h2>Codabench and classroom alternatives</h2><p>Benchmark hosting, notebook development, short GPU demonstrations and grading serve different parts of a course. Paid and retired analogues are labeled explicitly. <a href="classroom-resources.html">Open the standalone resource report ↗</a>.</p>''' + resource_content(data) + '''</section>
 <section id="library"><h2>Library and research repositories</h2><p>These services preserve, publish, describe, or organize scholarly and cultural materials. Working cloud storage feeds those repositories but is not itself a preservation service.</p><div class="grid">''' + cards(data['library_repository_findings']) + '''</div></section>
 <section id="hosting"><h2>Free hosting and databases</h2><p>General-purpose services used in teaching. Service shutdowns include paid users; free-plan changes have narrower scope. One provider may appear in both hosting and database layers, without counting it as two vanished companies.</p><div class="grid">''' + cards(data['hosting_database_findings']) + '''</div></section>

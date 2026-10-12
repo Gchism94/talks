@@ -1,0 +1,129 @@
+Reliable computing for teaching
+Discussion draft · no award, staffing or budget approved
+
+Request managed CPU CloudBank Classroom access through ACCESS for a data science + MLIS pilot. Fund the local service around it, prove one assignment per course, then admit an 80-seat semester only after the readiness checks pass.
+
+COURSE CONCEPTS
+
+Data science
+Build a reproducible data-cleaning and exploratory-analysis notebook, then fit a small CPU model with held-out validation. Explain missingness, leakage, uncertainty and data provenance.
+Generate a synthetic civic-service dataset with no real residents; keep core CSV inputs below 250 MB and test peak memory against the awarded workspace. Real/public datasets require a rights and data-classification check.
+Requested: Python, JupyterLab, pandas, scikit-learn, matplotlib and an approved reproducible package manifest; R/RStudio only if the course requires it.
+Acceptance: Run the whole assignment from a fresh student workspace; require execution without out-of-memory errors at the approved spec, reproducible key outputs and a complete exported submission.
+Optional: A grouped GPU demonstration can be added only with separately confirmed access and a CPU-equivalent assessed activity; it is outside the core CloudBank request.
+
+MLIS / Library and information science
+Audit a collection catalog, normalize names/dates/identifiers, document a metadata crosswalk, query an embedded catalog database and export a preservation-ready package with README, schema, provenance and checksums.
+Use a synthetic 10,000–100,000-record collection catalog with Dublin Core-style fields. Add public/licensed records only after rights review; exclude patron, circulation, donor and restricted collection records.
+Requested: JupyterLab/Python, CSV/JSON/XML parsing and embedded SQLite; optional MARC parsing packages after approval. OpenRefine or other hosted applications require a separate provider fit check.
+Acceptance: Execute the complete workflow in a fresh workspace; validate schema, record counts, identifiers and query results; reopen the exported package using the fallback environment.
+Optional: MESA/CyVerse can demonstrate a data/workflow component after per-user Pro/TRIF, app, save/exit and export checks. It does not add quota or become a required dependency of this pilot.
+
+PHASES
+
+8–6 weeks before term | Authorize the plan
+Choose actual course titles/dates and owners. Approve up to $6,000 for preparation/canary within an illustrative $30,000 total ceiling. Resolve institutional data/support requirements and confirm CloudBank’s route before the designated PI submits.
+Exit evidence: Named owners, covered workload, provider fit and a complete request packet.
+
+6–4 weeks before term | Run a ten-person component canary
+After approved access, recruit up to ten consenting volunteers, five per course concept. Run one DS notebook and one metadata/database/export workflow with synthetic inputs. Measure setup, package/memory fit, save/restart/export and support effort. No real grades or private library data are needed.
+Exit evidence: Both workflows succeed; actual service limits and unresolved defects are recorded. Stop or revise if core fit fails.
+
+4–2 weeks before term | Rehearse the whole class and recovery
+With provider approval, rehearse 80 student workspaces plus agreed staff use. Test account isolation, grading receipts, accessible instructions, independent restore and the CPU fallback. Update the cost/usage forecast from observed operator-hours.
+Exit evidence: All twelve readiness checks have dated evidence and accountable sign-off; sponsor releases the remaining envelope.
+
+Weeks 1–15 | Teach the two-course pilot
+Publish orientation and support windows. Keep all required assessment CPU-capable. Review access, usage, storage, tickets and backups weekly; brief course leads at weeks 3, 8 and 12. Optional GPU, OSPool and MESA modules have separate admission checks.
+Exit evidence: Record aggregate completion/access outcomes and actual costs; pause a failing component without removing the CPU course route.
+
+Term end + two weeks | Export, close and decide
+Provide learner exports and reconcile grades before closure. Preserve approved public outputs with suitable metadata; apply the institutional retention/deletion schedule to private records. Do not assume educational allocation extension. Decide whether next term needs a new project or confirmed renewal.
+Exit evidence: Verified exports, measured restore, closed accounts, final report and a costed continuation decision.
+
+STAFFING AND COSTS
+Illustrative USD planning rates, not UArizona pay scales, provider quotes or approved funds. Rates are assumed fully loaded (salary/fringe/overhead included); do not add fringe twice. In-kind effort is a required written workload commitment, not free labor. Replacing defaults changes the proposal only, not an approved budget.
+Service owner / allocation lead: 16 hours × $100/hour = $1,600 (cash). Own provider agreement, allocation scope, budget, go/no-go and escalation. A designated eligible PI submits; no PI is appointed by this draft.
+Primary technical operator: 112 hours × $90/hour = $10,080 (cash). Coordinate configuration, image/package checks, roster access, monitoring, backup/export, incident triage and retirement. Managed hosting reduces infrastructure work but does not remove this role.
+Backup technical operator: 27 hours × $90/hour = $2,430 (cash). Independently rehearse restore and cover absences; keep the runbook and emergency export usable. Must be a different person from the primary operator.
+Two course support TAs: 102 hours × $35/hour = $3,570 (cash). Per TA: two hours of scheduled help and one hour of ticket/lab triage each teaching week; extra setup/close hours. These are pilot computing-support hours, not the full course grading workload.
+Instructional design / accessibility: 24 hours × $75/hour = $1,800 (cash). Accessible notebook instructions, keyboard/screen-reader review, CPU/offline alternatives and learner onboarding.
+IT security / privacy reviewer: 12 hours × $100/hour = $1,200 (cash). Approve data destinations, SSO/account roles, export/retention and institutional service requirements. Review is a proposed duty, not an existing approval.
+Two course leads: 70 hours × $90/hour = $6,300 (in-kind). Adapt one representative assignment each, teach the save/export workflow, decide substitutions and reconcile grading receipts. Additional pilot effort excludes normal course instruction/grading; workload release must be committed.
+Libraries / data steward: 16 hours × $85/hour = $1,360 (in-kind). Review metadata/rights, data packaging, retention and eligible archival selection; no repository acceptance is promised.
+College sponsor / finance: 8 hours × $70/hour = $560 (in-kind). Release staged funds, replace illustrative rates with institutional costing, approve the account/destination and decide continuation.
+Approved backup/export destinations: $2,000. Planning reserve for two independently restorable copies and access/retention controls. Obtain an institution-approved quote; the open-research storage example below does not authorize student-work storage.
+Durable exhibit / database destination: $600. Planning reserve for optional MLIS exhibit hosting, exports or a department-managed application/database. Required labs use files and embedded SQLite; no external database subscription is required.
+Fallback / unquoted service costs: $1,500. Planning reserve for teach-out or approved service charges. CloudBank resource/exchange terms are not quoted; no commercial charges or purchases are authorized.
+Cash base $24,780; 20% contingency $4,956.0; cash total $29,736.0; required in-kind $8,220.
+Excludes normal course instruction/grading, new staff recruitment, major platform development, laptops, paid software, optional GPU/model charges and institutional indirect costs beyond the assumed loaded rates. Additional scope requires a new estimate. No student-paid account or personal payment card is proposed.
+Assume no local compute payment only if the awarded Classroom resource covers the approved use. Confirm actual units, credit exchange, included storage/support and any uncovered charges; $0 is not a provider quote. The Jetstream2 SU model must not be entered as CloudBank credits.
+
+PRE-CLASS READINESS (ALL PLANNED / NOT RUN)
+
+scope | Sponsor + service owner | Before request
+Assign eligible PI, two course leads, primary and distinct backup operator; approve staged funding and term coverage.
+Evidence: Written roster of owners, budget/workload commitments and escalation cover.
+Stop if: No named operator, backup or approved operating period.
+
+provider | Service owner + CloudBank | Before request / gate to class
+Provider confirms the general ACCESS Classroom route, requested 80 student + six staff identities, resource limits, software, course dates and term/export rules. Clarify one versus two projects.
+Evidence: Provider response and approved award/resource configuration, recorded privately.
+Stop if: Assuming unspecified limits, general broker terms or automatic renewal.
+
+accounts | Operator + course leads | Canary; repeat before week 1
+Every approved student/staff test account authenticates; student A cannot read/write student B files or instructor grading areas; removal/revocation works.
+Evidence: Access matrix and dated test results; no passwords or roster identifiers in public reports.
+Stop if: Access leakage, shared credentials or unverified removal.
+
+software | Each course lead | Canary
+Both complete representative assignments run on the approved CPU image from fresh workspaces; no paid account or GPU is required. Pin the approved environment and input checksums.
+Evidence: Clean-run outputs, environment manifest, resource measurements and a known-good baseline.
+Stop if: Missing packages, memory failure, unapproved app or required GPU dependency.
+
+capacity | Operator + provider | 2–4 weeks before term
+With provider permission, rehearse 80 simultaneous students plus agreed staff use in three representative sessions. Proposed p95 login-to-workspace ≤5 minutes; no unresolved assignment-blocking launch failure.
+Evidence: Dated latency distribution, workspace success count, quota/usage forecast and provider-agreed concurrency.
+Stop if: No permission/capacity evidence; peak spec exceeds awarded limits.
+
+save | Course leads + TAs | Canary; repeat after image update
+Edit, save, stop/restart and recover a notebook/data package; verify filesystem location and retention. Export and re-import it into the CPU fallback.
+Evidence: Saved-file checksums, restart/export receipt and fresh-environment reopen.
+Stop if: Student work depends on an unsaved session or cannot be exported.
+
+grades | Course leads | Before graded use
+Distribute a versioned assignment, collect it, reconcile all test submissions, preserve student authorship and instructor judgment, and import/export a test grade receipt through the approved LMS workflow.
+Evidence: Submission manifest and grade reconciliation results in the approved institutional destination.
+Stop if: A leaderboard/auto-score substitutes for the authoritative grade, or a missing receipt goes undetected.
+
+data | IT/privacy reviewer + Libraries | Before student data
+Approve provider and backup data destinations, lawful/appropriate datasets, access roles and retention. Keep grades/rosters in the approved LMS/institutional systems; publish only aggregate results.
+Evidence: Approved data map, rights notes, retention schedule and service/accessibility review.
+Stop if: Assuming research storage or this public site is approved for private student records.
+
+accessibility | Instructional designer + course leads | Before course admission
+Rehearse keyboard and screen-reader access, readable instructions and equivalent small-data CPU/offline activity; resolve barriers in essential workflows.
+Evidence: User/task review and course-lead sign-off, with accommodations and fallback instructions.
+Stop if: An essential assessed activity is inaccessible without an equivalent route.
+
+recovery | Primary + backup operators | Before course admission
+Make independent copies in approved destinations and restore onto a different host/environment. Proposed RPO ≤24 hours and RTO ≤one business day; measure both.
+Evidence: Restore logs, independent file checksums, recovery timing and backup-operator runbook rehearsal.
+Stop if: No independent copy or unmeasured recovery; relying only on snapshots or cold archival retrieval.
+
+support | Owner + TAs + operators | Before week 1; weekly
+Publish actual staffed help windows and escalation route; rehearse an outage with CPU/small-data fallback. Proposed first response within one staffed business day; do not promise 24/7 support.
+Evidence: Coverage schedule, ticket routing, outage exercise and fallback delivery proof.
+Stop if: Unfunded coverage, unreachable operator or missed class deadline without substitution.
+
+exit | Service owner + course leads + Libraries | Before start; execute near term end
+Schedule alerts 60/30/14/7 days before expiry; decide continuation at least 30 days before. Rehearse learner/grade export, retention and deletion; verify closure on the approved dates.
+Evidence: End-of-term runbook, sample exports, provider confirmation of exit window and deletion/renewal decision.
+Stop if: Relying on grace periods, unconfirmed education extension or archival deposits of private coursework.
+
+EVALUATION
+Access: login/spawn success and latency, plus interruptions that blocked coursework.
+Teaching: clean-run assignment success, reproducible outputs, export/grade-receipt completeness and completion barriers.
+Operations: actual staff-hours, ticket categories, service/storage consumption, recovery timings and cash charges.
+Continuity: working CPU fallback, independent restore, learner exports and verified end-of-term closure.
+Decision: compare results with the approved gates and local alternatives before adding courses or optional GPUs; improvement in educational outcomes is a question to evaluate, not a finding.
