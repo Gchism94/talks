@@ -13,13 +13,13 @@ def resource_content(data, interactive=False):
     esc = html.escape
     controls = ('<div class="resource-filters" role="group" aria-label="Filter classroom resources">' +
                 ''.join(f'<button data-resource-filter="{key}" aria-pressed="{str(key == "all").lower()}">{label}</button>'
-                        for key, label in [('all', 'All'), ('evaluate', 'Benchmark & grade'), ('develop', 'Notebooks'), ('demo', 'GPU demos'), ('legacy', 'Retired')]) + '</div>') if interactive else ''
+                        for key, label in [('all', 'All'), ('manage', 'Classroom workflow'), ('evaluate', 'Benchmark & grade'), ('develop', 'Notebooks'), ('demo', 'GPU demos'), ('legacy', 'Retired')]) + '</div>') if interactive else ''
     cards = ''.join('<article class="resource-card" data-resource-category="' + esc(r['category']) + '">' +
                     '<p class="resource-tag">' + esc(r['access']) + '</p><h3>' + esc(r['name']) + '</h3>' +
                     '<p>' + esc(r['fit']) + '</p><p class="resource-limit"><strong>Boundary:</strong> ' + esc(r['limits']) + '</p>' +
                     '<p class="resource-refs">' + ' · '.join('<a target="_blank" rel="noopener noreferrer" href="' + esc(data['evidence'][k]['url'], quote=True) + '">' + esc(data['evidence'][k]['title']) + '</a>' for k in r['sources']) + '</p></article>'
                     for r in data['classroom_resource_options'])
-    return '<p class="source-intro">Checked October 11, 2026. Free access supports particular assignments; it does not reserve a whole class or fund a semester service.</p><div class="resource-flow" aria-label="Classroom workflow"><div><strong>1 · Develop</strong><span>CPU / notebook / GPU quota</span></div><b aria-hidden="true">→</b><div><strong>2 · Submit</strong><span>Predictions or packaged code</span></div><b aria-hidden="true">→</b><div><strong>3 · Evaluate</strong><span>Scoring queue + leaderboard</span></div></div><p class="resource-callout"><strong>Codabench:</strong> free competition hosting and a shared CPU queue with a 20-minute job cap. Organizers supply their own queue for code submissions. GPU workers require separately supplied compute.</p>' + controls + '<div class="resource-grid">' + cards + '</div><p class="resource-callout"><strong>Proposed pilot:</strong> develop in a bounded notebook environment; evaluate approved assignments through a Codabench queue attached to reviewed ACCESS compute where permitted. Budget operators, isolated submission workers, durable storage and exports separately. Validate scheduling, network/container rules and real class load before promising this route. Keep code, scoring bundles, submissions and results portable; a leaderboard is not the full course grade.</p>'
+    return '<p class="source-intro">Classroom 50 and Codespaces checked October 13; other resource comparisons October 11, 2026. Free access supports particular assignments; it does not reserve a whole class or fund a semester service.</p><div class="resource-flow" aria-label="Classroom workflow"><div><strong>1 · Develop</strong><span>CPU / notebook / GPU quota</span></div><b aria-hidden="true">→</b><div><strong>2 · Submit</strong><span>Predictions or packaged code</span></div><b aria-hidden="true">→</b><div><strong>3 · Evaluate</strong><span>Scoring queue + leaderboard</span></div></div><p class="resource-callout"><strong>Codabench:</strong> free competition hosting and a shared CPU queue with a 20-minute job cap. Organizers supply their own queue for code submissions. GPU workers require separately supplied compute.</p>' + controls + '<div class="resource-grid">' + cards + '</div><p class="resource-callout"><strong>Proposed pilot:</strong> develop in a bounded notebook environment; evaluate approved assignments through a Codabench queue attached to reviewed ACCESS compute where permitted. Budget operators, isolated submission workers, durable storage and exports separately. Validate scheduling, network/container rules and real class load before promising this route. Keep code, scoring bundles, submissions and results portable; a leaderboard is not the full course grade.</p>'
 
 
 RESOURCE_CSS = '''
@@ -49,6 +49,12 @@ def build():
     degree = degree_content(data)
     text = re.sub(r'(<div id="resourcesBody">).*?(</div><!-- /resourcesBody -->)', lambda m: m[1] + resources + m[2], text, flags=re.S)
     text = re.sub(r"\$\('degreesBody'\)\.innerHTML=.*?;\n(?=\$\('degreesBtn'\))", lambda m: "$('degreesBody').innerHTML=" + json.dumps(degree, ensure_ascii=False) + ';\n', text, flags=re.S)
+    repo_articles = ''.join('<article><h3>' + html.escape(r['title']) + '</h3><p>' + html.escape(r['body']) + '</p><p class="owner">' + html.escape(r['owner']) + '</p></article>' for r in data['repository_plan'])
+    text = re.sub(r'(<div class="repo-plan">).*?(</div><p class="repo-plan-note">)', lambda m: m[1] + repo_articles + m[2], text, flags=re.S)
+    repository = DEST / 'repository-plan.html'
+    repo_text = re.sub(r'(<div class="repo-plan">).*?(</div><p class="repo-plan-note">)', lambda m: m[1] + repo_articles + m[2], repository.read_text(), flags=re.S)
+    repo_text = repo_text.replace('updated October 10, 2026', 'Classroom 50 consideration updated October 13, 2026')
+    repository.write_text(repo_text)
     source.write_text(text)
     (DEST / 'classroom-resources.html').write_text(standalone('Codabench & classroom alternatives', resource_content(data)))
     (DEST / 'degree-options.html').write_text(standalone('Free classroom options by degree', degree))

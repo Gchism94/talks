@@ -133,7 +133,7 @@
       "url": "https://docs.github.com/en/billing/concepts/product-billing/github-codespaces",
       "claim": "Personal Free includes 120 core-hours and 15 GB-month; Pro includes 180 core-hours and 20 GB-month. On a 2-core machine those amounts mean 60 and 90 active wall-clock hours. Larger machines spend the quota faster.",
       "scope": "Organizations have no included free quota. Stored codespaces consume storage even when stopped. Without a payment method usage stops at the limit; paid overages depend on billing settings. Use personal ownership deliberately; Classroom’s former organization benefit is not assumed.",
-      "date": "Checked October 8, 2026",
+      "date": "Rechecked October 13, 2026",
       "quality": "Official provider / program documentation"
     },
     "students": {
@@ -141,7 +141,7 @@
       "url": "https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students",
       "claim": "Verified students receive up to 180 core-hours per month on personal accounts, with storage equivalent to GitHub Pro.",
       "scope": "Verification and benefit eligibility must be established before teaching. Some documentation still describes the closed Classroom integration; the recommendation uses only the personal-account benefit.",
-      "date": "Checked October 8, 2026",
+      "date": "Rechecked October 13, 2026",
       "quality": "Official provider / program documentation"
     },
     "codespacesgpu": {
@@ -1458,6 +1458,46 @@
       "claim": "The institutional course description identifies LIS 671: Digital Curation and Digital Preservation as a three-unit course addressing digital-information work in libraries, archives and records management.",
       "scope": "Supports the public course title and conceptual fit only. It does not establish a future offering, enrollment, assigned instructor, syllabus approval or consent to the computing pilot. No private syllabus or intranet content is reproduced.",
       "checked_at": "2026-10-12"
+    },
+    "classroom50": {
+      "title": "Classroom 50: project and license",
+      "url": "https://github.com/foundation50/classroom50",
+      "date": "Checked October 13, 2026",
+      "quality": "Primary project documentation",
+      "claim": "Free, open-source assignment distribution and grading alternative to GitHub Classroom, supported by the Fifty Foundation; project license is GPL-3.0.",
+      "scope": "An independently maintained successor, not a GitHub-operated replacement or an institution-owned hosted service. Documentation fit does not establish classroom adoption."
+    },
+    "classroom50model": {
+      "title": "Classroom 50: operation and course data",
+      "url": "https://github.com/foundation50/classroom50/wiki/How-Classroom-50-Works",
+      "date": "Checked October 13, 2026",
+      "quality": "Primary project documentation",
+      "claim": "Hosted static web app or local CLI coordinates GitHub organization teams, repositories, rosters, assignments and scores; grading runs through GitHub Actions.",
+      "scope": "Course state can live in our institution-controlled GitHub organization. Hosted app stewardship, GitHub service availability and local staffing remain dependencies; ACCESS integration is not demonstrated."
+    },
+    "classroom50requirements": {
+      "title": "Classroom 50: prerequisites and education eligibility",
+      "url": "https://github.com/foundation50/classroom50/wiki/Prerequisites-and-GitHub-Education",
+      "date": "Checked October 13, 2026",
+      "quality": "Primary project documentation",
+      "claim": "Requires a GitHub Team or Enterprise organization. Verified teachers can request an education upgrade for their specific organization.",
+      "scope": "Personal teacher verification does not automatically upgrade the organization. Confirm plan, enterprise OAuth policies and actual organization ownership before adoption; no paid upgrade is authorized."
+    },
+    "classroom50hosting": {
+      "title": "Classroom 50 web app: hosting and authentication",
+      "url": "https://github.com/foundation50/classroom50/blob/main/web/README.md",
+      "date": "Checked October 13, 2026",
+      "quality": "Primary project documentation",
+      "claim": "Open-source web app can be self-hosted. Default OAuth exchange and archive proxies use a Fifty Foundation Cloudflare Worker; deployments can configure their own proxy.",
+      "scope": "Self-hosting is an option, not an existing UArizona service. Authentication, proxy traffic, browser token handling, maintenance and recovery need review and available operator time."
+    },
+    "classroom50actions": {
+      "title": "Classroom 50: managing Actions cost",
+      "url": "https://github.com/foundation50/classroom50/wiki/Managing-Actions-Cost",
+      "date": "Checked October 13, 2026",
+      "quality": "Primary project documentation",
+      "claim": "Autograding consumes GitHub Actions resources, with controls needed for workflow usage and spending.",
+      "scope": "Actions quotas and charges are separate from Codespaces workspace compute; Classroom 50 adds no Codespaces entitlement. Verify actual billing ownership and spend controls before required use."
     }
   },
   "changes": [
@@ -1780,7 +1820,7 @@
   "repository_plan": [
     {
       "title": "1 · Keep a viable free route",
-      "body": "Use GitHub Free for ordinary Git hosting now. Assess an institution-sponsored GitLab for Education application for private class teams and additional features; annual renewal and use restrictions still apply.",
+      "body": "Use GitHub Free for ordinary Git hosting now. Assess an institution-sponsored GitLab for Education application for private class teams and additional features; annual renewal and use restrictions still apply. Classroom 50 is a workable assignment-management successor, externally maintained by the Fifty Foundation. Keep course repositories/configuration in an institution-controlled GitHub organization; verify Team/Enterprise education eligibility, retain exports and rehearse an alternate submission path. It adds no Codespaces compute allocation.",
       "owner": "Instructor lead + college IT · before the next course"
     },
     {
@@ -2212,6 +2252,20 @@
   },
   "classroom_resource_options": [
     {
+      "id": "classroom50",
+      "name": "Classroom 50",
+      "category": "manage",
+      "access": "Free, open-source assignment workflow · evaluate before adoption",
+      "fit": "Workable successor for GitHub Classroom assignment distribution, repositories, submissions, feedback and grading.",
+      "limits": "Fifty Foundation project and hosted app are not ours. Requires a Team/Enterprise organization; check education eligibility. No additional Codespaces compute; Actions grading has separate quotas. ACCESS remains the CPU/GPU classroom route.",
+      "sources": [
+        "classroom50",
+        "classroom50requirements",
+        "classroom50actions",
+        "codespaces"
+      ]
+    },
+    {
       "id": "codabench",
       "name": "Codabench",
       "category": "evaluate",
@@ -2396,7 +2450,7 @@
     ],
     "proposal": "Pilot a permitted Codabench evaluation queue backed by reviewed ACCESS capacity; isolated workers, scheduling, operations, storage, backups and grade exports remain separate requirements."
   },
-  "updated_at": "2026-10-12",
+  "updated_at": "2026-10-13",
   "federal_platform_map": [
     {
       "id": "access",
@@ -3519,5 +3573,70 @@
     "greg_weekly_hours": 10,
     "hours_only": true,
     "benchmarks": "classroom-benchmarks.zip"
+  },
+  "classroom50_assessment": {
+    "checked": "2026-10-13",
+    "status": "Workable successor to assess; no signed-in canary or adoption completed",
+    "verdict": "Classroom 50 is a workable successor for assignment management. It is not something we own, and it does not increase GitHub Codespaces free compute.",
+    "rows": [
+      [
+        "Assignment workflow",
+        "Individual/group assignments, starter repositories, submission tracking, feedback and autograding.",
+        "Rehearse a complete DS and MLIS assignment, including manual feedback and LMS grade reconciliation."
+      ],
+      [
+        "Ownership and control",
+        "Fifty Foundation maintains the project and hosted app. Course repositories and configuration can be in our own GitHub organization.",
+        "Name two organization owners; export course configuration, rosters, submissions and scores to approved destinations."
+      ],
+      [
+        "Hosting and upkeep",
+        "Hosted app + GitHub dependencies; the CLI runs locally. GPL-3.0 permits a self-hosted option.",
+        "Self-hosting still needs authentication/proxy review, updates and recovery. No UArizona deployment or funded operator is assumed."
+      ],
+      [
+        "Codespaces compute",
+        "Personal Free: 120 core-hours / 15 GB-month; Pro: 180 core-hours / 20 GB-month each month.",
+        "At two cores, approximately 60 or 90 active hours before storage or other limits. Organization plans have no included Codespaces quota."
+      ],
+      [
+        "Grading compute",
+        "GitHub Actions is a separate service and allowance.",
+        "Confirm billing owner and zero-spend controls; test quota exhaustion and a non-Actions submission/grading fallback."
+      ],
+      [
+        "ACCESS relationship",
+        "ACCESS remains the proposed CPU + GPU classroom compute route.",
+        "Use portable Git/notebook assignments on approved ACCESS environments. An automated Classroom 50-to-ACCESS grading connection remains unbuilt and unverified."
+      ]
+    ],
+    "checks": [
+      "Confirm the specific organization has Team/Enterprise coverage through an approved existing or education benefit; do not buy an upgrade.",
+      "With synthetic identities and data, rehearse invitation, assignment creation, student submission, autograding, instructor override and LMS grade reconciliation.",
+      "Review GitHub app permissions, browser tokens, default external proxy traffic, private repository visibility and roster/score retention before student data.",
+      "Exercise Codespaces quota exhaustion and Actions allowance exhaustion separately; demonstrate a portable local/ACCESS workflow without requiring student payment.",
+      "Export and restore repositories, configuration and submission/grade receipts; document distinct owners, maintainer outage and end-of-term removal.",
+      "Measure setup and support time inside Greg’s existing ten-hour weekly envelope, with TA/course-lead time separate. Defer if support cannot fit."
+    ],
+    "sources": [
+      "classroom50",
+      "classroom50model",
+      "classroom50requirements",
+      "classroom50hosting",
+      "classroom50actions",
+      "codespaces",
+      "students"
+    ]
+  },
+  "classroom50_extension": {
+    "checked": "2026-10-13",
+    "sources_added": 5,
+    "source_records": 163,
+    "resource_comparisons": 14,
+    "scope": "Documentary assessment and visual redesign. No signed-in adoption, migration, provider benchmark or ACCESS integration performed.",
+    "earlier_policy_checks": "Retained per-source dates; Classroom 50 and personal Codespaces/student benefits checked October 13.",
+    "design_reference": "https://infosci.arizona.edu/",
+    "design_colors": "https://marcom.arizona.edu/brand-guidelines/colors",
+    "typography": "Existing bundled open-license IBM Plex Sans and Barlow Condensed; no licensed Proxima Nova fonts redistributed."
   }
 }

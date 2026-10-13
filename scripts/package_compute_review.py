@@ -19,7 +19,7 @@ def build():
         if src.is_file():
             target = PORTABLE / src.relative_to(ROOT / 'docs/education-compute')
             target.parent.mkdir(parents=True,exist_ok=True)
-            if src.suffix == '.html':
+            if src.suffix in ['.html','.css']:
                 text = src.read_text().replace('../assets/', 'assets/')
                 text = text.replace('<span class="brand"><a href="../">← All talks</a></span>', '<span class="brand">Teaching on borrowed compute</span>')
                 target.write_text(text)
@@ -38,6 +38,7 @@ def build():
     if 'pilot_program_summary' in ledger:
         text += '\nCOHESIVE PROGRAM AND PILOT PACKET | October 12, 2026\nStart with program.html for administrator, faculty and course-lead views. Open access-request.html for the unsubmitted request, pilot-plan.html for proposed INFO 521/LIS 671 components, budget.html for the ten-hour weekly effort planner and zero-cash/grant dependencies, readiness.html for thirteen planned/not-run checks; ACCESS CPU/GPU allocation as the classroom route, campus AWS only for CPU component tests, and free GPU benchmarks before piloting, and resource-library.html for the working tools. Report/evidence references are now grouped under report.html. Printable PDF and text/CSV/JSON downloads are included, alongside runnable DS/MLIS CPU tests, self-contained GPU notebooks and the ACCESS sizing helper (classroom-benchmarks.zip). No staff, money, course offering or provider capacity is approved by the site.\n'
     text += '\nCOHESIVE SITE REORGANIZATION | October 13, 2026\nStart at program.html for the core problem and solution. Six top-level sections: Overview, Staged plan (timeline.html), Classroom tools, Hours & funding, Report & evidence (report.html), and Talk. The six-stage timeline has keyboard navigation, key events, gates and shareable stage URLs. research-report.html preserves the entire text audit in a readable view; evidence.html keeps all 158 source records. Existing downloads and links remain available. No provider facts, awards, readiness status or benchmark results were promoted by this layout update.\n'
+    text += '\nCLASSROOM 50 AND ARIZONA DESIGN | October 13, 2026\nclassroom50.html directly assesses the workable successor, external stewardship, organization control, unchanged Codespaces limits and pre-adoption checks. Source ledger: 163 records; 14 resource comparisons. The shared site and five-slide talk use Arizona navy, red, white and offline open-license typography inspired by infosci.arizona.edu. No adoption, grant, provider benchmark or integration is claimed.\n'
     start.write_text(text)
     archive = OUT / 'teaching-on-borrowed-compute.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
@@ -72,7 +73,7 @@ def build():
         elif src.suffix == '.zip': target = Path('.')
         else: target = Path('review')
         copy(src, target / src.name)
-    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','compute_program_views.py','build_compute_pilot_pdfs.py','build_compute_benchmarks.py','build_site.py','check_site.py','package_compute_review.py']:
+    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','compute_program_views.py','compute_classroom50.py','build_compute_pilot_pdfs.py','build_compute_benchmarks.py','build_site.py','check_site.py','package_compute_review.py']:
         copy(ROOT / 'scripts' / name, Path('review/builders') / name)
     for src in sorted((ROOT / 'output/playwright').iterdir()):
         if src.is_file() and src.name.startswith(('education-compute-','repositories-','service-evidence-','codabench-','federal-','assessment-','pilot-')):

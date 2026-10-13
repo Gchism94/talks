@@ -478,8 +478,8 @@
       "category": "Teaching",
       "owner": "Course leads",
       "when": "Before graded use",
-      "criterion": "Distribute a versioned assignment, collect it, reconcile all test submissions, preserve student authorship and instructor judgment, and import/export a test grade receipt through the approved LMS workflow.",
-      "evidence": "Submission manifest and grade reconciliation results in the approved institutional destination.",
+      "criterion": "Distribute a versioned assignment, collect it, reconcile all test submissions, preserve student authorship and instructor judgment, and import/export a test grade receipt through the approved LMS workflow. If Classroom 50 is selected, verify Team/Enterprise organization eligibility, permissions, billing controls and an independent export; Codespaces and Actions quotas remain separate.",
+      "evidence": "Submission manifest and grade reconciliation results in the approved institutional destination. Classroom 50 canary and quota/fallback records if selected; no additional Codespaces allocation assumed.",
       "stop": "A leaderboard/auto-score substitutes for the authoritative grade, or a missing receipt goes undetected.",
       "status": "Planned — not run",
       "result": ""
@@ -771,7 +771,7 @@
         "events": [
           "Replay representative workloads on the awarded CPU/GPU architecture and revise resource estimates.",
           "Run a ten-volunteer component canary, five per proposed course, with synthetic inputs.",
-          "Confirm software fit, saved-file restart, portable exports and actual support effort."
+          "Confirm saved-file restart, portable exports and support effort; if using Classroom 50, rehearse assignment-to-grade flow and separate Codespaces/Actions limits."
         ],
         "gate": "Both workflows succeed and unresolved defects are recorded. Narrow or defer if core fit fails.",
         "links": [
@@ -782,6 +782,10 @@
           [
             "Benchmark protocol",
             "gpu-benchmark.html"
+          ],
+          [
+            "Classroom 50 assessment",
+            "classroom50.html"
           ]
         ]
       },
