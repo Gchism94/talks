@@ -97,8 +97,11 @@ research and habitat care form one ecological section before the wider-world
 examples. The closing returns to local connections.
 The regional guide presents six entries in three photographic pairs: C. modoc
 and C. vicinus; T. sessile and P. imparis; F. obscuripes and other Formica species.
-It distinguishes nearby collection records from regional candidates and keeps
-identification provisional. Three documented pollination cases feature California
+Large living-ant portraits dominate all three pairs, with one clue per entry
+and compact evidence labels. Exact record localities and identification limits
+remain in the speaker notes and source appendix. The carpenter-ant and thatch-nest
+follow-ups also favor larger photographs and shorter text. Nearby collection
+records remain distinct from regional candidates; identification stays provisional. Three documented pollination cases feature California
 spineflower, Oregon Cascade knotweed and Australian smokebush. A live F. argentea
 worker portrait appears alongside Cascade knotweed; the caption distinguishes
 the species portraits from the documented pollination interaction. An Alex Wild
