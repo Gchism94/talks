@@ -72,7 +72,7 @@
     'When recognition is disrupted'
   ]);
   slides.forEach(slide => {
-    if (slide.classList.contains('cover') || slide.classList.contains('section-break') || slide.dataset.time === 'Reference appendix' || slide.dataset.title === 'Two groups to get to know') return;
+    if (slide.classList.contains('cover') || slide.classList.contains('section-break') || slide.dataset.time === 'Reference appendix' || ['Two groups to get to know', 'A regional ant field guide'].includes(slide.dataset.title)) return;
     const title = slide.dataset.title;
     const panels = [...slide.querySelectorAll('.example-panel')];
     const scopes = panels.length ? panels : [slide];
@@ -81,7 +81,9 @@
       // their own controls. Their controls must always remain operable.
       if (scope.querySelector('canvas, .head-game, #seedNext')) return;
       let groups = [];
-      if (title === 'Names our neighbors use') {
+      if (scope.id === 'pollinationSmokebush') {
+        groups = [[scope.querySelector('.lead')], [scope.querySelector('.watch-cue')]];
+      } else if (title === 'Names our neighbors use') {
         groups = [...scope.querySelectorAll('.neighbor-copy')].map(copy => [copy]);
       } else if (title === 'Other ant eaters') {
         groups = [...scope.querySelectorAll('.ant-eater-copy')].map(copy => [copy]);

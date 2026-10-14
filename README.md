@@ -76,7 +76,7 @@ entire working directory into `docs/`.
 
 [Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
 is a 55-slide Audubon talk covering the Mount Shasta region and wider-world
-examples: 45 minutes of presentation, 15 minutes of questions, and fourteen
+examples: 45 minutes of presentation, 15 minutes of questions, and fifteen
 untimed source and media-credit slides.
 
 The public edition includes authentic photographs, anatomy and lifecycle
@@ -87,7 +87,7 @@ nest casts, sticky defensive secretion, and Alex Wild’s photograph of a living
 army-ant bridge in a captive colony make the later examples concrete. Regional species return
 throughout: carpenter ants excavate wood and forage for insects and honeydew;
 Formica sibylla moves fallen needles and changes soil. Behavior studies from other
-western locations are distinguished from Siskiyou occurrence records. Leaf
+western locations are distinguished from nearby collection records. Leaf
 transport and the fungus garden share a slide. The talk has five continuous parts:
 Introduction; Ants of the Mount Shasta region; What is an ant colony?; Ants in the
 web of life; and Extraordinary ants & behaviors. Four photographic section
@@ -95,13 +95,16 @@ openings, persistent section labels, a grouped slide menu and spoken transitions
 keep the sequence clear. Soil, seeds, flower visitors, birds, human impacts,
 research and habitat care form one ecological section before the wider-world
 examples. The closing returns to local connections.
-The regional section connects the familiar names carpenter, thatching, sugar
-and red ants to nest materials and food, while keeping species identification
-provisional. A documented Southern California spineflower experiment explains
-ant pollination, distinct from trillium seed dispersal and nectar-only visits.
+The regional guide presents six entries in three photographic pairs: C. modoc
+and C. vicinus; T. sessile and P. imparis; F. obscuripes and other Formica species.
+It distinguishes nearby collection records from regional candidates and keeps
+identification provisional. Three documented pollination cases feature California
+spineflower, Oregon Cascade knotweed and Australian smokebush. Research photographs
+show three smokebush-visiting ant species. Pollination is distinguished from
+trillium seed dispersal and nectar-only visits.
 Pileated Woodpeckers and black bears broaden the ant-eater connection after
-the Northern Flicker. Ecology now receives 13.5 minutes; the wider-world
-examples receive 11.5 minutes, preserving 45 minutes plus 15 for questions.
+the Northern Flicker. Ecology now receives 14 minutes; the wider-world
+examples receive 11 minutes, preserving 45 minutes plus 15 for questions.
 There is no field walk or required physical activity. A live Formica sibylla
 photograph replaces the regional specimen and analogy. A Formica obscuripes
 thatch mound illustrates a different western species’ use of plant material.

@@ -96,7 +96,12 @@
         "site/ants/odorous-house.jpg",
         "site/ants/spineflower.jpg",
         "site/ants/black-bear.jpg",
-        "site/ants/formica.jpg"
+        "site/ants/formica.jpg",
+        "site/ants/wild-vicinus.jpg",
+        "site/ants/wild-winter-ant.jpg",
+        "site/ants/wild-thatching-ant.jpg",
+        "site/ants/cascade-knotweed.jpg",
+        "site/ants/smokebush-pollinators.jpg"
       ],
       "cover": "site/covers/small-republics.png",
       "public_overrides": "site/ants/public-slides.json"
