@@ -101,7 +101,9 @@ It distinguishes nearby collection records from regional candidates and keeps
 identification provisional. Three documented pollination cases feature California
 spineflower, Oregon Cascade knotweed and Australian smokebush. A live F. argentea
 worker portrait appears alongside Cascade knotweed; the caption distinguishes
-the species portraits from the documented pollination interaction. Research photographs
+the species portraits from the documented pollination interaction. An Alex Wild
+photograph of D. insanus visiting a different flower appears beside the California
+spineflower, with both partners named and credited. Research photographs
 show three smokebush-visiting ant species. Pollination is distinguished from
 trillium seed dispersal and nectar-only visits.
 Pileated Woodpeckers and black bears broaden the ant-eater connection after

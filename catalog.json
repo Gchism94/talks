@@ -102,7 +102,8 @@
         "site/ants/wild-thatching-ant.jpg",
         "site/ants/cascade-knotweed.jpg",
         "site/ants/smokebush-pollinators.jpg",
-        "site/ants/formica-argentea.jpg"
+        "site/ants/formica-argentea.jpg",
+        "site/ants/wild-dorymyrmex-insanus.jpg"
       ],
       "cover": "site/covers/small-republics.png",
       "public_overrides": "site/ants/public-slides.json"
