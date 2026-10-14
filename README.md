@@ -75,8 +75,8 @@ entire working directory into `docs/`.
 ## Small Republics
 
 [Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
-is a 55-slide Audubon talk covering the Mount Shasta region and wider-world
-examples: 45 minutes of presentation, 15 minutes of questions, and fifteen
+is a 56-slide Audubon talk covering the Mount Shasta region and wider-world
+examples: 45 minutes of presentation, 15 minutes of questions, and sixteen
 untimed source and media-credit slides.
 
 The public edition includes authentic photographs, anatomy and lifecycle
@@ -99,7 +99,9 @@ The regional guide presents six entries in three photographic pairs: C. modoc
 and C. vicinus; T. sessile and P. imparis; F. obscuripes and other Formica species.
 It distinguishes nearby collection records from regional candidates and keeps
 identification provisional. Three documented pollination cases feature California
-spineflower, Oregon Cascade knotweed and Australian smokebush. Research photographs
+spineflower, Oregon Cascade knotweed and Australian smokebush. A live F. argentea
+worker portrait appears alongside Cascade knotweed; the caption distinguishes
+the species portraits from the documented pollination interaction. Research photographs
 show three smokebush-visiting ant species. Pollination is distinguished from
 trillium seed dispersal and nectar-only visits.
 Pileated Woodpeckers and black bears broaden the ant-eater connection after

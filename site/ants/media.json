@@ -636,5 +636,15 @@
     "license": "CC BY 4.0",
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "description": "Complete research Figure 1 retained unmodified. Presentation uses CSS detail windows on panels D (Camponotus molossus), E (C. terebrans), F (Iridomyrmex purpureus). South-western Australia. Exclusion evidence is for the ant assemblage, not separate tests of each pictured species."
+  },
+  {
+    "file": "formica-argentea.jpg",
+    "title": "Silvery field ant · Formica argentea",
+    "artist": "Eric Lamb",
+    "page": "https://www.inaturalist.org/photos/119833451",
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/119833451/original.jpg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "Living worker portrait photographed in Saskatoon, Saskatchewan, Canada; iNaturalist research-grade observation 73404150. Shown alongside Cascade knotweed to identify the ant species documented as its pollinator by Hickman (1974). This photograph does not show a flower visit or that pollination interaction. Original retained unmodified."
   }
 ]

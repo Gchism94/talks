@@ -32,7 +32,7 @@
       "event": "Audubon Society · Mount Shasta region",
       "format": "Talk with live demonstrations",
       "duration": "45 min + 15 min Q&A",
-      "slides": 55,
+      "slides": 56,
       "topics": [
         "Ant societies",
         "Mount Shasta",
@@ -101,7 +101,8 @@
         "site/ants/wild-winter-ant.jpg",
         "site/ants/wild-thatching-ant.jpg",
         "site/ants/cascade-knotweed.jpg",
-        "site/ants/smokebush-pollinators.jpg"
+        "site/ants/smokebush-pollinators.jpg",
+        "site/ants/formica-argentea.jpg"
       ],
       "cover": "site/covers/small-republics.png",
       "public_overrides": "site/ants/public-slides.json"
