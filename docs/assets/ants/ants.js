@@ -81,14 +81,20 @@
       // their own controls. Their controls must always remain operable.
       if (scope.querySelector('canvas, .head-game, #seedNext')) return;
       let groups = [];
-      if (title === 'An ant, up close') {
+      if (title === 'Names our neighbors use') {
+        groups = [...scope.querySelectorAll('.neighbor-copy')].map(copy => [copy]);
+      } else if (title === 'Other ant eaters') {
+        groups = [...scope.querySelectorAll('.ant-eater-copy')].map(copy => [copy]);
+      } else if (scope.id === 'pollinationCase') {
+        groups = [[scope.querySelector('.lead')], [scope.querySelector('.trial-result')], [scope.querySelector('.footnote')]];
+      } else if (title === 'An ant, up close') {
         const paths = guideLines(scope, '.anatomy-board svg path');
         const labels = [...scope.querySelectorAll('.parts-label text')];
         const mobile = [...scope.querySelectorAll('.parts-mobile span')];
         groups = [[0, 1], [2, 3], [4, 5]].map(indices => indices.flatMap(i => [paths[i], labels[i], mobile[i]]));
       } else if (title === 'The work of a colony') {
         groups = [...scope.querySelectorAll('.worker-task-copy')].map(copy => [copy]);
-      } else if (title === 'Pollen moves. Then seeds move.') {
+      } else if (title === 'Pollen moves. Then seeds move.' && scope.querySelector('.ecology-pair')) {
         groups = [...scope.querySelectorAll('.ecology-pair figcaption')].map(caption => {
           const copy = document.createElement('span');
           while (caption.firstChild && caption.firstChild.nodeName !== 'A') copy.append(caption.firstChild);

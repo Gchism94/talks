@@ -32,7 +32,7 @@
       "event": "Audubon Society · Mount Shasta region",
       "format": "Talk with live demonstrations",
       "duration": "45 min + 15 min Q&A",
-      "slides": 51,
+      "slides": 55,
       "topics": [
         "Ant societies",
         "Mount Shasta",
@@ -91,7 +91,12 @@
         "site/ants/wild-flower1.jpg",
         "site/ants/stridulation.mp4",
         "site/ants/stridulation-poster.jpg",
-        "site/ants/stridulation.vtt"
+        "site/ants/stridulation.vtt",
+        "site/ants/pileated.jpg",
+        "site/ants/odorous-house.jpg",
+        "site/ants/spineflower.jpg",
+        "site/ants/black-bear.jpg",
+        "site/ants/formica.jpg"
       ],
       "cover": "site/covers/small-republics.png",
       "public_overrides": "site/ants/public-slides.json"

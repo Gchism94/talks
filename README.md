@@ -75,8 +75,8 @@ entire working directory into `docs/`.
 ## Small Republics
 
 [Small Republics: the hidden lives of ants](https://gchism94.github.io/talks/small-republics/)
-is a 51-slide Audubon talk covering the Mount Shasta region and wider-world
-examples: 45 minutes of presentation, 15 minutes of questions, and eleven
+is a 55-slide Audubon talk covering the Mount Shasta region and wider-world
+examples: 45 minutes of presentation, 15 minutes of questions, and fourteen
 untimed source and media-credit slides.
 
 The public edition includes authentic photographs, anatomy and lifecycle
@@ -95,6 +95,13 @@ openings, persistent section labels, a grouped slide menu and spoken transitions
 keep the sequence clear. Soil, seeds, flower visitors, birds, human impacts,
 research and habitat care form one ecological section before the wider-world
 examples. The closing returns to local connections.
+The regional section connects the familiar names carpenter, thatching, sugar
+and red ants to nest materials and food, while keeping species identification
+provisional. A documented Southern California spineflower experiment explains
+ant pollination, distinct from trillium seed dispersal and nectar-only visits.
+Pileated Woodpeckers and black bears broaden the ant-eater connection after
+the Northern Flicker. Ecology now receives 13.5 minutes; the wider-world
+examples receive 11.5 minutes, preserving 45 minutes plus 15 for questions.
 There is no field walk or required physical activity. A live Formica sibylla
 photograph replaces the regional specimen and analogy. A Formica obscuripes
 thatch mound illustrates a different western species’ use of plant material.

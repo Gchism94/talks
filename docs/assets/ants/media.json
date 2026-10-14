@@ -535,5 +535,56 @@
     "artist": "Daily Mail / research press film",
     "page": "https://www.dailymail.com/video/sciencetech/video-1672886/Video-Scientists-discover-EXPLODING-ant-releases-goo-defend-colony.html",
     "license": "Official Daily Mail embed · rights retained by producers"
+  },
+  {
+    "file": "pileated.jpg",
+    "title": "Dryocopus pileatus MP2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Dryocopus_pileatus_MP2.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Dryocopus_pileatus_MP2.jpg/1280px-Dryocopus_pileatus_MP2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Dryocopus_pileatus_MP2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Dryocopus_pileatus_MP2.jpg/1280px-Dryocopus_pileatus_MP2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "artist": "Cephas",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "description": "Pileated Woodpecker"
+  },
+  {
+    "file": "odorous-house.jpg",
+    "title": "Odorous House Ants - Tapinoma sessile and Aphids, Merrimac Farm Wildlife Management Area, Aden, Virginia, September 22, 2015 (53511901666).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Odorous_House_Ants_-_Tapinoma_sessile_and_Aphids,_Merrimac_Farm_Wildlife_Management_Area,_Aden,_Virginia,_September_22,_2015_(53511901666).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Odorous_House_Ants_-_Tapinoma_sessile_and_Aphids%2C_Merrimac_Farm_Wildlife_Management_Area%2C_Aden%2C_Virginia%2C_September_22%2C_2015_%2853511901666%29.jpg/1280px-Odorous_House_Ants_-_Tapinoma_sessile_and_Aphids%2C_Merrimac_Farm_Wildlife_Management_Area%2C_Aden%2C_Virginia%2C_September_22%2C_2015_%2853511901666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/6/64/Odorous_House_Ants_-_Tapinoma_sessile_and_Aphids%2C_Merrimac_Farm_Wildlife_Management_Area%2C_Aden%2C_Virginia%2C_September_22%2C_2015_%2853511901666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Odorous_House_Ants_-_Tapinoma_sessile_and_Aphids%2C_Merrimac_Farm_Wildlife_Management_Area%2C_Aden%2C_Virginia%2C_September_22%2C_2015_%2853511901666%29.jpg/1280px-Odorous_House_Ants_-_Tapinoma_sessile_and_Aphids%2C_Merrimac_Farm_Wildlife_Management_Area%2C_Aden%2C_Virginia%2C_September_22%2C_2015_%2853511901666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "artist": "Judy Gallagher",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "description": "Odorous House Ants - Tapinoma sessile and Aphids, Merrimac Farm Wildlife Management Area, Aden, Virginia, September 22, 2015"
+  },
+  {
+    "file": "spineflower.jpg",
+    "title": "San Fernando Valley spineflower",
+    "artist": "Nathan Gale and Anuja Parikh",
+    "page": "https://www.fws.gov/media/san-fernando-valley-spineflower-1",
+    "license": "Public domain",
+    "url": "https://www.fws.gov/sites/default/files/2021-06/San%20Fernando%20Valley%20spineflower%203.jpg",
+    "description": "Southern California plant portrait. Does not depict the ant-pollination experiment."
+  },
+  {
+    "file": "black-bear.jpg",
+    "title": "American black bear",
+    "artist": "U.S. Forest Service",
+    "page": "https://www.fws.gov/media/american-black-bearjpg",
+    "license": "Public domain",
+    "url": "https://www.fws.gov/sites/default/files/2022-06/usfs.jpg",
+    "description": "Species portrait; not a recording of ant consumption or a Mount Shasta observation."
+  },
+  {
+    "file": "formica.jpg",
+    "title": "Formica integroides worker",
+    "artist": "Alex Wild",
+    "page": "https://commons.wikimedia.org/wiki/File:Formica_integroides_worker_ant.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "Living worker portrait, used as one example of a red-and-black ant rather than a diagnosis of audience sightings."
   }
 ]
