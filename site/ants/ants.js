@@ -81,14 +81,12 @@
       // their own controls. Their controls must always remain operable.
       if (scope.querySelector('canvas, .head-game, #seedNext')) return;
       let groups = [];
-      if (scope.id === 'pollinationSmokebush') {
-        groups = [[scope.querySelector('.lead')], [scope.querySelector('.watch-cue')]];
+      if (['pollinationCase', 'pollinationOregon', 'pollinationSmokebush'].includes(scope.id)) {
+        groups = [[scope.querySelector('.lead')]];
       } else if (title === 'Names our neighbors use') {
         groups = [...scope.querySelectorAll('.neighbor-copy')].map(copy => [copy]);
       } else if (title === 'Other ant eaters') {
         groups = [...scope.querySelectorAll('.ant-eater-copy')].map(copy => [copy]);
-      } else if (scope.id === 'pollinationCase') {
-        groups = [[scope.querySelector('.lead')], [scope.querySelector('.trial-result')], [scope.querySelector('.footnote')]];
       } else if (title === 'An ant, up close') {
         const paths = guideLines(scope, '.anatomy-board svg path');
         const labels = [...scope.querySelectorAll('.parts-label text')];
