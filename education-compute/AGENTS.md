@@ -16,7 +16,7 @@ The proposed solution combines a large NSF ACCESS allocation with a programmatic
 - `talk/evidence.html`: saved appendix with library repository, free hosting, database, current alternatives, and continuity evidence.
 - `talk/degree-options.html`: nine-degree comparison.
 - `talk/repository-plan.html`: repository continuity plan.
-- `evidence/evidence.json`: 158 source records and structured findings/plans; identical to the current public ledger at refresh.
+- `evidence/evidence.json`: 181 source records and structured findings/plans; identical to the current public ledger at refresh.
 - `evidence/research-and-sources.txt`: detailed claim boundaries and references.
 - `evidence/source-snapshots/`: saved provider content and the degree catalog snapshot. Not every cited page has a full local capture.
 - `evidence/*verification.json`: direct source-access checks; distinguish unavailable URLs from independently supported claims.
@@ -178,3 +178,14 @@ Current assessment is `talk/classroom50.html`, with the verdict in Overview, too
 Canonical source assessment is `classroom50_assessment` in the public evidence ledger; renderer is `../scripts/compute_classroom50.py`. Five primary project sources bring the ledger to 163 records; there are 14 resource comparisons. Run resources, evidence and program builders in that order; resource builder now synchronizes repository-plan content from the ledger. Program builder remains last and produces the complete current report. The PDF companions retain their October 12 scope; this update changes the web assessment and adds conditional checks to the existing grades gate.
 
 Arizona navy/red/white, spacious masthead, bold headings, red outlined controls and editorial sections follow the inspected InfoSci homepage. Typography uses existing open-license bundled fonts, not redistributed Proxima Nova. Shared CSS references `../assets/fonts/`; portable packaging rewrites CSS asset paths as well as HTML. Preserve proposal labels and offline operation. Source captures, screenshot reference and browser QA are under `evidence/pilot-research/classroom50-brand/`; latest validation is `classroom50ArizonaExtension`. No private intranet content was added.
+
+
+## Modal and commercial compute assessment — October 16, 2026
+
+Read `talk/serverless-compute.html`. Nine platforms are assessed: Modal, Beam, Cerebrium, Paperspace Gradient, Lightning AI, Saturn Cloud, Runpod, Replicate and HF Inference Providers. New primary records: 18; ledger: 181; resource comparisons: 22. Canonical structured data is `serverless_assessment` in the public ledger; rendering/report helper is `../scripts/compute_serverless.py`. Run resources, evidence and program builders in that order and package/check the review bundle.
+
+Modal Starter includes $30/workspace/month with three seats; a payment method is required. Standard Functions, Sandbox/Notebook CPU/memory pricing and Shared Endpoints token billing are separate. Workspace usage budget is before credits; net-charge spend limit is separate. No student/personal card or purchase is proposed. Academic credits are an application route, not an award or guaranteed classroom access. ACCESS stays the CPU/GPU classroom route; campus AWS is component testing only, Kaggle/free Colab remain pre-pilot benchmark routes. No account, job, grant application or provider message was performed.
+
+Do not reuse Beam’s June free-$30 comparison as current eligibility: its live Developer table says $20/month with $20 credits and one seat. The page extractor omitted this table; direct HTML is preserved. HF Free-account Inference Providers currently includes no monthly credit, distinct from ZeroGPU/Spaces. Saturn’s 150-hour landing claim is not verified as GPU-hours or current new-account availability. Paperspace free GPU sessions have a six-hour timer and public-notebook/idle limits; do not use the generic 12-hour paid/default timer. No historical effective date is invented for observed current restrictions.
+
+`evidence/pilot-research/modal-comparison/` preserves searches, direct HTML, pricing-readable extracts, failed paths, source checks and browser QA. Eight Exa searches requested 55 slots; this is not 55 independently validated sources. All thirteen gates remain planned; no private records were published. Current validation is `modalComputeExtension`. Existing PDFs, notebooks and core staffing hours are unchanged; no salary/cash envelope is introduced.

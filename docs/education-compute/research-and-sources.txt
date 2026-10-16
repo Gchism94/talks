@@ -2441,3 +2441,177 @@ Codespaces · free personal-account quotas
 https://docs.github.com/en/billing/concepts/product-billing/github-codespaces
 Codespaces · verified student benefit
 https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students
+
+
+MODAL AND SIMILAR COMPUTE PLATFORMS | October 16, 2026
+
+Modal is a promising conditional instructor benchmark option, but its payment requirement and three-seat Starter workspace do not fit a no-card, zero-cash class default. Keep Kaggle/free Colab as the existing pre-pilot GPU routes, then replay on ACCESS CPU + GPU.
+Documentation reviewed; no account, card, cloud workload, credit redemption, grant application or provider message performed.
+
+MODAL | Conditional recurring credit
+$30/workspace/month; three Starter seats
+Python/container GPU jobs, controlled inference, fine-tuning and notebooks
+DS: a small pinned training/inference run. MLIS: public-corpus OCR, embeddings or retrieval experiments.
+Boundary: Payment method required; GPU, CPU and memory share credits. Set explicit usage and net-spend limits. Shared Endpoints tokens cost extra. Academic grant is an application, not funding in hand.
+
+BEAM | Paid / historical free claim
+$20/month Developer includes $20 credits; one seat
+Python serverless GPU jobs, sandboxes and endpoints
+DS/MLIS component hosting if funded; open-source runtime may warrant later engineering assessment.
+Boundary: June free-$30 comparison is stale against current direct plan table. Prepaid deployments need credits; warm/idle settings can bill. BYOC is not free compute.
+
+CEREBRIUM | Paid usage / possible trial
+Free Hobby subscription; no recurring compute credit verified
+Containerized CPU/GPU inference and batch processing
+DS model serving; MLIS public-corpus embeddings or transcription.
+Boundary: Free plan fee and included storage do not make execution free. Trials are discretionary/time-limited and may transition to paid billing.
+
+PAPERSPACE GRADIENT | Bounded free machines
+Free CPU / M4000 GPU subject to availability; 5 GB
+Browser notebook experiments on an older GPU
+Small DS training and public/synthetic MLIS corpus notebooks.
+Boundary: Six-hour free-session maximum, one-hour idle stop, one free notebook at once; free notebooks are public. Check old GPU/runtime fit and actual signup/payment requirements.
+
+LIGHTNING AI | Promotional / account-dependent
+One free CPU Studio; GPU credit amount and expiry vary
+CPU development followed by a short credited GPU run
+DS/MLIS notebook preparation and small tests within actual credit balance.
+Boundary: Four-hour CPU restart boundary; first 10 GB storage free. Do not promise a fixed monthly GPU grant or count paid academic discounts as free compute.
+
+SATURN CLOUD | Unconfirmed free lead
+Landing page advertises 150 compute hours/month, no card
+Notebook/GPU environment if current free eligibility is confirmed
+Potential DS and MLIS notebook alternative, pending an authorized account check.
+Boundary: 150 compute hours is not verified as 150 GPU-hours. Current pricing emphasizes paid hosted resources; reconcile device allowance, storage, inactivity and new-account access.
+
+RUNPOD | Paid comparison
+Prepaid compute; no recurring free allocation verified
+GPU Pods, containers and serverless endpoints
+Funded DS/MLIS jobs with explicit checkpoint and external export.
+Boundary: Pod launch needs credit; stopped storage still bills and can be deleted when funds run out. Not a zero-cash fallback or preservation repository.
+
+REPLICATE | Limited model trial
+Select-model demonstrations, then billing
+Managed model inference rather than a general GPU notebook
+DS model-behavior comparison; MLIS controlled metadata/transcription demonstrations.
+Boundary: No stable free monthly grant verified. Private deployments can bill setup and idle time. A model API does not replace arbitrary CUDA training.
+
+HUGGING FACE INFERENCE PROVIDERS | Paid API on Free accounts
+No included monthly API credits for Free users
+Routed model APIs; paid credits/subscriptions
+DS inference evaluation and MLIS embeddings/metadata tasks when funded.
+Boundary: Separate from ZeroGPU/Spaces. Current API pricing overrides older free-credit snippets; no historical change date established.
+
+MODAL RATE ILLUSTRATION (NOT MEASURED)
+Standard Functions, 2 physical CPU cores and 8 GiB memory; the full $30 monthly allowance is available. Excludes startup/warm overhead, other usage, storage/egress and region/execution multipliers. Not the Sandbox/Notebook CPU rate.
+T4: $0.748656/hour; approximately 40.1 hours from $30 before excluded costs.
+H100: $4.107456/hour; approximately 7.3 hours from $30 before excluded costs.
+
+BEFORE AN AUTHORIZED CLOUD CANARY (NOT RUN)
+1. Use only an approved institutional payment arrangement or explicitly confirmed grant exception; require no personal/student card. No spending is authorized.
+2. Confirm current grant/credit eligibility, duration, three-seat workspace fit, allowed products, data destinations and provider-reviewed class/account terms. Never multiply one workspace allowance by 80 seats.
+3. Before any authorized run, review usage budget and net-charge spend limit separately; disable excluded paid APIs, unneeded schedules, warm containers and automatic purchasing. Verify the actual stop behavior.
+4. Pin code/image/data; measure build/start/warm time, CPU, GPU, memory, device/VRAM, preemption, checkpoints, outputs and charged units. API results do not measure a custom CUDA training workload.
+5. Export code, environments and results outside the vendor; retain authoritative grades/rosters in approved institutional systems. Replay representative CPU/GPU workloads on awarded ACCESS resources before class.
+6. Keep all added setup/support inside Greg’s ten-hour weekly envelope, with TA/lead effort separate. Defer the option if funding, support or privacy conditions fail.
+
+RESEARCH METHOD AND CONFLICTS
+Eight Exa searches requested 55 result slots across serverless credits, notebook alternatives and inference billing. These are not 55 independent validated sources. Direct primary pages were checked; extraction omissions and conflicting older marketing are retained in the local audit.
+Beam direct pricing overrides the earlier free-$30 blog; do not invent an effective change date. Saturn device-specific free entitlement and new-account access remain unconfirmed. Paperspace free machine session guidance overrides the generic marketing timer. HF API pricing does not describe ZeroGPU.
+
+PRIMARY SOURCES FOR THE COMMERCIAL COMPUTE EXTENSION
+
+Modal Starter pricing and Shared Endpoints boundary
+$30 of compute per workspace per month on Starter; up to three seats and ten concurrent GPUs. Functions, Sandboxes and Notebooks use CPU/memory/GPU billing; Shared Endpoints tokens are excluded from included compute, effective September 1, 2026.
+Scope: Free subscription does not mean unlimited compute. GPU, CPU and memory share the allowance; startup/warm time, region/execution multipliers and other charges matter. Workspace concurrency is not reserved capacity or a class roster.
+https://modal.com/pricing
+
+Modal billing: payment method required
+A payment method is required to use Modal. Usage above applicable credits and subscription fees can be automatically charged.
+Scope: Not a no-card classroom default for this zero-cash program. An approved institutional payment arrangement or confirmed grant exception must precede any canary; no personal or student card requirement is proposed.
+https://modal.com/docs/guide/billing
+
+Modal budgets and out-of-pocket spend limits
+Workspace budgets cap usage before credits; a separate workspace spend limit caps net charges after credits. Without a custom spend limit, the default is the usage limit less credits. Environment budgets require Team/Enterprise.
+Scope: Explicitly review both limits and excluded services. A default usage limit is not a zero-out-of-pocket setting. Verify actual stop behavior and billing attribution in an authorized synthetic canary; documentation is not a tested billing guarantee.
+https://modal.com/docs/guide/budgets
+
+Modal academic credit grants
+Modal offers an academic application route; its pricing page advertises up to $10,000 in credits for graduate students, labs and researchers.
+Scope: Application-based credits, not an ACCESS award, received funding, or a promised class-wide entitlement. Confirm course eligibility, seats, duration, payment requirements and allowed products in writing before counting any grant.
+https://modal.com/academics
+
+Beam current plan table
+Direct current plan table lists Developer at $20/month with $20 in credits each month and one seat; Team is $89/month plus usage. Monthly included credits expire at renewal.
+Scope: This is a paid subscription, not free $20 compute. The extracted page omitted the plan table; the direct HTML was checked. Earlier free-credit blog language does not establish current eligibility.
+https://www.beam.cloud/pricing
+
+Beam runtime and prepaid credit billing
+Prepaid workspaces require credits to build/deploy. Active container execution, initialization and configured warm time are billed; reserved machines bill until released.
+Scope: Free included storage does not provide free GPU execution. Open-source Beta9/BYOC still needs a funded host and operator; no ACCESS integration or no-cost campus deployment has been demonstrated.
+https://docs.beam.cloud/v2/resources/pricing-and-billing
+
+Beam earlier free Developer comparison (historical)
+The June 27, 2026 provider comparison described a free Developer plan and $30/month of credits.
+Scope: Historical marketing conflicts with the current $20/month Developer plan table checked October 16. Current direct pricing takes precedence; effective change date and account grandfathering are unknown. Do not use competitor price judgments as independent evidence.
+https://www.beam.cloud/blog/modal-pricing-explained
+
+Cerebrium Hobby subscription versus metered compute
+Hobby has a free subscription with three seats and three deployed apps; GPU/CPU/memory remain metered. Current pricing includes the first 100 GB of storage.
+Scope: No recurring free GPU compute allowance was established. Earlier $30 promotional-credit copy is not a current monthly grant. No subscription fee is different from no usage charge.
+https://cerebrium.ai/pricing
+
+Cerebrium trial terms
+Trials are discretionary, time-limited and may require billing details; subscription billing can start at trial end if not cancelled.
+Scope: Do not count a possible trial as semester capacity. Confirm the actual offer, expiration and payment transition before use; no trial was activated.
+https://cerebrium.ai/terms-of-service
+
+DigitalOcean Paperspace: free machine and storage eligibility
+Free CPU and M4000 Free GPU machines are listed for the Free Gradient plan, with 5 GB included storage. Paid GPU machine types and higher subscription tiers are separate.
+Scope: Only explicitly free machine types qualify. Shared availability, old GPU/software compatibility, storage overages and actual account/payment setup need checking; no free seat or private class service is reserved.
+https://docs.digitalocean.com/products/paperspace/pricing/
+
+Paperspace notebook free-session duration
+Free-machine notebooks have a maximum six-hour auto-shutdown timeout.
+Scope: Do not apply the marketing page generic 12-hour timer to free GPUs. Work must checkpoint/export within the free machine limit; availability is not guaranteed.
+https://docs.digitalocean.com/products/paperspace/notebooks/details/features/
+
+Paperspace free machines: visibility and inactivity
+Provider documentation says free-plan free-machine notebooks are public, one free notebook can run at a time, and a one-hour idle interval can shut it down.
+Scope: Use only approved public/synthetic teaching content. A private workspace account label does not mean the notebook is private. New-account provisioning and payment requirements remain untested.
+https://docs.digitalocean.com/products/paperspace/machines/details/features/
+
+Lightning AI · billing and storage scope
+Eligible free users receive promotional credits, with eligibility, amount and expiration subject to change. One CPU Studio and the first 10 GB of Drive storage are free; other compute and storage can consume credits.
+Scope: No fixed recurring GPU allowance is promised by current billing terms. Academic discounts are paid. Check actual account credit expiry and the four-hour CPU session/restart boundary before class.
+https://lightning.ai/docs/platform/overview/faq/billing.md
+
+Lightning AI student documentation and free CPU workflow
+Students can start with a CPU Studio; free CPU sessions have a four-hour restart boundary. Eligible academic discounts are paid, not an unlimited free GPU grant.
+Scope: Read promotional GPU hours and signup-credit examples alongside billing terms: eligibility, grants and expiration can change. No new-account GPU allowance was tested; avoid promising a fixed monthly credit value.
+https://lightning.ai/docs/platform/overview/setups/academia/students
+
+Saturn Cloud free-compute landing claim
+The accessible landing page advertises 150 hours/month with GPU access and no credit card.
+Scope: Do not interpret this as 150 dedicated GPU-hours. Device split, current new-account access, storage, retention and concurrency were not confirmed. The current pricing route emphasizes metered hosted resources; this remains an unverified lead.
+https://saturncloud.io/try/
+
+Saturn Cloud current hosted pricing
+Current hosted pricing lists hourly CPU/GPU resources and storage charges, alongside contract enterprise/operator offerings.
+Scope: Reconcile the separate 150-hour landing claim before recommending a free class route. No signup, current free entitlement or provider reservation was tested.
+https://saturncloud.io/plans/saturn_cloud_plans/
+
+Runpod credit balance and storage lifecycle
+Runpod uses prepaid credits; a new Pod needs at least an hour of credit for its configuration. Stopped Pod storage still costs money, and depleted balances can lead to deletion.
+Scope: Paid comparison only; no generally available recurring free allocation was verified. Storage supports active workloads, not archival preservation. Optional promotions are not an institutional award.
+https://docs.runpod.io/get-started/billing-information
+
+Replicate limited free models and billing scope
+Select models can be tried without payment for a limited amount before billing is required. Public model inference is distinct from private models/deployments, whose setup, active and idle time can be billed.
+Scope: A short model demonstration is not a fixed monthly grant or arbitrary GPU notebook/training entitlement. No stable free allowance was established for required class work.
+https://replicate.com/docs/topics/billing
+
+Hugging Face Inference Providers: current free-account credits
+Current pricing lists no monthly Inference Providers credits for Free users; purchased credits or a paid subscription are required. Paid Pro/Team/Enterprise plans include separate credits.
+Scope: This is the routed inference API, not the ZeroGPU/Spaces daily allowance. Do not infer a historical withdrawal date or universal closure from this current quota. General marketing and older snippets still describe free-tier access.
+https://huggingface.co/docs/inference-providers/pricing
