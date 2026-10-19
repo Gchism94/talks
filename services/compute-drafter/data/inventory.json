@@ -132,12 +132,12 @@
   {
     "id": "campus-aiverde",
     "name": "AI Verde → Arizona AI Assistant: planned transition",
-    "access": "Greg reports AI Verde will be sunset in favor of Arizona AI Assistant. Use the new portal to check sign-in, API access and enrollment; migration timing and eligibility are not publicly confirmed here.",
-    "cost": "Planned $200/month of AWS Bedrock credit, reported by Greg on October 19, 2026. Confirm who receives the allowance, renewal, covered usage and overage controls; not an unlimited compute or GPU-training allocation.",
-    "limits": "User-supplied screenshot lists 12 hosted models and per-token prices. These campus gateway rates differ from direct-provider rates. Credit is not transferred to this site’s OpenAI API; API compatibility, data rules, class concurrency and migration/export still need confirmation.",
+    "access": "Wolfgang Jetner at the Office of Responsible AI (ORAI), via Greg Chism, reports AI Verde will be sunset in favor of Arizona AI Assistant. Use the new portal to check sign-in, API access and enrollment; migration timing and eligibility need confirmation.",
+    "cost": "Planned $200/month of AWS Bedrock credit, reported by Wolfgang Jetner at ORAI and relayed by Greg Chism on October 19, 2026. Confirm who receives the allowance, renewal, covered usage and overage controls; not an unlimited compute or GPU-training allocation.",
+    "limits": "Supplied ORAI pricing screenshot lists 12 hosted models and per-token prices. These campus gateway rates differ from direct-provider rates. Credit is not transferred to this site’s OpenAI API; API compatibility, data rules, class concurrency and migration/export still need confirmation.",
     "contact": "Office of Responsible AI; current AI Verde contact Mithun Paul for migration questions",
     "source": "https://ai-assistant.responsibleai.arizona.edu/",
-    "checked": "2026-10-19 — Greg’s transition/credit update and supplied pricing screenshot; portal HTTP 200, no signed-in entitlement test"
+    "checked": "2026-10-19 — ORAI transition/credit update and pricing screenshot from Wolfgang Jetner, relayed by Greg Chism; portal HTTP 200, no signed-in entitlement test"
   },
   {
     "id": "campus-genai",

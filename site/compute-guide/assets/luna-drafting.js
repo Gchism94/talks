@@ -5,7 +5,7 @@ const panel=document.getElementById('lunaDrafting');if(!panel)return;
 const run=document.getElementById('generateLunaDraft'),consent=document.getElementById('lunaConsent'),status=document.getElementById('lunaStatus'),result=document.getElementById('lunaResult'),output=document.getElementById('lunaDraftText'),save=document.getElementById('downloadLunaDraft');
 let current,revision=0,busy=false,controller;
 function allowed(){return !!current&&current.data==='Public / synthetic'&&consent.checked&&!busy&&!!panel.dataset.endpoint;}
-function buttons(){run.disabled=!allowed();consent.disabled=!current||current.data!=='Public / synthetic'||busy;}
+function buttons(){run.disabled=!allowed();run.textContent=busy?'Drafting with Luna…':'Draft with Luna';panel.setAttribute('aria-busy',String(busy));consent.disabled=!current||current.data!=='Public / synthetic'||busy;}
 function reset(){revision++;controller?.abort();controller=undefined;current=undefined;busy=false;consent.checked=false;result.hidden=true;output.value='';save.disabled=true;buttons();status.textContent='Prepare a public/synthetic brief first. Luna drafting is optional.';}
 document.addEventListener('computing-brief-invalidated',reset);
 document.addEventListener('computing-brief-updated',e=>{current=structuredClone(e.detail);buttons();status.textContent=current.data==='Public / synthetic'?'Review the brief, then confirm permission to send it for a Luna draft.':'Luna is unavailable for internal, restricted or unclassified information. The local template is still available.';});

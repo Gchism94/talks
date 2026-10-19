@@ -55,7 +55,7 @@
 
 
 
-      <link rel="stylesheet" href="./guide-assets/guide.css?v=f1afb4ffaec4">
+      <link rel="stylesheet" href="./guide-assets/guide.css?v=69159b467e5d">
 
     <script>__md_scope=new URL(".",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
 
@@ -4285,16 +4285,16 @@ Sources: https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_service
 Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
 
-AI Verde → Arizona AI Assistant: planned transition | University | Transition reported by Greg; timing to confirm
-Access: Greg reports AI Verde will be sunset in favor of Arizona AI Assistant. Use the new portal to check sign-in, API access and enrollment; migration timing and eligibility are not publicly confirmed here.
-Cost: Planned $200/month of AWS Bedrock credit, reported by Greg on October 19, 2026. Confirm who receives the allowance, renewal, covered usage and overage controls; not an unlimited compute or GPU-training allocation.
+AI Verde → Arizona AI Assistant: planned transition | University | ORAI transition update; timing to confirm
+Access: Wolfgang Jetner at the Office of Responsible AI (ORAI), via Greg Chism, reports AI Verde will be sunset in favor of Arizona AI Assistant. Use the new portal to check sign-in, API access and enrollment; migration timing and eligibility need confirmation.
+Cost: Planned $200/month of AWS Bedrock credit, reported by Wolfgang Jetner at ORAI and relayed by Greg Chism on October 19, 2026. Confirm who receives the allowance, renewal, covered usage and overage controls; not an unlimited compute or GPU-training allocation.
 Contact: Office of Responsible AI; current AI Verde contact Mithun Paul for migration questions | https://responsibleai.arizona.edu/
 Support: Mithun Paul — mithunpaul@arizona.edu
-Limits: User-supplied screenshot lists 12 hosted models and per-token prices. These campus gateway rates differ from direct-provider rates. Credit is not transferred to this site’s OpenAI API; API compatibility, data rules, class concurrency and migration/export still need confirmation.
-Funding: Campus Bedrock credit reported by Greg; allocation level and renewal terms to confirm.
+Limits: Supplied ORAI pricing screenshot lists 12 hosted models and per-token prices. These campus gateway rates differ from direct-provider rates. Credit is not transferred to this site’s OpenAI API; API compatibility, data rules, class concurrency and migration/export still need confirmation.
+Funding: Campus Bedrock credit reported by Wolfgang Jetner at ORAI, via Greg Chism; allocation level and renewal terms to confirm.
 Sources: https://ai-assistant.responsibleai.arizona.edu/ | https://news.arizona.edu/employee-news/guide-ai-tools-u | https://cyverse.org/ai-verde
-Review: 2026-10-19 — Greg’s transition/credit update and supplied pricing screenshot; portal HTTP 200, no signed-in entitlement test
-Public university news describes Arizona AI Assistant as a fall pilot and AI Verde separately. The transition and $200/month credit are Greg-supplied updates, not independently confirmed public entitlements. Screenshot pricing is an October 19 snapshot; confirm live account rates.
+Review: 2026-10-19 — ORAI transition/credit update and pricing screenshot from Wolfgang Jetner, relayed by Greg Chism; portal HTTP 200, no signed-in entitlement test
+Public university news describes Arizona AI Assistant as a fall pilot and AI Verde separately. The transition and $200/month credit come from Wolfgang Jetner at ORAI, relayed by Greg Chism; individual entitlements have not been tested. Pricing screenshot received October 19; its capture/effective date is unconfirmed. Confirm live account rates.
 
 U of A GenAI | University | Documented route
 Access: Active UArizona NetID; published FAQ describes limited early access. Check genai.arizona.edu for availability.
@@ -4561,7 +4561,7 @@ For each candidate, document instructional/research benefit, users served, acces
 
 The [needs tool](needs.html) offers a source-backed local template and an optional **GPT-6 Luna** rewrite after explicit consent for public/synthetic information. Luna uses a server-side credential and a shared allowance: 20 attempts/day, 200/month, five/network/day, up to 1,000 output tokens each. Attempts reserve $0.005 of the application allowance before calling the model, limiting this service to $1/month in reservations at current verified rates. This is separate from account-wide billing and hosting. Failed or timed-out calls are not retried automatically.
 
-For a manual campus route, use [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/). Greg reports an AI Verde transition and $200/month of Bedrock credit; [review the credit boundaries and supplied model rates](campus-ai.html). [U of A GenAI](https://responsibleai.arizona.edu/tools-support/u-gen-ai) remains another documented route. Campus API integration and credit use have not been tested here.
+For a manual campus route, use [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/). Wolfgang Jetner at ORAI reports an AI Verde transition and $200/month of Bedrock credit, relayed by Greg Chism; [review the credit boundaries and supplied model rates](campus-ai.html). [U of A GenAI](https://responsibleai.arizona.edu/tools-support/u-gen-ai) remains another documented route. Campus API integration and credit use have not been tested here.
 
 ### Browser-model assessment
 
@@ -4578,13 +4578,13 @@ On October 19, 2026, **GPT-6 Luna** completed three synthetic requests—data sc
 
 # Arizona AI Assistant transition
 
-**AI Verde → [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/).** Greg reports this planned transition and **$200/month of AWS Bedrock credit**. Transition date, who receives the credit, eligibility, renewal and overage controls need confirmation. This is an October 19, 2026 working-group update, not a verified entitlement for every faculty member or student.
+**AI Verde → [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/).** **Wolfgang Jetner at the Office of Responsible AI (ORAI)** is the source of this planned transition and **$200/month of AWS Bedrock credit**, relayed by Greg Chism. Transition date, who receives the credit, eligibility, renewal and overage controls need confirmation. This is an October 19, 2026 working-group update, not a verified entitlement for every faculty member or student.
 
 Public [university news](https://news.arizona.edu/employee-news/guide-ai-tools-u) describes Arizona AI Assistant as a fall pilot and AI Verde separately. The new portal returned HTTP 200; we have not tested a signed-in account or campus API. Contact the [Office of Responsible AI](https://responsibleai.arizona.edu/) for current enrollment and credit terms; Mithun Paul (mithunpaul@arizona.edu) is the previously published AI Verde contact for migration questions.
 
 ## Models and prices in the supplied screenshot
 
-USD per **one million tokens**. These are campus gateway prices in Greg’s screenshot, not direct OpenAI prices or measured bills. Check current account rates before use.
+USD per **one million tokens**. These are campus gateway prices in the ORAI screenshot from Wolfgang Jetner, relayed by Greg Chism, not direct OpenAI prices or measured bills. Check current account rates before use.
 
 | Model ID | Input | Output |
 | --- | ---: | ---: |
@@ -4601,7 +4601,7 @@ USD per **one million tokens**. These are campus gateway prices in Greg’s scre
 | `claude-sonnet-5-5` | $2.20 | $11.00 |
 | `google.gemma-4-31b` | $0.14 | $0.40 |
 
-[View supplied pricing screenshot](guide-assets/campus-ai-pricing-2026-10-19.png) · Snapshot supplied October 19, 2026.
+[View supplied pricing screenshot](guide-assets/campus-ai-pricing-2026-10-19.png) · Received October 19, 2026; capture and effective dates are unconfirmed.
 
 For example, at the listed campus Luna rate, **10,000 input + 1,000 output tokens = $0.00165** before any other charges. This is illustrative arithmetic, not an observed bill or promised credit balance. Credit provides model inference, not a reserved GPU, training cluster or guaranteed class concurrency.
 
@@ -4691,7 +4691,7 @@ Campus HPC: classroom policy needs clarification | https://hpcdocs.hpc.arizona.e
 HPC active storage and transfers | https://hpcdocs.hpc.arizona.edu/storage_and_transfers/storage/hpc_storage/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 HPC software, containers and shared model data | https://hpcdocs.hpc.arizona.edu/software/common_datasets/ | https://hpcdocs.hpc.arizona.edu/software/overview/ | https://hpcdocs.hpc.arizona.edu/software/popular_software/ollama/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 HPC consulting and visualization support | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
-AI Verde → Arizona AI Assistant: planned transition | https://ai-assistant.responsibleai.arizona.edu/ | https://news.arizona.edu/employee-news/guide-ai-tools-u | https://cyverse.org/ai-verde | 2026-10-19 — Greg’s transition/credit update and supplied pricing screenshot; portal HTTP 200, no signed-in entitlement test
+AI Verde → Arizona AI Assistant: planned transition | https://ai-assistant.responsibleai.arizona.edu/ | https://news.arizona.edu/employee-news/guide-ai-tools-u | https://cyverse.org/ai-verde | 2026-10-19 — ORAI transition/credit update and pricing screenshot from Wolfgang Jetner, relayed by Greg Chism; portal HTTP 200, no signed-in entitlement test
 U of A GenAI | https://responsibleai.arizona.edu/tools-support/u-gen-ai | https://it.arizona.edu/student-resources | https://responsibleai.arizona.edu/ai-tools-guide | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 Campus software licensing | https://it.arizona.edu/student-resources | https://it.arizona.edu/node/616 | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 VCAT and Tech Zone software access | https://it.arizona.edu/tech-zone-software | https://it.arizona.edu/news/finding-resources-faculty | https://it.arizona.edu/student-resources | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
@@ -4785,7 +4785,7 @@ Campus AI learning and events | https://it.arizona.edu/news/new-u-ai-resources |
 
         <script src="./guide-assets/working-needs.js?v=1b2d764e1eff"></script>
 
-        <script src="./guide-assets/luna-drafting.js?v=8ac0801c4c5b"></script>
+        <script src="./guide-assets/luna-drafting.js?v=4f1db30d1176"></script>
 
 
   </body>

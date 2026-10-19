@@ -22,7 +22,7 @@ For each candidate, document instructional/research benefit, users served, acces
 
 The [needs tool](needs.html) offers a source-backed local template and an optional **GPT-6 Luna** rewrite after explicit consent for public/synthetic information. Luna uses a server-side credential and a shared allowance: 20 attempts/day, 200/month, five/network/day, up to 1,000 output tokens each. Attempts reserve $0.005 of the application allowance before calling the model, limiting this service to $1/month in reservations at current verified rates. This is separate from account-wide billing and hosting. Failed or timed-out calls are not retried automatically.
 
-For a manual campus route, use [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/). Greg reports an AI Verde transition and $200/month of Bedrock credit; [review the credit boundaries and supplied model rates](campus-ai.html). [U of A GenAI](https://responsibleai.arizona.edu/tools-support/u-gen-ai) remains another documented route. Campus API integration and credit use have not been tested here.
+For a manual campus route, use [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/). Wolfgang Jetner at ORAI reports an AI Verde transition and $200/month of Bedrock credit, relayed by Greg Chism; [review the credit boundaries and supplied model rates](campus-ai.html). [U of A GenAI](https://responsibleai.arizona.edu/tools-support/u-gen-ai) remains another documented route. Campus API integration and credit use have not been tested here.
 
 ### Browser-model assessment
 

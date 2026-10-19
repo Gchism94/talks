@@ -55,7 +55,7 @@
 
 
 
-      <link rel="stylesheet" href="./guide-assets/guide.css?v=f1afb4ffaec4">
+      <link rel="stylesheet" href="./guide-assets/guide.css?v=69159b467e5d">
 
     <script>__md_scope=new URL(".",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
 
@@ -1650,7 +1650,7 @@
 <p><a href="recommendations.html">Draft recommendations</a> · <a href="inventory.html">Resource inventory</a> · <a href="pilot-plan.html">Supporting compute pilot</a></p>
 <h2 id="help-prepare-resource-requests">Help prepare resource requests<a class="headerlink" href="#help-prepare-resource-requests" title="Permanent link">&para;</a></h2>
 <p>The <a href="needs.html">needs tool</a> offers a source-backed local template and an optional <strong>GPT-6 Luna</strong> rewrite after explicit consent for public/synthetic information. Luna uses a server-side credential and a shared allowance: 20 attempts/day, 200/month, five/network/day, up to 1,000 output tokens each. Attempts reserve $0.005 of the application allowance before calling the model, limiting this service to $1/month in reservations at current verified rates. This is separate from account-wide billing and hosting. Failed or timed-out calls are not retried automatically.</p>
-<p>For a manual campus route, use <a href="https://ai-assistant.responsibleai.arizona.edu/">Arizona AI Assistant</a>. Greg reports an AI Verde transition and $200/month of Bedrock credit; <a href="campus-ai.html">review the credit boundaries and supplied model rates</a>. <a href="https://responsibleai.arizona.edu/tools-support/u-gen-ai">U of A GenAI</a> remains another documented route. Campus API integration and credit use have not been tested here.</p>
+<p>For a manual campus route, use <a href="https://ai-assistant.responsibleai.arizona.edu/">Arizona AI Assistant</a>. Wolfgang Jetner at ORAI reports an AI Verde transition and $200/month of Bedrock credit, relayed by Greg Chism; <a href="campus-ai.html">review the credit boundaries and supplied model rates</a>. <a href="https://responsibleai.arizona.edu/tools-support/u-gen-ai">U of A GenAI</a> remains another documented route. Campus API integration and credit use have not been tested here.</p>
 <h3 id="browser-model-assessment">Browser-model assessment<a class="headerlink" href="#browser-model-assessment" title="Permanent link">&para;</a></h3>
 <p>Browser inference works without API keys or per-request inference fees. We tested two quantized SmolLM2 models on synthetic examples in Chromium on this machine. The 135M model invented student-record details; a 360M model produced short drafts in about 9–13 seconds, but an integrated example added an unsupported participant condition and weakened unknown-hours language. Its initial model/runtime download was about 390 MB. These examples are a small feasibility check, not a general ranking of browser models.</p>
 <p>The integrated 360M worker generated with networking blocked after loading. That establishes local execution for that test; it does not establish reliable drafting. Browser inference remains disabled on the public site. The local template, optional hosted Luna draft and manual campus prompt are separate routes. The <a href="https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct">SmolLM2 model card</a> also advises checking generated content. Preserve original quantities, source facts and unknowns in every draft.</p>
@@ -1733,7 +1733,7 @@
 
         <script src="./guide-assets/working-needs.js?v=1b2d764e1eff"></script>
 
-        <script src="./guide-assets/luna-drafting.js?v=8ac0801c4c5b"></script>
+        <script src="./guide-assets/luna-drafting.js?v=4f1db30d1176"></script>
 
 
   </body>

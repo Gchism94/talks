@@ -298,14 +298,14 @@
       "name": "AI Verde \u2192 Arizona AI Assistant: planned transition",
       "level": "University",
       "category": "Software & models",
-      "status": "Transition reported by Greg; timing to confirm",
-      "access": "Greg reports AI Verde will be sunset in favor of Arizona AI Assistant. Use the new portal to check sign-in, API access and enrollment; migration timing and eligibility are not publicly confirmed here.",
-      "cost": "Planned $200/month of AWS Bedrock credit, reported by Greg on October 19, 2026. Confirm who receives the allowance, renewal, covered usage and overage controls; not an unlimited compute or GPU-training allocation.",
+      "status": "ORAI transition update; timing to confirm",
+      "access": "Wolfgang Jetner at the Office of Responsible AI (ORAI), via Greg Chism, reports AI Verde will be sunset in favor of Arizona AI Assistant. Use the new portal to check sign-in, API access and enrollment; migration timing and eligibility need confirmation.",
+      "cost": "Planned $200/month of AWS Bedrock credit, reported by Wolfgang Jetner at ORAI and relayed by Greg Chism on October 19, 2026. Confirm who receives the allowance, renewal, covered usage and overage controls; not an unlimited compute or GPU-training allocation.",
       "support": "Mithun Paul \u2014 mithunpaul@arizona.edu",
-      "limits": "User-supplied screenshot lists 12 hosted models and per-token prices. These campus gateway rates differ from direct-provider rates. Credit is not transferred to this site\u2019s OpenAI API; API compatibility, data rules, class concurrency and migration/export still need confirmation.",
-      "funding": "Campus Bedrock credit reported by Greg; allocation level and renewal terms to confirm.",
+      "limits": "Supplied ORAI pricing screenshot lists 12 hosted models and per-token prices. These campus gateway rates differ from direct-provider rates. Credit is not transferred to this site\u2019s OpenAI API; API compatibility, data rules, class concurrency and migration/export still need confirmation.",
+      "funding": "Campus Bedrock credit reported by Wolfgang Jetner at ORAI, via Greg Chism; allocation level and renewal terms to confirm.",
       "source": "https://ai-assistant.responsibleai.arizona.edu/",
-      "checked": "2026-10-19 \u2014 Greg\u2019s transition/credit update and supplied pricing screenshot; portal HTTP 200, no signed-in entitlement test",
+      "checked": "2026-10-19 \u2014 ORAI transition/credit update and pricing screenshot from Wolfgang Jetner, relayed by Greg Chism; portal HTTP 200, no signed-in entitlement test",
       "next_action": "Confirm transition date, account/credit scope, API base URL, permitted data, overage policy and exports with the Office of Responsible AI.",
       "contact": "Office of Responsible AI; current AI Verde contact Mithun Paul for migration questions",
       "contact_url": "https://responsibleai.arizona.edu/",
@@ -314,7 +314,7 @@
         "https://news.arizona.edu/employee-news/guide-ai-tools-u",
         "https://cyverse.org/ai-verde"
       ],
-      "verification": "Public university news describes Arizona AI Assistant as a fall pilot and AI Verde separately. The transition and $200/month credit are Greg-supplied updates, not independently confirmed public entitlements. Screenshot pricing is an October 19 snapshot; confirm live account rates."
+      "verification": "Public university news describes Arizona AI Assistant as a fall pilot and AI Verde separately. The transition and $200/month credit come from Wolfgang Jetner at ORAI, relayed by Greg Chism; individual entitlements have not been tested. Pricing screenshot received October 19; its capture/effective date is unconfirmed. Confirm live account rates."
     },
     {
       "id": "campus-genai",
@@ -931,14 +931,14 @@
     "verification": "Thirteen backend checks, browser mock/edge cases, hosted MLIS draft and live consented DS draft/download/clear in three widths; not classroom readiness or campus data approval."
   },
   "campus_ai_transition": {
-    "reported_by": "Greg Chism",
+    "reported_by": "Wolfgang Jetner",
     "reported_on": "2026-10-19",
     "from": "AI Verde",
     "to": "Arizona AI Assistant",
     "url": "https://ai-assistant.responsibleai.arizona.edu/",
     "planned_bedrock_credit_usd_month": 200,
     "credit_scope": "Eligibility, recipient/allocation level, renewal and overage rules require confirmation",
-    "pricing_basis": "User-supplied model screenshot; USD per 1M tokens, snapshot October 19, 2026",
+    "pricing_basis": "ORAI model-pricing screenshot from Wolfgang Jetner, relayed by Greg Chism; USD per 1M tokens. Received October 19, 2026; capture/effective date unconfirmed.",
     "model_rates": [
       {
         "model": "gpt-5.6-luna",
@@ -1000,6 +1000,8 @@
         "input_usd_per_million": 0.14,
         "output_usd_per_million": 0.4
       }
-    ]
+    ],
+    "affiliation": "Office of Responsible AI (ORAI)",
+    "relayed_by": "Greg Chism"
   }
 }

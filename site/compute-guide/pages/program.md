@@ -42,7 +42,7 @@ The [inventory](inventory.html) covers college IT and research labs, campus CPU/
 - **Working-group members:** use the [working-session guide](working-session.html) and [draft deliverables](deliverables.html).
 - **College administrators:** review [proposed actions and university dependencies](recommendations.html).
 
-<div class="guide-note"><strong>Working drafts.</strong> Public service documentation is a starting point, not confirmation of college access or spare capacity. No college-wide needs survey or group endorsement is claimed. The needs tool prepares a local brief; it does not submit or collect responses.</div>
+<div class="guide-note"><strong>Working drafts.</strong> Public service documentation is a starting point, not confirmation of college access or spare capacity. No college-wide needs survey or group endorsement is claimed. The needs tool prepares a local brief without submitting it to the working group. Optional Luna drafting sends only a reviewed public/synthetic brief for AI processing, with your explicit consent.</div>
 
 ## Supporting evidence and pilots
 

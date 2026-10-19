@@ -13,8 +13,27 @@ html{scroll-behavior:smooth}.md-grid{max-width:1440px}.md-header{box-shadow:none
 
 [role=button]:focus-visible{outline:3px solid #1e5288;outline-offset:3px}
 
-button:disabled{opacity:.55;cursor:not-allowed!important}
+button:disabled{cursor:not-allowed!important}
 .guide-college-band{border-bottom:2px solid #ab0520;padding:0 0 .85rem;margin:0 0 1.5rem;color:#0c234b;line-height:1.5}.guide-college-band>a{display:block;font-size:.9rem;font-weight:750}.guide-college-band span{display:block;font-size:.67rem;color:#465569;margin-top:.25rem}.guide-college-band span a{font-weight:650}.guide-request textarea{width:100%;min-height:16rem;border:1px solid #8995a5;background:white;color:#172230;padding:.8rem;resize:vertical;font:inherit;font-size:.73rem;line-height:1.6}.guide-request p{font-size:.75rem}.md-header__title{min-width:0}.md-header__topic:first-child .md-ellipsis{font-size:.74rem;overflow:hidden;text-overflow:ellipsis}.guide-resource .guide-contact{overflow-wrap:anywhere}
 @media print{.guide-college-band{margin-bottom:1rem}.guide-request{display:none}}
 
 .md-typeset .guide-college-band>a{color:#0c234b}
+
+/* Explicit control states keep theme link colors from obscuring button labels. */
+.md-typeset .guide-button{min-height:44px;transition:none}
+.md-typeset .guide-button:is(:visited,:hover,:focus,:active):not(:disabled){color:#fff;text-decoration:none}
+.md-typeset .guide-button:where(:hover,:focus-visible):not(:disabled){background:#8c041b}
+.md-typeset .guide-button:active:not(:disabled){background:#690314}
+.md-typeset .guide-button:focus-visible{outline:3px solid #1e5288;outline-offset:3px}
+.guide-filters button,.needs-secondary{min-height:44px;transition:none}
+.guide-filters button:where(:hover,:focus-visible):not(:disabled),.needs-secondary:where(:hover,:focus-visible):not(:disabled){background:#edf0f3;color:#0c234b;border-color:#0c234b}
+.guide-filters button:active:not(:disabled),.needs-secondary:active:not(:disabled){background:#dbe2ea;color:#0c234b}
+.guide-filters button[aria-pressed=true]:where(:hover,:focus-visible){background:#173d70;color:#fff}
+.guide-filters button[aria-pressed=true]:active{background:#061830;color:#fff}
+.md-typeset button:disabled{opacity:1;background:#e1e5ea;color:#465569;border:1px solid #8995a5}
+textarea:focus-visible{outline:3px solid #1e5288;outline-offset:3px}
+.md-header a:focus-visible,.md-header button:focus-visible,.md-header [role=button]:focus-visible{outline-color:#fff}
+#lunaDrafting{border-top:1px solid #c5cbd3;margin-top:1.5rem;padding-top:.5rem}
+#lunaDrafting .luna-consent{display:flex;align-items:flex-start;gap:.6rem;font-size:.76rem;line-height:1.55;cursor:pointer}
+.luna-consent input{flex:0 0 18px;width:18px;height:18px;margin:.2rem 0;accent-color:#0c234b}
+#lunaDrafting>button{margin-top:1rem}
