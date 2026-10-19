@@ -6,11 +6,11 @@ docs_dir = "pages"
 site_dir = "_site"
 use_directory_urls = false
 extra_css = ["guide-assets/guide.css"]
-extra_javascript = ["guide-assets/needs.js", "guide-assets/guide.js", "guide-assets/working-needs.js"]
+extra_javascript = ["guide-assets/needs.js", "guide-assets/guide.js", "guide-assets/working-needs.js", "guide-assets/luna-drafting.js"]
 copyright = "College of Information Science · Computing Resources Working Group · Barney Maccabe & Greg Chism, point people · Working drafts · Fall 2026–Spring 2027"
 nav = [
   { "Working group" = [ { "Overview" = "program.md" }, { "Four deliverables" = "deliverables.md" }, { "Milestones" = "timeline.md" }, { "Working sessions" = "working-session.md" } ] },
-  { "Resources" = [ { "Resource inventory" = "inventory.md" }, { "Platform directory" = "resource-library.md" }, { "Federal platforms" = "federal-compute.md" }, { "Cloud credits & GPUs" = "serverless-compute.md" }, { "Repositories & preservation" = "repository-plan.md" } ] },
+  { "Resources" = [ { "Resource inventory" = "inventory.md" }, { "Campus AI transition" = "campus-ai.md" }, { "Platform directory" = "resource-library.md" }, { "Federal platforms" = "federal-compute.md" }, { "Cloud credits & GPUs" = "serverless-compute.md" }, { "Repositories & preservation" = "repository-plan.md" } ] },
   { "Needs" = [ { "Describe a need" = "needs.md" }, { "Needs assessment" = "needs-assessment.md" }, { "Optional compute estimate" = "compute-estimator.md" } ] },
   { "Approaches" = [ { "Portfolio" = "approaches.md" }, { "Recommendations" = "recommendations.md" } ] },
   { "Evidence & pilots" = [ { "Provider changes" = "report.md" }, { "Full research report" = "research-report.md" }, { "Source evidence" = "evidence.md" }, { "DS/MLIS pilot" = "pilot-plan.md" }, { "Compute pilot stages" = "pilot-stages.md" }, { "Run benchmarks" = "gpu-benchmark.md" }, { "ACCESS request" = "access-request.md" }, { "Pilot hours & funding" = "budget.md" }, { "Before class" = "readiness.md" }, { "Classroom platforms" = "classroom-resources.md" }, { "Classroom 50" = "classroom50.md" }, { "Options by degree" = "degree-options.md" }, { "Publishing options" = "publishing.md" }, { "Five-slide talk" = "index.html" } ] },

@@ -33,7 +33,7 @@ Growing demand, rising costs and uncertain funding make access and sustainable s
 
 ## Start with college and campus resources
 
-The [inventory](inventory.html) covers college IT and research labs, campus CPU/GPU computing, AI Verde, software, data and RSE support. Each entry identifies a contact and distinguishes documented terms from unanswered questions. Filter to **College** to review local capabilities and missing inventory details first.
+The [inventory](inventory.html) covers college IT and research labs, campus CPU/GPU computing, Arizona AI Assistant / AI Verde transition, software, data and RSE support. Each entry identifies a contact and distinguishes documented terms from unanswered questions. Filter to **College** to review local capabilities and missing inventory details first.
 
 ## Use this site
 

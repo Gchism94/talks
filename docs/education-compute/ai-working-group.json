@@ -295,26 +295,26 @@
     },
     {
       "id": "campus-aiverde",
-      "name": "AI Verde: managed models, teams and courses",
+      "name": "AI Verde \u2192 Arizona AI Assistant: planned transition",
       "level": "University",
       "category": "Software & models",
-      "status": "Documented route",
-      "access": "UArizona NetID required; faculty, staff, researchers and students request access/consultation from Mithun Paul. Chat and API interfaces documented.",
-      "cost": "Commercial tokens cost money; CyVerse sets course/team/user budgets on request. A no-cost allocation or on-premise model entitlement must be confirmed.",
+      "status": "Transition reported by Greg; timing to confirm",
+      "access": "Greg reports AI Verde will be sunset in favor of Arizona AI Assistant. Use the new portal to check sign-in, API access and enrollment; migration timing and eligibility are not publicly confirmed here.",
+      "cost": "Planned $200/month of AWS Bedrock credit, reported by Greg on October 19, 2026. Confirm who receives the allowance, renewal, covered usage and overage controls; not an unlimited compute or GPU-training allocation.",
       "support": "Mithun Paul \u2014 mithunpaul@arizona.edu",
-      "limits": "Available models and limits are team-specific. On-premise and commercial routes differ; confirm data handling, permitted material, throughput and support. API documentation does not establish a configured free endpoint for this site.",
-      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
-      "source": "https://cyverse.org/ai-verde",
-      "checked": "2026-10-19 \u2014 public documentation; no signed-in entitlement or owner confirmation",
-      "next_action": "Ask about a small on-premise instruction model, zero-charge quota, team access, API/approved hosting and public-data request-drafting use.",
-      "contact": "Mithun Paul \u2014 mithunpaul@arizona.edu",
-      "contact_url": "mailto:mithunpaul@arizona.edu",
+      "limits": "User-supplied screenshot lists 12 hosted models and per-token prices. These campus gateway rates differ from direct-provider rates. Credit is not transferred to this site\u2019s OpenAI API; API compatibility, data rules, class concurrency and migration/export still need confirmation.",
+      "funding": "Campus Bedrock credit reported by Greg; allocation level and renewal terms to confirm.",
+      "source": "https://ai-assistant.responsibleai.arizona.edu/",
+      "checked": "2026-10-19 \u2014 Greg\u2019s transition/credit update and supplied pricing screenshot; portal HTTP 200, no signed-in entitlement test",
+      "next_action": "Confirm transition date, account/credit scope, API base URL, permitted data, overage policy and exports with the Office of Responsible AI.",
+      "contact": "Office of Responsible AI; current AI Verde contact Mithun Paul for migration questions",
+      "contact_url": "https://responsibleai.arizona.edu/",
       "sources": [
-        "https://cyverse.org/ai-verde",
-        "https://aiverde-docs.cyverse.ai/",
-        "https://aiverde-docs.cyverse.ai/api/api-key/"
+        "https://ai-assistant.responsibleai.arizona.edu/",
+        "https://news.arizona.edu/employee-news/guide-ai-tools-u",
+        "https://cyverse.org/ai-verde"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Public university news describes Arizona AI Assistant as a fall pilot and AI Verde separately. The transition and $200/month credit are Greg-supplied updates, not independently confirmed public entitlements. Screenshot pricing is an October 19 snapshot; confirm live account rates."
     },
     {
       "id": "campus-genai",
@@ -791,9 +791,9 @@
     "key_unknowns": [
       "College asset/license register and committed support hours",
       "HPC classroom policy refers to retired Ocelote; current instruction permission unresolved",
-      "AI Verde zero-cost quota, model selection and approved API hosting unconfirmed"
+      "Arizona AI Assistant transition timing, $200/month credit allocation level, renewal/overage policy and campus API terms"
     ],
-    "request_assistant": "Local request template; copy/download a public/synthetic prompt for manual campus AI drafting. No browser or cloud model connected."
+    "request_assistant": "Local template and optional consent-based GPT-6 Luna drafting; direct OpenAI usage is separate from planned campus Bedrock credit."
   },
   "point_people": [
     {
@@ -838,8 +838,8 @@
       }
     ],
     "privacy_test": "Integrated 360M worker generated with all network requests blocked after loading; no generation requests observed. Draft quality still needs separate acceptance.",
-    "selected_route": "Deterministic sourced request template plus copyable prompt for fuller drafting in U of A GenAI (published no-cost NetID route; access/data terms apply) or AI Verde (access/token budget to confirm).",
-    "site_model_connection": false,
+    "selected_route": "Local sourced template plus optional explicit GPT-6 Luna draft through the limited server-side service; manual Arizona AI Assistant / U of A GenAI prompts are alternatives.",
+    "site_model_connection": true,
     "sources": [
       "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct",
       "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct",
@@ -850,7 +850,7 @@
       "model": "gpt-6-luna",
       "status": "Completed; three synthetic drafts reviewed, useful first drafts with human review",
       "scope": "Three synthetic cases; at most 700 output tokens each, no tools, reasoning none, store false requested",
-      "public_endpoint_configured": false,
+      "public_endpoint_configured": true,
       "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
       "date": "2026-10-19",
       "case_count": 3,
@@ -882,7 +882,118 @@
         "No matched-prompt comparison with browser models; no broad ranking or claim of error-free generation.",
         "store:false requested; not a zero-retention guarantee.",
         "No site endpoint, browser credential, automatic submission or recurring service configured."
-      ]
+      ],
+      "public_endpoint_configured_at_original_test": false
+    },
+    "integration_evaluation": {
+      "date": "2026-10-19",
+      "scope": "Small synthetic hosted acceptance, not a model ranking or reliability estimate",
+      "initial_700_token_attempts": 3,
+      "initial_completed": 1,
+      "initial_noncompleted": 2,
+      "failed_attempts_reserved": true,
+      "automatic_retries": false,
+      "successful_hosted_seconds": 5.043,
+      "current_service_output_tokens": 1000,
+      "current_monthly_application_reservation_usd": 1,
+      "public_browser_check": "See final local validation record; not an institutional deployment acceptance"
     }
+  },
+  "request_assistant": {
+    "model": "gpt-6-luna",
+    "endpoint": "https://infosci-compute-drafter.vercel.app/api/draft",
+    "status": "Limited production pilot; human review required",
+    "provider": "OpenAI direct API; separate from campus Bedrock credit",
+    "consent": "Explicit public/synthetic non-identifying brief only",
+    "limits": {
+      "daily_attempts_shared": 20,
+      "monthly_attempts_shared": 200,
+      "per_network_daily": 5,
+      "cooldown_seconds": 30,
+      "max_output_tokens": 1000,
+      "max_request_bytes": 6000,
+      "max_model_payload_bytes": 16000,
+      "reserved_usd_per_attempt": 0.005,
+      "monthly_reserved_usd_ceiling": 1
+    },
+    "storage": "Private conditional-write allowance ledger; counters, attempt IDs and daily rotating HMAC network hashes; no brief or draft saved",
+    "failure_behavior": "No automatic retries; local template remains available; missing or unavailable ledger blocks model calls",
+    "deployment": "dpl_7t8dkjxwWV2t4gQSZU1ccwNutzc4",
+    "server_key_required": true,
+    "visitors_need_api_key": false,
+    "uses_campus_bedrock_credit": false,
+    "verification": "Thirteen backend checks, browser mocks and a hosted synthetic generation; not classroom readiness or campus data approval."
+  },
+  "campus_ai_transition": {
+    "reported_by": "Greg Chism",
+    "reported_on": "2026-10-19",
+    "from": "AI Verde",
+    "to": "Arizona AI Assistant",
+    "url": "https://ai-assistant.responsibleai.arizona.edu/",
+    "planned_bedrock_credit_usd_month": 200,
+    "credit_scope": "Eligibility, recipient/allocation level, renewal and overage rules require confirmation",
+    "pricing_basis": "User-supplied model screenshot; USD per 1M tokens, snapshot October 19, 2026",
+    "model_rates": [
+      {
+        "model": "gpt-5.6-luna",
+        "input_usd_per_million": 0.22,
+        "output_usd_per_million": 1.32
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "input_usd_per_million": 4.4,
+        "output_usd_per_million": 22
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "input_usd_per_million": 2.2,
+        "output_usd_per_million": 11
+      },
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "input_usd_per_million": 1.1,
+        "output_usd_per_million": 5.5
+      },
+      {
+        "model": "claude-opus-5",
+        "input_usd_per_million": 5.5,
+        "output_usd_per_million": 27.5
+      },
+      {
+        "model": "claude-opus-5-5",
+        "input_usd_per_million": 4.4,
+        "output_usd_per_million": 22
+      },
+      {
+        "model": "claude-sonnet-5",
+        "input_usd_per_million": 2.2,
+        "output_usd_per_million": 11
+      },
+      {
+        "model": "gpt-5.6-terra",
+        "input_usd_per_million": 2.2,
+        "output_usd_per_million": 13.2
+      },
+      {
+        "model": "gpt-6-luna",
+        "input_usd_per_million": 0.11,
+        "output_usd_per_million": 0.55
+      },
+      {
+        "model": "claude-haiku-5-5",
+        "input_usd_per_million": 0.11,
+        "output_usd_per_million": 0.55
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "input_usd_per_million": 2.2,
+        "output_usd_per_million": 11
+      },
+      {
+        "model": "google.gemma-4-31b",
+        "input_usd_per_million": 0.14,
+        "output_usd_per_million": 0.4
+      }
+    ]
   }
 }

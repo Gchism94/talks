@@ -1,0 +1,11 @@
+{
+  "framework": null,
+  "buildCommand": "",
+  "outputDirectory": "public",
+  "functions": {
+    "api/*.mjs": {
+      "maxDuration": 30,
+      "includeFiles": "data/inventory.json"
+    }
+  }
+}

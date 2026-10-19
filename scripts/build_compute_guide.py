@@ -21,6 +21,12 @@ def check_engine(executable):
 def build(executable):
     check_engine(executable)
     d=json.loads((PUBLIC/'evidence.json').read_text());p=json.loads((ROOT/'site/education-compute-pilot.json').read_text())
+    # The optional backend receives only public dated facts; never copy credential files.
+    group=json.loads((SOURCE/'working-group.json').read_text())
+    facts_path=ROOT/'services/compute-drafter/data/inventory.json'
+    facts_path.parent.mkdir(parents=True,exist_ok=True)
+    fact_keys=['id','name','access','cost','limits','contact','source','checked']
+    facts_path.write_text(json.dumps([{k:r[k] for k in fact_keys} for r in group['inventory']],indent=2,ensure_ascii=False)+'\n')
     if GENERATED.exists():shutil.rmtree(GENERATED)
     shutil.copytree(SOURCE,GENERATED)
     # Resolve paths explicitly: the generated source is local-only and never published.
