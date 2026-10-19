@@ -36,16 +36,16 @@
       "level": "College",
       "category": "Hardware & compute",
       "status": "Inventory pending",
-      "access": "Ask Barney Maccabe to coordinate a roster of machines, locations, owners, access rules and any loan pool.",
+      "access": "Ask Barney Maccabe or Greg Chism to coordinate a roster of machines, locations, owners, access rules and any loan pool.",
       "cost": "Unknown; inventory existing commitments and hours before proposing funding.",
-      "support": "Barney Maccabe \u2014 working-group point person",
+      "support": "Barney Maccabe or Greg Chism \u2014 working-group point people",
       "limits": "No shared college CPU/GPU pool, equipment checkout entitlement or spare capacity is verified.",
       "funding": "To document; no new funding, staff time or loan inventory assumed.",
       "source": "https://infosci.arizona.edu/people/barney-maccabe",
       "checked": "2026-10-19 \u2014 public documentation; no signed-in entitlement or owner confirmation",
       "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
-      "contact": "Barney Maccabe \u2014 working-group point person",
-      "contact_url": "mailto:maccabe@arizona.edu",
+      "contact": "Barney Maccabe or Greg Chism \u2014 working-group point people",
+      "contact_url": "program.html",
       "sources": [
         "https://infosci.arizona.edu/people/barney-maccabe"
       ],
@@ -57,16 +57,16 @@
       "level": "College",
       "category": "RSE & personnel",
       "status": "Inventory pending",
-      "access": "Ask Barney Maccabe to identify technical roles, skills, appointments and realistic support windows.",
+      "access": "Ask Barney Maccabe or Greg Chism to identify technical roles, skills, appointments and realistic support windows.",
       "cost": "Unknown; inventory existing commitments and hours before proposing funding.",
-      "support": "Barney Maccabe \u2014 working-group point person",
+      "support": "Barney Maccabe or Greg Chism \u2014 working-group point people",
       "limits": "No available FTE or support hours measured. Research programmers in a lab are not automatically a college-wide service.",
       "funding": "To document; no new funding, staff time or loan inventory assumed.",
       "source": "https://infosci.arizona.edu/people/barney-maccabe",
       "checked": "2026-10-19 \u2014 public documentation; no signed-in entitlement or owner confirmation",
       "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
-      "contact": "Barney Maccabe \u2014 working-group point person",
-      "contact_url": "mailto:maccabe@arizona.edu",
+      "contact": "Barney Maccabe or Greg Chism \u2014 working-group point people",
+      "contact_url": "program.html",
       "sources": [
         "https://infosci.arizona.edu/people/barney-maccabe"
       ],
@@ -80,14 +80,14 @@
       "status": "Inventory pending",
       "access": "Ask the working group to identify license/data owners, storage, renewals and permitted research/classroom use.",
       "cost": "Unknown; inventory existing commitments and hours before proposing funding.",
-      "support": "Barney Maccabe \u2014 working-group point person",
+      "support": "Barney Maccabe or Greg Chism \u2014 working-group point people",
       "limits": "No college license roster, API allowance or training/distribution rights verified.",
       "funding": "To document; no new funding, staff time or loan inventory assumed.",
       "source": "https://infosci.arizona.edu/people/barney-maccabe",
       "checked": "2026-10-19 \u2014 public documentation; no signed-in entitlement or owner confirmation",
       "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
-      "contact": "Barney Maccabe \u2014 working-group point person",
-      "contact_url": "mailto:maccabe@arizona.edu",
+      "contact": "Barney Maccabe or Greg Chism \u2014 working-group point people",
+      "contact_url": "program.html",
       "sources": [
         "https://infosci.arizona.edu/people/barney-maccabe"
       ],
@@ -101,13 +101,13 @@
       "status": "Documented route",
       "access": "Explore the college research-labs directory; approach the relevant lab lead for a research collaboration.",
       "cost": "No general-use fee schedule or guaranteed shared access published.",
-      "support": "College research-labs directory; Barney Maccabe for working-group coordination",
+      "support": "College research-labs directory; Barney Maccabe or Greg Chism for working-group coordination",
       "limits": "A lab listing establishes research capability, not open compute, staff availability or a classroom reservation.",
       "funding": "Institutional or project service; dedicated college capacity/funding not established.",
       "source": "https://infosci.arizona.edu/research-faculty/research-labs",
       "checked": "2026-10-19 \u2014 public documentation; no signed-in entitlement or owner confirmation",
       "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
-      "contact": "College research-labs directory; Barney Maccabe for working-group coordination",
+      "contact": "College research-labs directory; Barney Maccabe or Greg Chism for working-group coordination",
       "contact_url": "https://infosci.arizona.edu/research-faculty/research-labs",
       "sources": [
         "https://infosci.arizona.edu/research-faculty/research-labs"
@@ -785,14 +785,6 @@
     }
   ],
   "college": "College of Information Science",
-  "point_person": {
-    "name": "Barney Maccabe",
-    "role": "Working-group point person; Associate Dean of Research",
-    "email": "maccabe@arizona.edu",
-    "profile": "https://infosci.arizona.edu/people/barney-maccabe",
-    "basis": "Working-group point person designated by Greg Chism; public college profile verifies role and email.",
-    "checked": "2026-10-19"
-  },
   "inventory_review": {
     "date": "2026-10-19",
     "method": "Primary university/college/CyVerse documentation, source captures and direct URL checks. No account login, contact response or capacity test.",
@@ -801,6 +793,65 @@
       "HPC classroom policy refers to retired Ocelote; current instruction permission unresolved",
       "AI Verde zero-cost quota, model selection and approved API hosting unconfirmed"
     ],
-    "request_assistant": "Local request scaffold and optional AI Verde prompt export. No automatic LLM connection, credentials or paid inference."
+    "request_assistant": "Local request template; copy/download a public/synthetic prompt for manual campus AI drafting. No browser or cloud model connected."
+  },
+  "point_people": [
+    {
+      "name": "Barney Maccabe",
+      "role": "Working-group point person; Associate Dean of Research",
+      "email": "maccabe@arizona.edu",
+      "profile": "https://infosci.arizona.edu/people/barney-maccabe",
+      "basis": "Working-group point person designated by Greg Chism; public college profile verifies role and email.",
+      "checked": "2026-10-19"
+    },
+    {
+      "name": "Greg Chism",
+      "role": "Working-group point person; Assistant Professor of Practice",
+      "email": "gchism@arizona.edu",
+      "profile": "https://infosci.arizona.edu/person/greg-chism",
+      "basis": "Greg Chism requested inclusion as a second point person; public college profile verifies email and role.",
+      "checked": "2026-10-19"
+    }
+  ],
+  "request_drafting_assessment": {
+    "date": "2026-10-19",
+    "scope": "Two small quantized SmolLM2 models tested on synthetic examples in Chromium on this machine; not a general model benchmark.",
+    "browser_inference_feasible": true,
+    "api_keys_required": false,
+    "inference_fees": false,
+    "candidates": [
+      {
+        "model": "SmolLM2-135M-Instruct",
+        "dtype": "q8",
+        "seconds_example": 10.0,
+        "decision": "Rejected: invented student-record details absent from a public-corpus request."
+      },
+      {
+        "model": "SmolLM2-360M-Instruct",
+        "dtype": "q8",
+        "seconds_examples": [
+          9.1,
+          13.0
+        ],
+        "download_approx_MB": 390,
+        "decision": "Not deployed: integrated wording example added an unsupported participant condition and weakened unknown-hours language."
+      }
+    ],
+    "privacy_test": "Integrated 360M worker generated with all network requests blocked after loading; no generation requests observed. Draft quality still needs separate acceptance.",
+    "selected_route": "Deterministic sourced request template plus copyable prompt for fuller drafting in U of A GenAI (published no-cost NetID route; access/data terms apply) or AI Verde (access/token budget to confirm).",
+    "site_model_connection": false,
+    "sources": [
+      "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct",
+      "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct",
+      "https://huggingface.co/docs/transformers.js/v3.8.1/en/index",
+      "https://responsibleai.arizona.edu/tools-support/u-gen-ai"
+    ],
+    "hosted_model_test": {
+      "model": "gpt-6-luna",
+      "status": "Prepared; no API request run",
+      "scope": "Three synthetic cases; at most 700 output tokens each, no tools, reasoning none, store false requested",
+      "public_endpoint_configured": false,
+      "source": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+    }
   }
 }

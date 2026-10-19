@@ -1,13 +1,13 @@
 [project]
 site_name = "College of Information Science · Computing Resources"
-site_description = "College of Information Science Computing Resources Working Group: inventory, needs, approaches and recommendations. Point person: Barney Maccabe."
+site_description = "College of Information Science Computing Resources Working Group: inventory, needs, approaches and recommendations. Point people: Barney Maccabe and Greg Chism."
 site_url = "https://gchism94.github.io/talks/education-compute/"
 docs_dir = "pages"
 site_dir = "_site"
 use_directory_urls = false
 extra_css = ["guide-assets/guide.css"]
 extra_javascript = ["guide-assets/needs.js", "guide-assets/guide.js", "guide-assets/working-needs.js"]
-copyright = "College of Information Science · Computing Resources Working Group · Barney Maccabe, point person · Working drafts · Fall 2026–Spring 2027"
+copyright = "College of Information Science · Computing Resources Working Group · Barney Maccabe & Greg Chism, point people · Working drafts · Fall 2026–Spring 2027"
 nav = [
   { "Working group" = [ { "Overview" = "program.md" }, { "Four deliverables" = "deliverables.md" }, { "Milestones" = "timeline.md" }, { "Working sessions" = "working-session.md" } ] },
   { "Resources" = [ { "Resource inventory" = "inventory.md" }, { "Platform directory" = "resource-library.md" }, { "Federal platforms" = "federal-compute.md" }, { "Cloud credits & GPUs" = "serverless-compute.md" }, { "Repositories & preservation" = "repository-plan.md" } ] },

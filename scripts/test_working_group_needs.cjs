@@ -12,7 +12,7 @@ console.log('Passed qualitative needs, unknown/zero quantities, input rejection 
 
 const inventory=require('../site/compute-guide/working-group.json');
 assert.equal(inventory.title,'Computing Resources Working Group');
-assert.equal(inventory.point_person.email,'maccabe@arizona.edu');
+assert.deepEqual(inventory.point_people.map(x=>x.email),['maccabe@arizona.edu','gchism@arizona.edu']);
 assert(inventory.inventory.every(r=>r.contact&&r.contact_url&&r.cost&&r.limits&&r.verification&&r.sources.length));
 assert.equal(inventory.inventory.find(r=>r.id==='campus-hpc-teaching').status,'Conflicting documentation');
 const need={activity:'Analyze an open text corpus',scope:'Research',stage:'Current need',timing:'This semester',priority:'Exploratory opportunity',resources:['Data / stewardship','RSE / engineering'],barriers:[],people:null,hours:null,data:'Public / synthetic',budget:'No funds identified',requirements:'',skills:'',existing:'',collaboration:'Not yet known'};
@@ -21,5 +21,8 @@ assert.equal(draft.eligible_for_submission,false);assert(draft.text.includes('Un
 const classroom=globalThis.WorkingGroupNeeds.requestDraft({...need,scope:'Instruction',resources:['Hardware / compute']},inventory.inventory);
 assert(classroom.routes.some(r=>r.id==='campus-hpc-teaching'));assert(!classroom.routes.some(r=>r.id==='campus-hpc'));
 for(const data of ['Internal / student records','Restricted / regulated','Not yet known'])assert.throws(()=>globalThis.WorkingGroupNeeds.draftingPrompt({...need,data},inventory.inventory),/public\/synthetic/);
-const prompt=globalThis.WorkingGroupNeeds.draftingPrompt({...need,illustrative_example:true},inventory.inventory);assert(prompt.includes('Illustrative example'));assert(prompt.includes('untrusted data'));assert(prompt.includes('not an allocation approver'));assert(prompt.includes('https://data7.arizona.edu/contact-us'));
+const prompt=globalThis.WorkingGroupNeeds.draftingPrompt({...need,illustrative_example:true},inventory.inventory);assert(prompt.includes('Illustrative example'));assert(prompt.includes('untrusted data'));assert(prompt.includes('not allocation approvers'));assert(prompt.includes('https://data7.arizona.edu/contact-us'));
 console.log('Passed inventory/contact completeness, policy conflict, local request drafting, unknown effort and sensitive-data handoff controls.');
+
+assert(draft.text.includes('Greg Chism'));
+console.log('Passed both working-group point people in request drafts.');

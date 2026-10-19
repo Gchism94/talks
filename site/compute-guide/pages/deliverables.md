@@ -1,6 +1,6 @@
 # Four deliverables
 
-For the **College of Information Science Computing Resources Working Group**. Point person: [Barney Maccabe](mailto:maccabe@arizona.edu).
+For the **College of Information Science Computing Resources Working Group**. Point people: [Barney Maccabe](mailto:maccabe@arizona.edu) and [Greg Chism](mailto:gchism@arizona.edu).
 
 Use these as working drafts. Each needs an agreed lead, source checks and group review; none is a completed college assessment or endorsed recommendation.
 

@@ -8,7 +8,7 @@ hide:
 
 <div class="guide-intro">Computing for the College of Information Science. Understand what we have, identify what we need, and support research and teaching sustainably.</div>
 
-**Working-group point person:** [Barney Maccabe](https://infosci.arizona.edu/people/barney-maccabe), Associate Dean of Research · [maccabe@arizona.edu](mailto:maccabe@arizona.edu).
+**Working-group point people:** [Barney Maccabe](https://infosci.arizona.edu/people/barney-maccabe), Associate Dean of Research · [maccabe@arizona.edu](mailto:maccabe@arizona.edu), and [Greg Chism](https://infosci.arizona.edu/person/greg-chism), Assistant Professor of Practice · [gchism@arizona.edu](mailto:gchism@arizona.edu).
 
 <div class="guide-actions"><a class="guide-button" href="inventory.html">Explore the inventory →</a><a href="needs.html">Describe a need →</a><a href="deliverables.html">Review the deliverables →</a></div>
 

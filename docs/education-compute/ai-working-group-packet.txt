@@ -1,7 +1,7 @@
 College of Information Science
 Computing Resources Working Group
 DRAFT WORKING PACKET | October 19, 2026
-Point person: Barney Maccabe, Associate Dean of Research | maccabe@arizona.edu
+Point people: Barney Maccabe | maccabe@arizona.edu; Greg Chism | gchism@arizona.edu
 
 College of Information Science: computing for research and instruction, including AI, data science, digital scholarship, games and extended reality, software, data and the people who support them.
 Working resource and draft deliverables; not endorsed recommendations or a completed college assessment.
@@ -64,10 +64,10 @@ Review: 2026-10-19 — public documentation; no signed-in entitlement or owner c
 Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
 
 College hardware, labs and loan equipment | College | Inventory pending
-Access: Ask Barney Maccabe to coordinate a roster of machines, locations, owners, access rules and any loan pool.
+Access: Ask Barney Maccabe or Greg Chism to coordinate a roster of machines, locations, owners, access rules and any loan pool.
 Cost: Unknown; inventory existing commitments and hours before proposing funding.
-Contact: Barney Maccabe — working-group point person | mailto:maccabe@arizona.edu
-Support: Barney Maccabe — working-group point person
+Contact: Barney Maccabe or Greg Chism — working-group point people | program.html
+Support: Barney Maccabe or Greg Chism — working-group point people
 Limits: No shared college CPU/GPU pool, equipment checkout entitlement or spare capacity is verified.
 Funding: To document; no new funding, staff time or loan inventory assumed.
 Sources: https://infosci.arizona.edu/people/barney-maccabe
@@ -75,10 +75,10 @@ Review: 2026-10-19 — public documentation; no signed-in entitlement or owner c
 Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email.
 
 College RSE and technical-support capacity | College | Inventory pending
-Access: Ask Barney Maccabe to identify technical roles, skills, appointments and realistic support windows.
+Access: Ask Barney Maccabe or Greg Chism to identify technical roles, skills, appointments and realistic support windows.
 Cost: Unknown; inventory existing commitments and hours before proposing funding.
-Contact: Barney Maccabe — working-group point person | mailto:maccabe@arizona.edu
-Support: Barney Maccabe — working-group point person
+Contact: Barney Maccabe or Greg Chism — working-group point people | program.html
+Support: Barney Maccabe or Greg Chism — working-group point people
 Limits: No available FTE or support hours measured. Research programmers in a lab are not automatically a college-wide service.
 Funding: To document; no new funding, staff time or loan inventory assumed.
 Sources: https://infosci.arizona.edu/people/barney-maccabe
@@ -88,8 +88,8 @@ Inventory question, not a verified service entitlement. Routing contact designat
 College software, datasets and agreements | College | Inventory pending
 Access: Ask the working group to identify license/data owners, storage, renewals and permitted research/classroom use.
 Cost: Unknown; inventory existing commitments and hours before proposing funding.
-Contact: Barney Maccabe — working-group point person | mailto:maccabe@arizona.edu
-Support: Barney Maccabe — working-group point person
+Contact: Barney Maccabe or Greg Chism — working-group point people | program.html
+Support: Barney Maccabe or Greg Chism — working-group point people
 Limits: No college license roster, API allowance or training/distribution rights verified.
 Funding: To document; no new funding, staff time or loan inventory assumed.
 Sources: https://infosci.arizona.edu/people/barney-maccabe
@@ -99,8 +99,8 @@ Inventory question, not a verified service entitlement. Routing contact designat
 College research labs and collaborators | College | Documented route
 Access: Explore the college research-labs directory; approach the relevant lab lead for a research collaboration.
 Cost: No general-use fee schedule or guaranteed shared access published.
-Contact: College research-labs directory; Barney Maccabe for working-group coordination | https://infosci.arizona.edu/research-faculty/research-labs
-Support: College research-labs directory; Barney Maccabe for working-group coordination
+Contact: College research-labs directory; Barney Maccabe or Greg Chism for working-group coordination | https://infosci.arizona.edu/research-faculty/research-labs
+Support: College research-labs directory; Barney Maccabe or Greg Chism for working-group coordination
 Limits: A lab listing establishes research capability, not open compute, staff availability or a classroom reservation.
 Funding: Institutional or project service; dedicated college capacity/funding not established.
 Sources: https://infosci.arizona.edu/research-faculty/research-labs
@@ -469,7 +469,15 @@ For each candidate, document instructional/research benefit, users served, acces
 
 ## Help prepare resource requests
 
-The [needs tool](needs.html) produces a local request draft with documented resource routes and open questions. An optional prompt supports manual drafting in AI Verde after access and data terms are confirmed. A background LLM connection is conditional on a suitable lightweight model, a confirmed zero-cost quota, approved hosting and review of output quality. No model is connected to this site.
+The [needs tool](needs.html) produces a local request draft with documented resource routes and open questions. Copy or download its public/synthetic prompt for a fuller rewrite in **[U of A GenAI](https://responsibleai.arizona.edu/tools-support/u-gen-ai)**, which advertises no-cost NetID access with early-access and data restrictions. **[AI Verde](https://cyverse.org/ai-verde)** is an alternative after access and any token budget are confirmed. This site connects to neither model service. Review the text and share it yourself only under the chosen service’s data terms.
+
+### Browser-model assessment
+
+Browser inference works without API keys or per-request inference fees. We tested two quantized SmolLM2 models on synthetic examples in Chromium on this machine. The 135M model invented student-record details; a 360M model produced short drafts in about 9–13 seconds, but an integrated example added an unsupported participant condition and weakened unknown-hours language. Its initial model/runtime download was about 390 MB. These examples are a small feasibility check, not a general ranking of browser models.
+
+The integrated 360M worker generated with networking blocked after loading. That establishes local execution for that test; it does not establish reliable drafting. We have kept browser inference disabled on the public site and chosen the simpler template-plus-campus-prompt workflow. The [SmolLM2 model card](https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct) also advises checking generated content. Preserve original quantities, source facts and unknowns in every draft.
+
+A separate **GPT-6 Luna API evaluation** is prepared for three synthetic computing requests. It has not run and no API endpoint is connected to this site. API usage has token charges; testing does not establish an operating budget, institutional approval or a public service. [Official model documentation](https://developers.openai.com/api/docs/models/gpt-6-luna).
 
 
 # Recommendations for review
