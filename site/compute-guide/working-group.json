@@ -896,7 +896,13 @@
       "successful_hosted_seconds": 5.043,
       "current_service_output_tokens": 1000,
       "current_monthly_application_reservation_usd": 1,
-      "public_browser_check": "See final local validation record; not an institutional deployment acceptance"
+      "public_browser_check": "Passed: one explicit consented public/synthetic DS draft, download and clear; 1440/768/390 widths",
+      "released_1000_token_attempts": 1,
+      "released_completed": 1,
+      "live_browser_seconds": 4.734,
+      "total_hosted_attempts": 4,
+      "total_completed": 2,
+      "total_noncompleted": 2
     }
   },
   "request_assistant": {
@@ -922,7 +928,7 @@
     "server_key_required": true,
     "visitors_need_api_key": false,
     "uses_campus_bedrock_credit": false,
-    "verification": "Thirteen backend checks, browser mocks and a hosted synthetic generation; not classroom readiness or campus data approval."
+    "verification": "Thirteen backend checks, browser mock/edge cases, hosted MLIS draft and live consented DS draft/download/clear in three widths; not classroom readiness or campus data approval."
   },
   "campus_ai_transition": {
     "reported_by": "Greg Chism",
