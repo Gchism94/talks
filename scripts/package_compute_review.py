@@ -40,6 +40,7 @@ def build():
     text += '\nCOHESIVE SITE REORGANIZATION | October 13, 2026\nStart at program.html for the core problem and solution. Six top-level sections: Overview, Staged plan (timeline.html), Classroom tools, Hours & funding, Report & evidence (report.html), and Talk. The six-stage timeline has keyboard navigation, key events, gates and shareable stage URLs. research-report.html preserves the entire text audit in a readable view; evidence.html keeps all 158 source records. Existing downloads and links remain available. No provider facts, awards, readiness status or benchmark results were promoted by this layout update.\n'
     text += '\nCLASSROOM 50 AND ARIZONA DESIGN | October 13, 2026\nclassroom50.html directly assesses the workable successor, external stewardship, organization control, unchanged Codespaces limits and pre-adoption checks. Source ledger: 163 records; 14 resource comparisons. The shared site and five-slide talk use Arizona navy, red, white and offline open-license typography inspired by infosci.arizona.edu. No adoption, grant, provider benchmark or integration is claimed.\n'
     text += '\nMODAL AND SIMILAR PLATFORMS | October 16, 2026\nOpen serverless-compute.html for nine provider assessments. The ledger now has 181 records and 22 resource comparisons. Modal has conditional monthly compute credits but requires a payment method; no purchases, accounts, provider jobs or grant applications were made. Preserve all zero-cash, ten-hour and ACCESS route constraints.\n'
+    text += '\nREPORT SUMMARY OVERVIEW | October 19, 2026\nreport.html now opens with eight resource/status groups, a selected 2022–2026 loss/reduction history, a separately labeled Colab observation and upcoming OSF restrictions, plus the ACCESS response. All 181 records and detailed research links remain. Provider availability is not classroom readiness.\n'
     start.write_text(text)
     archive = OUT / 'teaching-on-borrowed-compute.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
@@ -74,7 +75,7 @@ def build():
         elif src.suffix == '.zip': target = Path('.')
         else: target = Path('review')
         copy(src, target / src.name)
-    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','compute_program_views.py','compute_classroom50.py','compute_serverless.py','build_compute_pilot_pdfs.py','build_compute_benchmarks.py','build_site.py','check_site.py','package_compute_review.py']:
+    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','compute_program_views.py','compute_classroom50.py','compute_serverless.py','compute_report_overview.py','build_compute_pilot_pdfs.py','build_compute_benchmarks.py','build_site.py','check_site.py','package_compute_review.py']:
         copy(ROOT / 'scripts' / name, Path('review/builders') / name)
     for src in sorted((ROOT / 'output/playwright').iterdir()):
         if src.is_file() and src.name.startswith(('education-compute-','repositories-','service-evidence-','codabench-','federal-','assessment-','pilot-')):

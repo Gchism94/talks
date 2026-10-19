@@ -6,7 +6,8 @@
       "date": "Notice: August 27, 2026 · effective August 28, 2026",
       "quality": "Provider announcement; dated change",
       "claim": "GitHub decommissioned Classroom’s website, APIs, and related services on August 28, 2026. Its May 26 announcement had already stopped new sign-ups. Accounts, repositories, and organizations remain; some Classroom-specific metadata is subject to deletion.",
-      "scope": "This removes a course-management and automation layer. It does not remove GitHub itself or establish that all free Actions or Codespaces benefits have ended."
+      "scope": "This removes a course-management and automation layer. It does not remove GitHub itself or establish that all free Actions or Codespaces benefits have ended.",
+      "rechecked_at": "2026-10-19"
     },
     "colab": {
       "title": "Google Colab Pro for Education · offer closed",
@@ -14,7 +15,8 @@
       "date": "Current FAQ checked October 8, 2026 · effective closure date not stated",
       "quality": "Provider policy; verified status, uncertain change date",
       "claim": "The FAQ says new sign-ups for the free one-year Pro for Education subscription are no longer available. Previously verified users keep the benefit until their one-year mark, unless replaced with a paid personal subscription.",
-      "scope": "Google announced a limited number of these subscriptions on July 18, 2025. The current FAQ establishes withdrawal of the offer, not deletion of education accounts or the end of free Colab. The phrase “quietly pulled” is an interpretation of the FAQ-only notice; the absence of a separate announcement cannot be proved. Free Colab still has variable, non-guaranteed resource limits."
+      "scope": "Google announced a limited number of these subscriptions on July 18, 2025. The current FAQ establishes withdrawal of the offer, not deletion of education accounts or the end of free Colab. The phrase “quietly pulled” is an interpretation of the FAQ-only notice; the absence of a separate announcement cannot be proved. Free Colab still has variable, non-guaranteed resource limits.",
+      "rechecked_at": "2026-10-19"
     },
     "colablaunch": {
       "title": "Google · original education offer",
@@ -30,7 +32,8 @@
       "date": "New-account boundary: July 15, 2025",
       "quality": "Provider documentation with an explicit before/after table",
       "claim": "For accounts created before July 15, 2025, the documented EC2 Free Tier benefit lasted 12 months with usage limits and possible overage billing. Newer accounts receive a credit-based free plan lasting at most six months, ending sooner if credits run out; usage cannot exceed the free-plan limits.",
-      "scope": "This is the general Free Tier used by students, not a verified six-month change to AWS Educate or Academy. The new plan also changes eligible instances, credits, and spending protection. Remaining credits may last up to 12 months if a user upgrades to a paid plan, subject to terms."
+      "scope": "This is the general Free Tier used by students, not a verified six-month change to AWS Educate or Academy. The new plan also changes eligible instances, credits, and spending protection. Remaining credits may last up to 12 months if a user upgrades to a paid plan, subject to terms.",
+      "rechecked_at": "2026-10-19"
     },
     "awsfaq": {
       "title": "AWS · credit and free-plan expiration rules",
@@ -46,7 +49,8 @@
       "date": "Announced August 25, 2022 · effective November 28, 2022",
       "quality": "Provider changelog; dated change",
       "claim": "Heroku ended its free Dynos, Postgres, and Redis plans and began scaling down free dynos and deleting free databases on November 28, 2022.",
-      "scope": "General-purpose hosting and data services used in teaching. This is not evidence that every later Heroku student credit offer ended."
+      "scope": "General-purpose hosting and data services used in teaching. This is not evidence that every later Heroku student credit offer ended.",
+      "rechecked_at": "2026-10-19"
     },
     "replit": {
       "title": "Replit · Teams for Education decommissioned",
@@ -78,7 +82,8 @@
       "date": "Current policy checked October 8, 2026",
       "quality": "Official program policy",
       "claim": "Eligible U.S.-based educators may lead allocations. Educational projects align with individual courses or training periods; they are typically not extended. ACCESS accepts educational uses at all scales with suitable justification. Smaller project requests are reviewed continually; Maximize requests use semiannual review and renewal.",
-      "scope": "A pooled teaching-service proposal needs program/provider agreement about structure and eligible uses. An award does not guarantee future approval, permanent student accounts, synchronous GPU availability, or local support staffing."
+      "scope": "A pooled teaching-service proposal needs program/provider agreement about structure and eligible uses. An award does not guarantee future approval, permanent student accounts, synchronous GPU availability, or local support staffing.",
+      "rechecked_at": "2026-10-19"
     },
     "types": {
       "title": "ACCESS · allocation scale",
@@ -134,7 +139,8 @@
       "claim": "Personal Free includes 120 core-hours and 15 GB-month; Pro includes 180 core-hours and 20 GB-month. On a 2-core machine those amounts mean 60 and 90 active wall-clock hours. Larger machines spend the quota faster.",
       "scope": "Organizations have no included free quota. Stored codespaces consume storage even when stopped. Without a payment method usage stops at the limit; paid overages depend on billing settings. Use personal ownership deliberately; Classroom’s former organization benefit is not assumed.",
       "date": "Rechecked October 13, 2026",
-      "quality": "Official provider / program documentation"
+      "quality": "Official provider / program documentation",
+      "rechecked_at": "2026-10-19"
     },
     "students": {
       "title": "Codespaces · verified student benefit",
@@ -254,7 +260,8 @@
       "date": "Checked October 10, 2026",
       "claim": "GitHub Free still includes unlimited public and private repositories and collaborators for personal accounts and organizations, with limited private-repository features.",
       "scope": "Repository count is not unlimited file storage, build time, premium controls or permanent policy. Classroom shutdown is separate. This counterexample prevents an unsupported claim that free repository hosting universally disappeared.",
-      "quality": "Primary provider / institutional source"
+      "quality": "Primary provider / institutional source",
+      "rechecked_at": "2026-10-19"
     },
     "gitlabedu": {
       "title": "GitLab for Education · viable institutional bridge",
@@ -297,7 +304,8 @@
       "scope": "Future effective dates fall outside the five-year historical window. OSF Registries and community-run preprint workflows continue. This is withdrawal of an active collaboration/file-storage workspace, not immediate deletion of all OSF content. No private-project deletion date is established.",
       "category": "Library repositories",
       "status": "Announced upcoming withdrawal",
-      "checked_at": "2026-10-10"
+      "checked_at": "2026-10-10",
+      "rechecked_at": "2026-10-19"
     },
     "osfpreprints": {
       "title": "OSF · generalist preprint suspension",
@@ -385,7 +393,8 @@
       "scope": "A surviving institutional route. Public deposit requires suitable rights and content; this is not a private assignment-submission system or live application backend. No recent reduction was verified.",
       "category": "Library repositories",
       "status": "Surviving campus route",
-      "checked_at": "2026-10-10"
+      "checked_at": "2026-10-10",
+      "rechecked_at": "2026-10-19"
     },
     "googlepool": {
       "title": "Google Workspace Education · pooled storage",
@@ -451,7 +460,8 @@
       "scope": "An explicit duration reduction affecting new free databases. A 30-day database cannot cover a normal semester without migration or paid continuation. It does not establish that free web hosting ended.",
       "category": "Databases",
       "status": "Free lifetime reduced",
-      "checked_at": "2026-10-10"
+      "checked_at": "2026-10-10",
+      "rechecked_at": "2026-10-19"
     },
     "renderfree": {
       "title": "Render · current free hosting and database limits",
@@ -1505,7 +1515,8 @@
       "date": "Checked October 16, 2026",
       "quality": "Primary provider documentation; direct pricing/terms where available",
       "claim": "$30 of compute per workspace per month on Starter; up to three seats and ten concurrent GPUs. Functions, Sandboxes and Notebooks use CPU/memory/GPU billing; Shared Endpoints tokens are excluded from included compute, effective September 1, 2026.",
-      "scope": "Free subscription does not mean unlimited compute. GPU, CPU and memory share the allowance; startup/warm time, region/execution multipliers and other charges matter. Workspace concurrency is not reserved capacity or a class roster."
+      "scope": "Free subscription does not mean unlimited compute. GPU, CPU and memory share the allowance; startup/warm time, region/execution multipliers and other charges matter. Workspace concurrency is not reserved capacity or a class roster.",
+      "rechecked_at": "2026-10-19"
     },
     "modalbilling": {
       "title": "Modal billing: payment method required",
@@ -1513,7 +1524,8 @@
       "date": "Checked October 16, 2026",
       "quality": "Primary provider documentation; direct pricing/terms where available",
       "claim": "A payment method is required to use Modal. Usage above applicable credits and subscription fees can be automatically charged.",
-      "scope": "Not a no-card classroom default for this zero-cash program. An approved institutional payment arrangement or confirmed grant exception must precede any canary; no personal or student card requirement is proposed."
+      "scope": "Not a no-card classroom default for this zero-cash program. An approved institutional payment arrangement or confirmed grant exception must precede any canary; no personal or student card requirement is proposed.",
+      "rechecked_at": "2026-10-19"
     },
     "modalbudgets": {
       "title": "Modal budgets and out-of-pocket spend limits",
@@ -2691,7 +2703,7 @@
     ],
     "proposal": "Pilot a permitted Codabench evaluation queue backed by reviewed ACCESS capacity; isolated workers, scheduling, operations, storage, backups and grade exports remain separate requirements."
   },
-  "updated_at": "2026-10-16",
+  "updated_at": "2026-10-19",
   "federal_platform_map": [
     {
       "id": "access",
@@ -4029,5 +4041,290 @@
     "source_records": 181,
     "resource_comparisons": 22,
     "scope": "Documentation and current-account eligibility boundaries, not a provider benchmark or cloud adoption."
+  },
+  "report_overview": {
+    "updated": "2026-10-19",
+    "core_statement": "What we have previously relied on can no longer be guaranteed",
+    "interpretation": "Free resources still support useful teaching. The selected history shows repeated withdrawal of classroom tools, shorter free-use windows, tighter team/storage limits and more metered or conditional access. A previous semester’s setup is no longer a sufficient continuity plan.",
+    "boundary": "This is an interpretation of selected documented changes, not a census of providers or a measured decline in total free compute. GitHub Free repositories and base free Colab remain available. New and surviving options coexist with the losses.",
+    "readiness": "Provider availability is not classroom readiness. All 13 admission checks remain planned; no provider benchmark, allocation award or classroom deployment is established here.",
+    "available": [
+      {
+        "id": "cpu",
+        "title": "CPU notebooks and development",
+        "status": "Available with limits",
+        "status_key": "bounded",
+        "names": "GitHub Codespaces · Binder",
+        "fit": "Code, data cleaning, small analyses and reproducible notebook exercises.",
+        "boundary": "Codespaces has monthly personal-account compute/storage limits; Binder uses shared, temporary sessions. Neither reserves a class.",
+        "sources": [
+          "codespaces",
+          "binder"
+        ],
+        "detail": "classroom-resources.html"
+      },
+      {
+        "id": "gpu",
+        "title": "Free GPU experiments",
+        "status": "Available with limits",
+        "status_key": "bounded",
+        "names": "Kaggle · free Colab · Paperspace · ZeroGPU",
+        "fit": "Small DS/MLIS GPU benchmarks or short model demonstrations, matched to each platform.",
+        "boundary": "Quotas, queues and hardware vary. Paperspace free notebooks are public; ZeroGPU is for bounded demos. Provider runs remain pending.",
+        "sources": [
+          "kaggle",
+          "colab",
+          "paperspacevisibility",
+          "zerogpu"
+        ],
+        "detail": "gpu-benchmark.html"
+      },
+      {
+        "id": "workflow",
+        "title": "Assignments and evaluation",
+        "status": "Available; adoption untested",
+        "status_key": "bounded",
+        "names": "Classroom 50 · Codabench",
+        "fit": "Assignment distribution, submissions, scoring and benchmark leaderboards.",
+        "boundary": "Classroom 50 is externally maintained and adds no Codespaces hours. Codabench GPU/code workers need separately supplied compute.",
+        "sources": [
+          "classroom50",
+          "classroom50requirements",
+          "codabench"
+        ],
+        "detail": "classroom50.html"
+      },
+      {
+        "id": "credits",
+        "title": "Commercial compute credits",
+        "status": "Conditional / promotional",
+        "status_key": "conditional",
+        "names": "Modal · Lightning AI",
+        "fit": "Controlled instructor experiments within confirmed credits and billing arrangements.",
+        "boundary": "Modal requires a payment method and limits Starter to three seats. Lightning GPU credits vary. Neither is an approved zero-cash class default.",
+        "sources": [
+          "modalpricing",
+          "modalbilling",
+          "lightningbilling"
+        ],
+        "detail": "serverless-compute.html"
+      },
+      {
+        "id": "allocation",
+        "title": "The proposed classroom baseline",
+        "status": "Request / award pending",
+        "status_key": "proposed",
+        "names": "ACCESS CPU + GPU · NAIRR Classroom",
+        "fit": "A large measured ACCESS request; additional eligible instructor-led AI pilots through NAIRR.",
+        "boundary": "No award or class capacity is secured. CloudBank is conditional through ACCESS; campus AWS is only for CPU component testing.",
+        "sources": [
+          "access",
+          "nairr",
+          "assesscloudbank"
+        ],
+        "detail": "access-request.html"
+      },
+      {
+        "id": "shared",
+        "title": "Other federally supported routes",
+        "status": "Eligibility and fit to confirm",
+        "status_key": "conditional",
+        "names": "OSPool / OSG · NRP / Nautilus · MESA / CyVerse",
+        "fit": "High-throughput jobs, shared notebooks/GPUs and domain data services, depending on the platform.",
+        "boundary": "Shared scheduling, onboarding and operating duties differ. MESA funding does not establish PATh eligibility or a new GPU entitlement.",
+        "sources": [
+          "fedospool",
+          "assessnrpedu",
+          "fedmesa",
+          "assesspathelig"
+        ],
+        "detail": "federal-compute.html"
+      },
+      {
+        "id": "repositories",
+        "title": "Repositories and scholarly outputs",
+        "status": "Surviving routes; distinct roles",
+        "status_key": "bounded",
+        "names": "GitHub Free · GitLab Education · Campus Repository · Zenodo",
+        "fit": "Versioned course code, eligible education collaboration, or rights-cleared scholarly deposits.",
+        "boundary": "GitHub retains unlimited repository counts; features/storage remain bounded. Education eligibility and public-deposit rules apply. A live Git repo is not independent preservation.",
+        "sources": [
+          "githubfree",
+          "gitlabedu",
+          "campusrepository",
+          "zenodoquota"
+        ],
+        "detail": "repository-plan.html"
+      },
+      {
+        "id": "hosting",
+        "title": "Hosting and small databases",
+        "status": "Available with limits",
+        "status_key": "bounded",
+        "names": "GitHub / Cloudflare Pages · D1 · Neon · Supabase",
+        "fit": "Static course sites, digital exhibits and bounded database/web assignments.",
+        "boundary": "Static hosting does not supply a general backend. Database quotas, idle behavior, recovery windows and exports need review; working storage is not an archive.",
+        "sources": [
+          "pageslimits",
+          "cloudflarepages",
+          "d1limits",
+          "neonfree",
+          "supabasefree"
+        ],
+        "detail": "evidence.html#options"
+      }
+    ],
+    "paid_note": "Beam, Cerebrium, Runpod, Replicate and Hugging Face Inference Providers have paid-usage or limited-trial boundaries; they are not a dependable free baseline. Saturn’s advertised free offer remains unconfirmed against current account access.",
+    "years": [
+      {
+        "year": "2022",
+        "events": [
+          {
+            "date": "Nov 28",
+            "title": "Heroku free hosting and databases end",
+            "before": "Free Dynos / Postgres / Redis",
+            "after": "Free plans withdrawn",
+            "sources": [
+              "heroku"
+            ]
+          },
+          {
+            "date": "Dec 28 · new private groups",
+            "title": "GitLab constrains private Free groups",
+            "before": "Private class collaboration",
+            "after": "Five-user namespace limit; education exceptions",
+            "sources": [
+              "gitlabrollout",
+              "gitlablimits"
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2023",
+        "events": [
+          {
+            "date": "Nov 15",
+            "title": "Replit stops new education teams",
+            "before": "Create a new classroom team",
+            "after": "New Teams for Education blocked",
+            "sources": [
+              "replit"
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2024",
+        "events": [
+          {
+            "date": "May 20 · new free databases",
+            "title": "Render shortens free Postgres lifetime",
+            "before": "90 days",
+            "after": "30 days",
+            "sources": [
+              "renderexpiry"
+            ]
+          },
+          {
+            "date": "June 17 · new customers",
+            "title": "Google source hosting closes onboarding",
+            "before": "New Cloud Source Repositories customers",
+            "after": "New access closed; existing customers retained",
+            "sources": [
+              "cloudsource"
+            ]
+          },
+          {
+            "date": "Aug 1",
+            "title": "Replit removes Teams for Education",
+            "before": "Existing education product",
+            "after": "Education product withdrawn",
+            "sources": [
+              "replit"
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "events": [
+          {
+            "date": "May 29 · revised enforcement",
+            "title": "Bitbucket limits Free workspace storage",
+            "before": "Free workspace Git storage",
+            "after": "1 GB aggregate; over-limit read-only",
+            "sources": [
+              "bitbucket",
+              "bitbucketpolicy"
+            ]
+          },
+          {
+            "date": "July 8",
+            "title": "Glitch ends project hosting",
+            "before": "Hosted student apps",
+            "after": "Hosting withdrawn",
+            "sources": [
+              "glitch"
+            ]
+          },
+          {
+            "date": "July 15 · new general Free Tier",
+            "title": "AWS changes the free-plan window",
+            "before": "Legacy 12-month limited benefits",
+            "after": "Credit-based free plan: at most six months",
+            "sources": [
+              "aws",
+              "awsfaq"
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "events": [
+          {
+            "date": "Aug 28",
+            "title": "GitHub Classroom is decommissioned",
+            "before": "Classroom website, APIs and automation",
+            "after": "Classroom service ended; Git repos remain",
+            "sources": [
+              "github"
+            ]
+          }
+        ]
+      }
+    ],
+    "observation": {
+      "title": "Colab Pro for Education: new sign-ups closed",
+      "label": "Change date unknown · observed Oct 8, rechecked Oct 19",
+      "body": "The free one-year education offer no longer accepts new sign-ups. Existing verified subscriptions can continue to their one-year mark. Base free Colab remains; this is not deletion of education accounts.",
+      "sources": [
+        "colab"
+      ]
+    },
+    "upcoming": {
+      "title": "OSF Projects: announced future restrictions",
+      "label": "Upcoming · not yet effective on Oct 19, 2026",
+      "body": "New project/component creation is scheduled to stop November 16, 2026; projects are scheduled to become read-only after February 19, 2027. OSF Registries and community preprints are distinct; existing public projects remain accessible.",
+      "sources": [
+        "osfprojects"
+      ]
+    },
+    "next_step": "Benchmark CPU components on campus AWS and GPUs on the bounded free routes; size the ACCESS CPU + GPU request; rehearse support, recovery and student exports before a two-course pilot. Greg’s work stays inside ten hours/week with zero cash budget; necessary paid needs depend on confirmed eligible grant funding.",
+    "rechecked_source_keys": [
+      "github",
+      "colab",
+      "aws",
+      "heroku",
+      "renderexpiry",
+      "osfprojects",
+      "codespaces",
+      "githubfree",
+      "modalpricing",
+      "modalbilling",
+      "access",
+      "campusrepository"
+    ]
   }
 }

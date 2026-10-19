@@ -35,7 +35,7 @@ def build():
                    for r in data['service_continuity_plan'])
     ledger = ''.join('<details id="' + esc(k) + '"><summary>' + esc(e['title']) +
                      '</summary><p class="date">' + esc(e['date']) + ' · ' + esc(e['quality']) +
-                     '</p><p>' + esc(e['claim']) + '</p><p><strong>Scope:</strong> ' + esc(e['scope']) +
+                     '</p>' + ('<p class="date">Rechecked ' + esc(e['rechecked_at']) + ' · documentation only</p>' if e.get('rechecked_at') else '') + '<p>' + esc(e['claim']) + '</p><p><strong>Scope:</strong> ' + esc(e['scope']) +
                      '</p><p><a href="' + esc(e['url'], quote=True) +
                      '" target="_blank" rel="noopener noreferrer">' + esc(e.get('link_label', 'Read source ↗')) + '</a></p></details>'
                      for k, e in evidence.items())

@@ -54,3 +54,6 @@ The October 13 Classroom 50 assessment is at [classroom50.html](talk/classroom50
 
 
 The October 16 [Modal and similar-platform comparison](talk/serverless-compute.html) covers nine providers, recurring credits versus trials/paid usage, billing/account requirements, DS/MLIS fits and unresolved offers. Current ledger: 181 records; resource catalog: 22 comparisons. Modal remains conditional because of payment and three-seat limits; ACCESS and the zero-cash/ten-hour constraints remain. See `modalComputeExtension` in validation.json for verification/publication status.
+
+
+The October 19 [main report overview](talk/report.html) summarizes available resources and status, ten selected historical changes, the separately labeled Colab observation and upcoming OSF restrictions, and the ACCESS response. It retains links to the complete research and 181-source evidence ledger. Provider availability is not classroom readiness; see `reportOverviewExtension` for checks and publication.
