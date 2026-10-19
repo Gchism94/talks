@@ -2,7 +2,7 @@
 """Publish the concise compute guide with pinned Zensical; retain evidence and legacy URLs.
 Run after the canonical compute builders. No provider calls or private input data.
 """
-import argparse,html,json,shutil,subprocess,sys
+import argparse,html,json,shutil,subprocess,sys,hashlib
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent.parent
 SOURCE=ROOT/'site/compute-guide';PUBLIC=ROOT/'docs/education-compute'
@@ -318,7 +318,7 @@ https://pypi.org/pypi/zensical/json
         form+='<fieldset><legend>'+title+'</legend><div class="needs-grid">'
         for key,label,hint,minimum,step in fields:form+='<label>'+E(label)+'<input required type="number" name="'+key+'" min="'+str(minimum)+'" '+('max="100" ' if key=='allowance' else '')+'step="'+str(step)+'" value="'+str(defaults[key])+'"><small>'+E(hint)+'</small></label>'
         form+='</div></fieldset>'+('</details>' if title.startswith('3.') else '')
-    form+='''<div class="needs-controls"><button class="guide-button" type="submit">Update scenario</button></div></form><p id="needsError" class="needs-error" role="alert"></p><section id="needsResults" class="needs-results" hidden><p class="guide-tag" id="needsScope"></p><h2>Your planning envelope</h2><div class="needs-metrics"><div class="needs-metric"><strong id="cpuTotal"></strong><span>CPU core-hours</span></div><div class="needs-metric"><strong id="gpuTotal"></strong><span>GPU device-hours</span></div><div class="needs-metric"><strong id="storageTotal"></strong><span>GiB active + independent copies</span></div></div><p id="peakSummary"></p><p id="storageSummary"></p><p id="needsFormula"></p><h3>Route to assess</h3><p id="needsRoute"></p><h3>Checks still required</h3><ul id="needsChecks"></ul><div class="guide-actions needs-controls"><button type="button" class="guide-button" data-needs-export="text" disabled>Download brief</button><button type="button" class="needs-secondary" data-needs-export="json" disabled>Download JSON</button><button type="button" class="needs-secondary" id="printNeeds">Print results</button></div></section>'''
+    form+='''<div class="needs-controls"><button class="guide-button" id="updateScenario" type="submit" disabled>Update scenario</button></div></form><p id="needsError" class="needs-error" role="alert"></p><section id="needsResults" class="needs-results" hidden><p class="guide-tag" id="needsScope"></p><h2>Your planning envelope</h2><div class="needs-metrics"><div class="needs-metric"><strong id="cpuTotal"></strong><span>CPU core-hours</span></div><div class="needs-metric"><strong id="gpuTotal"></strong><span>GPU device-hours</span></div><div class="needs-metric"><strong id="storageTotal"></strong><span>GiB active + independent copies</span></div></div><p id="peakSummary"></p><p id="storageSummary"></p><p id="needsFormula"></p><h3>Route to assess</h3><p id="needsRoute"></p><h3>Checks still required</h3><ul id="needsChecks"></ul><div class="guide-actions needs-controls"><button type="button" class="guide-button" data-needs-export="text" disabled>Download brief</button><button type="button" class="needs-secondary" data-needs-export="json" disabled>Download JSON</button><button type="button" class="needs-secondary" id="printNeeds">Print results</button></div></section>'''
     write('needs.md','Scope your computing needs','''Estimate a research project or classroom workload before asking for resources. Numbers are editable examples, not measured demand, provider credits or an award. **No data is uploaded or saved by this tool.** Enter counts and requirements only, never private records.
 
 <div class="guide-actions needs-controls"><button class="needs-secondary" type="button" data-preset="classroom">Load 40-student example</button><button class="needs-secondary" type="button" data-preset="research">Load research example</button></div><p id="presetStatus" role="status">40-student example loaded; edit the assumptions below.</p><p id="needsQuick" class="guide-note" role="status"></p>
@@ -332,6 +332,8 @@ https://pypi.org/pypi/zensical/json
 This is one representative workload envelope. For different CPU/GPU groups or multiple courses, export separate scenarios and review overlap before adding totals. Continuous services need uptime-based sizing beyond this per-run model. Storage capacity does not establish throughput, preservation or a backup service.
 
 The tool follows the benchmark helper’s runtime × workload × resource × allowance arithmetic. Use [measured component results](gpu-benchmark.html) and `size_access.py` for the next sizing step, then confirm provider units, target replay and [classroom checks](readiness.html). Neither the tool nor a selected evidence basis makes a request submission-ready.''')
+    from compute_working_group import build as build_working_group
+    build_working_group(ROOT,GENERATED,PUBLIC,write)
     subprocess.run([executable,'build','--clean','-f',str(GENERATED/'zensical.toml')],check=True,cwd=GENERATED)
     # Overlay only this talk's generated HTML/assets; preserve deck, downloads and ledger.
     for src in BUILD.rglob('*'):
@@ -340,6 +342,10 @@ The tool follows the benchmark helper’s runtime × workload × resource × all
             if src.suffix=='.html':
                 text=src.read_text().replace('/talks/education-compute/', '')
                 text=text.replace('https://unpkg.com/iframe-worker/shim','guide-assets/vendor/iframe-worker-1.0.4.js')
+                # Version custom assets so returning visitors receive matching controls.
+                for name in ['guide.css','guide.js','needs.js','working-needs.js']:
+                    revision=hashlib.sha256((SOURCE/'assets'/name).read_bytes()).hexdigest()[:12]
+                    text=text.replace('guide-assets/'+name+'\"','guide-assets/'+name+'?v='+revision+'\"')
                 text=text.replace('href=""', 'href="program.html"')
                 text=text.replace('<article class="md-content__inner md-typeset">','<article id="program-content" class="md-content__inner md-typeset">')
                 icons='<link rel="icon" href="../assets/favicons/talk.svg" type="image/svg+xml"><link rel="icon" href="../assets/favicons/talk-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/favicons/talk-180.png" sizes="180x180">'

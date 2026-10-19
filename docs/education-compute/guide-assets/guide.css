@@ -5,3 +5,12 @@ html{scroll-behavior:smooth}.md-grid{max-width:1440px}.md-header{box-shadow:none
 @media(max-width:420px){.needs-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 @media print{.md-header,.md-tabs,.md-sidebar,.md-footer,.md-top,.guide-actions,.guide-filter,.needs-controls{display:none!important}.md-content{margin:0!important}.md-typeset{font-size:10pt}.md-typeset h1{font-size:26pt}.needs-form{display:none}.guide-directory{display:block}.needs-results{background:white;padding:0}.guide-resource,.guide-step{break-inside:avoid}.md-typeset details{display:block}.md-typeset details>*{display:block!important}.guide-audit pre{font-size:8pt}}
+
+/* Working-group discovery stays readable before technical sizing. */
+.needs-form textarea{display:block;width:100%;border:1px solid #8995a5;background:#fff;color:#172230;padding:.6rem;font:inherit;font-size:.78rem;line-height:1.5;resize:vertical;margin:.4rem 0 1rem;min-height:75px}.working-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}.working-checks label{display:flex;align-items:flex-start;gap:.55rem;padding:.5rem;border:1px solid #d4dbe3;background:white;font-size:.74rem}.working-checks input{display:inline-block;min-height:18px;width:18px;flex:0 0 18px;margin:.1rem 0;accent-color:#0c234b}.guide-required{font-size:.66rem;font-weight:400;color:#536174}.needs-form details{margin-top:1.5rem}.needs-form details label{display:block}.needs-form details .needs-grid label{display:block}.guide-note a{font-weight:650}#workingResultsTitle:focus{outline:0}#workingStatus{font-size:.75rem;color:#465569}.md-header__topic{font-size:.85rem}.guide-resource details:target{outline:3px solid #1e5288}
+@media(max-width:600px){.working-checks{grid-template-columns:1fr}.md-header__topic{font-size:.74rem}}
+@media print{#workingNeeds,.guide-actions,#workingStatus{display:none!important}#workingResults{break-inside:avoid}.working-checks{display:block}}
+
+[role=button]:focus-visible{outline:3px solid #1e5288;outline-offset:3px}
+
+button:disabled{opacity:.55;cursor:not-allowed!important}

@@ -2,41 +2,42 @@
 hide:
   - toc
 ---
-<div class="guide-eyebrow">RESEARCH + CLASSROOMS / INFORMATION SCIENCE</div>
+<div class="guide-eyebrow">COLLEGE OF INFORMATION SCIENCE / FALL 2026–SPRING 2027</div>
 
-# Find the compute. Plan for continuity.
+# AI Resources Working Group
 
-<div class="guide-intro">A practical guide to computing, storage and teaching tools. Find a route, estimate your needs and see what must be checked before relying on it.</div>
+<div class="guide-intro">Understand what we have. Identify what we need. Find practical, sustainable ways to support AI research and instruction.</div>
 
-<div class="guide-actions"><a class="guide-button" href="needs.html">Scope your needs →</a><a href="resource-library.html">Find a resource →</a><a href="report.html">Read the evidence →</a></div>
+<div class="guide-actions"><a class="guide-button" href="inventory.html">Explore the inventory →</a><a href="needs.html">Describe a need →</a><a href="deliverables.html">Review the deliverables →</a></div>
 
-## The problem {#problem}
+## Our focus
 
-**What we have previously relied on can no longer be guaranteed**
+AI research and teaching depend on infrastructure, tools, data and people. The group considers **hardware, software, data, cloud services, research software engineers (RSEs), technical support, collaboration and shared infrastructure** across the college and university.
 
-Free tools still help. But classroom services close, offers expire, storage limits tighten and free GPUs do not reserve capacity for a course. Check the whole workflow each term.
+Growing demand, rising costs and uncertain funding make access and sustainable support important planning questions. Our focus is the needs, capabilities and perspectives of Information Science faculty and students.
 
-## The proposed solution {#solution}
+<div class="guide-route"><div><span>01 / LANDSCAPE</span><strong>Understand current resources</strong><p>Identify what is available, who can use it, and how it is supported and funded.</p></div><div><span>02 / NEEDS</span><strong>Identify gaps and opportunities</strong><p>Describe current and anticipated work, barriers and ways to improve use of what exists.</p></div><div><span>03 / APPROACHES</span><strong>Explore sustainable options</strong><p>Compare technologies, shared services, partnerships, staffing models and innovation.</p></div></div>
 
-Use a shared **ACCESS CPU + GPU allocation** for the classroom baseline, supported by measured workloads, portable environments and a recovery plan. Add eligible **NAIRR Classroom** pilots where they fit.
+## What we will produce
 
-<div class="guide-route"><div><span>01 / MEASURE</span><strong>Test the components</strong><p>Campus AWS for CPU tests. Kaggle or free Colab for GPU benchmarks.</p></div><div><span>02 / REQUEST</span><strong>Size ACCESS CPU + GPU</strong><p>Use measured demand, then confirm resource terms and the award.</p></div><div><span>03 / REHEARSE</span><strong>Prove the class workflow</strong><p>Replay on ACCESS. Test concurrent use, accessibility and recovery.</p></div></div>
-
-<span id="plan"></span>
-
-[Follow the staged plan →](timeline.html)
-
-## What is ready today?
-
-| Ready to use as a planning resource | Still pending |
+| Deliverable | Working draft |
 | --- | --- |
-| Resource comparisons, runnable benchmark code, request drafts and this needs tool | Provider measurements, allocation award, class load tests and all 13 admission checks |
+| [Resource inventory](inventory.html) | Access, costs, support, funding and limitations |
+| [Needs assessment](needs-assessment.html) | Current and emerging needs, significant gaps and barriers |
+| [Portfolio of approaches](approaches.html) | Practical options for utilization, collaboration and innovation |
+| [Recommendations](recommendations.html) | College actions and opportunities needing university participation |
 
-**Capacity:** Greg has 10 hours/week across all work, shared with EduCloud. Cash budget: $0. TA and course-lead hours are separate. Paid needs require confirmed eligible grant support.
+**Timing:** preliminary drafts of all four items by the end of the Fall 2026 semester; refinement and intra-college circulation early in Spring 2027. [See milestones →](timeline.html)
 
-## Find your next step
+## Use this site
 
-- **Administrators:** review the [plan](timeline.html), [time commitments](budget.html) and [admission checks](readiness.html).
-- **Faculty and researchers:** [scope a workload](needs.html), then [compare resource routes](resource-library.html).
-- **Course leads:** review the [DS/MLIS pilot](pilot-plan.html) and [benchmarks](gpu-benchmark.html).
-- **Reviewers:** the [report and source evidence](report.html) preserve the findings, dates and limits.
+- **Faculty and students:** [describe your activity and barriers](needs.html); technical estimates are optional.
+- **Resource owners and support staff:** [review inventory entries](inventory.html) and identify corrections or missing capacity.
+- **Working-group members:** use the [working-session guide](working-session.html) and [draft deliverables](deliverables.html).
+- **College administrators:** review [proposed actions and university dependencies](recommendations.html).
+
+<div class="guide-note"><strong>Working drafts.</strong> Public service documentation is a starting point, not confirmation of college access or spare capacity. No college-wide needs survey or group endorsement is claimed. The needs tool prepares a local brief; it does not submit or collect responses.</div>
+
+## Supporting evidence and pilots
+
+The [provider-change report](report.html) explains the continuity risks behind “What we have previously relied on can no longer be guaranteed.” The [DS/MLIS compute pilot](pilot-plan.html), ACCESS request and benchmarks are supporting proposals, not the working group’s predetermined solution.

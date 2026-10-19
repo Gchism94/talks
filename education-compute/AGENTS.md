@@ -239,3 +239,47 @@ MIT license are now vendored under the guide assets. Final file-protocol tests
 passed search, both needs presets, local fonts, 181 source records and five slides
 with all HTTP/HTTPS blocked and zero remote requests. Exported HTML whitespace
 is normalized; source/reference anchors and all publication favicon variants persist.
+
+## AI Resources Working Group usability and scope — October 19, 2026
+
+The site now leads with the College of Information Science working-group brief,
+not a predetermined compute service. Main paths: `program.html`, `inventory.html`,
+`needs.html`, `needs-assessment.html`, `approaches.html`, `recommendations.html`,
+`deliverables.html`, `timeline.html` and `working-session.html`. All four deliverables
+aim for preliminary drafts by end of Fall 2026, with refinement and intra-college
+circulation early Spring 2027. No exact meeting dates or university schedule is
+invented. Working drafts are not endorsed recommendations or collected findings.
+
+Canonical scope/inventory: `../site/compute-guide/working-group.json`; curated pages
+are under `../site/compute-guide/pages/`. `../scripts/compute_working_group.py` runs
+inside the final guide build, reads those sources, creates downloadable CSV/JSON/
+text templates and re-scopes the earlier material as supporting compute case studies.
+The original five-slide talk and 181-record compute-history ledger remain intact.
+Six new campus public source checks are separate from that historical source count;
+see `working-group-usability/campus-source-checks.json` in the local research evidence.
+College-owned hardware, agreements and RSE/support capacity are explicitly pending
+inventory; external offerings are not newly rechecked or assumed available.
+
+`needs.html` prepares a local qualitative brief for hardware, software, data, cloud,
+RSE, support/training and collaboration needs. People and hours may be unknown;
+zero hours differs from unknown. Examples remain labelled in exports; edits disable
+stale downloads. No submission backend, response persistence, participant totals,
+private roster or internal personnel data is added. The group must agree its own
+approved university collection channel and deliverable owner roles. Do not infer a
+college-wide survey, funding award, staff availability or demand total from templates.
+
+`compute-estimator.html` retains optional planning arithmetic; its general context
+does not apply Greg's ten-hour weekly limit to all faculty or the college. The
+legacy DS/MLIS pilot at `pilot-plan.html`/`pilot-stages.html` still has zero cash,
+Greg's ten total hours/week shared with EduCloud, separate TA/lead effort, an
+unfilled independent backup and all 13 classroom gates planned. Campus AWS remains
+component testing only for that pilot; ACCESS CPU+GPU and NAIRR are still conditional.
+The older non-cyber degree comparison does not narrow the working-group remit.
+
+Usability repairs include keyboard-operable menu controls, accurate expanded state,
+a mobile menu that starts at the root, a qualitative-first brief and optional
+technical sizing. A keyboard double-toggle was caught and fixed by preventing the
+custom handler from also reaching the theme's global handler. Retain this boundary
+when modifying navigation. Final QA/release is `workingGroupUsabilityExtension` in
+validation.json. Preserve the unrelated ant presenter branch; publish only through
+the attached managed worktree. Keep the full private review bundle local.

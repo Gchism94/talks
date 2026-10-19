@@ -1,18 +1,19 @@
 [project]
-site_name = "Compute Guide"
-site_description = "Practical computing resources for research and classrooms: choices, estimates, plans and evidence."
+site_name = "AI Resources Working Group"
+site_description = "College of Information Science AI resources: inventory, needs, approaches and recommendations."
 site_url = "https://gchism94.github.io/talks/education-compute/"
 docs_dir = "pages"
 site_dir = "_site"
 use_directory_urls = false
 extra_css = ["guide-assets/guide.css"]
-extra_javascript = ["guide-assets/needs.js", "guide-assets/guide.js"]
-copyright = "Greg Chism · UArizona Information Science · Planning proposal, October 2026"
+extra_javascript = ["guide-assets/needs.js", "guide-assets/guide.js", "guide-assets/working-needs.js"]
+copyright = "Greg Chism · UArizona Information Science · Working drafts · Fall 2026–Spring 2027"
 nav = [
-  { "Start here" = [ { "Overview" = "program.md" }, { "Scope your needs" = "needs.md" } ] },
-  { "Resources" = [ { "Find a resource" = "resource-library.md" }, { "Classroom platforms" = "classroom-resources.md" }, { "Federal platforms" = "federal-compute.md" }, { "By degree" = "degree-options.md" }, { "Cloud credits & GPUs" = "serverless-compute.md" }, { "Classroom 50" = "classroom50.md" }, { "Repositories & preservation" = "repository-plan.md" } ] },
-  { "Plan" = [ { "Stages & milestones" = "timeline.md" }, { "Two-course pilot" = "pilot-plan.md" }, { "Run benchmarks" = "gpu-benchmark.md" }, { "ACCESS request" = "access-request.md" }, { "Time & funding" = "budget.md" }, { "Before class" = "readiness.md" }, { "Route assessment" = "classroom-assessment.md" } ] },
-  { "Report" = [ { "Findings & trends" = "report.md" }, { "Full research report" = "research-report.md" }, { "Source evidence" = "evidence.md" }, { "Publishing options" = "publishing.md" }, { "Five-slide talk" = "index.html" } ] },
+  { "Working group" = [ { "Overview" = "program.md" }, { "Four deliverables" = "deliverables.md" }, { "Milestones" = "timeline.md" }, { "Working sessions" = "working-session.md" } ] },
+  { "Resources" = [ { "Resource inventory" = "inventory.md" }, { "Platform directory" = "resource-library.md" }, { "Federal platforms" = "federal-compute.md" }, { "Cloud credits & GPUs" = "serverless-compute.md" }, { "Repositories & preservation" = "repository-plan.md" } ] },
+  { "Needs" = [ { "Describe a need" = "needs.md" }, { "Needs assessment" = "needs-assessment.md" }, { "Optional compute estimate" = "compute-estimator.md" } ] },
+  { "Approaches" = [ { "Portfolio" = "approaches.md" }, { "Recommendations" = "recommendations.md" } ] },
+  { "Evidence & pilots" = [ { "Provider changes" = "report.md" }, { "Full research report" = "research-report.md" }, { "Source evidence" = "evidence.md" }, { "DS/MLIS pilot" = "pilot-plan.md" }, { "Compute pilot stages" = "pilot-stages.md" }, { "Run benchmarks" = "gpu-benchmark.md" }, { "ACCESS request" = "access-request.md" }, { "Pilot hours & funding" = "budget.md" }, { "Before class" = "readiness.md" }, { "Classroom platforms" = "classroom-resources.md" }, { "Classroom 50" = "classroom50.md" }, { "Options by degree" = "degree-options.md" }, { "Publishing options" = "publishing.md" }, { "Five-slide talk" = "index.html" } ] },
 ]
 [project.theme]
 variant = "classic"

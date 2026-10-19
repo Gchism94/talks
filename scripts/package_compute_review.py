@@ -42,6 +42,7 @@ def build():
     text += '\nMODAL AND SIMILAR PLATFORMS | October 16, 2026\nOpen serverless-compute.html for nine provider assessments. The ledger now has 181 records and 22 resource comparisons. Modal has conditional monthly compute credits but requires a payment method; no purchases, accounts, provider jobs or grant applications were made. Preserve all zero-cash, ten-hour and ACCESS route constraints.\n'
     text += '\nREPORT SUMMARY OVERVIEW | October 19, 2026\nreport.html now opens with eight resource/status groups, a selected 2022–2026 loss/reduction history, a separately labeled Colab observation and upcoming OSF restrictions, plus the ACCESS response. All 181 records and detailed research links remain. Provider availability is not classroom readiness.\n'
     text += '\nCONCISE COMPUTE GUIDE | October 19, 2026\nprogram.html now uses a pinned Zensical guide with task-based navigation and client-side search. needs.html estimates research/classroom CPU core-hours, GPU device-hours, peak demand, storage and support, with text/JSON exports. publishing.html compares Zensical, Starlight and Quarto. Estimates are not measurements or awards. All 181 records and the five-slide deck remain.\n'
+    text += '\nAI RESOURCES WORKING GROUP | October 19, 2026\nStart with program.html, inventory.html and deliverables.html. needs.html prepares a local qualitative brief; compute-estimator.html is optional. Draft inventory, needs framework, approaches, recommendations, working-session guide and Fall 2026 / early Spring 2027 milestones are included. CSV/JSON/text downloads do not contain collected responses or approved commitments. The original compute pilot and its constraints remain separate case-study material.\n'
     start.write_text(text)
     archive = OUT / 'teaching-on-borrowed-compute.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
@@ -78,7 +79,7 @@ def build():
         elif src.suffix == '.zip': target = Path('.')
         else: target = Path('review')
         copy(src, target / src.name)
-    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','compute_program_views.py','compute_classroom50.py','compute_serverless.py','compute_report_overview.py','build_compute_guide.py','test_compute_needs.cjs','build_compute_pilot_pdfs.py','build_compute_benchmarks.py','build_site.py','check_site.py','package_compute_review.py']:
+    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','compute_program_views.py','compute_classroom50.py','compute_serverless.py','compute_report_overview.py','build_compute_guide.py','compute_working_group.py','test_working_group_needs.cjs','test_compute_needs.cjs','build_compute_pilot_pdfs.py','build_compute_benchmarks.py','build_site.py','check_site.py','package_compute_review.py']:
         copy(ROOT / 'scripts' / name, Path('review/builders') / name)
     for src in sorted((ROOT / 'output/playwright').iterdir()):
         if src.is_file() and src.name.startswith(('education-compute-','repositories-','service-evidence-','codabench-','federal-','assessment-','pilot-')):

@@ -7,30 +7,32 @@ function calculate(a){
  for(const key of Object.keys(defaults.classroom)){if(typeof a[key]!=='number'||!Number.isFinite(a[key])||a[key]<0)throw Error('Enter finite, nonnegative values for every numeric field.');if(integerFields.includes(key)&&!Number.isInteger(a[key]))throw Error('People, weeks, runs, devices, copies and peak jobs must be whole numbers.');}
  if(a.people<1||a.weeks<1||a.runs<1||a.cores<1||a.ram<=0||a.peak<1||a.retention<1||a.allowance>100||a.peak>a.people||a.gpuPeak>a.peak)throw Error('Check participants, weeks, runs and CPU size; peak jobs must fit the participant count, GPU peak cannot exceed total peak, and allowance must be 0–100%.');
  if(a.gpuHours>0&&(a.gpus<1||a.vram<=0||a.gpuPeak<1))throw Error('GPU work needs at least one device per job, VRAM and one simultaneous GPU job.');
+ const pilot=a.context!=='working-group';
  const jobs=a.people*a.weeks*a.runs,multiplier=1+a.allowance/100;
  const cpuWall=jobs*a.cpuHours*multiplier,gpuWall=jobs*a.gpuHours*multiplier;
  const active=a.shared+a.people*a.personal+a.output;
- const result={status:'Planning scenario — not measured sizing or an award',eligible_for_submission:false,scope:a.scope||'classroom',pattern:a.pattern||'interactive',data:a.data||'public',basis:a.basis||'assumed',assumptions:{...a},totalJobs:jobs,cpuCoreHours:cpuWall*a.cores,cpuJobHours:cpuWall,gpuDeviceHours:gpuWall*a.gpus,peakCpuCores:a.peak*a.cores,peakRamGiB:a.peak*a.ram,peakGpus:a.gpuHours>0?a.gpuPeak*a.gpus:0,vramGiBPerDevice:a.gpuHours>0?a.vram:0,activeStorageGiB:active,independentBackupGiB:active*a.copies,logicalStorageGiB:active*(1+a.copies),retentionWeeks:a.retention,weeklyOperatorHours:a.operator,weeklyTAHours:a.ta,remainingGregHours:10-a.operator};
+ const result={status:'Planning scenario — not measured sizing or an award',eligible_for_submission:false,scope:a.scope||'classroom',pattern:a.pattern||'interactive',data:a.data||'public',basis:a.basis||'assumed',assumptions:{...a},totalJobs:jobs,cpuCoreHours:cpuWall*a.cores,cpuJobHours:cpuWall,gpuDeviceHours:gpuWall*a.gpus,peakCpuCores:a.peak*a.cores,peakRamGiB:a.peak*a.ram,peakGpus:a.gpuHours>0?a.gpuPeak*a.gpus:0,vramGiBPerDevice:a.gpuHours>0?a.vram:0,activeStorageGiB:active,independentBackupGiB:active*a.copies,logicalStorageGiB:active*(1+a.copies),retentionWeeks:a.retention,weeklyOperatorHours:a.operator,weeklyTAHours:a.ta,remainingGregHours:pilot?10-a.operator:null};
  if(!Object.values(result).filter(x=>typeof x==='number').every(Number.isFinite))throw Error('The scenario is too large to calculate. Reduce the inputs.');
- result.checks=['Confirm software, eligibility, provider billing units and allocation term.','Measure DS/MLIS components; retain failures and replay on the target ACCESS resource.','Validate concurrent sessions/jobs, queue wait, persistence, accessibility, recovery and staffed support.'];
+ result.checks=['Confirm software, eligibility, provider billing units and allocation term.',pilot?'Measure DS/MLIS components; retain failures and replay on the target ACCESS resource.':'Measure the actual workload; retain failures and replay on the intended resource.','Validate concurrent sessions/jobs, queue wait, persistence, accessibility, recovery and staffed support.'];
  if(a.copies===0)result.checks.unshift('No independent backup is sized. Confirm an export/restore plan or add a backup copy before required use.');
  if(a.retention<a.weeks)result.checks.push('Retention is shorter than the active work period; confirm when files are removed and how outputs are retained.');
  if(result.data!=='public')result.checks.unshift('Obtain institutional approval for this data class and the named provider before uploading any real records.');
- if(result.remainingGregHours<0)result.checks.unshift('Support exceeds Greg’s entire 10-hour weekly envelope. Reduce scope or confirm additional support.');
+ if(!pilot)result.checks.push('Confirm who can supply the estimated support hours, existing commitments and any recurring funding. No college-wide staffing ceiling is assumed.');
+ else if(result.remainingGregHours<0)result.checks.unshift('Support exceeds Greg’s entire 10-hour weekly envelope. Reduce scope or confirm additional support.');
  else result.checks.push('Reserve the remaining '+result.remainingGregHours+' Greg hours/week for all other duties, including EduCloud; TA hours are separate and unconfirmed.');
- result.route=result.data!=='public'?'Review data permissions first; no provider is preapproved by this tool.':result.scope==='classroom'?'Plan an ACCESS CPU + GPU classroom request. Free notebook services are for bounded benchmarks before piloting.':result.pattern==='batch'?'Assess ACCESS and OSPool for independent, checkpointed research jobs; verify GPU availability and eligibility separately.':'Assess ACCESS/provider cloud or an eligible institutional notebook service for interactive research. Confirm session and persistence terms.';
+ result.route=!pilot&&result.data==='public'&&result.scope==='classroom'?'Compare documented campus HPC class-group access and appropriate allocated resources; verify full-term teaching capacity and support.':result.data!=='public'?'Review data permissions first; no provider is preapproved by this tool.':result.scope==='classroom'?'Plan an ACCESS CPU + GPU classroom request. Free notebook services are for bounded benchmarks before piloting.':result.pattern==='batch'?'Assess ACCESS and OSPool for independent, checkpointed research jobs; verify GPU availability and eligibility separately.':'Assess ACCESS/provider cloud or an eligible institutional notebook service for interactive research. Confirm session and persistence terms.';
  if(a.gpuHours>0)result.checks.push('Kaggle/free Colab may support preliminary GPU measurements; neither reserves GPUs. Match device model, VRAM and physical/shared-device accounting before conversion.');
  if(result.pattern==='service')result.checks.push('Continuous services need a separate instance-uptime/storage/billing model. These per-run totals do not size always-on hosting or databases.');
  return result;
 }
 root.ComputeNeeds={calculate,defaults};
 if(typeof document==='undefined')return;
-const form=document.getElementById('needsForm');if(!form)return;
+const form=document.getElementById('needsForm');if(!form)return;const submit=form.querySelector('button[type=submit]');if(submit)submit.disabled=false;
 let result;
 const fmt=n=>new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(n);
 const fields=Object.keys(defaults.classroom);
 function text(id,value){document.getElementById(id).textContent=value;}
-function read(){const a={};for(const k of fields)a[k]=form.elements[k].value.trim()===''?NaN:Number(form.elements[k].value);for(const k of ['scope','pattern','data','basis'])a[k]=form.elements[k].value;return a;}
+function read(){const a={};for(const k of fields)a[k]=form.elements[k].value.trim()===''?NaN:Number(form.elements[k].value);a.context=form.elements.context?.value||'pilot';for(const k of ['scope','pattern','data','basis'])a[k]=form.elements[k].value;return a;}
 function update(){
  result=undefined;document.querySelectorAll('[data-needs-export]').forEach(b=>b.disabled=true);
  try{

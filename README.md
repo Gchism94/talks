@@ -368,3 +368,28 @@ Do not publish the full local review folder; it retains private research capture
 The offline-search worker shim is vendored as iframe-worker 1.0.4 with its MIT
 license under `site/compute-guide/assets/vendor/`; the guide build replaces the
 default CDN link so the portable bundle needs no network request.
+
+### AI Resources Working Group
+
+The guide now supports the College of Information Science working-group brief:
+resource inventory, needs/gaps, portfolio of approaches and recommendations.
+`site/compute-guide/working-group.json` holds the seeded inventory and milestones;
+`site/compute-guide/pages/` holds the concise deliverable drafts;
+`scripts/compute_working_group.py` integrates them into the pinned guide build.
+The local needs brief is at `needs.html`; technical sizing is optional at
+`compute-estimator.html`. No responses are submitted, stored or aggregated by the
+site. Examples are explicitly marked, unknown quantities stay unknown and exports
+are invalidated when fields change. Existing compute-pilot constraints remain
+case-specific; they are not college-wide staffing or budget findings.
+
+Preliminary drafts are targeted for the end of Fall 2026; refinement and
+intra-college circulation are planned for early Spring 2027. Resource owners,
+working-group deliverable leads and an approved collection channel still need
+agreement. Six campus public sources were checked October 19; national entries
+retain earlier review dates. No signed-in entitlement or available staff capacity
+was verified. `ai-resource-inventory.csv`, blank needs/recommendation templates and
+`ai-working-group-packet.txt` are part of the public export.
+
+Run `node scripts/test_working_group_needs.cjs` alongside the compute arithmetic
+and standard site checks. Review mobile keyboard navigation, qualitative briefs,
+unknown values, example labels, stale exports, search, print and offline behavior.
