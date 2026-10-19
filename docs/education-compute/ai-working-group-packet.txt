@@ -477,7 +477,11 @@ Browser inference works without API keys or per-request inference fees. We teste
 
 The integrated 360M worker generated with networking blocked after loading. That establishes local execution for that test; it does not establish reliable drafting. We have kept browser inference disabled on the public site and chosen the simpler template-plus-campus-prompt workflow. The [SmolLM2 model card](https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct) also advises checking generated content. Preserve original quantities, source facts and unknowns in every draft.
 
-A separate **GPT-6 Luna API evaluation** is prepared for three synthetic computing requests. It has not run and no API endpoint is connected to this site. API usage has token charges; testing does not establish an operating budget, institutional approval or a public service. [Official model documentation](https://developers.openai.com/api/docs/models/gpt-6-luna).
+### GPT-6 Luna drafting test
+
+On October 19, 2026, **GPT-6 Luna** completed three synthetic requests—data science instruction, MLIS data work and research software support—in **5.6–6.0 seconds each**. Review against supplied briefs and dated inventory facts found that all three preserved unknown costs, staffing, permissions and capacity. Drafts were 135–163 words and kept questions for resource owners separate.
+
+**Assessment: useful first drafts with human review.** This was three examples with facts supplied, not a reliability guarantee or a matched comparison with browser models. Total usage was 4,157 input and 1,032 output tokens; estimated token charges were **about $0.001**, including reported cache writes, using [published standard rates](https://developers.openai.com/api/docs/models/gpt-6-luna). This is an estimate, not a verified invoice. No API endpoint is connected to this site, and the test establishes no operating budget or institutional approval.
 
 
 # Recommendations for review

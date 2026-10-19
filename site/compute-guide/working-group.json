@@ -848,10 +848,41 @@
     ],
     "hosted_model_test": {
       "model": "gpt-6-luna",
-      "status": "Prepared; no API request run",
+      "status": "Completed; three synthetic drafts reviewed, useful first drafts with human review",
       "scope": "Three synthetic cases; at most 700 output tokens each, no tools, reasoning none, store false requested",
       "public_endpoint_configured": false,
-      "source": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+      "source": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "date": "2026-10-19",
+      "case_count": 3,
+      "cases": [
+        "data-science-classroom",
+        "mlis-corpus",
+        "research-rse"
+      ],
+      "review_method": "Codex review against the saved synthetic briefs and supplied dated inventory facts; not an independent resource-owner confirmation. Word/count/source-ID checks were also run. Raw API output retained separately.",
+      "seconds_range": [
+        5.58,
+        5.967
+      ],
+      "mean_seconds": 5.717,
+      "usage": {
+        "input_tokens": 4157,
+        "cache_write_tokens": 4148,
+        "cached_input_tokens": 0,
+        "output_tokens": 1032,
+        "total_tokens": 5189,
+        "ordinary_input_tokens": 9
+      },
+      "estimated_token_cost_usd": 0.0010354,
+      "cost_basis": "Reported cache-write and cached tokens treated as subsets of input_tokens. Standard published rates; estimate only, no invoice reconciliation. No tool calls.",
+      "decision": "Useful candidate for source-grounded first drafts with human review; no public integration approved by this test.",
+      "limits": [
+        "Three synthetic examples, one generation each, all relevant facts supplied; no independent fact-finding.",
+        "No sensitive inputs, adversarial testing, repeated-run consistency, concurrency or real-user acceptance tested.",
+        "No matched-prompt comparison with browser models; no broad ranking or claim of error-free generation.",
+        "store:false requested; not a zero-retention guarantee.",
+        "No site endpoint, browser credential, automatic submission or recurring service configured."
+      ]
     }
   }
 }
