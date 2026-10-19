@@ -342,3 +342,8 @@ Final live-browser acceptance on the published Pages site passed: one explicit c
 Greg clarified that **Wolfgang Jetner at the Office of Responsible AI (ORAI)** is the source of the AI Verde transition, planned $200/month Bedrock credit and supplied model-price information. Greg relayed the update; do not describe him as its origin or imply direct contact with Wolfgang by this agent. The screenshot was received October 19; its capture/effective date is unknown. This attribution does not establish individual account entitlements or make Wolfgang a working-group point person. Preserve the untested migration, credit scope, campus API and data-policy questions.
 
 Button interaction colors are explicit for primary links/buttons, secondary controls and selected filters. Disabled controls use an opaque readable palette; textareas have visible keyboard focus. Luna shows a busy button label and aria-busy state. Keep the consent, public/synthetic-only, invalidation and no-automatic-retry boundaries. Browser audits use intercepted synthetic responses, not additional paid generation. Exact audit/release results are recorded in the latest local validation extension.
+
+
+## Greg’s applicable role — October 19, 2026
+
+Greg identifies **Faculty Director of Instructional Computing** as his primary applicable role for the Computing Resources Working Group. Use that title in the overview, recurring college banner, coordination materials and local request/brief/prompt exports, rather than Assistant Professor of Practice. This role is user-confirmed; do not claim it was independently verified from the public profile. Barney Maccabe and Greg remain the two working-group point people. No provider allocation authority is inferred.

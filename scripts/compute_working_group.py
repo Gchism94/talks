@@ -25,7 +25,7 @@ def build(root,generated,public,write):
 
 <div class="guide-note"><strong>Resolve before classroom use:</strong> campus HPC’s instruction policy still restricts teaching to Ocelote, while current allocation notices say Ocelote retired August 17, 2026. Ask HPC Consult which current cluster permits instruction. Research allocations do not resolve this policy conflict.</div>
 
-**Working-group coordination:** [Barney Maccabe](mailto:maccabe@arizona.edu) and [Greg Chism](mailto:gchism@arizona.edu). Resource-specific contacts appear on each card.
+**Working-group coordination:** [Barney Maccabe](mailto:maccabe@arizona.edu) and [Greg Chism](mailto:gchism@arizona.edu), Faculty Director of Instructional Computing. Resource-specific contacts appear on each card.
 
 '''
     cards='<div data-directory><div class="guide-filter"><label>Search inventory<input type="search" placeholder="Try college, AI Assistant, RSE, data or software"></label><label>Resource type<select><option value="all">All types</option>'+''.join('<option>'+E(c)+'</option>' for c in sorted({r['category'] for r in g['inventory']}))+'</select></label><label>Where available<select data-level-filter><option value="all">College, university and external</option><option>College</option><option>University</option><option>National / external</option></select></label><p role="status" aria-live="polite">'+str(len(g['inventory']))+' entries</p></div><div class="guide-directory">'
@@ -61,7 +61,7 @@ def build(root,generated,public,write):
     form=form.replace('</section>',request+'</section>')
     write('needs.md','Describe a computing resource need','''For **College of Information Science faculty and students**: describe the research or teaching activity and what is getting in the way. **You do not need to know GPU hours or a budget.** Include software, data, people, devices or hosting needs; AI is optional. Unknown quantities can stay unknown.
 
-Working-group point people: [Barney Maccabe](mailto:maccabe@arizona.edu) and [Greg Chism](mailto:gchism@arizona.edu). Preparing a brief does not send it to them.
+Working-group point people: [Barney Maccabe](mailto:maccabe@arizona.edu) and [Greg Chism](mailto:gchism@arizona.edu), Faculty Director of Instructional Computing. Preparing a brief does not send it to them.
 
 The needs brief and source-backed template work locally. Nothing is submitted to the working group. Optional **Draft with Luna** sends a reviewed public/synthetic brief for AI processing only when you choose it; the service does not save the brief or draft. Use non-identifying descriptions; keep private research, student records and confidential staffing information out of this public planning tool.
 
@@ -85,7 +85,7 @@ Use the [optional compute estimator](compute-estimator.html) for CPU/GPU, concur
     csvfile('ai-resource-inventory.csv',list(inventory_rows[0]),inventory_rows)
     csvfile('ai-needs-register.csv',['need_id','activity','scope','current_or_anticipated','resource_types','barriers','people_or_groups','needed_by','impact','requirements','skills_support','potential_support_hours_week','funding_status','existing_workaround','evidence_basis','review_status'],[])
     csvfile('ai-recommendations-template.csv',['action','college_or_university','problem_evidence','users_served','owner_role','dependencies','effort_hours','recurring_obligations','funding_status','success_measure','review_point','decision_status'],[])
-    packet=g['college']+'\n'+g['title']+'\nDRAFT WORKING PACKET | October 19, 2026\nPoint people: Barney Maccabe | maccabe@arizona.edu; Greg Chism | gchism@arizona.edu\n\n'+g['scope']+'\n'+g['charter_status']+'\n\nOBJECTIVES\n'+'\n'.join(g['objectives'])+'\n\nDELIVERABLES\n'
+    packet=g['college']+'\n'+g['title']+'\nDRAFT WORKING PACKET | October 19, 2026\nPoint people: Barney Maccabe | maccabe@arizona.edu; Greg Chism, Faculty Director of Instructional Computing | gchism@arizona.edu\n\n'+g['scope']+'\n'+g['charter_status']+'\n\nOBJECTIVES\n'+'\n'.join(g['objectives'])+'\n\nDELIVERABLES\n'
     for r in g['deliverables']:packet+='\n'+r['name']+' | '+r['status']+'\nPreliminary draft: '+r['draft']+'\n'+r['url']+'\n'
     packet+='\nMILESTONES\n'
     for r in g['timeline']:packet+='\n'+r['when']+' | '+r['title']+'\n'+r['work']+'\nOutput: '+r['output']+'\n'
