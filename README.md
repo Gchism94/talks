@@ -393,3 +393,7 @@ was verified. `ai-resource-inventory.csv`, blank needs/recommendation templates 
 Run `node scripts/test_working_group_needs.cjs` alongside the compute arithmetic
 and standard site checks. Review mobile keyboard navigation, qualitative briefs,
 unknown values, example labels, stale exports, search, print and offline behavior.
+
+### College of Information Science computing resources
+
+The [Computing Resources Working Group](https://gchism94.github.io/talks/education-compute/program.html) covers computing broadly for college research and teaching, including AI, software, data and technical support. Barney Maccabe is the working-group point person. The [inventory](https://gchism94.github.io/talks/education-compute/inventory.html) distinguishes published terms from unresolved access/cost/capacity questions; the [needs tool](https://gchism94.github.io/talks/education-compute/needs.html) prepares local briefs and request drafts with an optional campus-AI prompt handoff. No background LLM connection or response collection is configured. Canonical data: `site/compute-guide/working-group.json`; guide builder: `scripts/build_compute_guide.py`. The original talk and evidence remain supporting resources.

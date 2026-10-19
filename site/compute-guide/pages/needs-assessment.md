@@ -2,7 +2,7 @@
 
 **Draft framework — inputs not yet collected by this site.** The resource inventory and historical provider changes identify questions to examine; they do not establish the size or distribution of college needs.
 
-[Describe a need](needs.html) · [Download blank needs register](ai-needs-register.csv)
+[Describe a need](needs.html) · [Download blank needs register](computing-needs-register.csv)
 
 ## Questions to investigate
 

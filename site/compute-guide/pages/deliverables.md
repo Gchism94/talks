@@ -1,16 +1,18 @@
 # Four deliverables
 
+For the **College of Information Science Computing Resources Working Group**. Point person: [Barney Maccabe](mailto:maccabe@arizona.edu).
+
 Use these as working drafts. Each needs an agreed lead, source checks and group review; none is a completed college assessment or endorsed recommendation.
 
 ## 1. Resource inventory
 
-[Review the inventory](inventory.html) · [Download CSV](ai-resource-inventory.csv)
+[Review the inventory](inventory.html) · [Download CSV](computing-resource-inventory.csv)
 
 Record hardware, software, data, cloud, personnel and support. For every entry, establish users, access, owner, funding, costs, limitations and the date checked. Keep “unknown” visible.
 
 ## 2. Needs and gaps assessment
 
-[Review the assessment framework](needs-assessment.html) · [Prepare a needs brief](needs.html) · [Blank needs register](ai-needs-register.csv)
+[Review the assessment framework](needs-assessment.html) · [Prepare a needs brief](needs.html) · [Blank needs register](computing-needs-register.csv)
 
 Gather current and anticipated research and classroom requirements, including student perspectives. Record barriers, impact, timing, supporting evidence and feasible alternatives. Summarize coverage and uncertainty before calling a gap college-wide.
 
@@ -22,7 +24,7 @@ Evaluate better use of existing resources, shared services, collaboration, staff
 
 ## 4. Recommendations
 
-[Review proposed actions](recommendations.html) · [Recommendation template](ai-recommendations-template.csv)
+[Review proposed actions](recommendations.html) · [Recommendation template](computing-recommendations-template.csv)
 
 Separate actions the college can pursue from opportunities requiring university participation. For each: state evidence, benefit, owner role, dependencies, effort, funding status and a measure of success.
 
@@ -32,4 +34,4 @@ Separate actions the college can pursue from opportunities requiring university 
 - **Early Spring 2027:** refine and circulate within the college.
 - **University discussions:** carry forward agreed college priorities when those discussions are scheduled.
 
-[Milestones](timeline.html) · [Working-session guide](working-session.html) · [Download working packet](ai-working-group-packet.txt)
+[Milestones](timeline.html) · [Working-session guide](working-session.html) · [Download working packet](computing-working-group-packet.txt)

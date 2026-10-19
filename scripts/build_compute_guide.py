@@ -347,7 +347,8 @@ The tool follows the benchmark helper’s runtime × workload × resource × all
                     revision=hashlib.sha256((SOURCE/'assets'/name).read_bytes()).hexdigest()[:12]
                     text=text.replace('guide-assets/'+name+'\"','guide-assets/'+name+'?v='+revision+'\"')
                 text=text.replace('href=""', 'href="program.html"')
-                text=text.replace('<article class="md-content__inner md-typeset">','<article id="program-content" class="md-content__inner md-typeset">')
+                band='<div class="guide-college-band"><a href="https://infosci.arizona.edu/">College of Information Science</a><span><a href="program.html">Computing Resources Working Group</a> · Point person: <a href="mailto:maccabe@arizona.edu">Barney Maccabe</a></span></div>'
+                text=text.replace('<article class="md-content__inner md-typeset">','<article id="program-content" class="md-content__inner md-typeset">'+band)
                 icons='<link rel="icon" href="../assets/favicons/talk.svg" type="image/svg+xml"><link rel="icon" href="../assets/favicons/talk-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/favicons/talk-180.png" sizes="180x180">'
                 text=text.replace('</head>',icons+'</head>')
                 dest.write_text('\n'.join(line.rstrip() for line in text.splitlines())+'\n')

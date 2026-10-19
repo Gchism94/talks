@@ -1,0 +1,533 @@
+College of Information Science
+Computing Resources Working Group
+DRAFT WORKING PACKET | October 19, 2026
+Point person: Barney Maccabe, Associate Dean of Research | maccabe@arizona.edu
+
+College of Information Science: computing for research and instruction, including AI, data science, digital scholarship, games and extended reality, software, data and the people who support them.
+Working resource and draft deliverables; not endorsed recommendations or a completed college assessment.
+
+OBJECTIVES
+Understand the current landscape
+Identify needs and opportunities
+Explore alternative approaches
+
+DELIVERABLES
+
+Resource inventory | Seeded draft; college entries and service-owner verification pending
+Preliminary draft: End of Fall 2026 semester
+inventory.html
+
+Needs and gaps assessment | Assessment structure ready; faculty/student inputs not collected here
+Preliminary draft: End of Fall 2026 semester
+needs-assessment.html
+
+Portfolio of approaches | Candidate approaches for comparison; no selection or commitment
+Preliminary draft: End of Fall 2026 semester
+approaches.html
+
+Recommendations | Draft action framework; group review and priorities pending
+Preliminary draft: End of Fall 2026 semester
+recommendations.html
+
+MILESTONES
+
+October–November 2026 | Build the baseline
+Confirm scope and resource owners; review campus routes; gather research, teaching and student perspectives.
+Output: Versioned inventory, agreed input process and a list of unknowns.
+
+November–end of Fall 2026 semester | Draft all four deliverables
+Validate significant barriers; compare approaches; separate college actions from university dependencies.
+Output: Preliminary inventory, needs assessment, portfolio and recommendations.
+
+Early Spring 2027 | Refine and circulate within the college
+Review drafts with faculty, students and resource owners; resolve corrections and agree priorities.
+Output: Revised intra-college drafts with evidence, owners and unresolved questions.
+
+As university discussions develop | Carry college priorities forward
+Prepare the shared-service, policy, staffing and infrastructure questions that require university participation.
+Output: College briefing for anticipated university-wide planning; timing not yet set.
+
+USE AND REVIEW
+The site does not collect needs responses. Agree an approved university channel, deliverable owner roles and review process. No group endorsements, college-wide needs totals, staff availability or funding are assumed. The separate pilot retains its own zero-cash/ten-hour constraints.
+
+SEEDED RESOURCE INVENTORY
+
+College of Information Science IT support | College | Owner confirmation needed
+Access: Use the college IT support page; a public request procedure is not exposed in the page content. Ask the college to identify the current local IT owner.
+Cost: No public fee schedule or support entitlement found.
+Contact: College office — infosci@arizona.edu; 520-621-3565 (routing contact, not a verified IT service desk) | mailto:infosci@arizona.edu
+Support: College office — infosci@arizona.edu; 520-621-3565 (routing contact, not a verified IT service desk)
+Limits: Published IT page is sparse. Response hours, equipment coverage and escalation need confirmation.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://infosci.arizona.edu/tech
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+College hardware, labs and loan equipment | College | Inventory pending
+Access: Ask Barney Maccabe to coordinate a roster of machines, locations, owners, access rules and any loan pool.
+Cost: Unknown; inventory existing commitments and hours before proposing funding.
+Contact: Barney Maccabe — working-group point person | mailto:maccabe@arizona.edu
+Support: Barney Maccabe — working-group point person
+Limits: No shared college CPU/GPU pool, equipment checkout entitlement or spare capacity is verified.
+Funding: To document; no new funding, staff time or loan inventory assumed.
+Sources: https://infosci.arizona.edu/people/barney-maccabe
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email.
+
+College RSE and technical-support capacity | College | Inventory pending
+Access: Ask Barney Maccabe to identify technical roles, skills, appointments and realistic support windows.
+Cost: Unknown; inventory existing commitments and hours before proposing funding.
+Contact: Barney Maccabe — working-group point person | mailto:maccabe@arizona.edu
+Support: Barney Maccabe — working-group point person
+Limits: No available FTE or support hours measured. Research programmers in a lab are not automatically a college-wide service.
+Funding: To document; no new funding, staff time or loan inventory assumed.
+Sources: https://infosci.arizona.edu/people/barney-maccabe
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email.
+
+College software, datasets and agreements | College | Inventory pending
+Access: Ask the working group to identify license/data owners, storage, renewals and permitted research/classroom use.
+Cost: Unknown; inventory existing commitments and hours before proposing funding.
+Contact: Barney Maccabe — working-group point person | mailto:maccabe@arizona.edu
+Support: Barney Maccabe — working-group point person
+Limits: No college license roster, API allowance or training/distribution rights verified.
+Funding: To document; no new funding, staff time or loan inventory assumed.
+Sources: https://infosci.arizona.edu/people/barney-maccabe
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email.
+
+College research labs and collaborators | College | Documented route
+Access: Explore the college research-labs directory; approach the relevant lab lead for a research collaboration.
+Cost: No general-use fee schedule or guaranteed shared access published.
+Contact: College research-labs directory; Barney Maccabe for working-group coordination | https://infosci.arizona.edu/research-faculty/research-labs
+Support: College research-labs directory; Barney Maccabe for working-group coordination
+Limits: A lab listing establishes research capability, not open compute, staff availability or a classroom reservation.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://infosci.arizona.edu/research-faculty/research-labs
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+co/lab: Critical Archives & Curation Collaborative | College | Documented route
+Access: Discuss digital curation, obsolete media/computers and digital-forensics collaborations with the co-directors.
+Cost: Shared equipment access, project charges and supervision not published.
+Contact: Co-directors Jamie A. Lee and Zack Lischer-Katz — lab page | https://infosci.arizona.edu/colab-critical-archives-curation-collaborative
+Support: Co-directors Jamie A. Lee and Zack Lischer-Katz — lab page
+Limits: Research collaboration and preservation capability; no public equipment checkout policy, GPU entitlement or staffed digitization service.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://infosci.arizona.edu/colab-critical-archives-curation-collaborative
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+XRG: Extended Reality & Games Lab | College | Documented route
+Access: Discuss XR, virtual/augmented reality and interaction research with the lab leads.
+Cost: No general-use equipment rate or access entitlement published.
+Contact: Lila Boz and Ren Boz — lab leads listed on XRG page | https://infosci.arizona.edu/xrg-lab
+Support: Lila Boz and Ren Boz — lab leads listed on XRG page
+Limits: Research lab, not a documented open GPU lab or college equipment-loan service; confirm scheduling and participation.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://infosci.arizona.edu/xrg-lab
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+College course technology requirements | College | Documented route
+Access: Check the program-specific minimum hardware and operating-system requirements before designing an activity.
+Cost: Student-owned device requirements; no provided machine or subsidy established.
+Contact: Course lead or faculty adviser; college office for routing | mailto:infosci@arizona.edu
+Support: Course lead or faculty adviser; college office for routing
+Limits: Requirements vary by degree. Device specifications do not establish college-owned inventory or access to loan equipment.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://infosci.arizona.edu/technology-requirements
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+Campus HPC: research CPU and GPU | University | Documented route
+Access: Eligible UArizona users register and join a faculty PI group. Published Puma standard allocation: 150,000 CPU-hours per PI group each month.
+Cost: Standard allocation and consulting at no charge; GPU jobs use the same CPU-hour pool. Buy-in is a separate paid arrangement.
+Contact: HPC Consult — ServiceNow ticket | https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d
+Support: HPC Consult — ServiceNow ticket
+Limits: Shared, non-rollover allocation; queues and GPU memory constrain work. Instruction policy still names Ocelote only, although allocation notices say Ocelote retired Aug. 17, 2026. Teaching eligibility on current clusters is unresolved. Lynx/H200 specifications are published, but operating availability/allocation must be confirmed.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/resources/compute_resources/ | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+Campus HPC: classroom policy needs clarification | University | Conflicting documentation
+Access: Semester class groups are documented and share the faculty PI allocation. Ask HPC Consult for the currently permitted teaching cluster.
+Cost: No separate class allocation; the faculty research pool is shared.
+Contact: HPC Consult — instructor should open a ticket | https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d
+Support: HPC Consult — instructor should open a ticket
+Limits: Policy restricts instruction to Ocelote, while current notices state Ocelote is decommissioned. Do not infer Puma/Lynx classroom permission. No expedited assignment jobs or individual student support promised.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/registration_and_access/group_management/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+HPC active storage and transfers | University | Documented route
+Access: HPC account: 50 GB home; PI group: 500 GB communal space. Temporary xdisk on request: 200 GB–20 TB, up to 300 days.
+Cost: Standard spaces supplied with account/group; rental is a separate priced service.
+Contact: HPC Consult — ServiceNow ticket | https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d
+Support: HPC Consult — ServiceNow ticket
+Limits: HPC data are not backed up; xdisk is temporary and node /tmp is cleared after a job. Storage quotas do not provide preservation or regulated-data approval.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://hpcdocs.hpc.arizona.edu/storage_and_transfers/storage/hpc_storage/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+HPC software, containers and shared model data | University | Documented route
+Access: Use HPC modules, user environments and containers; shared datasets include Llama 2 and AlphaFold inputs.
+Cost: Open-source tools may have no license charge; licensed products and model terms still apply. Compute uses the allocation.
+Contact: HPC Consult — software/setup questions | https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d
+Support: HPC Consult — software/setup questions
+Limits: Availability varies by module/version. Llama 2 has its own community license; model memory/storage requirements can be substantial. A software listing is not permission for every use.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://hpcdocs.hpc.arizona.edu/software/common_datasets/ | https://hpcdocs.hpc.arizona.edu/software/overview/ | https://hpcdocs.hpc.arizona.edu/software/popular_software/ollama/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+HPC consulting and visualization support | University | Documented route
+Access: Open a ServiceNow ticket for onboarding, queue issues, code optimization and resource advice; request visualization help through its team.
+Cost: HPC consulting is published as free of cost.
+Contact: HPC Consult ticket; visualization: vislab-consult@list.arizona.edu | https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d
+Support: HPC Consult ticket; visualization: vislab-consult@list.arizona.edu
+Limits: HPC team support hours: weekdays 8 a.m.–5 p.m., excluding university holidays. Consultation is not an assigned engineer or individualized student homework support.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+AI Verde: managed models, teams and courses | University | Documented route
+Access: UArizona NetID required; faculty, staff, researchers and students request access/consultation from Mithun Paul. Chat and API interfaces documented.
+Cost: Commercial tokens cost money; CyVerse sets course/team/user budgets on request. A no-cost allocation or on-premise model entitlement must be confirmed.
+Contact: Mithun Paul — mithunpaul@arizona.edu | mailto:mithunpaul@arizona.edu
+Support: Mithun Paul — mithunpaul@arizona.edu
+Limits: Available models and limits are team-specific. On-premise and commercial routes differ; confirm data handling, permitted material, throughput and support. API documentation does not establish a configured free endpoint for this site.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://cyverse.org/ai-verde | https://aiverde-docs.cyverse.ai/ | https://aiverde-docs.cyverse.ai/api/api-key/
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+U of A GenAI | University | Documented route
+Access: Active UArizona NetID; published FAQ describes limited early access. Check genai.arizona.edu for availability.
+Cost: Published no-cost campus use.
+Contact: Responsible AI tools page and campus 24/7 IT support: 520-626-8324 | https://responsibleai.arizona.edu/tools-support/u-gen-ai
+Support: Responsible AI tools page and campus 24/7 IT support: 520-626-8324
+Limits: Models/features may rotate; no guaranteed API, classroom concurrency or GPU-training allocation. Early-access conditions and data-specific exclusions apply; this differs from AI Verde.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://responsibleai.arizona.edu/tools-support/u-gen-ai | https://it.arizona.edu/student-resources | https://responsibleai.arizona.edu/ai-tools-guide
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+Campus software licensing | University | Documented route
+Access: Use the UITS software catalog and student/faculty service routes; check each product and affiliation.
+Cost: Student page lists Microsoft 365, Google Apps and Adobe Creative Cloud without added software charge while enrolled; other products are free or discounted. Student services are supported by the IT & Library Fee.
+Contact: UITS 24/7 support — 520-626-8324 | https://it.arizona.edu/student-resources
+Support: UITS 24/7 support — 520-626-8324
+Limits: Eligibility, device counts, renewal and commercial/research use vary. Listed MATLAB/Autodesk etc. do not imply every license or API credit is included.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://it.arizona.edu/student-resources | https://it.arizona.edu/node/616
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+VCAT and Tech Zone software access | University | Documented route
+Access: VCAT supplies virtual applications through a browser; Tech Zone labs provide installed software. Instructors can request a lab software installation.
+Cost: Campus student-service route; fee-supported. Product-specific access and installation charges, if any, must be checked.
+Contact: UITS 24/7 support — 520-626-8324 | https://it.arizona.edu/tech-zone-software
+Support: UITS 24/7 support — 520-626-8324
+Limits: App/version and lab availability vary; not a general-purpose GPU allocation, unrestricted server or always-on research host.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://it.arizona.edu/tech-zone-software | https://it.arizona.edu/news/finding-resources-faculty | https://it.arizona.edu/student-resources
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+Libraries Data Cooperative: Python, R and ML support | University | Documented route
+Access: Faculty, staff and students can consult library specialists on data science, visualization, programming and data management.
+Cost: No project-specific fee or dedicated engineering allowance established by these pages.
+Contact: Sarah Stueve — sarahstueve@arizona.edu (Python/ML); Jeff Oliver — jcoliver@arizona.edu (R/Git/visualization) | https://lib.arizona.edu/research/data
+Support: Sarah Stueve — sarahstueve@arizona.edu (Python/ML); Jeff Oliver — jcoliver@arizona.edu (R/Git/visualization)
+Limits: Consultation, instruction and referrals; no dedicated developer hours, turnaround or ongoing operations commitment.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://lib.arizona.edu/research/data | https://lib.arizona.edu/research/data/data-science
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+Digital scholarship and text/data mining | University | Documented route
+Access: Consult about corpora, text analysis, humanities data, metadata and digital editing; listed open tools include OpenRefine, Voyant, AntConc and CollectionBuilder.
+Cost: Listed tools are free to use; sustained project implementation/support not priced here.
+Contact: Heather Froehlich — froehlich@arizona.edu | mailto:froehlich@arizona.edu
+Support: Heather Froehlich — froehlich@arizona.edu
+Limits: Tool availability does not clear copyright, dataset licensing, hosting, compute or staff time.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://lib.arizona.edu/research/data/digital-scholarship | https://lib.arizona.edu/research/plan/tdm-llm
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+Library datasets, databases and reuse rights | University | Documented route
+Access: Use licensed resources under current UA affiliation and the specific agreement. Contact Collections before TDM or use with AI.
+Cost: Institutional subscriptions cover authorized access; additional TDM/API rights or fees depend on the agreement.
+Contact: Library Collections — LBRY-collectionmanagement@email.arizona.edu | mailto:LBRY-collectionmanagement@email.arizona.edu
+Support: Library Collections — LBRY-collectionmanagement@email.arizona.edu
+Limits: Reading access does not authorize bulk download, sharing, training or uploading to public AI tools. Each publisher agreement differs.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://lib.arizona.edu/research/plan/tdm-llm
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+GIS software, geospatial data and consultation | University | Documented route
+Access: Use the Libraries GIS/data guides and repository; discuss ArcGIS, QGIS, R and spatial analysis with a specialist.
+Cost: QGIS is open source; ArcGIS eligibility and project-specific data/service terms require checking. No universal paid-product entitlement inferred.
+Contact: Garrett Smith — garrettsmith@arizona.edu | mailto:garrettsmith@arizona.edu
+Support: Garrett Smith — garrettsmith@arizona.edu
+Limits: Data licenses, service quotas and support capacity differ. A geospatial repository is not a general GPU or database-hosting award.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://lib.arizona.edu/research/data/geospatial | https://lib.arizona.edu/research/data
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+ReDATA: research data and code preservation | University | Documented route
+Access: Active faculty/staff, enrolled students and certain DCCs with valid NetID/library privileges can submit eligible final research materials for curatorial review.
+Cost: FAQ: no cost to individual UArizona researchers; quota increases depend on need and availability.
+Contact: ReDATA team — data-management@arizona.edu | mailto:data-management@arizona.edu
+Support: ReDATA team — data-management@arizona.edu
+Limits: Non-sensitive research materials and rights required; curatorial review mandatory. Not an active database/backup service. Published notice reports intermittent traffic-related errors and automated download restrictions; not a breach.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://lib.arizona.edu/research/data/redata | https://lib.arizona.edu/research/data/redata/faqs | https://lib.arizona.edu/research/data/redata/deposit
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+Data Science Institute / CyVerse research software expertise | University | Contact reconfirmation needed
+Access: Indexed official DSI pages describe project/proposal consultation and cross-college teams; their live hostnames did not resolve during this review. Reconfirm the current route before relying on it.
+Cost: No blanket free engineering-hour entitlement or public project rate established; scope and funding must be agreed.
+Contact: Published DSI contact — RII-datascienceinstitute@arizona.edu (current operation to reconfirm) | mailto:RII-datascienceinstitute@arizona.edu
+Support: DSI — RII-datascienceinstitute@arizona.edu
+Limits: Named engineering expertise is not an available appointment or staffed help desk for every course. Confirm capacity, deliverables, maintenance and funding.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://data7.arizona.edu/contact-us | https://datascience.arizona.edu/directory
+Review: 2026-10-19 — indexed official text retrieved; direct live verification unsuccessful
+Official-source search/fetch text supplied the contact and engineering roles, but direct checks of data7.arizona.edu and datascience.arizona.edu failed DNS resolution. This is an availability limitation, not evidence of service closure. No available staff hours verified.
+
+CCT Data Science: consultation and research software | University | Documented route
+Access: Drop-in/workshop routes and grant collaboration documented. The 80-hour Data Science Incubator is limited to ALVSCE faculty, staff and students.
+Cost: Longer collaboration can use hired effort or a co-PI grant arrangement; Information Science eligibility for other services and rates must be confirmed.
+Contact: CCT Data Science team — current contact/consultation routes | https://datascience.cct.arizona.edu/
+Support: CCT Data Science team — current contact/consultation routes
+Limits: The ALVSCE incubator is not an 80-hour entitlement for Information Science. Training/drop-in help differs from funded long-term engineering.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://datascience.cct.arizona.edu/
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+CATalyst Studios: XR, making and class partnerships | University | Documented route
+Access: Use Main Library makerspace hours, reserve eligible spaces/VR equipment, or plan a class visit with the team.
+Cost: Free workshops are advertised; material/equipment-specific charges and eligibility must be checked.
+Contact: CATalyst Studios — contact and consultation booking | https://lib.arizona.edu/catalyst/contact
+Support: CATalyst Studios — contact and consultation booking
+Limits: Some machines require authorization classes. Reservations, supervision and supplies constrain access; no general-purpose compute/GPU reservation inferred.
+Funding: Institutional or project service; dedicated college capacity/funding not established.
+Sources: https://lib.arizona.edu/catalyst | https://lib.arizona.edu/catalyst/contact
+Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+
+AI tools and data-use guidance | University | Documented route
+Access: Review the current university decision table before selecting a tool.
+Cost: Public guidance; project review effort must be scoped.
+Contact: Responsible AI campus support and current training organizers | https://responsibleai.arizona.edu/
+Support: University AI, privacy and relevant data owners.
+Limits: Data categories and account types matter; do not infer authorization from a vendor privacy claim.
+Funding: University guidance; not a compute or staff allocation.
+Sources: https://responsibleai.arizona.edu/ai-tools-guide
+Review: 2026-10-19
+Published guidance/training route only; not a compute or staff allocation.
+
+Campus AI learning and events | University | Documented route
+Access: Follow the university AI resources page for training and event routes.
+Cost: Check each offering; staff learning time is still required.
+Contact: Responsible AI campus support and current training organizers | https://responsibleai.arizona.edu/
+Support: University AI learning and event organizers.
+Limits: A course/event is not staffed project support or a reserved technical service.
+Funding: University initiative; event availability varies.
+Sources: https://it.arizona.edu/news/new-u-ai-resources
+Review: 2026-10-19
+Published guidance/training route only; not a compute or staff allocation.
+
+NSF ACCESS | National / external | Application / approval
+Access: Match the project and teaching/research use to a resource and request.
+Cost: Allocated resource access is conditional; operations/support remain separate.
+Contact: ACCESS support and selected resource provider | https://access-ci.org/
+Support: ACCESS support plus the selected resource provider.
+Limits: No award, class reservation or provider benchmark established.
+Funding: Federally supported allocation route.
+Sources: https://access-ci.org/
+Review: Earlier compute-ledger review; not newly rechecked
+Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.
+
+NAIRR Classroom | National / external | Application / approval
+Access: Check the current instructor/course call and resource terms.
+Cost: Conditional award/resource terms; not funding in hand.
+Contact: NAIRR program / current Classroom call | https://nairrpilot.org/
+Support: Program and resource-specific support.
+Limits: An eligible AI pilot does not supply every course or its ongoing staff support.
+Funding: Federal pilot opportunity.
+Sources: https://nairrpilot.org/
+Review: Earlier compute-ledger review; recheck call before use
+Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.
+
+OSPool / throughput computing | National / external | Documented route
+Access: Assess independent, checkpointed research jobs and facilitated onboarding.
+Cost: Opportunistic use subject to policy and available capacity.
+Contact: OSPool facilitation / support | https://osg-htc.org/ospool/
+Support: OSG/OSPool support route.
+Limits: Interruptions and queue behavior differ from live classroom sessions.
+Funding: Federally supported/shared infrastructure.
+Sources: https://osg-htc.org/ospool/
+Review: Earlier compute-ledger review; recheck before use
+Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.
+
+MESA / CyVerse collaboration | National / external | Project / service terms
+Access: Explore public service and collaboration routes; confirm underlying access.
+Cost: Service-specific; no free college compute entitlement inferred.
+Contact: MESA project team / underlying service provider | https://idss-mesa.github.io/
+Support: Project/platform maintainers; commitments to confirm.
+Limits: Grant participation and advertised products do not establish approved class capacity.
+Funding: IDSS/project and underlying service support differ.
+Sources: https://idss-mesa.github.io/
+Review: Earlier compute-ledger review; recheck before use
+Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.
+
+Free GPU and cloud-credit experiments | National / external | Bounded / conditional
+Access: Compare Kaggle, free Colab and credit-based platforms in the existing directory.
+Cost: Quotas, cards and paid conversion vary.
+Contact: Provider-specific help routes in comparison | classroom-resources.html
+Support: Provider/community support; no class support commitment.
+Limits: Useful for bounded experiments; not a guaranteed full-term GPU reservation.
+Funding: Provider-sponsored tiers or promotional credits.
+Sources: classroom-resources.html
+Review: Earlier compute-ledger review; recheck before use
+Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.
+
+Repositories, databases and preservation | National / external | Service-specific
+Access: Match code, active databases, research deposits and archival needs separately.
+Cost: Storage, activity and hosting limits vary.
+Contact: Service-specific contacts in continuity plan | repository-plan.html
+Support: Institutional librarians, data owners and hosting operators.
+Limits: Compute allocations do not automatically provide durable databases or preservation.
+Funding: Institutional and provider arrangements differ.
+Sources: repository-plan.html
+Review: Earlier compute-ledger review; recheck before use
+Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.
+
+# Needs and gaps assessment
+
+**Draft framework — inputs not yet collected by this site.** The resource inventory and historical provider changes identify questions to examine; they do not establish the size or distribution of college needs.
+
+[Describe a need](needs.html) · [Download blank needs register](computing-needs-register.csv)
+
+## Questions to investigate
+
+| Area | What we need to learn | Useful evidence |
+| --- | --- | --- |
+| Compute and cloud | Which activities need local devices, interactive sessions, batch jobs, GPUs or hosted models? | Small measured workloads, access delays and required concurrency |
+| Software and models | Which licenses, APIs, environments and accessible interfaces are required? | Current agreements, use cases, compatibility and renewal terms |
+| Data | Which datasets, rights, metadata, storage and preservation services are missing? | Data inventories, permissions, stewardship and export/restore needs |
+| RSEs and support | Which skills and support windows are required, and what capacity is actually available? | Task estimates, existing commitments and service-owner confirmation |
+| Research and instruction | How do research schedules, class deadlines and student access differ? | Course/project scenarios and faculty/student perspectives |
+| Collaboration | What can be shared or improved before adding infrastructure? | Underused resources, compatible workflows and willing partners |
+
+## Assess a reported gap
+
+Distinguish **not available**, **not accessible**, **not known about**, **not supported**, **not suitable** and **not affordable**. They require different responses.
+
+For each need, capture who is affected, the activity being blocked, current workaround, timing and evidence. Compare it with a verified resource route. A technical shortage should be distinguished from permissions, onboarding, skills or support barriers.
+
+## Summarize responsibly
+
+Report which parts of the college and which roles contributed, the number of usable inputs and important missing perspectives. Keep measured demand, self-reported needs, estimates and unanswered questions separate. Do not scale a few examples into college-wide GPU, spending or staffing totals.
+
+## Ready for a preliminary draft when…
+
+The group has a versioned needs register, a documented account of participation, significant gaps linked to evidence, and a clear list of remaining unknowns. Refine these with faculty, students and resource owners early in Spring 2027.
+
+
+# Portfolio of approaches
+
+**Candidates for investigation, not selected investments.** Combine approaches when useful; compare their support and recurring obligations as carefully as their technical benefits.
+
+| Approach | Opportunity | First useful test | Main dependency |
+| --- | --- | --- | --- |
+| Improve use of campus resources | Reduce duplicate purchases and onboarding friction | Map one research and one teaching workflow to documented campus routes | Eligibility, headroom, support and class-use terms |
+| Shared RSE and technical support | Pool scarce expertise and reusable environments | Estimate a few tasks and trial a bounded support window | Named staff, existing commitments and funding; no new appointment assumed |
+| Shared data and software stewardship | Reuse datasets, metadata and environments safely | Review a dataset/license and test a portable workflow | Rights, permissions, accessibility and renewal ownership |
+| Allocation-backed compute service | Support larger CPU/GPU work without relying only on free tiers | Benchmark components and validate a target route | An award, operations capacity and provider terms; ACCESS pilot remains conditional |
+| Efficient models and workflows | Lower unnecessary compute and improve reproducibility | Compare a smaller model, retrieval approach or checkpointed job against a quality baseline | Task-specific evaluation; savings must be measured |
+| Partnerships and shared infrastructure | Connect compatible college, campus and external efforts | Define a small joint use case with an interested partner | Agreed responsibilities, access and sustainable support |
+| Reusable teaching and evaluation tools | Avoid rebuilding assignment environments and grading workflows | Test exports and a synthetic class before adoption | Maintainer continuity, account terms and separate compute quotas |
+
+## Use one comparison standard
+
+For each candidate, document instructional/research benefit, users served, accessibility, data suitability, required effort, recurring costs, funding status, ownership and a reversible test. Do not rank options using invented cost savings or unmeasured capacity.
+
+[Draft recommendations](recommendations.html) · [Resource inventory](inventory.html) · [Supporting compute pilot](pilot-plan.html)
+
+## Help prepare resource requests
+
+The [needs tool](needs.html) produces a local request draft with documented resource routes and open questions. An optional prompt supports manual drafting in AI Verde after access and data terms are confirmed. A background LLM connection is conditional on a suitable lightweight model, a confirmed zero-cost quota, approved hosting and review of output quality. No model is connected to this site.
+
+
+# Recommendations for review
+
+**Draft action framework — priorities and endorsement pending.** The working group should refine these using the inventory and faculty/student needs, rather than assume a single platform solves the problem.
+
+## Actions the college can pursue
+
+1. **Maintain a concise resource inventory.** Identify an owner role for each entry and a review process. Publish access routes and limitations that resource owners confirm.
+2. **Document needs across research and instruction.** Use consistent briefs and an agreed university channel; include faculty, students, RSEs and technical staff. Summarize participation and unknowns.
+3. **Improve discoverability and reuse.** Test clear onboarding, reusable environments, shared documentation and relevant training before expanding infrastructure.
+4. **Scope bounded pilots.** Match a small activity to a confirmed route and support window. Measure benefit, access, effort and recovery before making it required.
+
+## Opportunities for university participation
+
+| Shared question | College contribution | What needs university participation |
+| --- | --- | --- |
+| Campus compute and hosted AI access | Concrete research/classroom scenarios and measured demand | Capacity, course access, account structure and service commitments |
+| Software, APIs and data agreements | Priority tools, datasets, rights and renewal needs | Institutional agreements, permitted use and sustainable funding |
+| RSE and technical support models | Skill/task estimates and existing college commitments | Shared staffing, escalation, training and long-term operations |
+| Data governance and shared infrastructure | Workflow, preservation and collaboration requirements | Appropriate review, interoperability and institutional services |
+
+## Before prioritizing an action
+
+Attach the problem and evidence, users served, owner role, dependencies, effort, funding status, success measure and a review date. Explicitly distinguish an application, exploratory partnership or proposed role from a confirmed commitment.
+
+The existing pilot’s **$0 cash and Greg’s 10 total hours/week** apply to that pilot. They are not a measured college budget or staffing ceiling. Do not assume funding or available staff for these broader recommendations.
+
+[Recommendation template](computing-recommendations-template.csv) · [Needs assessment](needs-assessment.html) · [Milestones](timeline.html)
+
+
+# Run a working session
+
+Use a short, repeatable review. This is a suggested meeting format, not a scheduled event or an assigned set of roles.
+
+## Before the session
+
+Choose a deliverable and review its current draft. Bring a public or appropriately shareable resource correction or needs brief. Use the group’s agreed university channel for internal material; the public website does not collect responses.
+
+## Suggested 45-minute agenda
+
+| Minutes | Activity | Record |
+| --- | --- | --- |
+| 0–5 | Confirm the decision or question | Scope and intended outcome |
+| 5–15 | Review resources and access | Verified facts, owners and unknowns |
+| 15–25 | Discuss needs and barriers | Research/teaching differences and missing perspectives |
+| 25–35 | Compare promising approaches | Evidence, prerequisites and a useful small test |
+| 35–45 | Agree next steps | Action, owner role, dependencies and review point |
+
+## After the session
+
+Update the draft’s date and status. Separate a decision from an open question or suggested action. Record who needs to confirm access, costs, support or permissions; do not list an unconfirmed resource as ready.
+
+## Questions for the group to settle first
+
+- Who maintains each deliverable and confirms factual corrections?
+- Which approved university channel will receive needs briefs and internal notes?
+- How will faculty, students and technical staff contribute, and how will missing perspectives be recorded?
+- Who will review the preliminary drafts before early Spring 2027 circulation?
+
+[Four deliverables](deliverables.html) · [Working packet](computing-working-group-packet.txt)

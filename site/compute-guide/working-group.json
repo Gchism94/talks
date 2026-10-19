@@ -1,7 +1,7 @@
 {
-  "title": "AI Resources Working Group",
+  "title": "Computing Resources Working Group",
   "updated": "2026-10-19",
-  "scope": "College of Information Science: AI-related research and instruction; faculty and student needs, capabilities and perspectives.",
+  "scope": "College of Information Science: computing for research and instruction, including AI, data science, digital scholarship, games and extended reality, software, data and the people who support them.",
   "charter_status": "Working resource and draft deliverables; not endorsed recommendations or a completed college assessment.",
   "objectives": [
     "Understand the current landscape",
@@ -10,19 +10,311 @@
   ],
   "inventory": [
     {
+      "id": "college-it",
+      "name": "College of Information Science IT support",
+      "level": "College",
+      "category": "Support & training",
+      "status": "Owner confirmation needed",
+      "access": "Use the college IT support page; a public request procedure is not exposed in the page content. Ask the college to identify the current local IT owner.",
+      "cost": "No public fee schedule or support entitlement found.",
+      "support": "College office — infosci@arizona.edu; 520-621-3565 (routing contact, not a verified IT service desk)",
+      "limits": "Published IT page is sparse. Response hours, equipment coverage and escalation need confirmation.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://infosci.arizona.edu/tech",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "College office — infosci@arizona.edu; 520-621-3565 (routing contact, not a verified IT service desk)",
+      "contact_url": "mailto:infosci@arizona.edu",
+      "sources": [
+        "https://infosci.arizona.edu/tech"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "college-hardware",
+      "name": "College hardware, labs and loan equipment",
+      "level": "College",
+      "category": "Hardware & compute",
+      "status": "Inventory pending",
+      "access": "Ask Barney Maccabe to coordinate a roster of machines, locations, owners, access rules and any loan pool.",
+      "cost": "Unknown; inventory existing commitments and hours before proposing funding.",
+      "support": "Barney Maccabe — working-group point person",
+      "limits": "No shared college CPU/GPU pool, equipment checkout entitlement or spare capacity is verified.",
+      "funding": "To document; no new funding, staff time or loan inventory assumed.",
+      "source": "https://infosci.arizona.edu/people/barney-maccabe",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Barney Maccabe — working-group point person",
+      "contact_url": "mailto:maccabe@arizona.edu",
+      "sources": [
+        "https://infosci.arizona.edu/people/barney-maccabe"
+      ],
+      "verification": "Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email."
+    },
+    {
+      "id": "college-rse",
+      "name": "College RSE and technical-support capacity",
+      "level": "College",
+      "category": "RSE & personnel",
+      "status": "Inventory pending",
+      "access": "Ask Barney Maccabe to identify technical roles, skills, appointments and realistic support windows.",
+      "cost": "Unknown; inventory existing commitments and hours before proposing funding.",
+      "support": "Barney Maccabe — working-group point person",
+      "limits": "No available FTE or support hours measured. Research programmers in a lab are not automatically a college-wide service.",
+      "funding": "To document; no new funding, staff time or loan inventory assumed.",
+      "source": "https://infosci.arizona.edu/people/barney-maccabe",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Barney Maccabe — working-group point person",
+      "contact_url": "mailto:maccabe@arizona.edu",
+      "sources": [
+        "https://infosci.arizona.edu/people/barney-maccabe"
+      ],
+      "verification": "Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email."
+    },
+    {
+      "id": "college-data",
+      "name": "College software, datasets and agreements",
+      "level": "College",
+      "category": "Data & stewardship",
+      "status": "Inventory pending",
+      "access": "Ask the working group to identify license/data owners, storage, renewals and permitted research/classroom use.",
+      "cost": "Unknown; inventory existing commitments and hours before proposing funding.",
+      "support": "Barney Maccabe — working-group point person",
+      "limits": "No college license roster, API allowance or training/distribution rights verified.",
+      "funding": "To document; no new funding, staff time or loan inventory assumed.",
+      "source": "https://infosci.arizona.edu/people/barney-maccabe",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Barney Maccabe — working-group point person",
+      "contact_url": "mailto:maccabe@arizona.edu",
+      "sources": [
+        "https://infosci.arizona.edu/people/barney-maccabe"
+      ],
+      "verification": "Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email."
+    },
+    {
+      "id": "college-research-labs",
+      "name": "College research labs and collaborators",
+      "level": "College",
+      "category": "Collaboration & shared services",
+      "status": "Documented route",
+      "access": "Explore the college research-labs directory; approach the relevant lab lead for a research collaboration.",
+      "cost": "No general-use fee schedule or guaranteed shared access published.",
+      "support": "College research-labs directory; Barney Maccabe for working-group coordination",
+      "limits": "A lab listing establishes research capability, not open compute, staff availability or a classroom reservation.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://infosci.arizona.edu/research-faculty/research-labs",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "College research-labs directory; Barney Maccabe for working-group coordination",
+      "contact_url": "https://infosci.arizona.edu/research-faculty/research-labs",
+      "sources": [
+        "https://infosci.arizona.edu/research-faculty/research-labs"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "college-colab",
+      "name": "co/lab: Critical Archives & Curation Collaborative",
+      "level": "College",
+      "category": "Data & stewardship",
+      "status": "Documented route",
+      "access": "Discuss digital curation, obsolete media/computers and digital-forensics collaborations with the co-directors.",
+      "cost": "Shared equipment access, project charges and supervision not published.",
+      "support": "Co-directors Jamie A. Lee and Zack Lischer-Katz — lab page",
+      "limits": "Research collaboration and preservation capability; no public equipment checkout policy, GPU entitlement or staffed digitization service.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://infosci.arizona.edu/colab-critical-archives-curation-collaborative",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Co-directors Jamie A. Lee and Zack Lischer-Katz — lab page",
+      "contact_url": "https://infosci.arizona.edu/colab-critical-archives-curation-collaborative",
+      "sources": [
+        "https://infosci.arizona.edu/colab-critical-archives-curation-collaborative"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "college-xrg",
+      "name": "XRG: Extended Reality & Games Lab",
+      "level": "College",
+      "category": "Hardware & compute",
+      "status": "Documented route",
+      "access": "Discuss XR, virtual/augmented reality and interaction research with the lab leads.",
+      "cost": "No general-use equipment rate or access entitlement published.",
+      "support": "Lila Boz and Ren Boz — lab leads listed on XRG page",
+      "limits": "Research lab, not a documented open GPU lab or college equipment-loan service; confirm scheduling and participation.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://infosci.arizona.edu/xrg-lab",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Lila Boz and Ren Boz — lab leads listed on XRG page",
+      "contact_url": "https://infosci.arizona.edu/xrg-lab",
+      "sources": [
+        "https://infosci.arizona.edu/xrg-lab"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "college-device-requirements",
+      "name": "College course technology requirements",
+      "level": "College",
+      "category": "Software & models",
+      "status": "Documented route",
+      "access": "Check the program-specific minimum hardware and operating-system requirements before designing an activity.",
+      "cost": "Student-owned device requirements; no provided machine or subsidy established.",
+      "support": "Course lead or faculty adviser; college office for routing",
+      "limits": "Requirements vary by degree. Device specifications do not establish college-owned inventory or access to loan equipment.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://infosci.arizona.edu/technology-requirements",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Course lead or faculty adviser; college office for routing",
+      "contact_url": "mailto:infosci@arizona.edu",
+      "sources": [
+        "https://infosci.arizona.edu/technology-requirements"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
       "id": "campus-hpc",
-      "name": "UArizona HPC",
+      "name": "Campus HPC: research CPU and GPU",
       "level": "University",
       "category": "Hardware & compute",
       "status": "Documented route",
-      "access": "Register an HPC account and join a PI group; class groups are documented.",
-      "cost": "No-cost standard allocations; shared limits apply.",
-      "support": "HPC Consult team / published support routes.",
-      "limits": "Class usage draws from the PI pool; queue waits and teaching capacity need validation.",
-      "funding": "University-supported service; college entitlement and current headroom unconfirmed.",
-      "source": "https://hpcdocs.hpc.arizona.edu/registration_and_access/group_management/",
-      "checked": "2026-10-19",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "access": "Eligible UArizona users register and join a faculty PI group. Published Puma standard allocation: 150,000 CPU-hours per PI group each month.",
+      "cost": "Standard allocation and consulting at no charge; GPU jobs use the same CPU-hour pool. Buy-in is a separate paid arrangement.",
+      "support": "HPC Consult — ServiceNow ticket",
+      "limits": "Shared, non-rollover allocation; queues and GPU memory constrain work. Instruction policy still names Ocelote only, although allocation notices say Ocelote retired Aug. 17, 2026. Teaching eligibility on current clusters is unresolved. Lynx/H200 specifications are published, but operating availability/allocation must be confirmed.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://hpcdocs.hpc.arizona.edu/resources/allocations/",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Research: confirm current hardware/accounting. Teaching: obtain HPC Consult confirmation of permitted cluster and terms before planning a class.",
+      "contact": "HPC Consult — ServiceNow ticket",
+      "contact_url": "https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d",
+      "sources": [
+        "https://hpcdocs.hpc.arizona.edu/resources/allocations/",
+        "https://hpcdocs.hpc.arizona.edu/resources/compute_resources/",
+        "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/",
+        "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-hpc-teaching",
+      "name": "Campus HPC: classroom policy needs clarification",
+      "level": "University",
+      "category": "Hardware & compute",
+      "status": "Conflicting documentation",
+      "access": "Semester class groups are documented and share the faculty PI allocation. Ask HPC Consult for the currently permitted teaching cluster.",
+      "cost": "No separate class allocation; the faculty research pool is shared.",
+      "support": "HPC Consult — instructor should open a ticket",
+      "limits": "Policy restricts instruction to Ocelote, while current notices state Ocelote is decommissioned. Do not infer Puma/Lynx classroom permission. No expedited assignment jobs or individual student support promised.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Resolve the retired-cluster / instruction-policy conflict and confirm support and simultaneous class access in writing.",
+      "contact": "HPC Consult — instructor should open a ticket",
+      "contact_url": "https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d",
+      "sources": [
+        "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/",
+        "https://hpcdocs.hpc.arizona.edu/resources/allocations/",
+        "https://hpcdocs.hpc.arizona.edu/registration_and_access/group_management/",
+        "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-hpc-storage",
+      "name": "HPC active storage and transfers",
+      "level": "University",
+      "category": "Data & stewardship",
+      "status": "Documented route",
+      "access": "HPC account: 50 GB home; PI group: 500 GB communal space. Temporary xdisk on request: 200 GB–20 TB, up to 300 days.",
+      "cost": "Standard spaces supplied with account/group; rental is a separate priced service.",
+      "support": "HPC Consult — ServiceNow ticket",
+      "limits": "HPC data are not backed up; xdisk is temporary and node /tmp is cleared after a job. Storage quotas do not provide preservation or regulated-data approval.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://hpcdocs.hpc.arizona.edu/storage_and_transfers/storage/hpc_storage/",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "HPC Consult — ServiceNow ticket",
+      "contact_url": "https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d",
+      "sources": [
+        "https://hpcdocs.hpc.arizona.edu/storage_and_transfers/storage/hpc_storage/",
+        "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-hpc-software",
+      "name": "HPC software, containers and shared model data",
+      "level": "University",
+      "category": "Software & models",
+      "status": "Documented route",
+      "access": "Use HPC modules, user environments and containers; shared datasets include Llama 2 and AlphaFold inputs.",
+      "cost": "Open-source tools may have no license charge; licensed products and model terms still apply. Compute uses the allocation.",
+      "support": "HPC Consult — software/setup questions",
+      "limits": "Availability varies by module/version. Llama 2 has its own community license; model memory/storage requirements can be substantial. A software listing is not permission for every use.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://hpcdocs.hpc.arizona.edu/software/common_datasets/",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "HPC Consult — software/setup questions",
+      "contact_url": "https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d",
+      "sources": [
+        "https://hpcdocs.hpc.arizona.edu/software/common_datasets/",
+        "https://hpcdocs.hpc.arizona.edu/software/overview/",
+        "https://hpcdocs.hpc.arizona.edu/software/popular_software/ollama/",
+        "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-hpc-consult",
+      "name": "HPC consulting and visualization support",
+      "level": "University",
+      "category": "RSE & personnel",
+      "status": "Documented route",
+      "access": "Open a ServiceNow ticket for onboarding, queue issues, code optimization and resource advice; request visualization help through its team.",
+      "cost": "HPC consulting is published as free of cost.",
+      "support": "HPC Consult ticket; visualization: vislab-consult@list.arizona.edu",
+      "limits": "HPC team support hours: weekdays 8 a.m.–5 p.m., excluding university holidays. Consultation is not an assigned engineer or individualized student homework support.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "HPC Consult ticket; visualization: vislab-consult@list.arizona.edu",
+      "contact_url": "https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d",
+      "sources": [
+        "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/",
+        "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-aiverde",
+      "name": "AI Verde: managed models, teams and courses",
+      "level": "University",
+      "category": "Software & models",
+      "status": "Documented route",
+      "access": "UArizona NetID required; faculty, staff, researchers and students request access/consultation from Mithun Paul. Chat and API interfaces documented.",
+      "cost": "Commercial tokens cost money; CyVerse sets course/team/user budgets on request. A no-cost allocation or on-premise model entitlement must be confirmed.",
+      "support": "Mithun Paul — mithunpaul@arizona.edu",
+      "limits": "Available models and limits are team-specific. On-premise and commercial routes differ; confirm data handling, permitted material, throughput and support. API documentation does not establish a configured free endpoint for this site.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://cyverse.org/ai-verde",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Ask about a small on-premise instruction model, zero-charge quota, team access, API/approved hosting and public-data request-drafting use.",
+      "contact": "Mithun Paul — mithunpaul@arizona.edu",
+      "contact_url": "mailto:mithunpaul@arizona.edu",
+      "sources": [
+        "https://cyverse.org/ai-verde",
+        "https://aiverde-docs.cyverse.ai/",
+        "https://aiverde-docs.cyverse.ai/api/api-key/"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
     },
     {
       "id": "campus-genai",
@@ -30,44 +322,242 @@
       "level": "University",
       "category": "Software & models",
       "status": "Documented route",
-      "access": "University NetID; campus service entry point.",
-      "cost": "Published no-cost campus access.",
-      "support": "Service documentation and university AI support.",
-      "limits": "Chat/model access is not a GPU training allocation. Check current data-use rules and features.",
-      "funding": "Campus service; operating funding and per-user quotas need confirmation.",
+      "access": "Active UArizona NetID; published FAQ describes limited early access. Check genai.arizona.edu for availability.",
+      "cost": "Published no-cost campus use.",
+      "support": "Responsible AI tools page and campus 24/7 IT support: 520-626-8324",
+      "limits": "Models/features may rotate; no guaranteed API, classroom concurrency or GPU-training allocation. Early-access conditions and data-specific exclusions apply; this differs from AI Verde.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
       "source": "https://responsibleai.arizona.edu/tools-support/u-gen-ai",
-      "checked": "2026-10-19",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
-    },
-    {
-      "id": "campus-data",
-      "name": "Libraries Data Cooperative",
-      "level": "University",
-      "category": "Data & stewardship",
-      "status": "Documented route",
-      "access": "Use the library consultation and data-support routes.",
-      "cost": "Project-specific cost/availability not established here.",
-      "support": "Data management, data science, digital scholarship and geospatial specialists.",
-      "limits": "Consultation does not establish dedicated engineering hours or permission to train on licensed material.",
-      "funding": "University Libraries service; dedicated project capacity unconfirmed.",
-      "source": "https://lib.arizona.edu/research/data",
-      "checked": "2026-10-19",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Responsible AI tools page and campus 24/7 IT support: 520-626-8324",
+      "contact_url": "https://responsibleai.arizona.edu/tools-support/u-gen-ai",
+      "sources": [
+        "https://responsibleai.arizona.edu/tools-support/u-gen-ai",
+        "https://it.arizona.edu/student-resources",
+        "https://responsibleai.arizona.edu/ai-tools-guide"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
     },
     {
       "id": "campus-software",
-      "name": "UITS software and technical services",
+      "name": "Campus software licensing",
       "level": "University",
       "category": "Software & models",
       "status": "Documented route",
-      "access": "Use the faculty/staff resource directory and service-specific eligibility.",
-      "cost": "Varies by product/license; verify the actual agreement.",
-      "support": "UITS and local IT routes, depending on service.",
-      "limits": "A campus software listing does not establish a college AI/API license or unrestricted student access.",
-      "funding": "Institutional licensing/service arrangements vary.",
-      "source": "https://it.arizona.edu/facultystaff-resources",
-      "checked": "2026-10-19",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "access": "Use the UITS software catalog and student/faculty service routes; check each product and affiliation.",
+      "cost": "Student page lists Microsoft 365, Google Apps and Adobe Creative Cloud without added software charge while enrolled; other products are free or discounted. Student services are supported by the IT & Library Fee.",
+      "support": "UITS 24/7 support — 520-626-8324",
+      "limits": "Eligibility, device counts, renewal and commercial/research use vary. Listed MATLAB/Autodesk etc. do not imply every license or API credit is included.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://it.arizona.edu/student-resources",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "UITS 24/7 support — 520-626-8324",
+      "contact_url": "https://it.arizona.edu/student-resources",
+      "sources": [
+        "https://it.arizona.edu/student-resources",
+        "https://it.arizona.edu/node/616"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-vcat",
+      "name": "VCAT and Tech Zone software access",
+      "level": "University",
+      "category": "Software & models",
+      "status": "Documented route",
+      "access": "VCAT supplies virtual applications through a browser; Tech Zone labs provide installed software. Instructors can request a lab software installation.",
+      "cost": "Campus student-service route; fee-supported. Product-specific access and installation charges, if any, must be checked.",
+      "support": "UITS 24/7 support — 520-626-8324",
+      "limits": "App/version and lab availability vary; not a general-purpose GPU allocation, unrestricted server or always-on research host.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://it.arizona.edu/tech-zone-software",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "UITS 24/7 support — 520-626-8324",
+      "contact_url": "https://it.arizona.edu/tech-zone-software",
+      "sources": [
+        "https://it.arizona.edu/tech-zone-software",
+        "https://it.arizona.edu/news/finding-resources-faculty",
+        "https://it.arizona.edu/student-resources"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-data",
+      "name": "Libraries Data Cooperative: Python, R and ML support",
+      "level": "University",
+      "category": "RSE & personnel",
+      "status": "Documented route",
+      "access": "Faculty, staff and students can consult library specialists on data science, visualization, programming and data management.",
+      "cost": "No project-specific fee or dedicated engineering allowance established by these pages.",
+      "support": "Sarah Stueve — sarahstueve@arizona.edu (Python/ML); Jeff Oliver — jcoliver@arizona.edu (R/Git/visualization)",
+      "limits": "Consultation, instruction and referrals; no dedicated developer hours, turnaround or ongoing operations commitment.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://lib.arizona.edu/research/data",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Sarah Stueve — sarahstueve@arizona.edu (Python/ML); Jeff Oliver — jcoliver@arizona.edu (R/Git/visualization)",
+      "contact_url": "https://lib.arizona.edu/research/data",
+      "sources": [
+        "https://lib.arizona.edu/research/data",
+        "https://lib.arizona.edu/research/data/data-science"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-digital-scholarship",
+      "name": "Digital scholarship and text/data mining",
+      "level": "University",
+      "category": "Data & stewardship",
+      "status": "Documented route",
+      "access": "Consult about corpora, text analysis, humanities data, metadata and digital editing; listed open tools include OpenRefine, Voyant, AntConc and CollectionBuilder.",
+      "cost": "Listed tools are free to use; sustained project implementation/support not priced here.",
+      "support": "Heather Froehlich — froehlich@arizona.edu",
+      "limits": "Tool availability does not clear copyright, dataset licensing, hosting, compute or staff time.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://lib.arizona.edu/research/data/digital-scholarship",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Heather Froehlich — froehlich@arizona.edu",
+      "contact_url": "mailto:froehlich@arizona.edu",
+      "sources": [
+        "https://lib.arizona.edu/research/data/digital-scholarship",
+        "https://lib.arizona.edu/research/plan/tdm-llm"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-data-licenses",
+      "name": "Library datasets, databases and reuse rights",
+      "level": "University",
+      "category": "Data & stewardship",
+      "status": "Documented route",
+      "access": "Use licensed resources under current UA affiliation and the specific agreement. Contact Collections before TDM or use with AI.",
+      "cost": "Institutional subscriptions cover authorized access; additional TDM/API rights or fees depend on the agreement.",
+      "support": "Library Collections — LBRY-collectionmanagement@email.arizona.edu",
+      "limits": "Reading access does not authorize bulk download, sharing, training or uploading to public AI tools. Each publisher agreement differs.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://lib.arizona.edu/research/plan/tdm-llm",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Library Collections — LBRY-collectionmanagement@email.arizona.edu",
+      "contact_url": "mailto:LBRY-collectionmanagement@email.arizona.edu",
+      "sources": [
+        "https://lib.arizona.edu/research/plan/tdm-llm"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-gis",
+      "name": "GIS software, geospatial data and consultation",
+      "level": "University",
+      "category": "Data & stewardship",
+      "status": "Documented route",
+      "access": "Use the Libraries GIS/data guides and repository; discuss ArcGIS, QGIS, R and spatial analysis with a specialist.",
+      "cost": "QGIS is open source; ArcGIS eligibility and project-specific data/service terms require checking. No universal paid-product entitlement inferred.",
+      "support": "Garrett Smith — garrettsmith@arizona.edu",
+      "limits": "Data licenses, service quotas and support capacity differ. A geospatial repository is not a general GPU or database-hosting award.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://lib.arizona.edu/research/data/geospatial",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Garrett Smith — garrettsmith@arizona.edu",
+      "contact_url": "mailto:garrettsmith@arizona.edu",
+      "sources": [
+        "https://lib.arizona.edu/research/data/geospatial",
+        "https://lib.arizona.edu/research/data"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-redata",
+      "name": "ReDATA: research data and code preservation",
+      "level": "University",
+      "category": "Data & stewardship",
+      "status": "Documented route",
+      "access": "Active faculty/staff, enrolled students and certain DCCs with valid NetID/library privileges can submit eligible final research materials for curatorial review.",
+      "cost": "FAQ: no cost to individual UArizona researchers; quota increases depend on need and availability.",
+      "support": "ReDATA team — data-management@arizona.edu",
+      "limits": "Non-sensitive research materials and rights required; curatorial review mandatory. Not an active database/backup service. Published notice reports intermittent traffic-related errors and automated download restrictions; not a breach.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://lib.arizona.edu/research/data/redata",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "ReDATA team — data-management@arizona.edu",
+      "contact_url": "mailto:data-management@arizona.edu",
+      "sources": [
+        "https://lib.arizona.edu/research/data/redata",
+        "https://lib.arizona.edu/research/data/redata/faqs",
+        "https://lib.arizona.edu/research/data/redata/deposit"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-dsi-rse",
+      "name": "Data Science Institute / CyVerse research software expertise",
+      "level": "University",
+      "category": "RSE & personnel",
+      "status": "Contact reconfirmation needed",
+      "access": "Indexed official DSI pages describe project/proposal consultation and cross-college teams; their live hostnames did not resolve during this review. Reconfirm the current route before relying on it.",
+      "cost": "No blanket free engineering-hour entitlement or public project rate established; scope and funding must be agreed.",
+      "support": "DSI — RII-datascienceinstitute@arizona.edu",
+      "limits": "Named engineering expertise is not an available appointment or staffed help desk for every course. Confirm capacity, deliverables, maintenance and funding.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://data7.arizona.edu/contact-us",
+      "checked": "2026-10-19 — indexed official text retrieved; direct live verification unsuccessful",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "Published DSI contact — RII-datascienceinstitute@arizona.edu (current operation to reconfirm)",
+      "contact_url": "mailto:RII-datascienceinstitute@arizona.edu",
+      "sources": [
+        "https://data7.arizona.edu/contact-us",
+        "https://datascience.arizona.edu/directory"
+      ],
+      "verification": "Official-source search/fetch text supplied the contact and engineering roles, but direct checks of data7.arizona.edu and datascience.arizona.edu failed DNS resolution. This is an availability limitation, not evidence of service closure. No available staff hours verified."
+    },
+    {
+      "id": "campus-cct",
+      "name": "CCT Data Science: consultation and research software",
+      "level": "University",
+      "category": "RSE & personnel",
+      "status": "Documented route",
+      "access": "Drop-in/workshop routes and grant collaboration documented. The 80-hour Data Science Incubator is limited to ALVSCE faculty, staff and students.",
+      "cost": "Longer collaboration can use hired effort or a co-PI grant arrangement; Information Science eligibility for other services and rates must be confirmed.",
+      "support": "CCT Data Science team — current contact/consultation routes",
+      "limits": "The ALVSCE incubator is not an 80-hour entitlement for Information Science. Training/drop-in help differs from funded long-term engineering.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://datascience.cct.arizona.edu/",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "CCT Data Science team — current contact/consultation routes",
+      "contact_url": "https://datascience.cct.arizona.edu/",
+      "sources": [
+        "https://datascience.cct.arizona.edu/"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+    },
+    {
+      "id": "campus-catalyst",
+      "name": "CATalyst Studios: XR, making and class partnerships",
+      "level": "University",
+      "category": "Hardware & compute",
+      "status": "Documented route",
+      "access": "Use Main Library makerspace hours, reserve eligible spaces/VR equipment, or plan a class visit with the team.",
+      "cost": "Free workshops are advertised; material/equipment-specific charges and eligibility must be checked.",
+      "support": "CATalyst Studios — contact and consultation booking",
+      "limits": "Some machines require authorization classes. Reservations, supervision and supplies constrain access; no general-purpose compute/GPU reservation inferred.",
+      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "source": "https://lib.arizona.edu/catalyst",
+      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
+      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
+      "contact": "CATalyst Studios — contact and consultation booking",
+      "contact_url": "https://lib.arizona.edu/catalyst/contact",
+      "sources": [
+        "https://lib.arizona.edu/catalyst",
+        "https://lib.arizona.edu/catalyst/contact"
+      ],
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
     },
     {
       "id": "campus-policy",
@@ -82,7 +572,13 @@
       "funding": "University guidance; not a compute or staff allocation.",
       "source": "https://responsibleai.arizona.edu/ai-tools-guide",
       "checked": "2026-10-19",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner.",
+      "contact": "Responsible AI campus support and current training organizers",
+      "contact_url": "https://responsibleai.arizona.edu/",
+      "sources": [
+        "https://responsibleai.arizona.edu/ai-tools-guide"
+      ],
+      "verification": "Published guidance/training route only; not a compute or staff allocation."
     },
     {
       "id": "campus-training",
@@ -97,52 +593,13 @@
       "funding": "University initiative; event availability varies.",
       "source": "https://it.arizona.edu/news/new-u-ai-resources",
       "checked": "2026-10-19",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
-    },
-    {
-      "id": "college-hardware",
-      "name": "College-managed hardware and labs",
-      "level": "College",
-      "category": "Hardware & compute",
-      "status": "Inventory pending",
-      "access": "Identify local resource owners, users and request processes.",
-      "cost": "Unknown; inventory purchase, maintenance and replacement commitments.",
-      "support": "Owner and coverage to identify.",
-      "limits": "No verified college hardware roster or spare capacity is asserted.",
-      "funding": "To document.",
-      "source": "",
-      "checked": "Not yet verified; resource owner identification pending",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
-    },
-    {
-      "id": "college-rse",
-      "name": "College RSE and technical support capacity",
-      "level": "College",
-      "category": "RSE & personnel",
-      "status": "Inventory pending",
-      "access": "Map skills, appointments, existing duties and realistic support windows.",
-      "cost": "Unknown; record hours separately from any approved funding.",
-      "support": "Named staff/roles and escalation to confirm.",
-      "limits": "No available FTE, service commitment or staffing shortfall has been measured.",
-      "funding": "To document; do not assume new staff or volunteer time.",
-      "source": "",
-      "checked": "Not yet verified; resource owner identification pending",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
-    },
-    {
-      "id": "college-data",
-      "name": "College software, datasets and agreements",
-      "level": "College",
-      "category": "Data & stewardship",
-      "status": "Inventory pending",
-      "access": "Inventory licenses, data rights, storage locations and owners.",
-      "cost": "Unknown; capture renewal, API and data-access obligations.",
-      "support": "Software/data owners to identify.",
-      "limits": "Research access does not automatically permit AI training, reuse or class distribution.",
-      "funding": "To document.",
-      "source": "",
-      "checked": "Not yet verified; resource owner identification pending",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner.",
+      "contact": "Responsible AI campus support and current training organizers",
+      "contact_url": "https://responsibleai.arizona.edu/",
+      "sources": [
+        "https://it.arizona.edu/news/new-u-ai-resources"
+      ],
+      "verification": "Published guidance/training route only; not a compute or staff allocation."
     },
     {
       "id": "access",
@@ -157,7 +614,13 @@
       "funding": "Federally supported allocation route.",
       "source": "https://access-ci.org/",
       "checked": "Earlier compute-ledger review; not newly rechecked",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner.",
+      "contact": "ACCESS support and selected resource provider",
+      "contact_url": "https://access-ci.org/",
+      "sources": [
+        "https://access-ci.org/"
+      ],
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
     },
     {
       "id": "nairr",
@@ -172,7 +635,13 @@
       "funding": "Federal pilot opportunity.",
       "source": "https://nairrpilot.org/",
       "checked": "Earlier compute-ledger review; recheck call before use",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner.",
+      "contact": "NAIRR program / current Classroom call",
+      "contact_url": "https://nairrpilot.org/",
+      "sources": [
+        "https://nairrpilot.org/"
+      ],
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
     },
     {
       "id": "osg",
@@ -187,7 +656,13 @@
       "funding": "Federally supported/shared infrastructure.",
       "source": "https://osg-htc.org/ospool/",
       "checked": "Earlier compute-ledger review; recheck before use",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner.",
+      "contact": "OSPool facilitation / support",
+      "contact_url": "https://osg-htc.org/ospool/",
+      "sources": [
+        "https://osg-htc.org/ospool/"
+      ],
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
     },
     {
       "id": "mesa",
@@ -202,7 +677,13 @@
       "funding": "IDSS/project and underlying service support differ.",
       "source": "https://idss-mesa.github.io/",
       "checked": "Earlier compute-ledger review; recheck before use",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner.",
+      "contact": "MESA project team / underlying service provider",
+      "contact_url": "https://idss-mesa.github.io/",
+      "sources": [
+        "https://idss-mesa.github.io/"
+      ],
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
     },
     {
       "id": "free-gpu",
@@ -217,7 +698,13 @@
       "funding": "Provider-sponsored tiers or promotional credits.",
       "source": "classroom-resources.html",
       "checked": "Earlier compute-ledger review; recheck before use",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner.",
+      "contact": "Provider-specific help routes in comparison",
+      "contact_url": "classroom-resources.html",
+      "sources": [
+        "classroom-resources.html"
+      ],
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
     },
     {
       "id": "preservation",
@@ -232,7 +719,13 @@
       "funding": "Institutional and provider arrangements differ.",
       "source": "repository-plan.html",
       "checked": "Earlier compute-ledger review; recheck before use",
-      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner."
+      "next_action": "Confirm eligibility, available capacity, support commitment and funding with the resource owner.",
+      "contact": "Service-specific contacts in continuity plan",
+      "contact_url": "repository-plan.html",
+      "sources": [
+        "repository-plan.html"
+      ],
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
     }
   ],
   "deliverables": [
@@ -267,13 +760,13 @@
   ],
   "timeline": [
     {
-      "when": "October\u2013November 2026",
+      "when": "October–November 2026",
       "title": "Build the baseline",
       "work": "Confirm scope and resource owners; review campus routes; gather research, teaching and student perspectives.",
       "output": "Versioned inventory, agreed input process and a list of unknowns."
     },
     {
-      "when": "November\u2013end of Fall 2026 semester",
+      "when": "November–end of Fall 2026 semester",
       "title": "Draft all four deliverables",
       "work": "Validate significant barriers; compare approaches; separate college actions from university dependencies.",
       "output": "Preliminary inventory, needs assessment, portfolio and recommendations."
@@ -290,5 +783,24 @@
       "work": "Prepare the shared-service, policy, staffing and infrastructure questions that require university participation.",
       "output": "College briefing for anticipated university-wide planning; timing not yet set."
     }
-  ]
+  ],
+  "college": "College of Information Science",
+  "point_person": {
+    "name": "Barney Maccabe",
+    "role": "Working-group point person; Associate Dean of Research",
+    "email": "maccabe@arizona.edu",
+    "profile": "https://infosci.arizona.edu/people/barney-maccabe",
+    "basis": "Working-group point person designated by Greg Chism; public college profile verifies role and email.",
+    "checked": "2026-10-19"
+  },
+  "inventory_review": {
+    "date": "2026-10-19",
+    "method": "Primary university/college/CyVerse documentation, source captures and direct URL checks. No account login, contact response or capacity test.",
+    "key_unknowns": [
+      "College asset/license register and committed support hours",
+      "HPC classroom policy refers to retired Ocelote; current instruction permission unresolved",
+      "AI Verde zero-cost quota, model selection and approved API hosting unconfirmed"
+    ],
+    "request_assistant": "Local request scaffold and optional AI Verde prompt export. No automatic LLM connection, credentials or paid inference."
+  }
 }

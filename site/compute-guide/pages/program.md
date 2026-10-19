@@ -4,17 +4,19 @@ hide:
 ---
 <div class="guide-eyebrow">COLLEGE OF INFORMATION SCIENCE / FALL 2026–SPRING 2027</div>
 
-# AI Resources Working Group
+# Computing Resources Working Group
 
-<div class="guide-intro">Understand what we have. Identify what we need. Find practical, sustainable ways to support AI research and instruction.</div>
+<div class="guide-intro">Computing for the College of Information Science. Understand what we have, identify what we need, and support research and teaching sustainably.</div>
+
+**Working-group point person:** [Barney Maccabe](https://infosci.arizona.edu/people/barney-maccabe), Associate Dean of Research · [maccabe@arizona.edu](mailto:maccabe@arizona.edu).
 
 <div class="guide-actions"><a class="guide-button" href="inventory.html">Explore the inventory →</a><a href="needs.html">Describe a need →</a><a href="deliverables.html">Review the deliverables →</a></div>
 
 ## Our focus
 
-AI research and teaching depend on infrastructure, tools, data and people. The group considers **hardware, software, data, cloud services, research software engineers (RSEs), technical support, collaboration and shared infrastructure** across the college and university.
+Computing supports the full range of our college’s research and teaching: **data science, AI and machine learning, library and information science, digital scholarship, games, extended reality and other information-centered work**. The group considers **hardware, software, data, cloud services, research software engineers (RSEs), technical support, collaboration and shared infrastructure** across the college and university.
 
-Growing demand, rising costs and uncertain funding make access and sustainable support important planning questions. Our focus is the needs, capabilities and perspectives of Information Science faculty and students.
+Growing demand, rising costs and uncertain funding make access and sustainable support important planning questions. Our focus is the needs, capabilities and perspectives of **College of Information Science faculty and students**. AI is one part of this broader computing remit.
 
 <div class="guide-route"><div><span>01 / LANDSCAPE</span><strong>Understand current resources</strong><p>Identify what is available, who can use it, and how it is supported and funded.</p></div><div><span>02 / NEEDS</span><strong>Identify gaps and opportunities</strong><p>Describe current and anticipated work, barriers and ways to improve use of what exists.</p></div><div><span>03 / APPROACHES</span><strong>Explore sustainable options</strong><p>Compare technologies, shared services, partnerships, staffing models and innovation.</p></div></div>
 
@@ -28,6 +30,10 @@ Growing demand, rising costs and uncertain funding make access and sustainable s
 | [Recommendations](recommendations.html) | College actions and opportunities needing university participation |
 
 **Timing:** preliminary drafts of all four items by the end of the Fall 2026 semester; refinement and intra-college circulation early in Spring 2027. [See milestones →](timeline.html)
+
+## Start with college and campus resources
+
+The [inventory](inventory.html) covers college IT and research labs, campus CPU/GPU computing, AI Verde, software, data and RSE support. Each entry identifies a contact and distinguishes documented terms from unanswered questions. Filter to **College** to review local capabilities and missing inventory details first.
 
 ## Use this site
 

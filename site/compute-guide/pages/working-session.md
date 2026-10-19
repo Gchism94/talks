@@ -27,4 +27,4 @@ Update the draft’s date and status. Separate a decision from an open question 
 - How will faculty, students and technical staff contribute, and how will missing perspectives be recorded?
 - Who will review the preliminary drafts before early Spring 2027 circulation?
 
-[Four deliverables](deliverables.html) · [Working packet](ai-working-group-packet.txt)
+[Four deliverables](deliverables.html) · [Working packet](computing-working-group-packet.txt)

@@ -17,3 +17,7 @@
 For each candidate, document instructional/research benefit, users served, accessibility, data suitability, required effort, recurring costs, funding status, ownership and a reversible test. Do not rank options using invented cost savings or unmeasured capacity.
 
 [Draft recommendations](recommendations.html) · [Resource inventory](inventory.html) · [Supporting compute pilot](pilot-plan.html)
+
+## Help prepare resource requests
+
+The [needs tool](needs.html) produces a local request draft with documented resource routes and open questions. An optional prompt supports manual drafting in AI Verde after access and data terms are confirmed. A background LLM connection is conditional on a suitable lightweight model, a confirmed zero-cost quota, approved hosting and review of output quality. No model is connected to this site.

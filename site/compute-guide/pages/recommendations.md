@@ -24,4 +24,4 @@ Attach the problem and evidence, users served, owner role, dependencies, effort,
 
 The existing pilot’s **$0 cash and Greg’s 10 total hours/week** apply to that pilot. They are not a measured college budget or staffing ceiling. Do not assume funding or available staff for these broader recommendations.
 
-[Recommendation template](ai-recommendations-template.csv) · [Needs assessment](needs-assessment.html) · [Milestones](timeline.html)
+[Recommendation template](computing-recommendations-template.csv) · [Needs assessment](needs-assessment.html) · [Milestones](timeline.html)
