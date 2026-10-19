@@ -196,3 +196,46 @@ Do not reuse Beam’s June free-$30 comparison as current eligibility: its live 
 `talk/report.html` now opens with eight resource/status groups, ten selected dated losses/reductions in five year groups (2022–2026), separate undated Colab and upcoming OSF notes, and the ACCESS CPU/GPU program response. The complete report, 181-record ledger and focused references remain linked below. Counts are comparisons/source records/platform-product families, not a census of free providers or measured market-wide compute. Available provider offerings are distinct from tested institutional capacity; all thirteen gates remain planned.
 
 Canonical synopsis data is `report_overview` in `docs/education-compute/evidence.json`. Its renderer is `scripts/compute_report_overview.py`, called by `report_hub(data)` in `compute_program_views.py`; the program builder still runs last. Report-only selectors in the shared CSS preserve the Arizona design and support mobile, print and no-JavaScript reading. Twelve selected primary pages were rechecked October 19 and recorded with `rechecked_at`; original dates/scopes remain and other sources retain their earlier check dates. No provider account, benchmark or award is implied by this synthesis. Latest verification/release is `reportOverviewExtension`; raw checks/screenshots remain local. Preserve the unrelated presenter-review branch and publish education changes through the retained managed worktree.
+
+
+## Concise resource guide and needs tool — October 19, 2026
+
+The current public guide is generated with pinned Zensical 0.0.71. Read `talk/program.html`,
+`talk/needs.html` and `talk/publishing.html`. Four sections organize short task-based
+pages: Start here, Resources, Plan, Report. Existing page addresses, the five-slide
+talk, original full text report, 181-record ledger and downloads remain. Long source
+records/report detail are collapsed; evidence has a local search filter and deep
+links open the intended record. Resource maps are filterable. Built-in site search
+indexes concise pages; the long audit/ledger have dedicated entry points.
+
+Canonical new files: `../site/compute-guide/` and `../scripts/build_compute_guide.py`.
+The generator reads the existing ledger/pilot JSON and overlays reviewed HTML/assets
+into `../docs/education-compute/`. Generated Markdown/build files stay ignored in
+`output/education-compute/guide-source/`. The program builder now requires the pinned
+Zensical executable and finishes with the guide build; see parent README. Do not
+run historical intermediate builders and publish without this final step.
+
+Needs tool: browser-only, no upload or persistence. Classroom and research presets
+are unmeasured examples; per-run CPU core-hours and GPU device-hours are distinct.
+Peak resource counts and logical active/independent-copy storage are separate.
+Use separate scenarios for different groups/workloads; continuous-service uptime
+needs additional sizing. The tool follows existing benchmark arithmetic but does
+not ingest/validate run evidence, infer ACCESS credits, approve providers/data,
+submit a request, award funding or mark a class gate complete. Every export keeps
+`eligible_for_submission: false`. Greg’s ten-hour total and zero cash remain; TA
+hours are separate, unconfirmed commitments. Sensitive data, missing backups and
+support above the envelope require explicit resolution.
+
+Publishing assessment compares Zensical, Astro Starlight, Quarto and custom HTML,
+using official primary docs reviewed October 19. MESA’s public landing page was
+visually reviewed as a design reference; no MESA code or private content is copied.
+Zensical version upgrades require checking navigation/search/customization and
+compatibility; GitHub Pages remains the existing host. All 13 gates remain planned.
+Latest verification/release: `conciseGuideExtension` in validation.json. Preserve
+the unrelated ant presenter branch and use the attached publication worktree.
+
+Offline QA caught the default external worker shim: iframe-worker 1.0.4 and its
+MIT license are now vendored under the guide assets. Final file-protocol tests
+passed search, both needs presets, local fonts, 181 source records and five slides
+with all HTTP/HTTPS blocked and zero remote requests. Exported HTML whitespace
+is normalized; source/reference anchors and all publication favicon variants persist.

@@ -115,4 +115,13 @@ def build():
     print('Built cohesive overview, staged timeline, tools and separate report/evidence views, shared navigation, request text, budget/readiness CSV and program JSON')
 
 
-if __name__=='__main__':build()
+if __name__=='__main__':
+    import argparse, shutil
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--zensical',default=shutil.which('zensical'),help='Pinned Zensical executable; install site/compute-guide/requirements.txt')
+    args=parser.parse_args()
+    if not args.zensical:parser.error('Install site/compute-guide/requirements.txt and activate its environment, or pass --zensical.')
+    from build_compute_guide import build as build_guide, check_engine
+    check_engine(args.zensical)
+    build()
+    build_guide(args.zensical)

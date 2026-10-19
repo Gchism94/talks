@@ -41,6 +41,7 @@ def build():
     text += '\nCLASSROOM 50 AND ARIZONA DESIGN | October 13, 2026\nclassroom50.html directly assesses the workable successor, external stewardship, organization control, unchanged Codespaces limits and pre-adoption checks. Source ledger: 163 records; 14 resource comparisons. The shared site and five-slide talk use Arizona navy, red, white and offline open-license typography inspired by infosci.arizona.edu. No adoption, grant, provider benchmark or integration is claimed.\n'
     text += '\nMODAL AND SIMILAR PLATFORMS | October 16, 2026\nOpen serverless-compute.html for nine provider assessments. The ledger now has 181 records and 22 resource comparisons. Modal has conditional monthly compute credits but requires a payment method; no purchases, accounts, provider jobs or grant applications were made. Preserve all zero-cash, ten-hour and ACCESS route constraints.\n'
     text += '\nREPORT SUMMARY OVERVIEW | October 19, 2026\nreport.html now opens with eight resource/status groups, a selected 2022–2026 loss/reduction history, a separately labeled Colab observation and upcoming OSF restrictions, plus the ACCESS response. All 181 records and detailed research links remain. Provider availability is not classroom readiness.\n'
+    text += '\nCONCISE COMPUTE GUIDE | October 19, 2026\nprogram.html now uses a pinned Zensical guide with task-based navigation and client-side search. needs.html estimates research/classroom CPU core-hours, GPU device-hours, peak demand, storage and support, with text/JSON exports. publishing.html compares Zensical, Starlight and Quarto. Estimates are not measurements or awards. All 181 records and the five-slide deck remain.\n'
     start.write_text(text)
     archive = OUT / 'teaching-on-borrowed-compute.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
@@ -59,6 +60,8 @@ def build():
     for name in ['education-compute-pilot.json','education-compute-program.css','education-compute-program.js']:
         copy(ROOT / 'site' / name, Path('source') / name)
     copy(ROOT / 'site/covers/education-compute.png', Path('source/cover.png'))
+    for src in sorted((ROOT/'site/compute-guide').rglob('*')):
+        if src.is_file() and not any(x in src.parts for x in ['.cache','_site','__pycache__']): copy(src,Path('source/compute-guide')/src.relative_to(ROOT/'site/compute-guide'))
     for src in sorted((ROOT / 'docs/education-compute').rglob('*')):
         if src.is_file(): copy(src, Path('review/published-export') / src.relative_to(ROOT / 'docs/education-compute'))
     for src in sorted((ROOT/'benchmarks/education-compute').iterdir()):
@@ -75,7 +78,7 @@ def build():
         elif src.suffix == '.zip': target = Path('.')
         else: target = Path('review')
         copy(src, target / src.name)
-    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','compute_program_views.py','compute_classroom50.py','compute_serverless.py','compute_report_overview.py','build_compute_pilot_pdfs.py','build_compute_benchmarks.py','build_site.py','check_site.py','package_compute_review.py']:
+    for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','compute_program_views.py','compute_classroom50.py','compute_serverless.py','compute_report_overview.py','build_compute_guide.py','test_compute_needs.cjs','build_compute_pilot_pdfs.py','build_compute_benchmarks.py','build_site.py','check_site.py','package_compute_review.py']:
         copy(ROOT / 'scripts' / name, Path('review/builders') / name)
     for src in sorted((ROOT / 'output/playwright').iterdir()):
         if src.is_file() and src.name.startswith(('education-compute-','repositories-','service-evidence-','codabench-','federal-','assessment-','pilot-')):

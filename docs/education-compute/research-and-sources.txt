@@ -2615,3 +2615,25 @@ Hugging Face Inference Providers: current free-account credits
 Current pricing lists no monthly Inference Providers credits for Free users; purchased credits or a paid subscription are required. Paid Pro/Team/Enterprise plans include separate credits.
 Scope: This is the routed inference API, not the ZeroGPU/Spaces daily allowance. Do not infer a historical withdrawal date or universal closure from this current quota. General marketing and older snippets still describe free-tier access.
 https://huggingface.co/docs/inference-providers/pricing
+
+
+CONCISE COMPUTE GUIDE AND PUBLISHING ASSESSMENT | October 19, 2026
+The guide now uses pinned Zensical 0.0.71 on the existing GitHub Pages host. Short task-based pages, client-side search, resource/evidence filters and collapsed audit detail preserve the original URLs, five-slide talk and downloads. MESA's public landing page informed direct headings, spacing and simple actions; its code/private content was not copied.
+
+Publishing alternatives: Zensical fits the Python/static documentation workflow with search and custom CSS/JavaScript. Astro Starlight is a strong component-oriented alternative but adds a Node/Astro workflow. Quarto is useful when notebook/report authoring becomes central. Custom HTML retains maximum control but requires maintaining navigation/search. These are authoring engines, not compute resources. Version pinning and upgrade compatibility checks remain necessary.
+
+needs.html provides local classroom/research planning examples: runs x wall hours x configured cores or GPU devices x allowance. Peak resources and logical storage/copies are separate. It exports all assumptions to text/JSON, flags sensitive-data permissions, support over ten hours and missing backups, and does not infer provider credits or approve readiness. Different groups/courses require separate scenarios; continuous-service uptime needs separate sizing. Input evidence is self-reported. Every export remains ineligible for submission. Use actual benchmark results and target replay next.
+
+All 13 classroom checks remain planned. No provider job, award, account, purchase, grant submission or classroom deployment is established. ACCESS remains the intended CPU/GPU classroom route; campus AWS is only component testing; free GPUs support preliminary benchmarks. Zero cash and ten total Greg hours/week still apply; TA/lead effort is separate.
+
+Publishing/design primary references reviewed October 19, separate from the 181-record compute ledger:
+https://idss-mesa.github.io/
+https://zensical.org/docs/
+https://zensical.org/docs/customization/
+https://zensical.org/docs/setup/search/
+https://zensical.org/docs/publish-your-site/
+https://zensical.org/docs/compatibility/mkdocs/migration/
+https://zensical.org/docs/compatibility/mkdocs/plugins/
+https://starlight.astro.build/
+https://quarto.org/docs/websites/
+https://pypi.org/pypi/zensical/json

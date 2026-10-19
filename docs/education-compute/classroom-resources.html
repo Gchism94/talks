@@ -1,3 +1,1230 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Codabench &amp; classroom alternatives</title><link rel="icon" href="../assets/favicons/talk.svg" type="image/svg+xml"><link rel="icon" href="../assets/favicons/talk-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/favicons/talk-180.png" sizes="180x180"><style>body{font:17px/1.55 system-ui;margin:0;background:#f3eddf;color:#292b36}main{max-width:1180px;margin:auto;padding:35px 24px 60px}a{color:#274fa3}h1{font-size:clamp(30px,5vw,48px);line-height:1.15}table{border-collapse:collapse;width:100%;font-size:15px}th,td{padding:15px;text-align:left;vertical-align:top;border-bottom:1px solid #aaa;min-width:190px}.degree-table-scroll{overflow:auto}.degree-platform-ledger{margin-top:30px}@media print{body{font-size:11px}main{padding:0}td,th{min-width:0;padding:8px}tr{break-inside:avoid}}
-.resource-filters{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.resource-filters button{font-size:14px;padding:8px 12px}.resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.resource-card{border:1px solid var(--line,#c5c3ba);border-radius:8px;padding:20px;min-width:0}.resource-card[hidden]{display:none}.resource-card h3{font-size:27px;margin:8px 0 14px}.resource-card p{font-size:15px;line-height:1.55;margin:10px 0}.resource-card .resource-tag{font-size:12px;color:var(--blue,#274fa3);font-weight:650}.resource-card .resource-limit{border-top:1px solid var(--line,#c5c3ba);padding-top:12px}.resource-card .resource-refs{font-size:12px;overflow-wrap:anywhere}.resource-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center;margin:22px 0}.resource-flow div{border-top:3px solid var(--blue,#274fa3);padding:12px 8px}.resource-flow strong,.resource-flow span{display:block}.resource-flow strong{font-size:19px}.resource-flow span{font-size:13px;margin-top:7px}.resource-callout{font-size:16px;line-height:1.6;padding:16px 18px;border-left:3px solid var(--blue,#274fa3);background:#274fa30a;margin:20px 0}.resource-links{display:flex;gap:10px;flex-wrap:wrap}.resource-links button{font-size:13px;padding:5px 10px}@media(max-width:700px){.resource-grid{grid-template-columns:1fr}.resource-flow{gap:4px}.resource-flow strong{font-size:16px}.resource-flow span{font-size:11px}}@media print{.resource-grid{display:block}.resource-card{break-inside:avoid;margin-bottom:12px}.resource-filters{display:none}}
-</style><!-- program-chrome-start --><link rel="stylesheet" href="program.css"><!-- program-chrome-end --></head><body><!-- program-chrome-start --><a class="program-skip" href="#program-content">Skip to content</a><header class="program-header"><div class="program-university-bar"><div>THE UNIVERSITY OF ARIZONA</div></div><div class="program-top"><a class="program-brand" href="program.html">College of Information Science<small>Computing for teaching · planning proposal</small></a><span class="program-pill">Plan in preparation</span></div><nav class="program-nav" aria-label="Program navigation"><a href="program.html">Overview</a><a href="timeline.html">Staged plan</a><a href="resource-library.html" aria-current="page">Classroom tools</a><a href="budget.html">Hours & funding</a><a href="report.html">Report & evidence</a><a href="index.html">Talk</a></nav></header><!-- program-chrome-end --><main id="program-content" class="program-main"><p><a href="index.html#3">← Talk</a> · <a href="evidence.html">Evidence appendix</a></p><h1>Codabench &amp; classroom alternatives</h1><p class="source-intro">Classroom 50 and Codespaces checked October 13; Modal and eight similar platforms checked October 16; earlier resource comparisons retain October 11 dates. <a href="serverless-compute.html">Cloud credits and paid-service boundaries ↗</a>. Free access supports particular assignments; it does not reserve a whole class or fund a semester service.</p><div class="resource-flow" aria-label="Classroom workflow"><div><strong>1 · Develop</strong><span>CPU / notebook / GPU quota</span></div><b aria-hidden="true">→</b><div><strong>2 · Submit</strong><span>Predictions or packaged code</span></div><b aria-hidden="true">→</b><div><strong>3 · Evaluate</strong><span>Scoring queue + leaderboard</span></div></div><p class="resource-callout"><strong>Codabench:</strong> free competition hosting and a shared CPU queue with a 20-minute job cap. Organizers supply their own queue for code submissions. GPU workers require separately supplied compute.</p><div class="resource-grid"><article class="resource-card" data-resource-category="manage"><p class="resource-tag">Free, open-source assignment workflow · evaluate before adoption</p><h3>Classroom 50</h3><p>Workable successor for GitHub Classroom assignment distribution, repositories, submissions, feedback and grading.</p><p class="resource-limit"><strong>Boundary:</strong> Fifty Foundation project and hosted app are not ours. Requires a Team/Enterprise organization; check education eligibility. No additional Codespaces compute; Actions grading has separate quotas. ACCESS remains the CPU/GPU classroom route.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://github.com/foundation50/classroom50">Classroom 50: project and license</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/foundation50/classroom50/wiki/Prerequisites-and-GitHub-Education">Classroom 50: prerequisites and education eligibility</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/foundation50/classroom50/wiki/Managing-Actions-Cost">Classroom 50: managing Actions cost</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/billing/concepts/product-billing/github-codespaces">Codespaces · free personal-account quotas</a></p></article><article class="resource-card" data-resource-category="evaluate"><p class="resource-tag">Free benchmark hosting; compute depends on queue</p><h3>Codabench</h3><p>Prediction scoring, reproducible code benchmarks and common test environments.</p><p class="resource-limit"><strong>Boundary:</strong> Shared CPU scoring jobs ≤20 minutes. Organizers supply queues for code submissions and all GPU workers; no GPU notebook or whole-class reservation.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://www.codabench.org/">Codabench · free benchmark hosting and bounded CPU scoring</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.codabench.org/latest/Organizers/Running_a_benchmark/Compute-Worker-Management---Setup/">Codabench · organizer-supplied CPU / GPU workers</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.codabench.org/latest/Organizers/Running_a_benchmark/Queue-Management/">Codabench · shared and dedicated queues</a></p></article><article class="resource-card" data-resource-category="evaluate"><p class="resource-tag">Free self-service hosts and participants</p><h3>Kaggle Community Competitions</h3><p>Prediction-file competitions with live leaderboards; judged hackathons for open-ended projects.</p><p class="resource-limit"><strong>Boundary:</strong> Training happens elsewhere or in separately limited notebooks. Restricted-email competitions disable notebooks by default; community hosting has no hands-on support.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/c/about/community">Kaggle · no-cost Community Competitions</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/docs/competitions-setup">Kaggle · competition access and notebook limits</a></p></article><article class="resource-card" data-resource-category="evaluate"><p class="resource-tag">Advertised free for courses ≤50 students</p><h3>CodeGrade</h3><p>Programming labs with browser editing, immediate autograding and instructor feedback.</p><p class="resource-limit"><strong>Boundary:</strong> Check free-plan execution/LMS limits and roster scope. No verified free GPU entitlement or campus deployment; grading records need approved retention.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://www.codegrade.com/landing/free">CodeGrade · bounded free classroom autograding</a></p></article><article class="resource-card" data-resource-category="evaluate"><p class="resource-tag">Adjacent project; current free entitlement unverified</p><h3>ChaGrade</h3><p>Challenge-linked individual/team homework and instructor grading beyond leaderboard scores.</p><p class="resource-limit"><strong>Boundary:</strong> Live page labels version 0.1 / Work In Progress. Support, quotas and current Codabench integration need verification; not a ready college-wide baseline.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://chagrade.lri.fr/">ChaGrade · challenge-linked classroom workflow</a></p></article><article class="resource-card" data-resource-category="evaluate"><p class="resource-tag">Hosted service paid; open-source self-hosting</p><h3>EvalAI</h3><p>Custom prediction/code evaluation and organizer-controlled remote workers.</p><p class="resource-limit"><strong>Boundary:</strong> Hosted plans $125–850/month; remote evaluation $100/month plus own compute. Self-hosting requires funded staff, infrastructure and storage. No verified hosted free tier.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://evalai.readthedocs.io/en/latest/01-getting-started/pricing.html">EvalAI · paid hosted challenge plans</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/Cloud-CV/EvalAI">EvalAI · open-source self-hosting</a></p></article><article class="resource-card" data-resource-category="legacy"><p class="resource-tag">Retired at end of 2025; successor available</p><h3>CodaLab Competitions</h3><p>Historical challenge service; migrate compatible competition bundles to Codabench.</p><p class="resource-limit"><strong>Boundary:</strong> New account required; leaderboards do not transfer automatically. Preserve submissions/results separately. Separate CodaLab Worksheets is not covered.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://docs.codabench.org/latest/Newsletters_Archive/CodaLab-in-2025/">CodaLab Competitions · phased out in 2025</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.codabench.org/latest/Organizers/Benchmark_Creation/How-to-transition-from-CodaLab-to-Codabench/">Codabench · CodaLab migration boundaries</a></p></article><article class="resource-card" data-resource-category="develop"><p class="resource-tag">Bounded free personal CPU quotas</p><h3>GitHub Codespaces</h3><p>Reproducible Python/R/SQL labs, small analysis and code development before submission.</p><p class="resource-limit"><strong>Boundary:</strong> 60 two-core hours/month, or 90 for verified students; storage quota and machine sizes matter. No generally available GPU; not continuous application hosting.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/billing/concepts/product-billing/github-codespaces">Codespaces · free personal-account quotas</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/education/about-github-education/github-education-for-students/about-github-education-for-students">Codespaces · verified student benefit</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.github.com/en/codespaces/developing-in-a-codespace/getting-started-with-github-codespaces-for-machine-learning">Codespaces · machine learning and GPU boundary</a></p></article><article class="resource-card" data-resource-category="develop"><p class="resource-tag">Free accelerator notebooks; quota varies</p><h3>Kaggle Notebooks</h3><p>Checkpointed small-model GPU experiments and training for a competition.</p><p class="resource-limit"><strong>Boundary:</strong> Check each account’s GPU quota, available hardware, session timer and saved disk. No reserved class seats or distributed/long-running training promise.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/docs/notebooks">Kaggle · free accelerator notebooks</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/product-feedback/173129">Kaggle · floating weekly GPU quota</a></p></article><article class="resource-card" data-resource-category="develop"><p class="resource-tag">Base free tier remains available</p><h3>Free Google Colab</h3><p>Short shared notebooks, CPU analysis and opportunistic accelerator exercises.</p><p class="resource-limit"><strong>Boundary:</strong> GPU access and resource/session limits fluctuate. Free Colab is separate from the closed new-signup education Pro offer; never promise class GPU availability.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://research.google.com/colaboratory/faq.html">Google Colab Pro for Education · offer closed</a></p></article><article class="resource-card" data-resource-category="develop"><p class="resource-tag">Free ephemeral CPU sessions</p><h3>mybinder.org</h3><p>Small Python/R notebooks launched from a reproducible repository, including metadata/text workshops.</p><p class="resource-limit"><strong>Boundary:</strong> 1–2 GB RAM; ten-minute idle shutdown; aims for ≤6 hours or one CPU-hour; 100 concurrent sessions per repo. Download work; no GPU or persistent workspace promise.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html">Binder · free ephemeral teaching notebooks</a></p></article><article class="resource-card" data-resource-category="develop"><p class="resource-tag">One free CPU Studio; GPU credit amount and expiry vary</p><h3>Lightning AI Studio</h3><p>DS/MLIS notebook preparation and small tests within actual credit balance.</p><p class="resource-limit"><strong>Boundary:</strong> Four-hour CPU restart boundary; first 10 GB storage free. Do not promise a fixed monthly GPU grant or count paid academic discounts as free compute.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://lightning.ai/docs/platform/overview/faq/billing.md">Lightning AI · billing and storage scope</a> · <a target="_blank" rel="noopener noreferrer" href="https://lightning.ai/docs/platform/overview/setups/academia/students">Lightning AI student documentation and free CPU workflow</a></p></article><article class="resource-card" data-resource-category="demo"><p class="resource-tag">Five GPU minutes/day for signed-in Free users</p><h3>Hugging Face ZeroGPU / Spaces</h3><p>Short Gradio inference demos and model-behavior comparisons; static exhibits on free Static Spaces.</p><p class="resource-limit"><strong>Boundary:</strong> Two own ZeroGPU Spaces only for eligible personal accounts ≥30 days old. Shared queues and Gradio constraints; organization hosting paid. Ordinary compute-backed Space creation also needs a paid plan.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/docs/hub/spaces-zerogpu">Hugging Face ZeroGPU · short shared GPU demos</a> · <a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/docs/hub/spaces-overview">Hugging Face Spaces · current creation and persistence boundaries</a></p></article><article class="resource-card" data-resource-category="demo"><p class="resource-tag">15 executions/month; bounded CUDA exercises</p><h3>cuda.live</h3><p>Tiny CUDA kernel/compiler demonstrations independent of the Codabench workflow.</p><p class="resource-limit"><strong>Boundary:</strong> Advertised T4 16 GB, five runs per 15 minutes; per-execution allowance is not GPU-hours. Existing October 8 verification, no reserved class capacity.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://cuda.live/pricing">cuda.live · optional CUDA micro-exercises</a></p></article><article class="resource-card" data-resource-category="cloud"><p class="resource-tag">Conditional recurring credit · $30/workspace/month; three Starter seats</p><h3>Modal</h3><p>DS: a small pinned training/inference run. MLIS: public-corpus OCR, embeddings or retrieval experiments.</p><p class="resource-limit"><strong>Boundary:</strong> Payment method required; GPU, CPU and memory share credits. Set explicit usage and net-spend limits. Shared Endpoints tokens cost extra. Academic grant is an application, not funding in hand.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://modal.com/pricing">Modal Starter pricing and Shared Endpoints boundary</a> · <a target="_blank" rel="noopener noreferrer" href="https://modal.com/docs/guide/billing">Modal billing: payment method required</a> · <a target="_blank" rel="noopener noreferrer" href="https://modal.com/docs/guide/budgets">Modal budgets and out-of-pocket spend limits</a> · <a target="_blank" rel="noopener noreferrer" href="https://modal.com/academics">Modal academic credit grants</a></p></article><article class="resource-card" data-resource-category="cloud"><p class="resource-tag">Paid / historical free claim · $20/month Developer includes $20 credits; one seat</p><h3>Beam</h3><p>DS/MLIS component hosting if funded; open-source runtime may warrant later engineering assessment.</p><p class="resource-limit"><strong>Boundary:</strong> June free-$30 comparison is stale against current direct plan table. Prepaid deployments need credits; warm/idle settings can bill. BYOC is not free compute.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://www.beam.cloud/pricing">Beam current plan table</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.beam.cloud/v2/resources/pricing-and-billing">Beam runtime and prepaid credit billing</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.beam.cloud/blog/modal-pricing-explained">Beam earlier free Developer comparison (historical)</a></p></article><article class="resource-card" data-resource-category="cloud"><p class="resource-tag">Paid usage / possible trial · Free Hobby subscription; no recurring compute credit verified</p><h3>Cerebrium</h3><p>DS model serving; MLIS public-corpus embeddings or transcription.</p><p class="resource-limit"><strong>Boundary:</strong> Free plan fee and included storage do not make execution free. Trials are discretionary/time-limited and may transition to paid billing.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://cerebrium.ai/pricing">Cerebrium Hobby subscription versus metered compute</a> · <a target="_blank" rel="noopener noreferrer" href="https://cerebrium.ai/terms-of-service">Cerebrium trial terms</a></p></article><article class="resource-card" data-resource-category="develop"><p class="resource-tag">Bounded free machines · Free CPU / M4000 GPU subject to availability; 5 GB</p><h3>Paperspace Gradient</h3><p>Small DS training and public/synthetic MLIS corpus notebooks.</p><p class="resource-limit"><strong>Boundary:</strong> Six-hour free-session maximum, one-hour idle stop, one free notebook at once; free notebooks are public. Check old GPU/runtime fit and actual signup/payment requirements.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://docs.digitalocean.com/products/paperspace/pricing/">DigitalOcean Paperspace: free machine and storage eligibility</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.digitalocean.com/products/paperspace/notebooks/details/features/">Paperspace notebook free-session duration</a> · <a target="_blank" rel="noopener noreferrer" href="https://docs.digitalocean.com/products/paperspace/machines/details/features/">Paperspace free machines: visibility and inactivity</a></p></article><article class="resource-card" data-resource-category="develop"><p class="resource-tag">Unconfirmed free lead · Landing page advertises 150 compute hours/month, no card</p><h3>Saturn Cloud</h3><p>Potential DS and MLIS notebook alternative, pending an authorized account check.</p><p class="resource-limit"><strong>Boundary:</strong> 150 compute hours is not verified as 150 GPU-hours. Current pricing emphasizes paid hosted resources; reconcile device allowance, storage, inactivity and new-account access.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://saturncloud.io/try/">Saturn Cloud free-compute landing claim</a> · <a target="_blank" rel="noopener noreferrer" href="https://saturncloud.io/plans/saturn_cloud_plans/">Saturn Cloud current hosted pricing</a></p></article><article class="resource-card" data-resource-category="cloud"><p class="resource-tag">Paid comparison · Prepaid compute; no recurring free allocation verified</p><h3>Runpod</h3><p>Funded DS/MLIS jobs with explicit checkpoint and external export.</p><p class="resource-limit"><strong>Boundary:</strong> Pod launch needs credit; stopped storage still bills and can be deleted when funds run out. Not a zero-cash fallback or preservation repository.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://docs.runpod.io/get-started/billing-information">Runpod credit balance and storage lifecycle</a></p></article><article class="resource-card" data-resource-category="cloud"><p class="resource-tag">Limited model trial · Select-model demonstrations, then billing</p><h3>Replicate</h3><p>DS model-behavior comparison; MLIS controlled metadata/transcription demonstrations.</p><p class="resource-limit"><strong>Boundary:</strong> No stable free monthly grant verified. Private deployments can bill setup and idle time. A model API does not replace arbitrary CUDA training.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://replicate.com/docs/topics/billing">Replicate limited free models and billing scope</a></p></article><article class="resource-card" data-resource-category="cloud"><p class="resource-tag">Paid API on Free accounts · No included monthly API credits for Free users</p><h3>Hugging Face Inference Providers</h3><p>DS inference evaluation and MLIS embeddings/metadata tasks when funded.</p><p class="resource-limit"><strong>Boundary:</strong> Separate from ZeroGPU/Spaces. Current API pricing overrides older free-credit snippets; no historical change date established.</p><p class="resource-refs"><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/docs/inference-providers/pricing">Hugging Face Inference Providers: current free-account credits</a></p></article></div><p class="resource-callout"><strong>Proposed pilot:</strong> develop in a bounded notebook environment; evaluate approved assignments through a Codabench queue attached to reviewed ACCESS compute where permitted. Budget operators, isolated submission workers, durable storage and exports separately. Validate scheduling, network/container rules and real class load before promising this route. Keep code, scoring bundles, submissions and results portable; a leaderboard is not the full course grade.</p></main><!-- program-chrome-start --><footer class="program-footer"><p><strong>Planning proposal.</strong> ACCESS is the intended CPU/GPU classroom route. Provider measurements, awards and classroom admission remain pending; Greg has ten hours/week total and zero cash budget.</p><p><a href="timeline.html">Staged plan</a> · <a href="resource-library.html">Working tools</a> · <a href="report.html">Full report &amp; evidence</a> · <a href="index.html">Five-slide talk</a></p><p>Greg Chism · UArizona Information Science · Design and Classroom 50 assessment updated October 13, 2026. Evidence retains its own check dates.</p></footer><script src="program.js"></script><!-- program-chrome-end --></body></html>
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta name="description" content="Practical computing resources for research and classrooms: choices, estimates, plans and evidence.">
+
+
+
+        <link rel="canonical" href="https://gchism94.github.ioclassroom-resources.html">
+
+
+
+        <link rel="prev" href="./resource-library.html">
+
+
+        <link rel="next" href="./federal-compute.html">
+
+
+
+
+
+      <link rel="icon" href="./assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.71">
+
+
+
+        <title>Classroom platforms - Compute Guide</title>
+
+
+
+
+
+
+      <link rel="stylesheet" href="./assets/stylesheets/classic/main.68ef4dbf.min.css">
+
+
+
+
+        <link rel="stylesheet" href="./assets/stylesheets/classic/palette.813d4b3f.min.css">
+
+
+
+
+
+
+
+        <script src="guide-assets/vendor/iframe-worker-1.0.4.js" type="text/javascript"></script>
+
+
+
+
+
+
+      <link rel="stylesheet" href="./guide-assets/guide.css">
+
+    <script>__md_scope=new URL(".",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+
+
+
+
+
+  <link rel="icon" href="../assets/favicons/talk.svg" type="image/svg+xml"><link rel="icon" href="../assets/favicons/talk-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/favicons/talk-180.png" sizes="180x180"></head>
+
+
+
+
+
+
+
+
+
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+
+
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
+    <div data-md-component="skip">
+      <a href="#__skip" class="md-skip">
+        Skip to content
+      </a>
+    </div>
+    <div data-md-component="announce">
+
+    </div>
+
+
+
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="program.html" title="Compute Guide" class="md-header__button md-logo" aria-label="Compute Guide" data-md-component="logo">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Compute Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+
+              Classroom platforms
+
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+        <form class="md-header__option" data-md-component="palette">
+
+
+
+
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+
+
+</form>
+
+
+
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+
+
+
+
+
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+
+
+    <div class="md-header__source">
+
+    </div>
+  </nav>
+
+</header>
+
+    <div class="md-container" data-md-component="container">
+
+
+
+
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+
+
+
+
+
+
+
+
+
+
+
+      <li class="md-tabs__item">
+        <a href="./program.html" class="md-tabs__link">
+
+
+  Start here
+
+        </a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./resource-library.html" class="md-tabs__link">
+
+
+  Resources
+
+        </a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <li class="md-tabs__item">
+        <a href="./timeline.html" class="md-tabs__link">
+
+
+  Plan
+
+        </a>
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <li class="md-tabs__item">
+        <a href="./report.html" class="md-tabs__link">
+
+
+  Report
+
+        </a>
+      </li>
+
+
+
+
+    </ul>
+  </div>
+</nav>
+
+
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+
+
+
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+
+
+
+
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="program.html" title="Compute Guide" class="md-nav__button md-logo" aria-label="Compute Guide" data-md-component="logo">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Compute Guide
+  </label>
+
+  <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--nested">
+
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+
+
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Start here
+
+
+  </span>
+
+
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+
+
+  Start here
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./program.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Overview
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./needs.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Scope your needs
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+            </ul>
+          </nav>
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+
+
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Resources
+
+
+  </span>
+
+
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+            <label class="md-nav__title" for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+
+
+  Resources
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./resource-library.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Find a resource
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--active">
+
+
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+
+
+
+
+
+
+      <a href="classroom-resources.html" class="md-nav__link md-nav__link--active">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Classroom platforms
+
+
+  </span>
+
+
+
+      </a>
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./federal-compute.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Federal platforms
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./degree-options.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  By degree
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./serverless-compute.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Cloud credits & GPUs
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./classroom50.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Classroom 50
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./repository-plan.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Repositories & preservation
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+            </ul>
+          </nav>
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--nested">
+
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+
+
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Plan
+
+
+  </span>
+
+
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+
+
+  Plan
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./timeline.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Stages & milestones
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./pilot-plan.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Two-course pilot
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./gpu-benchmark.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Run benchmarks
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./access-request.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  ACCESS request
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./budget.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Time & funding
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./readiness.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Before class
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./classroom-assessment.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Route assessment
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+            </ul>
+          </nav>
+
+
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item md-nav__item--nested">
+
+
+
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+
+
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Report
+
+
+  </span>
+
+
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+
+
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+
+
+  Report
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./report.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Findings & trends
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./research-report.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Full research report
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./evidence.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Source evidence
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./publishing.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Publishing options
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+    <li class="md-nav__item">
+      <a href="./index.html" class="md-nav__link">
+
+
+
+  <span class="md-ellipsis">
+
+
+  Five-slide talk
+
+
+  </span>
+
+
+
+      </a>
+    </li>
+
+
+
+
+            </ul>
+          </nav>
+
+
+    </li>
+
+
+
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+
+                  <div class="md-sidebar__inner">
+
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+
+
+
+
+
+
+</nav>
+                  </div>
+                </div>
+              </div>
+
+
+
+            <div class="md-content" data-md-component="content">
+
+              <article id="program-content" class="md-content__inner md-typeset">
+                <a id="__skip" tabindex="-1"></a>
+
+
+
+
+<h1 id="classroom-platforms">Classroom platforms<a class="headerlink" href="#classroom-platforms" title="Permanent link">&para;</a></h1>
+<p>Compare bounded options for development, notebooks, scoring and demonstrations. Open each resource’s limits before choosing it. GPU access is variable; competition hosting is not a GPU notebook.</p>
+<p><a href="gpu-benchmark.html">Benchmark first</a> · <a href="degree-options.html">Options by degree</a> · <a href="serverless-compute.html">Cloud credits</a></p>
+<div data-directory><div class="guide-filter"><label>Search resources<input type="search" placeholder="Try GPU, notebooks, metadata, preservation…"></label><label>Resource type<select><option value="all">All types</option><option>cloud</option><option>demo</option><option>develop</option><option>evaluate</option><option>legacy</option><option>manage</option></select></label><p role="status" aria-live="polite">22 resources</p></div><div class="guide-directory"><article class="guide-resource" data-resource data-category="manage" id="classroom50"><span class="guide-tag">manage</span><h3>Classroom 50</h3><p>Workable successor for GitHub Classroom assignment distribution, repositories, submissions, feedback and grading.</p><p><strong>Access:</strong> Free, open-source assignment workflow · evaluate before adoption</p><details><summary>Limits and sources</summary><p>Fifty Foundation project and hosted app are not ours. Requires a Team/Enterprise organization; check education eligibility. No additional Codespaces compute; Actions grading has separate quotas. ACCESS remains the CPU/GPU classroom route.</p><p><a href="evidence.html#classroom50">Classroom 50: project and license</a> · <a href="evidence.html#classroom50requirements">Classroom 50: prerequisites and education eligibility</a> · <a href="evidence.html#classroom50actions">Classroom 50: managing Actions cost</a> · <a href="evidence.html#codespaces">Codespaces · free personal-account quotas</a></p></details></article><article class="guide-resource" data-resource data-category="evaluate" id="codabench"><span class="guide-tag">evaluate</span><h3>Codabench</h3><p>Prediction scoring, reproducible code benchmarks and common test environments.</p><p><strong>Access:</strong> Free benchmark hosting; compute depends on queue</p><details><summary>Limits and sources</summary><p>Shared CPU scoring jobs ≤20 minutes. Organizers supply queues for code submissions and all GPU workers; no GPU notebook or whole-class reservation.</p><p><a href="evidence.html#codabench">Codabench · free benchmark hosting and bounded CPU scoring</a> · <a href="evidence.html#codabenchworkers">Codabench · organizer-supplied CPU / GPU workers</a> · <a href="evidence.html#codabenchqueues">Codabench · shared and dedicated queues</a></p></details></article><article class="guide-resource" data-resource data-category="evaluate" id="kagglecommunity"><span class="guide-tag">evaluate</span><h3>Kaggle Community Competitions</h3><p>Prediction-file competitions with live leaderboards; judged hackathons for open-ended projects.</p><p><strong>Access:</strong> Free self-service hosts and participants</p><details><summary>Limits and sources</summary><p>Training happens elsewhere or in separately limited notebooks. Restricted-email competitions disable notebooks by default; community hosting has no hands-on support.</p><p><a href="evidence.html#kagglecommunity">Kaggle · no-cost Community Competitions</a> · <a href="evidence.html#kagglesetup">Kaggle · competition access and notebook limits</a></p></details></article><article class="guide-resource" data-resource data-category="evaluate" id="codegrade"><span class="guide-tag">evaluate</span><h3>CodeGrade</h3><p>Programming labs with browser editing, immediate autograding and instructor feedback.</p><p><strong>Access:</strong> Advertised free for courses ≤50 students</p><details><summary>Limits and sources</summary><p>Check free-plan execution/LMS limits and roster scope. No verified free GPU entitlement or campus deployment; grading records need approved retention.</p><p><a href="evidence.html#codegrade">CodeGrade · bounded free classroom autograding</a></p></details></article><article class="guide-resource" data-resource data-category="evaluate" id="chagrade"><span class="guide-tag">evaluate</span><h3>ChaGrade</h3><p>Challenge-linked individual/team homework and instructor grading beyond leaderboard scores.</p><p><strong>Access:</strong> Adjacent project; current free entitlement unverified</p><details><summary>Limits and sources</summary><p>Live page labels version 0.1 / Work In Progress. Support, quotas and current Codabench integration need verification; not a ready college-wide baseline.</p><p><a href="evidence.html#chagrade">ChaGrade · challenge-linked classroom workflow</a></p></details></article><article class="guide-resource" data-resource data-category="evaluate" id="evalai"><span class="guide-tag">evaluate</span><h3>EvalAI</h3><p>Custom prediction/code evaluation and organizer-controlled remote workers.</p><p><strong>Access:</strong> Hosted service paid; open-source self-hosting</p><details><summary>Limits and sources</summary><p>Hosted plans $125–850/month; remote evaluation $100/month plus own compute. Self-hosting requires funded staff, infrastructure and storage. No verified hosted free tier.</p><p><a href="evidence.html#evalaipricing">EvalAI · paid hosted challenge plans</a> · <a href="evidence.html#evalaisource">EvalAI · open-source self-hosting</a></p></details></article><article class="guide-resource" data-resource data-category="legacy" id="codalab"><span class="guide-tag">legacy</span><h3>CodaLab Competitions</h3><p>Historical challenge service; migrate compatible competition bundles to Codabench.</p><p><strong>Access:</strong> Retired at end of 2025; successor available</p><details><summary>Limits and sources</summary><p>New account required; leaderboards do not transfer automatically. Preserve submissions/results separately. Separate CodaLab Worksheets is not covered.</p><p><a href="evidence.html#codalabsunset">CodaLab Competitions · phased out in 2025</a> · <a href="evidence.html#codabenchmigration">Codabench · CodaLab migration boundaries</a></p></details></article><article class="guide-resource" data-resource data-category="develop" id="codespaces"><span class="guide-tag">develop</span><h3>GitHub Codespaces</h3><p>Reproducible Python/R/SQL labs, small analysis and code development before submission.</p><p><strong>Access:</strong> Bounded free personal CPU quotas</p><details><summary>Limits and sources</summary><p>60 two-core hours/month, or 90 for verified students; storage quota and machine sizes matter. No generally available GPU; not continuous application hosting.</p><p><a href="evidence.html#codespaces">Codespaces · free personal-account quotas</a> · <a href="evidence.html#students">Codespaces · verified student benefit</a> · <a href="evidence.html#codespacesgpu">Codespaces · machine learning and GPU boundary</a></p></details></article><article class="guide-resource" data-resource data-category="develop" id="kaggle"><span class="guide-tag">develop</span><h3>Kaggle Notebooks</h3><p>Checkpointed small-model GPU experiments and training for a competition.</p><p><strong>Access:</strong> Free accelerator notebooks; quota varies</p><details><summary>Limits and sources</summary><p>Check each account’s GPU quota, available hardware, session timer and saved disk. No reserved class seats or distributed/long-running training promise.</p><p><a href="evidence.html#kaggle">Kaggle · free accelerator notebooks</a> · <a href="evidence.html#kagglequota">Kaggle · floating weekly GPU quota</a></p></details></article><article class="guide-resource" data-resource data-category="develop" id="colab"><span class="guide-tag">develop</span><h3>Free Google Colab</h3><p>Short shared notebooks, CPU analysis and opportunistic accelerator exercises.</p><p><strong>Access:</strong> Base free tier remains available</p><details><summary>Limits and sources</summary><p>GPU access and resource/session limits fluctuate. Free Colab is separate from the closed new-signup education Pro offer; never promise class GPU availability.</p><p><a href="evidence.html#colab">Google Colab Pro for Education · offer closed</a></p></details></article><article class="guide-resource" data-resource data-category="develop" id="binder"><span class="guide-tag">develop</span><h3>mybinder.org</h3><p>Small Python/R notebooks launched from a reproducible repository, including metadata/text workshops.</p><p><strong>Access:</strong> Free ephemeral CPU sessions</p><details><summary>Limits and sources</summary><p>1–2 GB RAM; ten-minute idle shutdown; aims for ≤6 hours or one CPU-hour; 100 concurrent sessions per repo. Download work; no GPU or persistent workspace promise.</p><p><a href="evidence.html#binder">Binder · free ephemeral teaching notebooks</a></p></details></article><article class="guide-resource" data-resource data-category="develop" id="lightning"><span class="guide-tag">develop</span><h3>Lightning AI Studio</h3><p>DS/MLIS notebook preparation and small tests within actual credit balance.</p><p><strong>Access:</strong> One free CPU Studio; GPU credit amount and expiry vary</p><details><summary>Limits and sources</summary><p>Four-hour CPU restart boundary; first 10 GB storage free. Do not promise a fixed monthly GPU grant or count paid academic discounts as free compute.</p><p><a href="evidence.html#lightningbilling">Lightning AI · billing and storage scope</a> · <a href="evidence.html#lightningstudents">Lightning AI student documentation and free CPU workflow</a></p></details></article><article class="guide-resource" data-resource data-category="demo" id="zerogpu"><span class="guide-tag">demo</span><h3>Hugging Face ZeroGPU / Spaces</h3><p>Short Gradio inference demos and model-behavior comparisons; static exhibits on free Static Spaces.</p><p><strong>Access:</strong> Five GPU minutes/day for signed-in Free users</p><details><summary>Limits and sources</summary><p>Two own ZeroGPU Spaces only for eligible personal accounts ≥30 days old. Shared queues and Gradio constraints; organization hosting paid. Ordinary compute-backed Space creation also needs a paid plan.</p><p><a href="evidence.html#zerogpu">Hugging Face ZeroGPU · short shared GPU demos</a> · <a href="evidence.html#hfspaces">Hugging Face Spaces · current creation and persistence boundaries</a></p></details></article><article class="guide-resource" data-resource data-category="demo" id="cudalive"><span class="guide-tag">demo</span><h3>cuda.live</h3><p>Tiny CUDA kernel/compiler demonstrations independent of the Codabench workflow.</p><p><strong>Access:</strong> 15 executions/month; bounded CUDA exercises</p><details><summary>Limits and sources</summary><p>Advertised T4 16 GB, five runs per 15 minutes; per-execution allowance is not GPU-hours. Existing October 8 verification, no reserved class capacity.</p><p><a href="evidence.html#cudalive">cuda.live · optional CUDA micro-exercises</a></p></details></article><article class="guide-resource" data-resource data-category="cloud" id="modal"><span class="guide-tag">cloud</span><h3>Modal</h3><p>DS: a small pinned training/inference run. MLIS: public-corpus OCR, embeddings or retrieval experiments.</p><p><strong>Access:</strong> Conditional recurring credit · $30/workspace/month; three Starter seats</p><details><summary>Limits and sources</summary><p>Payment method required; GPU, CPU and memory share credits. Set explicit usage and net-spend limits. Shared Endpoints tokens cost extra. Academic grant is an application, not funding in hand.</p><p><a href="evidence.html#modalpricing">Modal Starter pricing and Shared Endpoints boundary</a> · <a href="evidence.html#modalbilling">Modal billing: payment method required</a> · <a href="evidence.html#modalbudgets">Modal budgets and out-of-pocket spend limits</a> · <a href="evidence.html#modalacademic">Modal academic credit grants</a></p></details></article><article class="guide-resource" data-resource data-category="cloud" id="beam"><span class="guide-tag">cloud</span><h3>Beam</h3><p>DS/MLIS component hosting if funded; open-source runtime may warrant later engineering assessment.</p><p><strong>Access:</strong> Paid / historical free claim · $20/month Developer includes $20 credits; one seat</p><details><summary>Limits and sources</summary><p>June free-$30 comparison is stale against current direct plan table. Prepaid deployments need credits; warm/idle settings can bill. BYOC is not free compute.</p><p><a href="evidence.html#beampricing">Beam current plan table</a> · <a href="evidence.html#beambilling">Beam runtime and prepaid credit billing</a> · <a href="evidence.html#beamoldoffer">Beam earlier free Developer comparison (historical)</a></p></details></article><article class="guide-resource" data-resource data-category="cloud" id="cerebrium"><span class="guide-tag">cloud</span><h3>Cerebrium</h3><p>DS model serving; MLIS public-corpus embeddings or transcription.</p><p><strong>Access:</strong> Paid usage / possible trial · Free Hobby subscription; no recurring compute credit verified</p><details><summary>Limits and sources</summary><p>Free plan fee and included storage do not make execution free. Trials are discretionary/time-limited and may transition to paid billing.</p><p><a href="evidence.html#cerebriumpricing">Cerebrium Hobby subscription versus metered compute</a> · <a href="evidence.html#cerebriumtrial">Cerebrium trial terms</a></p></details></article><article class="guide-resource" data-resource data-category="develop" id="paperspace"><span class="guide-tag">develop</span><h3>Paperspace Gradient</h3><p>Small DS training and public/synthetic MLIS corpus notebooks.</p><p><strong>Access:</strong> Bounded free machines · Free CPU / M4000 GPU subject to availability; 5 GB</p><details><summary>Limits and sources</summary><p>Six-hour free-session maximum, one-hour idle stop, one free notebook at once; free notebooks are public. Check old GPU/runtime fit and actual signup/payment requirements.</p><p><a href="evidence.html#paperspacefree">DigitalOcean Paperspace: free machine and storage eligibility</a> · <a href="evidence.html#paperspacefeatures">Paperspace notebook free-session duration</a> · <a href="evidence.html#paperspacevisibility">Paperspace free machines: visibility and inactivity</a></p></details></article><article class="guide-resource" data-resource data-category="develop" id="saturn"><span class="guide-tag">develop</span><h3>Saturn Cloud</h3><p>Potential DS and MLIS notebook alternative, pending an authorized account check.</p><p><strong>Access:</strong> Unconfirmed free lead · Landing page advertises 150 compute hours/month, no card</p><details><summary>Limits and sources</summary><p>150 compute hours is not verified as 150 GPU-hours. Current pricing emphasizes paid hosted resources; reconcile device allowance, storage, inactivity and new-account access.</p><p><a href="evidence.html#saturntry">Saturn Cloud free-compute landing claim</a> · <a href="evidence.html#saturnpricing">Saturn Cloud current hosted pricing</a></p></details></article><article class="guide-resource" data-resource data-category="cloud" id="runpod"><span class="guide-tag">cloud</span><h3>Runpod</h3><p>Funded DS/MLIS jobs with explicit checkpoint and external export.</p><p><strong>Access:</strong> Paid comparison · Prepaid compute; no recurring free allocation verified</p><details><summary>Limits and sources</summary><p>Pod launch needs credit; stopped storage still bills and can be deleted when funds run out. Not a zero-cash fallback or preservation repository.</p><p><a href="evidence.html#runpodbilling">Runpod credit balance and storage lifecycle</a></p></details></article><article class="guide-resource" data-resource data-category="cloud" id="replicate"><span class="guide-tag">cloud</span><h3>Replicate</h3><p>DS model-behavior comparison; MLIS controlled metadata/transcription demonstrations.</p><p><strong>Access:</strong> Limited model trial · Select-model demonstrations, then billing</p><details><summary>Limits and sources</summary><p>No stable free monthly grant verified. Private deployments can bill setup and idle time. A model API does not replace arbitrary CUDA training.</p><p><a href="evidence.html#replicatebilling">Replicate limited free models and billing scope</a></p></details></article><article class="guide-resource" data-resource data-category="cloud" id="hfinference"><span class="guide-tag">cloud</span><h3>Hugging Face Inference Providers</h3><p>DS inference evaluation and MLIS embeddings/metadata tasks when funded.</p><p><strong>Access:</strong> Paid API on Free accounts · No included monthly API credits for Free users</p><details><summary>Limits and sources</summary><p>Separate from ZeroGPU/Spaces. Current API pricing overrides older free-credit snippets; no historical change date established.</p><p><a href="evidence.html#hfinferencepricing">Hugging Face Inference Providers: current free-account credits</a></p></details></article></div><noscript><p>Search needs JavaScript; all resources are shown.</p></noscript></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </article>
+            </div>
+
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+
+      </main>
+
+        <footer class="md-footer">
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+
+    <div class="md-copyright__highlight">
+      Greg Chism · UArizona Information Science · Planning proposal, October 2026
+    </div>
+
+
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+
+</div>
+
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["navigation.tabs","navigation.sections","navigation.top","search.highlight"],"redirect":null,"search":"./assets/javascripts/workers/search.c47bb847.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+
+
+      <script src="./assets/javascripts/bundle.a2388154.min.js"></script>
+
+        <script src="./guide-assets/needs.js"></script>
+
+        <script src="./guide-assets/guide.js"></script>
+
+
+  </body>
+</html>

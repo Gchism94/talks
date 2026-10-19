@@ -339,3 +339,32 @@ The slides and https://gchism94.github.io/talks/polls/ use native five-position 
 - Network failure: the page shows an error and does not claim success. Retry safely, or use a show of hands without implying it was saved.
 
 Existing Poll Everywhere links remain optional external backups; previous responses are not imported. No new service or paid account is required.
+
+### Compute resource guide (October 19, 2026)
+
+Start at [the compute guide](https://gchism94.github.io/talks/education-compute/program.html).
+The guide uses Zensical 0.0.71, with concise pages, search and a local
+research/classroom needs tool. The five-slide talk stays at its original address.
+The full audit, 181-record evidence ledger and downloads are preserved.
+
+Install `site/compute-guide/requirements.txt` in a project virtual environment.
+For guide-only edits, run `python3 scripts/build_compute_guide.py --zensical /path/to/zensical`.
+The source is `site/compute-guide/` plus `scripts/build_compute_guide.py`; resource facts
+come from the canonical evidence ledger and pilot JSON. Generated Markdown/build
+files stay under ignored `output/education-compute/guide-source/`. Only reviewed
+HTML/assets are overlaid into this talk's public folder.
+
+For a complete evidence/program rebuild, run the existing resource, evidence and
+program builders in that order; `build_compute_program.py --zensical /path/to/zensical`
+now finishes with the guide build. Rebuild federal/assessment inputs first only
+when those inputs change. Never deploy the old intermediate program pages alone.
+
+Run `node scripts/test_compute_needs.cjs` and `python3 scripts/check_site.py`.
+Inspect browser navigation/search, tool validation/exports, mobile and print.
+Then refresh the local review snapshot with `scripts/package_compute_review.py`
+and verify its manifest with `education-compute/verify_bundle.py --compare-originals`.
+Do not publish the full local review folder; it retains private research captures.
+
+The offline-search worker shim is vendored as iframe-worker 1.0.4 with its MIT
+license under `site/compute-guide/assets/vendor/`; the guide build replaces the
+default CDN link so the portable bundle needs no network request.
