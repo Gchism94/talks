@@ -323,7 +323,7 @@ The tool follows the benchmark helper’s runtime × workload × resource × all
                 text=src.read_text().replace('href="/talks/education-compute/','href="').replace('src="/talks/education-compute/','src="')
                 text=text.replace('https://unpkg.com/iframe-worker/shim','guide-assets/vendor/iframe-worker-1.0.4.js')
                 # Version custom assets so returning visitors receive matching controls.
-                for name in ['guide.css','guide.js','needs.js','working-needs.js','luna-drafting.js']:
+                for name in ['guide.css','guide.js','needs.js','working-needs.js','luna-drafting.js','request-submission.js']:
                     revision=hashlib.sha256((SOURCE/'assets'/name).read_bytes()).hexdigest()[:12]
                     text=text.replace('guide-assets/'+name+'\"','guide-assets/'+name+'?v='+revision+'\"')
                 text=text.replace('href=""', 'href="index.html"').replace('href="program.html"','href="index.html"')

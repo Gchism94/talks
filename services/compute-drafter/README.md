@@ -79,3 +79,56 @@ recover capacity. A missing ledger deliberately disables generation. Preserve
 local template and manual campus-prompt use during outages. Follow-up campus
 Bedrock integration needs a campus-issued credential, verified base URL, data
 terms and credit scope; no automatic fallback to a different paid model.
+
+## Private request-review pilot (October 20, 2026)
+
+`/api/requests` accepts an explicit, reviewed public/synthetic brief plus an
+optional name and required `@arizona.edu` contact address. These are self-reported,
+not verified university identities. No attachments, confidential research, student
+records or other sensitive text. Preparing/downloading a brief and Luna drafting
+never submits automatically. Submission has no model call or model charge.
+
+`/review/` is the shared queue for Barney Maccabe and Greg Chism. A long shared
+passphrase starts an eight-hour HttpOnly/Secure/SameSite=Strict signed session.
+Review API actions require the signed session and same-origin POST, use no-store,
+and never render submitted HTML. Passphrase changes invalidate all sessions.
+Login attempts are persistently limited to ten per network/hour and fifty/day
+shared. This is a small shared-access pilot, not NetID, individual attribution or
+an approved sensitive-data intake system. The passphrase must be shared privately;
+no invitation/email is sent by this application. Sign out on shared computers.
+
+Queue storage is a **separate private Blob** (`compute-requests/queue-v1.json`),
+initialized explicitly once with `node --env-file=.env.local init-intake.mjs`.
+Never reset it during a release. Fresh identity-encoded reads preserve strong ETags; conditional writes protect both
+submission counters and reviewer changes. Revision conflicts require refresh.
+Missing/corrupt state closes intake. No queue content is copied into Pages,
+repository, logs, AI prompts or review bundles. The application now persists
+submitted briefs/contact/review notes in this queue; the **drafting endpoint**
+continues not to persist prompts/drafts. Hosting-provider terms still apply.
+
+Limits are three submissions/network/day, twenty shared/day, one hundred/month,
+and one hundred stored requests. JSON bodies are at most 24 KB, brief text 14 KB,
+review notes 3 KB. These keep the small queue bounded; they do not cap arbitrary
+hosting traffic charges. No new subscription, database or email service is used.
+Vercel Blob/function operations remain metered under the existing plan, separately
+from the model allowance: https://vercel.com/docs/vercel-blob/usage-and-pricing.
+
+UUID retries return the same reference without a second record. Edited payloads
+require a new ID. If a response is interrupted, keep the brief unchanged and use
+the same page to retry. Reviewer updates do not send emails or submit allocations.
+Statuses are New, Reviewing, Needs follow-up and Closed. CSV/JSON exports include
+**all** current requests, regardless of the visible filter; downloaded files contain
+contact details and should be stored privately. CSV neutralizes spreadsheet formulas.
+Deletion removes contact, brief and notes from the application queue; a keyed
+fingerprint and reference remain until the next accepted submission in a new UTC
+month for duplicate prevention. Provider retention and existing downloaded exports
+are outside this deletion. No automatic deletion schedule or backup/restore is
+configured: reviewers should delete entries when no longer needed and keep any
+necessary authorized decision export separately. Do not promise recovery.
+
+Production-only variables: INTAKE_ENABLED, REVIEW_ORIGIN, REVIEW_PASSPHRASE,
+REVIEW_SESSION_SECRET. Credentials are in the Git-ignored, owner-readable file
+`/Users/gregchism/dev/talks/.env.review`. Share only REVIEW_PASSPHRASE with Barney;
+never share REVIEW_SESSION_SECRET. No secret is in a URL, browser asset or bundle.
+Pause intake by setting INTAKE_ENABLED=false and redeploying; preserve queue and
+AI allowance. Pausing intake also closes reviewer API until explicitly reopened.

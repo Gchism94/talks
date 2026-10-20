@@ -90,7 +90,7 @@ For the **College of Information Science Computing Resources Working Group**. Th
 
 <span id="available-resources-at-a-glance"></span>
 
-The inventory contains **33 entries: eight college, nineteen university and six national/external**. It covers hardware, software and models, data, RSE and technical support, training and collaboration. Unknown local equipment, licenses and available support hours are recorded as unknown, rather than assumed absent.
+The inventory contains **33 entries: seven college, twenty university and six national/external**. It covers hardware, software and models, data, RSE and technical support, training and collaboration. Unknown local equipment, licenses and available support hours are recorded as unknown, rather than assumed absent.
 
 Campus starting points include research HPC, software licensing, library data and digital-scholarship services, and research software expertise. **Classroom HPC permission needs clarification:** the teaching policy names Ocelote, while allocation notices report it retired. Research access does not establish permission to use another cluster for a course.
 
@@ -122,7 +122,7 @@ The selected history shows losses across compute, classroom workflows, repositor
 
 ### What the college still needs to establish
 
-Which activities are blocked; who is affected; whether the barrier is capacity, eligibility, awareness, affordability or support; and what existing services can realistically absorb. The [resource tool](needs.html) prepares an individual brief. An agreed collection process and participation record are needed before making college-wide claims.
+Which activities are blocked; who is affected; whether the barrier is capacity, eligibility, awareness, affordability or support; and what existing services can realistically absorb. The [resource tool](needs.html) prepares an individual brief. An optional private pilot queue lets Barney and Greg review submitted briefs. Participation and verification are still needed before making college-wide claims.
 
 ## The opportunity
 

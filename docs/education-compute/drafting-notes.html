@@ -51,7 +51,7 @@
 
 
 
-      <link rel="stylesheet" href="./guide-assets/guide.css?v=75c8706d4ac1">
+      <link rel="stylesheet" href="./guide-assets/guide.css?v=709b10ec7024">
 
     <script>__md_scope=new URL(".",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
 
@@ -517,6 +517,17 @@
 
 </li>
 
+        <li class="md-nav__item">
+  <a href="#optional-submission-and-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Optional submission and review
+      </span>
+    </span>
+  </a>
+
+</li>
+
     </ul>
 
 </nav>
@@ -540,13 +551,15 @@
 <p>Supporting assessment of the request tool. Start with the <a href="needs.html">resource tool</a> for use, or the <a href="report.html">report</a> for the main findings.</p>
 <h2 id="help-prepare-resource-requests">Help prepare resource requests<a class="headerlink" href="#help-prepare-resource-requests" title="Permanent link">&para;</a></h2>
 <p>The <a href="needs.html">needs tool</a> offers a source-backed local template and an optional <strong>GPT-6 Luna</strong> rewrite after explicit consent for public/synthetic information. Luna uses a server-side credential and a shared allowance: 20 attempts/day, 200/month, five/network/day, up to 1,000 output tokens each. Attempts reserve $0.005 of the application allowance before calling the model, limiting this service to $1/month in reservations at current verified rates. This is separate from account-wide billing and hosting. Failed or timed-out calls are not retried automatically.</p>
-<p>For a manual campus route, use <a href="https://ai-assistant.responsibleai.arizona.edu/">Arizona AI Assistant</a>. Wolfgang Jetner at ORAI reports an AI Verde transition and $200/month of Bedrock credit, relayed by Greg Chism; <a href="campus-ai.html">review the credit boundaries and supplied model rates</a>. <a href="https://responsibleai.arizona.edu/tools-support/u-gen-ai">U of A GenAI</a> remains another documented route. Campus API integration and credit use have not been tested here.</p>
+<p>For a manual campus route, use <a href="https://ai-assistant.responsibleai.arizona.edu/">Arizona AI Assistant</a>. Wolfgang Jentner at ORAI reports an AI Verde transition and $200/month of Bedrock credit, relayed by Greg Chism; <a href="campus-ai.html">review the credit boundaries and supplied model rates</a>. <a href="https://responsibleai.arizona.edu/tools-support/u-gen-ai">U of A GenAI</a> remains another documented route. Campus API integration and credit use have not been tested here.</p>
 <h3 id="browser-model-assessment">Browser-model assessment<a class="headerlink" href="#browser-model-assessment" title="Permanent link">&para;</a></h3>
 <p>Browser inference works without API keys or per-request inference fees. We tested two quantized SmolLM2 models on synthetic examples in Chromium on this machine. The 135M model invented student-record details; a 360M model produced short drafts in about 9–13 seconds, but an integrated example added an unsupported participant condition and weakened unknown-hours language. Its initial model/runtime download was about 390 MB. These examples are a small feasibility check, not a general ranking of browser models.</p>
 <p>The integrated 360M worker generated with networking blocked after loading. That establishes local execution for that test; it does not establish reliable drafting. Browser inference remains disabled on the public site. The local template, optional hosted Luna draft and manual campus prompt are separate routes. The <a href="https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct">SmolLM2 model card</a> also advises checking generated content. Preserve original quantities, source facts and unknowns in every draft.</p>
 <h3 id="gpt-6-luna-drafting-test">GPT-6 Luna drafting test<a class="headerlink" href="#gpt-6-luna-drafting-test" title="Permanent link">&para;</a></h3>
 <p>On October 19, 2026, <strong>GPT-6 Luna</strong> completed three synthetic requests—data science instruction, MLIS data work and research software support—in <strong>5.6–6.0 seconds each</strong>. Review against supplied briefs and dated inventory facts found that all three preserved unknown costs, staffing, permissions and capacity. Drafts were 135–163 words and kept questions for resource owners separate.</p>
 <p><strong>Assessment: useful first drafts with human review.</strong> This was three examples with facts supplied, not a reliability guarantee or a matched comparison with browser models. Total usage was 4,157 input and 1,032 output tokens; estimated token charges were <strong>about $0.001</strong>, including reported cache writes, using <a href="https://developers.openai.com/api/docs/models/gpt-6-luna">published standard rates</a>. This is an estimate, not a verified invoice. That initial test established no institutional approval or college operating budget. The subsequent optional integration has its own usage limits and deployment checks.</p>
+<h2 id="optional-submission-and-review">Optional submission and review<a class="headerlink" href="#optional-submission-and-review" title="Permanent link">&para;</a></h2>
+<p>The resource tool now has a separate, explicit submission step. Public/synthetic briefs and contact details can be stored in a private pilot queue for Barney and Greg, using the existing hosting. Luna drafting never submits automatically and contact details are not sent to the model. Reviewers use a shared passphrase, update status and notes, export requests, and delete entries when no longer needed. This is not NetID, a sensitive-data intake or an allocation application.</p>
 
 
 
@@ -621,9 +634,11 @@
 
         <script src="./guide-assets/guide.js?v=e655a84bfa36"></script>
 
-        <script src="./guide-assets/working-needs.js?v=3afefe155e50"></script>
+        <script src="./guide-assets/working-needs.js?v=59d1bbef397c"></script>
 
         <script src="./guide-assets/luna-drafting.js?v=4f1db30d1176"></script>
+
+        <script src="./guide-assets/request-submission.js?v=598193df48f5"></script>
 
 
   </body>

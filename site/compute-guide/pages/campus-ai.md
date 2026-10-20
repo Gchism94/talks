@@ -1,12 +1,12 @@
 # Arizona AI Assistant transition
 
-**AI Verde → [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/).** **Wolfgang Jetner at the Office of Responsible AI (ORAI)** is the source of this planned transition and **$200/month of AWS Bedrock credit**, relayed by Greg Chism. Transition date, who receives the credit, eligibility, renewal and overage controls need confirmation. This is an October 19, 2026 working-group update, not a verified entitlement for every faculty member or student.
+**AI Verde → [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/).** **Wolfgang Jentner at the Office of Responsible AI (ORAI)** is the source of this planned transition and **$200/month of AWS Bedrock credit**, relayed by Greg Chism. Transition date, who receives the credit, eligibility, renewal and overage controls need confirmation. This is an October 19, 2026 working-group update, not a verified entitlement for every faculty member or student.
 
-Public [university news](https://news.arizona.edu/employee-news/guide-ai-tools-u) describes Arizona AI Assistant as a fall pilot and AI Verde separately. The new portal returned HTTP 200; we have not tested a signed-in account or campus API. Contact the [Office of Responsible AI](https://responsibleai.arizona.edu/) for current enrollment and credit terms; Mithun Paul (mithunpaul@arizona.edu) is the previously published AI Verde contact for migration questions.
+Public [university news](https://news.arizona.edu/employee-news/guide-ai-tools-u) describes Arizona AI Assistant as a fall pilot and AI Verde separately. The new portal returned HTTP 200; we have not tested a signed-in account or campus API. Contact **[Wolfgang Jentner at ORAI](mailto:wjentner@arizona.edu)** for AI Verde, Arizona AI Assistant and Bedrock for current enrollment, migration and credit terms.
 
 ## Models and prices in the supplied screenshot
 
-USD per **one million tokens**. These are campus gateway prices in the ORAI screenshot from Wolfgang Jetner, relayed by Greg Chism, not direct OpenAI prices or measured bills. Check current account rates before use.
+USD per **one million tokens**. These are campus gateway prices in the ORAI screenshot from Wolfgang Jentner, relayed by Greg Chism, not direct OpenAI prices or measured bills. Check current account rates before use.
 
 | Model ID | Input | Output |
 | --- | ---: | ---: |
@@ -37,3 +37,5 @@ For example, at the listed campus Luna rate, **10,000 input + 1,000 output token
 The [resource request tool](needs.html) currently uses the separate direct OpenAI Luna pilot. Its $1 monthly application allowance does not draw from campus Bedrock credit. Campus integration needs a campus-issued credential and confirmed API terms.
 
 [Resource inventory](inventory.html) · [Drafting assessment](approaches.html)
+
+Primary contact confirmed by Greg Chism on October 20, 2026; spelling and email verified in the [university directory](https://responsibleai.arizona.edu/about-orai/directory).

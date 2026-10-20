@@ -48,20 +48,20 @@ Prepare the shared-service, policy, staffing and infrastructure questions that r
 Output: College briefing for anticipated university-wide planning; timing not yet set.
 
 USE AND REVIEW
-The site does not register needs with the working group. Optional Luna drafting processes a reviewed public/synthetic brief only with explicit consent; no brief or draft is saved by the application. Agree an approved university channel, deliverable owner roles and review process. No group endorsements, college-wide needs totals, staff availability or funding are assumed. The separate pilot retains its own zero-cash/ten-hour constraints.
+The resource tool offers explicit submission of a reviewed public/synthetic brief and contact details to a private pilot queue for Barney and Greg. Optional Luna drafting is separate and does not persist briefs in the drafting service. The queue stores submissions and review notes until reviewers delete them; it is outside university Microsoft 365 and is not for sensitive data. Agree deliverable owner roles and the review process. No group endorsements, college-wide needs totals, staff availability or funding are assumed. The separate pilot retains its own zero-cash/ten-hour constraints.
 
 SEEDED RESOURCE INVENTORY
 
-College of Information Science IT support | College | Owner confirmation needed
-Access: Use the college IT support page; a public request procedure is not exposed in the page content. Ask the college to identify the current local IT owner.
-Cost: No public fee schedule or support entitlement found.
-Contact: College office — infosci@arizona.edu; 520-621-3565 (routing contact, not a verified IT service desk) | mailto:infosci@arizona.edu
-Support: College office — infosci@arizona.edu; 520-621-3565 (routing contact, not a verified IT service desk)
-Limits: Published IT page is sparse. Response hours, equipment coverage and escalation need confirmation.
-Funding: Institutional or project service; dedicated college capacity/funding not established.
-Sources: https://infosci.arizona.edu/tech
-Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
-Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+UITS Support | University | Available
+Access: University faculty, staff and students can contact the UITS 24/7 Support Center by phone, chat or online ticket.
+Cost: Basic diagnostics and fixes are available at no cost to campus community members. Repair services and specialist resources may have separate terms; confirm before use.
+Contact: UITS 24/7 Support Center · 520-626-8324 · service.arizona.edu | https://it.arizona.edu/support/247-support-center
+Support: Campus applications, accounts, connectivity, software installation and basic device troubleshooting; specialist needs are routed for confirmation.
+Limits: General support does not guarantee RSE time, research workflow development, hardware capacity or an allocation. Repair and specialist service terms need confirmation.
+Funding: University support service; specialist capacity and separate charges require confirmation.
+Sources: https://it.arizona.edu/support/247-support-center
+Review: 2026-10-20
+Support channels and no-cost basic diagnostics verified on the UITS support page October 20, 2026. College-specific service ownership corrected at Greg Chism’s request.
 
 College hardware, labs and loan equipment | College | Inventory pending
 Access: Ask Barney Maccabe or Greg Chism to coordinate a roster of machines, locations, owners, access rules and any loan pool.
@@ -196,15 +196,15 @@ Review: 2026-10-19 — public documentation; no signed-in entitlement or owner c
 Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
 
 AI Verde → Arizona AI Assistant: planned transition | University | ORAI transition update; timing to confirm
-Access: Wolfgang Jetner at the Office of Responsible AI (ORAI), via Greg Chism, reports AI Verde will be sunset in favor of Arizona AI Assistant. Use the new portal to check sign-in, API access and enrollment; migration timing and eligibility need confirmation.
-Cost: Planned $200/month of AWS Bedrock credit, reported by Wolfgang Jetner at ORAI and relayed by Greg Chism on October 19, 2026. Confirm who receives the allowance, renewal, covered usage and overage controls; not an unlimited compute or GPU-training allocation.
-Contact: Office of Responsible AI; current AI Verde contact Mithun Paul for migration questions | https://responsibleai.arizona.edu/
-Support: Mithun Paul — mithunpaul@arizona.edu
+Access: Wolfgang Jentner at the Office of Responsible AI (ORAI), via Greg Chism, reports AI Verde will be sunset in favor of Arizona AI Assistant. Use the new portal to check sign-in, API access and enrollment; migration timing and eligibility need confirmation.
+Cost: Planned $200/month of AWS Bedrock credit, reported by Wolfgang Jentner at ORAI and relayed by Greg Chism on October 19, 2026. Confirm who receives the allowance, renewal, covered usage and overage controls; not an unlimited compute or GPU-training allocation.
+Contact: Wolfgang Jentner · Office of Responsible AI (ORAI) · wjentner@arizona.edu | mailto:wjentner@arizona.edu
+Support: Wolfgang Jentner · Office of Responsible AI (ORAI) · wjentner@arizona.edu
 Limits: Supplied ORAI pricing screenshot lists 12 hosted models and per-token prices. These campus gateway rates differ from direct-provider rates. Credit is not transferred to this site’s OpenAI API; API compatibility, data rules, class concurrency and migration/export still need confirmation.
-Funding: Campus Bedrock credit reported by Wolfgang Jetner at ORAI, via Greg Chism; allocation level and renewal terms to confirm.
-Sources: https://ai-assistant.responsibleai.arizona.edu/ | https://news.arizona.edu/employee-news/guide-ai-tools-u | https://cyverse.org/ai-verde
-Review: 2026-10-19 — ORAI transition/credit update and pricing screenshot from Wolfgang Jetner, relayed by Greg Chism; portal HTTP 200, no signed-in entitlement test
-Public university news describes Arizona AI Assistant as a fall pilot and AI Verde separately. The transition and $200/month credit come from Wolfgang Jetner at ORAI, relayed by Greg Chism; individual entitlements have not been tested. Pricing screenshot received October 19; its capture/effective date is unconfirmed. Confirm live account rates.
+Funding: Campus Bedrock credit reported by Wolfgang Jentner at ORAI, via Greg Chism; allocation level and renewal terms to confirm.
+Sources: https://ai-assistant.responsibleai.arizona.edu/ | https://news.arizona.edu/employee-news/guide-ai-tools-u | https://cyverse.org/ai-verde | https://responsibleai.arizona.edu/about-orai/directory
+Review: 2026-10-19 — ORAI transition/credit update and pricing screenshot from Wolfgang Jentner, relayed by Greg Chism; portal HTTP 200, no signed-in entitlement test
+Public university news describes Arizona AI Assistant as a fall pilot and AI Verde separately. The transition and $200/month credit come from Wolfgang Jentner at ORAI, relayed by Greg Chism; individual entitlements have not been tested. Pricing screenshot received October 19; its capture/effective date is unconfirmed. Confirm live account rates. Primary contact corrected at Greg Chism’s request October 20. ORAI directory confirms the spelling Wolfgang Jentner and wjentner@arizona.edu; primary service responsibility is user-confirmed.
 
 U of A GenAI | University | Documented route
 Access: Active UArizona NetID; published FAQ describes limited early access. Check genai.arizona.edu for availability.
@@ -417,9 +417,9 @@ Earlier source-ledger review; current resource-owner access, cost and contact no
 
 # Needs and gaps assessment
 
-**Draft framework — inputs not yet collected by this site.** The resource inventory and historical provider changes identify questions to examine; they do not establish the size or distribution of college needs.
+**Draft framework — no college-wide findings established.** The resource inventory and historical provider changes identify questions to examine; they do not establish the size or distribution of college needs.
 
-[Describe a need](needs.html) · [Download blank needs register](computing-needs-register.csv)
+[Prepare and optionally submit a need](needs.html) · [Download blank needs register](computing-needs-register.csv)
 
 ## Questions to investigate
 
@@ -445,6 +445,10 @@ Report which parts of the college and which roles contributed, the number of usa
 ## Ready for a preliminary draft when…
 
 The group has a versioned needs register, a documented account of participation, significant gaps linked to evidence, and a clear list of remaining unknowns. Refine these with faculty, students and resource owners early in Spring 2027.
+
+## Review submitted briefs
+
+Barney Maccabe and Greg Chism can use the [private pilot queue](https://infosci-compute-drafter.vercel.app/review/) to review explicitly submitted public/synthetic briefs, add a status and notes, and export or delete requests. Contact addresses are self-reported. Submission does not imply approval, capacity or an allocation; internal and restricted information needs an agreed university channel.
 
 
 # Primers for the working group
@@ -537,7 +541,7 @@ Supporting assessment of the request tool. Start with the [resource tool](needs.
 
 The [needs tool](needs.html) offers a source-backed local template and an optional **GPT-6 Luna** rewrite after explicit consent for public/synthetic information. Luna uses a server-side credential and a shared allowance: 20 attempts/day, 200/month, five/network/day, up to 1,000 output tokens each. Attempts reserve $0.005 of the application allowance before calling the model, limiting this service to $1/month in reservations at current verified rates. This is separate from account-wide billing and hosting. Failed or timed-out calls are not retried automatically.
 
-For a manual campus route, use [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/). Wolfgang Jetner at ORAI reports an AI Verde transition and $200/month of Bedrock credit, relayed by Greg Chism; [review the credit boundaries and supplied model rates](campus-ai.html). [U of A GenAI](https://responsibleai.arizona.edu/tools-support/u-gen-ai) remains another documented route. Campus API integration and credit use have not been tested here.
+For a manual campus route, use [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/). Wolfgang Jentner at ORAI reports an AI Verde transition and $200/month of Bedrock credit, relayed by Greg Chism; [review the credit boundaries and supplied model rates](campus-ai.html). [U of A GenAI](https://responsibleai.arizona.edu/tools-support/u-gen-ai) remains another documented route. Campus API integration and credit use have not been tested here.
 
 ### Browser-model assessment
 
@@ -551,16 +555,20 @@ On October 19, 2026, **GPT-6 Luna** completed three synthetic requests—data sc
 
 **Assessment: useful first drafts with human review.** This was three examples with facts supplied, not a reliability guarantee or a matched comparison with browser models. Total usage was 4,157 input and 1,032 output tokens; estimated token charges were **about $0.001**, including reported cache writes, using [published standard rates](https://developers.openai.com/api/docs/models/gpt-6-luna). This is an estimate, not a verified invoice. That initial test established no institutional approval or college operating budget. The subsequent optional integration has its own usage limits and deployment checks.
 
+## Optional submission and review
+
+The resource tool now has a separate, explicit submission step. Public/synthetic briefs and contact details can be stored in a private pilot queue for Barney and Greg, using the existing hosting. Luna drafting never submits automatically and contact details are not sent to the model. Reviewers use a shared passphrase, update status and notes, export requests, and delete entries when no longer needed. This is not NetID, a sensitive-data intake or an allocation application.
+
 
 # Arizona AI Assistant transition
 
-**AI Verde → [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/).** **Wolfgang Jetner at the Office of Responsible AI (ORAI)** is the source of this planned transition and **$200/month of AWS Bedrock credit**, relayed by Greg Chism. Transition date, who receives the credit, eligibility, renewal and overage controls need confirmation. This is an October 19, 2026 working-group update, not a verified entitlement for every faculty member or student.
+**AI Verde → [Arizona AI Assistant](https://ai-assistant.responsibleai.arizona.edu/).** **Wolfgang Jentner at the Office of Responsible AI (ORAI)** is the source of this planned transition and **$200/month of AWS Bedrock credit**, relayed by Greg Chism. Transition date, who receives the credit, eligibility, renewal and overage controls need confirmation. This is an October 19, 2026 working-group update, not a verified entitlement for every faculty member or student.
 
-Public [university news](https://news.arizona.edu/employee-news/guide-ai-tools-u) describes Arizona AI Assistant as a fall pilot and AI Verde separately. The new portal returned HTTP 200; we have not tested a signed-in account or campus API. Contact the [Office of Responsible AI](https://responsibleai.arizona.edu/) for current enrollment and credit terms; Mithun Paul (mithunpaul@arizona.edu) is the previously published AI Verde contact for migration questions.
+Public [university news](https://news.arizona.edu/employee-news/guide-ai-tools-u) describes Arizona AI Assistant as a fall pilot and AI Verde separately. The new portal returned HTTP 200; we have not tested a signed-in account or campus API. Contact **[Wolfgang Jentner at ORAI](mailto:wjentner@arizona.edu)** for AI Verde, Arizona AI Assistant and Bedrock for current enrollment, migration and credit terms.
 
 ## Models and prices in the supplied screenshot
 
-USD per **one million tokens**. These are campus gateway prices in the ORAI screenshot from Wolfgang Jetner, relayed by Greg Chism, not direct OpenAI prices or measured bills. Check current account rates before use.
+USD per **one million tokens**. These are campus gateway prices in the ORAI screenshot from Wolfgang Jentner, relayed by Greg Chism, not direct OpenAI prices or measured bills. Check current account rates before use.
 
 | Model ID | Input | Output |
 | --- | ---: | ---: |
@@ -591,6 +599,8 @@ For example, at the listed campus Luna rate, **10,000 input + 1,000 output token
 The [resource request tool](needs.html) currently uses the separate direct OpenAI Luna pilot. Its $1 monthly application allowance does not draw from campus Bedrock credit. Campus integration needs a campus-issued credential and confirmed API terms.
 
 [Resource inventory](inventory.html) · [Drafting assessment](approaches.html)
+
+Primary contact confirmed by Greg Chism on October 20, 2026; spelling and email verified in the [university directory](https://responsibleai.arizona.edu/about-orai/directory).
 
 
 # Recommendations for review
@@ -628,7 +638,7 @@ Use a short, repeatable review. This is a suggested meeting format, not a schedu
 
 ## Before the session
 
-Choose a deliverable and review its current draft. Bring a public or appropriately shareable resource correction or needs brief. Use the group’s agreed university channel for internal material; the public website does not register briefs with the working group.
+Choose a deliverable and review its current draft. Bring a public or appropriately shareable resource correction or needs brief. Use the group’s agreed university channel for internal material; the resource tool’s separate submission step accepts only reviewed public/synthetic briefs into the private pilot queue.
 
 ## Suggested 45-minute agenda
 

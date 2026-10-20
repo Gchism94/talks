@@ -4,7 +4,7 @@ Use a short, repeatable review. This is a suggested meeting format, not a schedu
 
 ## Before the session
 
-Choose a deliverable and review its current draft. Bring a public or appropriately shareable resource correction or needs brief. Use the group’s agreed university channel for internal material; the public website does not register briefs with the working group.
+Choose a deliverable and review its current draft. Bring a public or appropriately shareable resource correction or needs brief. Use the group’s agreed university channel for internal material; the resource tool’s separate submission step accepts only reviewed public/synthetic briefs into the private pilot queue.
 
 ## Suggested 45-minute agenda
 

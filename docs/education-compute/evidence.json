@@ -12,11 +12,17 @@
     "colab": {
       "title": "Google Colab Pro for Education · offer closed",
       "url": "https://research.google.com/colaboratory/faq.html",
-      "date": "Current FAQ checked October 8, 2026 · effective closure date not stated",
-      "quality": "Provider policy; verified status, uncertain change date",
+      "date": "Closed to new users by September 21, 2026 (Greg Chism update received October 20); provider FAQ checked October 8, 2026; exact effective date not stated",
+      "quality": "Provider policy verifies status; user-reported earlier boundary date",
       "claim": "The FAQ says new sign-ups for the free one-year Pro for Education subscription are no longer available. Previously verified users keep the benefit until their one-year mark, unless replaced with a paid personal subscription.",
-      "scope": "Google announced a limited number of these subscriptions on July 18, 2025. The current FAQ establishes withdrawal of the offer, not deletion of education accounts or the end of free Colab. The phrase “quietly pulled” is an interpretation of the FAQ-only notice; the absence of a separate announcement cannot be proved. Free Colab still has variable, non-guaranteed resource limits.",
-      "rechecked_at": "2026-10-19"
+      "scope": "Google announced a limited number of these subscriptions on July 18, 2025. The current FAQ establishes withdrawal of the offer, not deletion of education accounts or the end of free Colab. The phrase “quietly pulled” is an interpretation of the FAQ-only notice; the absence of a separate announcement cannot be proved. Free Colab still has variable, non-guaranteed resource limits. Greg Chism reports it was already closed to new users by September 21, 2026. This is an attributed upper boundary, not the exact effective closure date.",
+      "rechecked_at": "2026-10-19",
+      "user_update": {
+        "reported_by": "Greg Chism",
+        "received": "2026-10-20",
+        "closed_to_new_users_by": "2026-09-21",
+        "basis": "User reports the program was already closed to new users by this date; not independently dated by the provider FAQ."
+      }
     },
     "colablaunch": {
       "title": "Google · original education offer",
@@ -1793,12 +1799,12 @@
       "year": 2026,
       "id": "colab",
       "name": "Colab education offer",
-      "date": "Observed October 8, 2026 · change date unverified",
+      "date": "Closed to new users by September 21, 2026 · user-reported boundary",
       "kind": "Compute benefit",
       "title": "The education Pro offer quietly closes",
-      "body": "Google’s FAQ now says free one-year Colab Pro for Education subscriptions are unavailable to new sign-ups. Existing verified users keep their remaining year.",
+      "body": "New sign-ups for free one-year Colab Pro for Education subscriptions were closed by September 21, 2026, per Greg Chism’s October 20 update. Google’s FAQ independently confirms the closed offer. Existing verified users retain their remaining year.",
       "fact": "NO NEW EDUCATION SIGN-UPS",
-      "scope": "Free Colab still exists. “Quietly” describes the FAQ notice; no exact closure date is established. The original offer was limited."
+      "scope": "Base free Colab remains. September 21 is a user-reported upper boundary; the provider FAQ does not state the exact effective closure date. The original offer was limited."
     },
     {
       "year": 2026,
@@ -2703,7 +2709,7 @@
     ],
     "proposal": "Pilot a permitted Codabench evaluation queue backed by reviewed ACCESS capacity; isolated workers, scheduling, operations, storage, backups and grade exports remain separate requirements."
   },
-  "updated_at": "2026-10-19",
+  "updated_at": "2026-10-20",
   "federal_platform_map": [
     {
       "id": "access",
@@ -4043,7 +4049,7 @@
     "scope": "Documentation and current-account eligibility boundaries, not a provider benchmark or cloud adoption."
   },
   "report_overview": {
-    "updated": "2026-10-19",
+    "updated": "2026-10-20",
     "core_statement": "What we have previously relied on can no longer be guaranteed",
     "interpretation": "Free resources still support useful teaching. The selected history shows repeated withdrawal of classroom tools, shorter free-use windows, tighter team/storage limits and more metered or conditional access. A previous semester’s setup is no longer a sufficient continuity plan.",
     "boundary": "This is an interpretation of selected documented changes, not a census of providers or a measured decline in total free compute. GitHub Free repositories and base free Colab remain available. New and surviving options coexist with the losses.",
@@ -4297,8 +4303,8 @@
     ],
     "observation": {
       "title": "Colab Pro for Education: new sign-ups closed",
-      "label": "Change date unknown · observed Oct 8, rechecked Oct 19",
-      "body": "The free one-year education offer no longer accepts new sign-ups. Existing verified subscriptions can continue to their one-year mark. Base free Colab remains; this is not deletion of education accounts.",
+      "label": "Closed by September 21, 2026 · user-reported boundary",
+      "body": "Greg Chism reports that new sign-ups were already closed by September 21, 2026 (update received October 20). The provider FAQ independently confirms the closed offer but does not date the change. Existing verified subscriptions can continue to their one-year mark. Base free Colab remains; education accounts were not deleted.",
       "sources": [
         "colab"
       ]

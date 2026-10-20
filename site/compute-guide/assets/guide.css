@@ -51,3 +51,14 @@ textarea:focus-visible{outline:3px solid #1e5288;outline-offset:3px}
 .md-typeset details>summary{padding-left:.8rem}.md-typeset details>summary::before{display:none}
 
 .md-typeset article[id],.md-typeset span[id]{scroll-margin-top:var(--guide-sticky-offset,7rem)}
+
+/* Non-interactive spam trap; never hides the actual submission controls. */
+.submission-trap{display:none!important}
+/* Match the intake controls to the local brief, including narrow screens. */
+#requestSubmission{border-top:2px solid #c5cbd3;margin-top:1.5rem;padding-top:.5rem}
+#requestSubmission>label,#requestSubmission .needs-grid label{display:block;font-weight:600;font-size:.76rem}
+#requestSubmission textarea,#requestSubmission input:not([type=checkbox]){display:block;width:100%;max-width:100%;box-sizing:border-box;border:1px solid #8995a5;background:#fff;color:#172230;padding:.6rem;font:inherit;font-size:.78rem;line-height:1.5;margin:.4rem 0 1rem}
+#requestSubmission textarea{resize:vertical;min-height:12rem}
+#requestSubmission .luna-consent{display:flex;align-items:flex-start;gap:.6rem;font-weight:400;font-size:.76rem;line-height:1.55;cursor:pointer}
+#requestSubmission>button{margin-top:1rem}
+#submissionStatus{overflow-wrap:anywhere}

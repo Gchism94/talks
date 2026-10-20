@@ -86,7 +86,7 @@ def build():
         else: target = Path('review')
         copy(src, target / src.name)
     # Explicit backend source allowlist: never include runtime secrets or dependencies.
-    for name in ['package.json','package-lock.json','vercel.json','README.md','init-ledger.mjs','data/inventory.json','lib/contracts.mjs','lib/quota.mjs','lib/handler.mjs','lib/blob-store.mjs','api/draft.mjs','test/service.test.mjs']:
+    for name in ['package.json','package-lock.json','vercel.json','README.md','init-ledger.mjs','data/inventory.json','lib/contracts.mjs','lib/quota.mjs','lib/handler.mjs','lib/blob-store.mjs','api/draft.mjs','test/service.test.mjs','api/requests.mjs','api/review.mjs','init-intake.mjs','lib/intake.mjs','lib/intake-store.mjs','test/intake.test.mjs','public/review/index.html','public/review/review.js','public/review/review.css']:
         copy(ROOT/'services/compute-drafter'/name,Path('source/compute-drafter')/name)
     for name in ['build_compute_evidence.py','build_compute_resources.py','build_federal_compute.py','build_classroom_assessment.py','build_compute_program.py','compute_program_views.py','compute_classroom50.py','compute_serverless.py','compute_report_overview.py','build_compute_guide.py','compute_working_group.py','compute_site_focus.py','test_working_group_needs.cjs','test_compute_request_llm.py','test_compute_needs.cjs','build_compute_pilot_pdfs.py','build_compute_benchmarks.py','build_site.py','check_site.py','package_compute_review.py']:
         copy(ROOT / 'scripts' / name, Path('review/builders') / name)

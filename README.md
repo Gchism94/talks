@@ -377,8 +377,7 @@ resource inventory, needs/gaps, portfolio of approaches and recommendations.
 `site/compute-guide/pages/` holds the concise deliverable drafts;
 `scripts/compute_working_group.py` integrates them into the pinned guide build.
 The local needs brief is at `needs.html`; technical sizing is optional at
-`compute-estimator.html`. No responses are submitted, stored or aggregated by the
-site. Examples are explicitly marked, unknown quantities stay unknown and exports
+`compute-estimator.html`. Briefs stay local unless the user explicitly submits a reviewed public/synthetic brief and contact details to the private pilot queue. No college-wide aggregation is inferred. Examples are explicitly marked, unknown quantities stay unknown and exports
 are invalidated when fields change. Existing compute-pilot constraints remain
 case-specific; they are not college-wide staffing or budget findings.
 
@@ -398,7 +397,7 @@ unknown values, example labels, stale exports, search, print and offline behavio
 
 The [computing resource site](https://gchism94.github.io/talks/education-compute/) centers on available resources, the growing access gap, opportunities and working-group primers. Six primary pages: Overview, Resources, Primers, Resource tool, Report and Supplement. The [structured report](https://gchism94.github.io/talks/education-compute/report.html) is the current assessment; the [supplement](https://gchism94.github.io/talks/education-compute/supplemental.html) groups working materials, platform comparisons, the DS/MLIS pilot, historical research and talk. Existing URLs, 181 source records and downloads remain available.
 
-Barney Maccabe and Greg Chism, Faculty Director of Instructional Computing, are the working-group point people. The resource tool prepares local briefs and requests; optional GPT-6 Luna drafting requires public/synthetic information and explicit consent. Credentials remain server-only, usage is capped, and nothing is submitted to the working group. The pilot's ACCESS CPU/GPU, campus-AWS testing-only, zero-cash and ten-hour boundaries remain conditional and separate from college-wide findings.
+Barney Maccabe and Greg Chism, Faculty Director of Instructional Computing, are the working-group point people. The resource tool prepares local briefs and requests; optional GPT-6 Luna drafting requires public/synthetic information and explicit consent. Credentials remain server-only, usage is capped, and drafting never submits automatically. A separate consent-based step saves completed public/synthetic briefs in the private review queue for Barney and Greg; reviewers can add status/notes, export and delete requests. The pilot's ACCESS CPU/GPU, campus-AWS testing-only, zero-cash and ten-hour boundaries remain conditional and separate from college-wide findings.
 
 Canonical content: `site/compute-guide/`; inventory: `working-group.json`. Build with `scripts/build_compute_guide.py --zensical /path/to/pinned/zensical`. `scripts/compute_site_focus.py` renders the structured assessment and readable chronological archive; `scripts/compute_working_group.py` maintains the tool, inventory and working packet. Run the needs and site checks, then review desktop/mobile navigation, filters, report disclosures, supplementary links and mocked drafting. Preserve the full local review archive and the unrelated ant-talk branch.
 

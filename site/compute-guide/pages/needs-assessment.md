@@ -1,8 +1,8 @@
 # Needs and gaps assessment
 
-**Draft framework — inputs not yet collected by this site.** The resource inventory and historical provider changes identify questions to examine; they do not establish the size or distribution of college needs.
+**Draft framework — no college-wide findings established.** The resource inventory and historical provider changes identify questions to examine; they do not establish the size or distribution of college needs.
 
-[Describe a need](needs.html) · [Download blank needs register](computing-needs-register.csv)
+[Prepare and optionally submit a need](needs.html) · [Download blank needs register](computing-needs-register.csv)
 
 ## Questions to investigate
 
@@ -28,3 +28,7 @@ Report which parts of the college and which roles contributed, the number of usa
 ## Ready for a preliminary draft when…
 
 The group has a versioned needs register, a documented account of participation, significant gaps linked to evidence, and a clear list of remaining unknowns. Refine these with faculty, students and resource owners early in Spring 2027.
+
+## Review submitted briefs
+
+Barney Maccabe and Greg Chism can use the [private pilot queue](https://infosci-compute-drafter.vercel.app/review/) to review explicitly submitted public/synthetic briefs, add a status and notes, and export or delete requests. Contact addresses are self-reported. Submission does not imply approval, capacity or an allocation; internal and restricted information needs an agreed university channel.
