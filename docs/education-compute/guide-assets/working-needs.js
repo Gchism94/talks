@@ -40,7 +40,8 @@ function requestDraft(a,inventory=[]){
  'Funding position: '+a.budget+'; no approval, award or paid use inferred.',
  'DATA AND RIGHTS: '+a.data+'; confirm handling, permissions and retention before access.',
  'CANDIDATE ROUTES TO REVIEW — not a service match or commitment:',
- ...routes.map(r=>r.name+' | '+r.cost+' | Contact: '+r.contact+' | Limitation: '+r.limits+' | Source: '+r.source+' | Checked: '+r.checked),
+ ...routes.map(r=>r.name+' | Access: '+r.access+' | Cost: '+r.cost+' | Contact: '+r.contact+' | Limitation: '+r.limits+' | Source: '+r.source+' | Checked: '+r.checked),
+ ...(ids.has('campus-hpc-teaching')?['PUMA CLASSROOM PLANNING: Class groups are permitted. The published standard ceiling is four GPUs per group, not one GPU per student; check remaining PI hours, shared research usage, job/device limits, queue-tolerant deadlines and instructor-led student support. No class reservation or 150,000 GPU-hour allocation is implied.']:[]),
  'OWNER QUESTIONS: Confirm eligibility; availability and concurrency; licenses/data rights; exact quota/cost; setup and recurring support hours; owner/backup; test and exit plan.',
  'VALIDATION: Benchmark only where useful; test a representative workflow, accessibility, onboarding, export/recovery and support before required use.',
  'DECISION REQUEST: Confirm the appropriate service and a bounded next step. Quantities and commitments remain open until measured and approved.'

@@ -27,3 +27,16 @@ test('pause switch, previews and missing credentials block generation',async()=>
 test('success reserves first, sends key only upstream and deduplicates',async()=>{const store=memoryStore();let calls=0;const h=makeHandler({store,env,clock:()=>now,fetchImpl:async(url,options)=>{calls++;assert.equal(url,'https://api.openai.com/v1/responses');assert.equal(options.headers.Authorization,'Bearer test-secret-not-real');assert.equal(store.value.count,1);return {ok:true,json:async()=>fakeDraft()};}});const b=body(),res=response();await h(request(b),res);assert.equal(res.statusCode,200);assert(!JSON.stringify(res.body).includes(env.OPENAI_API_KEY));assert(!JSON.stringify(store.value).includes(b.brief.activity));const dup=response();await h(request(b),dup);assert.equal(dup.statusCode,409);assert.equal(calls,1);});
 test('provider error or timeout consumes attempt with no retry or error disclosure',async()=>{for(const timeout of [true,false]){let calls=0;const store=memoryStore(),res=response();await makeHandler({store,env,clock:()=>now,fetchImpl:async()=>{calls++;if(timeout)throw Error('secret timeout');return {ok:false,status:429};}})(request(),res);assert(res.statusCode>=500);assert.equal(calls,1);assert.equal(store.value.count,1);assert(!JSON.stringify(res.body).includes('secret'));}});
 test('incomplete, malformed, unsupported-source and overlong output rejected',async()=>{for(const kind of ['incomplete','bad-source','overlong','malformed']){const o=fakeDraft();if(kind==='incomplete')o.status='incomplete';else if(kind==='malformed')o.output[0].content[0].text='not json';else{const d=JSON.parse(o.output[0].content[0].text);if(kind==='bad-source')d.source_ids=['made-up'];else d.draft='word '.repeat(180);o.output[0].content[0].text=JSON.stringify(d);}const store=memoryStore(),res=response();await makeHandler({store,env,clock:()=>now,fetchImpl:async()=>({ok:true,json:async()=>o})})(request(),res);assert.equal(res.statusCode,502);assert.equal(store.value.count,1);}});
+
+test('current Puma facts reach research, teaching and mixed requests without obsolete policy instructions',()=>{
+ for(const scope of ['Research','Instruction','Both research and instruction']){
+  const {payload}=buildPayload({...body(),brief:{...brief(),scope,resources:['Hardware / compute']}});
+  const facts=JSON.parse(payload.input).public_resource_facts;
+  const hpc=facts.find(r=>r.id===(scope==='Research'?'campus-hpc':'campus-hpc-teaching'));
+  assert(hpc);assert.match(hpc.access,/150,000 CPU core-hours/);assert.match(hpc.access,/shared by research and class groups/);
+  assert.match(hpc.limits,/no guaranteed start time/i);assert.match(hpc.limits,/Instructors provide student support/);
+  if(scope!=='Research')assert.match(hpc.access,/class groups for instruction on Puma/);
+  assert.match(payload.instructions,/shared-allocation, queue and instructor-support limits/);
+  assert(!payload.instructions.includes('Ocelote'));assert(!payload.instructions.includes('conflicting'));
+ }
+});

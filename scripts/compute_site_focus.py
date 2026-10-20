@@ -80,7 +80,7 @@ def build(root, generated, public, data, group, write):
 
 For the **College of Information Science Computing Resources Working Group**. This report connects available services, changes in access and a practical response. The [resource inventory](inventory.html) contains service-specific access, cost and contact details.
 
-**Review basis:** dated provider and campus documentation, mostly checked October 8–19, 2026, plus the explicitly attributed ORAI update. This is a working assessment, not a completed college-wide needs study.
+**Review basis:** dated provider and campus documentation, mostly checked October 8–19, 2026, with campus HPC allocation and teaching policies rechecked October 20, plus the explicitly attributed ORAI update. This is a working assessment, not a completed college-wide needs study.
 
 ## Key findings
 
@@ -94,7 +94,23 @@ For the **College of Information Science Computing Resources Working Group**. Th
 
 The inventory contains **'''+inventory_summary+'''**. It covers hardware, software and models, data, RSE and technical support, training and collaboration. Unknown local equipment, licenses and available support hours are recorded as unknown, rather than assumed absent.
 
-Campus starting points include research HPC, software licensing, library data and digital-scholarship services, and research software expertise. **Classroom HPC permission needs clarification:** the teaching policy names Ocelote, while allocation notices report it retired. Research access does not establish permission to use another cluster for a course.
+Campus starting points include Puma CPU/GPU computing, software licensing, library data and digital-scholarship services, and research software expertise.
+
+### Campus HPC: Puma classroom access
+
+**Verified October 20, 2026:** the current [HPC teaching policy](https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/) explicitly permits Puma class groups. Earlier references to an Ocelote-only policy are superseded.
+
+| What is available | Limitation to plan around |
+| --- | --- |
+| 150,000 CPU core-hours per PI group/month | Research and class groups share one pool; unused hours do not carry forward |
+| CPU, GPU and high-memory jobs | CPU-based accounting uses that same pool; 150,000 is not a GPU-hour entitlement or course reservation |
+| Standard concurrency: four GPUs / 3,290 CPUs per group | Shared group ceilings, not promised availability or one GPU per student |
+| Standard allocation; optional windfall | Shared queues have uncertain waits and no assignment-deadline priority; windfall jobs can be interrupted |
+| Instructor setup and infrastructure consulting | Instructors/team support students; HPC Consult works weekday business hours, excluding university holidays |
+
+Check the PI's remaining allocation with **va** and actual group limits/usage with **job-limits &lt;group_name&gt;**, confirm class-group setup and device requirements, and test assignment fit before required use. No signed-in balance, peak-class rehearsal or reserved capacity is established here. [Allocation and charging policy](https://hpcdocs.hpc.arizona.edu/resources/allocations/) · [Job limits](https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/) · [HPC Consult](https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/).
+
+The [hardware page](https://hpcdocs.hpc.arizona.edu/resources/compute_resources/) lists **Lynx/H200 as not available yet**. Its Puma MIG memory table and narrative differ; confirm the requested device rather than assuming a memory quota. ACCESS remains the proposed large CPU/GPU allocation route for the separate instructional pilot.
 
 [Browse the inventory](inventory.html) · [Campus AI transition and supplied prices](campus-ai.html)
 

@@ -165,53 +165,56 @@
     },
     {
       "id": "campus-hpc",
-      "name": "Campus HPC: research CPU and GPU",
+      "name": "Campus HPC: Puma CPU and GPU",
       "level": "University",
       "category": "Hardware & compute",
-      "status": "Documented route",
-      "access": "Eligible UArizona users register and join a faculty PI group. Published Puma standard allocation: 150,000 CPU-hours per PI group each month.",
-      "cost": "Standard allocation and consulting at no charge; GPU jobs use the same CPU-hour pool. Buy-in is a separate paid arrangement.",
-      "support": "HPC Consult — ServiceNow ticket",
-      "limits": "Shared, non-rollover allocation; queues and GPU memory constrain work. Instruction policy still names Ocelote only, although allocation notices say Ocelote retired Aug. 17, 2026. Teaching eligibility on current clusters is unresolved. Lynx/H200 specifications are published, but operating availability/allocation must be confirmed.",
-      "funding": "Institutional or project service; dedicated college capacity/funding not established.",
+      "status": "Documented shared allocation",
+      "access": "Registered faculty PI groups receive 150,000 CPU core-hours per PI group each month, shared by research and class groups. CPU, GPU and high-memory jobs debit the same CPU-based pool; this is not 150,000 GPU-hours. Unused hours expire at month end.",
+      "cost": "Standard allocation and HPC consulting have no charge. High-priority access requires a separate buy-in; windfall jobs are lower-priority and preemptible.",
+      "support": "HPC Consult via ServiceNow; published hours 8 am-5 pm Monday-Friday, excluding university holidays.",
+      "limits": "Published standard concurrency ceiling: four GPUs and 3,290 CPUs per group, shared across users; this is a limit, not a reservation. Shared queues give no guaranteed start time or priority for assignment deadlines. Instructors provide student support; HPC Consult helps instructors on weekdays, not weekends or university holidays. Confirm remaining PI balance, resource limits and course fit; no class reservation is established. Lynx/H200 is explicitly not available yet. Published Puma MIG memory figures differ between the table and narrative; confirm the requested device.",
+      "funding": "University standard allocation; buy-in and special-project awards have separate conditions. Local support capacity is not implied.",
       "source": "https://hpcdocs.hpc.arizona.edu/resources/allocations/",
-      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
-      "next_action": "Research: confirm current hardware/accounting. Teaching: obtain HPC Consult confirmation of permitted cluster and terms before planning a class.",
+      "checked": "2026-10-20 — current public allocation, teaching, hardware and support documentation; no signed-in balance or workload test",
+      "next_action": "Check the actual remaining PI balance with va; identify CPU/GPU shape and concurrency limits, then test the workflow and arrange instructor-led support. Check job-limits <group_name> for live group usage/limits; Open OnDemand has additional per-job limits.",
       "contact": "HPC Consult — ServiceNow ticket",
       "contact_url": "https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d",
       "sources": [
         "https://hpcdocs.hpc.arizona.edu/resources/allocations/",
         "https://hpcdocs.hpc.arizona.edu/resources/compute_resources/",
         "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/",
-        "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/"
+        "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/",
+        "https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
-      "summary": "Research CPU and GPU computing; allocation, queue and data terms apply."
+      "verification": "Current published Puma allocation and classroom permission verified directly. This does not verify Greg’s remaining balance, a course reservation, allocation renewal or staffing.",
+      "summary": "Shared Puma CPU/GPU allocation for PI groups; class groups are permitted, with queue and support limits."
     },
     {
       "id": "campus-hpc-teaching",
-      "name": "Campus HPC: classroom policy needs clarification",
+      "name": "Campus HPC: Puma classroom computing",
       "level": "University",
       "category": "Hardware & compute",
-      "status": "Conflicting documentation",
-      "access": "Semester class groups are documented and share the faculty PI allocation. Ask HPC Consult for the currently permitted teaching cluster.",
-      "cost": "No separate class allocation; the faculty research pool is shared.",
-      "support": "HPC Consult — instructor should open a ticket",
-      "limits": "Policy restricts instruction to Ocelote, while current notices state Ocelote is decommissioned. Do not infer Puma/Lynx classroom permission. No expedited assignment jobs or individual student support promised.",
+      "status": "Class groups permitted",
+      "access": "Faculty PIs may create class groups for instruction on Puma. 150,000 CPU core-hours per PI group each month, shared by research and class groups. CPU, GPU and high-memory jobs debit the same CPU-based pool; this is not 150,000 GPU-hours. Unused hours expire at month end.",
+      "cost": "No added class allocation or dedicated class storage. Standard allocation and consulting have no charge; research and teaching share the PI pool.",
+      "support": "HPC Consult helps instructors set up class groups and troubleshoot infrastructure. Students get course support from their instructor/team; no individual student consulting is promised.",
+      "limits": "Published standard concurrency ceiling: four GPUs and 3,290 CPUs per group, shared across users; this is a limit, not a reservation. Shared queues give no guaranteed start time or priority for assignment deadlines. Instructors provide student support; HPC Consult helps instructors on weekdays, not weekends or university holidays. Confirm remaining PI balance, resource limits and course fit; no class reservation is established.",
       "funding": "Institutional or project service; dedicated college capacity/funding not established.",
       "source": "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/",
-      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
-      "next_action": "Resolve the retired-cluster / instruction-policy conflict and confirm support and simultaneous class access in writing.",
+      "checked": "2026-10-20 — current public teaching and allocation policies; no signed-in balance, reservation or class-load test",
+      "next_action": "Create the course class group, check remaining PI hours, test representative assignments and peak load, and agree student support, queue-tolerant deadlines and fallback. Check job-limits <group_name> for live group usage/limits; Open OnDemand has additional per-job limits.",
       "contact": "HPC Consult — instructor should open a ticket",
       "contact_url": "https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d",
       "sources": [
         "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/",
         "https://hpcdocs.hpc.arizona.edu/resources/allocations/",
         "https://hpcdocs.hpc.arizona.edu/registration_and_access/group_management/",
-        "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/"
+        "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/",
+        "https://hpcdocs.hpc.arizona.edu/resources/compute_resources/",
+        "https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
-      "summary": "Confirm the current teaching route: published policy names a retired cluster."
+      "verification": "The current teaching policy explicitly permits Puma class groups, superseding the earlier Ocelote-only uncertainty. Specific course capacity, remaining balance, supported data and readiness still need validation.",
+      "summary": "Puma is available for classes; the PI allocation is shared and immediate CPU/GPU access is not guaranteed."
     },
     {
       "id": "campus-hpc-storage",
@@ -802,7 +805,7 @@
     "method": "Primary university/college/CyVerse documentation, source captures and direct URL checks. No account login, contact response or capacity test.",
     "key_unknowns": [
       "College asset/license register and committed support hours",
-      "HPC classroom policy refers to retired Ocelote; current instruction permission unresolved",
+      "Puma course fit, remaining PI allocation, concurrent queue access and instructor-led support",
       "Arizona AI Assistant transition timing, $200/month credit allocation level, renewal/overage policy and campus API terms"
     ],
     "request_assistant": "Local template and optional consent-based GPT-6 Luna drafting; direct OpenAI usage is separate from planned campus Bedrock credit."
@@ -936,7 +939,7 @@
     },
     "storage": "Drafting endpoint only: private allowance counters, attempt IDs and rotating network hashes; no prompt/draft retained. Explicit working-group submissions use a separate private queue.",
     "failure_behavior": "No automatic retries; local template remains available; missing or unavailable ledger blocks model calls",
-    "deployment": "dpl_95V29TLLhQpssShgfdzRHzFt9E1j",
+    "deployment": "dpl_C5hZtK31ULRx74EyZCupsoKUAV3N",
     "server_key_required": true,
     "visitors_need_api_key": false,
     "uses_campus_bedrock_credit": false,
@@ -1034,5 +1037,28 @@
     "retention": "Reviewers delete when no longer needed; no automatic deletion schedule or recovery guarantee. Duplicate-prevention metadata remains through the current submission month.",
     "uses_ai": false,
     "cost": "Existing hosting and metered private Blob/function operations; no new subscription or model charge for submission."
+  },
+  "hpc_review": {
+    "checked": "2026-10-20",
+    "classroom_cluster": "Puma",
+    "standard_cpu_core_hours_per_pi_month": 150000,
+    "pool": "Shared across PI research and class groups; CPU/GPU/high-memory jobs use CPU-based accounting; no rollover",
+    "queue": "No immediate start or assignment-deadline priority; windfall is preemptible",
+    "support": "Instructor-led student support; HPC Consult weekday business hours, excluding holidays",
+    "upcoming_hardware": "Lynx/H200 explicitly not available yet",
+    "gpu_detail_to_confirm": "Puma memory table and MIG narrative differ; verify requested GPU/MIG shape with HPC Consult",
+    "sources": [
+      "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/",
+      "https://hpcdocs.hpc.arizona.edu/resources/allocations/",
+      "https://hpcdocs.hpc.arizona.edu/resources/compute_resources/",
+      "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/",
+      "https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/"
+    ],
+    "verification": "Public documentation only; no signed-in balance, quota, classroom load or allocation award verified",
+    "standard_group_concurrency": {
+      "gpu_max": 4,
+      "cpu_max": 3290,
+      "meaning": "Published ceiling, not guaranteed availability; check job-limits <group_name>; Open OnDemand has additional per-job limits"
+    }
   }
 }

@@ -12,7 +12,7 @@ An interactive class, a batch research job, a hosted model and a public website 
 
 ## 2. Separate availability from dependable access
 
-A free account or published machine specification does not reserve capacity or authorize classroom use. Research tolerates some queues; a scheduled class may not. Campus HPC teaching policy still names retired Ocelote, so the current permitted teaching route needs clarification.
+A free account or published machine specification does not reserve capacity or authorize classroom use. Research tolerates some queues; a scheduled class may not. Puma now permits class groups, but teaching and research share the PI allocation. Jobs may queue without deadline priority, and instructors support students.
 
 **Discuss:** Who is eligible, what is guaranteed, and what happens when access fails?
 

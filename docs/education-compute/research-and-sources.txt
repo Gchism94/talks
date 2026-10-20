@@ -2771,27 +2771,27 @@ Sources: https://infosci.arizona.edu/technology-requirements
 Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
 
-Campus HPC: research CPU and GPU | University | Documented route
-Access: Eligible UArizona users register and join a faculty PI group. Published Puma standard allocation: 150,000 CPU-hours per PI group each month.
-Cost: Standard allocation and consulting at no charge; GPU jobs use the same CPU-hour pool. Buy-in is a separate paid arrangement.
+Campus HPC: Puma CPU and GPU | University | Documented shared allocation
+Access: Registered faculty PI groups receive 150,000 CPU core-hours per PI group each month, shared by research and class groups. CPU, GPU and high-memory jobs debit the same CPU-based pool; this is not 150,000 GPU-hours. Unused hours expire at month end.
+Cost: Standard allocation and HPC consulting have no charge. High-priority access requires a separate buy-in; windfall jobs are lower-priority and preemptible.
 Contact: HPC Consult — ServiceNow ticket | https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d
-Support: HPC Consult — ServiceNow ticket
-Limits: Shared, non-rollover allocation; queues and GPU memory constrain work. Instruction policy still names Ocelote only, although allocation notices say Ocelote retired Aug. 17, 2026. Teaching eligibility on current clusters is unresolved. Lynx/H200 specifications are published, but operating availability/allocation must be confirmed.
-Funding: Institutional or project service; dedicated college capacity/funding not established.
-Sources: https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/resources/compute_resources/ | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/
-Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
-Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+Support: HPC Consult via ServiceNow; published hours 8 am-5 pm Monday-Friday, excluding university holidays.
+Limits: Published standard concurrency ceiling: four GPUs and 3,290 CPUs per group, shared across users; this is a limit, not a reservation. Shared queues give no guaranteed start time or priority for assignment deadlines. Instructors provide student support; HPC Consult helps instructors on weekdays, not weekends or university holidays. Confirm remaining PI balance, resource limits and course fit; no class reservation is established. Lynx/H200 is explicitly not available yet. Published Puma MIG memory figures differ between the table and narrative; confirm the requested device.
+Funding: University standard allocation; buy-in and special-project awards have separate conditions. Local support capacity is not implied.
+Sources: https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/resources/compute_resources/ | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/
+Review: 2026-10-20 — current public allocation, teaching, hardware and support documentation; no signed-in balance or workload test
+Current published Puma allocation and classroom permission verified directly. This does not verify Greg’s remaining balance, a course reservation, allocation renewal or staffing.
 
-Campus HPC: classroom policy needs clarification | University | Conflicting documentation
-Access: Semester class groups are documented and share the faculty PI allocation. Ask HPC Consult for the currently permitted teaching cluster.
-Cost: No separate class allocation; the faculty research pool is shared.
+Campus HPC: Puma classroom computing | University | Class groups permitted
+Access: Faculty PIs may create class groups for instruction on Puma. 150,000 CPU core-hours per PI group each month, shared by research and class groups. CPU, GPU and high-memory jobs debit the same CPU-based pool; this is not 150,000 GPU-hours. Unused hours expire at month end.
+Cost: No added class allocation or dedicated class storage. Standard allocation and consulting have no charge; research and teaching share the PI pool.
 Contact: HPC Consult — instructor should open a ticket | https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=12eaba153bf9ba5017be8a8a25e45a7d
-Support: HPC Consult — instructor should open a ticket
-Limits: Policy restricts instruction to Ocelote, while current notices state Ocelote is decommissioned. Do not infer Puma/Lynx classroom permission. No expedited assignment jobs or individual student support promised.
+Support: HPC Consult helps instructors set up class groups and troubleshoot infrastructure. Students get course support from their instructor/team; no individual student consulting is promised.
+Limits: Published standard concurrency ceiling: four GPUs and 3,290 CPUs per group, shared across users; this is a limit, not a reservation. Shared queues give no guaranteed start time or priority for assignment deadlines. Instructors provide student support; HPC Consult helps instructors on weekdays, not weekends or university holidays. Confirm remaining PI balance, resource limits and course fit; no class reservation is established.
 Funding: Institutional or project service; dedicated college capacity/funding not established.
-Sources: https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/registration_and_access/group_management/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/
-Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
-Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.
+Sources: https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/registration_and_access/group_management/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | https://hpcdocs.hpc.arizona.edu/resources/compute_resources/ | https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/
+Review: 2026-10-20 — current public teaching and allocation policies; no signed-in balance, reservation or class-load test
+The current teaching policy explicitly permits Puma class groups, superseding the earlier Ocelote-only uncertainty. Specific course capacity, remaining balance, supported data and readiness still need validation.
 
 HPC active storage and transfers | University | Documented route
 Access: HPC account: 50 GB home; PI group: 500 GB communal space. Temporary xdisk on request: 200 GB–20 TB, up to 300 days.
@@ -3096,7 +3096,7 @@ An interactive class, a batch research job, a hosted model and a public website 
 
 ## 2. Separate availability from dependable access
 
-A free account or published machine specification does not reserve capacity or authorize classroom use. Research tolerates some queues; a scheduled class may not. Campus HPC teaching policy still names retired Ocelote, so the current permitted teaching route needs clarification.
+A free account or published machine specification does not reserve capacity or authorize classroom use. Research tolerates some queues; a scheduled class may not. Puma now permits class groups, but teaching and research share the PI allocation. Jobs may queue without deadline priority, and instructors support students.
 
 **Discuss:** Who is eligible, what is guaranteed, and what happens when access fails?
 
@@ -3302,8 +3302,8 @@ College research labs and collaborators | https://infosci.arizona.edu/research-f
 co/lab: Critical Archives & Curation Collaborative | https://infosci.arizona.edu/colab-critical-archives-curation-collaborative | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 XRG: Extended Reality & Games Lab | https://infosci.arizona.edu/xrg-lab | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 College course technology requirements | https://infosci.arizona.edu/technology-requirements | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
-Campus HPC: research CPU and GPU | https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/resources/compute_resources/ | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
-Campus HPC: classroom policy needs clarification | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/registration_and_access/group_management/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
+Campus HPC: Puma CPU and GPU | https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/resources/compute_resources/ | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/ | 2026-10-20 — current public allocation, teaching, hardware and support documentation; no signed-in balance or workload test
+Campus HPC: Puma classroom computing | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/registration_and_access/group_management/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | https://hpcdocs.hpc.arizona.edu/resources/compute_resources/ | https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/ | 2026-10-20 — current public teaching and allocation policies; no signed-in balance, reservation or class-load test
 HPC active storage and transfers | https://hpcdocs.hpc.arizona.edu/storage_and_transfers/storage/hpc_storage/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 HPC software, containers and shared model data | https://hpcdocs.hpc.arizona.edu/software/common_datasets/ | https://hpcdocs.hpc.arizona.edu/software/overview/ | https://hpcdocs.hpc.arizona.edu/software/popular_software/ollama/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 HPC consulting and visualization support | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation

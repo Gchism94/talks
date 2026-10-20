@@ -71,23 +71,23 @@
   },
   {
     "id": "campus-hpc",
-    "name": "Campus HPC: research CPU and GPU",
-    "access": "Eligible UArizona users register and join a faculty PI group. Published Puma standard allocation: 150,000 CPU-hours per PI group each month.",
-    "cost": "Standard allocation and consulting at no charge; GPU jobs use the same CPU-hour pool. Buy-in is a separate paid arrangement.",
-    "limits": "Shared, non-rollover allocation; queues and GPU memory constrain work. Instruction policy still names Ocelote only, although allocation notices say Ocelote retired Aug. 17, 2026. Teaching eligibility on current clusters is unresolved. Lynx/H200 specifications are published, but operating availability/allocation must be confirmed.",
+    "name": "Campus HPC: Puma CPU and GPU",
+    "access": "Registered faculty PI groups receive 150,000 CPU core-hours per PI group each month, shared by research and class groups. CPU, GPU and high-memory jobs debit the same CPU-based pool; this is not 150,000 GPU-hours. Unused hours expire at month end.",
+    "cost": "Standard allocation and HPC consulting have no charge. High-priority access requires a separate buy-in; windfall jobs are lower-priority and preemptible.",
+    "limits": "Published standard concurrency ceiling: four GPUs and 3,290 CPUs per group, shared across users; this is a limit, not a reservation. Shared queues give no guaranteed start time or priority for assignment deadlines. Instructors provide student support; HPC Consult helps instructors on weekdays, not weekends or university holidays. Confirm remaining PI balance, resource limits and course fit; no class reservation is established. Lynx/H200 is explicitly not available yet. Published Puma MIG memory figures differ between the table and narrative; confirm the requested device.",
     "contact": "HPC Consult — ServiceNow ticket",
     "source": "https://hpcdocs.hpc.arizona.edu/resources/allocations/",
-    "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation"
+    "checked": "2026-10-20 — current public allocation, teaching, hardware and support documentation; no signed-in balance or workload test"
   },
   {
     "id": "campus-hpc-teaching",
-    "name": "Campus HPC: classroom policy needs clarification",
-    "access": "Semester class groups are documented and share the faculty PI allocation. Ask HPC Consult for the currently permitted teaching cluster.",
-    "cost": "No separate class allocation; the faculty research pool is shared.",
-    "limits": "Policy restricts instruction to Ocelote, while current notices state Ocelote is decommissioned. Do not infer Puma/Lynx classroom permission. No expedited assignment jobs or individual student support promised.",
+    "name": "Campus HPC: Puma classroom computing",
+    "access": "Faculty PIs may create class groups for instruction on Puma. 150,000 CPU core-hours per PI group each month, shared by research and class groups. CPU, GPU and high-memory jobs debit the same CPU-based pool; this is not 150,000 GPU-hours. Unused hours expire at month end.",
+    "cost": "No added class allocation or dedicated class storage. Standard allocation and consulting have no charge; research and teaching share the PI pool.",
+    "limits": "Published standard concurrency ceiling: four GPUs and 3,290 CPUs per group, shared across users; this is a limit, not a reservation. Shared queues give no guaranteed start time or priority for assignment deadlines. Instructors provide student support; HPC Consult helps instructors on weekdays, not weekends or university holidays. Confirm remaining PI balance, resource limits and course fit; no class reservation is established.",
     "contact": "HPC Consult — instructor should open a ticket",
     "source": "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/",
-    "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation"
+    "checked": "2026-10-20 — current public teaching and allocation policies; no signed-in balance, reservation or class-load test"
   },
   {
     "id": "campus-hpc-storage",
