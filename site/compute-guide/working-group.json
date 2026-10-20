@@ -28,7 +28,8 @@
       "sources": [
         "https://infosci.arizona.edu/tech"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Start with college technology support and escalation routes."
     },
     {
       "id": "college-hardware",
@@ -49,7 +50,8 @@
       "sources": [
         "https://infosci.arizona.edu/people/barney-maccabe"
       ],
-      "verification": "Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email."
+      "verification": "Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email.",
+      "summary": "Identify local equipment, lab access and any loan pool; capacity is not yet inventoried."
     },
     {
       "id": "college-rse",
@@ -70,7 +72,8 @@
       "sources": [
         "https://infosci.arizona.edu/people/barney-maccabe"
       ],
-      "verification": "Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email."
+      "verification": "Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email.",
+      "summary": "Identify engineering skills and support windows; available staff hours need confirmation."
     },
     {
       "id": "college-data",
@@ -91,7 +94,8 @@
       "sources": [
         "https://infosci.arizona.edu/people/barney-maccabe"
       ],
-      "verification": "Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email."
+      "verification": "Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email.",
+      "summary": "Clarify local software, datasets, agreements and renewal ownership."
     },
     {
       "id": "college-research-labs",
@@ -112,7 +116,8 @@
       "sources": [
         "https://infosci.arizona.edu/research-faculty/research-labs"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Find research capabilities and possible collaborators; shared access requires agreement."
     },
     {
       "id": "college-colab",
@@ -133,7 +138,8 @@
       "sources": [
         "https://infosci.arizona.edu/colab-critical-archives-curation-collaborative"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Explore critical archives, curation and community-centered data work."
     },
     {
       "id": "college-xrg",
@@ -154,7 +160,8 @@
       "sources": [
         "https://infosci.arizona.edu/xrg-lab"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Explore extended reality and games capabilities; access and equipment availability need confirmation."
     },
     {
       "id": "college-device-requirements",
@@ -175,7 +182,8 @@
       "sources": [
         "https://infosci.arizona.edu/technology-requirements"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Check course software and device requirements before selecting a platform."
     },
     {
       "id": "campus-hpc",
@@ -199,7 +207,8 @@
         "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/",
         "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Research CPU and GPU computing; allocation, queue and data terms apply."
     },
     {
       "id": "campus-hpc-teaching",
@@ -223,7 +232,8 @@
         "https://hpcdocs.hpc.arizona.edu/registration_and_access/group_management/",
         "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Confirm the current teaching route: published policy names a retired cluster."
     },
     {
       "id": "campus-hpc-storage",
@@ -245,7 +255,8 @@
         "https://hpcdocs.hpc.arizona.edu/storage_and_transfers/storage/hpc_storage/",
         "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Active research storage and data transfers; not an independent backup."
     },
     {
       "id": "campus-hpc-software",
@@ -269,7 +280,8 @@
         "https://hpcdocs.hpc.arizona.edu/software/popular_software/ollama/",
         "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Find supported HPC software, containers and shared model data."
     },
     {
       "id": "campus-hpc-consult",
@@ -291,7 +303,8 @@
         "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/",
         "https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Consult on HPC workflows and visualization; specialist capacity is not assumed."
     },
     {
       "id": "campus-aiverde",
@@ -314,7 +327,8 @@
         "https://news.arizona.edu/employee-news/guide-ai-tools-u",
         "https://cyverse.org/ai-verde"
       ],
-      "verification": "Public university news describes Arizona AI Assistant as a fall pilot and AI Verde separately. The transition and $200/month credit come from Wolfgang Jetner at ORAI, relayed by Greg Chism; individual entitlements have not been tested. Pricing screenshot received October 19; its capture/effective date is unconfirmed. Confirm live account rates."
+      "verification": "Public university news describes Arizona AI Assistant as a fall pilot and AI Verde separately. The transition and $200/month credit come from Wolfgang Jetner at ORAI, relayed by Greg Chism; individual entitlements have not been tested. Pricing screenshot received October 19; its capture/effective date is unconfirmed. Confirm live account rates.",
+      "summary": "ORAI reports an Arizona AI Assistant transition and planned Bedrock credit; terms need confirmation."
     },
     {
       "id": "campus-genai",
@@ -337,7 +351,8 @@
         "https://it.arizona.edu/student-resources",
         "https://responsibleai.arizona.edu/ai-tools-guide"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Explore the documented NetID route for campus generative AI tools."
     },
     {
       "id": "campus-software",
@@ -359,7 +374,8 @@
         "https://it.arizona.edu/student-resources",
         "https://it.arizona.edu/node/616"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Check campus software agreements, eligible users and license restrictions."
     },
     {
       "id": "campus-vcat",
@@ -382,7 +398,8 @@
         "https://it.arizona.edu/news/finding-resources-faculty",
         "https://it.arizona.edu/student-resources"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Explore remotely available or shared-space software; check application and class fit."
     },
     {
       "id": "campus-data",
@@ -404,7 +421,8 @@
         "https://lib.arizona.edu/research/data",
         "https://lib.arizona.edu/research/data/data-science"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Seek Python, R, machine-learning and research-data guidance."
     },
     {
       "id": "campus-digital-scholarship",
@@ -426,7 +444,8 @@
         "https://lib.arizona.edu/research/data/digital-scholarship",
         "https://lib.arizona.edu/research/plan/tdm-llm"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Explore digital scholarship, text analysis and data-mining support."
     },
     {
       "id": "campus-data-licenses",
@@ -447,7 +466,8 @@
       "sources": [
         "https://lib.arizona.edu/research/plan/tdm-llm"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Check dataset access and reuse rights; library access does not imply redistribution rights."
     },
     {
       "id": "campus-gis",
@@ -469,7 +489,8 @@
         "https://lib.arizona.edu/research/data/geospatial",
         "https://lib.arizona.edu/research/data"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Find geospatial software, data and consultation."
     },
     {
       "id": "campus-redata",
@@ -492,7 +513,8 @@
         "https://lib.arizona.edu/research/data/redata/faqs",
         "https://lib.arizona.edu/research/data/redata/deposit"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Assess research data and code deposits for preservation and reuse."
     },
     {
       "id": "campus-dsi-rse",
@@ -514,7 +536,8 @@
         "https://data7.arizona.edu/contact-us",
         "https://datascience.arizona.edu/directory"
       ],
-      "verification": "Official-source search/fetch text supplied the contact and engineering roles, but direct checks of data7.arizona.edu and datascience.arizona.edu failed DNS resolution. This is an availability limitation, not evidence of service closure. No available staff hours verified."
+      "verification": "Official-source search/fetch text supplied the contact and engineering roles, but direct checks of data7.arizona.edu and datascience.arizona.edu failed DNS resolution. This is an availability limitation, not evidence of service closure. No available staff hours verified.",
+      "summary": "Explore research software expertise; published contact routes need reconfirmation."
     },
     {
       "id": "campus-cct",
@@ -535,7 +558,8 @@
       "sources": [
         "https://datascience.cct.arizona.edu/"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Explore research data-science consultation and software support."
     },
     {
       "id": "campus-catalyst",
@@ -557,7 +581,8 @@
         "https://lib.arizona.edu/catalyst",
         "https://lib.arizona.edu/catalyst/contact"
       ],
-      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown."
+      "verification": "Access route, published cost basis and contact checked in public sources. Unpublished quotas, staffing and college capacity remain unknown.",
+      "summary": "Explore making, XR and class partnerships; availability needs confirmation."
     },
     {
       "id": "campus-policy",
@@ -578,7 +603,8 @@
       "sources": [
         "https://responsibleai.arizona.edu/ai-tools-guide"
       ],
-      "verification": "Published guidance/training route only; not a compute or staff allocation."
+      "verification": "Published guidance/training route only; not a compute or staff allocation.",
+      "summary": "Check institutional AI-tool and data-use guidance before adoption."
     },
     {
       "id": "campus-training",
@@ -599,7 +625,8 @@
       "sources": [
         "https://it.arizona.edu/news/new-u-ai-resources"
       ],
-      "verification": "Published guidance/training route only; not a compute or staff allocation."
+      "verification": "Published guidance/training route only; not a compute or staff allocation.",
+      "summary": "Find learning opportunities and training; events do not establish ongoing support."
     },
     {
       "id": "access",
@@ -620,7 +647,8 @@
       "sources": [
         "https://access-ci.org/"
       ],
-      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.",
+      "summary": "Request project-based CPU and GPU resources; an award and provider fit are required."
     },
     {
       "id": "nairr",
@@ -641,7 +669,8 @@
       "sources": [
         "https://nairrpilot.org/"
       ],
-      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.",
+      "summary": "Explore eligible instructor-led AI classroom pilots; scope and resources are conditional."
     },
     {
       "id": "osg",
@@ -662,7 +691,8 @@
       "sources": [
         "https://osg-htc.org/ospool/"
       ],
-      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.",
+      "summary": "Assess opportunistic throughput jobs; this is a different service model from live class notebooks."
     },
     {
       "id": "mesa",
@@ -683,7 +713,8 @@
       "sources": [
         "https://idss-mesa.github.io/"
       ],
-      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.",
+      "summary": "Explore compatible data-service collaboration; project funding is not a general compute entitlement."
     },
     {
       "id": "free-gpu",
@@ -704,7 +735,8 @@
       "sources": [
         "classroom-resources.html"
       ],
-      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.",
+      "summary": "Use bounded GPU notebooks or credits for preliminary experiments; quotas and hardware vary."
     },
     {
       "id": "preservation",
@@ -725,7 +757,8 @@
       "sources": [
         "repository-plan.html"
       ],
-      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion."
+      "verification": "Earlier source-ledger review; current resource-owner access, cost and contact not newly verified in this campus expansion.",
+      "summary": "Separate code hosting, active databases, scholarly deposits and preservation needs."
     }
   ],
   "deliverables": [

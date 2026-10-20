@@ -244,36 +244,6 @@ This page records the plan. Selecting or opening a check does not approve it or 
 **Proposed pilot:** two 40-student courses, a ten-person canary and a whole-class rehearsal. Every number is provisional until course leads and measurements confirm it.
 
 [Scope needs](needs.html) · [Federal map](federal-compute.html) · [Admission checks](readiness.html) · [Full assessment evidence](research-report.html)''')
-    ov=d['report_overview'];table='| Resource type | Current status | Main boundary |\n| --- | --- | --- |\n'
-    for r in ov['available']:table+='| ['+r['title']+']('+r['detail']+') — '+r['names']+' | '+r['status']+' | '+r['boundary']+' |\n'
-    history=''
-    for year in ov['years']:
-        history+='<section class="guide-year"><h3>'+E(year['year'])+'</h3><ul>'
-        for event in year['events']:history+='<li><strong>'+E(event['date']+' · '+event['title'])+'</strong><br>'+E(event['before']+' → '+event['after'])+' '+refs(event['sources'])+'</li>'
-        history+='</ul></section>'
-    write('report.md','Findings & trends','''**What we have previously relied on can no longer be guaranteed**
-
-Free resources remain useful, but selected policies show recurring withdrawals, shorter access windows, tighter collaboration/storage limits and more conditional credits. A setup that worked last semester needs a continuity review.
-
-This is a selected history, **not a census or a measured decline in all free compute**. GitHub Free repositories and base free Colab remain. Availability is separate from institutional approval and classroom readiness.
-
-## Available resources at a glance
-
-'''+table+'''\n## Selected losses and reductions, 2022–2026
-
-'''+history+'\n\n'+details(ov['observation']['label']+' · '+ov['observation']['title'],'<p>'+E(ov['observation']['body'])+'</p><p>'+refs(ov['observation']['sources'])+'</p>')+'\n\n'+details(ov['upcoming']['label']+' · '+ov['upcoming']['title'],'<p>'+E(ov['upcoming']['body'])+'</p><p>'+refs(ov['upcoming']['sources'])+'</p>')+'''
-
-## What to do about it
-
-Measure needs and request ACCESS CPU + GPU capacity. Keep environments and exports portable, distinguish teaching compute from hosting and preservation, and test the full workflow before class. Pursue eligible NAIRR Classroom pilots where they add value.
-
-[Scope your needs](needs.html) · [Staged plan](timeline.html)
-
-## Full report and evidence
-
-[Complete research report](research-report.html) · [181 source records](evidence.html) · [Full report text](research-and-sources.txt) · [Evidence JSON](evidence.json)
-
-Sources retain their own observation, effective and recheck dates. Most policies were reviewed October 8–19, 2026; only the explicitly marked sources were rechecked October 19. All 13 classroom checks remain planned.''')
     guide_marker='\n\nCONCISE COMPUTE GUIDE AND PUBLISHING ASSESSMENT | October 19, 2026\n'
     report=(PUBLIC/'research-and-sources.txt').read_text().split(guide_marker)[0]+guide_marker+'''The guide now uses pinned Zensical 0.0.71 on the existing GitHub Pages host. Short task-based pages, client-side search, resource/evidence filters and collapsed audit detail preserve the original URLs, five-slide talk and downloads. MESA's public landing page informed direct headings, spacing and simple actions; its code/private content was not copied.
 
@@ -298,11 +268,6 @@ https://pypi.org/pypi/zensical/json
     (PUBLIC/'research-and-sources.txt').write_text(report)
     (ROOT/'output/education-compute/research-and-sources.txt').write_text(report)
 
-    write('research-report.md','Full research report','''The complete audit is retained here. Use the [short findings](report.html) for decisions and [source evidence](evidence.html) to verify individual claims. Historical planning stages are preserved; the current guide keeps the CPU/GPU route, zero-cash and ten-hour boundaries explicit.
-
-[Download full report text](research-and-sources.txt)
-
-<div class="guide-audit"><details><summary>Open the complete research report</summary><pre>'''+E(report)+'</pre></details></div>',True)
     evidence='''<span id="options"></span><span id="resources"></span><span id="hosting"></span><span id="library"></span><span id="federal"></span><span id="plan"></span><span id="ledger"></span><span id="serverless"></span><span id="classroom50-assessment"></span>
 
 181 primary-source and verification records. Search by provider or topic; open a record for its claim, scope and date. This ledger includes unavailable/historical sources with their stated limitations. A source listing does not mean its current account entitlement was tested.
@@ -340,6 +305,8 @@ This is one representative workload envelope. For different CPU/GPU groups or mu
 The tool follows the benchmark helper’s runtime × workload × resource × allowance arithmetic. Use [measured component results](gpu-benchmark.html) and `size_access.py` for the next sizing step, then confirm provider units, target replay and [classroom checks](readiness.html). Neither the tool nor a selected evidence basis makes a request submission-ready.''')
     from compute_working_group import build as build_working_group
     build_working_group(ROOT,GENERATED,PUBLIC,write)
+    from compute_site_focus import build as build_focused_site
+    build_focused_site(ROOT,GENERATED,PUBLIC,d,group,write)
     subprocess.run([executable,'build','--clean','-f',str(GENERATED/'zensical.toml')],check=True,cwd=GENERATED)
     # Overlay only this talk's generated HTML/assets; preserve deck, downloads and ledger.
     for src in BUILD.rglob('*'):

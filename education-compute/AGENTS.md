@@ -347,3 +347,12 @@ Button interaction colors are explicit for primary links/buttons, secondary cont
 ## Greg’s applicable role — October 19, 2026
 
 Greg identifies **Faculty Director of Instructional Computing** as his primary applicable role for the Computing Resources Working Group. Use that title in the overview, recurring college banner, coordination materials and local request/brief/prompt exports, rather than Assistant Professor of Practice. This role is user-confirmed; do not claim it was independently verified from the public profile. Barney Maccabe and Greg remain the two working-group point people. No provider allocation authority is inferred.
+
+
+## Focused resource site — October 19, 2026
+
+The user asked to reduce the site around **resources, the growing gap, the opportunity and working-group primers**. Primary navigation is six flat destinations: Overview (`program.html`), Resources (`inventory.html`), Primers (`primers.html`), Resource tool (`needs.html`), Report (`report.html`) and Supplement (`supplemental.html`). All existing detail URLs remain. The supplement groups working materials, platform references, the conditional instructional pilot, source evidence and the talk. Supplementary pages link back to the current report and supplement hub.
+
+Canonical short introductions and cards remain in `site/compute-guide/`; inventory `summary` fields are scannable descriptions, with complete access/cost/limitations/source fields retained in each disclosure and exports. This does not change entitlement or capacity status. The request tool keeps the same IDs, calculations, optional Luna consent, public/synthetic-only handling, service caps and no automatic submission/retry. Backend source facts and credentials are unchanged by this information-architecture work; no new paid generation is needed.
+
+`scripts/compute_site_focus.py`, called after `compute_working_group.py` by the guide builder, owns the final structured `report.html` and chapter-based `research-report.html`. The main report covers resources, selected history, opportunities, considerations, next steps and evidence boundaries. The original chronological audit remains downloadable and all nonblank source lines must remain in its twelve archive chapters. The historical text before the guide-publishing marker is unchanged. Retain all 181 historical records and campus inventory sources. Full model-testing/implementation details live in `drafting-notes.html`, a supplement. The current site is a planning resource, not a completed needs study, allocation award or classroom deployment.

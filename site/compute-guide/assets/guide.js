@@ -1,4 +1,12 @@
 (()=>{'use strict';
+// Keep the six main paths visible; detail pages belong to Supplement.
+const currentPage=location.pathname.split('/').pop();
+const primaryPages=new Set(['program.html','inventory.html','primers.html','needs.html','report.html','supplemental.html']);
+for(const link of document.querySelectorAll('.md-tabs__link,.md-nav--primary a.md-nav__link')){
+ const target=new URL(link.href,location.href).pathname.split('/').pop();
+ if(target===currentPage)link.setAttribute('aria-current','page');
+ else if(target==='supplemental.html'&&!primaryPages.has(currentPage)&&currentPage!=='404.html')link.dataset.currentSection='true';
+}
 for(const group of document.querySelectorAll('[data-directory]')){
 const search=group.querySelector('input[type=search]'),select=group.querySelector('select'),level=group.querySelector('[data-level-filter]'),items=[...group.querySelectorAll('[data-resource]')],count=group.querySelector('[role=status]');
 function update(){const q=(search?.value||'').trim().toLowerCase(),c=select?.value||'all',l=level?.value||'all';let n=0;for(const item of items){const text=(item.textContent+' '+(item.dataset.category||'')).toLowerCase(),match=!q||(q.length<=3?text.split(/[^\p{L}\p{N}]+/u).some(word=>word.startsWith(q)):text.includes(q));const show=match&&(c==='all'||item.dataset.category===c)&&(l==='all'||item.dataset.level===l);item.hidden=!show;if(show)n++;}count.textContent=n+' of '+items.length+' resources shown.';}search?.addEventListener('input',update);select?.addEventListener('change',update);level?.addEventListener('change',update);update();}

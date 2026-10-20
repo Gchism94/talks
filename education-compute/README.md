@@ -1,3 +1,22 @@
+# College of Information Science computing resources
+
+Complete local review snapshot. Start with the current resource guide:
+
+- [Overview](talk/program.html): resources, the growing gap and the opportunity.
+- [Resources](talk/inventory.html): contacts, access, costs and limitations.
+- [Primers](talk/primers.html): six working-group discussion starting points.
+- [Resource tool](talk/needs.html): local needs/request briefs and optional consented Luna drafting.
+- [Report](talk/report.html): the structured current assessment.
+- [Supplement](talk/supplemental.html): working materials, platform references, the conditional instructional pilot, source evidence and the talk.
+
+Barney Maccabe and Greg Chism, Faculty Director of Instructional Computing, are the working-group point people. The original 181-record evidence ledger and full chronological audit remain saved. Keep the entire `talk/` folder together; external sources and optional Luna need internet. No credential files belong in this snapshot.
+
+Canonical content lives in `../site/compute-guide/`, builders in `../scripts/`, public export in `../docs/education-compute/`. This folder is a gathered review copy, not the authoring directory. Read [AGENTS.md](AGENTS.md) for current editing boundaries and `review/validation.json` for release evidence; the current simplification is `focusedResourceSiteExtension`.
+
+Refresh with `python3 scripts/package_compute_review.py` from the parent repository, then run `python3 education-compute/verify_bundle.py --compare-originals`. The review includes the appendix, runnable benchmarks and portable ZIP, not a confirmed allocation or classroom deployment.
+
+<details><summary>Earlier assembly notes and updates</summary>
+
 # Teaching on Borrowed Compute
 
 Complete local review folder, assembled October 10 and refreshed October 12, 2026.
@@ -57,3 +76,5 @@ The October 16 [Modal and similar-platform comparison](talk/serverless-compute.h
 
 
 The October 19 [main report overview](talk/report.html) summarizes available resources and status, ten selected historical changes, the separately labeled Colab observation and upcoming OSF restrictions, and the ACCESS response. It retains links to the complete research and 181-source evidence ledger. Provider availability is not classroom readiness; see `reportOverviewExtension` for checks and publication.
+
+</details>
