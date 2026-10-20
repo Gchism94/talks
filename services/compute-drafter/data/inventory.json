@@ -20,16 +20,6 @@
     "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation"
   },
   {
-    "id": "college-rse",
-    "name": "College RSE and technical-support capacity",
-    "access": "Ask Barney Maccabe or Greg Chism to identify technical roles, skills, appointments and realistic support windows.",
-    "cost": "Unknown; inventory existing commitments and hours before proposing funding.",
-    "limits": "No available FTE or support hours measured. Research programmers in a lab are not automatically a college-wide service.",
-    "contact": "Barney Maccabe or Greg Chism — working-group point people",
-    "source": "https://infosci.arizona.edu/people/barney-maccabe",
-    "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation"
-  },
-  {
     "id": "college-data",
     "name": "College software, datasets and agreements",
     "access": "Ask the working group to identify license/data owners, storage, renewals and permitted research/classroom use.",

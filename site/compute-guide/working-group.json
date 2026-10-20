@@ -54,28 +54,6 @@
       "summary": "Identify local equipment, lab access and any loan pool; capacity is not yet inventoried."
     },
     {
-      "id": "college-rse",
-      "name": "College RSE and technical-support capacity",
-      "level": "College",
-      "category": "RSE & personnel",
-      "status": "Inventory pending",
-      "access": "Ask Barney Maccabe or Greg Chism to identify technical roles, skills, appointments and realistic support windows.",
-      "cost": "Unknown; inventory existing commitments and hours before proposing funding.",
-      "support": "Barney Maccabe or Greg Chism — working-group point people",
-      "limits": "No available FTE or support hours measured. Research programmers in a lab are not automatically a college-wide service.",
-      "funding": "To document; no new funding, staff time or loan inventory assumed.",
-      "source": "https://infosci.arizona.edu/people/barney-maccabe",
-      "checked": "2026-10-19 — public documentation; no signed-in entitlement or owner confirmation",
-      "next_action": "Confirm eligibility, current availability, permitted use and support scope with this contact before relying on the resource.",
-      "contact": "Barney Maccabe or Greg Chism — working-group point people",
-      "contact_url": "program.html",
-      "sources": [
-        "https://infosci.arizona.edu/people/barney-maccabe"
-      ],
-      "verification": "Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email.",
-      "summary": "Identify engineering skills and support windows; available staff hours need confirmation."
-    },
-    {
       "id": "college-data",
       "name": "College software, datasets and agreements",
       "level": "College",

@@ -2716,17 +2716,6 @@ Sources: https://infosci.arizona.edu/people/barney-maccabe
 Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email.
 
-College RSE and technical-support capacity | College | Inventory pending
-Access: Ask Barney Maccabe or Greg Chism to identify technical roles, skills, appointments and realistic support windows.
-Cost: Unknown; inventory existing commitments and hours before proposing funding.
-Contact: Barney Maccabe or Greg Chism — working-group point people | program.html
-Support: Barney Maccabe or Greg Chism — working-group point people
-Limits: No available FTE or support hours measured. Research programmers in a lab are not automatically a college-wide service.
-Funding: To document; no new funding, staff time or loan inventory assumed.
-Sources: https://infosci.arizona.edu/people/barney-maccabe
-Review: 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
-Inventory question, not a verified service entitlement. Routing contact designated by the user; profile confirms role/email.
-
 College software, datasets and agreements | College | Inventory pending
 Access: Ask the working group to identify license/data owners, storage, renewals and permitted research/classroom use.
 Cost: Unknown; inventory existing commitments and hours before proposing funding.
@@ -3308,7 +3297,6 @@ Update the draft’s date and status. Separate a decision from an open question 
 CAMPUS INVENTORY SOURCES
 UITS Support | https://it.arizona.edu/support/247-support-center | 2026-10-20
 College hardware, labs and loan equipment | https://infosci.arizona.edu/people/barney-maccabe | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
-College RSE and technical-support capacity | https://infosci.arizona.edu/people/barney-maccabe | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 College software, datasets and agreements | https://infosci.arizona.edu/people/barney-maccabe | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 College research labs and collaborators | https://infosci.arizona.edu/research-faculty/research-labs | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation
 co/lab: Critical Archives & Curation Collaborative | https://infosci.arizona.edu/colab-critical-archives-curation-collaborative | 2026-10-19 — public documentation; no signed-in entitlement or owner confirmation

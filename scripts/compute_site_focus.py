@@ -61,6 +61,8 @@ def archive_html(report):
 
 def build(root, generated, public, data, group, write):
     overview=data['report_overview']
+    counts={level:sum(r['level']==level for r in group['inventory']) for level in ['College','University','National / external']}
+    inventory_summary=f"{len(group['inventory'])} entries: {counts['College']} college, {counts['University']} university and {counts['National / external']} national/external"
     def refs(keys):
         return ' · '.join('<a href="evidence.html#'+E(k)+'">'+E(data['evidence'][k]['title'])+'</a>' for k in keys)
     resource_details=[]
@@ -90,7 +92,7 @@ For the **College of Information Science Computing Resources Working Group**. Th
 
 <span id="available-resources-at-a-glance"></span>
 
-The inventory contains **33 entries: seven college, twenty university and six national/external**. It covers hardware, software and models, data, RSE and technical support, training and collaboration. Unknown local equipment, licenses and available support hours are recorded as unknown, rather than assumed absent.
+The inventory contains **'''+inventory_summary+'''**. It covers hardware, software and models, data, RSE and technical support, training and collaboration. Unknown local equipment, licenses and available support hours are recorded as unknown, rather than assumed absent.
 
 Campus starting points include research HPC, software licensing, library data and digital-scholarship services, and research software expertise. **Classroom HPC permission needs clarification:** the teaching policy names Ocelote, while allocation notices report it retired. Research access does not establish permission to use another cluster for a course.
 
