@@ -1,9 +1,14 @@
 (()=>{'use strict';
 // Keep the six main paths visible; detail pages belong to Supplement.
 const requestedPage=location.pathname.split('/').pop();
-if((!requestedPage||requestedPage==='index.html')&&/^#[1-5]$/.test(location.hash)){
- const talk=new URL('talk.html',location.href);talk.search=location.search;talk.hash=location.hash;location.replace(talk.href);return;
+function openLegacySlide(){
+ if((!requestedPage||requestedPage==='index.html')&&/^#[1-5]$/.test(location.hash)){
+  const talk=new URL('talk.html',location.href);talk.search=location.search;talk.hash=location.hash;location.replace(talk.href);return true;
+ }
+ return false;
 }
+if(openLegacySlide())return;
+addEventListener('hashchange',openLegacySlide);
 const currentPage=!requestedPage||requestedPage==='program.html'?'index.html':requestedPage;
 const primaryPages=new Set(['index.html','program.html','inventory.html','primers.html','needs.html','report.html','supplemental.html']);
 for(const link of document.querySelectorAll('.md-tabs__link,.md-nav--primary a.md-nav__link')){
