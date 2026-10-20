@@ -32,7 +32,7 @@ button:disabled{cursor:not-allowed!important}
 .guide-filters button[aria-pressed=true]:active{background:#061830;color:#fff}
 .md-typeset button:disabled{opacity:1;background:#e1e5ea;color:#465569;border:1px solid #8995a5}
 textarea:focus-visible{outline:3px solid #1e5288;outline-offset:3px}
-.md-header a:focus-visible,.md-header button:focus-visible,.md-header [role=button]:focus-visible{outline-color:#fff}
+.md-header__inner a:focus-visible,.md-header__inner button:focus-visible,.md-header__inner [role=button]:focus-visible{outline-color:#fff}
 #lunaDrafting{border-top:1px solid #c5cbd3;margin-top:1.5rem;padding-top:.5rem}
 #lunaDrafting .luna-consent{display:flex;align-items:flex-start;gap:.6rem;font-size:.76rem;line-height:1.55;cursor:pointer}
 .luna-consent input{flex:0 0 18px;width:18px;height:18px;margin:.2rem 0;accent-color:#0c234b}
@@ -49,3 +49,5 @@ textarea:focus-visible{outline:3px solid #1e5288;outline-offset:3px}
 @media(min-width:1220px){.md-sidebar--primary{display:none}.md-main__inner{max-width:1200px;margin-left:auto;margin-right:auto}.md-content{margin-left:1.2rem}}
 
 .md-typeset details>summary{padding-left:.8rem}.md-typeset details>summary::before{display:none}
+
+.md-typeset article[id],.md-typeset span[id]{scroll-margin-top:var(--guide-sticky-offset,7rem)}

@@ -9,7 +9,7 @@ extra_css = ["guide-assets/guide.css"]
 extra_javascript = ["guide-assets/needs.js", "guide-assets/guide.js", "guide-assets/working-needs.js", "guide-assets/luna-drafting.js"]
 copyright = "College of Information Science · Computing Resources Working Group · Working drafts · Fall 2026–Spring 2027"
 nav = [
-  { "Overview" = "program.md" },
+  { "Overview" = "index.md" },
   { "Resources" = "inventory.md" },
   { "Primers" = "primers.md" },
   { "Resource tool" = "needs.md" },
@@ -20,7 +20,7 @@ nav = [
 [project.theme]
 variant = "classic"
 language = "en"
-features = ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight"]
+features = ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "search.highlight"]
 font = false
 [project.theme.palette]
 scheme = "default"

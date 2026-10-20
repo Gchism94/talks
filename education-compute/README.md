@@ -1,8 +1,8 @@
 # College of Information Science computing resources
 
-Complete local review snapshot. Start with the current resource guide:
+Complete local review snapshot. `talk/index.html` opens the resource overview; the original presentation is `talk/talk.html`, linked under Supplement. Start with the current resource guide:
 
-- [Overview](talk/program.html): resources, the growing gap and the opportunity.
+- [Overview](talk/index.html): resources, the growing gap and the opportunity.
 - [Resources](talk/inventory.html): contacts, access, costs and limitations.
 - [Primers](talk/primers.html): six working-group discussion starting points.
 - [Resource tool](talk/needs.html): local needs/request briefs and optional consented Luna drafting.
@@ -21,7 +21,7 @@ Refresh with `python3 scripts/package_compute_review.py` from the parent reposit
 
 Complete local review folder, assembled October 10 and refreshed October 12, 2026.
 
-- [Open the five-slide talk](talk/index.html)
+- [Open the five-slide talk](talk/talk.html)
 - [Open the saved evidence appendix](talk/evidence.html)
 - [Compare all nine degrees](talk/degree-options.html)
 - [Compare Codabench and classroom alternatives](talk/classroom-resources.html)

@@ -77,7 +77,7 @@ def check():
                 checked += 1
     for talk in catalog["talks"]:
         destination = PUBLIC / talk["slug"]
-        deck = (destination / "index.html").read_text()
+        deck = (destination / talk.get("deck_page", "index.html")).read_text()
         parsed = Links()
         parsed.feed(deck)
         assert parsed.slides == talk["slides"], f"Wrong slide count for {talk['slug']}"

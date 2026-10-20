@@ -3,7 +3,7 @@ import html
 import re
 
 E = html.escape
-PRIMARY = {'program', 'inventory', 'primers', 'needs', 'report', 'supplemental'}
+PRIMARY = {'index', 'program', 'inventory', 'primers', 'needs', 'report', 'supplemental'}
 
 
 def inline(text):

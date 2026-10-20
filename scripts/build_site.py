@@ -47,9 +47,11 @@ def public_deck(text, include_notes):
         version = hashlib.sha256(ant_script.read_bytes()).hexdigest()[:12]
         text = re.sub(r'src="\.\./assets/ants/ants\.js(?:\?[^"]*)?"',
                       'src="../assets/ants/ants.js?v=' + version + '"', text)
+    brand = ('<span class="brand"><a href="index.html">← Resource overview</a> · <a href="../">All talks</a></span>'
+             if 'id="programHubLink"' in text else '<span class="brand"><a href="../">← All talks</a></span>')
     text = re.sub(
         r'<span class="brand">.*?</span>',
-        '<span class="brand"><a href="../">← All talks</a></span>',
+        brand,
         text,
         count=1,
     )
@@ -114,7 +116,11 @@ def build():
             asset_destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(asset_source, asset_destination)
         source = local_file(talk["source"])
-        exported = destination / "index.html"
+        deck_page = talk.get("deck_page", "index.html")
+        if not re.fullmatch(r"[a-z0-9-]+\.html", deck_page):
+            raise ValueError(f"Invalid deck page: {deck_page}")
+        exported = destination / deck_page
+        presentation_url = f"{slug}/" + (deck_page if deck_page != "index.html" else "") + "#1"
         if source.is_file():
             content = source.read_text()
             # Some local presentation media is cleared for a room, but not for
@@ -154,7 +160,7 @@ def build():
                 note = destination / Path(filename).name
                 if source_note.is_file():
                     content = source_note.read_text().replace(str(ROOT) + "/", "")
-                    live_talk = f"https://{catalog['owner'].lower()}.github.io/{catalog['repository']}/{slug}/#1"
+                    live_talk = f"https://{catalog['owner'].lower()}.github.io/{catalog['repository']}/{presentation_url}"
                     content = content.replace(f'({talk["source"]})', f'({live_talk})')
                     note.write_text(content)
                 elif not note.is_file():
@@ -184,7 +190,7 @@ def build():
         cards.append(f'''      <article class="talk" aria-labelledby="{slug}-title">
         <div class="talk-visual">
           <div class="cover-heading"><span class="number">{number:02} / Presentation</span><span>{esc('slides')} slides</span></div>
-          <a class="cover" href="{slug}/#1" aria-label="Preview and open {html.escape(talk['title'], quote=True)}">
+          <a class="cover" href="{presentation_url}" aria-label="Preview and open {html.escape(talk['title'], quote=True)}">
             {cover}
             <span class="cover-open" aria-hidden="true">↗</span>
           </a>
@@ -192,11 +198,11 @@ def build():
         </div>
         <div class="talk-content">
           <p class="event">{esc('event')}</p>
-          <h2 id="{slug}-title"><a href="{slug}/#1">{esc('title')}</a></h2>
+          <h2 id="{slug}-title"><a href="{presentation_url}">{esc('title')}</a></h2>
           <p class="subtitle">{esc('subtitle')}</p>
           <p class="description">{esc('description')}</p>
           <ul class="topics" aria-label="Topics">{topics}</ul>
-          <a class="launch" href="{slug}/#1" aria-label="Open {html.escape(talk['title'], quote=True)}">Open presentation <span aria-hidden="true">↗</span></a>
+          <a class="launch" href="{presentation_url}" aria-label="Open {html.escape(talk['title'], quote=True)}">Open presentation <span aria-hidden="true">↗</span></a>
           {notes}
         </div>
       </article>''')

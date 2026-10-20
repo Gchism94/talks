@@ -307,23 +307,32 @@ The tool follows the benchmark helper’s runtime × workload × resource × all
     build_working_group(ROOT,GENERATED,PUBLIC,write)
     from compute_site_focus import build as build_focused_site
     build_focused_site(ROOT,GENERATED,PUBLIC,d,group,write)
+    # The overview owns the directory entry; the original presentation is supplemental.
+    overview=(GENERATED/'pages/program.md').read_text()
+    (GENERATED/'pages/index.md').write_text(overview)
+    (GENERATED/'pages/program.md').write_text(overview.replace('---\n','---\nsearch:\n  exclude: true\n',1))
+    from build_site import public_deck
+    catalog=json.loads((ROOT/'catalog.json').read_text())
+    (PUBLIC/'talk.html').write_text(public_deck((ROOT/'education-compute.html').read_text(),catalog.get('publish_notes',False)))
     subprocess.run([executable,'build','--clean','-f',str(GENERATED/'zensical.toml')],check=True,cwd=GENERATED)
     # Overlay only this talk's generated HTML/assets; preserve deck, downloads and ledger.
     for src in BUILD.rglob('*'):
         if src.is_file():
             dest=PUBLIC/src.relative_to(BUILD);dest.parent.mkdir(parents=True,exist_ok=True)
             if src.suffix=='.html':
-                text=src.read_text().replace('/talks/education-compute/', '')
+                text=src.read_text().replace('href="/talks/education-compute/','href="').replace('src="/talks/education-compute/','src="')
                 text=text.replace('https://unpkg.com/iframe-worker/shim','guide-assets/vendor/iframe-worker-1.0.4.js')
                 # Version custom assets so returning visitors receive matching controls.
                 for name in ['guide.css','guide.js','needs.js','working-needs.js','luna-drafting.js']:
                     revision=hashlib.sha256((SOURCE/'assets'/name).read_bytes()).hexdigest()[:12]
                     text=text.replace('guide-assets/'+name+'\"','guide-assets/'+name+'?v='+revision+'\"')
-                text=text.replace('href=""', 'href="program.html"')
-                band='<div class="guide-college-band"><a href="https://infosci.arizona.edu/">College of Information Science</a><span><a href="program.html">Computing Resources Working Group</a> · Point people: <a href="mailto:maccabe@arizona.edu">Barney Maccabe</a> and <a href="mailto:gchism@arizona.edu">Greg Chism</a> · Faculty Director of Instructional Computing</span></div>'
+                text=text.replace('href=""', 'href="index.html"').replace('href="program.html"','href="index.html"')
+                band='<div class="guide-college-band"><a href="https://infosci.arizona.edu/">College of Information Science</a><span><a href="index.html">Computing Resources Working Group</a> · Point people: <a href="mailto:maccabe@arizona.edu">Barney Maccabe</a> and <a href="mailto:gchism@arizona.edu">Greg Chism</a></span></div>'
                 text=text.replace('<article class="md-content__inner md-typeset">','<article id="program-content" class="md-content__inner md-typeset">'+band)
                 icons='<link rel="icon" href="../assets/favicons/talk.svg" type="image/svg+xml"><link rel="icon" href="../assets/favicons/talk-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/favicons/talk-180.png" sizes="180x180">'
                 text=text.replace('</head>',icons+'</head>')
+                if src.name in {'index.html','program.html'}:
+                    text=text.replace('https://gchism94.github.io/talks/education-compute/'+src.name,'https://gchism94.github.io/talks/education-compute/')
                 dest.write_text('\n'.join(line.rstrip() for line in text.splitlines())+'\n')
             else:shutil.copy2(src,dest)
     # Strong source links: anchor navigation must open the enclosing evidence detail.

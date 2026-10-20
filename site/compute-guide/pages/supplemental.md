@@ -42,6 +42,6 @@ Detailed references and working materials, grouped by purpose. Start with the [o
 - [Source evidence](evidence.html): 181 historical compute/provider records, with dates and claim boundaries. Campus sources are attached to [inventory entries](inventory.html).
 - [Chronological research archive](research-report.html) · [Original audit text](research-and-sources.txt): the complete historical research and planning record.
 - [Evidence JSON](evidence.json) · [Inventory CSV](computing-resource-inventory.csv) · [Working-group JSON](computing-working-group.json): downloadable records.
-- [Five-slide talk](index.html): the original presentation and interactive timeline.
+- [Five-slide talk](talk.html): the original presentation and interactive timeline.
 - [Request-tool drafting notes](drafting-notes.html): optional Luna limits, campus handoff and historical model trials.
 - [Publishing assessment](publishing.html): authoring-platform notes and design references.

@@ -14,7 +14,7 @@ DEST=ROOT/'docs/education-compute'
 OUT=ROOT/'output/education-compute'
 ESC=html.escape
 MARKER='\n\nACCESS CPU + GPU REQUEST AND TWO-COURSE PILOT | October 12, 2026\n'
-NAV=[('program.html','Overview'),('timeline.html','Staged plan'),('resource-library.html','Classroom tools'),('budget.html','Hours & funding'),('report.html','Report & evidence'),('index.html','Talk')]
+NAV=[('program.html','Overview'),('timeline.html','Staged plan'),('resource-library.html','Classroom tools'),('budget.html','Hours & funding'),('report.html','Report & evidence'),('talk.html','Talk')]
 GROUPS={'serverless-compute.html':'resource-library.html','classroom50.html':'resource-library.html','pilot-plan.html':'resource-library.html','access-request.html':'resource-library.html','readiness.html':'resource-library.html','gpu-benchmark.html':'resource-library.html','classroom-resources.html':'resource-library.html','degree-options.html':'resource-library.html','research-report.html':'report.html','evidence.html':'report.html','classroom-assessment.html':'report.html','federal-compute.html':'report.html','repository-plan.html':'report.html'}
 
 
@@ -25,7 +25,7 @@ def request_text(p, r=None):
 
 
 def chrome(text,name):
-    if name=='index.html':return text
+    if name=='talk.html':return text
     text=re.sub(r'<!-- program-chrome-start -->.*?<!-- program-chrome-end -->','',text,flags=re.S)
     active=name if name in [n for n,_ in NAV] else GROUPS.get(name,'report.html')
     nav=''.join('<a href="'+n+'"'+(' aria-current="page"' if n==active else '')+'>'+label+'</a>' for n,label in NAV)
@@ -36,7 +36,7 @@ def chrome(text,name):
     text=text.replace('<body>','<body>'+header)
     text=re.sub(r'<main(?![^>]*\bid=)', '<main id="program-content"',text,count=1)
     text=re.sub(r'<main([^>]*)>',lambda m: '<main'+m[1]+' class="program-main">' if 'class=' not in m[1] else m[0],text,count=1)
-    footer='<!-- program-chrome-start --><footer class="program-footer"><p><strong>Planning proposal.</strong> ACCESS is the intended CPU/GPU classroom route. Provider measurements, awards and classroom admission remain pending; Greg has ten hours/week total and zero cash budget.</p><p><a href="timeline.html">Staged plan</a> · <a href="resource-library.html">Working tools</a> · <a href="report.html">Full report &amp; evidence</a> · <a href="index.html">Five-slide talk</a></p><p>Greg Chism · UArizona Information Science · Design and Classroom 50 assessment updated October 13, 2026. Evidence retains its own check dates.</p></footer><script src="program.js"></script><!-- program-chrome-end -->'
+    footer='<!-- program-chrome-start --><footer class="program-footer"><p><strong>Planning proposal.</strong> ACCESS is the intended CPU/GPU classroom route. Provider measurements, awards and classroom admission remain pending; Greg has ten hours/week total and zero cash budget.</p><p><a href="timeline.html">Staged plan</a> · <a href="resource-library.html">Working tools</a> · <a href="report.html">Full report &amp; evidence</a> · <a href="talk.html">Five-slide talk</a></p><p>Greg Chism · UArizona Information Science · Design and Classroom 50 assessment updated October 13, 2026. Evidence retains its own check dates.</p></footer><script src="program.js"></script><!-- program-chrome-end -->'
     return text.replace('</body>',footer+'</body>')
 
 
@@ -110,7 +110,7 @@ def build():
         text=text.replace(target,'for library repositories, hosting/database history, current free options and the proposed continuity program. <a id="programHubLink" href="program.html" target="_blank" rel="noopener noreferrer">Open the program, request and pilot packet ↗</a></p>',1)
         source.write_text(text)
     from build_site import public_deck
-    (DEST/'index.html').write_text(public_deck(text,False))
+    (DEST/'talk.html').write_text(public_deck(text,False))
     for name in ['evidence.json','research-and-sources.txt','pilot-program.json','cloudbank-access-request.txt','access-allocation-request.txt','gpu-benchmark-results.csv','pilot-plan.txt','pilot-hours.csv','grant-work-packages.txt','pilot-budget.csv','pilot-readiness.csv']:(OUT/name).write_bytes((DEST/name).read_bytes())
     print('Built cohesive overview, staged timeline, tools and separate report/evidence views, shared navigation, request text, budget/readiness CSV and program JSON')
 

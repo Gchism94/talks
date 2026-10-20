@@ -123,7 +123,8 @@
         "NSF ACCESS",
         "NAIRR Classroom"
       ],
-      "cover": "site/covers/education-compute.png"
+      "cover": "site/covers/education-compute.png",
+      "deck_page": "talk.html"
     }
   ]
 }
