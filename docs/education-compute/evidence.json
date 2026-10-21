@@ -3763,11 +3763,11 @@
       ],
       "College / Libraries": [
         "What institutional data/export/retention and accessibility approvals are required for the exact components?",
-        "Which support/recovery tasks fit Greg’s ten hours/week and separate TA/lead commitments?",
+        "Which support/recovery tasks fit Greg’s four hours/week and separate TA/lead commitments?",
         "Which necessary paid needs fit an eligible confirmed EduCloud grant, and who provides distinct backup coverage before classroom launch?"
       ]
     },
-    "operations_model": "Available cash budget is zero. Work needing paid support, storage, hosting, development or recovery must have a confirmed eligible EduCloud grant and allowable work package before spending. ACCESS is CPU/GPU resource allocation, not payroll. No grant award is asserted. Existing campus test access and free GPU resources must stay within their authorized no-purchase scope. Greg has ten hours/week total. Separate potential TA effort is 102 hours and additional course-lead effort 70 hours across the modeled term; no course-lead salary. No college sponsor/finance role. Distinct backup/support is unfilled until confirmed.",
+    "operations_model": "Available cash budget is zero. Work needing paid support, storage, hosting, development or recovery must have a confirmed eligible EduCloud grant and allowable work package before spending. ACCESS is CPU/GPU resource allocation, not payroll. No grant award is asserted. Existing campus test access and free GPU resources must stay within their authorized no-purchase scope. Greg has four hours/week total. Separate potential TA effort is 102 hours and additional course-lead effort 70 hours across the modeled term; no course-lead salary. No college sponsor/finance role. Distinct backup/support is unfilled until confirmed.",
     "degree_expansion": "The first canary covers DS and MLIS. Notebook-compatible MS/BS Information Science and PhD projects can reuse the route after workload review. ETS and Information Science and Arts need public-data/browser workflows and durable exhibit hosting. Game Design/Development require a separate engine, graphics, licensing and desktop-access assessment; this notebook pilot does not establish Unreal/Unity or Windows support. Cyber degrees remain excluded.",
     "evidence_sources": [
       "assesscloudbank",
@@ -3875,7 +3875,7 @@
       "Review GitHub app permissions, browser tokens, default external proxy traffic, private repository visibility and roster/score retention before student data.",
       "Exercise Codespaces quota exhaustion and Actions allowance exhaustion separately; demonstrate a portable local/ACCESS workflow without requiring student payment.",
       "Export and restore repositories, configuration and submission/grade receipts; document distinct owners, maintainer outage and end-of-term removal.",
-      "Measure setup and support time inside Greg’s existing ten-hour weekly envelope, with TA/course-lead time separate. Defer if support cannot fit."
+      "Measure setup and support time inside Greg’s existing four-hour weekly envelope, with TA/course-lead time separate. Defer if support cannot fit."
     ],
     "sources": [
       "classroom50",
@@ -4037,7 +4037,7 @@
       "Before any authorized run, review usage budget and net-charge spend limit separately; disable excluded paid APIs, unneeded schedules, warm containers and automatic purchasing. Verify the actual stop behavior.",
       "Pin code/image/data; measure build/start/warm time, CPU, GPU, memory, device/VRAM, preemption, checkpoints, outputs and charged units. API results do not measure a custom CUDA training workload.",
       "Export code, environments and results outside the vendor; retain authoritative grades/rosters in approved institutional systems. Replay representative CPU/GPU workloads on awarded ACCESS resources before class.",
-      "Keep all added setup/support inside Greg’s ten-hour weekly envelope, with TA/lead effort separate. Defer the option if funding, support or privacy conditions fail."
+      "Keep all added setup/support inside Greg’s four-hour weekly envelope, with TA/lead effort separate. Defer the option if funding, support or privacy conditions fail."
     ],
     "methods": "Eight Exa searches requested 55 result slots across serverless credits, notebook alternatives and inference billing. These are not 55 independent validated sources. Direct primary pages were checked; extraction omissions and conflicting older marketing are retained in the local audit."
   },
@@ -4317,7 +4317,7 @@
         "osfprojects"
       ]
     },
-    "next_step": "Benchmark CPU components on campus AWS and GPUs on the bounded free routes; size the ACCESS CPU + GPU request; rehearse support, recovery and student exports before a two-course pilot. Greg’s work stays inside ten hours/week with zero cash budget; necessary paid needs depend on confirmed eligible grant funding.",
+    "next_step": "Draft a bounded ORAI AI-native classroom proposal to showcase ORAI tools alongside Greg’s infrastructure components. Greg has four hours/week total. The larger ACCESS CPU/GPU two-course illustration requires rescoping or confirmed distinct support; benchmark, provider replay, recovery and class-readiness checks remain pending.",
     "rechecked_source_keys": [
       "github",
       "colab",
@@ -4332,5 +4332,13 @@
       "access",
       "campusrepository"
     ]
+  },
+  "capacity_revision": {
+    "date": "2026-10-20",
+    "source": "Greg Chism correction",
+    "weekly_hours": 4,
+    "scope": "Greg’s total capacity across this work and EduCloud; TA/course-lead effort separate",
+    "earlier_workload_status": "230-hour two-course illustration exceeds the 92-hour upper bound over 23 weeks by 138 hours; rescope or confirm distinct support",
+    "history": "Supersedes the earlier ten-hour owner-capacity assumption; provider source records retain their original dates."
   }
 }

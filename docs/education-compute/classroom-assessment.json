@@ -283,11 +283,11 @@
     ],
     "College / Libraries": [
       "What institutional data/export/retention and accessibility approvals are required for the exact components?",
-      "Which support/recovery tasks fit Greg’s ten hours/week and separate TA/lead commitments?",
+      "Which support/recovery tasks fit Greg’s four hours/week and separate TA/lead commitments?",
       "Which necessary paid needs fit an eligible confirmed EduCloud grant, and who provides distinct backup coverage before classroom launch?"
     ]
   },
-  "operations_model": "Available cash budget is zero. Work needing paid support, storage, hosting, development or recovery must have a confirmed eligible EduCloud grant and allowable work package before spending. ACCESS is CPU/GPU resource allocation, not payroll. No grant award is asserted. Existing campus test access and free GPU resources must stay within their authorized no-purchase scope. Greg has ten hours/week total. Separate potential TA effort is 102 hours and additional course-lead effort 70 hours across the modeled term; no course-lead salary. No college sponsor/finance role. Distinct backup/support is unfilled until confirmed.",
+  "operations_model": "Available cash budget is zero. Work needing paid support, storage, hosting, development or recovery must have a confirmed eligible EduCloud grant and allowable work package before spending. ACCESS is CPU/GPU resource allocation, not payroll. No grant award is asserted. Existing campus test access and free GPU resources must stay within their authorized no-purchase scope. Greg has four hours/week total. Separate potential TA effort is 102 hours and additional course-lead effort 70 hours across the modeled term; no course-lead salary. No college sponsor/finance role. Distinct backup/support is unfilled until confirmed.",
   "degree_expansion": "The first canary covers DS and MLIS. Notebook-compatible MS/BS Information Science and PhD projects can reuse the route after workload review. ETS and Information Science and Arts need public-data/browser workflows and durable exhibit hosting. Game Design/Development require a separate engine, graphics, licensing and desktop-access assessment; this notebook pilot does not establish Unreal/Unity or Windows support. Cyber degrees remain excluded.",
   "evidence_sources": [
     "assesscloudbank",
@@ -316,5 +316,13 @@
     "fedcyverse",
     "fednrpllm"
   ],
-  "method": "16 discovery queries requested 78 result slots; these are discovery counts, not independent evidence counts. Twenty new primary-source ledger records plus reused program/provider records support a qualitative fit assessment. Public documentation was read, with saved extracts and targeted HTTP access checks. No signed-in entitlement, actual compute workload, model API, cloud billing, allocation request, provider message or grant submission was executed. Current user-directed route: campus UITS/AWS is for CPU component testing only; free GPU benchmarks precede piloting; ACCESS covers the planned CPU and GPU classroom allocation. Existing capacity models remain illustrative."
+  "method": "16 discovery queries requested 78 result slots; these are discovery counts, not independent evidence counts. Twenty new primary-source ledger records plus reused program/provider records support a qualitative fit assessment. Public documentation was read, with saved extracts and targeted HTTP access checks. No signed-in entitlement, actual compute workload, model API, cloud billing, allocation request, provider message or grant submission was executed. Current user-directed route: campus UITS/AWS is for CPU component testing only; free GPU benchmarks precede piloting; ACCESS covers the planned CPU and GPU classroom allocation. Existing capacity models remain illustrative.",
+  "capacity_revision": {
+    "date": "2026-10-20",
+    "source": "Greg Chism correction",
+    "weekly_hours": 4,
+    "scope": "Greg’s total capacity across this work and EduCloud; TA/course-lead effort separate",
+    "earlier_workload_status": "230-hour two-course illustration exceeds the 92-hour upper bound over 23 weeks by 138 hours; rescope or confirm distinct support",
+    "history": "Supersedes the earlier ten-hour owner-capacity assumption; provider source records retain their original dates."
+  }
 }
