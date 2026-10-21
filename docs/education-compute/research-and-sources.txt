@@ -2780,7 +2780,7 @@ Limits: Published standard concurrency ceiling: four GPUs and 3,290 CPUs per gro
 Funding: University standard allocation; buy-in and special-project awards have separate conditions. Local support capacity is not implied.
 Sources: https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/resources/compute_resources/ | https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/
 Review: 2026-10-20 — current public allocation, teaching, hardware and support documentation; no signed-in balance or workload test
-Current published Puma allocation and classroom permission verified directly. This does not verify Greg’s remaining balance, a course reservation, allocation renewal or staffing.
+Current published Puma allocation and classroom permission verified directly. This does not verify Greg’s remaining balance, a course reservation, allocation renewal or staffing. A Jeremy Frumkin (UITS) slide in supplied October 14–15 briefing notes adds hardware context, not a classroom allocation or reservation; the slide lists 40 GB A100 MIG slices on Puma.
 
 Campus HPC: Puma classroom computing | University | Class groups permitted
 Access: Faculty PIs may create class groups for instruction on Puma. 150,000 CPU core-hours per PI group each month, shared by research and class groups. CPU, GPU and high-memory jobs debit the same CPU-based pool; this is not 150,000 GPU-hours. Unused hours expire at month end.
@@ -2791,7 +2791,7 @@ Limits: Published standard concurrency ceiling: four GPUs and 3,290 CPUs per gro
 Funding: Institutional or project service; dedicated college capacity/funding not established.
 Sources: https://hpcdocs.hpc.arizona.edu/policies/hpc_for_instruction/ | https://hpcdocs.hpc.arizona.edu/resources/allocations/ | https://hpcdocs.hpc.arizona.edu/registration_and_access/group_management/ | https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/ | https://hpcdocs.hpc.arizona.edu/resources/compute_resources/ | https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/
 Review: 2026-10-20 — current public teaching and allocation policies; no signed-in balance, reservation or class-load test
-The current teaching policy explicitly permits Puma class groups, superseding the earlier Ocelote-only uncertainty. Specific course capacity, remaining balance, supported data and readiness still need validation.
+The current teaching policy explicitly permits Puma class groups, superseding the earlier Ocelote-only uncertainty. Specific course capacity, remaining balance, supported data and readiness still need validation. A Jeremy Frumkin (UITS) slide in supplied October 14–15 briefing notes adds hardware context, not a classroom allocation or reservation; the slide lists 40 GB A100 MIG slices on Puma.
 
 HPC active storage and transfers | University | Documented route
 Access: HPC account: 50 GB home; PI group: 500 GB communal space. Temporary xdisk on request: 200 GB–20 TB, up to 300 days.

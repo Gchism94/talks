@@ -186,7 +186,7 @@
         "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/",
         "https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/"
       ],
-      "verification": "Current published Puma allocation and classroom permission verified directly. This does not verify Greg’s remaining balance, a course reservation, allocation renewal or staffing.",
+      "verification": "Current published Puma allocation and classroom permission verified directly. This does not verify Greg’s remaining balance, a course reservation, allocation renewal or staffing. A Jeremy Frumkin (UITS) slide in supplied October 14–15 briefing notes adds hardware context, not a classroom allocation or reservation; the slide lists 40 GB A100 MIG slices on Puma.",
       "summary": "Shared Puma CPU/GPU allocation for PI groups; class groups are permitted, with queue and support limits."
     },
     {
@@ -213,7 +213,7 @@
         "https://hpcdocs.hpc.arizona.edu/resources/compute_resources/",
         "https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/"
       ],
-      "verification": "The current teaching policy explicitly permits Puma class groups, superseding the earlier Ocelote-only uncertainty. Specific course capacity, remaining balance, supported data and readiness still need validation.",
+      "verification": "The current teaching policy explicitly permits Puma class groups, superseding the earlier Ocelote-only uncertainty. Specific course capacity, remaining balance, supported data and readiness still need validation. A Jeremy Frumkin (UITS) slide in supplied October 14–15 briefing notes adds hardware context, not a classroom allocation or reservation; the slide lists 40 GB A100 MIG slices on Puma.",
       "summary": "Puma is available for classes; the PI allocation is shared and immediate CPU/GPU access is not guaranteed."
     },
     {
@@ -1054,11 +1054,20 @@
       "https://hpcdocs.hpc.arizona.edu/support_and_training/consulting_services/",
       "https://hpcdocs.hpc.arizona.edu/running_jobs/job_limits/"
     ],
-    "verification": "Public documentation only; no signed-in balance, quota, classroom load or allocation award verified",
+    "verification": "Published policies establish the documented classroom route and nominal allocation; supplied briefing notes add hardware context. No signed-in balance, classroom load, reservation or allocation award verified.",
     "standard_group_concurrency": {
       "gpu_max": 4,
       "cpu_max": 3290,
       "meaning": "Published ceiling, not guaranteed availability; check job-limits <group_name>; Open OnDemand has additional per-job limits"
+    },
+    "meeting_notes_review": {
+      "reviewed": "2026-10-20",
+      "source_type": "User-supplied export of October 14–15 AI AWS Days notes; hardware slide on page 1",
+      "attribution": "Hardware slide attributed to Jeremy Frumkin, UITS; notes supplied for review, authorship not inferred",
+      "hardware_context": "Puma A100 MIG slices are listed as 40 GB; Ocelote is marked recently retired; Lynx is listed for 2026",
+      "allocation_evidence": "The slide reports cluster hardware totals, not PI/classroom allocations, queue priority, reserved capacity or actual availability",
+      "policy_reconciliation": "Use the current public teaching/allocation/job-limit policies for access and quota. Lynx remains unavailable according to the current hardware page; confirm Puma GPU/MIG memory because public descriptions differ.",
+      "publication_boundary": "Selected HPC facts summarized; the private export and unrelated notes are not published"
     }
   }
 }

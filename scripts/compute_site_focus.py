@@ -112,6 +112,8 @@ Check the PI's remaining allocation with **va** and actual group limits/usage wi
 
 The [hardware page](https://hpcdocs.hpc.arizona.edu/resources/compute_resources/) lists **Lynx/H200 as not available yet**. Its Puma MIG memory table and narrative differ; confirm the requested device rather than assuming a memory quota. ACCESS remains the proposed large CPU/GPU allocation route for the separate instructional pilot.
 
+**Briefing cross-check:** a Jeremy Frumkin (UITS) hardware slide in supplied October 14–15 AI AWS Days notes lists **40 GB A100 MIG slices on Puma**, marks Ocelote retired and lists Lynx for 2026. These are cluster hardware descriptions, not a PI/classroom allocation or proof of current availability. The current public policies above govern the documented access route; confirm the GPU/MIG shape before sizing a class. The private notes export is not published here.
+
 [Browse the inventory](inventory.html) · [Campus AI transition and supplied prices](campus-ai.html)
 
 ### External routes and their limits
