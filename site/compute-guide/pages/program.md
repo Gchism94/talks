@@ -30,7 +30,7 @@ For the instructional pilot, a measured **ACCESS CPU + GPU allocation** is the p
 
 ## Next: scope an ORAI AI pilot
 
-Greg Chism plans to draft a focused proposal for [ORAI AI Innovation Pilots](https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots), to showcase ORAI tools alongside his infrastructure components in an **AI-native classroom**. The proposal will be drafted in a new chat. **Available time: four hours/week total**, shared across these duties and EduCloud. The next draft will define one proof of concept, ready data, responsibilities and handoff.
+Greg Chism plans to draft a focused proposal for [ORAI AI Innovation Pilots](https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots), to showcase ORAI tools alongside his infrastructure components in an **AI-native classroom**. A separate proposal will be drafted next. **Available time: four hours/week total**, shared across these duties and EduCloud. The next draft will define one proof of concept, ready data, responsibilities and handoff.
 
 The program describes eight weeks of execution after assessment. Fit, acceptance and staff support are unconfirmed; this is not ongoing classroom support. The earlier two-course workload [exceeds available time](budget.html) and needs rescoping.
 

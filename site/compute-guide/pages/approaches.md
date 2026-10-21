@@ -14,7 +14,7 @@
 
 ## Planned ORAI proposal
 
-Greg will draft a bounded [AI Innovation Pilot](https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots) next, showcasing ORAI tools alongside his infrastructure components in an **AI-native classroom**. Drafting is reserved for a new chat. His capacity is **four hours/week total**. The program offers a potential eight-week proof-of-concept route after assessment; acceptance, RSE assignments and infrastructure must be confirmed. Ongoing maintenance and classroom operations need their own plan.
+Greg will draft a bounded [AI Innovation Pilot](https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots) next, showcasing ORAI tools alongside his infrastructure components in an **AI-native classroom**. A separate proposal will be drafted next. His capacity is **four hours/week total**. The program offers a potential eight-week proof-of-concept route after assessment; acceptance, RSE assignments and infrastructure must be confirmed. Ongoing maintenance and classroom operations need their own plan.
 
 ## Use one comparison standard
 

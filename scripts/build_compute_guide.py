@@ -144,7 +144,7 @@ GitLab private Free group limits, Bitbucket aggregate storage caps and Google so
     stages=''
     for i,(stage,phase) in enumerate(zip(p['site_flow']['stages'],p['phases']),1):
         stages+='<section class="guide-step" id="stage-'+E(stage['id'])+'"><div class="guide-step-num">'+str(i).zfill(2)+'</div><div><span class="guide-tag">'+E(phase['when'])+'</span><h2>'+E(phase['title'])+'</h2><p>'+E(stage['summary'])+'</p>'+details('Events and gate','<ul>'+''.join('<li>'+E(x)+'</li>' for x in stage['events'])+'</ul><p><strong>Advance when:</strong> '+E(stage['gate'])+'</p>')+'</div></section>'
-    write('timeline.md','Stages & milestones','''**Next: scope the ORAI AI-native classroom proposal in a new chat.** The stages below retain the larger two-course illustration, which exceeds Greg’s four-hour weekly capacity and requires rescoping or confirmed distinct support. Dates are relative to an approved future term. Six active preparation weeks do not include unpredictable allocation-review waiting time.
+    write('timeline.md','Stages & milestones','''**Next: scope the ORAI AI-native classroom proposal.** The stages below retain the larger two-course illustration, which exceeds Greg’s four-hour weekly capacity and requires rescoping or confirmed distinct support. Dates are relative to an approved future term. Six active preparation weeks do not include unpredictable allocation-review waiting time.
 
 '''+stages+'''
 

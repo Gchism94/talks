@@ -161,7 +161,7 @@ No award, capacity reservation, provider benchmark or classroom deployment is es
 
 ### Planned next step: ORAI AI Innovation Pilot
 
-Greg Chism will draft a proposal in a new chat to showcase ORAI tools alongside his infrastructure components in an **AI-native classroom**, through [ORAI AI Innovation Pilots](https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots). **His capacity is four hours/week total**, shared with other duties. The earlier two-course illustration requires 230 hours over 23 weeks; the corrected time ceiling is at most 92 hours, leaving a 138-hour gap before other commitments. It requires rescoping or confirmed distinct support.
+Greg Chism will draft a separate proposal to showcase ORAI tools alongside his infrastructure components in an **AI-native classroom**, through [ORAI AI Innovation Pilots](https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots). **His capacity is four hours/week total**, shared with other duties. The earlier two-course illustration requires 230 hours over 23 weeks; the corrected time ceiling is at most 92 hours, leaving a 138-hour gap before other commitments. It requires rescoping or confirmed distinct support.
 
 The ORAI program targets one working proof of concept within eight weeks of execution after assessment, with one pilot per faculty/staff member per year and essential data/access ready at entry. Fit, acceptance, staff assignments and infrastructure are unconfirmed. Drafting the proposal is next; it has not been submitted. An ORAI prototype does not provide semester-long operations or an ACCESS award.
 
