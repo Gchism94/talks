@@ -1069,5 +1069,38 @@
       "policy_reconciliation": "Use the current public teaching/allocation/job-limit policies for access and quota. Lynx remains unavailable according to the current hardware page; confirm Puma GPU/MIG memory because public descriptions differ.",
       "publication_boundary": "Selected HPC facts summarized; the private export and unrelated notes are not published"
     }
+  },
+  "orai_pilot_plan": {
+    "status": "Next draft planned; not submitted or accepted",
+    "owner": "Greg Chism, Faculty Director of Instructional Computing",
+    "weekly_capacity_hours": 4,
+    "url": "https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots",
+    "scope": "Showcase ORAI tools alongside Greg’s infrastructure-related components to build an AI-native classroom proof of concept. Specific components, workflow and deliverable will be scoped in the next chat.",
+    "program_basis": "Eight-week execution after assessment; one project per faculty/staff member per year. Essential data/access must be ready. Support and infrastructure depend on project fit and acceptance.",
+    "boundary": "An ORAI proof of concept is separate from semester-long teaching operations and an ACCESS allocation. No ORAI staffing, acceptance, ongoing maintenance or funding is committed.",
+    "next_step": "Draft the ORAI pilot proposal in subsequent work; no application or outreach has occurred.",
+    "intake": {
+      "source": "User-supplied AI Project Intake Form export, reviewed October 20, 2026",
+      "executive_summary_word_limit": 300,
+      "project_goal_word_limit": 150,
+      "impact_word_limit": 150,
+      "readiness_questions": [
+        "Dataset available?",
+        "Specific tasks/questions defined for the data?"
+      ],
+      "stakeholder_commitment": "At least one hour/week for relevant stakeholders during a 6–8 week phase; confirm before agreeing. This time comes from Greg’s four-hour weekly cap, not in addition.",
+      "timing_to_confirm": "Public program specifies eight-week execution after assessment; the intake uses 6–8 weeks for the participation statement.",
+      "other_fields": [
+        "Contact and full unit name",
+        "Project role",
+        "Program choice",
+        "Team expertise",
+        "Project title",
+        "Support needs",
+        "Optional funding sources/deadlines",
+        "Optional additional context"
+      ],
+      "status": "Requirements noted only; no answers drafted or form submitted"
+    }
   }
 }

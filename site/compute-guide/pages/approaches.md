@@ -12,6 +12,10 @@
 | Partnerships and shared infrastructure | Connect compatible college, campus and external efforts | Define a small joint use case with an interested partner | Agreed responsibilities, access and sustainable support |
 | Reusable teaching and evaluation tools | Avoid rebuilding assignment environments and grading workflows | Test exports and a synthetic class before adoption | Maintainer continuity, account terms and separate compute quotas |
 
+## Planned ORAI proposal
+
+Greg will draft a bounded [AI Innovation Pilot](https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots) next, showcasing ORAI tools alongside his infrastructure components in an **AI-native classroom**. Drafting is reserved for a new chat. His capacity is **four hours/week total**. The program offers a potential eight-week proof-of-concept route after assessment; acceptance, RSE assignments and infrastructure must be confirmed. Ongoing maintenance and classroom operations need their own plan.
+
 ## Use one comparison standard
 
 For each candidate, document instructional/research benefit, users served, accessibility, data suitability, required effort, recurring costs, funding status, ownership and a reversible test. Do not rank options using invented cost savings or unmeasured capacity.

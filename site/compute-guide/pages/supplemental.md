@@ -27,7 +27,7 @@ Detailed references and working materials, grouped by purpose. Start with the [o
 
 ## Instructional-computing pilot
 
-**Supporting proposal, not the working group’s selected strategy.** ACCESS is the intended CPU + GPU route. Campus AWS is for component testing; bounded free GPUs support preliminary benchmarks. The pilot has $0 cash and Greg’s ten total hours/week; TA and course-lead effort is separate. Allocations, funding and classroom readiness remain unconfirmed.
+**Supporting proposal, not the working group’s selected strategy.** ACCESS is the intended CPU + GPU route. Campus AWS is for component testing; bounded free GPUs support preliminary benchmarks. The pilot has $0 cash and Greg’s four total hours/week; TA and course-lead effort is separate. Allocations, funding and classroom readiness remain unconfirmed.
 
 | Material | Use |
 | --- | --- |

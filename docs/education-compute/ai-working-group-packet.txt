@@ -48,7 +48,7 @@ Prepare the shared-service, policy, staffing and infrastructure questions that r
 Output: College briefing for anticipated university-wide planning; timing not yet set.
 
 USE AND REVIEW
-The resource tool offers explicit submission of a reviewed public/synthetic brief and contact details to a private pilot queue for Barney and Greg. Optional Luna drafting is separate and does not persist briefs in the drafting service. The queue stores submissions and review notes until reviewers delete them; it is outside university Microsoft 365 and is not for sensitive data. Agree deliverable owner roles and the review process. No group endorsements, college-wide needs totals, staff availability or funding are assumed. The separate pilot retains its own zero-cash/ten-hour constraints.
+The resource tool offers explicit submission of a reviewed public/synthetic brief and contact details to a private pilot queue for Barney and Greg. Optional Luna drafting is separate and does not persist briefs in the drafting service. The queue stores submissions and review notes until reviewers delete them; it is outside university Microsoft 365 and is not for sensitive data. Agree deliverable owner roles and the review process. No group endorsements, college-wide needs totals, staff availability or funding are assumed. The separate pilot retains its own zero-cash/four-hour constraints.
 
 SEEDED RESOURCE INVENTORY
 
@@ -510,6 +510,10 @@ Record **the activity → the barrier → a route to investigate → a person wh
 | Efficient models and workflows | Lower unnecessary compute and improve reproducibility | Compare a smaller model, retrieval approach or checkpointed job against a quality baseline | Task-specific evaluation; savings must be measured |
 | Partnerships and shared infrastructure | Connect compatible college, campus and external efforts | Define a small joint use case with an interested partner | Agreed responsibilities, access and sustainable support |
 | Reusable teaching and evaluation tools | Avoid rebuilding assignment environments and grading workflows | Test exports and a synthetic class before adoption | Maintainer continuity, account terms and separate compute quotas |
+
+## Planned ORAI proposal
+
+Greg will draft a bounded [AI Innovation Pilot](https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots) next, showcasing ORAI tools alongside his infrastructure components in an **AI-native classroom**. Drafting is reserved for a new chat. His capacity is **four hours/week total**. The program offers a potential eight-week proof-of-concept route after assessment; acceptance, RSE assignments and infrastructure must be confirmed. Ongoing maintenance and classroom operations need their own plan.
 
 ## Use one comparison standard
 
