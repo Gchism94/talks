@@ -412,7 +412,7 @@ The ecology section includes a regional predator photo overview and a two-minute
 section on antlion and Microdon larvae. The battle and detailed farming timeline
 are untimed Q&A bonuses; the farming origin remains in the leafcutter story.
 Timing remains 45 minutes plus 15 minutes for questions. The trail and nest-choice
-model tabs have been removed while the real films remain. The final three slides
-show the presenter-supplied Giving Tuesday, butterfly talk and Christmas Bird
-Count flyers, one unchanged image per slide with presentation controls hidden.
-Use the Left and Right arrow keys to navigate the closing flyers.
+model tabs have been removed while the real films remain. The final slide
+shows the presenter-supplied Giving Tuesday, butterfly talk and Christmas Bird
+Count flyers side by side, with all three unchanged images visible together and
+presentation controls hidden. Use the Left arrow key to return to the talk.
