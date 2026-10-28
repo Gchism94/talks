@@ -80,8 +80,9 @@ examples: 45 minutes of presentation, 15 minutes of questions, and sixteen
 untimed source and media-credit slides.
 
 The public edition includes authentic photographs, anatomy and lifecycle
-illustrations, a head-matching game, research films, and illustrative trail,
-quorum, and seed demonstrations. The opening household-ant slide connects
+illustrations, a head-matching game, research films, and a seed-dispersal
+demonstration. Trail marking and nestmate transport use real footage; their
+optional model tabs have been removed. The opening household-ant slide connects
 coexistence and exclusion with leafcutter avoidance learning. Real underground
 nest casts, sticky defensive secretion, and Alex Wild’s photograph of a living
 army-ant bridge in a captive colony make the later examples concrete. Regional species return
@@ -404,3 +405,14 @@ Canonical content: `site/compute-guide/`; inventory: `working-group.json`. Build
 The optional guarded backend is documented in [services/compute-drafter](services/compute-drafter/README.md). `.env` is ignored and never a web/review asset. No new paid model call is needed to verify content or navigation changes.
 
 The directory root is the resource overview (`index.html`); `program.html` remains an alias. The original presentation is `talk.html` under Supplement, and old numeric slide links still work. Header/tabs stay together while scrolling. The shared header omits Greg’s role; coordination and request materials retain it.
+
+### Small Republics: predator and closing-flyer update
+
+The ecology section includes a regional predator photo overview and a two-minute
+section on antlion and Microdon larvae. The battle and detailed farming timeline
+are untimed Q&A bonuses; the farming origin remains in the leafcutter story.
+Timing remains 45 minutes plus 15 minutes for questions. The trail and nest-choice
+model tabs have been removed while the real films remain. The final three slides
+show the presenter-supplied Giving Tuesday, butterfly talk and Christmas Bird
+Count flyers, one unchanged image per slide with presentation controls hidden.
+Use the Left and Right arrow keys to navigate the closing flyers.

@@ -656,5 +656,108 @@
     "license": "© Alex Wild · used with permission",
     "license_url": "https://www.alexanderwild.com/Image-Use",
     "description": "Living Dorymyrmex insanus foraging in a flower, Portal, Arizona, USA. Original photograph and watermark retained. Paired with California spineflower as a species example; the pictured flower is not claimed to be spineflower and this is not a photograph of Jones et al.’s pollination experiment."
+  },
+  {
+    "file": "antlion-larva.jpg",
+    "title": "Antlion larva near John Day, Oregon",
+    "artist": "Djzanni",
+    "page": "https://commons.wikimedia.org/wiki/File:Antlion_larva.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Antlion_larva.jpg",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "description": "Living larva with fingertip for scale, eastern Oregon, 2017. Original retained. A western portrait, not a Mount Shasta observation or the individual in the French pit-trap film. Presentation uses a CSS detail crop to make the larva and jaws larger."
+  },
+  {
+    "file": "antlion-hunt.mp4",
+    "title": "Antlion flicking sand at an ant in a pit trap",
+    "artist": "Imac.vincent",
+    "page": "https://commons.wikimedia.org/wiki/File:Antlion_video.ogv",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Antlion_video.ogv",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "description": "First 30 seconds of the original 58-second film, re-encoded to H.264; audio removed. Original frames and playback speed retained. Fontainebleau, France, 2015. Excerpt demonstrates pit-trap hunting and does not promise the complete capture sequence. Derivative excerpt shared under CC BY-SA 4.0. Preview still extracted at 10 seconds, under the same CC BY-SA 4.0 license.",
+    "poster": "antlion-hunt-poster.jpg"
+  },
+  {
+    "file": "microdon-larva.jpg",
+    "title": "Microdon larva with an ant",
+    "artist": "Jonghyun Park",
+    "page": "https://www.inaturalist.org/photos/327051570",
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/327051570/original.jpeg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "description": "Living Microdon larva and an ant in Gurye-gun, South Korea. Genus-level identification supported by multiple iNaturalist identifiers, observation 187062049. Photo documents association, not feeding; the species is not identified as one of the experimentally studied North American or European brood predators. Original retained."
+  },
+  {
+    "title": "File:003 western toad nwwd odfw (7490423060).jpg",
+    "file": "western-toad.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:003_western_toad_nwwd_odfw_(7490423060).jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/97/003_western_toad_nwwd_odfw_%287490423060%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/003_western_toad_nwwd_odfw_%287490423060%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "artist": "Oregon Department of Fish & Wildlife",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "description": "The western toad is well camouflaged in earth tones to help it stay safe from predators. A large toad with bumpy skin, it lives mainly on land in a range of habitats from mountain meadows to desert flats. Today the species is threatened by loss of wetlands, habitat\n\ndegradation and other environmental changes. Species portrait; not photographed eating ants and not a Mount Shasta feeding record.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/003_western_toad_nwwd_odfw_%287490423060%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "title": "File:Fence Lizard 5519ed.jpg",
+    "file": "fence-lizard.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fence_Lizard_5519ed.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Fence_Lizard_5519ed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Fence_Lizard_5519ed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "artist": "Jjm596",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Coastal range fence lizard (Sceloporus occidentalis bocourtii) in Smith Rock State Park, Oregon - August 2017 Species portrait; not photographed eating ants and not a Mount Shasta feeding record.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Fence_Lizard_5519ed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "title": "File:Kaldari Phidippus johnsoni male portrait.jpg",
+    "file": "jumping-spider.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kaldari_Phidippus_johnsoni_male_portrait.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Kaldari_Phidippus_johnsoni_male_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Kaldari_Phidippus_johnsoni_male_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "artist": "Kaldari",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "description": "Adult male Phidippus johnsoni jumping spider. Found at China Camp State Park, California. Species portrait; not photographed eating ants and not a Mount Shasta feeding record.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Kaldari_Phidippus_johnsoni_male_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "title": "File:Phrynosoma douglasii 4179.JPG",
+    "file": "pygmy-horned-lizard.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Phrynosoma_douglasii_4179.JPG",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/de/Phrynosoma_douglasii_4179.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Phrynosoma_douglasii_4179.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "artist": "©2014 Walter Siegmund",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "description": "Pygmy Short-horned Lizard\nViewpoint location: Unnamed and unimproved road, Whiskey Dick Unit, L.T. Murray Wildlife Area\nViewpoint elevation:  685 meter (2246 ft)\nLocation source: Garmin GPSmap 60CSx\nLocation Datum: WGS84 Species portrait; not photographed eating ants and not a Mount Shasta feeding record.",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Phrynosoma_douglasii_4179.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+  },
+  {
+    "title": "File:Rana cascadae 20931.JPG",
+    "file": "cascades-frog.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Rana_cascadae_20931.JPG",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/6/61/Rana_cascadae_20931.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Rana_cascadae_20931.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "artist": "Walter Siegmund",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5",
+    "description": "Cascades Frog Species portrait; not photographed eating ants and not a Mount Shasta feeding record. Unmodified Commons 960px thumbnail; displayed as a CSS detail.",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Rana_cascadae_20931.JPG/960px-Rana_cascadae_20931.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  {
+    "title": "File:Sorex vagrans.jpg",
+    "file": "vagrant-shrew.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sorex_vagrans.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Sorex_vagrans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Sorex_vagrans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "artist": "Garth Harwood",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "description": "Vagrant Shrew (Sorex vagrans). Species of mammal. Species portrait; not photographed eating ants and not a Mount Shasta feeding record. Unmodified Commons 500px thumbnail; displayed as a CSS detail.",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Sorex_vagrans.jpg/500px-Sorex_vagrans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
   }
 ]

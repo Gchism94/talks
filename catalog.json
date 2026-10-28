@@ -32,7 +32,7 @@
       "event": "Audubon Society · Mount Shasta region",
       "format": "Talk with live demonstrations",
       "duration": "45 min + 15 min Q&A",
-      "slides": 56,
+      "slides": 64,
       "topics": [
         "Ant societies",
         "Mount Shasta",
@@ -103,7 +103,21 @@
         "site/ants/cascade-knotweed.jpg",
         "site/ants/smokebush-pollinators.jpg",
         "site/ants/formica-argentea.jpg",
-        "site/ants/wild-dorymyrmex-insanus.jpg"
+        "site/ants/wild-dorymyrmex-insanus.jpg",
+        "site/ants/antlion-larva.jpg",
+        "site/ants/antlion-hunt.mp4",
+        "site/ants/antlion-hunt.vtt",
+        "site/ants/microdon-larva.jpg",
+        "site/ants/antlion-hunt-poster.jpg",
+        "site/ants/vagrant-shrew.jpg",
+        "site/ants/cascades-frog.jpg",
+        "site/ants/pygmy-horned-lizard.jpg",
+        "site/ants/western-toad.jpg",
+        "site/ants/fence-lizard.jpg",
+        "site/ants/jumping-spider.jpg",
+        "site/ants/flyer-giving-tuesday.jpg",
+        "site/ants/flyer-butterflies.jpg",
+        "site/ants/flyer-bird-counts.jpg"
       ],
       "cover": "site/covers/small-republics.png",
       "public_overrides": "site/ants/public-slides.json"
