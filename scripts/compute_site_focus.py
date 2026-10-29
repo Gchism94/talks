@@ -155,13 +155,13 @@ Which activities are blocked; who is affected; whether the barrier is capacity, 
 | Allocation-backed CPU and GPU | Benchmark representative work and justify an ACCESS request | Award, provider fit, operations, accounts and classroom use |
 | Instructor pilots and partnerships | Explore eligible NAIRR Classroom and compatible campus/federal services | Scope, access, reporting, support and continuity |
 
-**Instructional-computing case study:** the proposed DS/MLIS pilot uses ACCESS for CPU **and** GPU. Campus AWS is only for component testing; free GPU notebooks support preliminary benchmarks, followed by target-resource replay. CloudBank remains conditional. The pilot’s $0 cash and Greg’s four total hours/week are its own constraints, not college-wide budget or staffing findings. TA/course-lead effort is separate; paid needs require confirmed eligible grant funding.
+**Instructional-computing case study:** the proposed DS/MLIS pilot uses ACCESS for CPU **and** GPU. Campus AWS is only for component testing; free GPU notebooks support preliminary benchmarks, followed by target-resource replay. CloudBank remains conditional. The pilot has no assigned cash budget; necessary paid support requires confirmed eligible grant funding. Confirm TA/course-lead and technical support responsibilities.
 
 No award, capacity reservation, provider benchmark or classroom deployment is established here. All 13 pilot readiness checks remain planned. [Pilot details and request draft](supplemental.html#instructional-computing-pilot).
 
 ### Planned next step: ORAI AI Innovation Pilot
 
-Greg Chism will draft a separate proposal to showcase ORAI tools alongside his infrastructure components in an **AI-native classroom**, through [ORAI AI Innovation Pilots](https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots). **His capacity is four hours/week total**, shared with other duties. The earlier two-course illustration requires 230 hours over 23 weeks; the corrected time ceiling is at most 92 hours, leaving a 138-hour gap before other commitments. It requires rescoping or confirmed distinct support.
+Greg Chism will draft a separate proposal to showcase ORAI tools alongside his infrastructure components in an **AI-native classroom**, through [ORAI AI Innovation Pilots](https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots). The proposal will focus on approved AI use in EduCloud and a standardized, reusable AI-enabled classroom.
 
 The ORAI program targets one working proof of concept within eight weeks of execution after assessment, with one pilot per faculty/staff member per year and essential data/access ready at entry. Fit, acceptance, staff assignments and infrastructure are unconfirmed. Drafting the proposal is next; it has not been submitted. An ORAI prototype does not provide semester-long operations or an ACCESS award.
 

@@ -1073,7 +1073,6 @@
   "orai_pilot_plan": {
     "status": "Next draft planned; not submitted or accepted",
     "owner": "Greg Chism, Faculty Director of Instructional Computing",
-    "weekly_capacity_hours": 4,
     "url": "https://responsibleai.arizona.edu/tools-support/ai-innovation-pilots",
     "scope": "Showcase ORAI tools alongside Greg\u2019s infrastructure-related components to build an AI-native classroom proof of concept. Specific components, workflow and deliverable will be scoped in the subsequent proposal.",
     "program_basis": "Eight-week execution after assessment; one project per faculty/staff member per year. Essential data/access must be ready. Support and infrastructure depend on project fit and acceptance.",
@@ -1088,7 +1087,7 @@
         "Dataset available?",
         "Specific tasks/questions defined for the data?"
       ],
-      "stakeholder_commitment": "At least one hour/week for relevant stakeholders during a 6\u20138 week phase; confirm before agreeing. This time comes from Greg\u2019s four-hour weekly cap, not in addition.",
+      "stakeholder_commitment": "Program requests at least one hour/week for relevant stakeholders during a 6\u20138 week phase; confirm participation before agreeing.",
       "timing_to_confirm": "Public program specifies eight-week execution after assessment; the intake uses 6\u20138 weeks for the participation statement.",
       "other_fields": [
         "Contact and full unit name",

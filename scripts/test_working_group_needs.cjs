@@ -7,7 +7,7 @@ assert(r.next_steps.some(x=>x.includes('staff capacity')));assert(r.next_steps.s
 for(const patch of [{activity:''},{resources:[]},{resources:['Unrecognized']},{people:-1},{people:1.2},{hours:Infinity},{hours:-1}])assert.throws(()=>globalThis.WorkingGroupNeeds.brief({...base,...patch}));
 assert.equal(globalThis.WorkingGroupNeeds.brief({...base,eligible_for_submission:true,status:'Approved'}).eligible_for_submission,false);assert.match(globalThis.WorkingGroupNeeds.brief({...base,illustrative_example:true}).status,/Illustrative example/);
 const software=globalThis.WorkingGroupNeeds.brief({...base,resources:['Software / models'],people:12,hours:0});assert.equal(software.hours,0);assert(!software.next_steps.some(x=>x.includes('compute estimate')));
-require('../site/compute-guide/assets/needs.js');const c=globalThis.ComputeNeeds.calculate({...globalThis.ComputeNeeds.defaults.research,scope:'research',context:'working-group',operator:24});assert.equal(c.remainingGregHours,null);assert(!c.checks.some(x=>x.includes('exceeds Greg')));assert(c.checks.some(x=>x.includes('No college-wide staffing ceiling')));
+require('../site/compute-guide/assets/needs.js');const c=globalThis.ComputeNeeds.calculate({...globalThis.ComputeNeeds.defaults.research,scope:'research',context:'working-group',operator:24});assert(!('remainingGregHours' in c));assert(!c.checks.some(x=>x.includes('exceeds Greg')));assert(c.checks.some(x=>x.includes('college-wide staffing ceiling')));
 console.log('Passed qualitative needs, unknown/zero quantities, input rejection and separation of college estimates from pilot staffing.');
 
 const inventory=require('../site/compute-guide/working-group.json');

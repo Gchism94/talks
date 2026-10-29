@@ -9,13 +9,12 @@ def build(root,generated,public,write):
     old=generated/'pages/needs.md';text=old.read_text().replace('# Scope your computing needs','# Optional compute estimate')
     text=text.replace('Estimate a research project or classroom workload before asking for resources.','Start with the <a href="needs.html">short needs brief</a>. Use this optional calculator only when you can estimate the workload; unknown technical quantities belong in the brief, not as invented numbers.')
     text=text.replace('<form class="needs-form" id="needsForm">','<form class="needs-form" id="needsForm"><input type="hidden" name="context" value="working-group">')
-    text=text.replace('Greg hours / week for this scope','Potential technical-support hours / week').replace('Inside four total weekly hours for everything.','Scope-specific estimate; no college staffing capacity is assumed.')
     (generated/'pages/compute-estimator.md').write_text(text)
     # Keep the pilot's six-stage plan at a stable, explicit case-study address.
     shutil.copy2(generated/'pages/timeline.md',generated/'pages/pilot-stages.md')
     for name in ['pilot-plan','pilot-stages','access-request','budget','readiness','gpu-benchmark','classroom-assessment']:
         path=generated/'pages'/f'{name}.md';text=path.read_text();parts=text.split('\n',1)
-        note='\n<div class="guide-note"><strong>Supporting compute pilot.</strong> These DS/MLIS proposals retain their own $0 cash and Greg’s four-hour weekly envelope. They are not college-wide capacity findings or the working group’s selected solution. <a href="deliverables.html">Return to working-group deliverables →</a></div>\n'
+        note='\n<div class="guide-note"><strong>Supporting compute pilot.</strong> These DS/MLIS proposals retain their own $0 cash funding boundary and unconfirmed support commitments. They are not college-wide capacity findings or the working group’s selected solution. <a href="deliverables.html">Return to working-group deliverables →</a></div>\n'
         path.write_text(parts[0]+'\n'+note+parts[1])
     intro='''Find a route for **College of Information Science research or teaching**. Filter by resource type and location, then open an entry for access, cost, limitations and dated sources.
 

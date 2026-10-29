@@ -1,11 +1,11 @@
 EDUCLOUD-ALIGNED GRANT WORK PACKAGES | 12 October 2026
 Zero cash budget. No salary/rate/cash-envelope arithmetic.
 
-Hours only. Greg has four hours/week total across this work and EduCloud. Over the illustrative six preparation + fifteen teaching + two close weeks, 92 hours is an upper bound, not reserved project time. The earlier role estimates still total 230 hours, a 138-hour gap before other commitments. They are unrevised demand estimates, not a feasible four-hour plan or committed staffing. Narrow the work or confirm distinct support before proceeding. No salary math, cash envelope or finance role.
+Responsibilities and support needs for working-group discussion. Coordination, benchmarking, operations, design, data/recovery and grant preparation need named owners. Potential TA/course-lead estimates remain illustrative, not appointments or commitments.
 
 Available cash budget is zero. Work needing paid support, storage, hosting, development or recovery must have a confirmed eligible EduCloud grant and allowable work package before spending. ACCESS is CPU/GPU resource allocation, not payroll. No grant award is asserted. Existing campus test access and free GPU resources must stay within their authorized no-purchase scope.
 
-The earlier 230-hour demand exceeds the 92-hour upper bound by 138 hours across the modeled 23 weeks. Greg cannot be his own independent backup. The earlier separate backup estimate is 27 hours; no distinct person is committed. TA/course-lead hours are separate and unconfirmed. Institutional privacy/accessibility approval remains separate from Greg’s coordination.
+Confirm a distinct independent backup, TA/course-lead coverage and full-term support. Institutional privacy and accessibility approvals remain separate from coordination. No staffing appointment or grant award is assumed.
 
 Sloan Open Source in Science
 Reusable open-science stewardship, maintenance and operator practices

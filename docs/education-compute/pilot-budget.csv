@@ -1,10 +1,10 @@
-function,owner,people,prep_hours_per_person,teaching_hours_per_person_week,close_hours_per_person,modeled_total_hours,greg_function,greg_weekly_capacity_hours,greg_capacity_upper_bound_hours,greg_aggregate_demand_hours,greg_capacity_gap_hours,requires_rescoping,basis
-Allocation and coordination,Greg,1,6,1,1.0,22.0,yes,4,92,230,138,True,"ACCESS request, provider scope, course dates and demand review."
-Benchmark and component work,Greg,1,18,1,1.0,34.0,yes,4,92,230,138,True,"CPU/GPU runs, package/environment checks and reproducible result review."
-Service operations,Greg,1,12,4,6,78,yes,4,92,230,138,True,"Accounts, monitoring, backups, export and issue triage; hours must be measured."
-Instructional design and accessibility,Greg,1,6,0.5,1.0,14.5,yes,4,92,230,138,True,Accessible instructions and equivalent CPU activities; institutional approval is separate.
-"Data, rights and recovery review",Greg,1,6,1,4,25,yes,4,92,230,138,True,"Coordinate rights/privacy destinations, recovery rehearsal and closeout; no authority to self-approve institutional requirements."
-EduCloud grant preparation,Greg,1,6,1,2,23,yes,4,92,230,138,True,Distinct stewardship/training/evaluation work packages; no grant submission or award implied.
-Planning and incident buffer,Greg,1,6,1.5,5.0,33.5,yes,4,92,230,138,True,Earlier incident/planning demand estimate; reduce scope or confirm distinct support when the four-hour envelope is exceeded.
-Two course support TAs,Not appointed; grant-supported if funded,2,4,3,2,102,no,4,92,230,138,True,Per TA: 4 prep + 3/week × 15 + 2 close = 51 hours. Outside Greg’s four hours. No salary/rate assumed.
-Two course leads,Course leads; named commitments pending,2,16,1,4,70,no,4,92,230,138,True,Per lead: 16 prep + 1/week × 15 + 4 close = 35 additional pilot hours. Outside Greg’s four hours. No salary requested; regular teaching/grading excluded.
+function,owner,people,prep_hours_per_person,teaching_hours_per_person_week,close_hours_per_person,modeled_total_hours,basis
+Allocation and coordination,To confirm,1,,,,,"ACCESS request, provider scope, course dates and demand review."
+Benchmark and component work,To confirm,1,,,,,"CPU/GPU runs, package/environment checks and reproducible result review."
+Service operations,To confirm,1,,,,,"Accounts, monitoring, backups, export and issue triage; hours must be measured."
+Instructional design and accessibility,To confirm,1,,,,,Accessible instructions and equivalent CPU activities; institutional approval is separate.
+"Data, rights and recovery review",To confirm,1,,,,,"Coordinate rights/privacy destinations, recovery rehearsal and closeout; no authority to self-approve institutional requirements."
+EduCloud grant preparation,To confirm,1,,,,,Distinct stewardship/training/evaluation work packages; no grant submission or award implied.
+Planning and incident buffer,To confirm,1,,,,,Incident planning and coordination; confirm the responsible support team.
+Two course support TAs,Not appointed; grant-supported if funded,2,4,3,2,102,Per TA: 4 prep + 3/week × 15 + 2 close = 51 hours. No salary/rate assumed.
+Two course leads,Course leads; named commitments pending,2,16,1,4,70,Per lead: 16 prep + 1/week × 15 + 4 close = 35 additional pilot hours. No salary requested; regular teaching/grading excluded.

@@ -12,14 +12,20 @@ const one=calculate({...defaults.classroom,people:1,weeks:1,runs:1,cpuHours:1,co
 assert.equal(one.cpuCoreHours,2);assert.equal(one.gpuDeviceHours,4);assert.equal(one.logicalStorageGiB,36);
 const cpu=calculate({...defaults.classroom,gpuHours:0,gpus:0,gpuPeak:0,vram:0});assert.equal(cpu.gpuDeviceHours,0);assert.equal(cpu.peakGpus,0);
 for(const patch of [{people:0},{weeks:NaN},{cpuHours:-1},{gpuHours:Infinity},{people:1.5},{cores:0},{allowance:101},{peak:41},{gpuPeak:41},{gpuHours:1,gpus:0},{gpuHours:1,vram:0}])assert.throws(()=>calculate({...defaults.classroom,...patch}));
-const sensitive=calculate({...defaults.classroom,data:'restricted',operator:11});assert.match(sensitive.route,/permissions first/);assert(sensitive.checks.some(x=>x.includes('exceeds')));
+const sensitive=calculate({...defaults.classroom,data:'restricted',operator:11});assert.match(sensitive.route,/permissions first/);assert(sensitive.checks.some(x=>x.includes('Confirm who can supply')));
 const service=calculate({...defaults.research,pattern:'service'});assert(service.checks.some(x=>x.includes('uptime')));
 assert.equal(calculate({...defaults.classroom,basis:'target'}).eligible_for_submission,false);
 console.log('Passed classroom/research arithmetic, peak/storage accounting, CPU-only, invalid input and readiness controls.');
 
-assert.equal(calculate({...defaults.classroom,operator:3}).remainingGregHours,1);
-const full=calculate({...defaults.classroom,operator:4});assert.equal(full.remainingGregHours,0);assert(full.checks.some(x=>x.includes('leaves no time')));
-const over=calculate({...defaults.classroom,operator:5});assert.equal(over.remainingGregHours,-1);assert(over.checks.some(x=>x.includes('4-hour')));
-const college=calculate({...defaults.classroom,context:'working-group',operator:8});assert.equal(college.remainingGregHours,null);
-const plan=require('../site/education-compute-pilot.json').budget;assert.equal(plan.weekly_capacity,4);assert.equal(plan.total_greg_capacity_hours,92);assert.equal(plan.roles.reduce((n,r)=>n+r.hours,0),230);assert.equal(plan.capacity_gap_hours,138);assert.equal(plan.requires_rescoping,true);
-console.log('Passed corrected four-hour capacity, zero headroom, over-capacity and retained workload-gap checks.');
+for(const context of ['pilot','working-group'])for(const operator of [0,4,24]){
+ const scoped=calculate({...defaults.classroom,context,operator});
+ assert.equal(scoped.weeklyOperatorHours,operator);
+ assert(!('remainingGregHours' in scoped));
+ assert(!scoped.checks.some(x=>/Greg|four.hour|4-hour|leaves no time/.test(x)));
+ assert(scoped.checks.some(x=>x.includes('Confirm who can supply')));
+}
+const plan=require('../site/education-compute-pilot.json').budget;
+for(const key of ['weekly_capacity','total_greg_hours','total_greg_capacity_hours','capacity_gap_hours'])assert(!Object.hasOwn(plan,key));
+assert(plan.roles.every(r=>r.hours===null&&r.weekly===null));
+assert.equal(plan.separate_roles[0].hours,102);assert.equal(plan.separate_roles[1].hours,70);
+console.log('Passed scope-specific support estimates without personal capacity comparisons; course support estimates retained.');

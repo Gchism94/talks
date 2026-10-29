@@ -22,7 +22,7 @@ Optional: MESA/CyVerse can demonstrate a data/workflow component after per-user 
 PHASES
 
 Before piloting · preparation weeks 1–2 | Test components and benchmark GPUs
-Use already-authorized campus UITS/AWS CPU component tests and free Kaggle/Colab GPU notebooks. Pin synthetic inputs, run bounded measurements and retain correctness/export/failure evidence before any student canary. Greg’s total work, including grant preparation, is capped at four hours/week; no cash, purchases or new paid accounts are available.
+Use already-authorized campus UITS/AWS CPU component tests and free Kaggle/Colab GPU notebooks. Pin synthetic inputs, run bounded measurements and retain correctness/export/failure evidence before any student canary. No cash, purchases or new paid accounts are assumed.
 Exit evidence: Reproducible CPU/GPU component results and a workload envelope, within available time. Local functional checks do not replace AWS/CUDA provider measurements.
 
 After benchmarks · before canary | Submit a sized ACCESS CPU + GPU request
@@ -34,7 +34,7 @@ After approved access, recruit up to ten consenting volunteers, five per course 
 Exit evidence: Both workflows succeed; actual service limits and unresolved defects are recorded. Stop or revise if core fit fails.
 
 After canary · preparation weeks 5–6 | Rehearse the whole class and recovery
-With provider approval, rehearse 80 student workspaces plus agreed staff use. Test account isolation, grading receipts, accessible instructions, independent restore and the CPU fallback. Update the usage and effort forecast from observed runs and actual weekly hours. Keep Greg’s total within four hours; TA/lead support is separate.
+With provider approval, rehearse 80 student workspaces plus agreed staff use. Test account isolation, grading receipts, accessible instructions, independent restore and the CPU fallback. Update the usage and effort forecast from observed runs and actual weekly hours. Confirm the support plan with course leads and technical staff.
 Exit evidence: All thirteen applicable checks have evidence, term support and any needed grant-funded costs confirmed; otherwise narrow or defer the classroom scope.
 
 Weeks 1–15 | Teach the two-course pilot
@@ -46,25 +46,25 @@ Provide learner exports and reconcile grades before closure. Preserve approved p
 Exit evidence: Verified exports, measured restore, closed accounts, final report and a costed continuation decision.
 
 HOURS AND GRANT DEPENDENCIES
-Hours only. Greg has four hours/week total across this work and EduCloud. Over the illustrative six preparation + fifteen teaching + two close weeks, 92 hours is an upper bound, not reserved project time. The earlier role estimates still total 230 hours, a 138-hour gap before other commitments. They are unrevised demand estimates, not a feasible four-hour plan or committed staffing. Narrow the work or confirm distinct support before proceeding. No salary math, cash envelope or finance role.
-Allocation and coordination (Greg): 22.0 potential hours over the modeled period. ACCESS request, provider scope, course dates and demand review.
-Benchmark and component work (Greg): 34.0 potential hours over the modeled period. CPU/GPU runs, package/environment checks and reproducible result review.
-Service operations (Greg): 78 potential hours over the modeled period. Accounts, monitoring, backups, export and issue triage; hours must be measured.
-Instructional design and accessibility (Greg): 14.5 potential hours over the modeled period. Accessible instructions and equivalent CPU activities; institutional approval is separate.
-Data, rights and recovery review (Greg): 25 potential hours over the modeled period. Coordinate rights/privacy destinations, recovery rehearsal and closeout; no authority to self-approve institutional requirements.
-EduCloud grant preparation (Greg): 23 potential hours over the modeled period. Distinct stewardship/training/evaluation work packages; no grant submission or award implied.
-Planning and incident buffer (Greg): 33.5 potential hours over the modeled period. Earlier incident/planning demand estimate; reduce scope or confirm distinct support when the four-hour envelope is exceeded.
-Two course support TAs (Not appointed; grant-supported if funded): 102 potential hours over the modeled period. Per TA: 4 prep + 3/week × 15 + 2 close = 51 hours. Outside Greg’s four hours. No salary/rate assumed.
-Two course leads (Course leads; named commitments pending): 70 potential hours over the modeled period. Per lead: 16 prep + 1/week × 15 + 4 close = 35 additional pilot hours. Outside Greg’s four hours. No salary requested; regular teaching/grading excluded.
+Responsibilities and support needs for working-group discussion. Coordination, benchmarking, operations, design, data/recovery and grant preparation need named owners. Potential TA/course-lead estimates remain illustrative, not appointments or commitments.
+Allocation and coordination (To confirm): To scope over the modeled period. ACCESS request, provider scope, course dates and demand review.
+Benchmark and component work (To confirm): To scope over the modeled period. CPU/GPU runs, package/environment checks and reproducible result review.
+Service operations (To confirm): To scope over the modeled period. Accounts, monitoring, backups, export and issue triage; hours must be measured.
+Instructional design and accessibility (To confirm): To scope over the modeled period. Accessible instructions and equivalent CPU activities; institutional approval is separate.
+Data, rights and recovery review (To confirm): To scope over the modeled period. Coordinate rights/privacy destinations, recovery rehearsal and closeout; no authority to self-approve institutional requirements.
+EduCloud grant preparation (To confirm): To scope over the modeled period. Distinct stewardship/training/evaluation work packages; no grant submission or award implied.
+Planning and incident buffer (To confirm): To scope over the modeled period. Incident planning and coordination; confirm the responsible support team.
+Two course support TAs (Not appointed; grant-supported if funded): 102 potential hours over the modeled period. Per TA: 4 prep + 3/week × 15 + 2 close = 51 hours. No salary/rate assumed.
+Two course leads (Course leads; named commitments pending): 70 potential hours over the modeled period. Per lead: 16 prep + 1/week × 15 + 4 close = 35 additional pilot hours. No salary requested; regular teaching/grading excluded.
 Available cash budget is zero. Work needing paid support, storage, hosting, development or recovery must have a confirmed eligible EduCloud grant and allowable work package before spending. ACCESS is CPU/GPU resource allocation, not payroll. No grant award is asserted. Existing campus test access and free GPU resources must stay within their authorized no-purchase scope.
-The earlier 230-hour demand exceeds the 92-hour upper bound by 138 hours across the modeled 23 weeks. Greg cannot be his own independent backup. The earlier separate backup estimate is 27 hours; no distinct person is committed. TA/course-lead hours are separate and unconfirmed. Institutional privacy/accessibility approval remains separate from Greg’s coordination.
+Confirm a distinct independent backup, TA/course-lead coverage and full-term support. Institutional privacy and accessibility approvals remain separate from coordination. No staffing appointment or grant award is assumed.
 
 PRE-CLASS READINESS (ALL PLANNED / NOT RUN)
 
 scope | Greg + course leads | Before request
-Confirm eligible PI, actual courses/leads, Greg’s four-hour/week total envelope, separate TA/lead hours, distinct backup and full-term coverage. No cash budget; fund any necessary expenses only from a confirmed eligible grant.
+Confirm eligible PI, actual courses/leads, named technical support, distinct backup and full-term coverage. No cash budget; necessary expenses require confirmed eligible grant funding.
 Evidence: Named owners, realistic hours log, separate support commitments and confirmed grant/allowable-cost evidence if paid resources are needed.
-Stop if: Counting four hours per role, assuming grant award, missing backup, or unfunded necessary spending.
+Stop if: Assumed staffing or grant award, missing backup, or unfunded necessary spending.
 
 benchmark | Greg (operator) + course leads | Before student canary / request sizing
 Complete campus AWS CPU component tests and free-resource GPU benchmarks; retain failures, correctness, measured memory/runtime, checkpoint/export results and workload scope. Reproduce representative GPU work on awarded ACCESS hardware before class.
