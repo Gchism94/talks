@@ -222,3 +222,5 @@ def build():
 
 if __name__ == "__main__":
     build()
+    from build_wildcat_proposal import build as build_wildcat_proposal
+    build_wildcat_proposal()

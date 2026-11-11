@@ -1,0 +1,97 @@
+/* Full-screen opening and a continuous editorial journey. Shared proposal styles stay reusable. */
+@media screen {
+  .journey-page{background:var(--paper);color:var(--ink)}
+  .journey-page .site-header{position:fixed;inset:0 0 auto;min-height:80px;background:transparent;border-color:#ffffff1a;backdrop-filter:none;transition:background .3s,border-color .3s}
+  .journey-page.has-scrolled .site-header{background:#0c234bf2;border-color:#ffffff26;backdrop-filter:blur(16px)}
+  .journey-page .site-header .wordmark{font-size:32px}
+  .journey-page .site-header nav{font-size:12px;gap:32px}
+  .opening{position:relative;isolation:isolate;min-height:100svh;padding:0;overflow:hidden;background:#07182f;color:white}
+  .opening:before{background:radial-gradient(ellipse at 85% 50%,#ab05203b,transparent 57%),linear-gradient(115deg,#07182f,#0c234b)}
+  .opening .story-layout{position:relative;min-height:100svh;display:flex;flex-direction:column;gap:28px;padding-block:115px 24px}
+  .opening .story-intro{display:flex;align-items:center;flex:1;gap:0}
+  .opening .story-copy{position:relative;z-index:2;max-width:950px;transform:translateY(var(--copy-travel,0px))}
+  .opening .story-copy .eyebrow{color:#b7cee7;font-size:10px;letter-spacing:.16em;margin-bottom:22px}
+  .opening .story-copy h1{font-size:clamp(65px,7.7vw,112px);font-weight:450;line-height:.99;letter-spacing:-.055em;margin-bottom:27px}
+  .opening .story-copy h1 em{color:#d4e4f2}
+  .opening .story-deck{max-width:480px;font-size:17px;line-height:1.6;color:#c7dbef;margin-bottom:14px}
+  .opening .story-deck strong{font-weight:500;color:white}.opening .story-tagline{font-size:12px;color:#a9cde9}
+  .opening .story-heart{position:absolute;z-index:0;inset:0 -100px 0 auto;width:75%;height:100%;min-height:0;border:0;border-radius:0;padding:0;background:none;box-shadow:none;overflow:visible;transform:translateY(var(--orb-travel,0px)) scale(var(--orb-scale,1));pointer-events:none}
+  .opening .art-orbit{width:min(85vw,1240px);height:min(85vw,1240px);top:43%;right:-21vw;transform:translateY(-50%) rotate(-25deg);border-color:#a9cde924;box-shadow:0 0 160px #ab052016}
+  .opening .art-orbit>span{inset:8%;border-color:#a9cde92e}
+  .opening .art-orbit>span:nth-child(2){inset:16%}.opening .art-orbit>span:nth-child(3){inset:24%}
+  .opening .art-orbit>span:nth-child(4){inset:32%;background:radial-gradient(circle at 30% 25%,#c51a38,#ab0520 65%,#79051d);box-shadow:0 0 100px #ab052077;border-color:#ab0520}
+  .opening .art-orbit>.art-ripple{inset:32%;border-color:#d9849455}
+  .opening .art-orbit>.art-distortion{inset:30.8%;border-color:#e5a7b455}.opening .art-orbit>.art-distortion-1{inset:29.5%;border-color:#a9cde933}
+  .opening .art-top,.opening .art-name,.opening .art-bottom{display:none}
+  .opening .heart-community{position:absolute;top:45%;right:9%;width:210px;font-size:11px;line-height:1.9;color:#f0e5eb;letter-spacing:.02em;margin:0}
+  .opening .art-footer{position:absolute;top:100px;right:100px;pointer-events:auto}
+  .opening .motion-toggle{font-size:10px;border-color:#ffffff30;background:#0c234b66;margin:0;min-height:36px}
+  .opening .story-journey,.opening-tail{position:relative;z-index:2}
+  .opening .story-guide{margin-bottom:14px;color:#b7cee7;font-size:10px}
+  .opening .story-chapters{gap:0;border-top:1px solid #a9cde94d}
+  .opening .story-chapters li:after{display:none}
+  .opening .story-chapter{border:0;border-radius:0;background:none;padding:20px 24px 10px;transition:background .25s}
+  .opening .story-chapters li:first-child .story-chapter{padding-left:0}.opening .story-chapters li:last-child .story-chapter{padding-right:0;background:none}
+  .opening .story-chapters li+li{border-left:1px solid #a9cde926}
+  .opening .story-chapter:hover{background:#e5eff709;transform:none}
+  .opening .chapter-label{font-size:9px;color:#b7cee7}
+  .opening .story-chapter h2{font-size:22px;line-height:1.2;letter-spacing:-.6px;font-weight:450;margin:13px 0 10px}
+  .opening .story-chapter p{font-size:12px;line-height:1.5;margin-bottom:13px;color:#bdcfe2}
+  .opening .chapter-link{font-size:10px;color:#b7cee7}
+  .opening-tail{display:flex;align-items:center;justify-content:space-between;gap:25px;padding-top:12px;font-size:10px;color:#a9cde9}
+  .opening-tail>span>span{padding-inline:10px;color:#ab5265}
+  .scroll-invitation{display:inline-flex;align-items:center;gap:18px;text-decoration:none;color:#e5eff7;font-size:11px;white-space:nowrap}
+  .scroll-invitation>span{display:grid;place-items:center;width:38px;height:38px;border:1px solid #a9cde955;border-radius:50%;font-size:19px;transition:background .2s}.scroll-invitation:hover>span{background:#ffffff12}
+  .story-bridge{position:relative;overflow:hidden;background:linear-gradient(#0b203f,#112c50);color:#e5eff7;padding-block:120px 150px;margin-top:-1px}
+  .story-bridge:before{content:'';position:absolute;width:900px;height:900px;right:-350px;top:-780px;border:1px solid #a9cde92e;border-radius:50%;box-shadow:0 0 0 80px #a9cde908,0 0 0 160px #a9cde905;pointer-events:none}
+  .bridge-layout{position:relative;z-index:1}.story-bridge .eyebrow{color:#a9cde9;margin-bottom:30px}
+  .story-bridge h2{font-size:clamp(40px,5.2vw,76px);line-height:1.12;letter-spacing:-.04em;font-weight:400;max-width:1150px;margin-bottom:55px}
+  .story-bridge h2 em{font-style:normal;color:#a9cde9}
+  .bridge-bottom{display:grid;grid-template-columns:1fr 1.6fr .7fr;gap:50px;align-items:center}
+  .bridge-line{height:1px;background:linear-gradient(90deg,#ab0520,#a9cde955)}
+  .bridge-bottom p{font-size:17px;line-height:1.7;color:#c7dbef;margin:0;max-width:540px}
+  .bridge-bottom>a{justify-self:end;display:flex;align-items:center;gap:25px;font-size:12px;text-decoration:none;border-bottom:1px solid #a9cde955;padding-block:12px}.bridge-bottom>a>span{font-size:20px}
+  .proposal-continuation{position:relative;background:var(--paper);border-radius:36px 36px 0 0;margin-top:-36px;overflow:clip;padding-top:20px}
+  .journey-page .proposal-continuation>.section{padding-block:110px}
+  .journey-page .section-heading{max-width:760px;margin-bottom:50px}
+  .journey-page .section-heading h2{font-size:clamp(42px,4.5vw,65px);font-weight:450;letter-spacing:-.04em}
+  .journey-page .people-section,.journey-page .personal-section,.journey-page .pilot-section{padding-block:105px}
+  .journey-page .comparison{border:0;border-radius:0;background:transparent}
+  .journey-page .comparison-head{padding-inline:0;background:none;border-bottom:1px solid var(--blue)}
+  .journey-page .comparison-row{padding-inline:0;padding-block:30px}
+  .journey-page .account-card{box-shadow:none;border-radius:0}
+  .journey-page .site-footer{padding-block:40px 50px}
+  .story-bridge a:focus-visible{outline-color:#e5eff7}
+}
+@media screen and (min-width:851px) and (max-height:820px){
+  .opening .story-layout{gap:16px;padding-block:96px 18px}.opening .story-copy .eyebrow{margin-bottom:14px}.opening .story-copy h1{font-size:clamp(60px,6.4vw,86px);margin-bottom:18px}.opening .story-deck{font-size:15px;line-height:1.5;margin-bottom:10px;max-width:470px}.opening .story-tagline{font-size:11px}.opening .story-guide{margin-bottom:9px}.opening .story-chapter{padding-top:15px;padding-bottom:5px}.opening .story-chapter h2{font-size:20px;margin:10px 0 8px}.opening .story-chapter p{font-size:11px;margin-bottom:9px}.opening-tail{padding-top:0}.scroll-invitation>span{width:32px;height:32px}
+}
+@media screen and (max-width:1100px){
+  .opening .story-chapter{padding-inline:17px}.opening .story-chapter h2{font-size:20px}.opening .heart-community{right:4%;font-size:10px;width:190px}.opening .story-heart{right:-70px}.opening .art-footer{right:70px}.bridge-bottom{gap:30px;grid-template-columns:.6fr 1.5fr .6fr}
+}
+@media screen and (max-width:850px){
+  .journey-page .site-header{min-height:72px;gap:18px}.journey-page .site-header .wordmark{font-size:26px}.journey-page .site-header nav{gap:18px;font-size:11px}.journey-page .draft-label{font-size:8px;padding:6px 8px}
+  .opening .story-layout{padding-block:110px 25px;gap:25px}.opening .story-copy h1{font-size:clamp(62px,8vw,78px)}.opening .story-deck{font-size:16px;max-width:420px}
+  .opening .story-heart{width:90%;right:-40px;opacity:.75}.opening .art-orbit{width:110vw;height:110vw;right:-45vw;top:35%}.opening .art-footer{right:40px;top:85px}.opening .heart-community{display:none}
+  .opening .story-chapters{grid-template-columns:repeat(4,1fr)}.opening .story-chapter{padding-inline:12px}.opening .story-chapter h2{font-size:18px}.opening .story-chapter p{font-size:11px}.opening .chapter-link{display:none}.opening .chapter-label{font-size:8px}.opening .story-chapter h2 br{display:none}
+  .story-bridge{padding-block:90px 110px}.bridge-bottom{grid-template-columns:1fr auto}.bridge-line{display:none}.bridge-bottom p{font-size:16px}.story-bridge h2{margin-bottom:36px}
+}
+@media screen and (max-width:600px){
+  .journey-page .site-header{padding:17px 20px 11px;gap:9px}.journey-page .site-header nav{order:3;flex-basis:100%;justify-content:space-between;gap:15px;font-size:11px}.journey-page .draft-label{margin-left:auto}.journey-page .site-header .wordmark{font-size:25px}
+  .opening .story-layout{padding-block:142px 20px;gap:24px;min-height:100svh}.opening .story-copy .eyebrow{font-size:8px;margin-bottom:20px;max-width:245px}.opening .story-copy h1{font-size:clamp(42px,10vw,60px);line-height:1.04;letter-spacing:-.05em;margin-bottom:22px}.opening .story-deck{font-size:14px;max-width:320px;line-height:1.65;margin-bottom:12px}.opening .story-tagline{font-size:10px}
+  .opening .story-heart{right:-20px;width:100%;opacity:.55}.opening .art-orbit{width:170vw;height:170vw;right:-90vw;top:30%}.opening .art-footer{top:108px;right:20px;opacity:1}.opening .motion-toggle{font-size:9px;min-height:32px;padding:5px 8px}
+  .opening .story-chapters{grid-template-columns:1fr 1fr;gap:0}.opening .story-chapters li+li{border-left:0}.opening .story-chapters li:nth-child(2n){border-left:1px solid #a9cde926}.opening .story-chapters li:nth-child(n+3){border-top:1px solid #a9cde926}
+  .opening .story-chapter,.opening .story-chapters li:first-child .story-chapter,.opening .story-chapters li:last-child .story-chapter{padding:14px 12px}.opening .story-chapters li:nth-child(2n+1) .story-chapter{padding-left:0}
+  .opening .story-guide{font-size:8px;margin-bottom:10px;gap:10px}.opening .chapter-label{font-size:7px;letter-spacing:.07em}.opening .chapter-label>span{font-size:12px}.opening .story-chapter h2{font-size:17px;margin:8px 0 0;letter-spacing:-.3px}.opening .story-chapter p{display:none}
+  .opening-tail{font-size:8px;gap:14px;padding-top:0;align-items:end}.opening-tail>span{max-width:160px}.opening-tail>span>span{padding-inline:3px}.scroll-invitation{font-size:9px;gap:8px;white-space:normal;max-width:125px}.scroll-invitation>span{width:28px;height:28px;flex-shrink:0;font-size:16px}
+  .story-bridge{padding-block:80px 110px}.story-bridge .eyebrow{font-size:9px;margin-bottom:22px}.story-bridge h2{font-size:39px;letter-spacing:-1.5px;line-height:1.15;margin-bottom:30px}.story-bridge h2 br{display:none}.bridge-bottom{grid-template-columns:1fr;gap:22px}.bridge-bottom p{font-size:16px;line-height:1.7}.bridge-bottom>a{justify-self:start;font-size:12px}
+  .proposal-continuation{border-radius:24px 24px 0 0;margin-top:-24px;padding-top:0}.journey-page .proposal-continuation>.section,.journey-page .people-section,.journey-page .personal-section,.journey-page .pilot-section{padding-block:65px}.journey-page .section-heading{margin-bottom:32px}.journey-page .section-heading h2{font-size:38px}.journey-page .comparison-row{padding-block:25px}
+}
+@media screen and (max-width:600px) and (max-height:750px){.opening .story-layout{gap:17px;padding-top:133px}.opening .story-copy .eyebrow{margin-bottom:12px}.opening .story-copy h1{margin-bottom:15px}.opening .story-deck{font-size:13px;line-height:1.5}.opening .story-chapter{padding-block:11px}.opening .story-chapter h2{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.opening .story-copy,.opening .story-heart{transform:none!important}}
+@media print{.opening{color:var(--ink);background:white}.opening-tail,.story-bridge:before{display:none}.story-bridge{margin:25px 0;padding:20px 0;border-block:1px solid var(--line)}.story-bridge h2{font-size:24pt}.story-bridge h2 em{font-style:normal}.bridge-bottom p{font-size:11pt}.bridge-bottom>a{display:none}.proposal-continuation{break-before:page}.story-layout{display:block}}
+
+@media screen{.opening:after{content:'';position:absolute;inset:auto 0 0;height:150px;background:linear-gradient(transparent,#0b203f);z-index:1;pointer-events:none}}
+
+/* The concise story flows directly from the opening into the proposal. */
+@media screen{.journey-page .proposal-continuation{margin-top:0;border-radius:0}}

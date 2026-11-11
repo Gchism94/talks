@@ -338,6 +338,8 @@ The tool follows the benchmark helper’s runtime × workload × resource × all
     # Strong source links: anchor navigation must open the enclosing evidence detail.
     script=PUBLIC/'guide-assets/guide.js'
     script.write_text(script.read_text()+"\nfunction revealSource(){if(location.hash){const el=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(el){const d=el.querySelector('details');if(d)d.open=true;el.scrollIntoView();}}}addEventListener('hashchange',revealSource);revealSource();\n")
+    from build_wildcat_proposal import build as build_wildcat_proposal
+    build_wildcat_proposal()
     print('Built concise Zensical guide, research/classroom needs tool, 181-record appendix; retained talk and downloads.')
 
 if __name__=='__main__':
