@@ -190,3 +190,6 @@
   .personal-details-content{display:block!important}
   .pilot-ownership{margin-top:25px}
 }
+
+/* Keep the InfoSci affiliation beside the name without changing line spacing. */
+.educloud-affiliation{font-size:max(.6em,8px);font-weight:400;letter-spacing:0;line-height:0;vertical-align:baseline;position:relative;top:.3em;margin-left:.12em}
