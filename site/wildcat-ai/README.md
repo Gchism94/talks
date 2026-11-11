@@ -4,10 +4,16 @@ Unlisted proposal inside the InfoSci computing site. The approved Heart design
 is the published version; other design explorations are not part of this export.
 
 Edit `index.html` for the opening and `proposal.html` for canonical details and
-footer. Run `python3 scripts/build_wildcat_proposal.py` to export the six public
+footer. Run `python3 scripts/build_wildcat_proposal.py` to export the public
 files to `docs/education-compute/wildcat-ai/`. Existing site/guide build entry
 points also export this page. For a page-only release, use the standalone
 exporter to avoid rebuilding unrelated content, then run the site checks.
+
+The hero links to `wildcat-ai-in-one-slide.pdf`, a single 16:9 overview with
+selectable text and a link back to the proposal. To revise it, edit
+`scripts/build_wildcat_slide.py`, run it with Python and ReportLab installed,
+then run the proposal exporter. Render and inspect the PDF before publishing.
+Keep the summary aligned with the current site and its proposed pilot timing.
 
 Do not add the proposal to navigation, catalog, search data, or sitemap.
 `noindex, nofollow, noarchive` requests search exclusion; it is not access control.

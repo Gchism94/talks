@@ -44,3 +44,10 @@
 @media screen{.direction-heart .opening .heart-community{top:43%;right:calc(min(42.5vw,620px) - 21vw - 135px);transform:translateY(-50%)}.direction-heart .opening-tail{padding-left:0}.site-header>.design-switcher>summary{white-space:nowrap}}
 @media screen and (min-width:601px) and (max-width:1000px){.direction-page .site-header,.direction-heart .site-header{gap:16px}.direction-page .site-header nav,.direction-heart .site-header nav{gap:17px}.direction-page .site-header .draft-label{display:none}}
 @media screen and (max-width:1100px){.direction-heart .opening .heart-community{right:calc(min(42.5vw,620px) - 21vw - 110px)}}
+
+/* Shareable overview, kept beside the opening promise. */
+.hero-slide-link{display:inline-flex;align-items:center;gap:18px;min-height:44px;margin-top:12px;padding:10px 16px;border:1px solid #a9cde966;border-radius:4px;color:#fff;text-decoration:none;font-size:14px;line-height:1.4;background:#0c234b66;transition:background .2s,border-color .2s}
+.hero-slide-link>span{font-size:11px;color:#c7dbef;white-space:nowrap}.hero-slide-link:hover{background:#244369;border-color:#a9cde9}.hero-slide-link:focus-visible{outline:2px solid white;outline-offset:4px}
+@media(max-width:600px){.hero-slide-link{font-size:12px;gap:12px;margin-top:8px;padding:9px 12px}}
+@media(prefers-reduced-motion:reduce){.hero-slide-link{transition:none}}
+@media print{.hero-slide-link{color:#0c234b;border-color:#0c234b;background:none}.hero-slide-link>span{color:#0c234b}}
