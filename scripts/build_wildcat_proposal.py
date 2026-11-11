@@ -22,7 +22,7 @@ def build():
         if template.count(marker) != 1:
             raise ValueError(f"Expected one {marker} in index.html")
     rendered = template.replace("<!-- PROPOSAL_DETAILS -->", details).replace("<!-- PROPOSAL_FOOTER -->", footer).replace("<!-- DESIGN_SWITCHER -->", "")
-    (destination / "index.html").write_text(rendered)
+    (destination / "index.html").write_text("\n".join(line.rstrip() for line in rendered.splitlines()) + "\n")
     for name in ("proposal.html", "wildcat.css", "journey.css", "directions.css", "wildcat.js"):
         shutil.copyfile(source / name, destination / name)
     print("Built unlisted Wildcat AI proposal; excluded from navigation, search and sitemap.")
