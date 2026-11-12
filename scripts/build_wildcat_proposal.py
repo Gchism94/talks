@@ -17,11 +17,12 @@ def build():
         raise ValueError("Expected one canonical proposal details region")
     details = proposal.split(start_marker, 1)[1].split(end_marker, 1)[0]
     footer = "<footer" + proposal.split("<footer", 1)[1].split("</footer>", 1)[0] + "</footer>"
+    disclosures = proposal.split('<div class="footer-credit-content">', 1)[1].split('</div></details>', 1)[0]
     template = (source / "index.html").read_text()
-    for marker in ("<!-- PROPOSAL_DETAILS -->", "<!-- PROPOSAL_FOOTER -->", "<!-- DESIGN_SWITCHER -->"):
+    for marker in ("<!-- PROPOSAL_DETAILS -->", "<!-- PROPOSAL_FOOTER -->", "<!-- REVIEW_DISCLOSURES -->", "<!-- DESIGN_SWITCHER -->"):
         if template.count(marker) != 1:
             raise ValueError(f"Expected one {marker} in index.html")
-    rendered = template.replace("<!-- PROPOSAL_DETAILS -->", details).replace("<!-- PROPOSAL_FOOTER -->", footer).replace("<!-- DESIGN_SWITCHER -->", "")
+    rendered = template.replace("<!-- PROPOSAL_DETAILS -->", details).replace("<!-- PROPOSAL_FOOTER -->", footer).replace("<!-- REVIEW_DISCLOSURES -->", disclosures).replace("<!-- DESIGN_SWITCHER -->", "")
     (destination / "index.html").write_text("\n".join(line.rstrip() for line in rendered.splitlines()) + "\n")
     for name in ("proposal.html", "wildcat.css", "journey.css", "directions.css", "wildcat.js", "wildcat-ai-in-one-slide.pdf"):
         shutil.copyfile(source / name, destination / name)

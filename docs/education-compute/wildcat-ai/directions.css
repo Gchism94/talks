@@ -51,3 +51,13 @@
 @media(max-width:600px){.hero-slide-link{font-size:12px;gap:12px;margin-top:8px;padding:9px 12px}}
 @media(prefers-reduced-motion:reduce){.hero-slide-link{transition:none}}
 @media print{.hero-slide-link{color:#0c234b;border-color:#0c234b;background:none}.hero-slide-link>span{color:#0c234b}}
+
+/* The review notice uses a native modal dialog and the proposal's existing colors. */
+.review-notice{box-sizing:border-box;width:min(680px,calc(100% - 32px));max-height:calc(100dvh - 40px);margin:auto;padding:36px;border:1px solid #52627b;border-top:4px solid #ab0520;border-radius:12px;background:#0c234b;color:#f7f8fb;box-shadow:0 24px 100px #0008;overflow:auto;line-height:1.55}
+.review-notice::backdrop{background:#040c1ad9;backdrop-filter:blur(5px)}.review-notice-open{overflow:hidden}
+.review-notice .review-eyebrow{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:#c7dbef;margin:0 0 16px}.review-notice h2{font-size:34px;line-height:1.15;letter-spacing:-.02em;margin:0 0 20px;font-weight:500}.review-notice>p{font-size:16px;margin:0 0 22px}
+.review-disclosures{border-block:1px solid #c7dbef33;padding:18px 0;margin:0 0 18px}.review-disclosures p{font-size:14px;color:#d7e3f1;margin:0 0 16px}.review-disclosures p:last-child{margin-bottom:0}.review-disclosures strong{display:block;color:#fff;margin-bottom:4px;font-size:14px;font-weight:600}.review-disclosures a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.review-notice .review-access-note{font-size:12px;color:#c7dbef;margin-bottom:22px}.review-continue{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;min-height:48px;padding:13px 18px;background:#fff;color:#0c234b;border:0;border-radius:4px;font:inherit;font-size:15px;font-weight:600;cursor:pointer}.review-continue:hover{background:#dce9f5}.review-notice :focus-visible{outline:2px solid #a9cde9;outline-offset:4px}.review-notice h2:focus{outline:none}
+.review-reopen{display:block;background:none;border:0;color:inherit;font:inherit;font-size:12px;padding:0;text-decoration:underline;text-underline-offset:4px;cursor:pointer;margin-top:14px}.review-reopen[hidden]{display:none}
+@media(max-width:600px){.review-notice{padding:24px;max-height:calc(100dvh - 24px)}.review-notice h2{font-size:27px}.review-notice>p{font-size:14px}.review-disclosures p{font-size:13px}}
+@media print{.review-notice,.review-reopen{display:none!important}.review-notice-open{overflow:visible}}

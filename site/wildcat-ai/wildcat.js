@@ -303,3 +303,28 @@
   });
   schedule();
 })();
+
+/* A review notice, not authentication. Native dialog provides focus containment and Escape. */
+(() => {
+  const dialog = document.querySelector('.review-notice');
+  const reopen = document.querySelector('.review-reopen');
+  if (!(dialog instanceof HTMLDialogElement) || typeof dialog.showModal !== 'function') return;
+  let returnFocus;
+  function openNotice() {
+    if (dialog.open) return;
+    returnFocus = document.activeElement;
+    dialog.showModal();
+    document.body.classList.add('review-notice-open');
+  }
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('review-notice-open');
+    const target = returnFocus instanceof HTMLElement && returnFocus !== document.body
+      ? returnFocus : document.querySelector('.hero-slide-link');
+    target?.focus({preventScroll: true});
+  });
+  if (reopen) {
+    reopen.hidden = false;
+    reopen.addEventListener('click', openNotice);
+  }
+  openNotice();
+})();

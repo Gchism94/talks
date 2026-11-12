@@ -26,7 +26,13 @@ participation remain part of the experience. Personal-account specifications
 are under a disclosure within the system. Print exposes all audiences/details;
 without JavaScript, all audience sections remain available.
 
-No model calls, credentials, forms, analytics or tracking are included. Local
+An opening review notice identifies Jennifer Savary as the intended reader and
+includes proposal status, acknowledgment, and AI disclosure. Its disclosure copy
+comes from the canonical footer during export. The native dialog can be dismissed
+with Continue or Escape and reopened from the footer. It stores no acceptance
+record and does not restrict access to the public URL or direct PDF link.
+
+No model calls, credentials, data collection, analytics or tracking are included. Local
 fonts and shared favicons are served from the existing site assets.
 
 Publication authorized November 10, 2026. The release contains only this page,
